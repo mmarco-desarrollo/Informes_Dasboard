@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "organization": "MMarco Seguridad",
+    "generated_at_local": "2026-05-10 21:13:00 CEST",
+    "generated_at_utc": "2026-05-10 19:13:55 UTC",
+    "timezone": "Europe/Madrid",
+    "report_type": "Informe Ejecutivo Premium de Infraestructura TI",
+    "general_status": "Visibilidad insuficiente",
+    "general_status_reason": "No hay fuentes externas conectadas de monitorizacion, inventario, tickets, backups ni patching en esta ejecucion.",
+    "next_scheduled_run": "2026-05-11 05:00:00 CEST",
+    "schedule_count": 3,
+    "file_basename": "Dashboard_Infraestructura_TI_2026-05-10_21-13"
+  },
+  "source_summary": {
+    "real_sources": [
+      "Sistema operativo del entorno de ejecucion",
+      "Memoria y almacenamiento locales",
+      "Interfaces de red e IP local",
+      "Carga, procesos y sockets escuchando",
+      "Configuracion de ejecuciones programadas"
+    ],
+    "missing_sources": [
+      "CMDB o inventario corporativo",
+      "Monitorizacion de disponibilidad",
+      "Cloud provider APIs",
+      "Controladora WiFi",
+      "Telefonia y telecomunicaciones",
+      "ITSM o ticketing",
+      "Consola de parches y vulnerabilidades",
+      "Backups y pruebas de restauracion",
+      "Alertas activas verificadas"
+    ],
+    "coverage_pct": 33
+  },
+  "kpis": [
+    {
+      "label": "Cobertura de observabilidad",
+      "value": "33%",
+      "type": "derivado",
+      "status": "warning",
+      "note": "Derivado del numero de dominios con datos reales o parciales en esta ejecucion."
+    },
+    {
+      "label": "Memoria disponible",
+      "value": "9.75 GB",
+      "type": "real",
+      "status": "healthy",
+      "note": "Disponible sobre 10.17 GB del entorno monitorizado."
+    },
+    {
+      "label": "Uso de disco raiz",
+      "value": "7%",
+      "type": "real",
+      "status": "healthy",
+      "note": "4.0 GB usados de 63 GB."
+    },
+    {
+      "label": "Carga 1m",
+      "value": "0.03",
+      "type": "real",
+      "status": "healthy",
+      "note": "Sobre 9 vCPU visibles."
+    },
+    {
+      "label": "Fuentes criticas ausentes",
+      "value": "9",
+      "type": "real",
+      "status": "critical",
+      "note": "Dominios sin telemetria conectada."
+    },
+    {
+      "label": "Incidentes verificados",
+      "value": "N/D",
+      "type": "missing",
+      "status": "warning",
+      "note": "No existe fuente ITSM o SOC conectada."
+    }
+  ],
+  "domains": {
+    "servers_os": {
+      "state": "Parcial con datos reales del entorno de ejecucion",
+      "facts": [
+        "Ubuntu 24.04.3 LTS",
+        "Kernel Linux 6.12.47",
+        "Uptime observado: 1 minuto",
+        "Procesos visibles: 10",
+        "Un servicio local en escucha verificado en 127.0.0.1:8090"
+      ],
+      "limits": "No hay inventario de servidores corporativos ni consolidacion multi-host."
+    },
+    "cloud": {
+      "state": "No disponible",
+      "facts": [],
+      "limits": "Sin acceso a AWS, Azure, GCP u otra fuente cloud durante esta ejecucion."
+    },
+    "network": {
+      "state": "Parcial con datos locales",
+      "facts": [
+        "Interfaz activa: eth0",
+        "IP local: 172.30.4.130/28",
+        "Ruta local detectada: 172.30.4.128/28"
+      ],
+      "limits": "No hay topologia corporativa, latencia WAN, firewalls ni switching conectados."
+    },
+    "wifi": {
+      "state": "No disponible",
+      "facts": [],
+      "limits": "Sin controladora o encuesta WiFi accesible."
+    },
+    "telecom": {
+      "state": "No disponible",
+      "facts": [],
+      "limits": "Sin datos de enlaces, voz o operadores."
+    },
+    "incidents": {
+      "state": "No disponible",
+      "facts": [],
+      "limits": "Sin sistema de tickets o incidentes conectado."
+    },
+    "resources": {
+      "state": "Real para el entorno observado",
+      "facts": [
+        "Memoria total: 10.17 GB",
+        "Memoria disponible: 9.75 GB",
+        "Swap: 0 GB",
+        "Disco raiz libre: 56 GB"
+      ],
+      "limits": "Solo aplica al entorno de ejecucion actual."
+    },
+    "patching": {
+      "state": "No disponible",
+      "facts": [],
+      "limits": "Sin consola de parches o vulnerabilidades."
+    },
+    "backup": {
+      "state": "No disponible",
+      "facts": [],
+      "limits": "Sin evidencias de backup, RPO o pruebas de restauracion."
+    },
+    "alerts": {
+      "state": "No disponible",
+      "facts": [],
+      "limits": "No hay SIEM/NMS/SOC conectado para alertas activas."
+    }
+  },
+  "ai_assessment": {
+    "risk_level": "Alto por falta de observabilidad",
+    "prediction_24h": "La probabilidad mayor de fallo operativo en el proximo ciclo es de deteccion tardia, no de saturacion del entorno observado.",
+    "priority": "Conectar al menos inventario, monitorizacion, patching y backup antes del siguiente informe de valor ejecutivo.",
+    "recommendations": [
+      {
+        "priority": "P1",
+        "title": "Activar fuentes base de observabilidad",
+        "detail": "Conectar inventario, disponibilidad, patching y backup para sustituir fallbacks por evidencia verificable."
+      },
+      {
+        "priority": "P2",
+        "title": "Normalizar severidades y propietarios",
+        "detail": "Definir umbrales de alerta y responsables por dominio para que el dashboard sea accionable."
+      },
+      {
+        "priority": "P3",
+        "title": "Incorporar historico de tendencia",
+        "detail": "Persistir series de CPU, RAM, incidentes y disponibilidad para prediccion real en vez de evaluacion puntual."
+      }
+    ]
+  },
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria tecnica, monitorizacion profesional ni intervencion de un especialista."
+}
