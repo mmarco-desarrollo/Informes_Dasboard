@@ -1,0 +1,489 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "title": "Informe Ejecutivo RGPD",
+    "report_mode": "Daily Closing Report",
+    "datetime": "2026-05-10 19:21 CEST",
+    "timezone": "Europe/Madrid",
+    "global_compliance_score": 72,
+    "global_compliance_label": "Medio - estimacion analitica IA",
+    "global_risk_score": 68,
+    "global_risk_label": "Medio-alto",
+    "privacy_ai_status": "Activo con salvaguardas y rotulo expreso de incertidumbre",
+    "next_update": "2026-05-11 08:30 CEST",
+    "time_to_next": "13 h 9 min",
+    "corporate_profile": "Ciberseguridad, Blockchain, IA, Telecomunicaciones, RGPD y Proteccion de Datos",
+    "repo": "mmarco-desarrollo/Informes_Dasboard",
+    "repo_path": "informes_RGPD/20260510",
+    "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260510/Dashboard_RGPD_2026-05-10_19-21.html",
+    "html_raw_url": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_RGPD/20260510/Dashboard_RGPD_2026-05-10_19-21.html",
+    "pdf_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260510/Dashboard_RGPD_2026-05-10_19-21.pdf",
+    "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260510/Dashboard_RGPD_2026-05-10_19-21.json",
+    "png_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260510/Dashboard_RGPD_2026-05-10_19-21.png",
+    "folder_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_RGPD/20260510",
+    "scope_note": "Radar ejecutivo de contexto regulatorio y riesgo externo. No se dispone en esta ejecucion de inventario interno ni auditoria confirmada de una organizacion concreta."
+  },
+  "kpis": [
+    {
+      "label": "Cumplimiento global",
+      "value": "72/100",
+      "subvalue": "Estimacion IA prudente",
+      "tone": "good"
+    },
+    {
+      "label": "Riesgo RGPD",
+      "value": "68/100",
+      "subvalue": "Presion regulatoria al alza",
+      "tone": "warn"
+    },
+    {
+      "label": "Incidentes RGPD detectados",
+      "value": "3",
+      "subvalue": "Alertas regulatorias activas",
+      "tone": "warn"
+    },
+    {
+      "label": "Brechas relevantes",
+      "value": "2.765",
+      "subvalue": "Notificaciones AEPD 2025",
+      "tone": "danger"
+    },
+    {
+      "label": "Reclamaciones AEPD",
+      "value": "30.931",
+      "subvalue": "Memoria 2025",
+      "tone": "danger"
+    },
+    {
+      "label": "Sanciones publicadas",
+      "value": "48,11 M EUR",
+      "subvalue": "Importe total 2025 AEPD",
+      "tone": "danger"
+    },
+    {
+      "label": "Novedades legales",
+      "value": "6",
+      "subvalue": "Hechos confirmados recientes",
+      "tone": "good"
+    },
+    {
+      "label": "Consultas AEPD / EDPB",
+      "value": "2 abiertas",
+      "subvalue": "DPIA y ciencia",
+      "tone": "good"
+    },
+    {
+      "label": "DPIA pendientes",
+      "value": "Sin dato interno",
+      "subvalue": "Revisar tratamientos de alto riesgo",
+      "tone": "neutral"
+    },
+    {
+      "label": "Derechos de interesados",
+      "value": "Sin dato interno",
+      "subvalue": "Presion externa creciente",
+      "tone": "neutral"
+    },
+    {
+      "label": "Transferencias internacionales",
+      "value": "Vigilancia activa",
+      "subvalue": "DPF FAQ 2.0 y salvaguardas",
+      "tone": "warn"
+    },
+    {
+      "label": "Contratos de encargados",
+      "value": "Sin dato interno",
+      "subvalue": "Revisar cadena de proveedores",
+      "tone": "neutral"
+    }
+  ],
+  "executive_points": [
+    "Hecho confirmado: la AEPD publico el 6 de mayo de 2026 su Memoria 2025 con 30.931 reclamaciones y 48,11 millones de euros en sanciones.",
+    "Hecho confirmado: la AEPD reporto 2.765 notificaciones de brechas en 2025 y mas de 200 millones de comunicaciones a afectados en casos de alto riesgo.",
+    "Hecho confirmado: el EDPB adopto en abril de 2026 nuevas guias sobre investigacion cientifica y una plantilla DPIA sometida a consulta publica.",
+    "Interpretacion: para pymes y empresas espanolas el riesgo regulatorio aumenta en brechas, seguridad, DPIA y gobierno de proveedores.",
+    "Recomendacion automatica: acelerar inventario de tratamientos, revisiones de transferencias y evidencias de privacidad desde el diseno antes del siguiente cierre mensual."
+  ],
+  "quick_conclusion": [
+    "Mayor carga sancionadora y de reclamaciones en Espana.",
+    "Brechas y seguridad concentran una parte material del riesgo economico.",
+    "Europa esta simplificando cumplimiento, pero exige mejor evidencia documental.",
+    "Sin datos internos verificados, el foco debe ponerse en preparacion y trazabilidad."
+  ],
+  "risk_areas": [
+    [
+      "Gestion de datos personales",
+      "Medio-alto",
+      "La AEPD detecta mas complejidad y mas entradas de casos."
+    ],
+    [
+      "Derechos de los interesados",
+      "Medio",
+      "La presion de reclamaciones aumenta y la interpretacion del TS amplia el umbral del tratamiento."
+    ],
+    [
+      "Seguridad de la informacion",
+      "Alto",
+      "Brechas, exfiltracion y sanciones por medidas insuficientes concentran impacto."
+    ],
+    [
+      "Encargados de tratamiento",
+      "Medio-alto",
+      "Sin inventario interno verificado, el riesgo proveedor permanece abierto."
+    ],
+    [
+      "Transferencias internacionales",
+      "Medio",
+      "DPF operativo, pero exige revision de proveedores y salvaguardas."
+    ],
+    [
+      "Documentacion y politicas",
+      "Medio-alto",
+      "La nueva plantilla DPIA refuerza el estandar de evidencia."
+    ],
+    [
+      "Registro de actividades",
+      "Medio",
+      "No hay base interna confirmada en esta ejecucion."
+    ],
+    [
+      "Evaluaciones DPIA",
+      "Alto",
+      "EDPB publica plantilla y consulta; prioridad para IA, biometria y monitorizacion."
+    ],
+    [
+      "Consentimiento",
+      "Medio",
+      "El riesgo depende de prueba de licitud y granularidad."
+    ],
+    [
+      "Cookies",
+      "Medio",
+      "Sin verificacion tecnica del sitio en esta ejecucion."
+    ],
+    [
+      "Formacion y concienciacion",
+      "Medio-alto",
+      "Las autoridades priorizan cultura de privacidad y apoyo a pymes."
+    ],
+    [
+      "Notificacion de brechas",
+      "Alto",
+      "La AEPD pone foco expreso en notificar y comunicar a afectados cuando hay alto riesgo."
+    ]
+  ],
+  "breaches": [
+    {
+      "date": "2026-01-23",
+      "type": "Brecha de datos / ciberincidentes agregados",
+      "severity": "Alta",
+      "description": "La AEPD confirmo 2.765 notificaciones de brechas en 2025.",
+      "data": "Multiples categorias; alto volumen de afectados",
+      "sector": "Multisectorial",
+      "status": "Hecho confirmado agregado",
+      "action": "Validar playbook de brechas, ventanas de 72h y criterios de comunicacion."
+    },
+    {
+      "date": "2026-01-23",
+      "type": "Comunicacion a afectados",
+      "severity": "Alta",
+      "description": "Los responsables emitieron mas de 200 millones de comunicaciones a personas afectadas por alto riesgo.",
+      "data": "Comunicaciones de alto riesgo",
+      "sector": "Multisectorial",
+      "status": "Hecho confirmado agregado",
+      "action": "Revisar plantillas, canales y decision logs para comunicacion de alto riesgo."
+    },
+    {
+      "date": "2026-04-30",
+      "type": "Radar regulatorio de brechas",
+      "severity": "Media",
+      "description": "La AEPD activo una herramienta interactiva para explotar datos de brechas por sector, tipologia e intencionalidad.",
+      "data": "Cuadro de mando institucional",
+      "sector": "Supervision regulatoria",
+      "status": "Hecho confirmado",
+      "action": "Usar el dashboard publico como referencia de benchmarking y aprendizaje de incidentes."
+    }
+  ],
+  "regulatory_updates": [
+    {
+      "title": "Memoria AEPD 2025: maximo historico de reclamaciones",
+      "source": "AEPD",
+      "date": "2026-05-06",
+      "jurisdiction": "Espana",
+      "impact": "Alto",
+      "kind": "Hecho confirmado",
+      "detail": "30.931 reclamaciones, 32.063 nuevos casos a Inspeccion y 48,11 M EUR en sanciones.",
+      "recommendation": "Reforzar evidencias de cumplimiento y trazabilidad de decisiones.",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-recibio-mas-de-30.000-reclamaciones-en-2025-un-64-mas"
+    },
+    {
+      "title": "Nueva herramienta interactiva de brechas de datos",
+      "source": "AEPD",
+      "date": "2026-04-30",
+      "jurisdiction": "Espana",
+      "impact": "Medio-alto",
+      "kind": "Hecho confirmado",
+      "detail": "Permite filtrar brechas por sector, tipologia, intencionalidad y modo de ocurrencia.",
+      "recommendation": "Usar el radar para ajustar escenarios de respuesta y formacion.",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/nueva-herramienta-interactiva-consultar-notificaciones-brechas-datos-personales"
+    },
+    {
+      "title": "Declaracion conjunta de autoridades espanolas en el 10 aniversario del RGPD",
+      "source": "AEPD",
+      "date": "2026-04-24",
+      "jurisdiction": "Espana",
+      "impact": "Medio",
+      "kind": "Hecho confirmado",
+      "detail": "Refuerza cooperacion, cultura de privacidad y apoyo practico a pymes y entidades con menos recursos.",
+      "recommendation": "Priorizar gobierno basico y documentacion accionable, no solo politicas formales.",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/autoridades-proteccion-de-datos-suscriben-declaracion-conjunta-decimo-aniversario-rgpd"
+    },
+    {
+      "title": "Guidelines 1/2026 sobre investigacion cientifica",
+      "source": "EDPB",
+      "date": "2026-04-16",
+      "jurisdiction": "UE",
+      "impact": "Alto",
+      "kind": "Hecho confirmado",
+      "detail": "Aclaran concepto de investigacion cientifica, broad consent, dynamic consent y salvaguardas.",
+      "recommendation": "Revisar usos secundarios de datos, IA y consentimientos amplios antes del 25 de junio.",
+      "url": "https://www.edpb.europa.eu/our-work-tools/plenary-meetings/118th-plenary-meeting_en"
+    },
+    {
+      "title": "Plantilla DPIA del EDPB en consulta",
+      "source": "EDPB",
+      "date": "2026-04-14",
+      "jurisdiction": "UE",
+      "impact": "Alto",
+      "kind": "Hecho confirmado",
+      "detail": "El EDPB adopta una plantilla para estructurar y armonizar DPIA; consulta abierta hasta el 9 de junio.",
+      "recommendation": "Alinear evaluaciones de impacto con la meta-plantilla europea.",
+      "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/edpb-dpia-template_de"
+    },
+    {
+      "title": "Opinion conjunta EDPB-EDPS sobre CSA2 y NIS2",
+      "source": "EDPS / EDPB",
+      "date": "2026-03-19",
+      "jurisdiction": "UE",
+      "impact": "Medio-alto",
+      "kind": "Hecho confirmado",
+      "detail": "Reclama que las medidas de ciberseguridad se mantengan limitadas a lo estrictamente necesario y coordinadas con privacidad.",
+      "recommendation": "Evitar controles de seguridad excesivos o sin base documental suficiente.",
+      "url": "https://www.edps.europa.eu/press-publications/press-news/press-releases/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while-protecting-individuals-personal-data_en"
+    }
+  ],
+  "sanctions": [
+    [
+      "AENA, S.M.E., S.A.",
+      "Art. 35 RGPD",
+      "10.043.002 EUR",
+      "Evaluacion de impacto insuficiente",
+      "Infraestructura / transporte"
+    ],
+    [
+      "XFERA MOVILES, S.A.U.",
+      "Arts. 5.1.f y 32 RGPD",
+      "4.000.000 EUR",
+      "Confidencialidad y seguridad",
+      "Telecomunicaciones"
+    ],
+    [
+      "CENTROS COMERCIALES CARREFOUR, S.A.",
+      "Arts. 5.1.f, 32 y 34 RGPD",
+      "3.200.000 EUR",
+      "Seguridad y gestion de brecha",
+      "Retail"
+    ],
+    [
+      "INFORMA D&B, S.A.",
+      "Arts. 6.1 y 14 RGPD",
+      "1.800.000 EUR",
+      "Licitud e informacion",
+      "Informacion comercial"
+    ],
+    [
+      "SPRINTER MEGACENTROS DEL DEPORTE, S.L.",
+      "Art. 5.1.f RGPD",
+      "1.560.000 EUR",
+      "Integridad y confidencialidad",
+      "Retail"
+    ]
+  ],
+  "rights_panel": {
+    "access": "Sin dato interno verificado",
+    "rectification": "Sin dato interno verificado",
+    "erasure": "Mayor sensibilidad regulatoria",
+    "objection": "Mayor necesidad de justificar base juridica",
+    "restriction": "Sin dato interno verificado",
+    "portability": "Sin dato interno verificado",
+    "automated_decisions": "Atencion reforzada si hay IA o perfilado",
+    "pending": "Sin dato interno verificado",
+    "overdue": "Sin dato interno verificado",
+    "note": "Interpretacion relevante: la AEPD destaca la STS 1590/2026 sobre el inicio del tratamiento, con impacto potencial en la licitud y deberes previos."
+  },
+  "dpia_panel": {
+    "completed": "Sin dato interno verificado",
+    "in_progress": "Sin dato interno verificado",
+    "pending": "Sin dato interno verificado",
+    "high_risk": "Alta prioridad en IA, biometria, videovigilancia avanzada y monitorizacion intensiva",
+    "last_completed": "Sin dato interno verificado",
+    "next_reviews": "Alinear con plantilla EDPB y evidencias tecnicas",
+    "priority_processes": "IA generativa, scoring, CCTV inteligente, HR analytics, healthtech y geolocalizacion"
+  },
+  "transfers_panel": {
+    "outside_eea": "Sin mapa interno confirmado",
+    "scc": "Revisar contratos y transfer impact assessments",
+    "adequacy": "DPF sigue siendo referencia practica para EE. UU.",
+    "us_transfers": "Verificar adhesiones proveedor por proveedor",
+    "dpf": "EDPB publica FAQ v2.0 para empresas europeas el 23-01-2026",
+    "vendor_risk": "Medio-alto sin inventario consolidado",
+    "actions": "Comprobar certificaciones, subencargados y medidas suplementarias"
+  },
+  "cookies_panel": {
+    "banner_status": "Sin verificacion tecnica en esta ejecucion",
+    "valid_consents": "Sin dato verificado",
+    "expired_consents": "Sin dato verificado",
+    "rejections": "Sin dato verificado",
+    "granularity": "Requiere revision si hay terceros o marketing",
+    "aepd_alignment": "No confirmado en esta ejecucion",
+    "risk": "Medio hasta completar chequeo tecnico-juridico"
+  },
+  "processors_panel": {
+    "pending_contracts": "Sin dato interno verificado",
+    "updated_contracts": "Sin dato interno verificado",
+    "critical_vendors": "Cloud, CRM, emailing, RRHH, analytics y soporte TI",
+    "vendor_risk": "Medio-alto",
+    "subprocessors": "Exigir cadena de transparencia y aprobacion",
+    "intl_transfers": "Revisar especialmente proveedores SaaS USA",
+    "pending_reviews": "Due diligence documental y tecnica"
+  },
+  "training_panel": {
+    "completed": "Sin dato interno verificado",
+    "pending": "Sin dato interno verificado",
+    "next_training": "Recomendado en 30 dias",
+    "weak_areas": "Brechas, minimizacion, phishing con datos personales, uso de IA",
+    "risk": "Medio-alto por error humano y respuesta tardia",
+    "awareness": "Microformaciones por roles y simulacros de brecha"
+  },
+  "recommendations": [
+    [
+      "Critica",
+      "Activar una revision express de brechas, tiempos de 72h y criterios de alto riesgo."
+    ],
+    [
+      "Critica",
+      "Priorizar DPIA en tratamientos con IA, videovigilancia avanzada, biometria o scoring."
+    ],
+    [
+      "Alta",
+      "Revisar proveedores con transferencias fuera del EEE y evidencia DPF / SCC."
+    ],
+    [
+      "Alta",
+      "Actualizar el registro de actividades y la matriz de bases juridicas."
+    ],
+    [
+      "Alta",
+      "Comprobar si el sitio web corporativo y formularios mantienen consentimiento granular verificable."
+    ],
+    [
+      "Alta",
+      "Validar contratos de encargados y cadena de subencargados de servicios criticos."
+    ],
+    [
+      "Media",
+      "Alinear plantillas internas con la nueva meta-plantilla DPIA del EDPB."
+    ],
+    [
+      "Media",
+      "Refrescar guias internas sobre ejercicio de derechos y borrado."
+    ],
+    [
+      "Media",
+      "Lanzar formacion corta orientada a brechas, phishing y uso de IA."
+    ],
+    [
+      "Baja",
+      "Usar el nuevo dashboard publico de brechas AEPD como benchmark trimestral."
+    ]
+  ],
+  "alerts": [
+    {
+      "title": "Presion sancionadora por brechas y seguridad",
+      "level": "Alerta alta"
+    },
+    {
+      "title": "Consulta publica DPIA EDPB hasta 2026-06-09",
+      "level": "Alerta media"
+    },
+    {
+      "title": "Consulta publica investigacion cientifica EDPB hasta 2026-06-25",
+      "level": "Alerta media"
+    },
+    {
+      "title": "Mayor exigencia de evidencia documental para pymes",
+      "level": "Alerta alta"
+    },
+    {
+      "title": "Transferencias internacionales con revision proveedor a proveedor",
+      "level": "Alerta media-alta"
+    }
+  ],
+  "ai_block": {
+    "risk_estimate": "Riesgo RGPD estimado: 68/100",
+    "exposure_areas": "Brechas, seguridad de datos, DPIA, encargados y transferencias internacionales.",
+    "trend_prediction": "Prediccion IA: la atencion regulatoria seguira concentrandose en incidentes con volumen, usos intensivos de IA y debilidades de accountability documental.",
+    "automatic_recommendation": "Reforzar pruebas de necesidad, proporcionalidad, minimizacion y supervisiones periodicas.",
+    "priority": "Alta",
+    "business_impact": "Impacto potencial en sancion, reputacion, continuidad de proveedor y confianza comercial.",
+    "urgency": "Elevada"
+  },
+  "sources": [
+    {
+      "label": "AEPD - Memoria 2025",
+      "date": "2026-05-06",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-recibio-mas-de-30.000-reclamaciones-en-2025-un-64-mas"
+    },
+    {
+      "label": "AEPD - Brechas 2025",
+      "date": "2026-01-23",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-en-2025-mas-2.700-notificaciones-brechas"
+    },
+    {
+      "label": "AEPD - Herramienta interactiva de brechas",
+      "date": "2026-04-30",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/nueva-herramienta-interactiva-consultar-notificaciones-brechas-datos-personales"
+    },
+    {
+      "label": "AEPD - Declaracion 10 aniversario RGPD",
+      "date": "2026-04-24",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/autoridades-proteccion-de-datos-suscriben-declaracion-conjunta-decimo-aniversario-rgpd"
+    },
+    {
+      "label": "AEPD - STS 1590/2026 y comienzo del tratamiento",
+      "date": "2026-05-02",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales"
+    },
+    {
+      "label": "EDPB - 118th Plenary meeting",
+      "date": "2026-04-16",
+      "url": "https://www.edpb.europa.eu/our-work-tools/plenary-meetings/118th-plenary-meeting_en"
+    },
+    {
+      "label": "EDPB - DPIA Template",
+      "date": "2026-04-14",
+      "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/edpb-dpia-template_de"
+    },
+    {
+      "label": "EDPS/EDPB - Opinion CSA2 / NIS2",
+      "date": "2026-03-19",
+      "url": "https://www.edps.europa.eu/press-publications/press-news/press-releases/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while-protecting-individuals-personal-data_en"
+    },
+    {
+      "label": "EDPB - EU-US Data Privacy Framework FAQ v2.0",
+      "date": "2026-01-23",
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/other-guidance/eu-us-data-privacy-framework-faq-european-businesses-0_en"
+    }
+  ],
+  "legal_note": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional."
+}
