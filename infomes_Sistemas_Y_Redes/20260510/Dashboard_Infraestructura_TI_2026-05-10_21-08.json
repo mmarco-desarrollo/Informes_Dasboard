@@ -1,0 +1,182 @@
+{
+  "organization": "MMarco Seguridad",
+  "report_type": "Informe Ejecutivo Premium de Infraestructura TI",
+  "status": "visibilidad_insuficiente",
+  "status_label": "Visibilidad insuficiente",
+  "executed_at": "2026-05-10 21:08:32 CEST",
+  "generated_at_utc": "2026-05-10 19:12:52 UTC",
+  "timezone": "Europe/Madrid",
+  "next_execution": null,
+  "repo_target": {
+    "repository": "mmarco-desarrollo/Informes_Dasboard",
+    "path": "infomes_Sistemas_Y_Redes/20260510/"
+  },
+  "data_sources": [],
+  "source_gaps": [
+    "Inventario de servidores y sistemas operativos",
+    "Telemetria de monitorizacion y disponibilidad",
+    "Redes, WiFi y telecomunicaciones",
+    "Ticketing o ITSM para incidencias",
+    "Parches, vulnerabilidades y cumplimiento",
+    "Consola de backups y pruebas de restauracion",
+    "Datos de continuidad y recuperacion"
+  ],
+  "kpis": [
+    {
+      "title": "Estado general",
+      "value": "Visibilidad insuficiente",
+      "status": "warning",
+      "note": "Dato operativo: no hay telemetria nueva verificable.",
+      "source_type": "dato_operativo"
+    },
+    {
+      "title": "Fuentes conectadas",
+      "value": "0 / 7",
+      "status": "critical",
+      "note": "Dato operativo: sin conectores de inventario, monitorizacion, red, WiFi, backup, cloud o ITSM.",
+      "source_type": "dato_operativo"
+    },
+    {
+      "title": "Cobertura observable",
+      "value": "0%",
+      "status": "critical",
+      "note": "Dato operativo derivado de la ejecucion: no hay metricas tecnicas directas disponibles.",
+      "source_type": "dato_operativo"
+    },
+    {
+      "title": "Riesgo IA",
+      "value": "Alto",
+      "status": "ai",
+      "note": "Estimacion IA: la falta de observabilidad incrementa riesgo de deteccion tardia y decisiones a ciegas.",
+      "source_type": "estimacion_ia"
+    }
+  ],
+  "sections": [
+    {
+      "key": "global_health",
+      "title": "Salud global de infraestructura",
+      "status": "parcial",
+      "data_type": "fallback_operativo",
+      "summary": "Sin telemetria verificable en esta ejecucion. No es posible confirmar salud real ni disponibilidad consolidada."
+    },
+    {
+      "key": "servers_os",
+      "title": "Servidores y sistemas operativos",
+      "status": "no_disponible",
+      "data_type": "sin_fuente",
+      "summary": "No hay inventario, estados ni rendimiento por host en la ejecucion actual."
+    },
+    {
+      "key": "cloud",
+      "title": "Cloud",
+      "status": "no_disponible",
+      "data_type": "sin_fuente",
+      "summary": "No hay visibilidad de cuentas, workloads, costos, salud ni alertas cloud."
+    },
+    {
+      "key": "networks",
+      "title": "Redes informaticas",
+      "status": "no_disponible",
+      "data_type": "sin_fuente",
+      "summary": "No hay datos de routing, switching, WAN, latencia, perdidas o disponibilidad."
+    },
+    {
+      "key": "wifi",
+      "title": "WiFi",
+      "status": "no_disponible",
+      "data_type": "sin_fuente",
+      "summary": "No se recibieron metricas de cobertura, experiencia cliente, canales o interferencias."
+    },
+    {
+      "key": "telecom",
+      "title": "Telecomunicaciones",
+      "status": "no_disponible",
+      "data_type": "sin_fuente",
+      "summary": "No hay datos de enlaces, operadores, SIP, voz o continuidad del servicio."
+    },
+    {
+      "key": "incidents",
+      "title": "Incidentes recientes",
+      "status": "parcial",
+      "data_type": "sin_tickets",
+      "summary": "No hay feed ITSM o ticketing conectado. No se pueden confirmar incidentes abiertos o resueltos."
+    },
+    {
+      "key": "patches",
+      "title": "Actualizaciones y parches",
+      "status": "no_disponible",
+      "data_type": "sin_fuente",
+      "summary": "No hay evidencia de cumplimiento de parches ni ventanas de mantenimiento verificadas."
+    },
+    {
+      "key": "backups",
+      "title": "Backups y continuidad",
+      "status": "no_disponible",
+      "data_type": "sin_fuente",
+      "summary": "No se dispone de consola de backups, RPO, RTO ni pruebas de restauracion recientes."
+    },
+    {
+      "key": "alerts",
+      "title": "Alertas activas",
+      "status": "parcial",
+      "data_type": "fallback_operativo",
+      "summary": "No hay alertas verificadas desde plataforma de monitorizacion. Riesgo elevado por falta de deteccion temprana."
+    },
+    {
+      "key": "ai",
+      "title": "Seccion IA",
+      "status": "estimacion",
+      "data_type": "estimacion_ia",
+      "summary": "La prioridad tecnica es habilitar observabilidad base y respaldo verificable antes de ampliar cuadros ejecutivos."
+    }
+  ],
+  "alerts": [
+    {
+      "severity": "alta",
+      "title": "Ausencia de telemetria operativa",
+      "detail": "No hay fuentes activas para confirmar disponibilidad, rendimiento o saturacion.",
+      "type": "dato_operativo"
+    },
+    {
+      "severity": "alta",
+      "title": "Backups no verificables",
+      "detail": "La ejecucion no incluye evidencia de trabajos correctos ni pruebas de restauracion.",
+      "type": "dato_operativo"
+    },
+    {
+      "severity": "media",
+      "title": "Incidencias no trazables",
+      "detail": "Sin ITSM o ticketing no se puede medir MTTR, volumen ni impacto reciente.",
+      "type": "dato_operativo"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": 1,
+      "title": "Conectar monitorizacion base",
+      "detail": "Integrar una fuente con disponibilidad, CPU, memoria, disco y alertas para servidores y enlaces criticos.",
+      "type": "recomendacion_ia"
+    },
+    {
+      "priority": 2,
+      "title": "Publicar inventario e identidad tecnica",
+      "detail": "Normalizar inventario de hosts, sistemas operativos, ubicaciones, owners y criticidad.",
+      "type": "recomendacion_ia"
+    },
+    {
+      "priority": 3,
+      "title": "Conectar backup y continuidad",
+      "detail": "Exponer estado de jobs, ultimas restauraciones, RPO objetivo y excepciones de cobertura.",
+      "type": "recomendacion_ia"
+    }
+  ],
+  "ai_insights": {
+    "risk_level": "alto",
+    "risk_score_estimated": 78,
+    "confidence": "media-baja",
+    "prediction": "La infraestructura puede ocultar degradaciones no detectadas si la observabilidad sigue desconectada en la siguiente ventana.",
+    "priority_action": "Activar observabilidad minima viable y validacion de backups.",
+    "type": "estimacion_ia"
+  },
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria tecnica, monitorizacion profesional ni intervencion de un especialista."
+}
