@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "site": "https://mmarcoseguridad.com",
+    "email": "mmarco.seguridad@gmail.com",
+    "whatsapp": "+34 656 33 93 55",
+    "specialty": "Ciberseguridad - Blockchain - IA - Telecomunicaciones"
+  },
+  "meta": {
+    "slot": "16:00",
+    "generated_utc": "2026-05-10 15:53 UTC",
+    "generated_local": "2026-05-10 17:53 CEST",
+    "next_update": "Proxima ejecucion programada",
+    "market_state": "Sesgo alcista prudente",
+    "ai_state": "IA: riesgo medio con mejora tactica",
+    "fear_greed": {
+      "value": 47,
+      "label": "Neutral"
+    }
+  },
+  "kpis": {
+    "market_cap": 2790.9,
+    "market_cap_ch24": 0.9,
+    "volume24": 58.9,
+    "btc_dom": 58.3,
+    "eth_dom": 10.1,
+    "altseason": 39,
+    "open_interest": 53.6,
+    "futures_volume24": 40.1,
+    "liquidations24": 71.5,
+    "volatility_label": "Moderada"
+  },
+  "coins": [
+    {"symbol":"BTC","name":"Bitcoin","price":81357.55,"ch24":1.0,"ch7":3.4,"volume24":18748325650,"market_cap":1628319752025,"rsi":69.02,"oi":26.0,"funding":0.0005,"liq24":11.1,"source_note":"CoinGecko + Coinalyze + Bitget"},
+    {"symbol":"ETH","name":"Ethereum","price":2346.77,"ch24":1.3,"ch7":1.0,"volume24":11250497425,"market_cap":283256433699,"rsi":56.57,"oi":13.1,"funding":0.0053,"liq24":13.6,"source_note":"CoinGecko + Coinalyze + Bitget"},
+    {"symbol":"SOL","name":"Solana","price":94.48,"ch24":1.8,"ch7":12.4,"volume24":2159876516,"market_cap":54579292590,"rsi":58.63,"oi":2.9,"funding":0.0027,"liq24":4.2,"source_note":"CoinGecko + Coinalyze + Bitget"},
+    {"symbol":"BNB","name":"BNB","price":655.65,"ch24":1.2,"ch7":5.8,"volume24":564996367,"market_cap":88352814162,"rsi":null,"oi":0.6214,"funding":0.0072,"liq24":0.1776,"source_note":"CoinGecko + Coinalyze"},
+    {"symbol":"XRP","name":"XRP","price":1.44,"ch24":2.1,"ch7":3.5,"volume24":1188950668,"market_cap":89147505300,"rsi":56.29,"oi":1.1,"funding":0.007,"liq24":0.5722,"source_note":"CoinGecko + Coinalyze + Bitget"},
+    {"symbol":"ADA","name":"Cardano","price":0.2807,"ch24":3.9,"ch7":12.4,"volume24":285363938,"market_cap":10346875057,"rsi":63.68,"oi":0.2659,"funding":0.008,"liq24":0.1866,"source_note":"CoinGecko + Coinalyze + Bitget"},
+    {"symbol":"DOGE","name":"Dogecoin","price":0.1089,"ch24":0.3,"ch7":0.2,"volume24":602213648,"market_cap":16785932052,"rsi":60.23,"oi":0.6811,"funding":0.0068,"liq24":0.6386,"source_note":"CoinGecko + Coinalyze + Bitget"}
+  ]
+}
