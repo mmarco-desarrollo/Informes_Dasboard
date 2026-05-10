@@ -1,0 +1,454 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "website": "https://mmarcoseguridad.com",
+  "primary_recipient": "mmarco.seguridad@gmail.com",
+  "generated_at": "2026-05-11 00:14:41 CEST",
+  "timezone": "Europe/Madrid",
+  "analysis_window": {
+    "from": "2026-05-10 20:22 CEST",
+    "to": "2026-05-11 00:14 CEST",
+    "label": "Periodo nocturno acumulado"
+  },
+  "report_type": "Informe resumido nocturno de inteligencia artificial",
+  "impact_level": "Alto",
+  "ecosystem_status": "Vigilancia reforzada",
+  "next_update": "Siguiente ejecucion programada del radar",
+  "kpis": [
+    {
+      "label": "Hechos confirmados",
+      "value": "11",
+      "note": "Senales consolidadas con fuente primaria o tecnica"
+    },
+    {
+      "label": "Incidentes criticos",
+      "value": "2",
+      "note": "CVE criticas en marcos agentic con riesgo de RCE"
+    },
+    {
+      "label": "Cambios regulatorios",
+      "value": "2",
+      "note": "Simplificacion AI Act + continuidad GPAI"
+    },
+    {
+      "label": "Acciones prioritarias",
+      "value": "4",
+      "note": "Mitigar agentes, revisar proveedores y planificar cumplimiento"
+    }
+  ],
+  "executive_summary": [
+    {
+      "type": "hecho_confirmado",
+      "text": "No se han detectado anuncios publicos de ruptura posteriores a las 20:22 CEST del 10 de mayo; el valor del corte nocturno esta en consolidar cambios recientes que siguen teniendo impacto operativo durante la madrugada del 11 de mayo."
+    },
+    {
+      "type": "hecho_confirmado",
+      "text": "El riesgo mas material sigue en seguridad agentic: Microsoft describio el 7 de mayo dos vulnerabilidades criticas en Semantic Kernel, CVE-2026-25592 y CVE-2026-26030, capaces de convertir prompt injection en ejecucion de codigo no autorizada en agentes mal desplegados."
+    },
+    {
+      "type": "hecho_confirmado",
+      "text": "Los grandes proveedores estan acelerando herramientas para voz, investigacion automatizada y agentes con conectores: OpenAI lanzo GPT-Realtime-2, GPT-Realtime-Translate y GPT-Realtime-Whisper; Google posiciona Deep Research Max y MCP como infraestructura de investigacion empresarial; Anthropic refuerza seguridad con Project Glasswing y Opus 4.7."
+    },
+    {
+      "type": "interpretacion",
+      "text": "La noche deja una conclusion clara: la ventaja competitiva ya no depende solo del modelo base, sino de la gobernanza del agente, el control de herramientas, la seguridad de la cadena open source y la trazabilidad regulatoria."
+    }
+  ],
+  "activity_bands": [
+    {
+      "label": "Seguridad agentic",
+      "score": 92,
+      "tone": "critical"
+    },
+    {
+      "label": "Modelos y voz en tiempo real",
+      "score": 81,
+      "tone": "high"
+    },
+    {
+      "label": "Investigacion automatizada y MCP",
+      "score": 77,
+      "tone": "high"
+    },
+    {
+      "label": "Open source e inferencia",
+      "score": 73,
+      "tone": "medium"
+    },
+    {
+      "label": "Cumplimiento AI Act",
+      "score": 68,
+      "tone": "medium"
+    }
+  ],
+  "global_view": [
+    {
+      "actor": "OpenAI",
+      "status": "Acelera voz y controles de agentes",
+      "impact": "alto"
+    },
+    {
+      "actor": "Google",
+      "status": "Empuja investigacion autonoma y plataforma agentic",
+      "impact": "alto"
+    },
+    {
+      "actor": "Anthropic",
+      "status": "Securiza el frente cyber mientras mejora codificacion",
+      "impact": "alto"
+    },
+    {
+      "actor": "Microsoft",
+      "status": "Marca el riesgo real de tool-calling inseguro",
+      "impact": "critico"
+    },
+    {
+      "actor": "Mistral / HF / NVIDIA",
+      "status": "Refuerzan stack abierto y seguro",
+      "impact": "medio-alto"
+    },
+    {
+      "actor": "UE",
+      "status": "Ajusta calendario de alto riesgo y mantiene disciplina GPAI",
+      "impact": "alto"
+    }
+  ],
+  "featured_news": [
+    {
+      "name": "Prompt injection con deriva a RCE en Semantic Kernel",
+      "source": "Microsoft Security Blog",
+      "date": "2026-05-07",
+      "category": "Incidente / Vulnerabilidad",
+      "impact": "Critico",
+      "utility_or_risk": "Afecta al patron de agentes con herramientas, memoria o plugins inseguros; el riesgo no es teorico.",
+      "recommendation": "Revisar despliegues con Semantic Kernel, validar versiones corregidas y endurecer tool boundaries.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "name": "OpenAI impulsa la capa de voz operativa",
+      "source": "OpenAI",
+      "date": "2026-05-07",
+      "category": "Lanzamiento",
+      "impact": "Alto",
+      "utility_or_risk": "GPT-Realtime-2, Translate y Whisper aumentan madurez de asistentes por voz y automatizacion multilingue.",
+      "recommendation": "Valorar pilotos en atencion al cliente, recepcion de incidencias y traduccion operativa.",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "name": "OpenAI publica controles de seguridad para agentes de codigo",
+      "source": "OpenAI",
+      "date": "2026-05-08",
+      "category": "Seguridad / Gobierno",
+      "impact": "Alto",
+      "utility_or_risk": "Refuerza el estandar de sandboxing, aprobaciones, politicas de red y telemetria agent-native.",
+      "recommendation": "Usar este marco como patron de diseno para agentes internos con acceso a sistemas.",
+      "url": "https://openai.com/index/running-codex-safely/"
+    },
+    {
+      "name": "La UE simplifica aplicacion de IA de alto riesgo pero mantiene disciplina regulatoria",
+      "source": "Comision Europea",
+      "date": "2026-05-07",
+      "category": "Regulacion",
+      "impact": "Alto",
+      "utility_or_risk": "Aclara que ciertas reglas de alto riesgo aplicaran desde el 2 de diciembre de 2027 y otras desde el 2 de agosto de 2028.",
+      "recommendation": "Ajustar roadmaps de cumplimiento sin relajar gobierno documental y de proveedores.",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
+    }
+  ],
+  "models": [
+    {
+      "name": "Claude Opus 4.7",
+      "company": "Anthropic",
+      "type": "LLM general / coding",
+      "capabilities": "Mejora en software engineering, vision y tareas largas; disponible de forma general.",
+      "multimodal": "Si",
+      "license": "Propietario",
+      "use_cases": "Codificacion avanzada, analisis visual, agentes supervisados.",
+      "estimated_impact": "Alto",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "name": "Mistral 3 y Mistral Large 3",
+      "company": "Mistral AI",
+      "type": "Open multimodal / multilingual",
+      "capabilities": "Familia abierta con variantes 3B, 8B, 14B y Large 3; multimodal, multilingue y con despliegue edge.",
+      "multimodal": "Si",
+      "license": "Apache 2.0",
+      "use_cases": "Despliegue local, copilotos privados, automatizacion controlada.",
+      "estimated_impact": "Alto",
+      "url": "https://mistral.ai/news/mistral-3"
+    },
+    {
+      "name": "GPT-Realtime-2 / Translate / Whisper",
+      "company": "OpenAI",
+      "type": "Voz en tiempo real",
+      "capabilities": "Razonamiento, traduccion y transcripcion en vivo; mas contexto y tool calling paralelo.",
+      "multimodal": "Audio",
+      "license": "API propietaria",
+      "use_cases": "Voice-to-action, soporte multilingue, orquestacion hablada.",
+      "estimated_impact": "Alto",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Deep Research Max",
+      "source": "Google",
+      "description": "Agente de investigacion de maxima exhaustividad con MCP y uso de datos propios.",
+      "use_cases": "Due diligence nocturna, analisis de mercado, inteligencia competitiva.",
+      "utility_level": "Muy alta",
+      "warning": "Requiere gobierno de datos conectados y validacion humana en conclusiones sensibles.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/"
+    },
+    {
+      "name": "Finance Search",
+      "source": "Perplexity",
+      "description": "Herramienta del Agent API para datos financieros estructurados, earnings y KPIs.",
+      "use_cases": "Investigacion de empresas cotizadas, inteligencia comercial y argumentarios de venta.",
+      "utility_level": "Alta",
+      "warning": "Conviene delimitar fuentes y trazabilidad si se integra en informes externos.",
+      "url": "https://docs.perplexity.ai/docs/agent-api/finance-search"
+    },
+    {
+      "name": "NVIDIA Dynamo 1.0",
+      "source": "NVIDIA",
+      "description": "Capa open source de inferencia generativa y agentic a escala, con mejoras de hasta 7x en Blackwell.",
+      "use_cases": "Servir LLMs y agentes de alta carga en empresa o proveedor.",
+      "utility_level": "Alta",
+      "warning": "Relevante sobre todo para operadores con demanda de inferencia sostenida.",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories"
+    },
+    {
+      "name": "Voxtral TTS",
+      "source": "Mistral AI",
+      "description": "TTS con clonacion de voz zero-shot, 9 idiomas y streaming de baja latencia.",
+      "use_cases": "Asistentes telefonicos, salidas habladas internas, automatizacion omnicanal.",
+      "utility_level": "Media-alta",
+      "warning": "Exige politicas de identidad vocal y consentimiento si se usa clonacion.",
+      "url": "https://docs.mistral.ai/models/model-cards/voxtral-tts-26-03"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Safetensors",
+      "source": "Hugging Face / PyTorch Foundation",
+      "stars_or_popularity": "Amplio uso en decenas de miles de modelos",
+      "language": "Multi-ecosistema",
+      "description": "Formato de pesos pensado para evitar ejecucion arbitraria de codigo al compartir modelos.",
+      "use_cases": "Distribucion segura de checkpoints, cadena de suministro de modelos.",
+      "utility_level": "Alta",
+      "warning": "No elimina todos los riesgos de supply chain, pero reduce uno de los mas comunes.",
+      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    }
+  ],
+  "incidents": [
+    {
+      "identifier": "CVE-2026-25592 / CVE-2026-26030",
+      "product": "Microsoft Semantic Kernel",
+      "severity": "Critica",
+      "exploitation_status": "Microsoft no presenta explotacion masiva confirmada en la fuente revisada; el vector es creible y operativo.",
+      "impact": "Un flujo con prompt injection puede derivar en escritura arbitraria y ejecucion no autorizada en agentes mal configurados.",
+      "mitigation": "Aplicar correcciones del framework, revisar plugins expuestos, endurecer sandboxes y controles de aprobacion.",
+      "priority": "Critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "identifier": "Patron de riesgo: prompt injection -> tool misuse -> host impact",
+      "product": "Agentes conectados a herramientas, memoria o ejecucion local",
+      "severity": "Alta",
+      "exploitation_status": "Patron confirmado por Microsoft y asumido por OpenAI/Anthropic en sus marcos de seguridad.",
+      "impact": "Expone codigo, datos, ficheros, secretos y sistemas aguas abajo.",
+      "mitigation": "Separacion de privilegios, aprobaciones explicitas, allowlists, telemetria y registros agent-native.",
+      "priority": "Alta"
+    },
+    {
+      "identifier": "Riesgo de supply chain en pesos y artefactos",
+      "product": "Modelos y checkpoints open source",
+      "severity": "Media-Alta",
+      "exploitation_status": "Persistente en el ecosistema; Safetensors se consolida como mitigacion estructural.",
+      "impact": "Carga de artefactos inseguros o empaquetados con ejecucion maliciosa.",
+      "mitigation": "Preferir safetensors, verificar procedencia y firmar pipelines internos.",
+      "priority": "Alta",
+      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    }
+  ],
+  "trends": [
+    "La voz deja de ser interfaz cosmetica y pasa a convertirse en superficie operativa con razonamiento y accion.",
+    "MCP y conectores remotos se consolidan como capa comun para investigacion automatizada y agentes de empresa.",
+    "El mercado open source se reordena alrededor de inferencia eficiente, pesos mas seguros y despliegue edge.",
+    "La conversacion regulatoria europea se mueve hacia simplificar despliegue sin relajar obligaciones de GPAI y seguridad."
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "title": "Servicio de auditoria de agentes y MCP para pymes",
+      "detail": "Oferta de revision de permisos, conectores, logs y riesgo de prompt injection para asistentes internos."
+    },
+    {
+      "priority": "Alta",
+      "title": "Pilotos de voz operativa multilingue",
+      "detail": "Casos en recepcion, soporte, incidencias y automatizacion comercial con trazabilidad y guardrails."
+    },
+    {
+      "priority": "Media",
+      "title": "Linea de despliegue local con Mistral 3",
+      "detail": "Propuesta para clientes que requieren soberania del dato y latencia controlada."
+    },
+    {
+      "priority": "Media",
+      "title": "Inteligencia competitiva nocturna automatizada",
+      "detail": "Combinar Deep Research Max o stacks equivalentes con revision humana para informes de madrugada."
+    }
+  ],
+  "active_alerts": [
+    "Revisar cualquier agente con acceso a shell, ficheros o sesiones Python expuestas por frameworks de terceros.",
+    "Planificar migracion si se usa xAI API: varias referencias Grok dejan de funcionar el 15 de mayo de 2026 a las 12:00 PT.",
+    "Mantener plan de cumplimiento GPAI: la AI Office recuerda que las obligaciones para proveedores GPAI aplican desde el 2 de agosto de 2025.",
+    "Evitar publicar o integrar artefactos de modelos sin verificacion de procedencia y formato."
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Lanzar una revision express de agentes con herramientas",
+      "detail": "Inventariar agentes, frameworks, plugins y permisos efectivos. Donde haya ejecucion local o acceso a secretos, imponer aprobaciones y sandbox."
+    },
+    {
+      "priority": "Alta",
+      "title": "Definir patron corporativo de agente seguro",
+      "detail": "Adoptar controles tipo OpenAI: sandboxing, politicas de red, telemetria, logs y escalado explicito para acciones de riesgo."
+    },
+    {
+      "priority": "Alta",
+      "title": "Seleccionar dos pilotos comerciales de alto retorno",
+      "detail": "Uno de voz multilingue y otro de inteligencia nocturna automatizada con citas, fuentes y resumen ejecutivo."
+    },
+    {
+      "priority": "Media",
+      "title": "Alinear roadmap de cumplimiento 2026-2028",
+      "detail": "Mapear proveedores GPAI, documentacion y obligaciones contractuales antes de ampliar despliegues en clientes regulados."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-05-15",
+      "event": "Retirada de varios modelos de xAI API",
+      "note": "Fecha efectiva 12:00 PT."
+    },
+    {
+      "date": "2026-08-02",
+      "event": "Ventana clave de enforcement GPAI para nuevos modelos",
+      "note": "Las obligaciones GPAI aplican desde 2025-08-02; la aplicacion coercitiva sobre nuevos modelos llega un ano despues segun la Comision."
+    },
+    {
+      "date": "2027-12-02",
+      "event": "Aplicacion de reglas simplificadas para ciertos sistemas de alto riesgo",
+      "note": "Segun acuerdo politico comunicado por la Comision el 2026-05-07."
+    },
+    {
+      "date": "2028-08-02",
+      "event": "Aplicacion para sistemas integrados en productos",
+      "note": "Calendario comunicado por la Comision Europea."
+    }
+  ],
+  "sources": [
+    {
+      "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
+      "publisher": "Microsoft Security Blog",
+      "date": "2026-05-07",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "title": "Advancing voice intelligence with new models in the API",
+      "publisher": "OpenAI",
+      "date": "2026-05-07",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "title": "Running Codex safely at OpenAI",
+      "publisher": "OpenAI",
+      "date": "2026-05-08",
+      "url": "https://openai.com/index/running-codex-safely/"
+    },
+    {
+      "title": "Google AI announcements from April 2026",
+      "publisher": "Google",
+      "date": "2026-05-04",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/"
+    },
+    {
+      "title": "Introducing Deep Research and Deep Research Max",
+      "publisher": "Google",
+      "date": "2026-04-25",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/"
+    },
+    {
+      "title": "Introducing Claude Opus 4.7",
+      "publisher": "Anthropic",
+      "date": "2026-04-16",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "title": "Project Glasswing",
+      "publisher": "Anthropic",
+      "date": "2026-04-07",
+      "url": "https://www.anthropic.com/project/glasswing"
+    },
+    {
+      "title": "Introducing Mistral 3",
+      "publisher": "Mistral AI",
+      "date": "2026-04-29",
+      "url": "https://mistral.ai/news/mistral-3"
+    },
+    {
+      "title": "Voxtral TTS",
+      "publisher": "Mistral Docs",
+      "date": "2026-03-23",
+      "url": "https://docs.mistral.ai/models/model-cards/voxtral-tts-26-03"
+    },
+    {
+      "title": "NVIDIA enters production with Dynamo 1.0",
+      "publisher": "NVIDIA",
+      "date": "2026-03-16",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories"
+    },
+    {
+      "title": "Finance Search",
+      "publisher": "Perplexity Docs",
+      "date": "2026-05-06",
+      "url": "https://docs.perplexity.ai/docs/agent-api/finance-search"
+    },
+    {
+      "title": "Grok Model Retirement on May 15, 2026",
+      "publisher": "xAI Docs",
+      "date": "2026-05-07",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "title": "Safetensors is Joining the PyTorch Foundation",
+      "publisher": "Hugging Face",
+      "date": "2026-04-08",
+      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    },
+    {
+      "title": "EU agrees to simplify AI rules to boost innovation and ban nudification apps",
+      "publisher": "European Commission",
+      "date": "2026-05-07",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
+    },
+    {
+      "title": "General-Purpose AI Models in the AI Act – Questions & Answers",
+      "publisher": "AI Office / European Commission",
+      "date": "2025-09-12",
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers"
+    },
+    {
+      "title": "The General-Purpose AI Code of Practice",
+      "publisher": "European Commission",
+      "date": "2026-04-23",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
