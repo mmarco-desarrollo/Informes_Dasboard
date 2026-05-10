@@ -1,0 +1,236 @@
+{
+  "run_at": "2026-05-10T22:04:00+02:00",
+  "global_kpis": {
+    "market_cap": 2805530088503.637,
+    "volume_24h": 69724079314.7591,
+    "btc_dominance": 58.09009115279705,
+    "eth_dominance": 10.166229826970959,
+    "market_cap_change_24h": 0.9531485991004446,
+    "volume_change_24h": 3.964960342020952,
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "altseason_index": 35,
+    "open_interest": "763,350 BTC",
+    "open_interest_note": "Ultima lectura accesible reportada el 4 May 2026",
+    "funding_rates": "N/D fiable en vivo",
+    "funding_note": "Sesgo neutral-positivo tras el short squeeze de la semana",
+    "liquidations": 245000000,
+    "liquidations_note": "TokenPost con referencia a CoinGlass, 8 May 2026 09:40 UTC",
+    "volatility": "Elevada",
+    "volatility_note": "Riesgo dirigido por macro y leverage antes del CPI"
+  },
+  "coins": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": 81414.1,
+      "change_24h": 0.77,
+      "change_7d": 3.35,
+      "volume_24h": 18900845756,
+      "trend": "Constructiva",
+      "momentum": "Neutro",
+      "risk_bias": "Selectivo"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": 2364.13,
+      "change_24h": 1.56,
+      "change_7d": 1.27,
+      "volume_24h": 15580070222,
+      "trend": "Constructiva",
+      "momentum": "Neutro",
+      "risk_bias": "Selectivo"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": 96.78,
+      "change_24h": 3.71,
+      "change_7d": 14.73,
+      "volume_24h": 3926670112,
+      "trend": "Alcista",
+      "momentum": "Fuerte",
+      "risk_bias": "Beta alta"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": 661.6,
+      "change_24h": 1.68,
+      "change_7d": 6.81,
+      "volume_24h": 1224280446,
+      "trend": "Constructiva",
+      "momentum": "Positivo",
+      "risk_bias": "Selectivo"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "price": 1.48,
+      "change_24h": 4.53,
+      "change_7d": 6.53,
+      "volume_24h": 2275237570,
+      "trend": "Alcista",
+      "momentum": "Fuerte",
+      "risk_bias": "Selectivo"
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.2878,
+      "change_24h": 5.75,
+      "change_7d": 14.76,
+      "volume_24h": 486490617,
+      "trend": "Alcista",
+      "momentum": "Fuerte",
+      "risk_bias": "Beta alta"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.1113,
+      "change_24h": 1.56,
+      "change_7d": 2.61,
+      "volume_24h": 836533210,
+      "trend": "Constructiva",
+      "momentum": "Neutro",
+      "risk_bias": "Selectivo"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Neutral",
+      "probability": 40,
+      "targets": "BTC 80.2k - 82.2k | ETH 2.31k - 2.40k | SOL 94 - 99",
+      "risk": "Medio",
+      "confidence": "Media-alta",
+      "supports": "BTC 80k | ETH 2.30k | SOL 94",
+      "resistances": "BTC 82.2k | ETH 2.40k | SOL 99",
+      "critical_zone": "Esperar la reaccion al CPI del martes 12 de mayo antes de ampliar beta"
+    },
+    {
+      "name": "Alcista",
+      "probability": 35,
+      "targets": "BTC 82.5k - 84.0k | ETH 2.42k - 2.50k | SOL 100 - 104",
+      "risk": "Medio-alto",
+      "confidence": "Media",
+      "supports": "BTC 81k | ETH 2.34k | SOL 96",
+      "resistances": "BTC 84k | ETH 2.50k | SOL 104",
+      "critical_zone": "Necesita CPI benigno, Nasdaq estable y continuidad de flujo institucional"
+    },
+    {
+      "name": "Bajista",
+      "probability": 25,
+      "targets": "BTC 78.8k - 80.0k | ETH 2.22k - 2.30k | SOL 90 - 94",
+      "risk": "Elevado",
+      "confidence": "Media",
+      "supports": "BTC 79k | ETH 2.25k | SOL 91",
+      "resistances": "BTC 81.4k | ETH 2.36k | SOL 97",
+      "critical_zone": "CPI por encima de consenso o nueva compresion del dolar frente a Nasdaq/cripto"
+    }
+  ],
+  "news": [
+    {
+      "title": "Treasury pidio entrevistas y registros adicionales a Binance sobre su monitorship",
+      "source": "Bloomberg Law",
+      "time": "7 May 2026, 18:04 UTC",
+      "impact": "Riesgo regulatorio alto para sentimiento en exchanges centralizados y para BNB.",
+      "url": "https://news.bloomberglaw.com/financial-accounting/binance-says-treasury-sent-letter-over-monitorship-of-exchange"
+    },
+    {
+      "title": "Ethereum Foundation vendio otros 10,000 ETH OTC a BitMine",
+      "source": "Cointelegraph",
+      "time": "2 May 2026",
+      "impact": "Presion tactica de oferta sobre ETH, aunque absorbida fuera del libro spot.",
+      "url": "https://cointelegraph.com/news/ethereum-foundation-sells-another-10000-eth-to-bitmine-in-third-otc-deal"
+    },
+    {
+      "title": "GSR lanzo en Nasdaq el ETF Core3 con BTC, ETH y SOL",
+      "source": "The Block / Nasdaq",
+      "time": "22 Apr 2026, 09:00 EDT",
+      "impact": "Senal institucional positiva para una cesta muy selectiva de large caps.",
+      "url": "https://www.theblock.co/post/398443/gsr-crypto-etf-actively-managed-multi-asset-core3-bitcoin-ethereum-solana/"
+    },
+    {
+      "title": "$245M en liquidaciones golpearon al mercado con sesgo de longs",
+      "source": "TokenPost",
+      "time": "8 May 2026, 09:40 UTC",
+      "impact": "Confirma que el leverage sigue fragil antes de la semana macro 12-15 May.",
+      "url": "https://tokenpost.com/news/investing/20428"
+    }
+  ],
+  "macro_events": [
+    "Lunes 11 May 2026: vigilar la reaccion inicial de la sesion europea y el tono de yields antes de la bateria de datos.",
+    "Martes 12 May 2026, 08:30 ET: CPI de abril en EE.UU. (BLS) - principal catalizador de corto plazo para dolar, Nasdaq y cripto.",
+    "Miercoles 13 May 2026, 08:30 ET: PPI de abril en EE.UU. (BLS) - valida o enfria la presion de inflacion de segunda ronda.",
+    "Jueves 14 May 2026, 08:30 ET: Advance Retail Sales de abril (U.S. Census) y Weekly Claims - lectura clave de crecimiento y empleo.",
+    "Jueves 14 May 2026: Senate Banking markup sobre el Digital Asset Market Clarity Act - foco regulatorio directo para market structure."
+  ],
+  "alerts": [
+    "Dominancia BTC en 58.09%: el flujo sigue concentrado y todavia no confirma una altseason amplia.",
+    "Fear & Greed en 47 (Neutral): no hay panico, pero tampoco complacencia; el mercado esta muy sensible al dato de inflacion.",
+    "Liquidaciones recientes por $245M con sesgo de longs: el apalancamiento sigue siendo una fuente real de cascadas.",
+    "ETH mejora tacticamente, pero la sobreoferta OTC reciente de la Ethereum Foundation limita una lectura de expansion limpia."
+  ],
+  "signals": [
+    "No se emiten senales IA de entrada con stop loss y take profit en esta ejecucion nocturna.",
+    "Motivo: falta de confirmacion intradia y ausencia de lectura live suficientemente robusta de OI/funding para un set-up institucional.",
+    "Sesgo operativo: mantener disciplina de riesgo y esperar el dato de CPI antes de ampliar exposicion direccional."
+  ],
+  "flow_notes": [
+    "La senal institucional verificable mas fuerte es el ETF Core3 de GSR: la asignacion sigue concentrada en BTC, ETH y SOL.",
+    "Las ventas OTC de la Ethereum Foundation han sido absorbidas por BitMine, lo que reduce impacto spot inmediato pero mantiene presion psicologica sobre ETH.",
+    "No se detecto en esta ejecucion una lectura on-chain de ballenas suficientemente limpia como para publicarla sin riesgo de falsa precision."
+  ],
+  "sources": [
+    {
+      "label": "CoinGecko Global API snapshot",
+      "url": "https://api.coingecko.com/api/v3/global"
+    },
+    {
+      "label": "Alternative.me Fear & Greed Index",
+      "url": "https://alternative.me/crypto/fear-and-greed-index/"
+    },
+    {
+      "label": "BlockchainCenter Altcoin Season Index",
+      "url": "https://www.blockchaincenter.net/altcoin-season-index/"
+    },
+    {
+      "label": "CoinMarketCap homepage market table",
+      "url": "https://coinmarketcap.com/"
+    },
+    {
+      "label": "BLS CPI release schedule",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+    },
+    {
+      "label": "BLS PPI release",
+      "url": "https://www.bls.gov/news.release/ppi.htm"
+    },
+    {
+      "label": "U.S. Census retail release schedule",
+      "url": "https://www.census.gov/economic-indicators/calendar-listview.html"
+    },
+    {
+      "label": "Bloomberg Law on Binance monitorship letter",
+      "url": "https://news.bloomberglaw.com/financial-accounting/binance-says-treasury-sent-letter-over-monitorship-of-exchange"
+    },
+    {
+      "label": "Cointelegraph on Ethereum Foundation OTC sale",
+      "url": "https://cointelegraph.com/news/ethereum-foundation-sells-another-10000-eth-to-bitmine-in-third-otc-deal"
+    },
+    {
+      "label": "The Block on GSR Core3 ETF",
+      "url": "https://www.theblock.co/post/398443/gsr-crypto-etf-actively-managed-multi-asset-core3-bitcoin-ethereum-solana/"
+    },
+    {
+      "label": "TokenPost liquidation note",
+      "url": "https://tokenpost.com/news/investing/20428"
+    },
+    {
+      "label": "FinanceFeeds on short squeeze and BTC OI",
+      "url": "https://financefeeds.com/bitcoin-near-80000-triggers-370m-liquidations-as-shorts-get-squeezed/"
+    }
+  ]
+}
