@@ -1,0 +1,68 @@
+{
+  "report_name": "Informe Ejecutivo de Ciberseguridad",
+  "brand": "MMarco Seguridad",
+  "report_slot": "2026-05-10 20:00 CEST",
+  "generated_at": "2026-05-10 20:29 CEST",
+  "threat_level": "ALTO",
+  "threat_statement": "Explotación activa, campañas de phishing avanzadas y presión sostenida sobre perímetro expuesto.",
+  "kpis": {
+    "incidentes_criticos": 3,
+    "cves_prioritarias": 4,
+    "campanas_phishing_confirmadas": 3,
+    "tendencia_24h": "Al alza"
+  },
+  "hallazgos_clave": [
+    "Fortinet FortiCloud SSO sigue en prioridad máxima por CVE-2026-24858 con explotación activa confirmada.",
+    "SimpleHelp RMM continúa asociado a compromisos downstream y doble extorsión según CISA.",
+    "Linux gana criticidad por CVE-2026-31431 y la señal activa ligada a Dirty Frag.",
+    "Microsoft observó campañas AiTM contra más de 35.000 usuarios en 26 países."
+  ],
+  "vulnerabilidades_prioritarias": [
+    {
+      "cve": "CVE-2026-24858",
+      "producto": "Fortinet múltiples productos",
+      "severidad": "Crítica",
+      "explotacion": "KEV y alerta CCN-CERT",
+      "prioridad": "Inmediata",
+      "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2026-24858"
+    },
+    {
+      "cve": "CVE-2024-57727",
+      "producto": "SimpleHelp RMM",
+      "severidad": "Crítica",
+      "explotacion": "CISA reporta uso por ransomware",
+      "prioridad": "Inmediata",
+      "fuente": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-163a"
+    },
+    {
+      "cve": "CVE-2025-14847",
+      "producto": "MongoDB Server",
+      "severidad": "Crítica",
+      "explotacion": "Incluida en KEV",
+      "prioridad": "Muy alta",
+      "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2025-14847"
+    },
+    {
+      "cve": "CVE-2026-31431",
+      "producto": "Linux kernel",
+      "severidad": "Alta",
+      "explotacion": "KEV y foco cloud",
+      "prioridad": "Muy alta",
+      "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2026-31431"
+    }
+  ],
+  "recomendacion_ejecutiva_principal": "Priorizar corrección acelerada sobre Fortinet, SimpleHelp, MongoDB y Linux sensible; reforzar identidad con MFA resistente al phishing y cazar indicios de movimiento lateral ya presente.",
+  "fuentes": [
+    "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-071a",
+    "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-163a",
+    "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+    "https://nvd.nist.gov/vuln/detail/CVE-2025-14847",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
+    "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/detectan-una-campana-de-malware-distribuida-traves-de-linkedin",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html",
+    "https://www.enisa.europa.eu/publications/enisa-threat-landscape-2025",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+  ]
+}
