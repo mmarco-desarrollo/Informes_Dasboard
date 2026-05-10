@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe resumido nocturno de inteligencia artificial</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0d1a30;
+      --panel: rgba(14, 25, 48, 0.78);
+      --panel-strong: rgba(12, 20, 38, 0.94);
+      --line: rgba(116, 155, 255, 0.18);
+      --text: #eef4ff;
+      --muted: #9eb1d4;
+      --blue: #59a8ff;
+      --electric: #3dd9ff;
+      --violet: #8b7cff;
+      --green: #2ee6a6;
+      --orange: #ff9a3d;
+      --red: #ff5f6d;
+      --soft: #dbe7ff;
+      --shadow: 0 28px 60px rgba(0, 0, 0, 0.32);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background:
+      radial-gradient(circle at top left, rgba(61, 217, 255, 0.14), transparent 30%),
+      radial-gradient(circle at top right, rgba(139, 124, 255, 0.18), transparent 30%),
+      linear-gradient(180deg, #06101d, #08101b 40%, #050b14 100%);
+      color: var(--text);
+      font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+    }
+    body { min-height: 100vh; }
+    .wrap { width: min(1280px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 40px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(10, 22, 42, 0.92), rgba(8, 15, 28, 0.96));
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(89,168,255,0.26), transparent 58%);
+      pointer-events: none;
+    }
+    .eyebrow { color: var(--electric); text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; }
+    h1, h2, h3, h4, .kpi-value { font-family: "Space Grotesk", "Aptos", sans-serif; letter-spacing: 0; }
+    h1 { margin: 10px 0 14px; font-size: clamp(32px, 5vw, 54px); line-height: 1.03; max-width: 880px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr;
+      gap: 18px;
+      align-items: end;
+    }
+    .hero-copy p { color: var(--soft); max-width: 760px; margin: 0; font-size: 15px; line-height: 1.58; }
+    .hero-meta {
+      display: grid;
+      gap: 12px;
+      align-self: stretch;
+    }
+    .meta-box {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      border-radius: 18px;
+      padding: 14px 16px;
+      backdrop-filter: blur(18px);
+    }
+    .meta-box .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .meta-box strong { display: block; margin-top: 6px; font-size: 16px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--text);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-transform: uppercase;
+    }
+    .pill.hecho_confirmado { background: rgba(46,230,166,0.14); border-color: rgba(46,230,166,0.25); color: #bbffe7; }
+    .pill.interpretacion { background: rgba(89,168,255,0.12); border-color: rgba(89,168,255,0.24); color: #cfe5ff; }
+    .pill.neutral { background: rgba(139,124,255,0.12); border-color: rgba(139,124,255,0.22); color: #ddd7ff; }
+    section {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      padding: 22px 24px 0;
+    }
+    .section-head h2 { margin: 0; font-size: 22px; }
+    .section-head p { margin: 8px 0 0; color: var(--muted); max-width: 720px; line-height: 1.55; }
+    .section-body { padding: 22px 24px 24px; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .kpi {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+      min-height: 150px;
+    }
+    .kpi-label { color: var(--muted); font-size: 13px; }
+    .kpi-value { font-size: clamp(32px, 6vw, 44px); margin: 18px 0 8px; }
+    .kpi-note { color: var(--soft); font-size: 14px; line-height: 1.5; }
+    .summary {
+      display: grid;
+      gap: 12px;
+    }
+    .summary-line {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 16px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .summary-line:first-child { border-top: 0; padding-top: 0; }
+    .summary-line p { margin: 0; color: var(--soft); line-height: 1.66; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .inner-panel {
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .band-row + .band-row { margin-top: 14px; }
+    .band-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--soft);
+    }
+    .band-track {
+      height: 10px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .band-fill { display: block; height: 100%; border-radius: 999px; }
+    .band-fill.critical { background: linear-gradient(90deg, var(--red), #ff8b73); }
+    .band-fill.high { background: linear-gradient(90deg, var(--violet), var(--blue)); }
+    .band-fill.medium { background: linear-gradient(90deg, var(--electric), var(--green)); }
+    .world-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .world-item {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+    }
+    .world-item strong { display: block; margin-bottom: 8px; }
+    .world-item span { color: var(--muted); font-size: 13px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .story, .mini-card {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.035);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .story-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .story h3 { margin: 14px 0 10px; font-size: 19px; }
+    .story p, .mini-card p { color: var(--soft); line-height: 1.58; margin: 0 0 12px; }
+    .story-bottom {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .meta, .mini-subtitle { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .impact {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid transparent;
+      text-transform: uppercase;
+    }
+    .impact.critical { background: rgba(255,95,109,0.13); border-color: rgba(255,95,109,0.3); color: #ffd7db; }
+    .impact.high { background: rgba(255,154,61,0.13); border-color: rgba(255,154,61,0.25); color: #ffe0c5; }
+    .impact.medium { background: rgba(46,230,166,0.12); border-color: rgba(46,230,166,0.24); color: #d5fff0; }
+    .impact.low { background: rgba(89,168,255,0.12); border-color: rgba(89,168,255,0.24); color: #d5e7ff; }
+    .mini-title { font-weight: 600; }
+    a { color: var(--electric); text-decoration: none; }
+    .bullet-list, .sources-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--soft);
+    }
+    .bullet-list li, .sources-list li {
+      margin: 0 0 10px;
+      line-height: 1.58;
+    }
+    .op-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 14px;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .timeline-item:first-child { border-top: 0; padding-top: 0; }
+    .timeline-date { color: var(--electric); font-weight: 600; }
+    .timeline-item p { margin: 6px 0 0; color: var(--muted); }
+    footer {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(8, 14, 26, 0.92);
+      padding: 20px 24px 24px;
+    }
+    footer p { color: var(--muted); line-height: 1.58; margin: 8px 0 0; }
+    .footer-brand { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; }
+    @media (max-width: 980px) {
+      .hero-grid, .two-col, .grid-2, .grid-3, .op-grid, .kpi-grid { grid-template-columns: 1fr; }
+      .summary-line, .timeline-item { grid-template-columns: 1fr; }
+      .world-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">MMarco Seguridad · Radar Ejecutivo IA</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Informe resumido nocturno de inteligencia artificial</h1>
+          <p>Resumen premium del cierre nocturno con prioridad en incidentes, vulnerabilidades, riesgos operativos, cambios acumulados y decisiones ejecutivas para ciberseguridad, automatizacion y servicios tecnologicos.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-box"><div class="label">Generado</div><strong>2026-05-11 00:14:41 CEST</strong></div>
+          <div class="meta-box"><div class="label">Zona horaria</div><strong>Europe/Madrid</strong></div>
+          <div class="meta-box"><div class="label">Impacto IA</div><strong>Alto</strong></div>
+          <div class="meta-box"><div class="label">Estado global</div><strong>Vigilancia reforzada</strong></div>
+          <div class="meta-box"><div class="label">Ventana analizada</div><strong>2026-05-10 20:22 CEST - 2026-05-11 00:14 CEST</strong></div>
+          <div class="meta-box"><div class="label">Proxima actualizacion esperada</div><strong>Siguiente ejecucion programada del radar</strong></div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>KPIs Principales</h2>
+          <p>Indicadores compactos del corte nocturno. Se usan solo magnitudes sustentadas por el propio conjunto de hallazgos verificados.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="kpi-grid">
+          
+        <article class="kpi">
+          <div class="kpi-label">Hechos confirmados</div>
+          <div class="kpi-value">11</div>
+          <div class="kpi-note">Senales consolidadas con fuente primaria o tecnica</div>
+        </article>
+        
+        <article class="kpi">
+          <div class="kpi-label">Incidentes criticos</div>
+          <div class="kpi-value">2</div>
+          <div class="kpi-note">CVE criticas en marcos agentic con riesgo de RCE</div>
+        </article>
+        
+        <article class="kpi">
+          <div class="kpi-label">Cambios regulatorios</div>
+          <div class="kpi-value">2</div>
+          <div class="kpi-note">Simplificacion AI Act + continuidad GPAI</div>
+        </article>
+        
+        <article class="kpi">
+          <div class="kpi-label">Acciones prioritarias</div>
+          <div class="kpi-value">4</div>
+          <div class="kpi-note">Mitigar agentes, revisar proveedores y planificar cumplimiento</div>
+        </article>
+        
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Resumen Ejecutivo</h2>
+          <p>Separacion explicita entre hecho confirmado e interpretacion para mantener rigor en un entorno de cambio rapido.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="summary">
+          
+        <div class="summary-line">
+          <span class="pill hecho_confirmado">hecho confirmado</span>
+          <p>No se han detectado anuncios publicos de ruptura posteriores a las 20:22 CEST del 10 de mayo; el valor del corte nocturno esta en consolidar cambios recientes que siguen teniendo impacto operativo durante la madrugada del 11 de mayo.</p>
+        </div>
+        
+        <div class="summary-line">
+          <span class="pill hecho_confirmado">hecho confirmado</span>
+          <p>El riesgo mas material sigue en seguridad agentic: Microsoft describio el 7 de mayo dos vulnerabilidades criticas en Semantic Kernel, CVE-2026-25592 y CVE-2026-26030, capaces de convertir prompt injection en ejecucion de codigo no autorizada en agentes mal desplegados.</p>
+        </div>
+        
+        <div class="summary-line">
+          <span class="pill hecho_confirmado">hecho confirmado</span>
+          <p>Los grandes proveedores estan acelerando herramientas para voz, investigacion automatizada y agentes con conectores: OpenAI lanzo GPT-Realtime-2, GPT-Realtime-Translate y GPT-Realtime-Whisper; Google posiciona Deep Research Max y MCP como infraestructura de investigacion empresarial; Anthropic refuerza seguridad con Project Glasswing y Opus 4.7.</p>
+        </div>
+        
+        <div class="summary-line">
+          <span class="pill interpretacion">interpretacion</span>
+          <p>La noche deja una conclusion clara: la ventaja competitiva ya no depende solo del modelo base, sino de la gobernanza del agente, el control de herramientas, la seguridad de la cadena open source y la trazabilidad regulatoria.</p>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Evolucion y Vista Global</h2>
+          <p>El pulso nocturno muestra concentracion de riesgo en seguridad agentic y consolidacion del stack de investigacion automatizada.</p>
+        </div>
+      </div>
+      <div class="section-body two-col">
+        <div class="inner-panel">
+          <h3>Actividad IA</h3>
+          
+        <div class="band-row">
+          <div class="band-head">
+            <span>Seguridad agentic</span>
+            <strong>92/100</strong>
+          </div>
+          <div class="band-track"><span class="band-fill critical" style="width:92%"></span></div>
+        </div>
+        
+        <div class="band-row">
+          <div class="band-head">
+            <span>Modelos y voz en tiempo real</span>
+            <strong>81/100</strong>
+          </div>
+          <div class="band-track"><span class="band-fill high" style="width:81%"></span></div>
+        </div>
+        
+        <div class="band-row">
+          <div class="band-head">
+            <span>Investigacion automatizada y MCP</span>
+            <strong>77/100</strong>
+          </div>
+          <div class="band-track"><span class="band-fill high" style="width:77%"></span></div>
+        </div>
+        
+        <div class="band-row">
+          <div class="band-head">
+            <span>Open source e inferencia</span>
+            <strong>73/100</strong>
+          </div>
+          <div class="band-track"><span class="band-fill medium" style="width:73%"></span></div>
+        </div>
+        
+        <div class="band-row">
+          <div class="band-head">
+            <span>Cumplimiento AI Act</span>
+            <strong>68/100</strong>
+          </div>
+          <div class="band-track"><span class="band-fill medium" style="width:68%"></span></div>
+        </div>
+        
+        </div>
+        <div class="inner-panel">
+          <h3>Mapa de actores</h3>
+          <div class="world-grid">
+            <div class="world-item"><strong>OpenAI</strong><div>Acelera voz y controles de agentes</div><span>Impacto alto</span></div><div class="world-item"><strong>Google</strong><div>Empuja investigacion autonoma y plataforma agentic</div><span>Impacto alto</span></div><div class="world-item"><strong>Anthropic</strong><div>Securiza el frente cyber mientras mejora codificacion</div><span>Impacto alto</span></div><div class="world-item"><strong>Microsoft</strong><div>Marca el riesgo real de tool-calling inseguro</div><span>Impacto critico</span></div><div class="world-item"><strong>Mistral / HF / NVIDIA</strong><div>Refuerzan stack abierto y seguro</div><span>Impacto medio-alto</span></div><div class="world-item"><strong>UE</strong><div>Ajusta calendario de alto riesgo y mantiene disciplina GPAI</div><span>Impacto alto</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Noticias Destacadas</h2>
+          <p>Cambios recientes que siguen vigentes durante la madrugada y mueven riesgo, capacidad o cumplimiento.</p>
+        </div>
+      </div>
+      <div class="section-body grid-2">
+        
+        <article class="story">
+          <div class="story-top">
+            <span class="pill neutral">Incidente / Vulnerabilidad</span>
+            <span class="meta">2026-05-07 · Microsoft Security Blog</span>
+          </div>
+          <h3>Prompt injection con deriva a RCE en Semantic Kernel</h3>
+          <p>Afecta al patron de agentes con herramientas, memoria o plugins inseguros; el riesgo no es teorico.</p>
+          <div class="story-bottom">
+            <span class="impact medium">Critico</span>
+            <span class="recommendation">Revisar despliegues con Semantic Kernel, validar versiones corregidas y endurecer tool boundaries.</span>
+          </div>
+          <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">Fuente oficial</a>
+        </article>
+        
+        <article class="story">
+          <div class="story-top">
+            <span class="pill neutral">Lanzamiento</span>
+            <span class="meta">2026-05-07 · OpenAI</span>
+          </div>
+          <h3>OpenAI impulsa la capa de voz operativa</h3>
+          <p>GPT-Realtime-2, Translate y Whisper aumentan madurez de asistentes por voz y automatizacion multilingue.</p>
+          <div class="story-bottom">
+            <span class="impact high">Alto</span>
+            <span class="recommendation">Valorar pilotos en atencion al cliente, recepcion de incidencias y traduccion operativa.</span>
+          </div>
+          <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank" rel="noreferrer">Fuente oficial</a>
+        </article>
+        
+        <article class="story">
+          <div class="story-top">
+            <span class="pill neutral">Seguridad / Gobierno</span>
+            <span class="meta">2026-05-08 · OpenAI</span>
+          </div>
+          <h3>OpenAI publica controles de seguridad para agentes de codigo</h3>
+          <p>Refuerza el estandar de sandboxing, aprobaciones, politicas de red y telemetria agent-native.</p>
+          <div class="story-bottom">
+            <span class="impact high">Alto</span>
+            <span class="recommendation">Usar este marco como patron de diseno para agentes internos con acceso a sistemas.</span>
+          </div>
+          <a href="https://openai.com/index/running-codex-safely/" target="_blank" rel="noreferrer">Fuente oficial</a>
+        </article>
+        
+        <article class="story">
+          <div class="story-top">
+            <span class="pill neutral">Regulacion</span>
+            <span class="meta">2026-05-07 · Comision Europea</span>
+          </div>
+          <h3>La UE simplifica aplicacion de IA de alto riesgo pero mantiene disciplina regulatoria</h3>
+          <p>Aclara que ciertas reglas de alto riesgo aplicaran desde el 2 de diciembre de 2027 y otras desde el 2 de agosto de 2028.</p>
+          <div class="story-bottom">
+            <span class="impact high">Alto</span>
+            <span class="recommendation">Ajustar roadmaps de cumplimiento sin relajar gobierno documental y de proveedores.</span>
+          </div>
+          <a href="https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens" target="_blank" rel="noreferrer">Fuente oficial</a>
+        </article>
+        
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Modelos y Herramientas</h2>
+          <p>Seleccion de lanzamientos y utilidades con valor practico inmediato para consultoria, automatizacion y ciberseguridad.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="grid-3">
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Claude Opus 4.7</span>
+                    <span class="impact high">Alto</span>
+                  </div>
+                  <div class="mini-subtitle">Anthropic</div>
+                  <p>Mejora en software engineering, vision y tareas largas; disponible de forma general.</p>
+                  <a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Mistral 3 y Mistral Large 3</span>
+                    <span class="impact high">Alto</span>
+                  </div>
+                  <div class="mini-subtitle">Mistral AI</div>
+                  <p>Familia abierta con variantes 3B, 8B, 14B y Large 3; multimodal, multilingue y con despliegue edge.</p>
+                  <a href="https://mistral.ai/news/mistral-3" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">GPT-Realtime-2 / Translate / Whisper</span>
+                    <span class="impact high">Alto</span>
+                  </div>
+                  <div class="mini-subtitle">OpenAI</div>
+                  <p>Razonamiento, traduccion y transcripcion en vivo; mas contexto y tool calling paralelo.</p>
+                  <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                </div>
+        <div style="height:14px"></div>
+        <div class="grid-2">
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Deep Research Max</span>
+                    <span class="impact medium">Muy alta</span>
+                  </div>
+                  <div class="mini-subtitle">Google</div>
+                  <p>Agente de investigacion de maxima exhaustividad con MCP y uso de datos propios.</p>
+                  <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Finance Search</span>
+                    <span class="impact high">Alta</span>
+                  </div>
+                  <div class="mini-subtitle">Perplexity</div>
+                  <p>Herramienta del Agent API para datos financieros estructurados, earnings y KPIs.</p>
+                  <a href="https://docs.perplexity.ai/docs/agent-api/finance-search" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">NVIDIA Dynamo 1.0</span>
+                    <span class="impact high">Alta</span>
+                  </div>
+                  <div class="mini-subtitle">NVIDIA</div>
+                  <p>Capa open source de inferencia generativa y agentic a escala, con mejoras de hasta 7x en Blackwell.</p>
+                  <a href="https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Voxtral TTS</span>
+                    <span class="impact medium">Media-alta</span>
+                  </div>
+                  <div class="mini-subtitle">Mistral AI</div>
+                  <p>TTS con clonacion de voz zero-shot, 9 idiomas y streaming de baja latencia.</p>
+                  <a href="https://docs.mistral.ai/models/model-cards/voxtral-tts-26-03" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Repositorios, Incidentes y Vulnerabilidades</h2>
+          <p>El foco nocturno recae en seguridad operacional de agentes y en higiene de supply chain para modelos abiertos.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="grid-3">
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Safetensors</span>
+                    <span class="impact high">Alta</span>
+                  </div>
+                  <div class="mini-subtitle">Hugging Face / PyTorch Foundation</div>
+                  <p>Formato de pesos pensado para evitar ejecucion arbitraria de codigo al compartir modelos.</p>
+                  <a href="https://huggingface.co/blog/safetensors-joins-pytorch-foundation" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                </div>
+        <div style="height:14px"></div>
+        <div class="grid-2">
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">CVE-2026-25592 / CVE-2026-26030</span>
+                    <span class="impact critical">Critica</span>
+                  </div>
+                  <div class="mini-subtitle">Microsoft Semantic Kernel</div>
+                  <p>Un flujo con prompt injection puede derivar en escritura arbitraria y ejecucion no autorizada en agentes mal configurados.</p>
+                  <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Patron de riesgo: prompt injection -> tool misuse -> host impact</span>
+                    <span class="impact high">Alta</span>
+                  </div>
+                  <div class="mini-subtitle">Agentes conectados a herramientas, memoria o ejecucion local</div>
+                  <p>Expone codigo, datos, ficheros, secretos y sistemas aguas abajo.</p>
+                  
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Riesgo de supply chain en pesos y artefactos</span>
+                    <span class="impact medium">Media-Alta</span>
+                  </div>
+                  <div class="mini-subtitle">Modelos y checkpoints open source</div>
+                  <p>Carga de artefactos inseguros o empaquetados con ejecucion maliciosa.</p>
+                  <a href="https://huggingface.co/blog/safetensors-joins-pytorch-foundation" target="_blank" rel="noreferrer">Ver fuente</a>
+                </article>
+                </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Tendencias, Oportunidades y Alertas</h2>
+          <p>Radar accionable orientado a empresa, pymes, despliegues seguros y nuevos servicios consultivos.</p>
+        </div>
+      </div>
+      <div class="section-body two-col">
+        <div class="inner-panel">
+          <h3>Tendencias y radar</h3>
+          <ul class="bullet-list"><li>La voz deja de ser interfaz cosmetica y pasa a convertirse en superficie operativa con razonamiento y accion.</li><li>MCP y conectores remotos se consolidan como capa comun para investigacion automatizada y agentes de empresa.</li><li>El mercado open source se reordena alrededor de inferencia eficiente, pesos mas seguros y despliegue edge.</li><li>La conversacion regulatoria europea se mueve hacia simplificar despliegue sin relajar obligaciones de GPAI y seguridad.</li></ul>
+          <h3 style="margin-top:22px">Alertas activas</h3>
+          <ul class="bullet-list"><li>Revisar cualquier agente con acceso a shell, ficheros o sesiones Python expuestas por frameworks de terceros.</li><li>Planificar migracion si se usa xAI API: varias referencias Grok dejan de funcionar el 15 de mayo de 2026 a las 12:00 PT.</li><li>Mantener plan de cumplimiento GPAI: la AI Office recuerda que las obligaciones para proveedores GPAI aplican desde el 2 de agosto de 2025.</li><li>Evitar publicar o integrar artefactos de modelos sin verificacion de procedencia y formato.</li></ul>
+        </div>
+        <div class="inner-panel">
+          <h3>Oportunidades</h3>
+          <div class="op-grid">
+        <article class="mini-card">
+          <div class="story-top">
+            <span class="mini-title">Servicio de auditoria de agentes y MCP para pymes</span>
+            <span class="impact high">Alta</span>
+          </div>
+          <p>Oferta de revision de permisos, conectores, logs y riesgo de prompt injection para asistentes internos.</p>
+        </article>
+        
+        <article class="mini-card">
+          <div class="story-top">
+            <span class="mini-title">Pilotos de voz operativa multilingue</span>
+            <span class="impact high">Alta</span>
+          </div>
+          <p>Casos en recepcion, soporte, incidencias y automatizacion comercial con trazabilidad y guardrails.</p>
+        </article>
+        
+        <article class="mini-card">
+          <div class="story-top">
+            <span class="mini-title">Linea de despliegue local con Mistral 3</span>
+            <span class="impact medium">Media</span>
+          </div>
+          <p>Propuesta para clientes que requieren soberania del dato y latencia controlada.</p>
+        </article>
+        
+        <article class="mini-card">
+          <div class="story-top">
+            <span class="mini-title">Inteligencia competitiva nocturna automatizada</span>
+            <span class="impact medium">Media</span>
+          </div>
+          <p>Combinar Deep Research Max o stacks equivalentes con revision humana para informes de madrugada.</p>
+        </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Recomendaciones Ejecutivas</h2>
+          <p>Plan corto de accion para las proximas 24 a 72 horas, ordenado por prioridad real.</p>
+        </div>
+      </div>
+      <div class="section-body grid-2">
+        
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Lanzar una revision express de agentes con herramientas</span>
+                    <span class="impact critical">Critica</span>
+                  </div>
+                  <div class="mini-subtitle">None</div>
+                  <p>Inventariar agentes, frameworks, plugins y permisos efectivos. Donde haya ejecucion local o acceso a secretos, imponer aprobaciones y sandbox.</p>
+                  
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Definir patron corporativo de agente seguro</span>
+                    <span class="impact high">Alta</span>
+                  </div>
+                  <div class="mini-subtitle">None</div>
+                  <p>Adoptar controles tipo OpenAI: sandboxing, politicas de red, telemetria, logs y escalado explicito para acciones de riesgo.</p>
+                  
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Seleccionar dos pilotos comerciales de alto retorno</span>
+                    <span class="impact high">Alta</span>
+                  </div>
+                  <div class="mini-subtitle">None</div>
+                  <p>Uno de voz multilingue y otro de inteligencia nocturna automatizada con citas, fuentes y resumen ejecutivo.</p>
+                  
+                </article>
+                
+
+                <article class="mini-card">
+                  <div class="story-top">
+                    <span class="mini-title">Alinear roadmap de cumplimiento 2026-2028</span>
+                    <span class="impact medium">Media</span>
+                  </div>
+                  <div class="mini-subtitle">None</div>
+                  <p>Mapear proveedores GPAI, documentacion y obligaciones contractuales antes de ampliar despliegues en clientes regulados.</p>
+                  
+                </article>
+                
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Calendario IA</h2>
+          <p>Fechas que conviene tener visibles para no perder ventanas de migracion o cumplimiento.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="timeline">
+          
+        <div class="timeline-item">
+          <div class="timeline-date">2026-05-15</div>
+          <div>
+            <strong>Retirada de varios modelos de xAI API</strong>
+            <p>Fecha efectiva 12:00 PT.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2026-08-02</div>
+          <div>
+            <strong>Ventana clave de enforcement GPAI para nuevos modelos</strong>
+            <p>Las obligaciones GPAI aplican desde 2025-08-02; la aplicacion coercitiva sobre nuevos modelos llega un ano despues segun la Comision.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2027-12-02</div>
+          <div>
+            <strong>Aplicacion de reglas simplificadas para ciertos sistemas de alto riesgo</strong>
+            <p>Segun acuerdo politico comunicado por la Comision el 2026-05-07.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2028-08-02</div>
+          <div>
+            <strong>Aplicacion para sistemas integrados en productos</strong>
+            <p>Calendario comunicado por la Comision Europea.</p>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Fuentes Contrastadas</h2>
+          <p>Se han priorizado fuentes oficiales, regulatorias o tecnicas con trazabilidad clara.</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul class="sources-list"><li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">Microsoft Security Blog: When prompts become shells: RCE vulnerabilities in AI agent frameworks</a> <span>2026-05-07</span></li><li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" target="_blank" rel="noreferrer">OpenAI: Advancing voice intelligence with new models in the API</a> <span>2026-05-07</span></li><li><a href="https://openai.com/index/running-codex-safely/" target="_blank" rel="noreferrer">OpenAI: Running Codex safely at OpenAI</a> <span>2026-05-08</span></li><li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/" target="_blank" rel="noreferrer">Google: Google AI announcements from April 2026</a> <span>2026-05-04</span></li><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/" target="_blank" rel="noreferrer">Google: Introducing Deep Research and Deep Research Max</a> <span>2026-04-25</span></li><li><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noreferrer">Anthropic: Introducing Claude Opus 4.7</a> <span>2026-04-16</span></li><li><a href="https://www.anthropic.com/project/glasswing" target="_blank" rel="noreferrer">Anthropic: Project Glasswing</a> <span>2026-04-07</span></li><li><a href="https://mistral.ai/news/mistral-3" target="_blank" rel="noreferrer">Mistral AI: Introducing Mistral 3</a> <span>2026-04-29</span></li><li><a href="https://docs.mistral.ai/models/model-cards/voxtral-tts-26-03" target="_blank" rel="noreferrer">Mistral Docs: Voxtral TTS</a> <span>2026-03-23</span></li><li><a href="https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories" target="_blank" rel="noreferrer">NVIDIA: NVIDIA enters production with Dynamo 1.0</a> <span>2026-03-16</span></li><li><a href="https://docs.perplexity.ai/docs/agent-api/finance-search" target="_blank" rel="noreferrer">Perplexity Docs: Finance Search</a> <span>2026-05-06</span></li><li><a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noreferrer">xAI Docs: Grok Model Retirement on May 15, 2026</a> <span>2026-05-07</span></li><li><a href="https://huggingface.co/blog/safetensors-joins-pytorch-foundation" target="_blank" rel="noreferrer">Hugging Face: Safetensors is Joining the PyTorch Foundation</a> <span>2026-04-08</span></li><li><a href="https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens" target="_blank" rel="noreferrer">European Commission: EU agrees to simplify AI rules to boost innovation and ban nudification apps</a> <span>2026-05-07</span></li><li><a href="https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers" target="_blank" rel="noreferrer">AI Office / European Commission: General-Purpose AI Models in the AI Act – Questions & Answers</a> <span>2025-09-12</span></li><li><a href="https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai" target="_blank" rel="noreferrer">European Commission: The General-Purpose AI Code of Practice</a> <span>2026-04-23</span></li></ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-brand">
+        <strong>MMarco Seguridad · Manuel Marco Sanchez</strong>
+        <span>https://mmarcoseguridad.com · mmarco.seguridad@gmail.com</span>
+      </div>
+      <p>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.</p>
+    </footer>
+  </div>
+</body>
+</html>
