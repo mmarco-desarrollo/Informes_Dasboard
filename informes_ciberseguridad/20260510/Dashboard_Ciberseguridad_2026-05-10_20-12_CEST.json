@@ -1,0 +1,501 @@
+{
+  "report_date": "2026-05-10",
+  "report_time": "20:12",
+  "report_tz": "CEST",
+  "report_timestamp": "2026-05-10_20-12_CEST",
+  "report_edition": "Edicion 20:00",
+  "generated_at": "2026-05-10 20:12 CEST",
+  "next_update": "2026-05-11 08:00 CEST",
+  "next_update_note": "Estimacion operativa",
+  "global_threat_level": "ALTO",
+  "ai_risk_state": "ALTO",
+  "scope_note": "Los KPI y graficas agregadas se calculan sobre un corpus monitorizado de fuentes oficiales y tecnicas priorizadas. No representan un censo mundial completo de incidentes.",
+  "github_repo": "mmarco-desarrollo/Informes_Dasboard",
+  "github_paths": {
+    "html": "informes_ciberseguridad/20260510/Dashboard_Ciberseguridad_2026-05-10_20-12_CEST.html",
+    "json": "informes_ciberseguridad/20260510/Dashboard_Ciberseguridad_2026-05-10_20-12_CEST.json",
+    "pdf": "informes_ciberseguridad/20260510/Dashboard_Ciberseguridad_2026-05-10_20-12_CEST.pdf",
+    "png": "informes_ciberseguridad/20260510/Dashboard_Ciberseguridad_2026-05-10_20-12_CEST.png"
+  },
+  "kpis": [
+    {
+      "label": "Incidentes activos",
+      "value": "5",
+      "note": "Casos abiertos o en seguimiento dentro del corpus oficial monitorizado",
+      "tone": "red"
+    },
+    {
+      "label": "Incidentes criticos",
+      "value": "3",
+      "note": "Brechas o campanas con exfiltracion, acceso remoto o auth bypass",
+      "tone": "orange"
+    },
+    {
+      "label": "Vulnerabilidades nuevas",
+      "value": "5",
+      "note": "Publicadas entre el 2026-04-30 y el 2026-05-07",
+      "tone": "cyan"
+    },
+    {
+      "label": "CVEs criticas",
+      "value": "4",
+      "note": "Criticas por CNA o por prioridad operativa",
+      "tone": "red"
+    },
+    {
+      "label": "Malware detectado",
+      "value": "2",
+      "note": "A0Backdoor y RAT distribuido por LinkedIn",
+      "tone": "orange"
+    },
+    {
+      "label": "Campanas de phishing",
+      "value": "3",
+      "note": "LastPass, LinkedIn y Teams/Quick Assist",
+      "tone": "yellow"
+    },
+    {
+      "label": "Ataques DDoS",
+      "value": "0",
+      "note": "Sin confirmacion reciente en fuentes priorizadas del corpus",
+      "tone": "green"
+    },
+    {
+      "label": "Ransomware reportado",
+      "value": "0",
+      "note": "Sin familia nueva confirmada por fuentes oficiales prioritarias",
+      "tone": "green"
+    },
+    {
+      "label": "Paises mas afectados",
+      "value": "N/D fiable",
+      "note": "Las fuentes abiertas revisadas no ofrecen cobertura geografica completa",
+      "tone": "neutral"
+    },
+    {
+      "label": "Nivel de riesgo global",
+      "value": "ALTO",
+      "note": "Superficie internet-facing y colaborativa bajo presion",
+      "tone": "red"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Estable - alcista",
+      "note": "Estimacion operativa por acumulacion de avisos criticos",
+      "tone": "orange"
+    }
+  ],
+  "summary_points": [
+    "La prioridad inmediata esta en paneles de administracion expuestos, herramientas MFT y plataformas de automatizacion con autenticacion o control de workflows.",
+    "La campana de suplantacion por Microsoft Teams y Quick Assist confirma que la ingenieria social sigue pivotando desde el correo a entornos colaborativos legitimados.",
+    "Las brechas recientes en Booking y Rituals elevan el riesgo secundario de fraude y phishing dirigido contra clientes y empleados.",
+    "No hay un repunte confirmado de nuevas familias de ransomware en el corpus oficial consultado, pero si condiciones tecnicas que facilitan acceso inicial y preparacion de impacto."
+  ],
+  "incidents": [
+    {
+      "type": "Brecha de datos",
+      "severity": "Alta",
+      "origin": "UE / origen no atribuido",
+      "sector": "Retail / consumo",
+      "time": "2026-05-07",
+      "impact": "PII de clientes My Rituals expuesta",
+      "status": "Investigando",
+      "source": "INCIBE Rituals"
+    },
+    {
+      "type": "Acceso no autorizado",
+      "severity": "Alta",
+      "origin": "Global / origen no atribuido",
+      "sector": "Turismo / reservas",
+      "time": "2026-05-05",
+      "impact": "Datos de reserva y aumento de fraude posterior",
+      "status": "Contenido",
+      "source": "INCIBE Booking"
+    },
+    {
+      "type": "Phishing + acceso remoto",
+      "severity": "Critica",
+      "origin": "Multi-region",
+      "sector": "Finanzas / salud",
+      "time": "2026-04-09",
+      "impact": "Quick Assist + A0Backdoor con persistencia y exfiltracion",
+      "status": "Activa",
+      "source": "INCIBE Teams"
+    },
+    {
+      "type": "Phishing de credenciales",
+      "severity": "Alta",
+      "origin": "Global",
+      "sector": "SaaS / gestion de credenciales",
+      "time": "2026-02-10",
+      "impact": "Robo de contrasena maestra mediante suplantacion LastPass",
+      "status": "Mitigando",
+      "source": "INCIBE LastPass"
+    },
+    {
+      "type": "Malware social",
+      "severity": "Alta",
+      "origin": "Global",
+      "sector": "Ejecutivos / alto valor",
+      "time": "2026-02-12",
+      "impact": "DLL sideloading y RAT por mensajes de LinkedIn",
+      "status": "Seguimiento",
+      "source": "INCIBE LinkedIn"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-41940",
+      "product": "cPanel & WHM / WP2",
+      "cvss": "9.8 derivado del vector CVSS v3.1 publicado",
+      "severity": "Critica",
+      "exploitation": "Confirmada; en KEV desde 2026-04-30",
+      "patch": "Si",
+      "priority": "P1 en 24h",
+      "source": "NVD + CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-4670",
+      "product": "Progress MOVEit Automation",
+      "cvss": "9.8 CNA / auth bypass",
+      "severity": "Critica",
+      "exploitation": "Sin confirmacion publica prioritaria",
+      "patch": "Si",
+      "priority": "P1 en 24h",
+      "source": "NVD"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android adbd",
+      "cvss": "8.8 NVD",
+      "severity": "Alta con prioridad operativa critica",
+      "exploitation": "No confirmada en las fuentes revisadas",
+      "patch": "Si, depende del fabricante",
+      "priority": "P1 en flotas moviles",
+      "source": "INCIBE + NVD"
+    },
+    {
+      "cve": "CVE-2026-42232",
+      "product": "n8n Enterprise",
+      "cvss": "9.4 CVSS-B CNA / 8.8 NVD",
+      "severity": "Critica operativa",
+      "exploitation": "No confirmada en las fuentes revisadas",
+      "patch": "Si",
+      "priority": "P1 si hay edicion de workflows expuesta",
+      "source": "NVD"
+    },
+    {
+      "cve": "CVE-2026-5174",
+      "product": "Progress MOVEit Automation",
+      "cvss": "8.8 NVD",
+      "severity": "Alta",
+      "exploitation": "Sin confirmacion publica prioritaria",
+      "patch": "Si",
+      "priority": "P2 junto a CVE-2026-4670",
+      "source": "NVD"
+    }
+  ],
+  "news": [
+    {
+      "title": "Rituals confirma brecha sobre la base de clientes My Rituals",
+      "source": "INCIBE-CERT",
+      "time": "2026-05-07",
+      "severity": "Alta",
+      "impact": "PII expuesta; riesgo de phishing y fraude posterior",
+      "recommendation": "Aumentar vigilancia de suplantacion a clientes y reforzar notificaciones internas."
+    },
+    {
+      "title": "Booking reconoce acceso no autorizado a datos de reservas",
+      "source": "INCIBE-CERT",
+      "time": "2026-05-05",
+      "severity": "Alta",
+      "impact": "Clientes expuestos a fraude dirigido con datos de reserva",
+      "recommendation": "Revisar flujos de soporte y avisos a clientes ante intentos de secuestro de reserva."
+    },
+    {
+      "title": "Android mayo 2026 corrige una vulnerabilidad critica en adbd",
+      "source": "INCIBE-CERT / NVD",
+      "time": "2026-05-05",
+      "severity": "Critica",
+      "impact": "RCE proximal sin interaccion del usuario en dispositivos afectados",
+      "recommendation": "Acelerar despliegue de parches en flotas corporativas Android."
+    },
+    {
+      "title": "n8n corrige prototype pollution con impacto potencial de RCE",
+      "source": "NVD",
+      "time": "2026-05-04",
+      "severity": "Critica operativa",
+      "impact": "Riesgo alto en entornos con edicion de workflows o automatizaciones expuestas",
+      "recommendation": "Actualizar y restringir permisos de creacion/edicion de workflows."
+    },
+    {
+      "title": "Campana por Microsoft Teams usa Quick Assist para desplegar A0Backdoor",
+      "source": "INCIBE-CERT",
+      "time": "2026-04-09",
+      "severity": "Critica",
+      "impact": "Persistencia, exfiltracion y antesala de impacto mayor",
+      "recommendation": "Bloquear Quick Assist donde no sea necesario y entrenar al personal de help desk."
+    }
+  ],
+  "active_alerts": [
+    "CVE-2026-41940 en cPanel/WHM permanece en el catalogo KEV de CISA y exige mitigacion inmediata en servicios expuestos.",
+    "Las correcciones de Android, MOVEit y n8n concentran riesgo en administracion remota, MFT y automatizacion empresarial.",
+    "Las brechas de Booking y Rituals elevan la probabilidad de phishing de seguimiento contra clientes y equipos de soporte.",
+    "La campana Teams + Quick Assist + A0Backdoor sigue siendo una referencia operativa para sectores finanzas y salud."
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Parchar o aislar en 24 horas cPanel/WHM, MOVEit Automation y n8n expuestos a internet."
+    },
+    {
+      "priority": "Critica",
+      "text": "Restringir Quick Assist, AnyDesk y herramientas de acceso remoto no gestionadas; exigir aprobacion previa y logging reforzado."
+    },
+    {
+      "priority": "Alta",
+      "text": "Forzar MFA resistente al phishing en paneles de administracion, VPN, correo, MDM y plataformas de reservas o ecommerce."
+    },
+    {
+      "priority": "Alta",
+      "text": "Activar detecciones para A0Backdoor, DLL sideloading, cambios en workflows de n8n y accesos anomales a MFT."
+    },
+    {
+      "priority": "Media",
+      "text": "Revisar backups, segmentacion y planes de comunicacion a clientes para escenarios de filtracion con fraude posterior."
+    },
+    {
+      "priority": "Baja",
+      "text": "Actualizar simulaciones de concienciacion con casos Teams, LinkedIn y LastPass para equipos de direccion, soporte y ventas."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-05-12",
+      "event": "Microsoft Patch Tuesday",
+      "type": "Parches",
+      "note": "Ventana clave para validacion, testing y despliegue acelerado."
+    },
+    {
+      "date": "2026-05-05",
+      "event": "Boletin Android mayo 2026",
+      "type": "Movilidad",
+      "note": "Validar disponibilidad real del parche por fabricante."
+    },
+    {
+      "date": "2026-05-07",
+      "event": "ENISA Telecom and Digital Infrastructure Security Forum 2026",
+      "type": "Regulatorio / sectorial",
+      "note": "Refuerza foco europeo en resiliencia de telecom y redes criticas."
+    },
+    {
+      "date": "2026-05-11",
+      "event": "Revision interna de exposicion web",
+      "type": "Operativo",
+      "note": "Ventana sugerida para comprobar admin panels, MFT y workflows."
+    }
+  ],
+  "ai_section": {
+    "risk": "Alto",
+    "prediction": "Alta probabilidad de continuidad del abuso de herramientas legitimas de colaboracion y soporte durante las proximas 72 horas.",
+    "sectors": "Finanzas, salud, retail, turismo y organizaciones con paneles de gestion o MFT expuestos.",
+    "priorities": "cPanel/WHM, MOVEit, n8n, Android corporativo, accesos de soporte remoto, credenciales privilegiadas.",
+    "probability": "Probabilidad estimada de aumento de ataques de phishing operativo: 72%.",
+    "auto_reco": "Reducir superficie de acceso remoto, endurecer autenticacion administrativa y elevar la monitorizacion de exfiltracion y cambios de workflow."
+  },
+  "charts": {
+    "distribution": [
+      [
+        "Malware",
+        2,
+        "#ff8b3d"
+      ],
+      [
+        "Phishing",
+        3,
+        "#ffcc52"
+      ],
+      [
+        "Ransomware",
+        0,
+        "#ff5d76"
+      ],
+      [
+        "DDoS",
+        0,
+        "#39b6ff"
+      ],
+      [
+        "Intrusiones",
+        2,
+        "#2e62ff"
+      ],
+      [
+        "Credential stuffing",
+        1,
+        "#2ad4a1"
+      ],
+      [
+        "Exploits web",
+        4,
+        "#ff5d76"
+      ],
+      [
+        "Supply chain",
+        0,
+        "#8ca0bf"
+      ],
+      [
+        "Insider threat",
+        0,
+        "#8ca0bf"
+      ]
+    ],
+    "vectors": [
+      [
+        "Email",
+        3,
+        "#ffcc52"
+      ],
+      [
+        "Web",
+        4,
+        "#ff5d76"
+      ],
+      [
+        "Credenciales",
+        4,
+        "#ff8b3d"
+      ],
+      [
+        "Red",
+        1,
+        "#39b6ff"
+      ],
+      [
+        "Cloud",
+        2,
+        "#2e62ff"
+      ],
+      [
+        "Endpoint",
+        3,
+        "#2ad4a1"
+      ],
+      [
+        "VPN",
+        0,
+        "#8ca0bf"
+      ],
+      [
+        "API",
+        1,
+        "#39b6ff"
+      ],
+      [
+        "Terceros",
+        2,
+        "#ff8b3d"
+      ],
+      [
+        "Ingenieria social",
+        5,
+        "#ff5d76"
+      ]
+    ],
+    "regions": [
+      [
+        "Global / multi-region",
+        5,
+        "#39b6ff"
+      ],
+      [
+        "Union Europea",
+        4,
+        "#2e62ff"
+      ],
+      [
+        "Espana / interes nacional",
+        4,
+        "#ffcc52"
+      ],
+      [
+        "Norteamerica",
+        2,
+        "#ff8b3d"
+      ],
+      [
+        "Atribucion no publica",
+        3,
+        "#8ca0bf"
+      ]
+    ],
+    "evolution": [
+      [
+        "Ultimas 24h",
+        4
+      ],
+      [
+        "Media 7d",
+        3
+      ],
+      [
+        "Ultimos 30d",
+        5
+      ]
+    ]
+  },
+  "sources": [
+    {
+      "name": "CISA Known Exploited Vulnerabilities Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "note": "Catalogo oficial de vulnerabilidades explotadas en la naturaleza; el indice mostrado en resultados refleja 1.422 entradas."
+    },
+    {
+      "name": "NVD - CVE-2026-41940",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41940",
+      "note": "cPanel/WHM en KEV desde 2026-04-30, con mitigacion exigida antes del 2026-05-03."
+    },
+    {
+      "name": "NVD - CVE-2026-4670",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4670",
+      "note": "MOVEit Automation auth bypass, publicado el 2026-04-30."
+    },
+    {
+      "name": "NVD - CVE-2026-42232",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42232",
+      "note": "n8n XML Node prototype pollution con potencial de RCE, modificado el 2026-05-06."
+    },
+    {
+      "name": "INCIBE-CERT - Boletin Android mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026",
+      "note": "Aviso critico sobre CVE-2026-0073 en Android, publicado el 2026-05-05."
+    },
+    {
+      "name": "INCIBE-CERT - Campana Microsoft Teams y A0Backdoor",
+      "url": "https://www.incibe.es/index.php/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns",
+      "note": "Campana dirigida a finanzas y salud con Quick Assist y A0Backdoor, publicada el 2026-04-09."
+    },
+    {
+      "name": "INCIBE-CERT - Rituals",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/rituals-detecta-un-incidente-de-seguridad-que-afecta-la-base-de-datos-de",
+      "note": "Brecha con descarga no autorizada de datos personales, publicada el 2026-05-07."
+    },
+    {
+      "name": "INCIBE-CERT - Booking",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking",
+      "note": "Acceso no autorizado a datos de reservas, publicado el 2026-05-05."
+    },
+    {
+      "name": "INCIBE Balance de Ciberseguridad 2025",
+      "url": "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf",
+      "note": "122.223 incidentes en 2025, 25.133 casos de phishing y 55.411 relacionados con malware."
+    },
+    {
+      "name": "ENISA Telecom and Digital Infrastructure Security Forum 2026",
+      "url": "https://www.enisa.europa.eu/events/enisa-telecom-and-digital-infrastructure-security-forum-2026",
+      "note": "Evento celebrado el 2026-05-07 con foco en resiliencia de telecom y redes criticas."
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
