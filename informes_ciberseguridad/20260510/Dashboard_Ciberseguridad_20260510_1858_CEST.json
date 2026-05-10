@@ -1,0 +1,104 @@
+{
+  "generated_stamp": "2026-05-10 18:58 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "ai_risk_state": "Superficie operativa ampliada",
+  "summary": {
+    "global_state": "El nivel global de ciberamenaza permanece alto por la coincidencia de explotacion activa en perimetro, inclusion reciente de vulnerabilidades en KEV y campanas de phishing AiTM capaces de capturar sesiones validas.",
+    "top_risks": [
+      "RCE y bypass de autenticacion en PAN-OS y Fortinet expuestos.",
+      "Escalada local a root en Linux vulnerable tras acceso inicial en cloud o CI/CD.",
+      "Phishing AiTM orientado a robo de tokens y sesion.",
+      "Ransomware Medusa acelerando la cadena de ataque."
+    ],
+    "recommendation": "Reducir superficie expuesta, parchear perimetro y Linux, reforzar MFA resistente al phishing y revisar accesos administrativos y backups."
+  },
+  "kpis": {
+    "incidentes_activos": 7,
+    "incidentes_criticos": 4,
+    "vulnerabilidades_nuevas": 8,
+    "cves_criticas_priorizadas": 4,
+    "campanas_phishing_confirmadas": 1,
+    "ransomware_reportado": 1,
+    "tendencia_24h": "Estable al alza"
+  },
+  "priority_cves": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3",
+      "severity": "Critica",
+      "exploitation": "Atacada / KEV",
+      "patch": "Mitigacion inmediata y parche en despliegue",
+      "source": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "cve": "CVE-2026-24858",
+      "product": "FortiOS / FortiManager / FortiAnalyzer / FortiProxy / FortiWeb",
+      "cvss": "N/D",
+      "severity": "Critica",
+      "exploitation": "Activa / CCN-CERT",
+      "patch": "Si, versiones corregidas de Fortinet",
+      "source": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html"
+    },
+    {
+      "cve": "CVE-2026-31431",
+      "product": "Linux kernel (Copy Fail)",
+      "cvss": "7.8",
+      "severity": "Alta",
+      "exploitation": "En KEV / PoC funcional",
+      "patch": "Si, mitigaciones y parches de kernel",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-31431"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android adbd / wireless ADB",
+      "cvss": "8.8",
+      "severity": "Alta",
+      "exploitation": "Parche publicado",
+      "patch": "Si, boletin 2026-05-01",
+      "source": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    }
+  ],
+  "recent_incidents": [
+    {
+      "type": "Phishing AiTM",
+      "date": "2026-05-04",
+      "status": "Activo / contencion",
+      "impact": "Compromiso de tokens y sesiones validas en 26 paises"
+    },
+    {
+      "type": "RCE en PAN-OS",
+      "date": "2026-05-05",
+      "status": "Activo / mitigando",
+      "impact": "Ejecucion como root en firewalls vulnerables"
+    },
+    {
+      "type": "Brecha de datos Rituals",
+      "date": "2026-05-07",
+      "status": "Investigando",
+      "impact": "Afectacion a usuarios del programa My Rituals"
+    },
+    {
+      "type": "Acceso a datos Booking",
+      "date": "2026-05-05",
+      "status": "Investigando",
+      "impact": "Exposicion de datos de usuarios"
+    }
+  ],
+  "sources": [
+    "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+    "https://security.paloaltonetworks.com/CVE-2026-0300",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+    "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos",
+    "https://www.incibe.es/incibe-cert/publicaciones/bitacora-ciberseguridad",
+    "https://www.cisa.gov/news-events/alerts/2025/05/22/new-best-practices-guide-securing-ai-data-released"
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
