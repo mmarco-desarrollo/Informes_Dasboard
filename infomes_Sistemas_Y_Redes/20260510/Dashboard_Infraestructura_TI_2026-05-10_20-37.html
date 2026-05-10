@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo de Infraestructura TI</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0d1729;
+      --panel: rgba(13, 24, 41, 0.92);
+      --panel-2: rgba(18, 31, 52, 0.82);
+      --line: rgba(146, 168, 196, 0.16);
+      --text: #edf4ff;
+      --muted: #9fb2cb;
+      --healthy: #5ee6a8;
+      --warning: #ffb454;
+      --critical: #ff6b6b;
+      --ai: #57a6ff;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(87, 166, 255, 0.18), transparent 22%),
+        radial-gradient(circle at left 20%, rgba(94, 230, 168, 0.10), transparent 18%),
+        linear-gradient(160deg, #050c17 0%, #07111f 46%, #0a1627 100%);
+      color: var(--text);
+    }
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+    .hero {
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15, 32, 52, 0.96), rgba(7, 17, 31, 0.98));
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -45% auto;
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(87, 166, 255, 0.18), transparent 68%);
+      pointer-events: none;
+    }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .brand h1 {
+      margin: 8px 0 10px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.02;
+      max-width: 720px;
+    }
+    .brand p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 680px;
+      line-height: 1.55;
+    }
+    .eyebrow {
+      color: #7cc8ff;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.9fr);
+      gap: 24px;
+      margin-top: 26px;
+    }
+    .status-box, .meta-box {
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      min-width: 0;
+    }
+    .status-value {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 700;
+      margin: 10px 0 12px;
+      color: var(--warning);
+    }
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .meta-row {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 12px;
+      align-items: start;
+      font-size: 0.95rem;
+    }
+    .meta-row strong {
+      color: #d7e6fb;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .kpi-card, .panel, .sources {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .kpi-card {
+      padding: 18px;
+      min-width: 0;
+    }
+    .kpi-top {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .kpi-value {
+      font-size: clamp(1.6rem, 2vw, 2.15rem);
+      margin: 18px 0 10px;
+      font-weight: 700;
+    }
+    .muted {
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(310px, 0.9fr);
+      gap: 18px;
+      margin-top: 18px;
+      align-items: start;
+    }
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+    .panel {
+      padding: 22px;
+    }
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .panel h3 {
+      margin: 0 0 8px;
+      font-size: 1.18rem;
+    }
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .facts {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
+      color: #dfeafb;
+      line-height: 1.5;
+    }
+    .facts strong {
+      color: #ffffff;
+    }
+    .sources {
+      padding: 22px;
+      overflow: hidden;
+    }
+    .cover-bar {
+      margin-top: 16px;
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+    .cover-fill {
+      height: 100%;
+      width: 0.0%;
+      min-width: 18px;
+      background: linear-gradient(90deg, #57a6ff, #5ee6a8);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 18px;
+      font-size: 0.93rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      color: #dfeafb;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    td {
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .footer-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.55;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(9, 20, 35, 0.84);
+    }
+    @media (max-width: 980px) {
+      .hero-grid, .layout, .kpis {
+        grid-template-columns: 1fr 1fr;
+      }
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 720px) {
+      .wrap {
+        width: min(100% - 20px, 100%);
+        padding-top: 20px;
+      }
+      .hero {
+        padding: 22px;
+        border-radius: 18px;
+      }
+      .hero-grid, .kpis {
+        grid-template-columns: 1fr;
+      }
+      .meta-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      th, td {
+        padding: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="brand">
+        <div>
+          <span class="eyebrow">MMarco Seguridad · Infrastructure Intelligence</span>
+          <h1>Informe Ejecutivo de Infraestructura TI</h1>
+          <p>Dashboard premium con foco ejecutivo. Este corte identifica lo verificable, separa las estimaciones IA y deja trazabilidad clara sobre los vacios de observabilidad detectados en la ejecucion.</p>
+        </div>
+        <span class="badge" style="color:#ffb454;background:#35260d;border-color:#ffb45420;">Visibilidad insuficiente</span>
+      </div>
+      <div class="hero-grid">
+        <div class="status-box">
+          <span class="eyebrow">Estado General</span>
+          <div class="status-value">Visibilidad insuficiente</div>
+          <p class="muted">La infraestructura no puede calificarse como saludable ni degradada sin telemetria fuente.</p>
+          <div class="cover-bar"><div class="cover-fill"></div></div>
+          <p class="muted" style="margin-top:10px;">Cobertura de fuentes disponibles para esta ejecucion: 0.0%.</p>
+        </div>
+        <aside class="meta-box">
+          <span class="eyebrow">Metadata Ejecutiva</span>
+          <div class="meta-list">
+            <div class="meta-row"><strong>Fecha local</strong><span>2026-05-10 20:37 CEST</span></div>
+            <div class="meta-row"><strong>Zona horaria</strong><span>Europe/Madrid</span></div>
+            <div class="meta-row"><strong>Proxima ejecucion</strong><span>No programada o no visible desde esta ejecucion</span></div>
+            <div class="meta-row"><strong>Repositorio</strong><span>mmarco-desarrollo/Informes_Dasboard</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="kpis">
+      
+            <article class="kpi-card">
+              <div class="kpi-top">
+                <span class="eyebrow">Estado general</span>
+                <span class="badge" style="color:#7cc8ff;background:#102637;border-color:#7cc8ff20;">Real derivado</span>
+              </div>
+              <div class="kpi-value">Visibilidad insuficiente</div>
+              <p class="muted">Clasificacion ejecutiva real derivada de la ausencia de telemetria conectada.</p>
+            </article>
+            
+            <article class="kpi-card">
+              <div class="kpi-top">
+                <span class="eyebrow">Cobertura de fuentes</span>
+                <span class="badge" style="color:#93a4bf;background:#182434;border-color:#93a4bf20;">Dato real</span>
+              </div>
+              <div class="kpi-value">0.0%</div>
+              <p class="muted">0 de 10 dominios clave con datos directos.</p>
+            </article>
+            
+            <article class="kpi-card">
+              <div class="kpi-top">
+                <span class="eyebrow">Disponibilidad medida</span>
+                <span class="badge" style="color:#ffb454;background:#35260d;border-color:#ffb45420;">Parcial</span>
+              </div>
+              <div class="kpi-value">N/D</div>
+              <p class="muted">No existe medicion verificable de disponibilidad en esta ejecucion.</p>
+            </article>
+            
+            <article class="kpi-card">
+              <div class="kpi-top">
+                <span class="eyebrow">Alertas activas verificadas</span>
+                <span class="badge" style="color:#ffb454;background:#35260d;border-color:#ffb45420;">Parcial</span>
+              </div>
+              <div class="kpi-value">N/D</div>
+              <p class="muted">Sin consola SIEM/NMS/observabilidad conectada para confirmar alertas.</p>
+            </article>
+            
+    </section>
+
+    <section class="layout">
+      <div class="stack">
+        
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>Salud global de infraestructura</h3>
+                  <p>No es posible afirmar salud ni degradacion operativa sin telemetria directa.</p>
+                </div>
+                <span class="badge" style="color:#ffb454;background:#35260d;border-color:#ffb45420;">Parcial</span>
+              </div>
+              <ul class="facts"><li><strong>Dato real:</strong> Fuentes activas detectadas: 0 sobre 10 dominios previstos.</li><li><strong>Dato real:</strong> No hay evidencia de incidencias abiertas procedente de sistemas fuente.</li><li><strong>Recomendacion:</strong> Priorizar conexion de al menos inventario, monitorizacion y backup.</li></ul>
+            </section>
+            
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>Servidores y sistemas operativos</h3>
+                  <p>Sin inventario de servidores, versiones de SO, uptime o capacidad.</p>
+                </div>
+                <span class="badge" style="color:#93a4bf;background:#182434;border-color:#93a4bf20;">Sin datos</span>
+              </div>
+              <ul class="facts"><li><strong>Dato real:</strong> No hay listado de activos ni cumplimiento de parches disponible.</li><li><strong>Impacto:</strong> No se puede evaluar obsolescencia, exposicion ni saturacion.</li></ul>
+            </section>
+            
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>Cloud</h3>
+                  <p>No hay visibilidad de tenancy, costes, salud de servicios ni backup cloud.</p>
+                </div>
+                <span class="badge" style="color:#93a4bf;background:#182434;border-color:#93a4bf20;">Sin datos</span>
+              </div>
+              <ul class="facts"><li><strong>Dato real:</strong> No hay cuenta cloud enlazada a esta ejecucion.</li><li><strong>Impacto:</strong> No se puede validar seguridad de identidades, recursos o gasto.</li></ul>
+            </section>
+            
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>Redes, WiFi y telecomunicaciones</h3>
+                  <p>Sin inventario de enlaces, equipos, cobertura WiFi, latencias o disponibilidad WAN.</p>
+                </div>
+                <span class="badge" style="color:#93a4bf;background:#182434;border-color:#93a4bf20;">Sin datos</span>
+              </div>
+              <ul class="facts"><li><strong>Dato real:</strong> No hay plataforma NMS, controlador WLAN ni panel de carrier accesible.</li><li><strong>Impacto:</strong> No se puede confirmar calidad de servicio ni resiliencia de conectividad.</li></ul>
+            </section>
+            
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>Incidentes y alertas</h3>
+                  <p>No hay feed de tickets o alertas para cuantificar severidad reciente.</p>
+                </div>
+                <span class="badge" style="color:#ffb454;background:#35260d;border-color:#ffb45420;">Parcial</span>
+              </div>
+              <ul class="facts"><li><strong>Dato real:</strong> No se recibieron evidencias verificables de incidentes durante esta ejecucion.</li><li><strong>Cautela:</strong> La ausencia de evidencia no equivale a ausencia de incidentes.</li></ul>
+            </section>
+            
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>Capacidad, rendimiento y continuidad</h3>
+                  <p>No hay metricas de uso ni resultados de backup/restauracion medibles.</p>
+                </div>
+                <span class="badge" style="color:#93a4bf;background:#182434;border-color:#93a4bf20;">Sin datos</span>
+              </div>
+              <ul class="facts"><li><strong>Dato real:</strong> Sin CPU, RAM, disco, ancho de banda, RPO o RTO verificables.</li><li><strong>Impacto:</strong> No se puede estimar margen operativo ni riesgo de interrupcion.</li></ul>
+            </section>
+            
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <h3>Recomendaciones IA</h3>
+                  <p>Priorizacion generada por IA a partir de la falta de observabilidad y gobierno de datos.</p>
+                </div>
+                <span class="badge" style="color:#57a6ff;background:#0f2340;border-color:#57a6ff20;">IA</span>
+              </div>
+              <ul class="facts"><li><strong>IA - Riesgo:</strong> Riesgo operativo estimado: medio-alto por ceguera de monitorizacion.</li><li><strong>IA - Prioridad 1:</strong> Conectar inventario de activos, monitorizacion central y backup.</li><li><strong>IA - Prioridad 2:</strong> Definir cuadro minimo de KPIs: disponibilidad, parches, capacidad e incidentes.</li><li><strong>IA - Prioridad 3:</strong> Automatizar recoleccion diaria para transformar el informe en seguimiento real.</li></ul>
+            </section>
+            
+      </div>
+      <aside class="stack">
+        <section class="sources">
+          <div class="panel-head">
+            <div>
+              <h3>Inventario de Fuentes</h3>
+              <p>Registro de disponibilidad de fuentes esperadas para este informe.</p>
+            </div>
+            <span class="badge" style="color:#7cc8ff;background:#102637;border-color:#7cc8ff20;">Dato real</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Dominio</th>
+                <th>Estado</th>
+                <th>Tipo</th>
+                <th>Observacion</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            <tr>
+              <td>Servidores</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay conector activo ni inventario sincronizado en esta ejecucion.</td>
+            </tr>
+            
+            <tr>
+              <td>Cloud</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay cuenta cloud enlazada ni export de costes/estado disponible.</td>
+            </tr>
+            
+            <tr>
+              <td>Redes</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay telemetria SNMP, NetFlow, NMS o inventario de red accesible.</td>
+            </tr>
+            
+            <tr>
+              <td>WiFi</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay controlador WLAN ni metricas de experiencia de cliente conectadas.</td>
+            </tr>
+            
+            <tr>
+              <td>Telecomunicaciones</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay panel de enlaces, voz o WAN integrado en esta ejecucion.</td>
+            </tr>
+            
+            <tr>
+              <td>Incidencias</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay ITSM, ticketing o registro de incidentes sincronizado.</td>
+            </tr>
+            
+            <tr>
+              <td>Rendimiento</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay series temporales de CPU, RAM, disco o latencia disponibles.</td>
+            </tr>
+            
+            <tr>
+              <td>Parches</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay inventario de vulnerabilidades o cumplimiento de actualizaciones.</td>
+            </tr>
+            
+            <tr>
+              <td>Backups</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay consola de backup ni resultado de pruebas de restauracion.</td>
+            </tr>
+            
+            <tr>
+              <td>Continuidad</td>
+              <td>no disponible</td>
+              <td>dato real</td>
+              <td>No hay BCP/DRP operativo ni pruebas recientes accesibles.</td>
+            </tr>
+            
+            </tbody>
+          </table>
+        </section>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Prioridades Inmediatas</h3>
+              <p>Acciones sugeridas para transformar el informe en seguimiento operacional medible.</p>
+            </div>
+            <span class="badge" style="color:#57a6ff;background:#0f2340;border-color:#57a6ff20;">IA</span>
+          </div>
+          <ul class="facts">
+            <li>Integrar una fuente de inventario y monitorizacion en la siguiente ejecucion.</li><li>Publicar disponibilidad, incidentes y backup con evidencia exportable.</li><li>Conectar el ciclo de parches o vulnerabilidades para medir exposicion real.</li>
+          </ul>
+        </section>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Limitaciones Declaradas</h3>
+              <p>Control de calidad para evitar interpretar estimaciones como hechos operativos.</p>
+            </div>
+            <span class="badge" style="color:#ffb454;background:#35260d;border-color:#ffb45420;">Control</span>
+          </div>
+          <ul class="facts">
+            <li>No hay telemetria directa de infraestructura disponible en esta ejecucion.</li><li>No se han inventado metricas criticas ni porcentajes de disponibilidad.</li><li>Las recomendaciones IA son orientativas y estan separadas de los hechos observados.</li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+
+    <p class="footer-note">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria tecnica, monitorizacion profesional ni intervencion de un especialista.</p>
+  </main>
+</body>
+</html>
