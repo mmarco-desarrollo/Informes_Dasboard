@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | MMarco Seguridad</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg2: #0b1526;
+      --panel: #101b30;
+      --panel2: #13203a;
+      --line: #21314d;
+      --text: #eff5ff;
+      --muted: #8ca0bf;
+      --cyan: #39b6ff;
+      --blue: #2e62ff;
+      --green: #2ad4a1;
+      --yellow: #ffcc52;
+      --orange: #ff8b3d;
+      --red: #ff5d76;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(57,182,255,.12), transparent 28%),
+        radial-gradient(circle at top left, rgba(46,98,255,.12), transparent 22%),
+        linear-gradient(180deg, #050c18, var(--bg));
+    }
+    a { color: var(--cyan); }
+    .wrap {
+      width: min(1440px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+    .hero {
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(16,27,48,.96), rgba(8,16,30,.96));
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(0,0,0,.38);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 24px;
+      padding: 30px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      display: grid;
+      place-items: center;
+      color: #04111f;
+      font-weight: 800;
+    }
+    h1 {
+      margin: 18px 0 8px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+    .sub {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .meta-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .meta-label {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .meta-value {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .meta-note {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .scope-note {
+      margin-top: 20px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(57,182,255,.08);
+      color: #ccecff;
+      border: 1px solid rgba(57,182,255,.18);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .rail {
+      border-left: 1px solid rgba(255,255,255,.08);
+      padding-left: 24px;
+    }
+    .status-stack {
+      display: grid;
+      gap: 14px;
+    }
+    .status-pill {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+    }
+    .status-pill strong {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 6px;
+    }
+    .status-pill span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .risk-high span { color: var(--red); }
+    .ai-high span { color: var(--cyan); }
+    .section {
+      margin-top: 26px;
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(16,27,48,.94), rgba(11,21,38,.94));
+      box-shadow: 0 16px 40px rgba(0,0,0,.22);
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .section-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 760px;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .metric {
+      border-radius: 20px;
+      padding: 16px;
+      min-height: 144px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    }
+    .metric.red { box-shadow: inset 0 0 0 1px rgba(255,93,118,.1); }
+    .metric.orange { box-shadow: inset 0 0 0 1px rgba(255,139,61,.1); }
+    .metric.yellow { box-shadow: inset 0 0 0 1px rgba(255,204,82,.1); }
+    .metric.green { box-shadow: inset 0 0 0 1px rgba(42,212,161,.1); }
+    .metric.cyan { box-shadow: inset 0 0 0 1px rgba(57,182,255,.1); }
+    .metric-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .metric-value {
+      margin-top: 18px;
+      font-size: 32px;
+      font-weight: 800;
+    }
+    .metric-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 18px;
+    }
+    .panel {
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      border-radius: 22px;
+      padding: 18px;
+    }
+    .panel h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+    .panel p,
+    .panel li {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    ul.clean {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .chart-card {
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      padding: 12px;
+      overflow: hidden;
+    }
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      color: var(--text);
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    th {
+      color: #c9defe;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(255,255,255,.03);
+    }
+    tbody tr:nth-child(even) td {
+      background: rgba(255,255,255,.015);
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .news-card {
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      padding: 18px;
+    }
+    .news-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .news-badge {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,93,118,.12);
+      color: #ffd6dd;
+      border: 1px solid rgba(255,93,118,.18);
+    }
+    .news-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.28;
+    }
+    .news-source {
+      margin: 0 0 10px;
+      color: var(--cyan);
+      font-size: 13px;
+    }
+    .news-card p {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+    .news-reco strong {
+      color: var(--text);
+    }
+    .priority-row {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .priority-row:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .priority-tag {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 36px;
+      border-radius: 999px;
+      background: rgba(57,182,255,.1);
+      border: 1px solid rgba(57,182,255,.18);
+      color: #d9f2ff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: 0 12px;
+    }
+    .priority-row p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .footer {
+      margin-top: 24px;
+      padding: 18px 22px 30px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    .footer strong {
+      color: var(--text);
+    }
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .two-col,
+      .charts,
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+      .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .rail {
+        border-left: 0;
+        padding-left: 0;
+      }
+    }
+    @media (max-width: 680px) {
+      .wrap {
+        width: min(100% - 20px, 1440px);
+      }
+      .hero-grid {
+        padding: 20px;
+      }
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+      .priority-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="brand"><span class="mark">M</span> MMarco Seguridad | SOC / Threat Intelligence</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class="sub">Edicion ejecutiva con foco en amenazas activas, vulnerabilidades criticas, brechas recientes y decisiones de mitigacion priorizadas para direccion.</p>
+          <div class="hero-meta">
+            <div class="meta-card">
+              <div class="meta-label">Fecha y hora</div>
+              <div class="meta-value">2026-05-10 20:12</div>
+              <div class="meta-note">Zona horaria CEST | Edicion 20:00</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Proxima actualizacion</div>
+              <div class="meta-value">11/05 08:00</div>
+              <div class="meta-note">Estimacion operativa</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Perfil corporativo</div>
+              <div class="meta-value" style="font-size:18px">Ciberseguridad, Blockchain, IA y Telecom</div>
+              <div class="meta-note">https://mmarcoseguridad.com | +34 656 33 93 55</div>
+            </div>
+          </div>
+          <div class="scope-note">Los KPI y graficas agregadas se calculan sobre un corpus monitorizado de fuentes oficiales y tecnicas priorizadas. No representan un censo mundial completo de incidentes.</div>
+        </div>
+        <aside class="rail">
+          <div class="status-stack">
+            <div class="status-pill risk-high">
+              <strong>Nivel global de amenaza</strong>
+              <span>ALTO</span>
+            </div>
+            <div class="status-pill ai-high">
+              <strong>Estado IA de riesgo</strong>
+              <span>ALTO</span>
+            </div>
+            <div class="status-pill">
+              <strong>Hallazgo director</strong>
+              <span style="font-size:22px">cPanel en KEV + cadena de riesgos colaborativos</span>
+            </div>
+            <div class="status-pill">
+              <strong>Decision recomendada</strong>
+              <span style="font-size:22px">Parchar admin surfaces y blindar acceso remoto hoy</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>KPIs principales</h2>
+          <p>Tarjetas de decision basadas en el corpus de fuentes oficiales y tecnicas revisadas para esta edicion.</p>
+        </div>
+      </div>
+      <div class="metrics-grid">
+        
+            <div class="metric red">
+              <div class="metric-label">Incidentes activos</div>
+              <div class="metric-value">5</div>
+              <div class="metric-note">Casos abiertos o en seguimiento dentro del corpus oficial monitorizado</div>
+            </div>
+            
+            <div class="metric orange">
+              <div class="metric-label">Incidentes criticos</div>
+              <div class="metric-value">3</div>
+              <div class="metric-note">Brechas o campanas con exfiltracion, acceso remoto o auth bypass</div>
+            </div>
+            
+            <div class="metric cyan">
+              <div class="metric-label">Vulnerabilidades nuevas</div>
+              <div class="metric-value">5</div>
+              <div class="metric-note">Publicadas entre el 2026-04-30 y el 2026-05-07</div>
+            </div>
+            
+            <div class="metric red">
+              <div class="metric-label">CVEs criticas</div>
+              <div class="metric-value">4</div>
+              <div class="metric-note">Criticas por CNA o por prioridad operativa</div>
+            </div>
+            
+            <div class="metric orange">
+              <div class="metric-label">Malware detectado</div>
+              <div class="metric-value">2</div>
+              <div class="metric-note">A0Backdoor y RAT distribuido por LinkedIn</div>
+            </div>
+            
+            <div class="metric yellow">
+              <div class="metric-label">Campanas de phishing</div>
+              <div class="metric-value">3</div>
+              <div class="metric-note">LastPass, LinkedIn y Teams/Quick Assist</div>
+            </div>
+            
+            <div class="metric green">
+              <div class="metric-label">Ataques DDoS</div>
+              <div class="metric-value">0</div>
+              <div class="metric-note">Sin confirmacion reciente en fuentes priorizadas del corpus</div>
+            </div>
+            
+            <div class="metric green">
+              <div class="metric-label">Ransomware reportado</div>
+              <div class="metric-value">0</div>
+              <div class="metric-note">Sin familia nueva confirmada por fuentes oficiales prioritarias</div>
+            </div>
+            
+            <div class="metric neutral">
+              <div class="metric-label">Paises mas afectados</div>
+              <div class="metric-value">N/D fiable</div>
+              <div class="metric-note">Las fuentes abiertas revisadas no ofrecen cobertura geografica completa</div>
+            </div>
+            
+            <div class="metric red">
+              <div class="metric-label">Nivel de riesgo global</div>
+              <div class="metric-value">ALTO</div>
+              <div class="metric-note">Superficie internet-facing y colaborativa bajo presion</div>
+            </div>
+            
+            <div class="metric orange">
+              <div class="metric-label">Tendencia 24h</div>
+              <div class="metric-value">Estable - alcista</div>
+              <div class="metric-note">Estimacion operativa por acumulacion de avisos criticos</div>
+            </div>
+            
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Resumen ejecutivo</h2>
+          <p>Se mantienen presiones combinadas sobre paneles web, plataformas de automatizacion y canales de colaboracion con legitimidad operativa.</p>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <h3>Lectura para direccion</h3>
+          <ul class="clean"><li>La prioridad inmediata esta en paneles de administracion expuestos, herramientas MFT y plataformas de automatizacion con autenticacion o control de workflows.</li><li>La campana de suplantacion por Microsoft Teams y Quick Assist confirma que la ingenieria social sigue pivotando desde el correo a entornos colaborativos legitimados.</li><li>Las brechas recientes en Booking y Rituals elevan el riesgo secundario de fraude y phishing dirigido contra clientes y empleados.</li><li>No hay un repunte confirmado de nuevas familias de ransomware en el corpus oficial consultado, pero si condiciones tecnicas que facilitan acceso inicial y preparacion de impacto.</li></ul>
+        </div>
+        <div class="panel">
+          <h3>Alertas activas</h3>
+          <ul class="clean"><li>CVE-2026-41940 en cPanel/WHM permanece en el catalogo KEV de CISA y exige mitigacion inmediata en servicios expuestos.</li><li>Las correcciones de Android, MOVEit y n8n concentran riesgo en administracion remota, MFT y automatizacion empresarial.</li><li>Las brechas de Booking y Rituals elevan la probabilidad de phishing de seguimiento contra clientes y equipos de soporte.</li><li>La campana Teams + Quick Assist + A0Backdoor sigue siendo una referencia operativa para sectores finanzas y salud.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Mapa y actividad global</h2>
+          <p>No hay geodata abierta completa y homogena para atribucion por paises. Se sustituye por cobertura geografica verificable en las fuentes y por actividad por vector.</p>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="chart-card">
+    <svg viewBox="0 0 560 270" role="img" aria-label="Cobertura geografica verificable">
+      <rect x="0" y="0" width="560" height="270" rx="20" fill="transparent"/>
+      <text x="18" y="24" fill="#eff5ff" font-size="18" font-weight="700" font-family="Segoe UI, Arial">Cobertura geografica verificable</text>
+      <text x="18" y="42" fill="#8ca0bf" font-size="11" font-family="Segoe UI, Arial">Menciones regionales presentes en los casos y avisos revisados</text>
+      
+            <text x="18" y="68" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Global / multi-region</text>
+            <rect x="120" y="56" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="56" width="412.0" height="16" rx="8" fill="#39b6ff"/>
+            <text x="540" y="68" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">5</text>
+            
+            <text x="18" y="95" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Union Europea</text>
+            <rect x="120" y="83" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="83" width="329.6" height="16" rx="8" fill="#2e62ff"/>
+            <text x="540" y="95" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">4</text>
+            
+            <text x="18" y="122" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Espana / interes nacional</text>
+            <rect x="120" y="110" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="110" width="329.6" height="16" rx="8" fill="#ffcc52"/>
+            <text x="540" y="122" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">4</text>
+            
+            <text x="18" y="149" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Norteamerica</text>
+            <rect x="120" y="137" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="137" width="164.8" height="16" rx="8" fill="#ff8b3d"/>
+            <text x="540" y="149" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">2</text>
+            
+            <text x="18" y="176" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Atribucion no publica</text>
+            <rect x="120" y="164" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="164" width="247.2" height="16" rx="8" fill="#8ca0bf"/>
+            <text x="540" y="176" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">3</text>
+            
+    </svg>
+    </div>
+        <div class="chart-card">
+    <svg viewBox="0 0 560 270" role="img" aria-label="Vectores de ataque">
+      <rect x="0" y="0" width="560" height="270" rx="20" fill="transparent"/>
+      <text x="18" y="24" fill="#eff5ff" font-size="18" font-weight="700" font-family="Segoe UI, Arial">Vectores de ataque</text>
+      <text x="18" y="42" fill="#8ca0bf" font-size="11" font-family="Segoe UI, Arial">Predominio de web, credenciales e ingenieria social</text>
+      
+            <text x="18" y="68" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Email</text>
+            <rect x="120" y="56" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="56" width="247.2" height="16" rx="8" fill="#ffcc52"/>
+            <text x="540" y="68" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">3</text>
+            
+            <text x="18" y="95" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Web</text>
+            <rect x="120" y="83" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="83" width="329.6" height="16" rx="8" fill="#ff5d76"/>
+            <text x="540" y="95" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">4</text>
+            
+            <text x="18" y="122" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Credenciales</text>
+            <rect x="120" y="110" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="110" width="329.6" height="16" rx="8" fill="#ff8b3d"/>
+            <text x="540" y="122" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">4</text>
+            
+            <text x="18" y="149" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Red</text>
+            <rect x="120" y="137" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="137" width="82.4" height="16" rx="8" fill="#39b6ff"/>
+            <text x="540" y="149" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">1</text>
+            
+            <text x="18" y="176" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Cloud</text>
+            <rect x="120" y="164" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="164" width="164.8" height="16" rx="8" fill="#2e62ff"/>
+            <text x="540" y="176" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">2</text>
+            
+            <text x="18" y="203" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Endpoint</text>
+            <rect x="120" y="191" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="191" width="247.2" height="16" rx="8" fill="#2ad4a1"/>
+            <text x="540" y="203" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">3</text>
+            
+            <text x="18" y="230" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">VPN</text>
+            <rect x="120" y="218" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="218" width="0.0" height="16" rx="8" fill="#8ca0bf"/>
+            <text x="540" y="230" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">0</text>
+            
+            <text x="18" y="257" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">API</text>
+            <rect x="120" y="245" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="245" width="82.4" height="16" rx="8" fill="#39b6ff"/>
+            <text x="540" y="257" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">1</text>
+            
+            <text x="18" y="284" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Terceros</text>
+            <rect x="120" y="272" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="272" width="164.8" height="16" rx="8" fill="#ff8b3d"/>
+            <text x="540" y="284" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">2</text>
+            
+            <text x="18" y="311" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Ingenieria social</text>
+            <rect x="120" y="299" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="299" width="412.0" height="16" rx="8" fill="#ff5d76"/>
+            <text x="540" y="311" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">5</text>
+            
+    </svg>
+    </div>
+        <div class="chart-card">
+    <svg viewBox="0 0 560 250" role="img" aria-label="Evolucion de incidentes">
+      <text x="18" y="24" fill="#eff5ff" font-size="18" font-weight="700" font-family="Segoe UI, Arial">Evolucion de incidentes</text>
+      <text x="18" y="42" fill="#8ca0bf" font-size="11" font-family="Segoe UI, Arial">Comparativa operativa del corpus monitorizado</text>
+      <line x1="50" y1="202" x2="540" y2="202" stroke="rgba(255,255,255,0.12)"/>
+      
+            <rect x="82.0" y="114.0" width="72" height="88.0" rx="12" fill="#39b6ff"/>
+            <text x="118.0" y="220" text-anchor="middle" fill="#8ca0bf" font-size="11" font-family="Segoe UI, Arial">Ultimas 24h</text>
+            <text x="118.0" y="104.0" text-anchor="middle" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">4</text>
+            
+            <rect x="238.66666666666666" y="136.0" width="72" height="66.0" rx="12" fill="#ffcc52"/>
+            <text x="274.66666666666663" y="220" text-anchor="middle" fill="#8ca0bf" font-size="11" font-family="Segoe UI, Arial">Media 7d</text>
+            <text x="274.66666666666663" y="126.0" text-anchor="middle" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">3</text>
+            
+            <rect x="395.3333333333333" y="92.0" width="72" height="110.0" rx="12" fill="#ff5d76"/>
+            <text x="431.3333333333333" y="220" text-anchor="middle" fill="#8ca0bf" font-size="11" font-family="Segoe UI, Arial">Ultimos 30d</text>
+            <text x="431.3333333333333" y="82.0" text-anchor="middle" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">5</text>
+            
+    </svg>
+    </div>
+        <div class="chart-card">
+    <svg viewBox="0 0 560 270" role="img" aria-label="Distribucion de incidentes">
+      <rect x="0" y="0" width="560" height="270" rx="20" fill="transparent"/>
+      <text x="18" y="24" fill="#eff5ff" font-size="18" font-weight="700" font-family="Segoe UI, Arial">Distribucion de incidentes</text>
+      <text x="18" y="42" fill="#8ca0bf" font-size="11" font-family="Segoe UI, Arial">Conteo operativo por categoria en el corpus monitorizado</text>
+      
+            <text x="18" y="68" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Malware</text>
+            <rect x="120" y="56" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="56" width="206.0" height="16" rx="8" fill="#ff8b3d"/>
+            <text x="540" y="68" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">2</text>
+            
+            <text x="18" y="95" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Phishing</text>
+            <rect x="120" y="83" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="83" width="309.0" height="16" rx="8" fill="#ffcc52"/>
+            <text x="540" y="95" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">3</text>
+            
+            <text x="18" y="122" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Ransomware</text>
+            <rect x="120" y="110" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="110" width="0.0" height="16" rx="8" fill="#ff5d76"/>
+            <text x="540" y="122" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">0</text>
+            
+            <text x="18" y="149" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">DDoS</text>
+            <rect x="120" y="137" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="137" width="0.0" height="16" rx="8" fill="#39b6ff"/>
+            <text x="540" y="149" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">0</text>
+            
+            <text x="18" y="176" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Intrusiones</text>
+            <rect x="120" y="164" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="164" width="206.0" height="16" rx="8" fill="#2e62ff"/>
+            <text x="540" y="176" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">2</text>
+            
+            <text x="18" y="203" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Credential stuffing</text>
+            <rect x="120" y="191" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="191" width="103.0" height="16" rx="8" fill="#2ad4a1"/>
+            <text x="540" y="203" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">1</text>
+            
+            <text x="18" y="230" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Exploits web</text>
+            <rect x="120" y="218" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="218" width="412.0" height="16" rx="8" fill="#ff5d76"/>
+            <text x="540" y="230" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">4</text>
+            
+            <text x="18" y="257" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Supply chain</text>
+            <rect x="120" y="245" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="245" width="0.0" height="16" rx="8" fill="#8ca0bf"/>
+            <text x="540" y="257" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">0</text>
+            
+            <text x="18" y="284" fill="#8ca0bf" font-size="12" font-family="Segoe UI, Arial">Insider threat</text>
+            <rect x="120" y="272" width="412" height="16" rx="8" fill="rgba(255,255,255,0.06)"/>
+            <rect x="120" y="272" width="0.0" height="16" rx="8" fill="#8ca0bf"/>
+            <text x="540" y="284" fill="#eff5ff" font-size="12" font-family="Segoe UI, Arial">0</text>
+            
+    </svg>
+    </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Incidentes recientes</h2>
+          <p>Seleccion de casos confirmados o en seguimiento con impacto ejecutivo y riesgo de arrastre hacia fraude, phishing o exfiltracion.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Severidad</th>
+              <th>Origen</th>
+              <th>Sector</th>
+              <th>Fecha</th>
+              <th>Impacto estimado</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Brecha de datos</td><td>Alta</td><td>UE / origen no atribuido</td><td>Retail / consumo</td><td>2026-05-07</td><td>PII de clientes My Rituals expuesta</td><td>Investigando</td></tr><tr><td>Acceso no autorizado</td><td>Alta</td><td>Global / origen no atribuido</td><td>Turismo / reservas</td><td>2026-05-05</td><td>Datos de reserva y aumento de fraude posterior</td><td>Contenido</td></tr><tr><td>Phishing + acceso remoto</td><td>Critica</td><td>Multi-region</td><td>Finanzas / salud</td><td>2026-04-09</td><td>Quick Assist + A0Backdoor con persistencia y exfiltracion</td><td>Activa</td></tr><tr><td>Phishing de credenciales</td><td>Alta</td><td>Global</td><td>SaaS / gestion de credenciales</td><td>2026-02-10</td><td>Robo de contrasena maestra mediante suplantacion LastPass</td><td>Mitigando</td></tr><tr><td>Malware social</td><td>Alta</td><td>Global</td><td>Ejecutivos / alto valor</td><td>2026-02-12</td><td>DLL sideloading y RAT por mensajes de LinkedIn</td><td>Seguimiento</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Vulnerabilidades criticas</h2>
+          <p>Priorizacion orientada a explotacion conocida, privilegios requeridos, superficie expuesta y disponibilidad de parche.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto afectado</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Estado de explotacion</th>
+              <th>Parche</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CVE-2026-41940</td><td>cPanel &amp; WHM / WP2</td><td>9.8 derivado del vector CVSS v3.1 publicado</td><td>Critica</td><td>Confirmada; en KEV desde 2026-04-30</td><td>Si</td><td>P1 en 24h</td></tr><tr><td>CVE-2026-4670</td><td>Progress MOVEit Automation</td><td>9.8 CNA / auth bypass</td><td>Critica</td><td>Sin confirmacion publica prioritaria</td><td>Si</td><td>P1 en 24h</td></tr><tr><td>CVE-2026-0073</td><td>Android adbd</td><td>8.8 NVD</td><td>Alta con prioridad operativa critica</td><td>No confirmada en las fuentes revisadas</td><td>Si, depende del fabricante</td><td>P1 en flotas moviles</td></tr><tr><td>CVE-2026-42232</td><td>n8n Enterprise</td><td>9.4 CVSS-B CNA / 8.8 NVD</td><td>Critica operativa</td><td>No confirmada en las fuentes revisadas</td><td>Si</td><td>P1 si hay edicion de workflows expuesta</td></tr><tr><td>CVE-2026-5174</td><td>Progress MOVEit Automation</td><td>8.8 NVD</td><td>Alta</td><td>Sin confirmacion publica prioritaria</td><td>Si</td><td>P2 junto a CVE-2026-4670</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Noticias importantes</h2>
+          <p>Noticias y avisos con impacto potencial inmediato sobre continuidad, fraude posterior o necesidad de hardening urgente.</p>
+        </div>
+      </div>
+      <div class="news-grid">
+        
+            <article class="news-card">
+              <div class="news-top">
+                <span class="news-badge">Alta</span>
+                <span class="news-time">2026-05-07</span>
+              </div>
+              <h3>Rituals confirma brecha sobre la base de clientes My Rituals</h3>
+              <p class="news-source">INCIBE-CERT</p>
+              <p>PII expuesta; riesgo de phishing y fraude posterior</p>
+              <p class="news-reco"><strong>Accion:</strong> Aumentar vigilancia de suplantacion a clientes y reforzar notificaciones internas.</p>
+            </article>
+            
+            <article class="news-card">
+              <div class="news-top">
+                <span class="news-badge">Alta</span>
+                <span class="news-time">2026-05-05</span>
+              </div>
+              <h3>Booking reconoce acceso no autorizado a datos de reservas</h3>
+              <p class="news-source">INCIBE-CERT</p>
+              <p>Clientes expuestos a fraude dirigido con datos de reserva</p>
+              <p class="news-reco"><strong>Accion:</strong> Revisar flujos de soporte y avisos a clientes ante intentos de secuestro de reserva.</p>
+            </article>
+            
+            <article class="news-card">
+              <div class="news-top">
+                <span class="news-badge">Critica</span>
+                <span class="news-time">2026-05-05</span>
+              </div>
+              <h3>Android mayo 2026 corrige una vulnerabilidad critica en adbd</h3>
+              <p class="news-source">INCIBE-CERT / NVD</p>
+              <p>RCE proximal sin interaccion del usuario en dispositivos afectados</p>
+              <p class="news-reco"><strong>Accion:</strong> Acelerar despliegue de parches en flotas corporativas Android.</p>
+            </article>
+            
+            <article class="news-card">
+              <div class="news-top">
+                <span class="news-badge">Critica operativa</span>
+                <span class="news-time">2026-05-04</span>
+              </div>
+              <h3>n8n corrige prototype pollution con impacto potencial de RCE</h3>
+              <p class="news-source">NVD</p>
+              <p>Riesgo alto en entornos con edicion de workflows o automatizaciones expuestas</p>
+              <p class="news-reco"><strong>Accion:</strong> Actualizar y restringir permisos de creacion/edicion de workflows.</p>
+            </article>
+            
+            <article class="news-card">
+              <div class="news-top">
+                <span class="news-badge">Critica</span>
+                <span class="news-time">2026-04-09</span>
+              </div>
+              <h3>Campana por Microsoft Teams usa Quick Assist para desplegar A0Backdoor</h3>
+              <p class="news-source">INCIBE-CERT</p>
+              <p>Persistencia, exfiltracion y antesala de impacto mayor</p>
+              <p class="news-reco"><strong>Accion:</strong> Bloquear Quick Assist donde no sea necesario y entrenar al personal de help desk.</p>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Recomendaciones ejecutivas</h2>
+          <p>Clasificadas por prioridad para facilitar decision de direccion, operaciones y responsables de tecnologia.</p>
+        </div>
+      </div>
+      <div class="panel">
+        
+            <div class="priority-row">
+              <span class="priority-tag">Critica</span>
+              <p>Parchar o aislar en 24 horas cPanel/WHM, MOVEit Automation y n8n expuestos a internet.</p>
+            </div>
+            
+            <div class="priority-row">
+              <span class="priority-tag">Critica</span>
+              <p>Restringir Quick Assist, AnyDesk y herramientas de acceso remoto no gestionadas; exigir aprobacion previa y logging reforzado.</p>
+            </div>
+            
+            <div class="priority-row">
+              <span class="priority-tag">Alta</span>
+              <p>Forzar MFA resistente al phishing en paneles de administracion, VPN, correo, MDM y plataformas de reservas o ecommerce.</p>
+            </div>
+            
+            <div class="priority-row">
+              <span class="priority-tag">Alta</span>
+              <p>Activar detecciones para A0Backdoor, DLL sideloading, cambios en workflows de n8n y accesos anomales a MFT.</p>
+            </div>
+            
+            <div class="priority-row">
+              <span class="priority-tag">Media</span>
+              <p>Revisar backups, segmentacion y planes de comunicacion a clientes para escenarios de filtracion con fraude posterior.</p>
+            </div>
+            
+            <div class="priority-row">
+              <span class="priority-tag">Baja</span>
+              <p>Actualizar simulaciones de concienciacion con casos Teams, LinkedIn y LastPass para equipos de direccion, soporte y ventas.</p>
+            </div>
+            
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Calendario de eventos clave</h2>
+          <p>Hitos de parcheo, revisiones y contexto regulatorio o sectorial relevante para la siguiente ventana operativa.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Evento</th>
+              <th>Tipo</th>
+              <th>Nota</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>2026-05-12</td>
+          <td>Microsoft Patch Tuesday</td>
+          <td>Parches</td>
+          <td>Ventana clave para validacion, testing y despliegue acelerado.</td>
+        </tr>
+        
+        <tr>
+          <td>2026-05-05</td>
+          <td>Boletin Android mayo 2026</td>
+          <td>Movilidad</td>
+          <td>Validar disponibilidad real del parche por fabricante.</td>
+        </tr>
+        
+        <tr>
+          <td>2026-05-07</td>
+          <td>ENISA Telecom and Digital Infrastructure Security Forum 2026</td>
+          <td>Regulatorio / sectorial</td>
+          <td>Refuerza foco europeo en resiliencia de telecom y redes criticas.</td>
+        </tr>
+        
+        <tr>
+          <td>2026-05-11</td>
+          <td>Revision interna de exposicion web</td>
+          <td>Operativo</td>
+          <td>Ventana sugerida para comprobar admin panels, MFT y workflows.</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Seccion IA</h2>
+          <p>Analisis predictivo o estimativo. Este bloque no debe interpretarse como hecho confirmado.</p>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <h3>Riesgo global estimado</h3>
+          <p><strong style="color:var(--cyan)">Nivel:</strong> Alto</p>
+          <p><strong style="color:var(--cyan)">Prediccion:</strong> Alta probabilidad de continuidad del abuso de herramientas legitimas de colaboracion y soporte durante las proximas 72 horas.</p>
+          <p><strong style="color:var(--cyan)">Sectores expuestos:</strong> Finanzas, salud, retail, turismo y organizaciones con paneles de gestion o MFT expuestos.</p>
+        </div>
+        <div class="panel">
+          <h3>Salida automatica</h3>
+          <p><strong style="color:var(--cyan)">Prioridades:</strong> cPanel/WHM, MOVEit, n8n, Android corporativo, accesos de soporte remoto, credenciales privilegiadas.</p>
+          <p><strong style="color:var(--cyan)">Probabilidad:</strong> Probabilidad estimada de aumento de ataques de phishing operativo: 72%.</p>
+          <p><strong style="color:var(--cyan)">Recomendacion:</strong> Reducir superficie de acceso remoto, endurecer autenticacion administrativa y elevar la monitorizacion de exfiltracion y cambios de workflow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Fuentes consultadas</h2>
+          <p>Prioridad a CISA, NVD, INCIBE, ENISA y avisos tecnicos asociados.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Fuente</th>
+              <th>Enlace</th>
+              <th>Uso en el informe</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CISA Known Exploited Vulnerabilities Catalog</td>
+          <td><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></td>
+          <td>Catalogo oficial de vulnerabilidades explotadas en la naturaleza; el indice mostrado en resultados refleja 1.422 entradas.</td>
+        </tr>
+        
+        <tr>
+          <td>NVD - CVE-2026-41940</td>
+          <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41940">https://nvd.nist.gov/vuln/detail/CVE-2026-41940</a></td>
+          <td>cPanel/WHM en KEV desde 2026-04-30, con mitigacion exigida antes del 2026-05-03.</td>
+        </tr>
+        
+        <tr>
+          <td>NVD - CVE-2026-4670</td>
+          <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-4670">https://nvd.nist.gov/vuln/detail/CVE-2026-4670</a></td>
+          <td>MOVEit Automation auth bypass, publicado el 2026-04-30.</td>
+        </tr>
+        
+        <tr>
+          <td>NVD - CVE-2026-42232</td>
+          <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42232">https://nvd.nist.gov/vuln/detail/CVE-2026-42232</a></td>
+          <td>n8n XML Node prototype pollution con potencial de RCE, modificado el 2026-05-06.</td>
+        </tr>
+        
+        <tr>
+          <td>INCIBE-CERT - Boletin Android mayo 2026</td>
+          <td><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026">https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026</a></td>
+          <td>Aviso critico sobre CVE-2026-0073 en Android, publicado el 2026-05-05.</td>
+        </tr>
+        
+        <tr>
+          <td>INCIBE-CERT - Campana Microsoft Teams y A0Backdoor</td>
+          <td><a href="https://www.incibe.es/index.php/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns">https://www.incibe.es/index.php/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns</a></td>
+          <td>Campana dirigida a finanzas y salud con Quick Assist y A0Backdoor, publicada el 2026-04-09.</td>
+        </tr>
+        
+        <tr>
+          <td>INCIBE-CERT - Rituals</td>
+          <td><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/rituals-detecta-un-incidente-de-seguridad-que-afecta-la-base-de-datos-de">https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/rituals-detecta-un-incidente-de-seguridad-que-afecta-la-base-de-datos-de</a></td>
+          <td>Brecha con descarga no autorizada de datos personales, publicada el 2026-05-07.</td>
+        </tr>
+        
+        <tr>
+          <td>INCIBE-CERT - Booking</td>
+          <td><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking">https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking</a></td>
+          <td>Acceso no autorizado a datos de reservas, publicado el 2026-05-05.</td>
+        </tr>
+        
+        <tr>
+          <td>INCIBE Balance de Ciberseguridad 2025</td>
+          <td><a href="https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf">https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf</a></td>
+          <td>122.223 incidentes en 2025, 25.133 casos de phishing y 55.411 relacionados con malware.</td>
+        </tr>
+        
+        <tr>
+          <td>ENISA Telecom and Digital Infrastructure Security Forum 2026</td>
+          <td><a href="https://www.enisa.europa.eu/events/enisa-telecom-and-digital-infrastructure-security-forum-2026">https://www.enisa.europa.eu/events/enisa-telecom-and-digital-infrastructure-security-forum-2026</a></td>
+          <td>Evento celebrado el 2026-05-07 con foco en resiliencia de telecom y redes criticas.</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong>MMarco Seguridad</strong><br>
+      https://mmarcoseguridad.com | mmarco.seguridad@gmail.com | +34 656 33 93 55<br>
+      Historico previsto en GitHub: informes_ciberseguridad/20260510<br>
+      Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+    </footer>
+  </div>
+</body>
+</html>
