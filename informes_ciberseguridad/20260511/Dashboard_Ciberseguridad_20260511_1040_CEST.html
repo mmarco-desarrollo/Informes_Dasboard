@@ -1,114 +1,119 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Informe Ejecutivo de Ciberseguridad | 11/05/2026 10:40 CEST</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #040a12;
-      --fg: #eaf3fc;
-      --muted: #8ea5c0;
-      --accent: #74f1ff;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at top left, rgba(58,160,255,.12), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(255,92,116,.10), transparent 30%),
-        linear-gradient(180deg, #06101c 0%, #03070e 100%);
-      color: var(--fg);
-      font-family: "DejaVu Sans", Arial, sans-serif;
-      padding: 24px;
-    }
-    .wrap {
-      max-width: 1460px;
-      margin: 0 auto;
-    }
-    .meta {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 0 22px;
-      padding: 18px 22px;
-      border: 1px solid rgba(116, 241, 255, 0.14);
-      border-radius: 20px;
-      background: rgba(8, 18, 31, 0.72);
-      backdrop-filter: blur(8px);
-    }
-    .meta strong { color: var(--accent); }
-    .meta small { color: var(--muted); display: block; margin-top: 4px; }
-    .page-shell {
-      margin: 0 0 24px;
-      padding: 18px;
-      border-radius: 28px;
-      background: rgba(7, 15, 26, 0.72);
-      border: 1px solid rgba(116, 241, 255, 0.08);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.33);
-    }
-    .page-shell svg {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 22px;
-      overflow: hidden;
-    }
-    .notes {
-      margin-top: 20px;
-      padding: 18px 22px;
-      border-radius: 20px;
-      background: rgba(8, 18, 31, 0.8);
-      border: 1px solid rgba(116, 241, 255, 0.08);
-    }
-    .notes h2 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      color: var(--accent);
-    }
-    .notes p, .notes li {
-      color: var(--muted);
-      line-height: 1.55;
-    }
-    .sources {
-      margin: 0;
-      padding-left: 18px;
-    }
-    .sources li {
-      margin: 0 0 10px;
-    }
-    .sources a {
-      color: #9befff;
-      text-decoration: none;
-      font-weight: 600;
-      margin-right: 10px;
-    }
-    .sources span {
-      color: #90a8c5;
-    }
-    @media (max-width: 900px) {
-      body { padding: 12px; }
-      .page-shell { padding: 10px; border-radius: 18px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informe Ejecutivo de Ciberseguridad | 11/05/2026 10:40 CEST</title>
+<style>
+:root{color-scheme:dark;--bg:#06101c;--panel:#0b1628;--line:#17314f;--text:#eaf3fc;--muted:#8ea5c0;--cyan:#74f1ff;--red:#ff6a7d;--amber:#ffbe67;--green:#8be7a1}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,rgba(58,160,255,.12),transparent 28%),radial-gradient(circle at bottom right,rgba(255,92,116,.10),transparent 30%),linear-gradient(180deg,#06101c 0%,#03070e 100%);color:var(--text);font-family:Arial,sans-serif;padding:24px}a{color:#9befff} .wrap{max-width:1180px;margin:0 auto}.hero,.panel{background:rgba(8,18,31,.82);border:1px solid rgba(116,241,255,.08);border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.28)}.hero{padding:24px;margin-bottom:18px}.row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px}.k{font-size:13px;color:var(--muted);margin-bottom:8px}.v{font-size:28px;font-weight:800}.panel{padding:22px;margin-bottom:18px}.cols{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}.pill{display:inline-block;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700}.crit{background:var(--red);color:#fff}.high{background:var(--amber);color:#07111f}.ok{background:var(--green);color:#07111f}h1,h2,h3,p,ul{margin:0 0 12px}h1{font-size:30px}h2{font-size:22px;color:var(--cyan)}p,li{line-height:1.55;color:#dbe8f5}.muted{color:var(--muted)}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px 12px;border-bottom:1px solid #132a42;text-align:left;vertical-align:top}th{color:#aee9ff;font-size:12px;background:#10223a}.foot{font-size:12px;color:#8198b2}.bars div{display:flex;align-items:center;gap:10px;margin:10px 0}.bars span{min-width:150px;color:#dce8f5;font-size:14px}.track{flex:1;height:12px;background:#11233a;border-radius:999px;overflow:hidden}.fill{height:12px;background:linear-gradient(90deg,#3aa0ff,#74f1ff);border-radius:999px}.small{font-size:13px;color:var(--muted)}@media (max-width:900px){body{padding:12px}.row,.cols{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="meta">
+<div class="wrap">
+  <section class="hero">
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start">
       <div>
-        <strong>MMarco Seguridad</strong>
-        <small>Informe Ejecutivo de Ciberseguridad | 11/05/2026 10:40 CEST</small>
+        <div style="font-size:30px;font-weight:800">MMarco Seguridad</div>
+        <div style="font-size:22px;color:#9ec3ff;margin-top:6px">Informe Ejecutivo de Ciberseguridad</div>
+        <div class="small" style="margin-top:8px">Corte real: 11/05/2026 10:40:12 CEST | Proxima actualizacion: 11/05/2026 12:00 CEST | Europe/Madrid</div>
       </div>
       <div>
-        <strong>Corte real</strong>
-        <small>2026-05-11 10:40:12 CEST | Zona Europe/Madrid</small>
-      </div>
-      <div>
-        <strong>Nivel global</strong>
-        <small>ALTO | Riesgo IA Elevado</small>
+        <span class="pill crit">Nivel ALTO</span>
+        <span class="pill" style="background:#8df4ff;color:#07111f">IA Elevado</span>
       </div>
     </div>
-    
+    <p style="margin-top:18px">El riesgo operativo sigue en nivel alto por la coincidencia de CVEs criticas expuestas a Internet, casos con explotacion confirmada y campanas activas de robo de credenciales con ingenieria social.</p>
+  </section>
+
+  <section class="row">
+    <div class="card"><div class="k">Incidentes activos</div><div class="v">6</div><div class="small">items con seguimiento abierto</div></div>
+    <div class="card"><div class="k">Incidentes criticos</div><div class="v">6</div><div class="small">impacto alto o explotacion</div></div>
+    <div class="card"><div class="k">Vulnerabilidades nuevas</div><div class="v">7</div><div class="small">CVE priorizadas</div></div>
+    <div class="card"><div class="k">Campanas de phishing</div><div class="v">2</div><div class="small">SumUp y falsa Operacion Endgame</div></div>
+  </section>
+
+  <section class="cols">
+    <div class="panel">
+      <h2>Resumen ejecutivo</h2>
+      <ul>
+        <li>Palo Alto CVE-2026-0300 y Cisco CVE-2026-20045 concentran el parcheo urgente por explotacion confirmada o prioridad KEV.</li>
+        <li>Nginx-UI, CashDro 3, VMware Tanzu y Android amplian la presion sobre paneles web, perimetro y movilidad entre el 5 y el 8 de mayo de 2026.</li>
+        <li>INCIBE consolido 122.223 incidentes en 2025, con 25.133 incidentes de phishing, 55.411 relacionados con malware y 392 de ransomware.</li>
+        <li>La recomendacion principal es reducir ventana de parcheo, reforzar identidad y revisar secretos de CI/CD.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>Exposicion sectorial</h2>
+      <div class="bars">
+        <div><span>Banca</span><div class="track"><div class="fill" style="width:100%"></div></div><strong>34</strong></div>
+        <div><span>Transporte</span><div class="track"><div class="fill" style="width:41%"></div></div><strong>14</strong></div>
+        <div><span>Energia</span><div class="track"><div class="fill" style="width:24%"></div></div><strong>8</strong></div>
+        <div><span>Mercados financieros</span><div class="track"><div class="fill" style="width:21%"></div></div><strong>7</strong></div>
+        <div><span>Aseguradoras</span><div class="track"><div class="fill" style="width:18%"></div></div><strong>6</strong></div>
+      </div>
+      <p class="small">Sustitucion del mapa geografico por exposicion sectorial verificable segun el balance oficial de INCIBE 2025.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Vulnerabilidades criticas</h2>
+    <table>
+      <thead><tr><th>CVE</th><th>Producto</th><th>CVSS</th><th>Severidad</th><th>Explotacion</th><th>Parche</th><th>Prioridad</th></tr></thead>
+      <tbody>
+        <tr><td>CVE-2026-0300</td><td>Palo Alto PAN-OS User-ID</td><td>9.8</td><td>Critica</td><td>Confirmada / KEV</td><td>Si</td><td>Inmediata</td></tr>
+        <tr><td>CVE-2026-42238</td><td>Nginx-UI</td><td>9.8</td><td>Critica</td><td>Exploit publico</td><td>2.3.8</td><td>Inmediata</td></tr>
+        <tr><td>CVE-2026-8076</td><td>CashDro 3</td><td>9.1</td><td>Critica</td><td>No confirmada</td><td>26.01.00.16</td><td>Alta</td></tr>
+        <tr><td>CVE-2026-0073</td><td>Android</td><td>8.8</td><td>Alta</td><td>No confirmada</td><td>Si</td><td>Alta</td></tr>
+        <tr><td>CVE-2026-20045</td><td>Cisco Unified Communications</td><td>9.8</td><td>Critica</td><td>KEV</td><td>Si</td><td>Inmediata</td></tr>
+        <tr><td>CVE-2026-33634</td><td>Trivy</td><td>9.4</td><td>Critica</td><td>KEV</td><td>Mitigaciones</td><td>Inmediata</td></tr>
+        <tr><td>CVE-2016-1000027</td><td>VMware Tanzu</td><td>N/D</td><td>Critica</td><td>No confirmada</td><td>Si</td><td>Alta</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="cols">
+    <div class="panel">
+      <h2>Alertas activas</h2>
+      <ul>
+        <li>Palo Alto CVE-2026-0300: limitar el portal User-ID a zonas de confianza o deshabilitarlo si no se usa.</li>
+        <li>Cisco CVE-2026-20045 y Trivy CVE-2026-33634 siguen con prioridad KEV y remediacion acelerada.</li>
+        <li>CashDro 3 exige actualizacion obligatoria a la rama soportada 26.01.00.16.</li>
+        <li>Android mayo 2026 corrige CVE-2026-0073; revisar flota con parches atrasados.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>Noticias relevantes</h2>
+      <p><span class="pill crit">Critica</span> Palo Alto PAN-OS entra en foco con CVSS 9.8 y explotacion reconocida.</p>
+      <p><span class="pill crit">Critica</span> INCIBE eleva a critica la RCE no autenticada de Nginx-UI previa a 2.3.8.</p>
+      <p><span class="pill high">Alta</span> CashDro 3 publica correccion y retira versiones inseguras del repositorio.</p>
+      <p><span class="pill crit">Critica</span> Trivy obliga a revisar pipelines y rotar secretos si se ejecutaron versiones afectadas.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Recomendaciones priorizadas</h2>
+    <p><span class="pill crit">Critica</span> Aplicar parches o mitigaciones urgentes en activos expuestos a Internet en menos de 72 horas.</p>
+    <p><span class="pill high">Alta</span> Revisar identidad, grants OAuth, MFA resistente a phishing y reglas sospechosas en correo.</p>
+    <p><span class="pill high">Alta</span> Rotar secretos de CI/CD y fijar GitHub Actions a commit SHA inmutable donde exista Trivy.</p>
+    <p><span class="pill ok">Media</span> Reforzar backups desconectados, pruebas de restauracion y segmentacion lateral en entornos pyme.</p>
+    <p><span class="pill ok">Baja</span> Actualizar concienciacion a finanzas y direccion sobre phishing de autoridad y plataformas de pago.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Fuentes principales</h2>
+    <ul>
+      <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos">INCIBE-CERT Avisos</a> <span class="muted">listado de avisos criticos visibles el 11/05/2026</span></li>
+      <li><a href="https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf">INCIBE Balance 2025</a> <span class="muted">contexto anual consolidado a 09/02/2026</span></li>
+      <li><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">Android Security Bulletin May 2026</a> <span class="muted">publicado el 04/05/2026 y actualizado el 07/05/2026</span></li>
+      <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">NVD CVE-2026-0300</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42238">NVD CVE-2026-42238</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20045">NVD CVE-2026-20045</a> y <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33634">NVD CVE-2026-33634</a></li>
+      <li><a href="https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup">INCIBE SumUp phishing</a> y <a href="https://www.incibe.es/ciudadania/avisos/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la">INCIBE falsa Operacion Endgame</a></li>
+    </ul>
+  </section>
+
+  <section class="panel foot">
+    Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+  </section>
+</div>
+</body>
+</html>
