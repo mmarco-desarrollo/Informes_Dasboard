@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo de Ciberseguridad | Dashboard_Ciberseguridad_20260511_1600_CEST</title>
+  <style>
+    :root {
+      --bg:#07111f; --bg2:#0d1a2c; --line:rgba(255,255,255,.08); --text:#f2f6ff; --muted:#9fb0cc; --ai:#48c5ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Trebuchet MS","Segoe UI",sans-serif;background:radial-gradient(circle at top right, rgba(72,197,255,.12), transparent 24%),radial-gradient(circle at top left, rgba(150,123,255,.12), transparent 24%),linear-gradient(180deg,#07111f,#0b1628);color:var(--text);padding:28px 18px 60px;}
+    .shell{max-width:1180px;margin:0 auto;display:grid;gap:20px}
+    .top{padding:24px 26px;border-radius:24px;background:rgba(12,24,42,.82);border:1px solid var(--line);backdrop-filter:blur(12px);}
+    .mark{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#3478ff,#48c5ff);font-weight:700;font-size:26px;margin-bottom:14px}
+    h1{margin:0 0 10px;font-size:42px;line-height:1.05}
+    p{margin:0;line-height:1.6;color:var(--muted)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,#3478ff,#48c5ff);color:white;text-decoration:none;font-weight:700}
+    .btn.secondary{background:rgba(255,255,255,.06);border:1px solid var(--line)}
+    .meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+    .meta-card{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    .meta-card span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .meta-card strong{font-size:18px}
+    .page-card{padding:14px;border-radius:24px;background:rgba(12,24,42,.82);border:1px solid var(--line)}
+    img{width:100%;display:block;border-radius:18px}
+    .page-caption{padding:10px 4px 2px;color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+    .sources{padding:22px 24px;border-radius:24px;background:rgba(12,24,42,.82);border:1px solid var(--line)}
+    .sources h2{margin:0 0 14px;font-size:24px}
+    .sources ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .sources li{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    .sources span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .sources a{color:#dcefff;text-decoration:none;line-height:1.45}
+    @media (max-width:900px){.meta,.sources ul{grid-template-columns:1fr} h1{font-size:34px}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="top">
+      <div class="mark">MM</div>
+      <h1>Informe Ejecutivo de Ciberseguridad</h1>
+      <p>Edición programada 16:00 CEST Europe/Madrid. Datos verificados hasta 11/05/2026 12:37 CEST. El visor HTML muestra exactamente las mismas páginas que se adjuntan como PNG y se exportan a PDF.</p>
+      <div class="actions">
+        <a class="btn" href="Dashboard_Ciberseguridad_20260511_1600_CEST.pdf" download>Exportar a PDF</a>
+        <a class="btn secondary" href="#fuentes">Ver fuentes</a>
+      </div>
+      <div class="meta">
+        <div class="meta-card"><span>Nivel global</span><strong>ALTO</strong></div>
+        <div class="meta-card"><span>Próxima actualización</span><strong>11/05/2026 20:00 CEST</strong></div>
+        <div class="meta-card"><span>Estado IA</span><strong>Elevado</strong></div>
+        <div class="meta-card"><span>Método</span><strong>Muestra priorizada</strong></div>
+      </div>
+    </section>
+    <section class="page-card"><img src="Dashboard_Ciberseguridad_20260511_1600_CEST_pagina_01.png" alt="Página 1" /><div class="page-caption">Página 01</div></section>
+    <section class="page-card"><img src="Dashboard_Ciberseguridad_20260511_1600_CEST_pagina_02.png" alt="Página 2" /><div class="page-caption">Página 02</div></section>
+    <section class="page-card"><img src="Dashboard_Ciberseguridad_20260511_1600_CEST_pagina_03.png" alt="Página 3" /><div class="page-caption">Página 03</div></section>
+    <section class="page-card"><img src="Dashboard_Ciberseguridad_20260511_1600_CEST_pagina_04.png" alt="Página 4" /><div class="page-caption">Página 04</div></section>
+    <section class="page-card"><img src="Dashboard_Ciberseguridad_20260511_1600_CEST_pagina_05.png" alt="Página 5" /><div class="page-caption">Página 05</div></section>
+    <section class="sources" id="fuentes">
+      <h2>Fuentes y trazabilidad</h2>
+      <ul>
+<li><span>Hecho confirmado</span><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">NVD - CVE-2026-0300</a></li>
+<li><span>Hecho confirmado</span><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20963">NVD - CVE-2026-20963</a></li>
+<li><span>Hecho confirmado</span><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">Android Security Bulletin — May 2026</a></li>
+<li><span>Hecho confirmado</span><a href="https://access.redhat.com/security/vulnerabilities/RHSB-2026-003">Red Hat RHSB-2026-003 Dirty Frag</a></li>
+<li><span>Hecho confirmado</span><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos">INCIBE-CERT Avisos</a></li>
+<li><span>Hecho confirmado</span><a href="https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h6c2-x2m2-mwhf">GitHub Advisory - nginx-ui MCP</a></li>
+<li><span>Hecho confirmado</span><a href="https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/">Microsoft Security Blog - AiTM code of conduct campaign</a></li>
+<li><span>Hecho confirmado</span><a href="https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/">Microsoft Security Blog - Trivy supply chain compromise</a></li>
+<li><span>Hecho confirmado</span><a href="https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/">Microsoft Security Blog - threat actor abuse of AI</a></li>
+</ul>
+    </section>
+  </div>
+</body>
+</html>
