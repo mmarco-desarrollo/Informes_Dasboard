@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-05-11 20:08 CEST",
+  "nextUpdate": "2026-05-12 00:00 CEST",
+  "market": {
+    "cap": 2811000000000,
+    "vol24h": 108137000000,
+    "btcDom": 58.4,
+    "ethDom": 10,
+    "fearGreed": 48,
+    "fearLabel": "Neutral",
+    "altseason": 35,
+    "derivativesNote": "Referencias abiertas 7-11 May",
+    "openInterest": "BTC OI cerca de $30B",
+    "funding": "Negativo, aprox. -0.0045",
+    "liquidations24h": "$312M+ (ref. 7 May)",
+    "volatility30d": "Proxy spot BTC 7d: 3.8%",
+    "state": "Constructivo con liderazgo de BTC",
+    "risk": "Moderado - alto",
+    "macro": "Catalizador principal: CPI EEUU del 12 de mayo"
+  },
+  "assets": [
+    {"symbol":"BTC","name":"Bitcoin","price":82013.48,"change24h":0.8,"change7d":1.9,"volume24h":39760400026,"marketCap":1642611430136,"low24h":80520.09,"high24h":82347.7,"rank":1,"momentum":"Estable - alcista","trend":"Lider del tramo","rsi":"N/D","support":80520,"resistance":82348},
+    {"symbol":"ETH","name":"Ethereum","price":2338,"change24h":-1,"change7d":-1.5,"volume24h":17958180737,"marketCap":282571925044,"low24h":2308.74,"high24h":2379.14,"rank":2,"momentum":"Debil frente a BTC","trend":"Presion relativa vs BTC","rsi":"N/D","support":2309,"resistance":2379},
+    {"symbol":"SOL","name":"Solana","price":97.43,"change24h":0.8,"change7d":14.7,"volume24h":5023619785,"marketCap":56309155054,"low24h":94.17,"high24h":97.88,"rank":7,"momentum":"Muy fuerte","trend":"Expansiva","rsi":"N/D","support":94.17,"resistance":97.85},
+    {"symbol":"BNB","name":"BNB","price":662.73,"change24h":0.3,"change7d":5.5,"volume24h":1174788831,"marketCap":89319504642,"low24h":649.89,"high24h":666.08,"rank":5,"momentum":"Firme","trend":"Alcista ordenada","rsi":"N/D","support":649.89,"resistance":666.08},
+    {"symbol":"XRP","name":"XRP","price":1.48,"change24h":-1.6,"change7d":4.9,"volume24h":3416267459,"marketCap":91407431804,"low24h":1.44,"high24h":1.5,"rank":4,"momentum":"Constructivo","trend":"Sesgo alcista tactico","rsi":"N/D","support":1.44,"resistance":1.5},
+    {"symbol":"ADA","name":"Cardano","price":0.281,"change24h":-2.2,"change7d":12.1,"volume24h":544409890,"marketCap":10392858295,"low24h":0.275,"high24h":0.2883,"rank":13,"momentum":"Rebote con volatilidad","trend":"Alcista tactica","rsi":"N/D","support":0.275,"resistance":0.2883},
+    {"symbol":"DOGE","name":"Dogecoin","price":0.111,"change24h":-0.3,"change7d":-0.3,"volume24h":1802573664,"marketCap":17111192829,"low24h":0.1077,"high24h":0.1127,"rank":10,"momentum":"Especulativo","trend":"Institucionalizacion tactica","rsi":"N/D","support":0.1077,"resistance":0.1127}
+  ],
+  "news": [
+    {"title":"Strategy compra 535 BTC tras nuevas senales de Saylor y sostiene el pulso institucional","source":"CoinGecko BTC","time":"11 May 2026 · hace 2h","impact":"Alcista para BTC y sentimiento institucional"},
+    {"title":"Ethereum Foundation unstakea 49.6M USD en ETH para rebalanceo de tesoreria","source":"CoinGecko ETH","time":"11 May 2026 · hace 2h","impact":"Neutro - vigilar oferta tactica"},
+    {"title":"Solana acelera con Alpenglow en community testing y mejora la narrativa tecnica","source":"CoinGecko SOL","time":"11 May 2026 · hace 2h","impact":"Alcista para narrativa tecnica y rendimiento relativo"},
+    {"title":"BNB gana traccion por auditoria de reservas y eventos del 13 de mayo","source":"CoinGecko BNB","time":"11 May 2026 · hace 2h","impact":"Alcista tactico con soporte de confianza de exchange"},
+    {"title":"XRP repunta con la linea de credito de Ripple Prime y mejora del flujo ETF","source":"CoinGecko XRP","time":"11 May 2026 · hace 2h","impact":"Alcista tactico para XRP"},
+    {"title":"Dogecoin entra en el ETF EZPZ de Franklin Templeton y mejora su lectura institucional","source":"CoinGecko DOGE","time":"11 May 2026 · hace 2h","impact":"Catalizador reputacional, aunque sigue siendo beta especulativa"}
+  ],
+  "macroEvents": [
+    {"day":"12 May","event":"IPC y Core CPI de EEUU","impact":"Muy alto","note":"Si la inflacion sorprende al alza, sube el riesgo de presion sobre Nasdaq y cripto."},
+    {"day":"13 May","event":"PPI de EEUU","impact":"Alto","note":"Valida o corrige la lectura del IPC; clave para tipos reales y dolar."},
+    {"day":"14 May","event":"Retail Sales e Import Prices EEUU","impact":"Alto","note":"Mide fortaleza del consumo y sensibilidad del mercado a crecimiento mas inflacion."},
+    {"day":"20 May","event":"Actas FOMC de abril","impact":"Medio - alto","note":"Puede reabrir debate sobre trayectoria de tipos y liquidez de riesgo."}
+  ],
+  "scenarios": [
+    {"label":"Alcista","probability":45,"confidence":"Media","targets":"BTC 84.5k - 86.0k | ETH 2.42k - 2.48k | SOL 101 - 105","risk":"Moderado","levels":"BTC 80.5k soporte / 82.35k ruptura"},
+    {"label":"Neutral","probability":35,"confidence":"Media - alta","targets":"BTC 80.5k - 82.5k | ETH 2.31k - 2.38k | SOL 94 - 98","risk":"Bajo - moderado","levels":"Consolidacion previa a datos macro"},
+    {"label":"Bajista","probability":20,"confidence":"Media","targets":"BTC 79.0k - 80.0k | ETH 2.25k - 2.30k | SOL 90 - 93","risk":"Alto","levels":"Activacion por IPC duro o fortalecimiento del dolar"}
+  ],
+  "signals": [
+    {"asset":"BTC","signal":"Compra solo en ruptura confirmada","confidence":"58%","entry":"82.4k","stop":"80.9k","target":"84.8k","horizon":"24-72h","note":"Condicionada a cierre sobre maximo intradia y continuidad de flujos ETF."},
+    {"asset":"SOL","signal":"Sesgo alcista tactico","confidence":"61%","entry":"98.0","stop":"94.2","target":"102.0","horizon":"24-72h","note":"Es la beta alta del bloque grande; vigilar sobreextension tras +15.8% semanal."},
+    {"asset":"ETH","signal":"Sin alta conviccion","confidence":"46%","entry":"Esperar","stop":"N/A","target":"2.38k primero","horizon":"Corto","note":"Mejor no forzar entrada hasta que recupere liderazgo relativo frente a BTC."}
+  ],
+  "alerts": [
+    "BTC dominance en 58.4% y Altcoin Season Index en 35 mantienen el mercado concentrado; no hay altseason confirmada.",
+    "El bloque macro de 12 a 14 de mayo puede aumentar la volatilidad en cripto y tecnologia.",
+    "El apalancamiento sigue alto segun las ultimas referencias verificables de mercado de derivados.",
+    "ADA y SOL muestran mejor momentum semanal, pero con riesgo de toma de beneficios tactica."
+  ],
+  "sources": [
+    {"name":"CoinGecko Bitcoin","url":"https://www.coingecko.com/en/coins/bitcoin"},
+    {"name":"CoinGecko Ethereum","url":"https://www.coingecko.com/en/coins/ethereum"},
+    {"name":"CoinGecko Solana","url":"https://www.coingecko.com/en/coins/solana"},
+    {"name":"CoinGecko BNB","url":"https://www.coingecko.com/en/coins/bnb"},
+    {"name":"CoinGecko XRP","url":"https://www.coingecko.com/en/coins/xrp"},
+    {"name":"CoinGecko Cardano","url":"https://www.coingecko.com/en/coins/cardano"},
+    {"name":"CoinGecko Dogecoin","url":"https://www.coingecko.com/en/coins/dogecoin"},
+    {"name":"CoinGecko BNB / global snapshot","url":"https://www.coingecko.com/en/coins/bnb"},
+    {"name":"Alternative.me Fear & Greed","url":"https://alternative.me/crypto/fear-and-greed-index/"},
+    {"name":"Altcoin Season Index","url":"https://www.blockchaincenter.net/altcoin-season-index/"},
+    {"name":"Scotiabank release calendar May 2026","url":"https://www.scotiabank.com/ca/en/about/economics/economics-publications/post.other-publications.calendar-of-economic-release-dates.calendar-of-economic-release-dates--may-2026-.html"},
+    {"name":"Westpac economic calendar May 2026","url":"https://library.westpaciq.com.au/content/dam/public/westpaciq/secure/economics/documents/aus/2026/04/Economic_Calendar_May_2026_WBC.pdf"},
+    {"name":"FinanceFeeds ETF inflow recap","url":"https://financefeeds.com/us-spot-bitcoin-etfs-draw-532-million-in-daily-inflows-as-institutional-buying-accelerates/"},
+    {"name":"CryptoRank derivatives note","url":"https://cryptorank.io/news/feed/b7e01-bitcoin-traders-target-90k-amid-surge-in-open-interest"},
+    {"name":"CryptoRank liquidations note","url":"https://cryptorank.io/news/feed/63c69-crypto-futures-liquidations-312-million"}
+  ]
+}
