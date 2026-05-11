@@ -1,0 +1,92 @@
+{
+  "title": "Informe Ejecutivo de Inteligencia Artificial | Corte 16:00",
+  "generated_at": "2026-05-11 16:13:00 CEST",
+  "timezone": "Europe/Madrid",
+  "brand": "MMarco Seguridad",
+  "ecosystem_status": "Aceleracion controlada con foco en seguridad agentic, capacidad y cumplimiento UE",
+  "impact_level": "Alto",
+  "top_findings": [
+    "No se confirma una ruptura competitiva nueva frente al corte de las 12:05 CEST; el cambio real esta en capacidad, herramientas listas para produccion y regulacion mas cercana.",
+    "La prioridad de riesgo sigue en la superficie agentic: Semantic Kernel mantiene dos vulnerabilidades criticas que ejemplifican bien el salto desde plugins inseguros hasta escritura arbitraria y RCE.",
+    "La oportunidad inmediata esta en voz operativa y privacidad de OpenAI, agentes verticales y mas capacidad de Anthropic, y eficiencia de inferencia con NVIDIA Dynamo 1.0.",
+    "La alerta operativa mas cercana es xAI: retirara varios modelos Grok el 15 de mayo de 2026 a las 12:00 PT."
+  ],
+  "kpis": {
+    "high_impact_updates": 7,
+    "critical_vulnerabilities": 2,
+    "immediate_utility_tools": 5,
+    "active_alerts": 3
+  },
+  "news": [
+    {
+      "name": "OpenAI voz + GPT-5.5 Instant + Privacy Filter",
+      "status": "confirmed",
+      "date": "2026-05-05/2026-05-07",
+      "source": "https://openai.com/research/index/release/"
+    },
+    {
+      "name": "Anthropic crea una nueva firma de servicios IA para medianas empresas",
+      "status": "confirmed",
+      "date": "2026-05-04",
+      "source": "https://www.anthropic.com/news/enterprise-ai-services-company"
+    },
+    {
+      "name": "Anthropic sube limites de uso y firma compute con SpaceX",
+      "status": "confirmed",
+      "date": "2026-05-06",
+      "source": "https://www.anthropic.com/news/higher-limits-spacex"
+    },
+    {
+      "name": "La UE simplifica reglas de IA y consulta guia de transparencia",
+      "status": "confirmed",
+      "date": "2026-05-07/2026-05-08",
+      "source": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2026-26030",
+      "product": "Microsoft Semantic Kernel Python SDK",
+      "severity": "critical",
+      "impact": "remote code execution",
+      "patched": "1.39.4+",
+      "source": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    },
+    {
+      "id": "CVE-2026-25592",
+      "product": "Microsoft Semantic Kernel .NET SDK / SessionsPythonPlugin",
+      "severity": "critical",
+      "impact": "arbitrary file write",
+      "patched": "Microsoft.SemanticKernel.Plugins.Core 1.71.0+ and Python 1.39.3+ where applicable",
+      "source": "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4"
+    }
+  ],
+  "active_alerts": [
+    "Migrar integraciones xAI antes del 15 de mayo de 2026.",
+    "Parchear Semantic Kernel Python y .NET de forma inmediata.",
+    "Preparar transparencia AI Act antes del 2 de agosto de 2026."
+  ],
+  "opportunities": [
+    "Pack de auditoria AI Act para bots y asistentes.",
+    "Servicio de hardening para agentes y plugins.",
+    "Pilotos de voz con ROI corto para soporte y atencion."
+  ],
+  "sources": [
+    "https://openai.com/research/index/release/",
+    "https://www.anthropic.com/news/enterprise-ai-services-company",
+    "https://www.anthropic.com/news/higher-limits-spacex",
+    "https://www.anthropic.com/news/finance-agents",
+    "https://www.anthropic.com/news/claude-opus-4-7",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens",
+    "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations",
+    "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx",
+    "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4",
+    "https://docs.x.ai/developers/migration/may-15-retirement",
+    "https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories",
+    "https://huggingface.co/blog/safetensors-joins-pytorch-foundation",
+    "https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026",
+    "https://about.fb.com/news/2026/03/boosting-your-support-and-safety-on-metas-apps-with-ai/",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/io-save-the-date-2026-gemini/"
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
