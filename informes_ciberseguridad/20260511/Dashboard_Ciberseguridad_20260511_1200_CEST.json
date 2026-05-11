@@ -1,1 +1,55 @@
-PLACEHOLDER_JSON
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "edition": "2026-05-11 12:00 CEST",
+  "generated_at": "2026-05-11 09:30:00 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "ai_risk_state": "Elevado",
+  "next_update": "2026-05-11 18:00 CEST",
+  "kpis": {
+    "incidentes_activos": 5,
+    "incidentes_criticos": 3,
+    "vulnerabilidades_nuevas": 4,
+    "cves_criticas": 5,
+    "ransomware_reportado": "Medusa"
+  },
+  "hallazgos_clave": [
+    "Fortinet, Commvault y Linux concentran senales de remediacion inmediata.",
+    "Medusa mantiene ritmo de intrusiones muy rapido sobre activos web expuestos.",
+    "CISA mantiene la prioridad operativa en KEV por encima del CVSS aislado.",
+    "En Espana, phishing y fraude online siguen dominando el volumen reportado por INCIBE."
+  ],
+  "vulnerabilidades_prioritarias": [
+    {"cve": "CVE-2025-31324", "producto": "SAP NetWeaver Visual Composer", "cvss": "9.8 NVD / 10.0 CNA", "estado": "KEV y explotacion activa", "prioridad": "Critica", "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2025-31324"},
+    {"cve": "CVE-2024-55591", "producto": "FortiOS / FortiProxy", "cvss": "9.8", "estado": "KEV y abuso en edge", "prioridad": "Critica", "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"},
+    {"cve": "CVE-2025-24472", "producto": "FortiOS / FortiProxy", "cvss": "8.1", "estado": "KEV y explotacion activa", "prioridad": "Alta", "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2025-24472"},
+    {"cve": "CVE-2025-3928", "producto": "Commvault Web Server", "cvss": "8.8", "estado": "KEV y webshells", "prioridad": "Alta", "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2025-3928"},
+    {"cve": "CVE-2026-31431", "producto": "Linux kernel Copy Fail", "cvss": "7.8 CNA", "estado": "KEV y PoC funcional", "prioridad": "Alta", "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2026-31431"},
+    {"cve": "CVE-2026-23760", "producto": "SmarterMail", "cvss": "9.8", "estado": "KEV y takeover a RCE", "prioridad": "Critica", "fuente": "https://nvd.nist.gov/vuln/detail/CVE-2026-23760"}
+  ],
+  "noticias_relevantes": [
+    {"titulo": "CISA actualiza la actividad contra Commvault Metallic", "fuente": "CISA", "fecha": "2025-05-22", "url": "https://www.cisa.gov/news-events/alerts/2025/05/22/advisory-update-cyber-threat-activity-targeting-commvaults-saas-cloud-application-metallic"},
+    {"titulo": "CISA difunde nueva tecnica post-explotacion en Fortinet", "fuente": "CISA", "fecha": "2025-04-11", "url": "https://www.cisa.gov/news-events/alerts/2025/04/11/fortinet-releases-advisory-new-post-exploitation-technique-known-vulnerabilities"},
+    {"titulo": "Microsoft documenta el ritmo operativo de Storm-1175 / Medusa", "fuente": "Microsoft Security", "fecha": "2026-04-06", "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/"},
+    {"titulo": "Microsoft observa actividad preliminar de explotacion para Copy Fail", "fuente": "Microsoft Security", "fecha": "2026-05-01", "url": "https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/"}
+  ],
+  "recomendacion_ejecutiva_principal": "Priorizar parcheo KEV, hunting en identidad y cloud, revision de edge expuesto y MFA resistente a phishing.",
+  "fuentes_base": [
+    "https://www.cisa.gov/news-events/alerts/2025/05/22/advisory-update-cyber-threat-activity-targeting-commvaults-saas-cloud-application-metallic",
+    "https://www.cisa.gov/news-events/alerts/2025/04/11/fortinet-releases-advisory-new-post-exploitation-technique-known-vulnerabilities",
+    "https://nvd.nist.gov/vuln/detail/CVE-2025-31324",
+    "https://nvd.nist.gov/vuln/detail/CVE-2024-55591",
+    "https://nvd.nist.gov/vuln/detail/CVE-2025-24472",
+    "https://nvd.nist.gov/vuln/detail/CVE-2025-3928",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-23760",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
+    "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert.html",
+    "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf",
+    "https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp"
+  ],
+  "notes": [
+    "Los KPIs representan una muestra priorizada y verificada para este corte operativo.",
+    "Los elementos predictivos se han aislado en la seccion IA del informe completo."
+  ]
+}
