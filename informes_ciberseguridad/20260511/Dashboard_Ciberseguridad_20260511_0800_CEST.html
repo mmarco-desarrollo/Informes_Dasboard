@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | 11/05/2026 08:00 CEST</title>
+  <style>
+    :root{color-scheme:dark;--bg:#06101c;--panel:#0b1628;--line:#17314f;--text:#eaf3fc;--muted:#8ea5c0;--cyan:#74f1ff;--red:#ff6a7d;--amber:#ffbe67;--green:#8be7a1}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,rgba(58,160,255,.12),transparent 28%),radial-gradient(circle at bottom right,rgba(255,92,116,.10),transparent 30%),linear-gradient(180deg,#06101c 0%,#03070e 100%);color:var(--text);font-family:Arial,sans-serif;padding:24px}a{color:#9befff}.wrap{max-width:1180px;margin:0 auto}.hero,.panel{background:rgba(8,18,31,.82);border:1px solid rgba(116,241,255,.08);border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.28)}.hero{padding:24px;margin-bottom:18px}.row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px}.k{font-size:13px;color:var(--muted);margin-bottom:8px}.v{font-size:28px;font-weight:800}.panel{padding:22px;margin-bottom:18px}.cols{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}.pill{display:inline-block;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700}.crit{background:var(--red);color:#fff}.high{background:var(--amber);color:#07111f}.ok{background:var(--green);color:#07111f}h1,h2,p,ul{margin:0 0 12px}h1{font-size:30px}h2{font-size:22px;color:var(--cyan)}p,li{line-height:1.55;color:#dbe8f5}.muted{color:var(--muted)}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px 12px;border-bottom:1px solid #132a42;text-align:left;vertical-align:top}th{color:#aee9ff;font-size:12px;background:#10223a}@media (max-width:900px){body{padding:12px}.row,.cols{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start">
+      <div>
+        <div style="font-size:30px;font-weight:800">MMarco Seguridad</div>
+        <div style="font-size:22px;color:#9ec3ff;margin-top:6px">Informe Ejecutivo de Ciberseguridad</div>
+        <div class="muted" style="margin-top:8px">Edicion 11/05/2026 08:00 CEST | Fuentes verificadas hasta 11/05/2026 11:08 CEST | Europe/Madrid</div>
+      </div>
+      <div>
+        <span class="pill crit">Nivel ALTO</span>
+        <span class="pill" style="background:#8df4ff;color:#07111f">IA ELEVADO</span>
+      </div>
+    </div>
+    <p style="margin-top:18px">El riesgo operativo sigue en nivel alto por la coincidencia de CVEs criticas expuestas a Internet, referencias KEV y un incidente SaaS confirmado con impacto operativo.</p>
+  </section>
+
+  <section class="row">
+    <div class="card"><div class="k">Incidentes activos</div><div class="v">1</div><div class="muted">confirmado en fuentes revisadas</div></div>
+    <div class="card"><div class="k">Vulnerabilidades nuevas</div><div class="v">20</div><div class="muted">muestra oficial 5-7 mayo</div></div>
+    <div class="card"><div class="k">CVEs criticas</div><div class="v">5</div><div class="muted">muestra priorizada</div></div>
+    <div class="card"><div class="k">Campanas phishing</div><div class="v">2</div><div class="muted">avisos INCIBE</div></div>
+  </section>
+
+  <section class="cols">
+    <div class="panel">
+      <h2>Resumen ejecutivo</h2>
+      <ul>
+        <li>Las prioridades tecnicas inmediatas son PAN-OS User-ID Portal, Nginx-UI, Cisco Unified Communications, MOVEit Automation, Trivy y Tanzu.</li>
+        <li>Instructure comunico un incidente de seguridad en Canvas, con rotacion de credenciales y llaves y afectacion a datos identificativos y mensajes.</li>
+        <li>La muestra revisada concentra riesgo en perimetro, aplicaciones web de administracion, transferencia gestionada de ficheros y CI/CD.</li>
+        <li>La recomendacion principal es acortar la ventana de parcheo, revisar identidad privilegiada y rotar secretos de automatizacion.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>Alertas activas</h2>
+      <ul>
+        <li>Palo Alto CVE-2026-0300: en KEV, con mitigacion inmediata sobre User-ID Authentication Portal.</li>
+        <li>Cisco CVE-2026-20045 y Trivy CVE-2026-33634: prioridad KEV por impacto remoto y riesgo de cadena de suministro.</li>
+        <li>Nginx-UI CVE-2026-42238: RCE no autenticada antes de la version 2.3.8.</li>
+        <li>Android CVE-2026-0073: revisar flotas sin parche 2026-05-01.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Vulnerabilidades criticas</h2>
+    <table>
+      <thead><tr><th>CVE</th><th>Producto</th><th>Severidad</th><th>Estado</th><th>Accion</th></tr></thead>
+      <tbody>
+        <tr><td>CVE-2026-0300</td><td>Palo Alto PAN-OS User-ID Portal</td><td>Critica</td><td>KEV / explotacion confirmada</td><td>Mitigar ya; parche por rama</td></tr>
+        <tr><td>CVE-2026-42238</td><td>Nginx-UI</td><td>Critica</td><td>Exploit publico</td><td>Actualizar a 2.3.8</td></tr>
+        <tr><td>CVE-2026-4670</td><td>MOVEit Automation</td><td>Critica</td><td>No confirmada</td><td>Actualizar 2025.1.5/2025.0.9/2024.1.8</td></tr>
+        <tr><td>CVE-2026-20045</td><td>Cisco Unified Communications</td><td>Critica</td><td>KEV</td><td>Parche / mitigacion fabricante</td></tr>
+        <tr><td>CVE-2026-33634</td><td>Trivy</td><td>Critica</td><td>KEV</td><td>Rotar secretos y fijar SHA</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2>Fuentes principales</h2>
+    <ul>
+      <li><a href="https://status.instructure.com/">Instructure Status</a> <span class="muted">incidente confirmado entre el 1 y el 7 de mayo de 2026</span></li>
+      <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">NVD CVE-2026-0300</a> <span class="muted">PAN-OS User-ID Portal, CVSS 9.8 y entrada KEV</span></li>
+      <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20045">NVD CVE-2026-20045</a> <span class="muted">Cisco Unified Communications</span></li>
+      <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33634">NVD CVE-2026-33634</a> <span class="muted">supply chain compromise en Trivy</span></li>
+      <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-remoto-en-nginx-ui-de-nginx">INCIBE - Nginx-UI</a> <span class="muted">aviso critico del 07/05/2026</span></li>
+      <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto">INCIBE - Palo Alto</a> <span class="muted">aviso critico del 06/05/2026</span></li>
+      <li><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">Android Security Bulletin May 2026</a> <span class="muted">CVE-2026-0073</span></li>
+      <li><a href="https://www.enisa.europa.eu/news/consult-the-european-vulnerability-database-to-enhance-your-digital-security">ENISA - EUVD</a> <span class="muted">trazabilidad de mitigaciones y explotacion</span></li>
+    </ul>
+  </section>
+
+  <section class="panel" style="font-size:12px;color:#8198b2">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</section>
+</div>
+</body>
+</html>
