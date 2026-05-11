@@ -1,0 +1,407 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo Premium de Inteligencia Artificial | Edicion 12:00",
+  "generated_at": "2026-05-11 09:12:01 CEST",
+  "timezone": "Europe/Madrid",
+  "effective_cutoff": "2026-05-11 09:12:01 CEST",
+  "previous_run": "2026-05-11 00:14 CEST",
+  "impact_level": "Alto",
+  "ecosystem_status": "Expansion util con presion creciente en seguridad agentic y cumplimiento",
+  "next_update": "Segun la siguiente programacion operativa del radar",
+  "corporate_profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+  "kpis": [
+    {
+      "label": "Cambios netos confirmados",
+      "value": "4",
+      "note": "elementos priorizados frente al corte nocturno"
+    },
+    {
+      "label": "Alertas criticas activas",
+      "value": "2",
+      "note": "CVE-2026-25592 y CVE-2026-26030 en Semantic Kernel"
+    },
+    {
+      "label": "Ventana operativa urgente",
+      "value": "4 dias",
+      "note": "retiro de modelos Grok el 15 de mayo de 2026"
+    },
+    {
+      "label": "Oportunidades accionables",
+      "value": "3",
+      "note": "voz, investigacion profunda y research financiero"
+    }
+  ],
+  "executive_summary": [
+    "No aparecen lanzamientos de primer nivel publicados despues del informe de las 00:14 CEST que cambien el equilibrio competitivo de forma brusca; el valor de este corte esta en confirmar continuidad y repriorizar.",
+    "La senal que mas gana peso operativo es la seguridad agentic: Microsoft mantiene dos vulnerabilidades criticas en Semantic Kernel como referencia de riesgo real y OpenAI refuerza el discurso de sandboxing, aprobaciones y telemetria para agentes de codigo.",
+    "La novedad regulatoria que sube prioridad es la consulta de la Comision Europea sobre las obligaciones de transparencia del AI Act, publicada el 8 de mayo de 2026, con impacto practico para contenidos sinteticos, bots conversacionales y deepfakes de cara al 2 de agosto de 2026.",
+    "En utilidad inmediata, siguen destacando tres bloques con recorrido comercial para MMarco Seguridad: voz operativa en OpenAI, investigacion autonoma con MCP en Google Deep Research Max y busqueda financiera estructurada en el Agent API de Perplexity."
+  ],
+  "activity_evolution": [
+    {
+      "title": "Seguridad agentic",
+      "delta": "+ prioridad",
+      "detail": "Sube por la combinacion de CVE criticas explotables por prompt injection y nuevas practicas de gobierno operativo en agentes de codigo."
+    },
+    {
+      "title": "Regulacion UE",
+      "delta": "+ claridad",
+      "detail": "La Comision abre consulta de obligaciones de transparencia y sostiene calendario absoluto del 2 de agosto de 2026 para obligaciones generales."
+    },
+    {
+      "title": "Herramientas de utilidad directa",
+      "delta": "= continuidad",
+      "detail": "Se mantiene la traccion de voz, deep research y conectores profesionales como bloque mas monetizable para consultoria y automatizacion."
+    },
+    {
+      "title": "Open source y supply chain",
+      "delta": "+ madurez",
+      "detail": "Safetensors gana neutralidad institucional dentro de PyTorch Foundation; Mistral 3 consolida el argumento open multimodal con licencia Apache 2.0."
+    }
+  ],
+  "global_view": [
+    {
+      "region": "EE. UU.",
+      "signal": "Maxima densidad de lanzamientos y de incidentes relevantes en seguridad agentic.",
+      "status": "Alta actividad"
+    },
+    {
+      "region": "UE",
+      "signal": "Pasa de discurso general a aterrizaje practico de transparencia y etiquetado.",
+      "status": "Alta atencion regulatoria"
+    },
+    {
+      "region": "Open source global",
+      "signal": "Modelos abiertos y formatos seguros ganan peso como via de despliegue controlado.",
+      "status": "Crecimiento sostenido"
+    }
+  ],
+  "featured_news": [
+    {
+      "name": "OpenAI detalla el gobierno operativo de Codex",
+      "category": "Seguridad / agentes",
+      "date": "2026-05-08",
+      "impact": "Alto",
+      "utility_or_risk": "Fija el estandar de sandboxing, aprobaciones, control de red y logs para despliegues enterprise.",
+      "quick_take": "Buena referencia para propuestas de seguridad en agentes internos y auditoria.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/running-codex-safely/",
+      "status": "hecho confirmado"
+    },
+    {
+      "name": "La Comision Europea abre consulta sobre obligaciones de transparencia del AI Act",
+      "category": "Regulacion",
+      "date": "2026-05-08",
+      "impact": "Alto",
+      "utility_or_risk": "Afecta a etiquetado de contenidos generados, interaccion con bots y deepfakes antes del 2 de agosto de 2026.",
+      "quick_take": "Relevante para clientes que publiquen contenido sintetico o asistentes conversacionales.",
+      "source": "Comision Europea",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations",
+      "status": "hecho confirmado"
+    },
+    {
+      "name": "xAI confirma retirada de varios modelos Grok el 15 de mayo de 2026",
+      "category": "Model lifecycle",
+      "date": "2026-05-06",
+      "impact": "Media-Alta",
+      "utility_or_risk": "Riesgo inmediato de rotura para integraciones API heredadas.",
+      "quick_take": "Conviene inventariar dependencias y migrar antes del 15 de mayo de 2026 a las 12:00 PT.",
+      "source": "xAI Docs",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "status": "hecho confirmado"
+    }
+  ],
+  "recent_models": [
+    {
+      "name": "GPT-Realtime-2",
+      "company": "OpenAI",
+      "type": "voz en tiempo real",
+      "capabilities": "razonamiento de clase GPT-5 en conversaciones de voz y uso de herramientas",
+      "multimodality": "voz",
+      "license": "API propietaria",
+      "use_cases": "soporte, traduccion en vivo, agentes telefonicos, automatizacion asistida",
+      "estimated_impact": "Alto",
+      "source": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "company": "Anthropic",
+      "type": "LLM frontier",
+      "capabilities": "mejor vision, tareas profesionales, automaciones y flujos async",
+      "multimodality": "texto e imagen",
+      "license": "API propietaria",
+      "use_cases": "desarrollo, analisis, operaciones con mayor profundidad",
+      "estimated_impact": "Alto",
+      "source": "https://www.anthropic.com/news/claude-opus-4-7?fp=1"
+    },
+    {
+      "name": "Mistral 3 / Mistral Large 3",
+      "company": "Mistral AI",
+      "type": "open-weight multimodal",
+      "capabilities": "multilingue, multimodal, despliegue edge y datacenter, checkpoints optimizados",
+      "multimodality": "texto e imagen",
+      "license": "Apache 2.0",
+      "use_cases": "proyectos on-prem, soberania tecnica, pilotos open",
+      "estimated_impact": "Alta utilidad",
+      "source": "https://mistral.ai/news/mistral-3"
+    }
+  ],
+  "standout_tools": [
+    {
+      "name": "Deep Research Max",
+      "source_name": "Google",
+      "date": "2026-04-21",
+      "category": "research agent",
+      "impact": "Alto",
+      "utility": "Conecta MCP, datos propios y visualizaciones nativas para informes complejos.",
+      "recommendation": "Evaluar como patron para ofertas de analisis automatizado y due diligence.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/"
+    },
+    {
+      "name": "Finance Search en Agent API",
+      "source_name": "Perplexity",
+      "date": "2026-05-06",
+      "category": "research financiero",
+      "impact": "Media-Alta",
+      "utility": "Extrae datos estructurados de mercados y earnings en un mismo flujo de investigacion.",
+      "recommendation": "Util para servicios de inteligencia competitiva y vigilancia sectorial con fuentes citadas.",
+      "url": "https://docs.perplexity.ai/docs/agent-api/finance-search"
+    },
+    {
+      "name": "Safetensors bajo PyTorch Foundation",
+      "source_name": "Hugging Face",
+      "date": "2026-04-08",
+      "category": "supply chain seguro",
+      "impact": "Media",
+      "utility": "Refuerza formato seguro y gobernanza neutral para distribucion de modelos.",
+      "recommendation": "Adoptar como baseline para pipelines de intercambio de pesos.",
+      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "microsoft/semantic-kernel",
+      "source_name": "GitHub Advisory + Microsoft Security",
+      "popularity": "27k+ estrellas segun Microsoft Security Blog",
+      "language": "multilenguaje",
+      "description": "Framework de agentes y orquestacion con exposicion real a prompt injection y RCE si no esta parcheado.",
+      "use_cases": "agentes, plugins, chaining",
+      "utility_level": "Alta",
+      "risks": "Actualizar a versiones corregidas y revisar uso de plugins/herramientas locales.",
+      "url": "https://github.com/microsoft/semantic-kernel"
+    },
+    {
+      "name": "safetensors",
+      "source_name": "Hugging Face / PyTorch Foundation",
+      "popularity": "adopcion amplia en el ecosistema open",
+      "language": "Rust / Python bindings",
+      "description": "Formato seguro para pesos de modelos sin ejecucion arbitraria de codigo.",
+      "use_cases": "intercambio de modelos, pipelines MLOps, repositorios internos",
+      "utility_level": "Alta",
+      "risks": "Bajo; mejora supply chain frente a formatos basados en pickle.",
+      "url": "https://huggingface.co/docs/safetensors/main/index"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Prompt injection hacia RCE en agentes Semantic Kernel",
+      "source_name": "Microsoft Security Blog",
+      "date": "2026-05-07",
+      "category": "Incidente tecnico / exposicion agentic",
+      "severity": "Critica",
+      "risk_or_utility": "Eleva el riesgo de pasar de manipulacion semantica a ejecucion en host.",
+      "recommendation": "Asumir que tool calling y plugins locales requieren aislamiento fuerte y revision humana.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+      "status": "hecho confirmado"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2026-26030 / GHSA-xjw9-4gw8-4rqx",
+      "product": "Microsoft Semantic Kernel Python SDK",
+      "severity": "Critica 9.9",
+      "exploitation": "No se afirma explotacion masiva en la fuente revisada; si existe vector de prompt injection, el impacto puede ser RCE.",
+      "impact": "Riesgo de ejecucion remota desde filtros de InMemoryVectorStore.",
+      "mitigation": "Actualizar a 1.39.4 o superior y evitar InMemoryVectorStore en produccion.",
+      "priority": "Critica",
+      "url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    },
+    {
+      "id": "CVE-2026-25592",
+      "product": "Microsoft Semantic Kernel",
+      "severity": "Critica",
+      "exploitation": "Relacionada con escritura arbitraria de archivos segun Microsoft Security Blog.",
+      "impact": "Amplia la superficie de compromiso de agentes con herramientas locales.",
+      "mitigation": "Parchear, revisar permisos de ejecucion y reducir herramientas con acceso al sistema.",
+      "priority": "Critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    }
+  ],
+  "trends_and_radar": [
+    "Los agentes utiles ya no se miden solo por calidad de modelo; se miden por conectores, permisos, trazabilidad y capacidad de contencion.",
+    "La voz pasa de experiencia de usuario a canal operativo completo: comprension, traduccion, transcripcion y tool calling simultaneo.",
+    "El open source entra en fase mas empresarial: modelos abiertos con soporte acelerado por NVIDIA y formatos mas seguros para supply chain.",
+    "La regulacion europea pasa de marco abstracto a checklist practico para transparencia, etiquetado y publicacion responsable."
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "title": "Auditoria de seguridad para agentes y copilotos",
+      "detail": "Posicionar un servicio para revisar sandboxing, aprobaciones, conectores, MCP y permisos de herramientas en agentes empresariales."
+    },
+    {
+      "priority": "Alta",
+      "title": "Monitorizacion sectorial automatizada con research agents",
+      "detail": "Combinar Deep Research Max, Perplexity Finance Search y dashboards HTML premium para inteligencia competitiva recurrente."
+    },
+    {
+      "priority": "Media",
+      "title": "Pilotos on-prem con modelos abiertos",
+      "detail": "Explorar Mistral 3 y safetensors como base para despliegues de soberania y privacidad reforzada."
+    }
+  ],
+  "active_alerts": [
+    {
+      "level": "Critica",
+      "title": "Agentes con Semantic Kernel sin parchear",
+      "detail": "Prioridad maxima si hay prototipos o servicios con plugins locales, vector stores en memoria o ejecucion de herramientas."
+    },
+    {
+      "level": "Alta",
+      "title": "Migraciones pendientes de xAI",
+      "detail": "Quedan pocos dias para el retiro del 15 de mayo de 2026; revisar dependencias de Grok antes del corte."
+    },
+    {
+      "level": "Alta",
+      "title": "Transparencia y etiquetado de contenido sintetico",
+      "detail": "Clientes con chatbots, avatares, publicaciones generadas o deepfakes deben prepararse ya para el AI Act."
+    }
+  ],
+  "executive_recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Lanzar revision de agentes con tool calling",
+      "detail": "Inventariar frameworks, plugins, MCP, permisos de shell, accesos a red y registro de acciones."
+    },
+    {
+      "priority": "Alta",
+      "title": "Preparar paquete de cumplimiento AI Act para transparencia",
+      "detail": "Definir etiquetado de contenido generado, avisos de interaccion con IA y marcas detectables donde aplique."
+    },
+    {
+      "priority": "Alta",
+      "title": "Diseñar oferta comercial de voice + automation",
+      "detail": "Aprovechar GPT-Realtime-2 y Whisper streaming para soporte, recepcion inteligente y traduccion operativa."
+    },
+    {
+      "priority": "Media",
+      "title": "Estandarizar safetensors y revisiones de supply chain",
+      "detail": "Reducir riesgo operativo en flujos de intercambio de modelos y fine-tuning."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-05-15 12:00 PT",
+      "event": "Retiro de varios modelos Grok en xAI API",
+      "importance": "Alta"
+    },
+    {
+      "date": "2026-06-03",
+      "event": "Cierre de feedback de la consulta UE sobre transparencia AI Act",
+      "importance": "Alta"
+    },
+    {
+      "date": "2026-08-02",
+      "event": "Aplicacion general del AI Act con obligaciones clave de transparencia",
+      "importance": "Critica"
+    }
+  ],
+  "delivery_notes": {
+    "pdf_status": "No generado",
+    "pdf_note": "No se verifico una ruta de exportacion fiel al dashboard HTML dentro de esta ejecucion.",
+    "drive_status": "No materializado",
+    "drive_note": "En esta ejecucion no se ha validado una subida verificable de PDF o HTML a Google Drive como destino final.",
+    "email_status": "Preparar borrador HTML con enlaces reales a GitHub y sin adjunto PDF al no existir un PDF fiel."
+  },
+  "sources": [
+    {
+      "title": "Running Codex safely at OpenAI",
+      "publisher": "OpenAI",
+      "date": "2026-05-08",
+      "url": "https://openai.com/index/running-codex-safely/"
+    },
+    {
+      "title": "Advancing voice intelligence with new models in the API",
+      "publisher": "OpenAI",
+      "date": "2026-05-07",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
+      "publisher": "Microsoft Security Blog",
+      "date": "2026-05-07",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "title": "GHSA-xjw9-4gw8-4rqx / CVE-2026-26030",
+      "publisher": "GitHub Advisory Database",
+      "date": "2026-02-19",
+      "url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    },
+    {
+      "title": "Introducing Deep Research and Deep Research Max",
+      "publisher": "Google",
+      "date": "2026-04-21",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/"
+    },
+    {
+      "title": "Introducing Claude Opus 4.7",
+      "publisher": "Anthropic",
+      "date": "2026-04-17",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7?fp=1"
+    },
+    {
+      "title": "Introducing Mistral 3",
+      "publisher": "Mistral AI",
+      "date": "2026-04-24",
+      "url": "https://mistral.ai/news/mistral-3"
+    },
+    {
+      "title": "NVIDIA Enters Production With Dynamo 1.0",
+      "publisher": "NVIDIA",
+      "date": "2026-04-10",
+      "url": "https://nvidianews.nvidia.com/news/dynamo-1-0"
+    },
+    {
+      "title": "Safetensors is Joining the PyTorch Foundation",
+      "publisher": "Hugging Face",
+      "date": "2026-04-08",
+      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    },
+    {
+      "title": "Grok Model Retirement on May 15, 2026",
+      "publisher": "xAI Docs",
+      "date": "2026-05-06",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "title": "Perplexity Hub / Introducing Finance Search in the Agent API",
+      "publisher": "Perplexity",
+      "date": "2026-05-06",
+      "url": "https://docs.perplexity.ai/docs/agent-api/finance-search"
+    },
+    {
+      "title": "Commission opens consultation on draft guidelines for AI transparency obligations",
+      "publisher": "European Commission",
+      "date": "2026-05-08",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+    },
+    {
+      "title": "EU agrees to simplify AI rules to boost innovation and ban nudification apps",
+      "publisher": "European Commission",
+      "date": "2026-05-07",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
