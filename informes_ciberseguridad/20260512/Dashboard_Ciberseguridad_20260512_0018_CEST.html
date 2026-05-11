@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>MMarco Seguridad | Informe Ejecutivo de Ciberseguridad | 2026-05-12 00:18 CEST</title>
+  <style>
+    :root{--bg:#07111a;--panel:#0d1a27;--panel2:#102131;--line:rgba(146,167,190,.18);--text:#e7f0fa;--muted:#9db0c3;--accent:#54cbff;--ok:#6de1b0;--warn:#ffbc5e;--crit:#ff637c}
+    *{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#050b12,#08121b 40%,#09131e);color:var(--text)}
+    .wrap{max-width:1180px;margin:0 auto;padding:24px 18px 40px}.hero,.panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+    .hero{padding:24px}.brand{display:inline-block;padding:8px 12px;border:1px solid rgba(84,203,255,.22);border-radius:999px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    h1{margin:16px 0 10px;font-size:clamp(30px,5vw,46px);line-height:1.04;max-width:13ch}p,li{line-height:1.6}a{color:#9fdfff;text-decoration:none}a:hover{text-decoration:underline}
+    .hero-grid,.cols,.kpis{display:grid;gap:16px}.hero-grid{grid-template-columns:1.5fr .9fr}.kpis{grid-template-columns:repeat(5,minmax(0,1fr));margin-top:16px}.cols{grid-template-columns:1.15fr .85fr;margin-top:18px}
+    .side,.kpi,.panel{padding:18px}.side,.kpi{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.stat{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0;padding-bottom:0}
+    .label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.metric{font-size:30px;font-weight:800}.note{color:var(--muted);font-size:13px}.pill{display:inline-block;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+    .high{background:rgba(255,99,124,.14);color:#ffd8df}.medium{background:rgba(255,188,94,.14);color:#ffe6bb}.signal{background:rgba(84,203,255,.12);color:#d8f6ff}
+    .cards{display:grid;gap:12px}.card{padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px 8px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.08)}th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+    .sources{display:grid;gap:8px}.footer{margin-top:16px;color:var(--muted);font-size:12px}.bars{display:grid;gap:12px}.bar span{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted)}.track{margin-top:6px;height:10px;border-radius:999px;background:rgba(255,255,255,.07);overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--ok))}
+    @media(max-width:980px){.hero-grid,.cols,.kpis{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class='wrap'>
+    <section class='hero'>
+      <div class='brand'>MMarco Seguridad | Informe nocturno</div>
+      <div class='hero-grid'>
+        <div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p>El nivel global de amenaza se mantiene en <strong>ALTO</strong>. La prioridad operativa inmediata esta en perimetro, MDM y movilidad: PAN-OS, Ivanti EPMM, Fortinet con FortiCloud SSO habilitado y dispositivos Android sin el parche mensual.</p>
+        </div>
+        <div class='side'>
+          <div class='stat'><div class='label'>Fecha y hora</div><div>2026-05-12 00:18:18 CEST</div></div>
+          <div class='stat'><div class='label'>Nivel global</div><div><span class='pill high'>Amenaza alta</span></div></div>
+          <div class='stat'><div class='label'>Proxima actualizacion</div><div>2026-05-12 08:00 CEST</div></div>
+          <div class='stat'><div class='label'>Estado IA</div><div><span class='pill signal'>Vigilancia reforzada</span></div></div>
+        </div>
+      </div>
+      <div class='kpis'>
+        <div class='kpi'><div class='label'>Alertas priorizadas</div><div class='metric'>5</div><div class='note'>Seleccion ejecutiva de esta edicion.</div></div>
+        <div class='kpi'><div class='label'>KEV recientes</div><div class='metric'>3</div><div class='note'>PAN-OS, Ivanti y referencias activas.</div></div>
+        <div class='kpi'><div class='label'>CVEs prioritarias</div><div class='metric'>5</div><div class='note'>Perimetro, MDM y Android.</div></div>
+        <div class='kpi'><div class='label'>Exposicion Espana</div><div class='metric'>Alta</div><div class='note'>Pymes, MSP, industria y BYOD.</div></div>
+        <div class='kpi'><div class='label'>Tendencia 24h</div><div class='metric'>Sostenida</div><div class='note'>Presion continua sobre edge y movilidad.</div></div>
+      </div>
+    </section>
+
+    <section class='cols'>
+      <article class='panel'>
+        <h2>Resumen ejecutivo</h2>
+        <p>La urgencia se concentra en dos entradas KEV muy recientes: <strong>CVE-2026-0300</strong> en Palo Alto PAN-OS y <strong>CVE-2026-6973</strong> en Ivanti EPMM. Sigue tambien en maxima prioridad <strong>CVE-2026-24858</strong> en productos Fortinet con FortiCloud SSO habilitado. En movilidad, Google publico el boletin Android de mayo 2026 con <strong>CVE-2026-0073</strong>, critica, mitigable con el nivel de parche 2026-05-01 o posterior.</p>
+        <ul>
+          <li>Mayor riesgo operativo: firewalls expuestos, MDM y dispositivos moviles corporativos.</li>
+          <li>Impacto mas probable: acceso inicial remoto, abuso de privilegios y movimiento lateral.</li>
+          <li>Riesgo especifico para Espana: alta presencia de Fortinet, Palo Alto e Ivanti en pymes y entornos distribuidos.</li>
+          <li>Recomendacion principal: parchear hoy, reducir superficie expuesta y revisar logs de acceso y administracion.</li>
+        </ul>
+        <h2>Alertas activas</h2>
+        <div class='cards'>
+          <div class='card'><strong>PAN-OS</strong> <span class='pill high'>Hecho confirmado</span><br>CVE-2026-0300 entro en KEV el 2026-05-06. Permite RCE no autenticada con privilegios root en PA-Series y VM-Series. Mitigacion inmediata: restringir o deshabilitar User-ID Authentication Portal si no es imprescindible.</div>
+          <div class='card'><strong>Ivanti EPMM</strong> <span class='pill high'>Hecho confirmado</span><br>CVE-2026-6973 entro en KEV el 2026-05-07. Actualizar a 12.6.1.1, 12.7.0.1 o 12.8.0.1 segun rama.</div>
+          <div class='card'><strong>Android</strong> <span class='pill medium'>Hecho confirmado</span><br>Boletin del 2026-05-04 con CVE-2026-0073 critica. Exigir parche 2026-05-01 o posterior en BYOD y flotas corporativas.</div>
+          <div class='card'><strong>Fortinet</strong> <span class='pill high'>Hecho confirmado</span><br>CVE-2026-24858 sigue siendo referencia critica si FortiCloud SSO sigue habilitado sin remediacion cerrada.</div>
+          <div class='card'><strong>Senal monitorizada</strong> <span class='pill signal'>INCIBE</span><br>INCIBE mantiene seguimiento sobre automatizacion ofensiva con IA contra FortiGate, sin nueva oleada de la intensidad inicial reportada.</div>
+        </div>
+      </article>
+
+      <aside class='panel'>
+        <h2>Exposicion prioritaria</h2>
+        <div class='bars'>
+          <div class='bar'><span><b>Firewalls y borde</b><b>95/100</b></span><div class='track'><div class='fill' style='width:95%'></div></div></div>
+          <div class='bar'><span><b>MDM y movilidad</b><b>86/100</b></span><div class='track'><div class='fill' style='width:86%'></div></div></div>
+          <div class='bar'><span><b>Android corporativo / BYOD</b><b>78/100</b></span><div class='track'><div class='fill' style='width:78%'></div></div></div>
+          <div class='bar'><span><b>Infraestructura critica / NIS2</b><b>84/100</b></span><div class='track'><div class='fill' style='width:84%'></div></div></div>
+        </div>
+        <p class='note'>Estimacion analitica derivada del peso de las tecnologias afectadas y de la actividad KEV revisada.</p>
+        <h2>Recomendaciones ejecutivas</h2>
+        <ul>
+          <li><strong>Critica:</strong> validar exposicion a PAN-OS CVE-2026-0300 e Ivanti EPMM antes de primera hora.</li>
+          <li><strong>Critica:</strong> inventariar activos Fortinet con FortiCloud SSO y confirmar remediacion cerrada.</li>
+          <li><strong>Alta:</strong> forzar parche Android 2026-05-01 o superior en dispositivos con acceso empresarial.</li>
+          <li><strong>Alta:</strong> reducir superficie expuesta de consolas y portales de autenticacion.</li>
+        </ul>
+        <h2>Seccion IA</h2>
+        <p class='note'>Analisis predictivo / estimativo</p>
+        <p>Durante las proximas 24-72 horas se mantiene una <strong>probabilidad alta</strong> de escaneo y explotacion oportunista sobre PAN-OS, EPMM y entornos Fortinet expuestos.</p>
+      </aside>
+    </section>
+
+    <section class='panel' style='margin-top:18px'>
+      <h2>Vulnerabilidades criticas priorizadas</h2>
+      <table>
+        <thead><tr><th>CVE</th><th>Producto</th><th>CVSS</th><th>Explotacion</th><th>Parche / mitigacion</th><th>Prioridad</th></tr></thead>
+        <tbody>
+          <tr><td>CVE-2026-0300</td><td>Palo Alto PAN-OS User-ID Authentication Portal</td><td>9.8 / Critica</td><td>KEV desde 2026-05-06</td><td>Mitigar y restringir o deshabilitar portal si no es necesario</td><td>Critica</td></tr>
+          <tr><td>CVE-2026-6973</td><td>Ivanti EPMM</td><td>7.2 / Alta</td><td>KEV desde 2026-05-07</td><td>Actualizar a 12.6.1.1, 12.7.0.1 o 12.8.0.1</td><td>Critica</td></tr>
+          <tr><td>CVE-2026-24858</td><td>Fortinet multiples productos con FortiCloud SSO</td><td>9.8 / Critica</td><td>KEV desde 2026-01-27</td><td>Actualizar y revisar SSO de FortiCloud</td><td>Critica</td></tr>
+          <tr><td>CVE-2026-1281</td><td>Ivanti EPMM</td><td>9.8 / Critica</td><td>Explotacion activa reportada; KEV desde 2026-01-29</td><td>Aplicar RPM de mitigacion / actualizacion de Ivanti</td><td>Critica</td></tr>
+          <tr><td>CVE-2026-0073</td><td>Android System / adbd</td><td>Critica / Google</td><td>Boletin oficial 2026-05-04</td><td>Parche Android 2026-05-01 o superior</td><td>Alta</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class='panel' style='margin-top:18px'>
+      <h2>Fuentes principales</h2>
+      <div class='sources'>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2026-0300'>NVD - CVE-2026-0300</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2026-6973'>NVD - CVE-2026-6973</a>
+        <a href='https://nvd.nist.gov/vuln/detail/CVE-2026-24858'>NVD - CVE-2026-24858</a>
+        <a href='https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2026-1281'>INCIBE - CVE-2026-1281</a>
+        <a href='https://source.android.com/docs/security/bulletin/2026/2026-05-01'>Android Security Bulletin - May 2026</a>
+        <a href='https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html'>CCN-CERT - FortiCloud SSO</a>
+        <a href='https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/cyberstrikeai-uses-artificial-intelligence-launch-automated-attacks-against'>INCIBE - CyberStrikeAI y Fortinet</a>
+      </div>
+      <div class='footer'>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</div>
+    </section>
+  </div>
+</body>
+</html>
