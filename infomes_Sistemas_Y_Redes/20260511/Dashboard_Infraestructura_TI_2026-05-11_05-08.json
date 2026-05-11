@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "generated_at_utc": "2026-05-11T03:08:53.361948+00:00",
+    "generated_at_madrid": "2026-05-11T05:08:53.361948+02:00",
+    "date_label": "2026-05-11",
+    "time_label": "05:08",
+    "timezone": "Europe/Madrid",
+    "hostname": "ce227901f1f9",
+    "report_type": "Informe Ejecutivo Premium de Infraestructura TI",
+    "next_execution": "No disponible en la telemetria de esta corrida"
+  },
+  "sources": {
+    "real_data_scope": "metrica del entorno de ejecucion actual",
+    "commands": [
+      "nproc",
+      "free -m",
+      "df -B1 / /workspace",
+      "uptime -p",
+      "cat /proc/loadavg",
+      "ip -brief address",
+      "ip route",
+      "cat /proc/net/dev",
+      "ss -tulpen",
+      "cat /etc/resolv.conf",
+      "apt list --upgradable",
+      "ps -eo pid,comm,%cpu,%mem --sort=-%cpu"
+    ]
+  },
+  "overall": {
+    "status": "Estable con observabilidad parcial",
+    "risk_level": "medio",
+    "availability_estimate": {
+      "value": null,
+      "type": "no_disponible",
+      "note": "No hay fuente de monitorizacion o SLA conectada en esta corrida"
+    }
+  },
+  "kpis": {
+    "cpu_threads": 9,
+    "memory_used_pct": 5.9,
+    "disk_used_pct": 6.4,
+    "load_1m": 0.2,
+    "network_rx_mb": 5.13,
+    "network_tx_mb": 3.13
+  },
+  "servers": {
+    "host_count_real": 1,
+    "hostname": "ce227901f1f9",
+    "os": "Ubuntu 24.04.3 LTS",
+    "kernel": "6.12.47",
+    "uptime": "up 6 minutes",
+    "memory_total_mb": 10169,
+    "memory_used_mb": 595,
+    "memory_available_mb": 9574,
+    "health": "saludable"
+  },
+  "cloud": {
+    "status": "parcial",
+    "note": "No hay conectores de cloud ni inventario multi-cuenta en esta ejecucion"
+  },
+  "network": {
+    "status": "saludable",
+    "interfaces": [
+      {
+        "name": "lo",
+        "state": "UNKNOWN",
+        "addresses": [
+          "127.0.0.1/8",
+          "::1/128"
+        ]
+      },
+      {
+        "name": "eth0",
+        "state": "UP",
+        "addresses": [
+          "172.30.0.2/28",
+          "fe80::980f:ecff:fe14:f42b/64"
+        ]
+      }
+    ],
+    "routes": [
+      "172.30.0.0/28 dev eth0 proto kernel scope link src 172.30.0.2"
+    ],
+    "dns": [
+      "nameserver 172.30.0.3"
+    ],
+    "listeners": [
+      "Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess",
+      "udp   UNCONN 0      0          127.0.0.1:323       0.0.0.0:*          ",
+      "udp   UNCONN 0      0              [::1]:323             *:*          ",
+      "tcp   LISTEN 0      0          127.0.0.1:8090      0.0.0.0:*    users:((\"hoopa\",pid=1215,fd=9)) ino:9377 sk:0"
+    ],
+    "traffic_devices": [
+      {
+        "name": "lo",
+        "rx_bytes": 207399,
+        "tx_bytes": 207399,
+        "rx_errors": 0,
+        "tx_errors": 0
+      },
+      {
+        "name": "eth0",
+        "rx_bytes": 5172525,
+        "tx_bytes": 3078689,
+        "rx_errors": 0,
+        "tx_errors": 0
+      }
+    ]
+  },
+  "wifi": {
+    "status": "no_disponible",
+    "note": "Sin controlador WiFi o telemetria WLAN conectada"
+  },
+  "telecom": {
+    "status": "no_disponible",
+    "note": "Sin fuente de SIP, carrier o enlaces WAN gestionados"
+  },
+  "incidents": {
+    "status": "parcial",
+    "recent": [
+      {
+        "type": "observabilidad",
+        "severity": "media",
+        "source": "analisis IA",
+        "detail": "Ausencia de telemetria corporativa conectada para disponibilidad, backups, WiFi y telecomunicaciones"
+      }
+    ]
+  },
+  "resources": {
+    "load_1m": 0.2,
+    "load_5m": 0.16,
+    "load_15m": 0.07,
+    "load_per_cpu": 0.022,
+    "disk_total_gb": 62.44,
+    "disk_used_gb": 3.97,
+    "disk_available_gb": 55.25,
+    "top_processes": [
+      "1580 ps               100  0.0",
+      "   1552 python          55.4  0.3",
+      "   1225 codex           15.2  2.6",
+      "   1375 python           0.3  0.5",
+      "   1215 hoopa            0.0  0.0",
+      "      1 tail             0.0  0.0",
+      "   1366 git              0.0  0.0"
+    ]
+  },
+  "patches": {
+    "status": "parcial",
+    "upgradable_sample": [],
+    "note": "No se confirma cumplimiento de parcheo sin una fuente corporativa de gestion"
+  },
+  "backups": {
+    "status": "no_disponible",
+    "note": "Sin consola de copias o pruebas de restauracion accesible"
+  },
+  "alerts": {
+    "active_real": [],
+    "active_inferred": [
+      {
+        "severity": "media",
+        "type": "gap",
+        "detail": "Falta de fuentes corporativas para disponibilidad, ticketing, parches y continuidad"
+      }
+    ]
+  },
+  "ai_section": {
+    "predictions": [
+      {
+        "type": "estimacion IA",
+        "priority": "alta",
+        "detail": "Si no se conecta telemetria externa en la siguiente corrida, el riesgo dominante seguira siendo la falta de visibilidad ejecutiva"
+      },
+      {
+        "type": "estimacion IA",
+        "priority": "media",
+        "detail": "La presion de capacidad a corto plazo parece baja en este entorno por memoria y disco holgados"
+      }
+    ],
+    "recommendations": [
+      "Conectar una fuente real de monitorizacion o inventario para disponibilidad, alertas y SLA",
+      "Incorporar una consola de backups verificables y registrar ultimas pruebas de restauracion",
+      "Anadir telemetria de red, WiFi y telecomunicaciones para convertir secciones parciales en operativas"
+    ]
+  },
+  "source_gaps": [
+    "Inventario corporativo de servidores y sistemas",
+    "Monitorizacion y disponibilidad",
+    "WiFi y telecomunicaciones",
+    "ITSM o historial de incidencias",
+    "Backups, continuidad y pruebas de recuperacion"
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria tecnica, monitorizacion profesional ni intervencion de un especialista.",
+  "artifacts": {
+    "html": "/workspace/output/Dashboard_Infraestructura_TI_2026-05-11_05-08.html",
+    "pdf": "/workspace/output/Dashboard_Infraestructura_TI_2026-05-11_05-08.pdf",
+    "png": "/workspace/output/Dashboard_Infraestructura_TI_2026-05-11_05-08.png",
+    "json": "/workspace/output/Dashboard_Infraestructura_TI_2026-05-11_05-08.json"
+  }
+}
