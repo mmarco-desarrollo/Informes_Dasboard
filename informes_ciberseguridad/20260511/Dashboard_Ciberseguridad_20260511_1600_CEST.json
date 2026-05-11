@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sánchez",
+    "website": "https://mmarcoseguridad.com",
+    "email": "mmarco.seguridad@gmail.com",
+    "whatsapp": "+34 656 33 93 55",
+    "report_title": "Informe Ejecutivo de Ciberseguridad",
+    "edition_label": "Edición programada 16:00",
+    "report_date": "11/05/2026",
+    "report_time": "16:00 CEST",
+    "timezone": "Europe/Madrid",
+    "data_cutoff": "11/05/2026 12:37 CEST",
+    "next_update": "11/05/2026 20:00 CEST",
+    "next_update_countdown": "4h",
+    "global_threat_level": "ALTO",
+    "ai_risk_state": "Elevado",
+    "methodology": "KPIs y distribuciones basados en una muestra priorizada de fuentes oficiales y de fabricante monitorizadas para esta edición; no equivalen a telemetría global completa."
+  },
+  "kpis": [
+    {"label": "Incidentes activos", "value": "5", "note": "Campañas o compromisos con actividad o mitigación en curso"},
+    {"label": "Incidentes críticos", "value": "3", "note": "Perímetro, colaboración y supply chain"},
+    {"label": "Vulnerabilidades nuevas", "value": "8", "note": "Avisos priorizados 05-08 mayo en la muestra"},
+    {"label": "CVEs críticas", "value": "4", "note": "Con criticidad explícita o impacto equivalente"},
+    {"label": "Malware detectado", "value": "3", "note": "Robo de credenciales y abuso de tokens"},
+    {"label": "Campañas de phishing", "value": "3", "note": "AiTM, device code y OAuth abuse"},
+    {"label": "Ataques DDoS", "value": "0", "note": "Sin confirmación prioritaria en esta ventana"},
+    {"label": "Ransomware reportado", "value": "0", "note": "Sin pico confirmado en fuentes revisadas"},
+    {"label": "Países más citados", "value": "EE. UU. / RU / IL / DE", "note": "Cobertura parcial verificada"},
+    {"label": "Riesgo global", "value": "ALTO", "note": "Sesgo a identidad, edge y CI/CD"},
+    {"label": "Tendencia 24h", "value": "Alza moderada", "note": "Más presión en phishing y edge"}
+  ],
+  "summary_points": [
+    "La prioridad táctica pasa por cerrar exposición en perímetro y colaboración: PAN-OS User-ID Portal y SharePoint siguen siendo los dos focos con mayor urgencia por evidencia de explotación.",
+    "La presión sobre identidad sube: Microsoft documentó una campaña AiTM de gran escala que alcanzó a más de 35.000 usuarios y más de 13.000 organizaciones en 26 países.",
+    "El vector supply chain sigue activo: el compromiso de Trivy y sus extensiones a otros artefactos de CI/CD refuerzan la necesidad de revisar acciones, tags mutables y secretos en pipelines.",
+    "Android y software de administración remota siguen ampliando superficie: el boletín de Android de mayo y la exposición de Nginx-UI obligan a revisar activos móviles y paneles accesibles."
+  ],
+  "alerts": [
+    "Explotación confirmada en CISA KEV de PAN-OS User-ID Portal (CVE-2026-0300).",
+    "Explotación confirmada en CISA KEV de Microsoft SharePoint (CVE-2026-20963).",
+    "Campañas de phishing con captura de token y bypass de MFA no resistente a phishing.",
+    "Riesgo elevado para entornos españoles con paneles edge, virtualización y software empresarial expuesto.",
+    "Continuidad del riesgo supply chain en herramientas de seguridad y automatización de pipelines."
+  ],
+  "critical_vulns": [
+    {"cve": "CVE-2026-0300", "product": "Palo Alto PAN-OS User-ID Authentication Portal", "cvss": "9.3", "severity": "Crítica", "exploitation": "Confirmada en KEV", "patch": "Mitigación inmediata; workaround hasta fix", "priority": "Inmediata", "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300"},
+    {"cve": "CVE-2026-20963", "product": "Microsoft SharePoint", "cvss": "9.8", "severity": "Crítica", "exploitation": "Confirmada en KEV", "patch": "Sí, con guía MSRC", "priority": "Inmediata", "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-20963"},
+    {"cve": "CVE-2026-0073", "product": "Android System / adbd", "cvss": "Crítica (boletín)", "severity": "Crítica", "exploitation": "Sin evidencia pública confirmada en fuentes revisadas", "patch": "Sí, parche 2026-05-01", "priority": "Alta", "source": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"},
+    {"cve": "CVE-2026-33032", "product": "nginx-ui MCP endpoint", "cvss": "9.8", "severity": "Crítica", "exploitation": "Sin parche al publicarse el advisory", "patch": "No, remediación manual", "priority": "Alta", "source": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h6c2-x2m2-mwhf"},
+    {"cve": "CVE-2026-5174", "product": "Progress MOVEit Automation", "cvss": "8.8", "severity": "Alta", "exploitation": "No confirmada en fuentes revisadas", "patch": "Sí, versiones corregidas disponibles", "priority": "Alta", "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-5174"}
+  ],
+  "sources": [
+    {"name": "NVD - CVE-2026-0300", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300", "kind": "Hecho confirmado"},
+    {"name": "NVD - CVE-2026-20963", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20963", "kind": "Hecho confirmado"},
+    {"name": "Android Security Bulletin — May 2026", "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01", "kind": "Hecho confirmado"},
+    {"name": "Red Hat RHSB-2026-003 Dirty Frag", "url": "https://access.redhat.com/security/vulnerabilities/RHSB-2026-003", "kind": "Hecho confirmado"},
+    {"name": "INCIBE-CERT Avisos", "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos", "kind": "Hecho confirmado"},
+    {"name": "GitHub Advisory - nginx-ui MCP", "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-h6c2-x2m2-mwhf", "kind": "Hecho confirmado"},
+    {"name": "Microsoft Security Blog - AiTM code of conduct campaign", "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/", "kind": "Hecho confirmado"},
+    {"name": "Microsoft Security Blog - Trivy supply chain compromise", "url": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/", "kind": "Hecho confirmado"},
+    {"name": "Microsoft Security Blog - threat actor abuse of AI", "url": "https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/", "kind": "Hecho confirmado"}
+  ]
+}
