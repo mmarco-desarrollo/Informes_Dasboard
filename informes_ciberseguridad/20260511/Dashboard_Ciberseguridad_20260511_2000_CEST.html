@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Informe Ejecutivo de Ciberseguridad | Edición 20:00 CEST</title>
+  <style>
+    :root {
+      --bg: #07111a;
+      --bg2: #0b1622;
+      --panel: #0f1e2d;
+      --panel2: #122436;
+      --line: rgba(148, 163, 184, 0.18);
+      --text: #e6eef7;
+      --muted: #95a7bc;
+      --accent: #4cc2ff;
+      --accent2: #5eead4;
+      --warn: #ffb74d;
+      --danger: #ff6b6b;
+      --ok: #68d391;
+      --shadow: 0 24px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(76,194,255,.18), transparent 28%),
+        radial-gradient(circle at left 20%, rgba(94,234,212,.08), transparent 24%),
+        linear-gradient(180deg, #061019 0%, #08131c 30%, #091521 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .shell { max-width: 1360px; margin: 0 auto; padding: 28px 20px 60px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr .95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .hero-main, .hero-side {
+      background: linear-gradient(180deg, rgba(15,30,45,.95), rgba(10,22,34,.98));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(76,194,255,.16), transparent 45%, rgba(94,234,212,.10));
+      pointer-events: none;
+    }
+    .hero-main-inner { padding: 28px; position: relative; z-index: 1; }
+    .brand { display: flex; justify-content: space-between; gap: 16px; align-items: start; }
+    .brand-mark {
+      display: inline-flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: #d6e8fb;
+    }
+    .mark-box {
+      width: 42px; height: 42px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #04111a; display: grid; place-items: center; font-weight: 900;
+      box-shadow: 0 12px 32px rgba(76,194,255,.35);
+    }
+    .hero h1 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.02; margin: 22px 0 16px; max-width: 11ch; }
+    .lede { max-width: 72ch; color: var(--muted); font-size: 1.05rem; }
+    .status-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+    .status-chip { padding: 14px; border-radius: 16px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); min-height: 88px; }
+    .status-chip strong { display: block; font-size: .78rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .status-chip span { font-size: 1.05rem; font-weight: 600; }
+    .threat-high { color: #ffd166; }
+    .grid-kpis { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; padding: 22px; }
+    .kpi { padding: 16px; border-radius: 16px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); }
+    .kpi .num { font-size: 1.9rem; font-weight: 800; letter-spacing: 0; margin-bottom: 6px; }
+    .kpi .label { color: var(--muted); font-size: .9rem; }
+    .section { margin-top: 20px; display: grid; gap: 18px; }
+    .two-col { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
+    .panel { background: linear-gradient(180deg, rgba(15,30,45,.94), rgba(10,22,34,.98)); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); padding: 22px; }
+    .panel h2 { margin: 0 0 14px; font-size: 1.28rem; }
+    .panel p, .panel li { color: #d7e1ec; }
+    .muted { color: var(--muted); }
+    .summary-list, .plain-list { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+    .alert-band { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 10px; }
+    .alert-item { border-radius: 16px; padding: 14px; background: rgba(255,107,107,.08); border: 1px solid rgba(255,107,107,.2); font-size: .95rem; }
+    .incident-grid, .malware-grid, .news-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .card { background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 18px; }
+    .card h3 { margin: 0 0 10px; font-size: 1.05rem; }
+    .card ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    .eyebrow { color: var(--accent2); text-transform: uppercase; letter-spacing: .09em; font-size: .72rem; margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid rgba(255,255,255,.08); vertical-align: top; }
+    th { color: #c2d2e5; font-weight: 700; font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; }
+    .table-wrap { overflow-x: auto; }
+    .mini-bars { display: grid; gap: 12px; }
+    .bar { display: grid; gap: 6px; }
+    .bar-head { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: .9rem; }
+    .bar-track { height: 10px; border-radius: 999px; background: rgba(255,255,255,.07); overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+    .recommendation-columns { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+    .reco { border-radius: 18px; padding: 16px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); }
+    .reco h3 { margin: 0 0 10px; font-size: 1rem; }
+    .footer-note { margin-top: 18px; font-size: .88rem; color: var(--muted); }
+    .delivery { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+    .delivery .card h3 { margin-bottom: 6px; }
+    .links-list { display: grid; gap: 8px; }
+    @media (max-width: 1120px) {
+      .hero, .two-col { grid-template-columns: 1fr; }
+      .grid-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .status-row, .alert-band, .recommendation-columns, .delivery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .incident-grid, .malware-grid, .news-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .shell { padding: 14px 12px 40px; }
+      .hero-main-inner, .panel, .grid-kpis { padding: 16px; }
+      .grid-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .status-row, .alert-band, .recommendation-columns, .delivery { grid-template-columns: 1fr; }
+      .hero h1 { max-width: none; font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class='shell'>
+    <section class='hero'>
+      <div class='hero-main'>
+        <div class='hero-main-inner'>
+          <div class='brand'>
+            <div class='brand-mark'><span class='mark-box'>M</span> MMarco Seguridad</div>
+            <div class='muted'>Informe programado · Edición 20:00 CEST</div>
+          </div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class='lede'>El nivel global de ciberamenaza se mantiene en ALTO. La señal dominante no es una sola vulnerabilidad aislada, sino la convergencia entre phishing avanzado, abuso de flujos legítimos de autenticación y explotación de dispositivos perimetrales.</p>
+          <div class='status-row'>
+            <div class='status-chip'><strong>Fecha exacta</strong><span>2026-05-11 19:34:41 CEST</span></div>
+            <div class='status-chip'><strong>Nivel global</strong><span class='threat-high'>ALTO</span></div>
+            <div class='status-chip'><strong>Próxima actualización</strong><span>2026-05-12 08:00 CEST</span></div>
+            <div class='status-chip'><strong>Estado IA de riesgo</strong><span>Riesgo estimado en alza para identidad, correo y edge appliances</span></div>
+          </div>
+        </div>
+      </div>
+      <div class='hero-side'>
+        <div class='grid-kpis'>
+          <div class='kpi'><div class='num'>7</div><div class='label'>Incidentes activos priorizados</div></div>
+          <div class='kpi'><div class='num'>4</div><div class='label'>Incidentes críticos confirmados</div></div>
+          <div class='kpi'><div class='num'>6</div><div class='label'>Vulnerabilidades priorizadas</div></div>
+          <div class='kpi'><div class='num'>4</div><div class='label'>CVEs críticas priorizadas</div></div>
+          <div class='kpi'><div class='num'>4</div><div class='label'>Campañas de phishing</div></div>
+          <div class='kpi'><div class='num'>1</div><div class='label'>Ransomware priorizado</div></div>
+          <div class='kpi'><div class='num'>4</div><div class='label'>Familias malware/ransomware</div></div>
+          <div class='kpi'><div class='num'>0</div><div class='label'>DDoS confirmados</div></div>
+          <div class='kpi'><div class='num'>26</div><div class='label'>Países afectados mín. confirmados</div></div>
+          <div class='kpi'><div class='num'>ALTO</div><div class='label'>Riesgo global</div></div>
+          <div class='kpi'><div class='num'>24h</div><div class='label'>Presión estable-alta con sesgo alcista en identidad y correo</div></div>
+          <div class='kpi'><div class='num'>7d</div><div class='label'>Sin alivio material; persiste foco en MFA bypass, QR phishing y edge appliances</div></div>
+        </div>
+      </div>
+    </section>
+    <section class='section two-col'>
+      <div class='panel'>
+        <h2>Resumen Ejecutivo</h2>
+        <p><strong>Riesgos principales:</strong></p>
+        <ul class='summary-list'><li>Phishing adversary-in-the-middle con robo de tokens y evasión de MFA tradicional.</li><li>Abuso automatizado del flujo OAuth Device Code con generación dinámica de códigos, exfiltración de correo y reglas maliciosas de inbox.</li><li>Explotación activa de appliances Fortinet, Cisco FMC y BeyondTrust expuestos a Internet.</li><li>Riesgo operativo creciente para pymes españolas por campañas de suplantación financiera y de autoridad detectadas por INCIBE.</li></ul>
+        <p><strong>Conclusión rápida:</strong></p>
+        <ul class='summary-list'><li>La identidad sigue siendo la vía más fiable de entrada para el atacante.</li><li>Los ataques de correo son más convincentes, más automatizados y más rápidos de monetizar.</li><li>Los edge appliances continúan ofreciendo impacto desproporcionado si no se parchean de inmediato.</li><li>España mantiene presión relevante en fraude por correo y suplantación de marca/autoridad.</li><li>La ventana útil de respuesta se está acortando y favorece controles automáticos y priorización operativa.</li></ul>
+      </div>
+      <div class='panel'>
+        <h2>Distribución de la presión de riesgo</h2>
+        <div class='mini-bars'>
+          <div class='bar'><div class='bar-head'><span>Identidad y autenticación</span><span>95/100</span></div><div class='bar-track'><div class='bar-fill' style='width:95%'></div></div></div>
+          <div class='bar'><div class='bar-head'><span>Correo y phishing</span><span>92/100</span></div><div class='bar-track'><div class='bar-fill' style='width:92%'></div></div></div>
+          <div class='bar'><div class='bar-head'><span>Edge appliances</span><span>90/100</span></div><div class='bar-track'><div class='bar-fill' style='width:90%'></div></div></div>
+          <div class='bar'><div class='bar-head'><span>Navegador y sesión</span><span>84/100</span></div><div class='bar-track'><div class='bar-fill' style='width:84%'></div></div></div>
+          <div class='bar'><div class='bar-head'><span>Riesgo pymes España</span><span>76/100</span></div><div class='bar-track'><div class='bar-fill' style='width:76%'></div></div></div>
+        </div>
+        <p class='footer-note'>Los KPIs reflejan incidentes, campañas y vulnerabilidades priorizadas en esta edición ejecutiva, no el universo completo de eventos globales.</p>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='panel'>
+        <h2>Alertas Activas</h2>
+        <div class='alert-band'>
+          <div class='alert-item'>Prioridad 1: revisar exposición de Cisco FMC, FortiClient EMS y Fortinet con FortiCloud SSO habilitado.</div><div class='alert-item'>Prioridad 1: revisar reglas de buzón, apps OAuth consentidas y autenticaciones recientes en Microsoft 365.</div><div class='alert-item'>Prioridad 2: reforzar MFA resistente al phishing para perfiles privilegiados y funciones financieras.</div><div class='alert-item'>Prioridad 2: alertar a RRHH, finanzas y soporte sobre lures tipo compliance, facturas, SumUp y falsas notificaciones policiales.</div><div class='alert-item'>Prioridad 3: elevar detección para uso de AnyDesk, SimpleHelp, Cloudflare tunnels y herramientas remotas no autorizadas.</div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='panel'>
+        <h2>Incidentes y Actividad Relevante</h2>
+        <div class='incident-grid'><article class='card incident'><div class='eyebrow'>Hecho confirmado</div><h3>Campaña de phishing “code of conduct” con AiTM</h3><p>Más de 35.000 usuarios objetivo, más de 13.000 organizaciones y 26 países; robo de tokens y bypass de MFA no resistente al phishing.</p><ul><li><strong>Fecha:</strong> 2026-05-04 (publicación); actividad observada del 2026-04-14 al 2026-04-16</li><li><strong>Vector:</strong> Correo con PDF adjunto, CAPTCHA, sitios intermedios y flujo final de autenticación proxificado.</li><li><a href='https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/' target='_blank' rel='noopener'>Fuente oficial</a></li></ul></article><article class='card incident'><div class='eyebrow'>Hecho confirmado</div><h3>Campaña AI-enabled de device code phishing</h3><p>Compromiso de cuentas organizativas a escala con persistencia vía reglas de buzón y exfiltración de correo.</p><ul><li><strong>Fecha:</strong> 2026-04-06</li><li><strong>Vector:</strong> OAuth Device Code dinámico, infraestructura automatizada y lures hiperpersonalizados.</li><li><a href='https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/' target='_blank' rel='noopener'>Fuente oficial</a></li></ul></article><article class='card incident'><div class='eyebrow'>Hecho confirmado</div><h3>Interlock ransomware explotando Cisco FMC</h3><p>RCE no autenticado en dispositivos expuestos y posterior doble extorsión.</p><ul><li><strong>Fecha:</strong> 2026-03-18 (alerta activa reportada)</li><li><strong>Vector:</strong> Explotación de CVE-2026-20131 en FMC y despliegue multietapa.</li><li><a href='https://www.fortiguard.com/outbreak-alert/interlock-ransomware' target='_blank' rel='noopener'>Fuente oficial</a></li></ul></article><article class='card incident'><div class='eyebrow'>Hecho confirmado</div><h3>Explotación activa de FortiCloud SSO</h3><p>Bypass de autenticación con posible acceso a dispositivos de terceros si FortiCloud SSO está habilitado.</p><ul><li><strong>Fecha:</strong> 2026-01-29</li><li><strong>Vector:</strong> CVE-2026-24858 en productos Fortinet.</li><li><a href='https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html' target='_blank' rel='noopener'>Fuente oficial</a></li></ul></article><article class='card incident'><div class='eyebrow'>Hecho confirmado</div><h3>Compromisos múltiples asociados a BeyondTrust CVE-2026-1731</h3><p>Creación de cuentas, tools remotas, web shells y robo de datos.</p><ul><li><strong>Fecha:</strong> 2026-02-19</li><li><strong>Vector:</strong> Explotación de vulnerabilidad crítica en plataforma de acceso privilegiado/remoto.</li><li><a href='https://unit42.paloaltonetworks.com/beyondtrust-cve-2026-1731/' target='_blank' rel='noopener'>Fuente oficial</a></li></ul></article></div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='panel'>
+        <h2>Vulnerabilidades Críticas Prioritarias</h2>
+        <div class='table-wrap'>
+          <table>
+            <thead>
+              <tr><th>CVE</th><th>Producto afectado</th><th>CVSS</th><th>Severidad</th><th>Estado de explotación</th><th>Parche</th><th>Prioridad</th><th>Fuente</th></tr>
+            </thead>
+            <tbody><tr><td>CVE-2026-20131</td><td>Cisco Secure Firewall Management Center</td><td>10.0</td><td>Crítica</td><td>Activa y asociada a campañas Interlock</td><td>Sí</td><td>Inmediata</td><td><a href='https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-rce-NKhnULJh' target='_blank' rel='noopener'>Fuente</a></td></tr><tr><td>CVE-2026-24858</td><td>FortiOS / FortiManager / FortiProxy / FortiWeb / FortiAnalyzer (FortiCloud SSO)</td><td>N/D en la evidencia abierta usada</td><td>Crítica</td><td>Activa</td><td>Sí</td><td>Inmediata</td><td><a href='https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html' target='_blank' rel='noopener'>Fuente</a></td></tr><tr><td>CVE-2026-35616</td><td>FortiClient EMS</td><td>9.1</td><td>Crítica</td><td>Known Exploited: Yes</td><td>Sí, hotfix y versiones corregidas</td><td>Inmediata</td><td><a href='https://www.fortiguard.com/psirt/FG-IR-26-099' target='_blank' rel='noopener'>Fuente</a></td></tr><tr><td>CVE-2026-1731</td><td>BeyondTrust</td><td>N/D en la evidencia abierta usada</td><td>Crítica</td><td>Activa con compromisos múltiples observados</td><td>Sí, aplicar remediación del fabricante y revisar compromiso</td><td>Inmediata</td><td><a href='https://unit42.paloaltonetworks.com/beyondtrust-cve-2026-1731/' target='_blank' rel='noopener'>Fuente</a></td></tr><tr><td>CVE-2026-6750 / CVE-2026-6747</td><td>Thunderbird 150</td><td>N/D</td><td>Alta</td><td>No confirmada en la evidencia usada</td><td>Sí</td><td>Alta</td><td><a href='https://www.mozilla.org/en-US/security/advisories/mfsa2026-33/' target='_blank' rel='noopener'>Fuente</a></td></tr><tr><td>CVE-2026-6920 / CVE-2026-6919</td><td>Google Chrome 147/148</td><td>N/D en la evidencia usada</td><td>Alta</td><td>Sin evidencia abierta usada de explotación activa</td><td>Sí</td><td>Alta</td><td><a href='https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop_22.html' target='_blank' rel='noopener'>Fuente</a></td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class='section two-col'>
+      <div class='panel'>
+        <h2>Malware y Ransomware</h2>
+        <div class='malware-grid'><article class='card malware'><h3>Interlock</h3><p><strong>Foco:</strong> Ransomware / doble extorsión</p><p><strong>Objetivo:</strong> Empresas con firewalls perimetrales expuestos</p><p><strong>Técnicas:</strong> Explotación edge, fileless implants, RAT tooling, reconocimiento previo a cifrado</p><p><strong>Tendencia:</strong> Activa</p></article><article class='card malware'><h3>VShell</h3><p><strong>Foco:</strong> Backdoor / acceso remoto</p><p><strong>Objetivo:</strong> Entornos comprometidos vía BeyondTrust</p><p><strong>Técnicas:</strong> Post-explotación, cuentas locales, herramientas remotas</p><p><strong>Tendencia:</strong> Activa</p></article><article class='card malware'><h3>SparkRAT</h3><p><strong>Foco:</strong> RAT multiplataforma</p><p><strong>Objetivo:</strong> Víctimas de explotación de BeyondTrust</p><p><strong>Técnicas:</strong> Remote admin tooling, persistencia</p><p><strong>Tendencia:</strong> Activa</p></article><article class='card malware'><h3>Tooling asociado a device code phishing / EvilTokens</h3><p><strong>Foco:</strong> Credenciales y tokens</p><p><strong>Objetivo:</strong> Usuarios M365 y cuentas con acceso corporativo</p><p><strong>Técnicas:</strong> OAuth abuse, dynamic code generation, inbox rules</p><p><strong>Tendencia:</strong> En expansión</p></article></div>
+        <p class='footer-note'>Se omiten IOCs detallados en esta edición ejecutiva para mantener foco directivo; las fuentes oficiales publican indicadores y hunting guidance cuando aplica.</p>
+      </div>
+      <div class='panel'>
+        <h2>Noticias Relevantes</h2>
+        <div class='news-grid'><article class='news-item'><h3>Microsoft sitúa el correo como frente dominante: 8,3 mil millones de amenazas de phishing en Q1 2026</h3><p>La escala y el crecimiento del QR phishing refuerzan la necesidad de controles de navegador, identidad y correo en una sola prioridad ejecutiva.</p><div class='meta'>2026-04-30 · <a href='https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/' target='_blank' rel='noopener'>Fuente</a></div></article><article class='news-item'><h3>Unit 42 eleva el peso de identidad y navegador en incidentes reales de 2025-2026</h3><p>Casi 90% de investigaciones con identidad implicada y 48% con actividad en navegador cuestionan estrategias centradas solo en endpoint tradicional.</p><div class='meta'>2026-02-17 · <a href='https://www.paloaltonetworks.com/resources/research/unit-42-incident-response-report' target='_blank' rel='noopener'>Fuente</a></div></article><article class='news-item'><h3>Mozilla corrige un bloque amplio de fallos high en Thunderbird 150</h3><p>Aunque no hay evidencia abierta usada de explotación activa, la superficie browser-like y WebRTC sigue requiriendo ventanas de parcheo cortas.</p><div class='meta'>2026-04-21 · <a href='https://www.mozilla.org/en-US/security/advisories/mfsa2026-33/' target='_blank' rel='noopener'>Fuente</a></div></article><article class='news-item'><h3>INCIBE mantiene presión alta en campañas de suplantación orientadas a cobros y autoridad</h3><p>Riesgo práctico para pymes españolas, especialmente en procesos de pago, soporte y verificación documental.</p><div class='meta'>2026-04-17 / 2026-03-18 · <a href='https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup' target='_blank' rel='noopener'>Fuente</a></div></article></div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='panel'>
+        <h2>Recomendaciones Ejecutivas</h2>
+        <div class='recommendation-columns'>
+          <div class='reco'><h3>Crítica</h3><ul class='plain-list'><li>Parchar o aislar de inmediato Cisco FMC, FortiClient EMS y plataformas Fortinet/BeyondTrust afectadas.</li><li>Imponer MFA resistente al phishing en administradores, finanzas y correo corporativo; evitar depender solo de OTP/push.</li><li>Revisar logs de autenticación, reglas de inbox, consentimientos OAuth y accesos administrativos de los últimos 30 días.</li></ul></div>
+          <div class='reco'><h3>Alta</h3><ul class='plain-list'><li>Aplicar conditional access para bloquear device code no autorizado y reforzar políticas de sesión/token.</li><li>Reducir superficie expuesta en Internet y verificar inventario real de appliances edge y consolas administrativas.</li><li>Desplegar detección para QR phishing, AiTM, CAPTCHA-gated phishing y abuso de navegadores.</li></ul></div>
+          <div class='reco'><h3>Media</h3><ul class='plain-list'><li>Actualizar clientes de correo/navegadores con prioridad operativa, incluyendo Thunderbird y Chrome.</li><li>Ejecutar simulaciones internas sobre lures de cumplimiento, pagos, soporte y suplantación institucional.</li></ul></div>
+          <div class='reco'><h3>Baja</h3><ul class='plain-list'><li>Revisar playbooks de comunicación a dirección para eventos de extorsión, token theft y caída de appliances perimetrales.</li><li>Mantener cuadro de mando quincenal de exposición a identidad, correo y edge como tres dominios ejecutivos separados.</li></ul></div>
+        </div>
+      </div>
+    </section>
+    <section class='section two-col'>
+      <div class='panel'>
+        <h2>Sección IA</h2>
+        <p class='muted'>Análisis predictivo / estimativo generado por IA</p>
+        <p><strong>Riesgo global estimado:</strong> Alto</p>
+        <p><strong>Predicción de amenazas próximas:</strong></p>
+        <ul class='plain-list'><li>Continuidad de campañas AiTM y device code phishing con lures más personalizados y mayor abuso de servicios legítimos.</li><li>Más explotación temprana de CVEs en appliances edge con ventanas de ataque de horas, no de días.</li><li>Mayor uso de automatización y tooling asistido por IA para reconocimiento, scripting y extorsión.</li></ul>
+        <p><strong>Sectores más expuestos:</strong> Servicios financieros, salud, tecnología/SaaS, servicios profesionales, pymes con cobros digitales</p>
+        <p><strong>Vulnerabilidades prioritarias:</strong> CVE-2026-20131, CVE-2026-24858, CVE-2026-35616, CVE-2026-1731</p>
+        <p><strong>Probabilidad de aumento de ataques:</strong> Alta en correo e identidad; media-alta en edge appliances.</p>
+        <p><strong>Recomendación automática:</strong> Mantener una cadencia semanal de revisión de identidad y una cadencia continua de remediación de appliances expuestos con SLA de menos de 24 horas para CVEs críticas explotadas.</p>
+      </div>
+      <div class='panel'>
+        <h2>Fuentes</h2>
+        <ul class='plain-list'><li><a href='https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/' target='_blank' rel='noopener'>Microsoft Defender Research: code-of-conduct AiTM phishing</a> · 2026-05-04 · confirmed</li><li><a href='https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/' target='_blank' rel='noopener'>Microsoft Defender Research: AI-enabled device code phishing campaign</a> · 2026-04-06 · confirmed</li><li><a href='https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/' target='_blank' rel='noopener'>Microsoft Threat Intelligence: Q1 2026 email threat landscape</a> · 2026-04-30 · confirmed</li><li><a href='https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html' target='_blank' rel='noopener'>CCN-CERT AL 01/26: explotación activa de CVE-2026-24858</a> · 2026-01-29 · confirmed</li><li><a href='https://www.fortiguard.com/psirt/FG-IR-26-099' target='_blank' rel='noopener'>Fortinet PSIRT FG-IR-26-099</a> · 2026-04-04 · confirmed</li><li><a href='https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-rce-NKhnULJh' target='_blank' rel='noopener'>Cisco advisory: CVE-2026-20131</a> · 2026-03-04 · confirmed</li><li><a href='https://www.fortiguard.com/outbreak-alert/interlock-ransomware' target='_blank' rel='noopener'>FortiGuard Outbreak Alert: Interlock ransomware</a> · 2026-04-18 · confirmed</li><li><a href='https://unit42.paloaltonetworks.com/beyondtrust-cve-2026-1731/' target='_blank' rel='noopener'>Unit 42: exploitation of BeyondTrust CVE-2026-1731</a> · 2026-02-19 · confirmed</li><li><a href='https://www.paloaltonetworks.com/resources/research/unit-42-incident-response-report' target='_blank' rel='noopener'>Unit 42 Incident Response Report 2026</a> · 2026-02-17 · confirmed</li><li><a href='https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup' target='_blank' rel='noopener'>INCIBE: phishing suplantando a SumUp</a> · 2026-04-17 · confirmed</li><li><a href='https://www.incibe.es/index.php/ciudadania/avisos/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la' target='_blank' rel='noopener'>INCIBE: falsa Operación Endgame Guardia Civil/Europol</a> · 2026-03-18 · confirmed</li><li><a href='https://www.mozilla.org/en-US/security/advisories/mfsa2026-33/' target='_blank' rel='noopener'>Mozilla MFSA 2026-33 Thunderbird 150</a> · 2026-04-21 · confirmed</li></ul>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='panel'>
+        <h2>Estado de Entrega</h2>
+        <div class='delivery'>
+          <div class='card'><h3>Histórico GitHub</h3><div class='links-list'><a href='https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260511' target='_blank' rel='noopener'>Carpeta diaria</a><a href='https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260511/Dashboard_Ciberseguridad_20260511_2000_CEST.html' target='_blank' rel='noopener'>HTML</a><a href='https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260511/Dashboard_Ciberseguridad_20260511_2000_CEST.json' target='_blank' rel='noopener'>JSON</a></div></div>
+          <div class='card'><h3>Correo HTML</h3><p>Diseñado para enviarse con el resumen ejecutivo en el cuerpo y enlaces verificables al histórico.</p></div>
+          <div class='card'><h3>PDF y Drive</h3><p>PDF no generado en esta edición para evitar una publicación no verificable. Google Drive omitido sin impacto en la entrega principal.</p></div>
+        </div>
+      </div>
+    </section>
+    <p class='footer-note'>Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.</p>
+  </div>
+</body>
+</html>
