@@ -1,1 +1,271 @@
-PLACEHOLDER_HTML
+<!doctype html>
+<html lang='es'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Informe Ejecutivo de Ciberseguridad | MMarco Seguridad</title>
+<style>
+:root {
+  --bg: #07111a;
+  --panel: #0d1b27;
+  --panel-2: #102333;
+  --line: rgba(160, 209, 255, 0.16);
+  --text: #edf5ff;
+  --muted: #9fb3c8;
+  --accent: #4dd0e1;
+  --accent-2: #79f2b6;
+  --warn: #ffb74d;
+  --danger: #ff6b6b;
+  --shadow: 0 24px 60px rgba(0,0,0,.38);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", "IBM Plex Sans", system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(77,208,225,.16), transparent 26%),
+    radial-gradient(circle at top right, rgba(121,242,182,.08), transparent 30%),
+    linear-gradient(180deg, #05101a 0%, #081520 44%, #09111a 100%);
+}
+.container { max-width: 1280px; margin: 0 auto; padding: 28px 20px 48px; }
+.hero {
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(8,25,39,.96), rgba(14,29,43,.86));
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -30% auto;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(77,208,225,.18), transparent 64%);
+  pointer-events: none;
+}
+.brand { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.brand-kicker { color: var(--accent-2); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+h1 { margin: 10px 0 8px; font-size: clamp(30px, 5vw, 44px); line-height: 1.05; }
+.subtitle { max-width: 860px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.hero-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; margin-top: 22px; }
+.stat, .panel {
+  border: 1px solid var(--line);
+  background: rgba(10, 24, 35, .88);
+  border-radius: 14px;
+  padding: 18px;
+}
+.stat .label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+.stat .value { font-size: 30px; margin-top: 8px; font-weight: 700; }
+.stat .note { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; margin-top: 18px; }
+.section { margin-top: 18px; }
+.section-title { font-size: 18px; margin: 0 0 12px; }
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+ul { margin: 0; padding-left: 18px; }
+li { margin: 0 0 8px; color: var(--text); }
+.kpis { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 12px; }
+.kpi-card { border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 16px; min-height: 124px; }
+.kpi-card strong { display: block; font-size: 26px; margin-bottom: 6px; }
+.kpi-card span { color: var(--muted); font-size: 13px; }
+.alerts { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+.alert-card { border: 1px solid var(--line); background: var(--panel); border-radius: 14px; padding: 16px; }
+.alert-card h3 { margin: 10px 0 8px; font-size: 18px; }
+.status { color: var(--accent-2); font-weight: 600; margin: 0 0 10px; }
+.pill { display: inline-flex; align-items: center; border-radius: 999px; padding: 6px 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.pill.crítica, .pill.critica { background: rgba(255,107,107,.14); color: #ffc3c3; }
+.pill.alta { background: rgba(255,183,77,.16); color: #ffd7a0; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border-bottom: 1px solid var(--line); padding: 12px 10px; text-align: left; vertical-align: top; }
+th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.news-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.news-item { border: 1px solid var(--line); background: var(--panel); border-radius: 14px; padding: 16px; }
+.news-item h4 { margin: 0 0 8px; font-size: 17px; }
+.meta, .refs, .foot, .small { color: var(--muted); font-size: 13px; }
+.priority-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; }
+.priority-col { border: 1px solid var(--line); background: var(--panel); border-radius: 14px; padding: 16px; }
+.priority-col h4 { margin: 0 0 12px; }
+.priority-col.critical h4 { color: #ffc3c3; }
+.priority-col.high h4 { color: #ffd7a0; }
+.priority-col.medium h4 { color: #b8f2ff; }
+.priority-col.low h4 { color: #b4f0cf; }
+.footer { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 18px; color: var(--muted); font-size: 13px; }
+a { color: #8be9ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.tag { border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; color: var(--muted); font-size: 13px; background: rgba(255,255,255,.02); }
+@media (max-width: 1100px) {
+  .hero-grid, .kpis, .news-grid, .priority-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .grid, .two-col, .alerts { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .hero { padding: 20px; }
+  .hero-grid, .kpis, .news-grid, .priority-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+  <div class='container'>
+    <section class='hero'>
+      <div class='brand'>
+        <div>
+          <div class='brand-kicker'>MMarco Seguridad · SOC / Threat Intelligence</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class='subtitle'>Edición programada de las 20:00 para dirección. Prioriza amenazas activas, vulnerabilidades críticas, contexto España y acciones ejecutivas inmediatas con evidencia reciente y trazable.</p>
+        </div>
+        <div class='panel' style='min-width:260px'>
+          <div class='small'>Fecha y hora</div>
+          <div style='font-size:22px;font-weight:700;margin-top:6px'>11/05/2026 · 20:00 CEST</div>
+          <div class='small' style='margin-top:8px'>Zona horaria Europe/Madrid</div>
+        </div>
+      </div>
+      <div class='hero-grid'>
+        <div class='stat'>
+          <div class='label'>Nivel global de amenaza</div>
+          <div class='value' style='color:#ffc3c3'>ALTA</div>
+          <div class='note'>Convergencia de LPE Linux, RCE en perímetro y campañas de credenciales.</div>
+        </div>
+        <div class='stat'>
+          <div class='label'>Estado IA de riesgo</div>
+          <div class='value'>Elevado</div>
+          <div class='note'>Probabilidad alta de continuidad en 72h.</div>
+        </div>
+        <div class='stat'>
+          <div class='label'>Próxima actualización</div>
+          <div class='value'>08:00</div>
+          <div class='note'>12/05/2026 · CEST</div>
+        </div>
+        <div class='stat'>
+          <div class='label'>Tendencia últimas 24h</div>
+          <div class='value' style='color:#ffd7a0'>Al alza</div>
+          <div class='note'>Lectura inferida a partir de las señales verificadas revisadas.</div>
+        </div>
+      </div>
+      <div class='tag-row'>
+        <div class='tag'>Hechos confirmados separados de estimaciones</div>
+        <div class='tag'>Fuentes: CISA, NVD, INCIBE, Microsoft, Unit 42, Google, Talos</div>
+        <div class='tag'>Foco: perímetro expuesto, Linux, identidad, SaaS, OT</div>
+      </div>
+    </section>
+
+    <section class='section'>
+      <h2 class='section-title'>KPIs del informe</h2>
+      <div class='kpis'>
+        <div class='kpi-card'><strong>5</strong><span>Incidentes activos priorizados</span></div>
+        <div class='kpi-card'><strong>3</strong><span>Incidentes críticos priorizados</span></div>
+        <div class='kpi-card'><strong>6</strong><span>Vulnerabilidades nuevas priorizadas</span></div>
+        <div class='kpi-card'><strong>4</strong><span>CVEs críticas priorizadas</span></div>
+        <div class='kpi-card'><strong>5</strong><span>Familias malware / loaders</span></div>
+      </div>
+      <div class='grid'>
+        <div class='panel'>
+          <h3 class='section-title'>Resumen ejecutivo</h3>
+          <p>El panorama permanece en nivel alto por la coincidencia de explotación activa o altamente prioritaria sobre Linux, firewalls, plataformas de acceso remoto y gestión empresarial.</p>
+          <p><strong>Exposición estimada:</strong> Elevado para organizaciones con Linux expuesto o con acceso local indirecto, firewalls/portales de autenticación publicados, y suites de gestión remota sin parchear.</p>
+          <p><strong>Recomendación principal:</strong> Ejecutar en menos de 24 horas una revisión focalizada de exposición externa y aplicar mitigaciones/parches sobre Linux kernel, PAN-OS Captive Portal, Ivanti EPMM, BeyondTrust y Fortinet con FortiCloud SSO.</p>
+        </div>
+        <div class='panel'>
+          <h3 class='section-title'>Conclusión rápida</h3>
+          <ul><li>La presión ofensiva sigue favoreciendo el perímetro y el post-compromiso sobre Linux.</li><li>La combinación de phishing, robo de sesión y abuso de secretos mantiene un riesgo alto para SaaS y M365.</li><li>El entorno español sigue mostrando gran peso de phishing, malware y sistemas vulnerables según INCIBE.</li><li>La prioridad operativa debe centrarse en reducir exposición externa y acelerar parcheo de KEV y RCE críticas.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class='section two-col'>
+      <div class='panel'>
+        <h3 class='section-title'>Principales riesgos</h3>
+        <ul><li>Escalada de privilegios en Linux tras compromiso inicial con evidencia de actividad real asociada a Dirty Frag.</li><li>RCE sin autenticación o bypass en appliances y plataformas expuestas a Internet: PAN-OS Captive Portal, Ivanti EPMM, BeyondTrust y productos Fortinet con FortiCloud SSO.</li><li>Persistencia del robo de credenciales y entrega de malware a través de phishing temático y abuso de marcas de confianza.</li><li>Aumento del riesgo de payloads disfrazados como herramientas de IA y del uso de extensiones o instaladores fraudulentos.</li></ul>
+      </div>
+      <div class='panel'>
+        <h3 class='section-title'>Sectores más expuestos</h3>
+        <ul><li>Logística y transporte</li><li>Utilities y software de facturación</li><li>Salud</li><li>Entornos industriales/OT</li><li>Cloud/SaaS</li></ul>
+      </div>
+    </section>
+
+    <section class='section'>
+      <h2 class='section-title'>Alertas activas</h2>
+      <div class='alerts'><article class='alert-card'><div class='pill crítica'>Urgencia Crítica</div><h3>Dirty Frag en Linux con actividad limitada observada</h3><p class='status'>Hecho confirmado</p><p>Microsoft describe una campaña activa en investigación con indicios de explotación de Dirty Frag/Copy Fail tras acceso local previo. Parches para CVE-2026-43284 publicados el 8 de mayo; el componente RxRPC asociado seguía sin parche en esa fecha.</p><p class='refs'>Fuentes: [1] ,[2]</p></article><article class='alert-card'><div class='pill crítica'>Urgencia Crítica</div><h3>PAN-OS Captive Portal: RCE sin autenticación</h3><p class='status'>Hecho confirmado</p><p>NVD describe CVE-2026-0300 como desbordamiento en el portal User-ID/Captive Portal que permite ejecución arbitraria con privilegios root. Riesgo especialmente alto si el portal está accesible desde IPs no confiables.</p><p class='refs'>Fuentes: [3] ,[4]</p></article><article class='alert-card'><div class='pill alta'>Urgencia Alta</div><h3>Fortinet/FortiCloud SSO: autenticación cruzada entre dispositivos</h3><p class='status'>Hecho confirmado</p><p>CVE-2026-24858 figura en KEV de CISA. Afecta a múltiples productos Fortinet cuando FortiCloud SSO está habilitado; permite acceso a dispositivos registrados en otras cuentas.</p><p class='refs'>Fuentes: [7]</p></article><article class='alert-card'><div class='pill alta'>Urgencia Alta</div><h3>Ivanti EPMM y BeyondTrust siguen siendo referencias de máxima prioridad</h3><p class='status'>Hecho confirmado</p><p>CVE-2026-1281 y CVE-2026-1731 están en KEV y mantienen perfil de alto valor para atacantes por su capacidad de RCE o inyección previa a autenticación en plataformas de administración remota.</p><p class='refs'>Fuentes: [5] ,[6]</p></article><article class='alert-card'><div class='pill alta'>Urgencia Alta</div><h3>Phishing y malware siguen usando marcas de confianza y temática estacional</h3><p class='status'>Hecho confirmado</p><p>Microsoft mantiene observación sobre campañas con QR, acortadores y páginas falsas de DocuSign/IRS; Talos documenta ransomware y loaders camuflados como instaladores de herramientas de IA.</p><p class='refs'>Fuentes: [11] ,[12]</p></article></div>
+    </section>
+
+    <section class='section panel'>
+      <h2 class='section-title'>Vulnerabilidades críticas priorizadas</h2>
+      <div class='table-wrap'>
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto afectado</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Estado de explotación</th>
+              <th>Parche / mitigación</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody><tr><td>CVE-2026-0300</td><td>Palo Alto Networks PAN-OS User-ID / Captive Portal</td><td>N/D en NVD; impacto crítico</td><td>Crítica</td><td>Alta prioridad / amenaza de alto perfil</td><td>Validar parche del proveedor y restringir acceso a IPs internas confiables</td><td>Crítica</td></tr><tr><td>CVE-2026-43284</td><td>Linux kernel (Dirty Frag)</td><td>N/D en NVD</td><td>Alta</td><td>Actividad limitada observada por Microsoft</td><td>Parches del kernel publicados el 2026-05-08</td><td>Crítica</td></tr><tr><td>CVE-2026-1731</td><td>BeyondTrust Remote Support / PRA</td><td>9.8 (NVD)</td><td>Crítica</td><td>En KEV; explotación observada y tooling post-explotación reportado</td><td>Boletín BT26-02 del proveedor</td><td>Crítica</td></tr><tr><td>CVE-2026-1281</td><td>Ivanti Endpoint Manager Mobile (EPMM)</td><td>9.8 (CNA Ivanti)</td><td>Crítica</td><td>En KEV; RCE no autenticada</td><td>Actualización de Ivanti; seguimiento CCN-CERT</td><td>Crítica</td></tr><tr><td>CVE-2026-24858</td><td>Fortinet múltiples productos con FortiCloud SSO</td><td>9.8 (Fortinet/NVD)</td><td>Crítica</td><td>En KEV; explotación activa alertada por CCN-CERT</td><td>Actualizar según FG-IR-26-060 y revisar SSO</td><td>Alta</td></tr><tr><td>CVE-2026-35225</td><td>CODESYS EtherNetIP</td><td>Alta</td><td>Alta</td><td>Sin explotación confirmada en la fuente revisada</td><td>Actualizar a 4.9.0.0</td><td>Alta para OT</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class='section two-col'>
+      <div class='panel'>
+        <h3 class='section-title'>Malware y ransomware</h3>
+        <p><strong>Familias activas o relevantes:</strong> Latrodectus, Remcos, AHKBot, Lucky_Gh0'st, CyberLock</p>
+        <p><strong>Técnicas observadas:</strong> Phishing con PDF/QR, MSI/JS loaders, Abuso de herramientas legítimas, Borrado de espacio libre con cipher.exe, Persistencia por scheduled tasks</p>
+        <p><strong>Tendencia:</strong> Estable-al alza en ingeniería social y loaders; presión creciente sobre robo de sesión y credenciales</p>
+        <p><strong>Nivel de propagación:</strong> Moderado con alto impacto potencial en organizaciones poco segmentadas</p>
+      </div>
+      <div class='panel'>
+        <h3 class='section-title'>Contexto España</h3>
+        <ul><li>INCIBE consolidó 122223 incidentes de ciberseguridad en 2025, un 26% más que en 2024.</li><li>55.411 incidentes estuvieron relacionados con malware y 25.133 con phishing.</li><li>INCIBE señala 237.028 sistemas vulnerables y que el 85% de sistemas infectados y controlados por botnet se relacionan con dispositivos inteligentes/IoT.</li></ul>
+      </div>
+    </section>
+
+    <section class='section'>
+      <h2 class='section-title'>Noticias importantes</h2>
+      <div class='news-grid'><article class='news-item'><h4>Google lleva Binary Transparency al ecosistema Android</h4><p class='meta'>2026-05-04</p><p>Reduce riesgo de manipulación silenciosa del software firmado y fortalece la confianza en la cadena de suministro móvil.</p><p class='refs'>Fuentes: [10]</p></article><article class='news-item'><h4>Unit 42 destaca aceleración de brechas impulsadas por IA, identidad y complejidad</h4><p class='meta'>2026-02-17</p><p>Refuerza que el vector identidad y la superficie SaaS/cloud deben seguir en primera línea ejecutiva.</p><p class='refs'>Fuentes: [4]</p></article><article class='news-item'><h4>INCIBE consolida un fuerte incremento de incidentes en España durante 2025</h4><p class='meta'>2026-02-09</p><p>Proporciona señal local de volumen: 122.223 incidentes, 55.411 relacionados con malware y 25.133 de phishing.</p><p class='refs'>Fuentes: [9]</p></article></div>
+    </section>
+
+    <section class='section'>
+      <h2 class='section-title'>Recomendaciones ejecutivas</h2>
+      <div class='priority-grid'>
+        <div class='priority-col critical'><h4>Crítica</h4><ul><li>Inventariar y revisar de inmediato cualquier exposición de PAN-OS Captive Portal, BeyondTrust, Ivanti EPMM y Fortinet con FortiCloud SSO.</li><li>Aplicar o validar parches/mitigaciones de Linux kernel para Dirty Frag y reforzar controles de acceso local, SSH y contenedores.</li><li>Repriorizar patching según KEV y bloquear publicación a Internet de consolas o portales administrativos sin necesidad operativa.</li></ul></div>
+        <div class='priority-col high'><h4>Alta</h4><ul><li>Rotar secretos sensibles de SaaS/M365 y revisar service principals, OAuth apps y permisos elevados.</li><li>Reforzar controles anti-phishing con protección frente a QR, acortadores, páginas clonadas y archivos MSI/JS.</li><li>Aumentar detección de elevación de privilegios, uso anómalo de su/sudo y ejecución de binarios ELF o PowerShell no habituales.</li></ul></div>
+        <div class='priority-col medium'><h4>Media</h4><ul><li>Revisar especialmente extensiones de navegador, instaladores de utilidades IA y software no corporativo en equipos de usuario.</li><li>Extender segmentación y mínimos privilegios a entornos OT/ICS y a dispositivos IoT con exposición lateral.</li></ul></div>
+        <div class='priority-col low'><h4>Baja</h4><ul><li>Planificar ejercicios de validación de integridad post-mitigación y simulacros ejecutivos ante secuestro de sesión o RCE en appliances.</li></ul></div>
+      </div>
+    </section>
+
+    <section class='section two-col'>
+      <div class='panel'>
+        <h3 class='section-title'>Sección IA</h3>
+        <p class='small'><strong>Análisis predictivo / estimativo</strong></p>
+        <p><strong>Riesgo global estimado:</strong> Alta</p>
+        <p><strong>Probabilidad de aumento de ataques:</strong> Alta en 72h</p>
+        <ul><li>Continuidad de campañas de credenciales y sesión contra M365, SaaS y navegadores.</li><li>Más weaponización rápida de fallos en perimeter appliances y software de gestión remota.</li><li>Mayor uso de cebos relacionados con IA, productividad y utilidades para desplegar loaders y ransomware.</li></ul>
+      </div>
+      <div class='panel'>
+        <h3 class='section-title'>Metodología</h3>
+        <p><strong>Hecho confirmado:</strong> Dato sustentado por una fuente oficial o un proveedor reconocido con detalles técnicos explícitos.</p>
+        <p><strong>Señal:</strong> Indicio o tendencia observada en más de una fuente o en un boletín de investigación, sin equivaler a impacto universal.</p>
+        <p><strong>Estimación IA:</strong> Inferencia de priorización realizada a partir del conjunto de fuentes revisadas; no sustituye validación interna.</p>
+      </div>
+    </section>
+
+    <section class='section panel'>
+      <h2 class='section-title'>Fuentes</h2>
+      <ul><li><a href='https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/' target='_blank' rel='noopener noreferrer'>[1] Microsoft Security Blog: Dirty Frag active attack</a> <span>2026-05-08 · Vendor research</span></li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-43284' target='_blank' rel='noopener noreferrer'>[2] NVD: CVE-2026-43284</a> <span>2026-05-08 · NVD</span></li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-0300' target='_blank' rel='noopener noreferrer'>[3] NVD: CVE-2026-0300 PAN-OS Captive Portal</a> <span>2026-05-06 · NVD</span></li><li><a href='https://unit42.paloaltonetworks.com/' target='_blank' rel='noopener noreferrer'>[4] Unit 42 Latest Research Portal</a> <span>2026-05-06 · Threat intelligence</span></li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-1731' target='_blank' rel='noopener noreferrer'>[5] NVD: CVE-2026-1731 BeyondTrust</a> <span>2026-02-06 · NVD</span></li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-1281' target='_blank' rel='noopener noreferrer'>[6] NVD: CVE-2026-1281 Ivanti EPMM</a> <span>2026-01-29 · NVD</span></li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-24858' target='_blank' rel='noopener noreferrer'>[7] NVD: CVE-2026-24858 Fortinet multiple products</a> <span>2026-01-27 · NVD</span></li><li><a href='https://www.incibe.es/incibe-cert/sectores-estrategicos/pymes-nis2/avisos-sci' target='_blank' rel='noopener noreferrer'>[8] INCIBE-CERT: Boletines y avisos SCI / pymes NIS2</a> <span>2026-05-05 · CERT España</span></li><li><a href='https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf' target='_blank' rel='noopener noreferrer'>[9] INCIBE Balance de Ciberseguridad 2025</a> <span>2026-02-09 · Informe institucional</span></li><li><a href='https://blog.google/security/bringing-binary-transparency-to-the-android-ecosystem/' target='_blank' rel='noopener noreferrer'>[10] Google Security Blog: Binary transparency for Android ecosystem</a> <span>2026-05-04 · Vendor security</span></li><li><a href='https://www.microsoft.com/en-us/security/blog/2025/04/03/threat-actors-leverage-tax-season-to-deploy-tax-themed-phishing-campaigns/' target='_blank' rel='noopener noreferrer'>[11] Microsoft Security Blog: tax-themed phishing campaigns</a> <span>2025-04-03 / actualización 2026-03 · Vendor research</span></li><li><a href='https://blog.talosintelligence.com/fake-ai-tool-installers/' target='_blank' rel='noopener noreferrer'>[12] Cisco Talos: fake AI tool installers</a> <span>2025-05-29 · Threat research</span></li></ul>
+    </section>
+
+    <footer class='footer'>
+      <p>Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.</p>
+      <p>MMarco Seguridad · mmarco.seguridad@gmail.com · https://mmarcoseguridad.com</p>
+    </footer>
+  </div>
+</body>
+</html>
