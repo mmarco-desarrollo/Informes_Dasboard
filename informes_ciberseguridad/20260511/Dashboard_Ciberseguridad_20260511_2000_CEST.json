@@ -1,0 +1,305 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sánchez",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "edition_label": "Edición 20:00 CEST",
+  "requested_edition_time": "20:00 CEST",
+  "generated_at": "2026-05-11 19:34:41 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "threat_level_reason": "Predominio de campañas identity-first, abuso de MFA/no phishing-resistant, QR phishing al alza y explotación activa de appliances expuestos a Internet.",
+  "next_update": "2026-05-12 08:00 CEST",
+  "ai_risk_state": "Riesgo estimado en alza para identidad, correo y edge appliances",
+  "scope_note": "Los KPIs reflejan incidentes, campañas y vulnerabilidades priorizadas en esta edición ejecutiva, no el universo completo de eventos globales.",
+  "kpis": {
+    "incidentes_activos_priorizados": 7,
+    "incidentes_criticos_confirmados": 4,
+    "vulnerabilidades_priorizadas": 6,
+    "cves_criticas_priorizadas": 4,
+    "familias_malware_ransomware_priorizadas": 4,
+    "campanas_phishing_priorizadas": 4,
+    "ataques_ddos_confirmados_priorizados": 0,
+    "ransomware_priorizado": 1,
+    "paises_afectados_minimo_confirmado": 26,
+    "nivel_riesgo_global": "Alto",
+    "tendencia_24h": "Presión estable-alta con sesgo alcista en identidad y correo",
+    "tendencia_7d": "Sin alivio material; persiste foco en MFA bypass, QR phishing y edge appliances"
+  },
+  "executive_summary": {
+    "estado_global": "El nivel global de ciberamenaza se mantiene en ALTO. La señal dominante no es una sola vulnerabilidad aislada, sino la convergencia entre phishing avanzado, abuso de flujos legítimos de autenticación y explotación de dispositivos perimetrales.",
+    "riesgos_principales": [
+      "Phishing adversary-in-the-middle con robo de tokens y evasión de MFA tradicional.",
+      "Abuso automatizado del flujo OAuth Device Code con generación dinámica de códigos, exfiltración de correo y reglas maliciosas de inbox.",
+      "Explotación activa de appliances Fortinet, Cisco FMC y BeyondTrust expuestos a Internet.",
+      "Riesgo operativo creciente para pymes españolas por campañas de suplantación financiera y de autoridad detectadas por INCIBE."
+    ],
+    "sectores_afectados": [
+      "Healthcare & life sciences",
+      "Servicios financieros",
+      "Servicios profesionales",
+      "Tecnología y software",
+      "Pymes con procesos de cobro, soporte o verificación por correo"
+    ],
+    "tecnicas_mas_usadas": [
+      "AiTM phishing",
+      "CAPTCHA gating y staging intermedio",
+      "Device code abuse",
+      "QR phishing",
+      "Explotación de appliances edge",
+      "Persistencia mediante inbox rules y cuentas administrativas temporales"
+    ],
+    "exposicion_estimado": "Alta para organizaciones con Microsoft 365, MFA no resistente al phishing, correo con baja verificación de flujos OAuth y dispositivos Fortinet/Cisco/BeyondTrust accesibles desde Internet.",
+    "recomendacion_principal": "Ejecutar en menos de 48 horas una revisión de emergencia centrada en identidad y exposición perimetral: parcheo urgente, MFA resistente al phishing, revisión de inbox rules, OAuth apps y accesos administrativos recientes.",
+    "conclusion_rapida": [
+      "La identidad sigue siendo la vía más fiable de entrada para el atacante.",
+      "Los ataques de correo son más convincentes, más automatizados y más rápidos de monetizar.",
+      "Los edge appliances continúan ofreciendo impacto desproporcionado si no se parchean de inmediato.",
+      "España mantiene presión relevante en fraude por correo y suplantación de marca/autoridad.",
+      "La ventana útil de respuesta se está acortando y favorece controles automáticos y priorización operativa."
+    ]
+  },
+  "incidents_activity": [
+    {
+      "name": "Campaña de phishing “code of conduct” con AiTM",
+      "status": "Hecho confirmado",
+      "date_reference": "2026-05-04 (publicación); actividad observada del 2026-04-14 al 2026-04-16",
+      "impact": "Más de 35.000 usuarios objetivo, más de 13.000 organizaciones y 26 países; robo de tokens y bypass de MFA no resistente al phishing.",
+      "attack_vector": "Correo con PDF adjunto, CAPTCHA, sitios intermedios y flujo final de autenticación proxificado.",
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+    },
+    {
+      "name": "Campaña AI-enabled de device code phishing",
+      "status": "Hecho confirmado",
+      "date_reference": "2026-04-06",
+      "impact": "Compromiso de cuentas organizativas a escala con persistencia vía reglas de buzón y exfiltración de correo.",
+      "attack_vector": "OAuth Device Code dinámico, infraestructura automatizada y lures hiperpersonalizados.",
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/"
+    },
+    {
+      "name": "Interlock ransomware explotando Cisco FMC",
+      "status": "Hecho confirmado",
+      "date_reference": "2026-03-18 (alerta activa reportada)",
+      "impact": "RCE no autenticado en dispositivos expuestos y posterior doble extorsión.",
+      "attack_vector": "Explotación de CVE-2026-20131 en FMC y despliegue multietapa.",
+      "source": "https://www.fortiguard.com/outbreak-alert/interlock-ransomware"
+    },
+    {
+      "name": "Explotación activa de FortiCloud SSO",
+      "status": "Hecho confirmado",
+      "date_reference": "2026-01-29",
+      "impact": "Bypass de autenticación con posible acceso a dispositivos de terceros si FortiCloud SSO está habilitado.",
+      "attack_vector": "CVE-2026-24858 en productos Fortinet.",
+      "source": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html"
+    },
+    {
+      "name": "Compromisos múltiples asociados a BeyondTrust CVE-2026-1731",
+      "status": "Hecho confirmado",
+      "date_reference": "2026-02-19",
+      "impact": "Creación de cuentas, tools remotas, web shells y robo de datos.",
+      "attack_vector": "Explotación de vulnerabilidad crítica en plataforma de acceso privilegiado/remoto.",
+      "source": "https://unit42.paloaltonetworks.com/beyondtrust-cve-2026-1731/"
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20131",
+      "product": "Cisco Secure Firewall Management Center",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation": "Activa y asociada a campañas Interlock",
+      "patch": "Sí",
+      "mitigation_priority": "Inmediata",
+      "official_source": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-rce-NKhnULJh"
+    },
+    {
+      "cve": "CVE-2026-24858",
+      "product": "FortiOS / FortiManager / FortiProxy / FortiWeb / FortiAnalyzer (FortiCloud SSO)",
+      "cvss": "N/D en la evidencia abierta usada",
+      "severity": "Crítica",
+      "exploitation": "Activa",
+      "patch": "Sí",
+      "mitigation_priority": "Inmediata",
+      "official_source": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html"
+    },
+    {
+      "cve": "CVE-2026-35616",
+      "product": "FortiClient EMS",
+      "cvss": "9.1",
+      "severity": "Crítica",
+      "exploitation": "Known Exploited: Yes",
+      "patch": "Sí, hotfix y versiones corregidas",
+      "mitigation_priority": "Inmediata",
+      "official_source": "https://www.fortiguard.com/psirt/FG-IR-26-099"
+    },
+    {
+      "cve": "CVE-2026-1731",
+      "product": "BeyondTrust",
+      "cvss": "N/D en la evidencia abierta usada",
+      "severity": "Crítica",
+      "exploitation": "Activa con compromisos múltiples observados",
+      "patch": "Sí, aplicar remediación del fabricante y revisar compromiso",
+      "mitigation_priority": "Inmediata",
+      "official_source": "https://unit42.paloaltonetworks.com/beyondtrust-cve-2026-1731/"
+    },
+    {
+      "cve": "CVE-2026-6750 / CVE-2026-6747",
+      "product": "Thunderbird 150",
+      "cvss": "N/D",
+      "severity": "Alta",
+      "exploitation": "No confirmada en la evidencia usada",
+      "patch": "Sí",
+      "mitigation_priority": "Alta",
+      "official_source": "https://www.mozilla.org/en-US/security/advisories/mfsa2026-33/"
+    },
+    {
+      "cve": "CVE-2026-6920 / CVE-2026-6919",
+      "product": "Google Chrome 147/148",
+      "cvss": "N/D en la evidencia usada",
+      "severity": "Alta",
+      "exploitation": "Sin evidencia abierta usada de explotación activa",
+      "patch": "Sí",
+      "mitigation_priority": "Alta",
+      "official_source": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop_22.html"
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      {
+        "name": "Interlock",
+        "focus": "Ransomware / doble extorsión",
+        "targets": "Empresas con firewalls perimetrales expuestos",
+        "techniques": [
+          "Explotación edge",
+          "fileless implants",
+          "RAT tooling",
+          "reconocimiento previo a cifrado"
+        ],
+        "trend": "Activa",
+        "propagation": "Alta severidad, baja tolerancia temporal"
+      },
+      {
+        "name": "VShell",
+        "focus": "Backdoor / acceso remoto",
+        "targets": "Entornos comprometidos vía BeyondTrust",
+        "techniques": [
+          "Post-explotación",
+          "cuentas locales",
+          "herramientas remotas"
+        ],
+        "trend": "Activa",
+        "propagation": "Selectiva y orientada a persistencia"
+      },
+      {
+        "name": "SparkRAT",
+        "focus": "RAT multiplataforma",
+        "targets": "Víctimas de explotación de BeyondTrust",
+        "techniques": [
+          "Remote admin tooling",
+          "persistencia"
+        ],
+        "trend": "Activa",
+        "propagation": "Post-acceso"
+      },
+      {
+        "name": "Tooling asociado a device code phishing / EvilTokens",
+        "focus": "Credenciales y tokens",
+        "targets": "Usuarios M365 y cuentas con acceso corporativo",
+        "techniques": [
+          "OAuth abuse",
+          "dynamic code generation",
+          "inbox rules"
+        ],
+        "trend": "En expansión",
+        "propagation": "Escalable por automatización"
+      }
+    ],
+    "ioc_note": "Se omiten IOCs detallados en esta edición ejecutiva para mantener foco directivo; las fuentes oficiales publican indicadores y hunting guidance cuando aplica."
+  },
+  "news": [
+    {
+      "headline": "Microsoft sitúa el correo como frente dominante: 8,3 mil millones de amenazas de phishing en Q1 2026",
+      "why_it_matters": "La escala y el crecimiento del QR phishing refuerzan la necesidad de controles de navegador, identidad y correo en una sola prioridad ejecutiva.",
+      "date": "2026-04-30",
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/"
+    },
+    {
+      "headline": "Unit 42 eleva el peso de identidad y navegador en incidentes reales de 2025-2026",
+      "why_it_matters": "Casi 90% de investigaciones con identidad implicada y 48% con actividad en navegador cuestionan estrategias centradas solo en endpoint tradicional.",
+      "date": "2026-02-17",
+      "source": "https://www.paloaltonetworks.com/resources/research/unit-42-incident-response-report"
+    },
+    {
+      "headline": "Mozilla corrige un bloque amplio de fallos high en Thunderbird 150",
+      "why_it_matters": "Aunque no hay evidencia abierta usada de explotación activa, la superficie browser-like y WebRTC sigue requiriendo ventanas de parcheo cortas.",
+      "date": "2026-04-21",
+      "source": "https://www.mozilla.org/en-US/security/advisories/mfsa2026-33/"
+    },
+    {
+      "headline": "INCIBE mantiene presión alta en campañas de suplantación orientadas a cobros y autoridad",
+      "why_it_matters": "Riesgo práctico para pymes españolas, especialmente en procesos de pago, soporte y verificación documental.",
+      "date": "2026-04-17 / 2026-03-18",
+      "source": "https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup"
+    }
+  ],
+  "active_alerts": [
+    "Prioridad 1: revisar exposición de Cisco FMC, FortiClient EMS y Fortinet con FortiCloud SSO habilitado.",
+    "Prioridad 1: revisar reglas de buzón, apps OAuth consentidas y autenticaciones recientes en Microsoft 365.",
+    "Prioridad 2: reforzar MFA resistente al phishing para perfiles privilegiados y funciones financieras.",
+    "Prioridad 2: alertar a RRHH, finanzas y soporte sobre lures tipo compliance, facturas, SumUp y falsas notificaciones policiales.",
+    "Prioridad 3: elevar detección para uso de AnyDesk, SimpleHelp, Cloudflare tunnels y herramientas remotas no autorizadas."
+  ],
+  "recommendations": {
+    "critica": [
+      "Parchar o aislar de inmediato Cisco FMC, FortiClient EMS y plataformas Fortinet/BeyondTrust afectadas.",
+      "Imponer MFA resistente al phishing en administradores, finanzas y correo corporativo; evitar depender solo de OTP/push.",
+      "Revisar logs de autenticación, reglas de inbox, consentimientos OAuth y accesos administrativos de los últimos 30 días."
+    ],
+    "alta": [
+      "Aplicar conditional access para bloquear device code no autorizado y reforzar políticas de sesión/token.",
+      "Reducir superficie expuesta en Internet y verificar inventario real de appliances edge y consolas administrativas.",
+      "Desplegar detección para QR phishing, AiTM, CAPTCHA-gated phishing y abuso de navegadores."
+    ],
+    "media": [
+      "Actualizar clientes de correo/navegadores con prioridad operativa, incluyendo Thunderbird y Chrome.",
+      "Ejecutar simulaciones internas sobre lures de cumplimiento, pagos, soporte y suplantación institucional."
+    ],
+    "baja": [
+      "Revisar playbooks de comunicación a dirección para eventos de extorsión, token theft y caída de appliances perimetrales.",
+      "Mantener cuadro de mando quincenal de exposición a identidad, correo y edge como tres dominios ejecutivos separados."
+    ]
+  },
+  "ai_assessment": {
+    "label": "Análisis predictivo / estimativo generado por IA",
+    "global_risk_estimate": "Alto",
+    "next_threats_prediction": [
+      "Continuidad de campañas AiTM y device code phishing con lures más personalizados y mayor abuso de servicios legítimos.",
+      "Más explotación temprana de CVEs en appliances edge con ventanas de ataque de horas, no de días.",
+      "Mayor uso de automatización y tooling asistido por IA para reconocimiento, scripting y extorsión."
+    ],
+    "most_exposed_sectors": [
+      "Servicios financieros",
+      "salud",
+      "tecnología/SaaS",
+      "servicios profesionales",
+      "pymes con cobros digitales"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20131",
+      "CVE-2026-24858",
+      "CVE-2026-35616",
+      "CVE-2026-1731"
+    ],
+    "probability_attack_increase": "Alta en correo e identidad; media-alta en edge appliances.",
+    "automatic_recommendation": "Mantener una cadencia semanal de revisión de identidad y una cadencia continua de remediación de appliances expuestos con SLA de menos de 24 horas para CVEs críticas explotadas."
+  },
+  "delivery": {
+    "github_folder_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260511",
+    "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260511/Dashboard_Ciberseguridad_20260511_2000_CEST.html",
+    "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260511/Dashboard_Ciberseguridad_20260511_2000_CEST.json",
+    "raw_html_url": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_ciberseguridad/20260511/Dashboard_Ciberseguridad_20260511_2000_CEST.html",
+    "raw_json_url": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_ciberseguridad/20260511/Dashboard_Ciberseguridad_20260511_2000_CEST.json",
+    "pdf_url": null,
+    "pdf_status": "No generado para evitar una entrega no verificable fuera del workspace temporal.",
+    "google_drive_status": "Omitido en esta ejecución."
+  }
+}
