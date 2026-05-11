@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo Nocturno de Inteligencia Artificial",
+    "generated_at": "2026-05-12 00:16:35 CEST",
+    "timezone": "Europe/Madrid",
+    "period_focus": "Resumen nocturno compacto con foco en cambios acumulados, incidentes, vulnerabilidades, riesgos y recomendaciones.",
+    "impact_level": "Alto vigilado",
+    "ecosystem_status": "Estable con presion operativa en seguridad agentic y migraciones",
+    "next_update": "Siguiente ejecucion programada matinal"
+  },
+  "kpis": [
+    {
+      "label": "Alertas criticas activas",
+      "value": "3",
+      "note": "2 CVE criticas + 1 migracion inminente"
+    },
+    {
+      "label": "Cambios acumulados utiles",
+      "value": "4",
+      "note": "voz, modelo abierto, finanzas agentic, safeguards"
+    },
+    {
+      "label": "Incidentes operativos recientes",
+      "value": "1",
+      "note": "OpenAI Responses API ya resuelto"
+    },
+    {
+      "label": "Ventanas regulatorias abiertas",
+      "value": "1",
+      "note": "consulta AI Act abierta hasta 03 Jun"
+    }
+  ],
+  "executive_summary": [
+    "No se confirma una ruptura competitiva nueva en la franja nocturna; el valor operativo sigue concentrado en continuidad, seguridad de agentes y ventanas de migracion ya fechadas.",
+    "La prioridad inmediata es revisar dependencias y conectores: xAI retira modelos el 15 de mayo, y Semantic Kernel mantiene dos vulnerabilidades criticas que afectan tanto SDK .NET como Python.",
+    "En paralelo, el bloque de oportunidad sigue siendo claro: voz en tiempo real de OpenAI, Opus 4.7 con safeguards de ciberseguridad, Mistral Small 4 en licencia Apache 2.0 y Finance Search de Perplexity para flujos de analisis asistido."
+  ],
+  "activity_view": [
+    {
+      "axis": "Seguridad agentic",
+      "level": 92,
+      "tone": "critical"
+    },
+    {
+      "axis": "Modelos y lanzamientos",
+      "level": 74,
+      "tone": "high"
+    },
+    {
+      "axis": "Regulacion y compliance",
+      "level": 78,
+      "tone": "high"
+    },
+    {
+      "axis": "Incidentes de continuidad",
+      "level": 38,
+      "tone": "watch"
+    }
+  ],
+  "global_view": [
+    {
+      "region": "EE. UU. / Labs frontier",
+      "signal": "Continua el empuje hacia agentes con voz, tool calling y workflows de larga duracion.",
+      "state": "hecho confirmado"
+    },
+    {
+      "region": "UE / Regulacion",
+      "signal": "La consulta de transparencia del AI Act pasa a ser la ventana regulatoria mas accionable de corto plazo.",
+      "state": "hecho confirmado"
+    },
+    {
+      "region": "Open source / Infra",
+      "signal": "La ventaja competitiva nocturna sigue en modelos abiertos eficientes y serializacion segura.",
+      "state": "interpretacion ejecutiva"
+    }
+  ],
+  "changes": [
+    {
+      "title": "OpenAI consolida la apuesta por voz operativa",
+      "category": "lanzamiento",
+      "impact": "alto",
+      "status": "hecho confirmado",
+      "date": "2026-05-07",
+      "utility": "GPT-Realtime-2, GPT-Realtime-Translate y GPT-Realtime-Whisper refuerzan asistentes que escuchan, razonan y actuan en tiempo real.",
+      "quick_take": "Valor inmediato para soporte, recepcion multilingue y automatizacion con voz.",
+      "source": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "title": "Claude Opus 4.7 eleva rendimiento con safeguards cyber",
+      "category": "modelo",
+      "impact": "alto",
+      "status": "hecho confirmado",
+      "date": "2026-04-16",
+      "utility": "Mejora en tareas complejas y despliegue inicial de bloqueos para usos ciber de alto riesgo.",
+      "quick_take": "Interesante para I+D defensiva, pero con control de acceso y validacion de uso legitimo.",
+      "source": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "title": "Mistral Small 4 consolida una opcion abierta util",
+      "category": "modelo abierto",
+      "impact": "alto",
+      "status": "hecho confirmado",
+      "date": "2026-05",
+      "utility": "Unifica razonamiento, multimodalidad y coding agentic con licencia Apache 2.0 y 256k de contexto.",
+      "quick_take": "Candidato serio para pruebas soberanas on-prem y copilotos internos.",
+      "source": "https://mistral.ai/news/mistral-small-4"
+    },
+    {
+      "title": "Perplexity activa Finance Search en Agent API",
+      "category": "herramienta",
+      "impact": "medio-alto",
+      "status": "hecho confirmado",
+      "date": "2026-05-06",
+      "utility": "Extiende workflows agentic hacia analisis financiero con informacion estructurada.",
+      "quick_take": "Oportunidad para servicios de inteligencia comercial y analisis de mercado asistido.",
+      "source": "https://www.perplexity.ai/hub"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "OpenAI Responses API - errores 404 elevados",
+      "severity": "media",
+      "status": "resuelto",
+      "window": "2026-05-08 16:05-16:40 PT",
+      "impact": "Interrupcion parcial de continuidad para clientes del endpoint Responses API.",
+      "mitigation": "No hay incidencia activa; conviene reforzar retry logic y monitorizar despliegues dependientes.",
+      "priority": "Media",
+      "source": "https://status.openai.com/incidents/01KR50YN2DBMTXGPC6BQSJN48J"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2026-26030",
+      "product": "Microsoft Semantic Kernel Python SDK",
+      "severity": "critica 9.9",
+      "exploitation": "sin explotacion publica confirmada en la fuente revisada",
+      "impact": "RCE en InMemoryVectorStore filter functionality.",
+      "mitigation": "Actualizar a 1.39.4 o superior; evitar InMemoryVectorStore en produccion.",
+      "priority": "Critica",
+      "source": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    },
+    {
+      "id": "CVE-2026-25592",
+      "product": "Microsoft Semantic Kernel .NET SDK",
+      "severity": "critica 9.9",
+      "exploitation": "sin PoC publica citada en la fuente usada",
+      "impact": "Arbitrary File Write en SessionsPythonPlugin / function calling.",
+      "mitigation": "Actualizar a 1.71.0 o superior y aplicar allow list en localFilePath.",
+      "priority": "Critica",
+      "source": "https://osv.dev/vulnerability/GHSA-2ww3-72rp-wpp4"
+    }
+  ],
+  "alerts": [
+    {
+      "name": "xAI retirement window",
+      "severity": "alta",
+      "detail": "Retirada efectiva el 15 May 2026 21:00 CEST. Quedan aprox. 3d 20h.",
+      "recommendation": "Inventariar dependencias Grok y programar cambio de modelo antes de la ventana.",
+      "source": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "name": "AI Act transparency consultation",
+      "severity": "alta",
+      "detail": "Consulta publicada el 08 May 2026 y abierta hasta el 03 Jun 2026.",
+      "recommendation": "Preparar posicion interna sobre etiquetado, deepfakes y sistemas de informacion a usuarios.",
+      "source": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "Piloto de voz transaccional para soporte o recepcion",
+      "priority": "Alta",
+      "why": "Los nuevos modelos realtime de OpenAI ya encajan con atención multilingue y automatizacion de tareas."
+    },
+    {
+      "title": "Sandbox local con Mistral Small 4 para analisis documental seguro",
+      "priority": "Alta",
+      "why": "Reduce dependencia externa y facilita pruebas soberanas en ciberseguridad y consultoria."
+    },
+    {
+      "title": "Servicios premium de vigilancia regulatoria AI Act",
+      "priority": "Media",
+      "why": "La consulta abierta permite convertir compliance en oferta de acompanamiento y auditoria ligera."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "action": "Revisar esta noche o primera hora SDKs y agentes basados en Semantic Kernel; bloquear despliegues sobre versiones vulnerables."
+    },
+    {
+      "priority": "Alta",
+      "action": "Cerrar un inventario de integraciones xAI antes del 13 de mayo y asignar modelo sustituto por workload."
+    },
+    {
+      "priority": "Alta",
+      "action": "Evaluar un caso de uso de voz operativa con OpenAI y definir guardrails de aprobacion, logs y fallback humano."
+    },
+    {
+      "priority": "Media",
+      "action": "Preparar una nota comercial sobre AI Act transparencia para clientes pyme con foco en bots, sinteticos y reputacion."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-05-15 21:00 CEST",
+      "event": "Retirada efectiva de modelos Grok heredados en xAI API",
+      "type": "operativo"
+    },
+    {
+      "date": "2026-06-03",
+      "event": "Cierre de consulta UE sobre transparencia del AI Act",
+      "type": "regulatorio"
+    }
+  ],
+  "delivery": {
+    "primary_storage": "GitHub public repository",
+    "repository": "mmarco-desarrollo/Informes_Dasboard",
+    "folder": "informes_ia/20260512/",
+    "email_target": "mmarco.seguridad@gmail.com",
+    "email_mode": "draft_prepared"
+  },
+  "sources": [
+    {
+      "label": "OpenAI Status - Responses API incident resolved",
+      "url": "https://status.openai.com/incidents/01KR50YN2DBMTXGPC6BQSJN48J",
+      "kind": "status"
+    },
+    {
+      "label": "OpenAI - Advancing voice intelligence with new models in the API",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+      "kind": "official"
+    },
+    {
+      "label": "Anthropic - Introducing Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "kind": "official"
+    },
+    {
+      "label": "xAI Docs - Grok model retirement on May 15, 2026",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "kind": "official"
+    },
+    {
+      "label": "Mistral AI - Introducing Mistral Small 4",
+      "url": "https://mistral.ai/news/mistral-small-4",
+      "kind": "official"
+    },
+    {
+      "label": "Perplexity Hub - Finance Search in the Agent API",
+      "url": "https://www.perplexity.ai/hub",
+      "kind": "official"
+    },
+    {
+      "label": "European Commission - AI Act transparency consultation",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+      "kind": "regulatory"
+    },
+    {
+      "label": "GitHub Advisory - CVE-2026-26030",
+      "url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx",
+      "kind": "security"
+    },
+    {
+      "label": "OSV / GitHub Advisory mirror - CVE-2026-25592",
+      "url": "https://osv.dev/vulnerability/GHSA-2ww3-72rp-wpp4",
+      "kind": "security"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
