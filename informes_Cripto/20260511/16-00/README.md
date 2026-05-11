@@ -1,0 +1,1 @@
+__READ_FILE__/workspace/output/informes_Cripto/20260511/16-00/README.md
