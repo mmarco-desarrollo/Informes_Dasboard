@@ -1,0 +1,283 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo Premium de Inteligencia Artificial - Corte 12:00",
+    "generated_at": "2026-05-11 12:05:50 CEST",
+    "timezone": "Europe/Madrid",
+    "monitoring_window": {
+      "from": "2026-05-11 09:12 CEST",
+      "to": "2026-05-11 12:05:50 CEST"
+    },
+    "global_status": "Continuidad vigilada",
+    "impact_level": "Alto controlado",
+    "next_update_expected": "Siguiente corte programado del radar (hora no confirmada en esta ejecucion)"
+  },
+  "summary": {
+    "headline": "No se detectan rupturas confirmadas frente al corte de las 09:12; sube la importancia de ejecucion sobre seguridad agentic, cumplimiento y migraciones proximas.",
+    "confirmed_changes": [
+      "No aparecen nuevos lanzamientos de frontera confirmados entre 09:12 y 12:05 CEST en los canales oficiales revisados.",
+      "Se mantiene como señal de mas utilidad practica el marco de control de agentes de OpenAI, con sandboxing, aprobaciones y telemetria para despliegue empresarial.",
+      "Se mantiene como riesgo mas accionable el doble bloque critico de Semantic Kernel: CVE-2026-25592 y CVE-2026-26030, ambos con severidad 9.9.",
+      "Gana urgencia operativa la retirada de modelos Grok prevista por xAI para el 15 de mayo de 2026 a las 12:00 PT.",
+      "Sigue activo el frente regulatorio europeo abierto el 8 de mayo: consulta sobre obligaciones de transparencia del AI Act con cierre el 3 de junio de 2026."
+    ],
+    "interpretation": [
+      "El ecosistema entra en una franja de consolidacion: menos sorpresa comercial inmediata y mas necesidad de preparar gobierno de agentes, hardening y migraciones.",
+      "Para consultoria y ciberseguridad, el valor diferencial hoy esta menos en perseguir otra demo y mas en empaquetar control operativo, trazabilidad y respuesta a riesgos de tool calling."
+    ]
+  },
+  "kpis": [
+    {
+      "label": "Rupturas confirmadas desde el ultimo corte",
+      "value": "0",
+      "note": "Sin anuncio de alto impacto confirmado en la ventana 09:12-12:05"
+    },
+    {
+      "label": "Alertas criticas vigentes",
+      "value": "2",
+      "note": "CVE-2026-25592 y CVE-2026-26030 en Semantic Kernel"
+    },
+    {
+      "label": "Ventanas operativas cercanas",
+      "value": "2",
+      "note": "xAI 15-May y consulta UE 03-Jun"
+    },
+    {
+      "label": "Bloques de utilidad inmediata",
+      "value": "3",
+      "note": "Codex governance, Opus 4.7 y Glasswing"
+    }
+  ],
+  "sections": {
+    "featured_news": [
+      {
+        "title": "OpenAI consolida el patron de despliegue seguro para agentes de codigo",
+        "category": "Seguridad / Gobierno",
+        "impact": "Alto",
+        "status": "Hecho confirmado",
+        "date": "2026-05-08",
+        "utility_or_risk": "Aporta una referencia operativa clara para sandboxing, aprobaciones, politicas de red y telemetria agent-native.",
+        "quick_recommendation": "Usar este patron como base comercial y tecnica para propuestas de agentes internos con controles.",
+        "source": "https://openai.com/index/running-codex-safely/"
+      },
+      {
+        "title": "La Comision Europea activa consulta sobre obligaciones de transparencia del AI Act",
+        "category": "Regulacion",
+        "impact": "Alto",
+        "status": "Hecho confirmado",
+        "date": "2026-05-08",
+        "utility_or_risk": "Afecta a bots, contenido sintetico, deepfakes y marcados legibles por maquina antes del 2 de agosto de 2026.",
+        "quick_recommendation": "Actualizar discursos comerciales y checklists de cumplimiento para clientes que expongan IA al usuario final.",
+        "source": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+      }
+    ],
+    "recent_models": [
+      {
+        "name": "Claude Opus 4.7",
+        "company": "Anthropic",
+        "type": "LLM frontier",
+        "capabilities": "Mejoras en software engineering, vision, autonomia y fiabilidad de tool use",
+        "multimodality": "Si",
+        "license": "Propietaria",
+        "use_cases": "Desarrollo avanzado, automatizacion compleja, interfaces y documentos",
+        "estimated_impact": "Alto",
+        "note": "Se mantiene como modelo de alta utilidad practica; no es novedad de esta manana, pero sigue siendo referencia de capacidad accionable.",
+        "source": "https://www.anthropic.com/news/claude-opus-4-7?hsLang=en"
+      }
+    ],
+    "standout_tools": [
+      {
+        "name": "Controles de despliegue Codex",
+        "source_name": "OpenAI",
+        "category": "Tooling / Governance",
+        "impact": "Alta utilidad",
+        "description": "Sandboxing, aprobaciones, allowlists de red y exportacion de logs de telemetria.",
+        "quick_recommendation": "Empaquetar como blueprint de seguridad para agentes corporativos.",
+        "source": "https://openai.com/index/running-codex-safely/"
+      }
+    ],
+    "repositories": [
+      {
+        "name": "microsoft/semantic-kernel",
+        "source_name": "GitHub / Microsoft",
+        "popularity": "27.9k estrellas visibles en advisory",
+        "description": "SDK clave para agentes y tool calling, hoy relevante por superficie de riesgo y por leccion defensiva.",
+        "use_cases": "Orquestacion agentic y plugins",
+        "utility_level": "Alta",
+        "risks": "Mantiene dos advisories criticos recientes sobre file write y RCE.",
+        "source": "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4"
+      }
+    ],
+    "incidents": [
+      {
+        "title": "Sin nuevos incidentes mayores confirmados en la ventana 09:12-12:05 CEST",
+        "status": "Sin senal fiable de nueva caida o fuga mayor",
+        "severity": "Media",
+        "impact": "Se mantiene la vigilancia, pero sin evento disruptivo nuevo confirmado",
+        "mitigation": "Seguir priorizando hardening de agentes, logs y aislamiento por permisos"
+      }
+    ],
+    "vulnerabilities": [
+      {
+        "id": "CVE-2026-25592",
+        "product": "Microsoft Semantic Kernel / SessionsPythonPlugin",
+        "severity": "Critica 9.9",
+        "exploitation_status": "Riesgo explotable de alto valor; advisory oficial publicado",
+        "impact": "Arbitrary File Write via AI agent function calling",
+        "mitigation": "Actualizar a 1.71.0+ en .NET y 1.39.3+ en pip; allowlist de localFilePath como contencion adicional",
+        "priority": "Critica",
+        "source": "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4"
+      },
+      {
+        "id": "CVE-2026-26030",
+        "product": "Microsoft Semantic Kernel Python SDK / InMemoryVectorStore",
+        "severity": "Critica 9.9",
+        "exploitation_status": "Advisory oficial activo",
+        "impact": "RCE en filter functionality",
+        "mitigation": "Actualizar a 1.39.4+ y evitar InMemoryVectorStore en produccion",
+        "priority": "Critica",
+        "source": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+      }
+    ],
+    "trends_and_radar": [
+      {
+        "title": "Project Glasswing refuerza el giro de la IA frontier hacia ciberdefensa ofensiva-controlada",
+        "status": "Hecho confirmado",
+        "impact": "Alto",
+        "note": "Anthropic afirma que Mythos Preview ya encontro miles de vulnerabilidades de alta severidad, lo que acelera el argumento de defensa asistida por IA con control institucional.",
+        "source": "https://www.anthropic.com/glasswing"
+      },
+      {
+        "title": "Retirada de modelos Grok el 15 de mayo",
+        "status": "Hecho confirmado",
+        "impact": "Alta urgencia operativa",
+        "note": "xAI comunica que varias familias dejaran de funcionar el 15-May-2026 a las 12:00 PT y recomienda migrar a replacements mas nuevos.",
+        "source": "https://docs.x.ai/developers/migration/may-15-retirement"
+      }
+    ],
+    "opportunities": [
+      {
+        "priority": "Alta",
+        "title": "Servicio de auditoria de agentes con enfoque prompt injection -> tool abuse",
+        "why_now": "El mercado ya tiene casos oficiales y controles concretos para justificar una oferta defensiva clara."
+      },
+      {
+        "priority": "Alta",
+        "title": "Paquete de adecuacion AI Act para asistentes, chatbots y contenido sintetico",
+        "why_now": "La consulta europea aterriza requisitos concretos y crea ventana comercial inmediata."
+      },
+      {
+        "priority": "Media",
+        "title": "Revision express de dependencias agentic en clientes con Semantic Kernel",
+        "why_now": "La severidad 9.9 y la facilidad de mensaje comercial facilitan entrada por ciberseguridad aplicada."
+      }
+    ],
+    "active_alerts": [
+      {
+        "level": "Critica",
+        "title": "Semantic Kernel mantiene doble bloque de vulnerabilidades severas",
+        "action": "Revisar versiones y plugin use en todos los despliegues con tool calling."
+      },
+      {
+        "level": "Alta",
+        "title": "xAI entra en cuenta atras operativa para retirada de modelos",
+        "action": "Localizar dependencias Grok y programar migracion antes del 15-May-2026 12:00 PT."
+      },
+      {
+        "level": "Alta",
+        "title": "AI Act: transparencia y marcado de contenido suben de prioridad",
+        "action": "Actualizar avisos de interaccion con IA, etiquetado y procedimientos de evidencia."
+      }
+    ],
+    "executive_recommendations": [
+      {
+        "priority": "Critica",
+        "text": "Ejecutar barrido inmediato de entornos y proyectos que usen Semantic Kernel, confirmando version, plugins activos y rutas de aislamiento."
+      },
+      {
+        "priority": "Alta",
+        "text": "Convertir el enfoque OpenAI de sandboxing, aprobaciones y logs en una plantilla comercial reusable para MMarco Seguridad."
+      },
+      {
+        "priority": "Alta",
+        "text": "Preparar un microservicio o checklist de cumplimiento AI Act para clientes que usen bots, asistentes o contenido sintetico."
+      },
+      {
+        "priority": "Media",
+        "text": "Ofrecer una evaluacion comparativa focalizada entre Claude Opus 4.7 y stacks actuales de agentes para tareas de codigo, analisis y documentacion."
+      }
+    ],
+    "events_calendar": [
+      {
+        "date": "2026-05-15 12:00 PT",
+        "event": "Retirada de modelos Grok por xAI",
+        "importance": "Alta"
+      },
+      {
+        "date": "2026-06-03",
+        "event": "Cierre de consulta UE sobre obligaciones de transparencia",
+        "importance": "Alta"
+      },
+      {
+        "date": "2026-06",
+        "event": "Codigo de buenas practicas sobre marcado y etiquetado esperado por la UE",
+        "importance": "Media"
+      },
+      {
+        "date": "2026-08-02",
+        "event": "Aplicacion de obligaciones de transparencia del AI Act",
+        "importance": "Critica"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "label": "OpenAI - Running Codex safely at OpenAI",
+      "url": "https://openai.com/index/running-codex-safely/",
+      "published": "2026-05-08",
+      "type": "official"
+    },
+    {
+      "label": "Comision Europea - Consultation on AI transparency obligations",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations",
+      "published": "2026-05-08",
+      "type": "official"
+    },
+    {
+      "label": "xAI Docs - Grok Model Retirement on May 15, 2026",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "published": "2026-05-06",
+      "type": "official"
+    },
+    {
+      "label": "Anthropic - Introducing Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7?hsLang=en",
+      "published": "2026-04-16",
+      "type": "official"
+    },
+    {
+      "label": "Anthropic - Project Glasswing",
+      "url": "https://www.anthropic.com/glasswing",
+      "published": "2026-04-07",
+      "type": "official"
+    },
+    {
+      "label": "GitHub Advisory - CVE-2026-26030",
+      "url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx",
+      "published": "2026-02-19",
+      "type": "official"
+    },
+    {
+      "label": "GitHub Advisory - CVE-2026-25592",
+      "url": "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4",
+      "published": "2026-02-06",
+      "type": "official"
+    }
+  ],
+  "limitations": [
+    "No se ha verificado una ruta de HTML -> PDF con navegador en esta ejecucion.",
+    "No se materializa PDF final porque no puede garantizarse fidelidad visual premium frente al dashboard HTML con las herramientas disponibles en este corte.",
+    "Google Drive no se usa como enlace principal en esta ejecucion al no existir una subida arbitraria verificada del PDF."
+  ]
+}
