@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Infraestructura TI</title>
+  <style>
+    :root {
+      --bg:#07111f;
+      --bg2:#0b1830;
+      --panel:#0d1b2f;
+      --panel2:#12243d;
+      --text:#ecf3ff;
+      --muted:#96a8c6;
+      --line:rgba(255,255,255,.08);
+      --good:#2ecc71;
+      --warn:#f1c40f;
+      --bad:#e74c3c;
+      --ia:#3da5ff;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(61,165,255,.18), transparent 28%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      color:var(--text);
+    }
+    .wrap { max-width:1360px; margin:0 auto; padding:28px; }
+    .hero {
+      background:linear-gradient(135deg, rgba(19,42,72,.95), rgba(7,17,31,.96));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 20px 60px rgba(0,0,0,.28);
+    }
+    .eyebrow { color:#7fd1ff; font-size:12px; letter-spacing:1px; text-transform:uppercase; }
+    h1 { margin:10px 0 8px; font-size:34px; }
+    .sub {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .status-chip {
+      display:inline-flex; align-items:center; gap:8px; margin-top:18px;
+      background:rgba(61,165,255,.12); border:1px solid rgba(61,165,255,.3);
+      padding:10px 14px; border-radius:999px; font-weight:700;
+    }
+    .status-dot { width:10px; height:10px; border-radius:50%; background:#4aa3ff; }
+    .grid4, .grid3, .grid2 {
+      display:grid; gap:16px; margin-top:20px;
+    }
+    .grid4 { grid-template-columns:repeat(4,minmax(0,1fr)); }
+    .grid3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .grid2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .panel {
+      background:linear-gradient(180deg, rgba(18,36,61,.96), rgba(10,22,40,.98));
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      min-height:150px;
+    }
+    .panel h2 { margin:0 0 14px; font-size:18px; }
+    .mini { color:var(--muted); font-size:13px; }
+    .kpi-label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.8px; }
+    .kpi-value { margin-top:8px; font-size:32px; font-weight:700; }
+    .bar { height:10px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden; margin-top:14px; }
+    .bar span { display:block; height:100%; border-radius:999px; }
+    .badge {
+      display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700;
+      background:rgba(255,255,255,.06); border:1px solid var(--line); color:var(--text);
+    }
+    .list { display:grid; gap:10px; }
+    .item {
+      padding:12px 14px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.02);
+    }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th, td { padding:10px 8px; border-bottom:1px solid rgba(255,255,255,.06); text-align:left; vertical-align:top; }
+    th { color:#b5c8e8; font-size:12px; text-transform:uppercase; letter-spacing:.8px; }
+    .legal { margin-top:18px; color:#9aaecf; font-size:12px; line-height:1.5; }
+    @media (max-width: 1100px) {
+      .grid4, .grid3, .grid2 { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      .wrap { padding:16px; }
+      h1 { font-size:28px; }
+      .grid4, .grid3, .grid2 { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Infrastructure Intelligence | MMarco Seguridad</div>
+      <h1>Informe Ejecutivo Premium de Infraestructura TI</h1>
+      <div class="sub">
+        <span>Fecha: 2026-05-11</span>
+        <span>Hora: 05:08</span>
+        <span>Zona: Europe/Madrid</span>
+        <span>Host medido: ce227901f1f9</span>
+        <span>Proxima ejecucion: No disponible en la telemetria de esta corrida</span>
+      </div>
+      <div class="status-chip"><span class="status-dot"></span>Estable con observabilidad parcial</div>
+    </section>
+
+    <section class="grid4">
+      <div class="panel"><div class="kpi-label">CPU visibles</div><div class="kpi-value">9</div><div class="mini">Dato real del entorno actual</div></div>
+      <div class="panel"><div class="kpi-label">Memoria usada</div><div class="kpi-value">5.9%</div><div class="mini">Disponibilidad de memoria alta</div></div>
+      <div class="panel"><div class="kpi-label">Disco usado</div><div class="kpi-value">6.4%</div><div class="mini">Capacidad libre amplia</div></div>
+      <div class="panel"><div class="kpi-label">Carga 1m</div><div class="kpi-value">0.20</div><div class="mini">Carga por CPU: 0.022</div></div>
+    </section>
+
+    <section class="grid3">
+      <div class="panel">
+        <h2>Salud Global</h2>
+        
+    <div class="metric-card">
+      <div class="metric-title">Memoria</div>
+      <div class="metric-value">5.9%</div>
+      <div class="bar"><span style="width:6%;background:#2ecc71;"></span></div>
+    </div>
+    
+        
+    <div class="metric-card">
+      <div class="metric-title">Disco</div>
+      <div class="metric-value">6.4%</div>
+      <div class="bar"><span style="width:6.4%;background:#2ecc71;"></span></div>
+    </div>
+    
+        
+    <div class="metric-card">
+      <div class="metric-title">Carga por CPU</div>
+      <div class="metric-value">2.2</div>
+      <div class="bar"><span style="width:6%;background:#2ecc71;"></span></div>
+    </div>
+    
+      </div>
+      <div class="panel">
+        <h2>Servidores y Sistemas Operativos</h2>
+        <div class="list">
+          <div class="item"><strong>Host:</strong> ce227901f1f9</div>
+          <div class="item"><strong>Sistema:</strong> Ubuntu 24.04.3 LTS</div>
+          <div class="item"><strong>Kernel:</strong> 6.12.47</div>
+          <div class="item"><strong>Uptime:</strong> up 6 minutes</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Seccion IA</h2>
+        <div class="list">
+          <div class="item"><span class="badge">Riesgo IA: medio</span></div>
+          <div class="item">Si no se conecta telemetria externa en la siguiente corrida, el riesgo dominante seguira siendo la falta de visibilidad ejecutiva</div><div class="item">La presion de capacidad a corto plazo parece baja en este entorno por memoria y disco holgados</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid2">
+      <div class="panel">
+        <h2>Redes Informaticas</h2>
+        <table>
+          <thead><tr><th>Interfaz</th><th>Estado</th><th>Direcciones</th></tr></thead>
+          <tbody>
+            <tr><td>lo</td><td>UNKNOWN</td><td>127.0.0.1/8, ::1/128</td></tr><tr><td>eth0</td><td>UP</td><td>172.30.0.2/28, fe80::980f:ecff:fe14:f42b/64</td></tr>
+          </tbody>
+        </table>
+        <div class="mini" style="margin-top:12px;">DNS: nameserver 172.30.0.3</div>
+      </div>
+      <div class="panel">
+        <h2>Incidentes y Alertas</h2>
+        <div class="list">
+          <div class="item"><strong>MEDIA</strong> · Ausencia de telemetria corporativa conectada para disponibilidad, backups, WiFi y telecomunicaciones</div>
+          <div class="item"><strong>MEDIA</strong> · Falta de fuentes corporativas para disponibilidad, ticketing, parches y continuidad</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid3">
+      <div class="panel">
+        <h2>Cloud</h2>
+        <div class="item">No hay conectores de cloud ni inventario multi-cuenta en esta ejecucion</div>
+      </div>
+      <div class="panel">
+        <h2>WiFi</h2>
+        <div class="item">Sin controlador WiFi o telemetria WLAN conectada</div>
+      </div>
+      <div class="panel">
+        <h2>Telecomunicaciones</h2>
+        <div class="item">Sin fuente de SIP, carrier o enlaces WAN gestionados</div>
+      </div>
+    </section>
+
+    <section class="grid3">
+      <div class="panel">
+        <h2>Actualizaciones y Parches</h2>
+        <div class="list">
+          <div class="item">No se confirma cumplimiento de parcheo sin una fuente corporativa de gestion</div>
+          <div class="item">Muestra de paquetes pendientes: 0</div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Backups y Continuidad</h2>
+        <div class="item">Sin consola de copias o pruebas de restauracion accesible</div>
+      </div>
+      <div class="panel">
+        <h2>Recomendaciones Prioritarias</h2>
+        <div class="list">
+          <div class="item">Conectar una fuente real de monitorizacion o inventario para disponibilidad, alertas y SLA</div><div class="item">Incorporar una consola de backups verificables y registrar ultimas pruebas de restauracion</div><div class="item">Anadir telemetria de red, WiFi y telecomunicaciones para convertir secciones parciales en operativas</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:20px;">
+      <h2>Trazabilidad de datos y huecos de fuente</h2>
+      <table>
+        <thead><tr><th>Dominio</th><th>Estado</th><th>Observacion</th></tr></thead>
+        <tbody>
+          <tr><td>Disponibilidad</td><td>No disponible</td><td>Sin fuente real de monitorizacion o SLA</td></tr>
+          <tr><td>Red / WiFi / Telecom</td><td>Parcial</td><td>Solo datos del entorno de ejecucion, no de la infraestructura corporativa completa</td></tr>
+          <tr><td>Backups</td><td>No disponible</td><td>Sin consola de copias o pruebas de restauracion</td></tr>
+          <tr><td>Incidencias</td><td>Parcial</td><td>No hay sistema ITSM conectado en esta corrida</td></tr>
+        </tbody>
+      </table>
+      <div class="legal">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria tecnica, monitorizacion profesional ni intervencion de un especialista.</div>
+    </section>
+  </div>
+</body>
+</html>
