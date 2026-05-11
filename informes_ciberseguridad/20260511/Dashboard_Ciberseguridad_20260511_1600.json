@@ -1,0 +1,435 @@
+{
+  "report_id": "MMARCO-CYBER-20260511-1600",
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "generated_at": "2026-05-11 16:15:55 CEST",
+  "report_slot": "2026-05-11 16:00 Europe/Madrid",
+  "timezone": "Europe/Madrid",
+  "next_update": "Siguiente ejecucion programada del agente",
+  "global_threat_level": {
+    "value": "ALTO",
+    "confidence": "alta",
+    "basis": "Multiples vulnerabilidades criticas recientes, varias con explotacion confirmada y foco sostenido en activos perimetrales expuestos."
+  },
+  "ai_risk_status": {
+    "value": "8.6/10",
+    "label": "Riesgo alto estimativo",
+    "type": "analisis_predictivo_ia",
+    "note": "Estimacion generada por IA a partir de las fuentes verificadas de esta ejecucion. No debe interpretarse como hecho confirmado."
+  },
+  "analysis_window": {
+    "recent_window": "2026-05-04 a 2026-05-11",
+    "persistent_priority_window": "2026-01-26 a 2026-05-11"
+  },
+  "kpis": [
+    {
+      "name": "Avisos criticos/altos revisados",
+      "value": 7,
+      "scope": "ventana reciente 7 dias",
+      "confidence": "alta"
+    },
+    {
+      "name": "Explotaciones activas confirmadas",
+      "value": 6,
+      "scope": "prioridades abiertas",
+      "confidence": "alta"
+    },
+    {
+      "name": "CVEs prioritarias",
+      "value": 8,
+      "scope": "tabla ejecutiva",
+      "confidence": "alta"
+    },
+    {
+      "name": "Campanas prioritarias",
+      "value": 4,
+      "scope": "seguimiento actual",
+      "confidence": "media"
+    },
+    {
+      "name": "Operaciones ransomware destacadas",
+      "value": 2,
+      "scope": "Interlock y Medusa/Storm-1175",
+      "confidence": "alta"
+    },
+    {
+      "name": "Tendencia ultimas 24 horas",
+      "value": "Estable alta",
+      "scope": "inferencia analitica",
+      "confidence": "media"
+    }
+  ],
+  "executive_summary": {
+    "global_state": "El estado global de ciberamenaza se mantiene en nivel alto. La evidencia reciente concentra el riesgo en servicios de gestion expuestos a Internet, portales de autenticacion de cortafuegos, servidores de correo y colaboracion, y plataformas MDM.",
+    "main_risks": [
+      "Explotacion activa de CVE-2026-0300 en PAN-OS cuando el User-ID Authentication Portal esta expuesto a redes no confiables.",
+      "Explotacion confirmada de CVE-2026-20131 en Cisco FMC/SCC dentro de la campana Interlock ransomware.",
+      "Persistencia del modelo de intrusion basado en activos web expuestos observado por Microsoft en operaciones Medusa/Storm-1175.",
+      "Riesgo elevado en plataformas de colaboracion y actualizacion por CVE-2026-3502 (TrueConf) y CVE-2025-52691 (SmarterMail).",
+      "Fuerte volumen de avisos criticos oficiales publicados por INCIBE entre el 5 y el 8 de mayo de 2026."
+    ],
+    "sectors_most_affected": [
+      "Seguridad perimetral y firewalls",
+      "Correo y colaboracion empresarial",
+      "Movilidad corporativa y MDM",
+      "Entornos Android y movilidad",
+      "Operaciones TI y plataformas de observabilidad"
+    ],
+    "techniques_most_used": [
+      "RCE no autenticado",
+      "Deserializacion insegura",
+      "Desbordamiento de bufer",
+      "Bypass de autenticacion",
+      "Abuso de mecanismos de actualizacion",
+      "Credential theft y living-off-the-land"
+    ],
+    "estimated_exposure": "Alta para organizaciones con consolas de gestion, portales de autenticacion, MDM, correo o colaboracion expuestos. Media para pymes con buena segmentacion y sin paneles administrativos accesibles desde Internet.",
+    "primary_executive_recommendation": "Priorizar durante hoy mismo la revision y cierre de exposiciones perimetrales innecesarias, seguida del parcheo urgente de PAN-OS, Cisco FMC/SCC, SmarterMail, TrueConf e Ivanti EPMM segun aplique.",
+    "quick_conclusion": [
+      "La presion ofensiva sigue centrada en servicios perimetrales con alto privilegio operativo.",
+      "La combinacion de explotacion confirmada y tiempos de parche muy cortos obliga a reducir exposicion antes incluso de completar el parcheo.",
+      "Las pymes espanolas con appliances o portales expuestos siguen siendo un objetivo viable por superficie, no por tamano.",
+      "La higiene de autenticacion, segmentacion y control de acceso administrativo vuelve a ser el mejor reductor inmediato de riesgo."
+    ]
+  },
+  "active_alerts": [
+    {
+      "title": "PAN-OS User-ID Authentication Portal",
+      "severity": "critica",
+      "status": "hecho_confirmado",
+      "detail": "Palo Alto confirma explotacion limitada de CVE-2026-0300 en portales expuestos a IPs no confiables y/o Internet.",
+      "impacted_audience": [
+        "empresas con PA-Series o VM-Series",
+        "infraestructura perimetral",
+        "pymes con portales de autenticacion accesibles"
+      ],
+      "recommended_action": "Restringir el portal a redes internas de confianza o deshabilitarlo si no es necesario; aplicar las versiones corregidas en cuanto esten disponibles."
+    },
+    {
+      "title": "Cisco FMC/SCC e Interlock ransomware",
+      "severity": "critica",
+      "status": "hecho_confirmado",
+      "detail": "AWS y NVD enlazado a CISA KEV confirman explotacion de CVE-2026-20131 como vector inicial en una operacion Interlock.",
+      "impacted_audience": [
+        "equipos SOC y red",
+        "entornos con Cisco Secure Firewall Management Center"
+      ],
+      "recommended_action": "Parchar y limitar acceso publico a la interfaz de gestion; revisar IoCs y actividades pre-ransomware."
+    },
+    {
+      "title": "FortiCloud SSO",
+      "severity": "critica",
+      "status": "hecho_confirmado",
+      "detail": "CCN-CERT alerta de explotacion activa de CVE-2026-24858 asociada a inicio de sesion unico de FortiCloud.",
+      "impacted_audience": [
+        "organizaciones con FortiOS/FortiManager/FortiProxy/FortiWeb/FortiAnalyzer"
+      ],
+      "recommended_action": "Actualizar a versiones parcheadas y revisar si el SSO de FortiCloud esta habilitado."
+    },
+    {
+      "title": "Ivanti EPMM",
+      "severity": "critica",
+      "status": "hecho_confirmado",
+      "detail": "INCIBE y CCN-CERT recogen explotacion activa de las vulnerabilidades criticas CVE-2026-1281 y CVE-2026-1340.",
+      "impacted_audience": [
+        "movilidad corporativa",
+        "equipos MDM",
+        "entornos con Ivanti EPMM"
+      ],
+      "recommended_action": "Aplicar RPM temporal segun version y planificar version permanente 12.8.0.0."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3",
+      "severity": "Critica",
+      "exploitation": "Si, explotacion limitada observada",
+      "patch": "Mitigacion inmediata disponible; versiones corregidas publicadas/planificadas por rama",
+      "priority": "Critica",
+      "source": "Palo Alto / INCIBE"
+    },
+    {
+      "cve": "CVE-2026-20131",
+      "product": "Cisco Secure Firewall Management Center / Security Cloud Control",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation": "Si, en CISA KEV y vinculada a Interlock",
+      "patch": "Si",
+      "priority": "Critica",
+      "source": "NVD / AWS / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-24858",
+      "product": "FortiCloud SSO / FortiOS family",
+      "cvss": "N/D",
+      "severity": "Critica",
+      "exploitation": "Si, CCN-CERT indica explotacion activa",
+      "patch": "Si",
+      "priority": "Critica",
+      "source": "CCN-CERT"
+    },
+    {
+      "cve": "CVE-2026-1281 / CVE-2026-1340",
+      "product": "Ivanti Endpoint Manager Mobile",
+      "cvss": "N/D",
+      "severity": "Critica",
+      "exploitation": "Si, explotacion identificada por el fabricante",
+      "patch": "Mitigacion temporal RPM y correccion permanente prevista",
+      "priority": "Critica",
+      "source": "INCIBE / CCN-CERT"
+    },
+    {
+      "cve": "CVE-2025-52691",
+      "product": "SmarterTools SmarterMail",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation": "Si, en CISA KEV",
+      "patch": "Si, Build 9413",
+      "priority": "Critica",
+      "source": "NVD / FortiGuard"
+    },
+    {
+      "cve": "CVE-2026-3502",
+      "product": "TrueConf Client",
+      "cvss": "7.8",
+      "severity": "Alta",
+      "exploitation": "Si, en CISA KEV",
+      "patch": "Si, 8.5.3 o posterior",
+      "priority": "Alta",
+      "source": "NVD / FortiGuard"
+    },
+    {
+      "cve": "CVE-2026-40050",
+      "product": "CrowdStrike LogScale Self-hosted",
+      "cvss": "9.8",
+      "severity": "Critica",
+      "exploitation": "No hay evidencia de explotacion segun CrowdStrike",
+      "patch": "Si",
+      "priority": "Alta",
+      "source": "NVD / CrowdStrike"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android System / adbd",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation": "No confirmado publicamente",
+      "patch": "Si, nivel 2026-05-01 o posterior",
+      "priority": "Alta",
+      "source": "Android Security Bulletin"
+    }
+  ],
+  "malware_and_ransomware": [
+    {
+      "family_or_operation": "Interlock",
+      "type": "ransomware",
+      "targets": [
+        "firewalls empresariales",
+        "perimetro corporativo"
+      ],
+      "techniques": [
+        "explotacion edge-device",
+        "implants fileless",
+        "reconocimiento",
+        "doble extorsion"
+      ],
+      "iocs": "No se incluyen IoCs en este resumen; revisar referencias tecnicas del proveedor.",
+      "trend": "activa",
+      "propagation_level": "alto"
+    },
+    {
+      "family_or_operation": "Medusa / Storm-1175",
+      "type": "ransomware",
+      "targets": [
+        "activos web expuestos",
+        "backups",
+        "controladores de dominio"
+      ],
+      "techniques": [
+        "credential theft",
+        "PowerShell codificado",
+        "tampering de antivirus",
+        "Rclone",
+        "PsExec y GPO"
+      ],
+      "iocs": "Actividad descrita por Microsoft; revisar telemetria interna para exclusiones de Defender y uso anomalo de PDQ/PsExec.",
+      "trend": "activa",
+      "propagation_level": "alto"
+    },
+    {
+      "family_or_operation": "Havoc en TrueChaos",
+      "type": "espionaje / post-explotacion",
+      "targets": [
+        "entornos gubernamentales",
+        "plataformas de videoconferencia"
+      ],
+      "techniques": [
+        "supply chain de actualizacion",
+        "DLL sideloading",
+        "C2 Havoc"
+      ],
+      "iocs": "FortiGuard recomienda caza sobre descargas inesperadas y conexiones salientes anomalias desde software de colaboracion.",
+      "trend": "activa",
+      "propagation_level": "medio"
+    }
+  ],
+  "relevant_news": [
+    {
+      "title": "Fuerte concentracion de avisos criticos empresariales en INCIBE",
+      "date": "2026-05-05 a 2026-05-08",
+      "impact": "Eleva la urgencia de ciclo de parcheo en empresas espanolas durante esta semana.",
+      "status": "hecho_confirmado"
+    },
+    {
+      "title": "AWS documenta explotacion previa a divulgacion de Cisco FMC por Interlock",
+      "date": "2026-03-18",
+      "impact": "Confirma ventaja temporal del atacante y necesidad de telemetria historica tras parchear.",
+      "status": "hecho_confirmado"
+    },
+    {
+      "title": "Microsoft describe operaciones Medusa de alta cadencia sobre activos web expuestos",
+      "date": "2026-04-06",
+      "impact": "Refuerza la prioridad sobre hardening de perimetro, robo de credenciales y proteccion de copias de seguridad.",
+      "status": "hecho_confirmado"
+    },
+    {
+      "title": "Android publica boletin de mayo de 2026 con una vulnerabilidad critica en System",
+      "date": "2026-05-04",
+      "impact": "Relevante para flotas moviles corporativas y BYOD con bajo ritmo de parcheo.",
+      "status": "hecho_confirmado"
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      "Cerrar hoy mismo cualquier exposicion innecesaria de portales de autenticacion, consolas de gestion y paneles administrativos en Internet.",
+      "Aplicar o planificar inmediatamente parches/mitigaciones para PAN-OS, Cisco FMC/SCC, FortiCloud SSO, Ivanti EPMM y SmarterMail segun el inventario real.",
+      "Ejecutar caza retrospectiva en firewalls, servidores de correo, MDM y colaboracion buscando actividad desde enero-marzo de 2026."
+    ],
+    "high": [
+      "Revisar exclusiones de antivirus, uso de PowerShell codificado, PsExec, PDQ Deployer y Rclone en busca de TTPs asociados a Medusa/Storm-1175.",
+      "Forzar acceso administrativo solo desde redes de confianza y con MFA fuerte; eliminar acceso directo desde Internet donde no sea imprescindible.",
+      "Confirmar que Android corporativo mantiene nivel de parche 2026-05-01 o posterior."
+    ],
+    "medium": [
+      "Validar segmentacion entre plano de gestion, usuarios y servicios expuestos.",
+      "Reforzar monitorizacion de mecanismos de actualizacion interna y software de colaboracion."
+    ],
+    "low": [
+      "Actualizar playbooks ejecutivos para incidente en appliance perimetral y doble extorsion.",
+      "Refrescar comunicacion de concienciacion ante fraude institucional y falsas notificaciones."
+    ]
+  },
+  "ai_section": {
+    "risk_estimate": "Alto",
+    "predicted_next_threats": [
+      "Continuidad de intentos sobre perimetro expuesto y portales de autenticacion",
+      "Uso de vulnerabilidades frescas en web apps y appliances con parcheo lento",
+      "Aumento de credential theft y abuso de herramientas legitimas en fases pre-ransomware"
+    ],
+    "most_exposed_sectors": [
+      "servicios gestionados y pymes con appliances expuestos",
+      "industria con MDM o accesos remotos debilmente segmentados",
+      "entidades con plataformas de colaboracion/autoupdate centralizado"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-0300",
+      "CVE-2026-20131",
+      "CVE-2026-24858",
+      "CVE-2025-52691"
+    ],
+    "probability_of_increase": "Media-Alta en 72 horas",
+    "automatic_recommendation": "Reducir exposicion antes de la siguiente ventana nocturna y no esperar al cierre completo de mantenimiento para empezar con mitigaciones de acceso."
+  },
+  "sources": [
+    {
+      "name": "INCIBE-CERT avisos",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos",
+      "date_context": "consultado en la ejecucion del 2026-05-11"
+    },
+    {
+      "name": "INCIBE - Palo Alto CVE-2026-0300",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto",
+      "date_context": "publicado 2026-05-06"
+    },
+    {
+      "name": "Palo Alto Networks advisory CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300",
+      "date_context": "publicado 2026-05-05, actualizado 2026-05-07"
+    },
+    {
+      "name": "AWS Security Blog - Interlock",
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/",
+      "date_context": "publicado 2026-03-18"
+    },
+    {
+      "name": "Microsoft Security Blog - Storm-1175 / Medusa",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
+      "date_context": "publicado 2026-04-06"
+    },
+    {
+      "name": "NVD - CVE-2026-20131",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20131",
+      "date_context": "publicado 2026-03-04"
+    },
+    {
+      "name": "NVD - CVE-2025-52691",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52691",
+      "date_context": "actualizado 2026-01-27"
+    },
+    {
+      "name": "NVD - CVE-2026-3502",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3502",
+      "date_context": "publicado 2026-03-30"
+    },
+    {
+      "name": "NVD - CVE-2026-40050",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40050",
+      "date_context": "publicado 2026-04-21"
+    },
+    {
+      "name": "FortiGuard - TrueConf Zero-Day Attack",
+      "url": "https://fortiguard.fortinet.com/threat-signal-report/6394/trueconf-zero-day-attack",
+      "date_context": "publicado 2026-04-07"
+    },
+    {
+      "name": "FortiGuard - Interlock Ransomware Attack",
+      "url": "https://fortiguard.fortinet.com/outbreak-alert/interlock-ransomware",
+      "date_context": "publicado 2026-03-19"
+    },
+    {
+      "name": "CCN-CERT - FortiCloud SSO",
+      "url": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html",
+      "date_context": "publicado 2026-01-29"
+    },
+    {
+      "name": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "date_context": "publicado 2026-05-04"
+    },
+    {
+      "name": "INCIBE - Nginx-UI",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-remoto-en-nginx-ui-de-nginx",
+      "date_context": "publicado 2026-05-07"
+    },
+    {
+      "name": "INCIBE - VMware Tanzu",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/deserializacion-de-datos-no-confiables-en-vmware-tanzu",
+      "date_context": "publicado 2026-05-06"
+    }
+  ],
+  "delivery_status": {
+    "report_generated": "completado",
+    "github_history": "pendiente",
+    "gmail_html": "pendiente",
+    "pdf": "no disponible",
+    "page_images": "no disponibles",
+    "google_drive": "omitido",
+    "limitations": [
+      "El informe prioriza hechos confirmados y no fuerza metricas globales cuando la evidencia publica no es suficiente.",
+      "La seccion IA es estimativa y esta separada explicitamente de los hechos confirmados."
+    ]
+  },
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
