@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo Premium de Inteligencia Artificial - Cierre del Bloque Diurno 20:00</title>
+  <style>
+    :root {
+      --bg: #07111e;
+      --bg2: #0d1830;
+      --panel: rgba(12, 24, 46, 0.82);
+      --line: rgba(120, 152, 214, 0.22);
+      --text: #ecf3ff;
+      --muted: #9fb3d9;
+      --blue: #56a8ff;
+      --cyan: #61e3ff;
+      --green: #2fe39f;
+      --orange: #ff9c48;
+      --red: #ff626e;
+      --violet: #8f7cff;
+      --soft: #dbe7ff;
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(86, 168, 255, 0.22), transparent 30%),
+        radial-gradient(circle at top right, rgba(143, 124, 255, 0.18), transparent 28%),
+        linear-gradient(180deg, #07111e 0%, #091527 50%, #050b15 100%);
+    }
+    .shell {
+      width: min(1380px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(11, 30, 58, 0.95), rgba(7, 15, 29, 0.92)),
+        linear-gradient(90deg, rgba(86, 168, 255, 0.18), transparent);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(47, 227, 159, 0.18), transparent 62%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: var(--soft);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.08;
+      max-width: 980px;
+    }
+    .sublead {
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .hero-grid, .grid-4, .grid-3, .grid-2 {
+      display: grid;
+      gap: 16px;
+    }
+    .hero-grid {
+      grid-template-columns: 2.2fr 1fr;
+      margin-top: 24px;
+    }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+      backdrop-filter: blur(18px);
+    }
+    .panel h2, .panel h3 {
+      margin: 0 0 12px;
+      font-size: 15px;
+      line-height: 1.35;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--soft);
+    }
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .metric {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(134, 167, 228, 0.16);
+    }
+    .metric .value {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .metric .label {
+      color: var(--soft);
+      font-size: 13px;
+    }
+    .metric .note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    .stack {
+      display: grid;
+      gap: 12px;
+    }
+    .summary-list, .radar-list, .source-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .mini-card {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(134, 167, 228, 0.13);
+    }
+    .mini-card .topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--soft);
+    }
+    .crit { background: rgba(255, 98, 110, 0.12); color: #ffd6d9; }
+    .high { background: rgba(255, 156, 72, 0.12); color: #ffe0c2; }
+    .med { background: rgba(47, 227, 159, 0.12); color: #d6ffef; }
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+    }
+    .news-card, .table-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(134, 167, 228, 0.15);
+    }
+    .news-card h4, .table-card h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    a { color: #89c6ff; text-decoration: none; }
+    .section {
+      margin-top: 18px;
+    }
+    .section-title {
+      margin: 28px 0 14px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #b8c9eb;
+    }
+    .footer {
+      margin-top: 20px;
+      padding: 18px 20px 24px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(8, 14, 25, 0.72);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .label-strong { color: var(--soft); }
+    .two-col-list {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (max-width: 1050px) {
+      .hero-grid, .grid-4, .grid-3, .grid-2, .two-col-list {
+        grid-template-columns: 1fr;
+      }
+      .shell {
+        width: min(100vw - 20px, 960px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="eyebrow">MMarco Seguridad <span>Informe 20:00</span></div>
+      <h1>Informe Ejecutivo Premium de Inteligencia Artificial - Cierre del Bloque Diurno 20:00</h1>
+      <p class="sublead">Cierre del bloque diurno con priorizacion ejecutiva sobre alertas activas, movimientos estrategicos, regulacion y recomendaciones accionables para servicios de ciberseguridad, automatizacion e IA aplicada.</p>
+
+      <div class="hero-grid">
+        <div class="stack">
+          <div class="panel">
+            <h2>Cabecera Operativa</h2>
+            <div class="two-col-list">
+              <div class="mini-card"><div class="label-strong">Generado</div><p>2026-05-11 20:12:19 CEST</p></div>
+              <div class="mini-card"><div class="label-strong">Zona horaria</div><p>Europe/Madrid</p></div>
+              <div class="mini-card"><div class="label-strong">Impacto IA</div><p>Elevado</p></div>
+              <div class="mini-card"><div class="label-strong">Proxima actualizacion</div><p>2026-05-12 00:00 CEST</p></div>
+              <div class="mini-card"><div class="label-strong">Estado global</div><p>Alta actividad con prioridad en seguridad agentic, migraciones de plataforma y aterrizaje regulatorio</p></div>
+              <div class="mini-card"><div class="label-strong">Perfil corporativo</div><p>Ciberseguridad, Blockchain, IA y Telecomunicaciones</p></div>
+            </div>
+          </div>
+          <div class="panel">
+            <h2>Resumen Ejecutivo</h2>
+            <ul class="summary-list">
+              <li>Hecho confirmado: el cierre diurno mantiene presion alta en seguridad agentic y cumplimiento, pero sin una ruptura competitiva de ultima hora respecto al corte de media tarde.</li><li>Hecho confirmado: la mayor urgencia operativa no esta en nuevos benchmarks, sino en controles de acceso, migraciones cercanas y obligaciones de transparencia que ya tienen calendario visible.</li><li>Interpretacion: el mercado esta premiando dos direcciones a la vez, despliegue empresarial asistido por agentes y endurecimiento de seguridad/compliance alrededor de esas mismas capacidades.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>KPIs Principales</h2>
+          <div class="hero-metrics">
+            <div class="metric"><div class="value">3</div><div class="label">Alertas activas</div><div class="note">criticidad confirmada</div></div><div class="metric"><div class="value">2</div><div class="label">Frentes regulatorios</div><div class="note">UE con fechas concretas</div></div><div class="metric"><div class="value">5</div><div class="label">Movimientos estrategicos</div><div class="note">OpenAI, Google, Anthropic, Meta, NVIDIA</div></div><div class="metric"><div class="value">4</div><div class="label">Ventanas de accion</div><div class="note">migrar, endurecer acceso, etiquetar, pilotar</div></div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <div class="section">
+      <div class="section-title">Actividad y Vista Global</div>
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Evolucion de Actividad IA</h2>
+          <div class="stack">
+            <div class="mini-card"><div class="topline"><strong>09:00</strong><span>seguridad agentic domina</span></div><div class="bar"><span style="width:76%"></span></div></div><div class="mini-card"><div class="topline"><strong>12:00</strong><span>sin ruptura, sube cumplimiento</span></div><div class="bar"><span style="width:73%"></span></div></div><div class="mini-card"><div class="topline"><strong>16:00</strong><span>utilidad empresarial estable</span></div><div class="bar"><span style="width:71%"></span></div></div><div class="mini-card"><div class="topline"><strong>20:00</strong><span>cierre con foco en riesgo y accion</span></div><div class="bar"><span style="width:82%"></span></div></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Mapa Global de Actividad</h2>
+          <div class="stack">
+            <div class="mini-card"><div class="topline"><strong>Estados Unidos</strong><span class="badge med">Muy activo</span></div><p>OpenAI, Anthropic, Meta y xAI concentran capacidad, seguridad y cambios de modelo.</p></div><div class="mini-card"><div class="topline"><strong>Union Europea</strong><span class="badge med">Alta presion</span></div><p>AI Act entra en fase de aterrizaje practico con consulta abierta y simplificacion acordada.</p></div><div class="mini-card"><div class="topline"><strong>Infraestructura</strong><span class="badge med">Aceleracion</span></div><p>NVIDIA empuja Dynamo como sistema operativo de inferencia para fabricas de agentes.</p></div><div class="mini-card"><div class="topline"><strong>Open source</strong><span class="badge med">Utilidad creciente</span></div><p>Hugging Face confirma expansion global del ecosistema abierto y mayor diversidad geografica.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Alertas Activas</div>
+      <div class="grid-3">
+        <div class="news-card"><div class="meta"><span class="badge crit">Critica</span><span>confirmado</span></div><h4>Riesgo critico de RCE en flujos agentic</h4><p>Semantic Kernel y Flowise muestran que la cadena prompt -&gt; herramienta -&gt; codigo sigue siendo la superficie mas sensible del momento.</p></div><div class="news-card"><div class="meta"><span class="badge high">Alta</span><span>confirmado</span></div><h4>Ventana de migracion xAI antes del 15 de mayo</h4><p>Cualquier integracion en modelos Grok retirados puede dejar de responder a mitad de semana.</p></div><div class="news-card"><div class="meta"><span class="badge high">Alta</span><span>confirmado</span></div><h4>Transparencia AI Act entra en fase de preparacion operativa</h4><p>La consulta del 8 de mayo y la fecha del 2 de agosto de 2026 convierten disclosure y marcado en tarea inmediata de governance.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Noticias Destacadas</div>
+      <div class="grid-2">
+        <article class="news-card"><div class="meta"><span class="badge med">Hecho confirmado</span><span>OpenAI</span><span>2026-04-30 / 2026-05-07</span><span>Alto</span></div><h4>OpenAI endurece cuentas de alto riesgo y vincula proteccion avanzada a Trusted Access for Cyber</h4><p><span class="label-strong">Categoria:</span> Seguridad y acceso</p><p><span class="label-strong">Utilidad / riesgo:</span> Sube el liston de seguridad para operadores con modelos de mayor capacidad en ciberdefensa.</p><p><span class="label-strong">Recomendacion rapida:</span> Elevar MFA resistente a phishing y revisar cuentas que concentren contexto sensible o conectores.</p><a href="https://openai.com/index/advanced-account-security/">Fuente oficial</a></article><article class="news-card"><div class="meta"><span class="badge med">Hecho confirmado</span><span>Comision Europea</span><span>2026-05-08</span><span>Alto</span></div><h4>La Comision Europea abre consulta de transparencia del AI Act y fija ventana hasta el 3 de junio</h4><p><span class="label-strong">Categoria:</span> Regulacion</p><p><span class="label-strong">Utilidad / riesgo:</span> Afecta a sistemas interactivos, contenido sintetico, deepfakes y marcado legible por maquina.</p><p><span class="label-strong">Recomendacion rapida:</span> Preparar inventario de experiencias conversacionales y piezas sinteticas expuestas a cliente.</p><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act">Fuente oficial</a></article><article class="news-card"><div class="meta"><span class="badge med">Hecho confirmado</span><span>Anthropic</span><span>2026-05-04</span><span>Alta</span></div><h4>Anthropic convierte servicios de despliegue en movimiento estrategico con apoyo financiero e ingenieria aplicada</h4><p><span class="label-strong">Categoria:</span> Mercado y servicios</p><p><span class="label-strong">Utilidad / riesgo:</span> Refuerza el paso de vender modelo a vender implantacion profunda en procesos core.</p><p><span class="label-strong">Recomendacion rapida:</span> Vigilar demanda de servicios gestionados de IA en pymes y mid-market.</p><a href="https://www.anthropic.com/news/enterprise-ai-services-company">Fuente oficial</a></article><article class="news-card"><div class="meta"><span class="badge med">Hecho confirmado</span><span>xAI</span><span>2026-05-06</span><span>Alta</span></div><h4>xAI retira varios modelos Grok el 15 de mayo y fuerza migracion inmediata de integraciones heredadas</h4><p><span class="label-strong">Categoria:</span> Cambio de plataforma</p><p><span class="label-strong">Utilidad / riesgo:</span> Interrupcion probable si quedan cargas en grok-3, grok-code-fast-1 o variantes 4-fast.</p><p><span class="label-strong">Recomendacion rapida:</span> Auditar esta semana cualquier dependencia de Grok y calendarizar el cambio antes del 15 de mayo.</p><a href="https://docs.x.ai/developers/migration/may-15-retirement">Fuente oficial</a></article>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Modelos, Herramientas y Repositorios</div>
+      <div class="grid-3">
+        <div class="table-card"><div class="meta"><span>OpenAI</span><span>LLM frontier para trabajo profesional</span><span>Alto</span></div><h4>GPT-5.4</h4><p><span class="label-strong">Capacidades:</span> razonamiento, codificacion, computer use y 1M tokens de contexto</p><p><span class="label-strong">Multimodalidad:</span> si</p><p><span class="label-strong">Licencia:</span> propietaria</p><p><span class="label-strong">Casos de uso:</span> agentes de productividad, automatizacion documental y operaciones con herramientas</p><a href="https://openai.com/index/introducing-gpt-5-4/">Ver fuente</a></div><div class="table-card"><div class="meta"><span>OpenAI</span><span>familia orientada a defensa y flujos de ciberseguridad</span><span>Alto</span></div><h4>GPT-5.5 y GPT-5.5-Cyber</h4><p><span class="label-strong">Capacidades:</span> evaluacion, descubrimiento y apoyo a vendors de seguridad</p><p><span class="label-strong">Multimodalidad:</span> no especificado en la fuente visible</p><p><span class="label-strong">Licencia:</span> acceso restringido / programa</p><p><span class="label-strong">Casos de uso:</span> SOC, AppSec, supply chain, triage tecnico</p><a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/">Ver fuente</a></div><div class="table-card"><div class="meta"><span>Meta</span><span>modelo principal para Meta AI</span><span>Medio-alto</span></div><h4>Muse Spark</h4><p><span class="label-strong">Capacidades:</span> razonamiento, multimodalidad y subagentes paralelos dentro del ecosistema Meta</p><p><span class="label-strong">Multimodalidad:</span> si</p><p><span class="label-strong">Licencia:</span> privado con preview API selectiva</p><p><span class="label-strong">Casos de uso:</span> asistente de consumo, discovery, visual coding y experiencias embebidas</p><a href="https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/">Ver fuente</a></div>
+      </div>
+      <div class="grid-3" style="margin-top:16px;">
+        <div class="table-card"><div class="meta"><span>Google DeepMind</span><span>Alta</span></div><h4>Deep Research Max</h4><p>agente de investigacion con MCP, busqueda web, fuentes propias y visuales nativos</p><p><span class="label-strong">Casos de uso:</span> analisis sectorial, due diligence, informes ejecutivos y pipelines de investigacion</p><p><span class="label-strong">Advertencia:</span> requiere control de fuentes, permisos y trazabilidad de salidas</p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/">Ver fuente</a></div><div class="table-card"><div class="meta"><span>Perplexity</span><span>Alta</span></div><h4>Perplexity Finance Search</h4><p>busqueda estructurada de datos financieros dentro del Agent API</p><p><span class="label-strong">Casos de uso:</span> research financiero, inteligencia competitiva y analisis de cotizadas</p><p><span class="label-strong">Advertencia:</span> validar fuentes de mercado y gobierno de prompts en analisis sensibles</p><a href="https://docs.perplexity.ai/docs/agent-api/finance-search">Ver fuente</a></div><div class="table-card"><div class="meta"><span>NVIDIA</span><span>Alta</span></div><h4>NVIDIA Dynamo 1.0</h4><p>sistema operativo de inferencia para cargas generativas y agentic a escala</p><p><span class="label-strong">Casos de uso:</span> orquestacion de inferencia, control de costes y produccion de agentes</p><p><span class="label-strong">Advertencia:</span> su valor aparece sobre todo en despliegues con escala real y gobierno fuerte de GPU</p><a href="https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories">Ver fuente</a></div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="table-card"><div class="meta"><span>Hugging Face</span><span>Media-alta</span></div><h4>Open source AI en Hugging Face - Spring 2026</h4><p>radiografia del crecimiento abierto por geografia, popularidad, ciencia y hardware</p><p><span class="label-strong">Casos de uso:</span> deteccion de tendencias, scouting de modelos y narrativa comercial open source</p><p><span class="label-strong">Riesgo / nota:</span> usar como radar macro, no como ranking de calidad operativa directa</p><a href="https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026">Ver fuente</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Incidentes y Vulnerabilidades</div>
+      <div class="grid-3">
+        <div class="news-card"><div class="meta"><span class="badge crit">Critica</span><span>Critica</span></div><h4>CVE-2026-26030</h4><p><span class="label-strong">Producto:</span> Microsoft Semantic Kernel</p><p><span class="label-strong">Impacto:</span> ejecucion remota en escenarios con filtros inseguros en InMemoryVectorStore</p><p><span class="label-strong">Mitigacion:</span> actualizar a la version parcheada y revisar cualquier evaluacion dinamica o filtros generados</p><a href="https://github.com/advisories/GHSA-xjw9-4gw8-4rqx">Advisory / fuente</a></div><div class="news-card"><div class="meta"><span class="badge crit">Critica</span><span>Critica</span></div><h4>CVE-2026-41264</h4><p><span class="label-strong">Producto:</span> Flowise CSV Agent</p><p><span class="label-strong">Impacto:</span> codigo arbitrario en servidor mediante script Python inducido por el LLM</p><p><span class="label-strong">Mitigacion:</span> parchear a 3.1.0 y desactivar nodos/agentes expuestos sin sandbox serio</p><a href="https://github.com/advisories/GHSA-3hjv-c53m-58jj">Advisory / fuente</a></div><div class="news-card"><div class="meta"><span class="badge crit">Alta</span><span>Alta</span></div><h4>Retirada de modelos Grok 15 May 2026</h4><p><span class="label-strong">Producto:</span> xAI API</p><p><span class="label-strong">Impacto:</span> riesgo operativo por corte de servicio en integraciones heredadas</p><p><span class="label-strong">Mitigacion:</span> migrar a grok-4.3 o grok-4.20-non-reasoning segun carga</p><a href="https://docs.x.ai/developers/migration/may-15-retirement">Advisory / fuente</a></div>
+      </div>
+      <div class="grid-2" style="margin-top:16px;">
+        <div class="news-card"><div class="meta"><span class="badge crit">Critica</span><span>confirmado por advisories publicos recientes</span></div><h4>Superficie agentic sin sandbox suficiente</h4><p><span class="label-strong">Producto / superficie:</span> Frameworks con tool calling, RAG y ejecucion de codigo</p><p><span class="label-strong">Impacto:</span> puente real entre prompt injection y ejecucion de acciones hostiles</p><p><span class="label-strong">Mitigacion:</span> sandbox, allowlists de herramientas, aprobaciones y telemetria</p></div><div class="news-card"><div class="meta"><span class="badge high">Alta</span><span>riesgo de cumplimiento creciente por AI Act</span></div><h4>Etiquetado insuficiente de contenido sintetico</h4><p><span class="label-strong">Producto / superficie:</span> Canales de marketing, asistentes y generacion multimedia</p><p><span class="label-strong">Impacto:</span> exposicion reputacional y regulatoria si no hay disclosure y marcas legibles</p><p><span class="label-strong">Mitigacion:</span> inventario de activos sinteticos, politica de disclosure y pipeline de marcado</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Radar, Oportunidades y Recomendaciones</div>
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Tendencias y Radar IA</h2>
+          <ul class="radar-list">
+            <li>Los laboratorios punteros estan empaquetando el modelo junto con operaciones, conectores y despliegue, no solo con nuevos pesos.</li><li>La seguridad del acceso se convierte en parte del producto de IA, no solo de la capa TI, especialmente para cuentas con trabajo sensible y agentes conectados.</li><li>La regulacion europea se desplaza desde principios abstractos hacia obligaciones operables: etiquetado, transparencia y cronogramas claros.</li><li>La infraestructura open source y los sistemas de inferencia vuelven a ganar peso porque producir agentes utiles ya es un problema de orquestacion, no solo de benchmark.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>Oportunidades</h2>
+          <div class="stack">
+            <div class="mini-card"><div class="topline"><strong>Auditorias express de seguridad agentic para pymes y despachos</strong><span class="badge high">Alta</span></div><p>los advisories recientes hacen tangible el riesgo en tool calling, RAG y ejecucion de scripts</p></div><div class="mini-card"><div class="topline"><strong>Servicio de adecuacion de transparencia AI Act para asistentes y contenido sintetico</strong><span class="badge high">Alta</span></div><p>la consulta europea ya concreta el alcance practico del Articulo 50 y deja margen para preparacion temprana</p></div><div class="mini-card"><div class="topline"><strong>Research-as-a-service con agentes sobre fuentes cerradas y datos del cliente</strong><span class="badge med">Media</span></div><p>Deep Research Max y herramientas parecidas facilitan entregables premium con mas velocidad y visualizacion</p></div><div class="mini-card"><div class="topline"><strong>Paquetes de migracion de modelos y optimizacion de proveedores</strong><span class="badge med">Media</span></div><p>la retirada de modelos en xAI y la fragmentacion del mercado abren demanda de racionalizacion de stacks</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:16px;">
+        <h2>Recomendaciones Ejecutivas</h2>
+        <div class="grid-2">
+          <div class="mini-card"><div class="topline"><strong>Cerrar en 72 horas un inventario de agentes, conectores y superficies con ejecucion automatica</strong><span class="badge crit">Critica</span></div><p>Identificar donde un prompt puede disparar navegacion, codigo, correo, CRM, ficheros o llamadas API sin aprobacion humana fuerte.</p></div><div class="mini-card"><div class="topline"><strong>Elevar controles de acceso para cuentas con contexto sensible y funciones de agente</strong><span class="badge high">Alta</span></div><p>Aplicar MFA resistente a phishing, revisiones de sesiones, segregacion de cuentas y politica especifica para operadores de IA.</p></div><div class="mini-card"><div class="topline"><strong>Preparar una hoja de cumplimiento rapido sobre transparencia AI Act</strong><span class="badge high">Alta</span></div><p>Mapear chatbots, asistentes, deepfakes, contenido sintetico y piezas de marketing que necesitaran disclosure o marcado.</p></div><div class="mini-card"><div class="topline"><strong>Pilotar un servicio premium de inteligencia asistida por agentes con fuentes controladas</strong><span class="badge med">Media</span></div><p>Usar agentes de investigacion solo sobre fuentes permitidas, con revision humana final y exportacion a entregables ejecutivos.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Calendario IA y Fuentes</div>
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Calendario de Eventos</h2>
+          <div class="stack">
+            <div class="mini-card"><div class="topline"><strong>2026-05-15 21:00 CEST</strong><span class="badge high">Alta</span></div><p>Retirada efectiva de modelos Grok en xAI</p></div><div class="mini-card"><div class="topline"><strong>2026-06-03</strong><span class="badge high">Alta</span></div><p>Cierre de consulta UE sobre transparencia AI Act</p></div><div class="mini-card"><div class="topline"><strong>2026-08-02</strong><span class="badge crit">Critica</span></div><p>Aplicacion de reglas de transparencia AI Act</p></div><div class="mini-card"><div class="topline"><strong>2027-12-02</strong><span class="badge high">Alta</span></div><p>Aplicacion de reglas simplificadas para ciertas categorias de alto riesgo</p></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Fuentes Utilizadas</h2>
+          <ol class="source-list">
+            <li><a href="https://openai.com/index/advanced-account-security/">OpenAI - Advanced Account Security</a> <span>(2026-04-30)</span></li><li><a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/">OpenAI - Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber</a> <span>(2026-05-07)</span></li><li><a href="https://openai.com/index/introducing-gpt-5-4/">OpenAI - Introducing GPT-5.4</a> <span>(2026-03-05)</span></li><li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/">Google DeepMind - Deep Research Max</a> <span>(2026-04-21)</span></li><li><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/">Google - April 2026 AI updates</a> <span>(2026-05-04)</span></li><li><a href="https://www.anthropic.com/news/enterprise-ai-services-company">Anthropic - Enterprise AI services company</a> <span>(2026-05-04)</span></li><li><a href="https://www.anthropic.com/project/glasswing">Anthropic - Project Glasswing</a> <span>(2026-04-07)</span></li><li><a href="https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/">Meta - Muse Spark</a> <span>(2026-04-08)</span></li><li><a href="https://docs.x.ai/developers/migration/may-15-retirement">xAI - Grok model retirement on May 15, 2026</a> <span>(2026-05-06)</span></li><li><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act">European Commission - AI Act transparency consultation</a> <span>(2026-05-08)</span></li><li><a href="https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens">European Commission - Simplification agreement on AI rules</a> <span>(2026-05-07)</span></li><li><a href="https://github.com/advisories/GHSA-xjw9-4gw8-4rqx">GitHub Advisory - CVE-2026-26030 Semantic Kernel</a> <span>(2026-02-19)</span></li><li><a href="https://github.com/advisories/GHSA-3hjv-c53m-58jj">GitHub Advisory - CVE-2026-41264 Flowise</a> <span>(2026-04-15)</span></li><li><a href="https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories">NVIDIA - Dynamo 1.0 production</a> <span>(2026-03-16)</span></li><li><a href="https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026">Hugging Face - State of Open Source Spring 2026</a> <span>(2026-03-17)</span></li><li><a href="https://docs.perplexity.ai/docs/agent-api/finance-search">Perplexity - Finance Search</a> <span>(2026-05-11)</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div><span class="label-strong">MMarco Seguridad</span> | Manuel Marco Sanchez | https://mmarcoseguridad.com | mmarco.seguridad@gmail.com | +34 656 33 93 55</div>
+      <div style="margin-top:10px;">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.</div>
+    </footer>
+  </div>
+</body>
+</html>
