@@ -1,1 +1,135 @@
-PLACEHOLDER_HTML
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | 11/05/2026 12:00 CEST</title>
+  <style>
+    :root { color-scheme: dark; --bg:#06101b; --panel:#0b1627; --line:#17314d; --text:#eaf3fc; --muted:#91a8c3; --accent:#74f1ff; --crit:#ff637a; --high:#ffbe67; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI", Arial, sans-serif; background:radial-gradient(circle at top left, rgba(58,160,255,.14), transparent 28%), linear-gradient(180deg, #07111f 0%, #02070d 100%); color:var(--text); padding:24px; }
+    .wrap { max-width:1180px; margin:0 auto; }
+    .hero, .panel { background:rgba(11,22,39,.92); border:1px solid rgba(116,241,255,.10); border-radius:24px; box-shadow:0 22px 60px rgba(0,0,0,.28); }
+    .hero { padding:24px 28px; display:grid; grid-template-columns: 1.4fr .8fr; gap:20px; }
+    .logo { width:52px; height:52px; display:inline-grid; place-items:center; border-radius:50%; background:#0f2742; border:2px solid #3aa0ff; color:#74f1ff; font-weight:800; margin-right:14px; }
+    h1,h2,h3,p { margin:0; }
+    h1 { font-size:30px; }
+    .sub { margin-top:8px; color:var(--muted); font-size:15px; }
+    .badges { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; align-content:flex-start; }
+    .badge { padding:8px 12px; border-radius:999px; font-size:13px; font-weight:700; }
+    .crit { background:var(--crit); color:#fff; }
+    .info { background:#8df4ff; color:#07111f; }
+    .grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin:20px 0; }
+    .kpi { padding:16px; background:var(--panel); border:1px solid var(--line); border-radius:18px; }
+    .kpi strong { display:block; color:#fff; font-size:24px; margin-top:8px; }
+    .kpi span { color:var(--muted); font-size:12px; }
+    .cols { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-bottom:18px; }
+    .panel { padding:20px 22px; }
+    .panel h2 { font-size:22px; margin-bottom:14px; }
+    .panel p, .panel li { color:#d7e4f2; line-height:1.56; }
+    ul { margin:0; padding-left:18px; }
+    .rows { display:grid; gap:12px; }
+    .alert { padding:14px 16px; border:1px solid var(--line); border-radius:16px; background:#0c182a; }
+    .alert b { display:inline-block; margin-bottom:6px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td { padding:10px 12px; border-bottom:1px solid #18304c; vertical-align:top; text-align:left; }
+    th { color:#9fd0ff; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+    .sev { display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; }
+    .sev-crit { background:var(--crit); color:#fff; }
+    .sev-high { background:var(--high); color:#07111f; }
+    .footer { margin-top:18px; padding:18px 22px; color:var(--muted); font-size:13px; }
+    a { color:#89dcff; }
+    @media (max-width: 980px) { .hero, .cols { grid-template-columns:1fr; } .grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width: 640px) { body { padding:12px; } .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div style="display:flex; align-items:center; margin-bottom:10px;"><div class="logo">M</div><div><div style="font-size:14px; color:#89dcff; font-weight:700;">MMarco Seguridad</div><h1>Informe Ejecutivo de Ciberseguridad</h1></div></div>
+        <p class="sub">Edicion 12:00 CEST | Fecha 11/05/2026 | Corte real 2026-05-11 09:30:00 CEST | Zona Europe/Madrid</p>
+        <p class="sub">Version historica en GitHub. La version integra se ha generado en HTML y PDF con la misma identidad visual y se distribuye por correo con adjuntos.</p>
+      </div>
+      <div class="badges">
+        <div class="badge crit">Nivel global: ALTO</div>
+        <div class="badge info">IA: Elevado</div>
+        <div class="badge" style="background:#193651; color:#dff6ff;">Proxima actualizacion: 11/05/2026 18:00 CEST</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="kpi">Incidentes activos<strong>5</strong><span>senal priorizada</span></div>
+      <div class="kpi">Incidentes criticos<strong>3</strong><span>confirmados</span></div>
+      <div class="kpi">Vulnerabilidades nuevas<strong>4</strong><span>muestra validada</span></div>
+      <div class="kpi">CVEs criticas<strong>5</strong><span>prioridad inmediata</span></div>
+      <div class="kpi">Ransomware reportado<strong>Medusa</strong><span>alta actividad</span></div>
+    </section>
+
+    <section class="cols">
+      <div class="panel">
+        <h2>Resumen ejecutivo</h2>
+        <ul>
+          <li>El nivel global de amenaza se mantiene en alto por la combinacion de explotacion activa en edge y SaaS, junto con operaciones de ransomware humano de ritmo muy rapido.</li>
+          <li>Los focos mas urgentes del corte son Fortinet, Commvault, SAP NetWeaver, SmarterMail y Linux kernel Copy Fail.</li>
+          <li>Los sectores con mayor presion en las evidencias revisadas son sanidad, educacion, finanzas, servicios profesionales y pymes muy expuestas a phishing y fraude.</li>
+          <li>La recomendacion de direccion es reducir ventanas de parche, revisar identidad cloud y reforzar accesos administrativos con MFA resistente a phishing.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Alertas activas</h2>
+        <div class="rows">
+          <div class="alert"><b>Critica</b><div>Appliances Fortinet con historial de exposicion SSL-VPN o Security Fabric: actualizar, revisar persistencia y resetear credenciales.</div></div>
+          <div class="alert"><b>Critica</b><div>Servidores SAP NetWeaver, SmarterMail y Commvault sin parche: revisar exposicion publica antes de final de jornada.</div></div>
+          <div class="alert"><b>Alta</b><div>Entornos Linux multi-cloud con usuarios locales no privilegiados: aplicar parche Copy Fail y monitorizar elevaciones.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-bottom:18px;">
+      <h2>Vulnerabilidades criticas priorizadas</h2>
+      <table>
+        <thead>
+          <tr><th>CVE</th><th>Producto</th><th>CVSS</th><th>Explotacion</th><th>Parche</th><th>Prioridad</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>CVE-2025-31324</td><td>SAP NetWeaver Visual Composer</td><td>9.8 NVD / 10.0 CNA</td><td>KEV y explotacion activa</td><td>Parche SAP</td><td><span class="sev sev-crit">Critica</span></td></tr>
+          <tr><td>CVE-2024-55591</td><td>FortiOS / FortiProxy</td><td>9.8</td><td>KEV y abuso en edge</td><td>Actualizar FortiOS/FortiProxy</td><td><span class="sev sev-crit">Critica</span></td></tr>
+          <tr><td>CVE-2025-24472</td><td>FortiOS / FortiProxy</td><td>8.1</td><td>KEV y explotacion activa</td><td>Actualizar y revisar Security Fabric</td><td><span class="sev sev-high">Alta</span></td></tr>
+          <tr><td>CVE-2025-3928</td><td>Commvault Web Server</td><td>8.8</td><td>KEV y webshells</td><td>&gt;= 11.36.46 / 11.32.89 / 11.28.141 / 11.20.217</td><td><span class="sev sev-high">Alta</span></td></tr>
+          <tr><td>CVE-2026-31431</td><td>Linux kernel Copy Fail</td><td>7.8 CNA</td><td>KEV y PoC funcional</td><td>Parche de distribucion</td><td><span class="sev sev-high">Alta</span></td></tr>
+          <tr><td>CVE-2026-23760</td><td>SmarterMail</td><td>9.8</td><td>KEV y takeover a RCE</td><td>Actualizar por encima de 9511</td><td><span class="sev sev-crit">Critica</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="cols">
+      <div class="panel">
+        <h2>Noticias relevantes</h2>
+        <ul>
+          <li><a href="https://www.cisa.gov/news-events/alerts/2025/05/22/advisory-update-cyber-threat-activity-targeting-commvaults-saas-cloud-application-metallic">CISA actualiza la actividad contra Commvault Metallic</a> y confirma foco sobre secretos de aplicacion y entornos M365.</li>
+          <li><a href="https://www.cisa.gov/news-events/alerts/2025/04/11/fortinet-releases-advisory-new-post-exploitation-technique-known-vulnerabilities">CISA difunde nueva tecnica post-explotacion en Fortinet</a> para vulnerabilidades ya conocidas.</li>
+          <li><a href="https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/">Microsoft documenta el ritmo operativo de Storm-1175 / Medusa</a> con intrusiones que pueden llegar a cifrado en menos de 24 horas.</li>
+          <li><a href="https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp">ENISA mantiene la hoja de ruta del Single Reporting Platform</a> con uso obligatorio para fabricantes desde el 11 de septiembre de 2026.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Recomendaciones priorizadas</h2>
+        <ul>
+          <li><b>Critica:</b> parchear activos KEV expuestos a internet y retirar temporalmente servicios si no existe mitigacion segura.</li>
+          <li><b>Alta:</b> hunting en identidad y cloud para credenciales de servicio, secretos de aplicaciones y anomalias de M365 / Entra.</li>
+          <li><b>Alta:</b> reforzar MFA, privilegios y acceso administrativo sobre edge, backup, correo y VPN.</li>
+          <li><b>Media:</b> endurecer movimiento lateral: RMM, PsExec, RDP y exclusiones AV fuera de procesos aprobados.</li>
+          <li><b>Baja:</b> refrescar concienciacion anti-phishing y pruebas de restauracion de backup.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel footer">
+      <div><b>Fuentes base:</b> CISA KEV y advisories, NVD, INCIBE, CCN-CERT, ENISA, Fortinet y Unit 42.</div>
+      <div style="margin-top:8px;">Nota metodologica: los KPIs reflejan una muestra priorizada y verificada para este corte operativo, no un censo global del ecosistema.</div>
+      <div style="margin-top:8px;">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</div>
+    </section>
+  </div>
+</body>
+</html>
