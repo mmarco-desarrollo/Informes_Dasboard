@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe Ejecutivo de Ciberseguridad - PRUEBA</title>
+  <style>
+    :root {
+      --bg: #09111f;
+      --panel: #101b2d;
+      --panel-2: #13233c;
+      --text: #eef4ff;
+      --muted: #98abc8;
+      --accent: #2ad7a3;
+      --warn: #ffb44d;
+      --danger: #ff5d73;
+      --line: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(42,215,163,0.14), transparent 28%),
+        linear-gradient(180deg, #09111f 0%, #07101c 100%);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+    .hero {
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(19,35,60,0.96), rgba(11,22,39,0.96));
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,93,115,0.14);
+      color: #ffd7de;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    h1 {
+      margin: 14px 0 8px;
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.03;
+    }
+    .sub {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .meta, .grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .meta {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(16,27,45,0.9);
+      border-radius: 16px;
+      padding: 18px;
+      min-height: 140px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .value {
+      margin-top: 10px;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .critical { color: var(--danger); }
+    .high { color: var(--warn); }
+    .ok { color: var(--accent); }
+    h2 {
+      margin: 30px 0 14px;
+      font-size: 22px;
+    }
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(16,27,45,0.9);
+    }
+    th, td {
+      padding: 14px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      color: #d9e6ff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(19,35,60,0.9);
+    }
+    td {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer {
+      margin-top: 24px;
+      color: #9aaec9;
+      font-size: 13px;
+      line-height: 1.6;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">PRUEBA INTERNA · DATOS FICTICIOS · NO USAR OPERATIVAMENTE</span>
+      <h1>MMarco Seguridad<br>Informe Ejecutivo de Ciberseguridad</h1>
+      <p class="sub">
+        Ejemplo de dashboard de validacion. Este contenido es inventado a proposito para probar generacion,
+        persistencia externa y entrega por Gmail y Slack. No contiene datos reales ni debe interpretarse como inteligencia operativa.
+      </p>
+      <div class="meta">
+        <div class="card"><div class="label">Fecha y hora</div><div class="value">2026-05-11 19:18:29 CEST</div></div>
+        <div class="card"><div class="label">Zona horaria</div><div class="value">Europe/Madrid</div></div>
+        <div class="card"><div class="label">Nivel global de amenaza</div><div class="value critical">ALTO - PRUEBA</div></div>
+        <div class="card"><div class="label">Estado IA de riesgo</div><div class="value high">Estimativo</div></div>
+      </div>
+    </section>
+
+    <h2>KPIs simulados</h2>
+    <div class="grid">
+      <div class="card"><div class="label">Incidentes activos</div><div class="value">7</div></div>
+      <div class="card"><div class="label">Incidentes criticos</div><div class="value critical">2</div></div>
+      <div class="card"><div class="label">Vulnerabilidades nuevas</div><div class="value">12</div></div>
+      <div class="card"><div class="label">Campanas de phishing</div><div class="value">4</div></div>
+      <div class="card"><div class="label">Ransomware reportado</div><div class="value high">1</div></div>
+      <div class="card"><div class="label">Tendencia 24h</div><div class="value ok">+9% ficticio</div></div>
+    </div>
+
+    <h2>Resumen ejecutivo de prueba</h2>
+    <div class="card">
+      <ul>
+        <li>Escenario sintetico de prueba con exposicion elevada simulada para validar el flujo de entrega.</li>
+        <li>La prioridad ejecutiva ficticia es revisar superficie expuesta, accesos remotos y capacidad de parcheo.</li>
+        <li>Los sectores "afectados" y los vectores que aparecen aqui son meramente demostrativos.</li>
+        <li>La seccion IA se muestra solo como ejemplo de analisis predictivo estimativo.</li>
+      </ul>
+    </div>
+
+    <h2>Vulnerabilidades criticas simuladas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>CVE</th>
+          <th>Producto afectado</th>
+          <th>CVSS</th>
+          <th>Explotacion</th>
+          <th>Parche</th>
+          <th>Prioridad</th>
+          <th>Fuente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CVE-2099-0001</td>
+          <td>Aplicacion demo perimetral</td>
+          <td>9.8</td>
+          <td>Activa simulada</td>
+          <td>Disponible</td>
+          <td>Critica</td>
+          <td>Fuente ficticia de prueba</td>
+        </tr>
+        <tr>
+          <td>CVE-2099-0002</td>
+          <td>VPN de laboratorio</td>
+          <td>8.7</td>
+          <td>Indicio simulado</td>
+          <td>No verificado</td>
+          <td>Alta</td>
+          <td>Fuente ficticia de prueba</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Recomendacion ejecutiva principal</h2>
+    <div class="card">
+      <p class="sub" style="max-width:none;">
+        Tratar este artefacto solo como una prueba de canal. Si el flujo es correcto, el siguiente paso natural
+        seria sustituir estas cifras por datos recientes y trazables con fuentes oficiales.
+      </p>
+    </div>
+
+    <div class="footer">
+      Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos.
+      Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+    </div>
+  </div>
+</body>
+</html>
