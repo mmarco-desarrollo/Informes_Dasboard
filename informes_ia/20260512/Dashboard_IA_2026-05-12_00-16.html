@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo Nocturno de Inteligencia Artificial</title>
+  <style>
+    :root {
+      --bg:#07111f; --panel:#0c1729; --panel2:#101f35; --text:#eaf1ff;
+      --muted:#98a8c7; --line:#243755; --blue:#4da3ff; --purple:#8d5cff;
+      --green:#19d18c; --orange:#ff9c48; --red:#ff5f6d; --soft:#cdd9f5;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(77,163,255,.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(141,92,255,.18), transparent 24%),
+        linear-gradient(180deg, #06101d 0%, #091426 100%);
+    }
+    .wrap { width:min(1280px, calc(100% - 32px)); margin:0 auto; padding:28px 0 42px; }
+    .hero {
+      padding:28px; border:1px solid rgba(255,255,255,.08); border-radius:24px;
+      background:linear-gradient(135deg, rgba(12,23,41,.95), rgba(16,31,53,.88));
+      box-shadow:0 18px 60px rgba(0,0,0,.32); position:relative; overflow:hidden;
+    }
+    .hero:before {
+      content:""; position:absolute; inset:auto -80px -90px auto; width:260px; height:260px;
+      background:radial-gradient(circle, rgba(25,209,140,.18), transparent 70%);
+    }
+    .eyebrow { color:var(--blue); letter-spacing:.08em; text-transform:uppercase; font-size:12px; font-weight:700; }
+    h1 { margin:10px 0 12px; font-size:34px; line-height:1.08; }
+    .subgrid { display:grid; grid-template-columns:1.6fr 1fr; gap:20px; align-items:end; }
+    .hero-meta {
+      display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:16px; color:var(--soft); font-size:14px;
+    }
+    .hero-meta strong { display:block; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.07em; margin-bottom:4px; }
+    .hero-side {
+      border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:16px 18px; background:rgba(255,255,255,.03);
+    }
+    .hero-side .status { font-size:26px; font-weight:700; margin:6px 0 10px; }
+    .hero-side p { margin:0; color:var(--soft); line-height:1.5; }
+    .kpis { margin-top:18px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+    .metric-card, .card {
+      border:1px solid rgba(255,255,255,.07); background:rgba(10,20,36,.9); border-radius:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+    }
+    .metric-card { padding:18px; }
+    .metric-value { font-size:32px; font-weight:800; }
+    .metric-label { margin-top:4px; font-weight:600; }
+    .metric-note { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.45; }
+    .section { margin-top:18px; display:grid; gap:14px; }
+    .section-title { font-size:13px; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); padding:0 4px; }
+    .summary-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:14px; }
+    .card { padding:20px; }
+    .summary-list { margin:0; padding-left:18px; line-height:1.65; color:var(--soft); }
+    .activity-row { display:grid; grid-template-columns:180px 1fr 56px; gap:14px; align-items:center; margin-bottom:10px; }
+    .activity-label, .activity-level { font-size:14px; color:var(--soft); }
+    .activity-bar { height:10px; border-radius:999px; background:#14243d; overflow:hidden; }
+    .activity-bar span { display:block; height:100%; border-radius:999px; background:linear-gradient(90deg, var(--blue), var(--green)); }
+    .triple { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .mini-card p, .item-card p, .incident-card p { color:var(--soft); line-height:1.55; }
+    .mini-title { font-weight:700; margin-bottom:10px; }
+    .items-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .item-head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:10px; }
+    .item-head h3 { margin:0; font-size:20px; line-height:1.22; }
+    .meta-row { display:flex; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:13px; margin-bottom:10px; }
+    .quick { color:#fff; }
+    .badge {
+      display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px; font-size:11px;
+      text-transform:uppercase; letter-spacing:.06em; font-weight:700; border:1px solid transparent;
+    }
+    .badge.green { color:#9ef1cb; background:rgba(25,209,140,.12); border-color:rgba(25,209,140,.25); }
+    .badge.orange { color:#ffc589; background:rgba(255,156,72,.12); border-color:rgba(255,156,72,.25); }
+    .badge.red { color:#ffb4ba; background:rgba(255,95,109,.12); border-color:rgba(255,95,109,.25); }
+    .badge.blue { color:#b7d8ff; background:rgba(77,163,255,.12); border-color:rgba(77,163,255,.25); }
+    .badge.purple { color:#dbc8ff; background:rgba(141,92,255,.12); border-color:rgba(141,92,255,.25); }
+    a { color:#84bdff; text-decoration:none; }
+    .alert-stack { display:grid; gap:12px; }
+    .alert-row {
+      display:grid; grid-template-columns:1fr 1fr; gap:18px; border-top:1px solid rgba(255,255,255,.06); padding-top:12px;
+    }
+    .alert-row:first-child { border-top:none; padding-top:0; }
+    .alert-title { font-size:16px; font-weight:700; }
+    .alert-detail, .alert-rec { color:var(--soft); line-height:1.55; }
+    .rec-list { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+    .rec-list li { display:grid; grid-template-columns:90px 1fr; gap:14px; align-items:start; }
+    .rec-list span {
+      color:var(--bg); background:linear-gradient(90deg, var(--orange), #ffd38a); border-radius:999px; text-align:center;
+      font-size:11px; font-weight:800; padding:7px 8px; text-transform:uppercase; letter-spacing:.08em;
+    }
+    .rec-list p { margin:0; color:var(--soft); line-height:1.55; }
+    .timeline-row {
+      display:grid; grid-template-columns:220px 1fr 120px; gap:16px; padding:12px 0; border-top:1px solid rgba(255,255,255,.06);
+      color:var(--soft);
+    }
+    .timeline-row:first-child { border-top:none; padding-top:0; }
+    .timeline-date { font-weight:700; color:var(--text); }
+    .timeline-type { text-transform:uppercase; letter-spacing:.08em; color:var(--muted); font-size:12px; }
+    .sources { margin:0; padding-left:18px; color:var(--soft); line-height:1.8; }
+    .footer {
+      margin-top:18px; padding:18px 20px; color:var(--muted); font-size:13px; line-height:1.6;
+      border:1px solid rgba(255,255,255,.07); border-radius:18px; background:rgba(255,255,255,.03);
+    }
+    @media (max-width: 980px) {
+      .subgrid, .summary-grid, .items-grid, .triple, .kpis, .alert-row { grid-template-columns:1fr; }
+      .activity-row { grid-template-columns:1fr; }
+      .timeline-row { grid-template-columns:1fr; gap:8px; }
+      h1 { font-size:28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="subgrid">
+        <div>
+          <div class="eyebrow">MMarco Seguridad · Radar Ejecutivo IA</div>
+          <h1>Informe Ejecutivo Nocturno de Inteligencia Artificial</h1>
+          <p style="color:var(--soft);max-width:780px;line-height:1.6;">Resumen nocturno compacto con foco en cambios acumulados, incidentes, vulnerabilidades, riesgos y recomendaciones.</p>
+          <div class="hero-meta">
+            <div><strong>Generado</strong>2026-05-12 00:16:35 CEST</div>
+            <div><strong>Zona horaria</strong>Europe/Madrid</div>
+            <div><strong>Nivel de impacto IA</strong>Alto vigilado</div>
+            <div><strong>Proxima actualizacion</strong>Siguiente ejecucion programada matinal</div>
+            <div><strong>Estado global</strong>Estable con presion operativa en seguridad agentic y migraciones</div>
+            <div><strong>Perfil corporativo</strong>Ciberseguridad, Blockchain, IA y Telecomunicaciones</div>
+          </div>
+        </div>
+        <aside class="hero-side">
+          <div class="eyebrow">Lectura nocturna</div>
+          <div class="status">Riesgo alto, entorno estable</div>
+          <p>Sin shock competitivo nuevo confirmado. La prioridad real sigue en seguridad agentic, continuidad de APIs y migraciones con fecha cerrada.</p>
+        </aside>
+      </div>
+      <div class="kpis">
+    <div class="metric-card">
+      <div class="metric-value">3</div>
+      <div class="metric-label">Alertas criticas activas</div>
+      <div class="metric-note">2 CVE criticas + 1 migracion inminente</div>
+    </div>
+    
+    <div class="metric-card">
+      <div class="metric-value">4</div>
+      <div class="metric-label">Cambios acumulados utiles</div>
+      <div class="metric-note">voz, modelo abierto, finanzas agentic, safeguards</div>
+    </div>
+    
+    <div class="metric-card">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Incidentes operativos recientes</div>
+      <div class="metric-note">OpenAI Responses API ya resuelto</div>
+    </div>
+    
+    <div class="metric-card">
+      <div class="metric-value">1</div>
+      <div class="metric-label">Ventanas regulatorias abiertas</div>
+      <div class="metric-note">consulta AI Act abierta hasta 03 Jun</div>
+    </div>
+    </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Resumen Ejecutivo</div>
+      <div class="summary-grid">
+        <div class="card">
+          <ul class="summary-list"><li>No se confirma una ruptura competitiva nueva en la franja nocturna; el valor operativo sigue concentrado en continuidad, seguridad de agentes y ventanas de migracion ya fechadas.</li><li>La prioridad inmediata es revisar dependencias y conectores: xAI retira modelos el 15 de mayo, y Semantic Kernel mantiene dos vulnerabilidades criticas que afectan tanto SDK .NET como Python.</li><li>En paralelo, el bloque de oportunidad sigue siendo claro: voz en tiempo real de OpenAI, Opus 4.7 con safeguards de ciberseguridad, Mistral Small 4 en licencia Apache 2.0 y Finance Search de Perplexity para flujos de analisis asistido.</li></ul>
+        </div>
+        <div class="card">
+          <div class="mini-title">Evolucion de actividad IA</div>
+          
+        <div class="activity-row">
+          <div class="activity-label">Seguridad agentic</div>
+          <div class="activity-bar"><span style="width:92%"></span></div>
+          <div class="activity-level">92%</div>
+        </div>
+        
+        <div class="activity-row">
+          <div class="activity-label">Modelos y lanzamientos</div>
+          <div class="activity-bar"><span style="width:74%"></span></div>
+          <div class="activity-level">74%</div>
+        </div>
+        
+        <div class="activity-row">
+          <div class="activity-label">Regulacion y compliance</div>
+          <div class="activity-bar"><span style="width:78%"></span></div>
+          <div class="activity-level">78%</div>
+        </div>
+        
+        <div class="activity-row">
+          <div class="activity-label">Incidentes de continuidad</div>
+          <div class="activity-bar"><span style="width:38%"></span></div>
+          <div class="activity-level">38%</div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Vista Global</div>
+      <div class="triple">
+        <div class="card mini-card">
+          <div class="mini-title">EE. UU. / Labs frontier</div>
+          <span class="badge green">hecho confirmado</span>
+          <p>Continua el empuje hacia agentes con voz, tool calling y workflows de larga duracion.</p>
+        </div>
+        
+        <div class="card mini-card">
+          <div class="mini-title">UE / Regulacion</div>
+          <span class="badge green">hecho confirmado</span>
+          <p>La consulta de transparencia del AI Act pasa a ser la ventana regulatoria mas accionable de corto plazo.</p>
+        </div>
+        
+        <div class="card mini-card">
+          <div class="mini-title">Open source / Infra</div>
+          <span class="badge purple">interpretacion ejecutiva</span>
+          <p>La ventaja competitiva nocturna sigue en modelos abiertos eficientes y serializacion segura.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Cambios Acumulados</div>
+      <div class="items-grid">
+        <article class="card item-card">
+          <div class="item-head">
+            <h3>OpenAI consolida la apuesta por voz operativa</h3>
+            <span class="badge orange">ALTO</span>
+          </div>
+          <div class="meta-row">
+            <span class="badge green">hecho confirmado</span>
+            <span>2026-05-07</span>
+            <span>lanzamiento</span>
+          </div>
+          <p>GPT-Realtime-2, GPT-Realtime-Translate y GPT-Realtime-Whisper refuerzan asistentes que escuchan, razonan y actuan en tiempo real.</p>
+          <p class="quick">Valor inmediato para soporte, recepcion multilingue y automatizacion con voz.</p>
+          <a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">Fuente oficial</a>
+        </article>
+        
+        <article class="card item-card">
+          <div class="item-head">
+            <h3>Claude Opus 4.7 eleva rendimiento con safeguards cyber</h3>
+            <span class="badge orange">ALTO</span>
+          </div>
+          <div class="meta-row">
+            <span class="badge green">hecho confirmado</span>
+            <span>2026-04-16</span>
+            <span>modelo</span>
+          </div>
+          <p>Mejora en tareas complejas y despliegue inicial de bloqueos para usos ciber de alto riesgo.</p>
+          <p class="quick">Interesante para I+D defensiva, pero con control de acceso y validacion de uso legitimo.</p>
+          <a href="https://www.anthropic.com/news/claude-opus-4-7">Fuente oficial</a>
+        </article>
+        
+        <article class="card item-card">
+          <div class="item-head">
+            <h3>Mistral Small 4 consolida una opcion abierta util</h3>
+            <span class="badge orange">ALTO</span>
+          </div>
+          <div class="meta-row">
+            <span class="badge green">hecho confirmado</span>
+            <span>2026-05</span>
+            <span>modelo abierto</span>
+          </div>
+          <p>Unifica razonamiento, multimodalidad y coding agentic con licencia Apache 2.0 y 256k de contexto.</p>
+          <p class="quick">Candidato serio para pruebas soberanas on-prem y copilotos internos.</p>
+          <a href="https://mistral.ai/news/mistral-small-4">Fuente oficial</a>
+        </article>
+        
+        <article class="card item-card">
+          <div class="item-head">
+            <h3>Perplexity activa Finance Search en Agent API</h3>
+            <span class="badge blue">MEDIO-ALTO</span>
+          </div>
+          <div class="meta-row">
+            <span class="badge green">hecho confirmado</span>
+            <span>2026-05-06</span>
+            <span>herramienta</span>
+          </div>
+          <p>Extiende workflows agentic hacia analisis financiero con informacion estructurada.</p>
+          <p class="quick">Oportunidad para servicios de inteligencia comercial y analisis de mercado asistido.</p>
+          <a href="https://www.perplexity.ai/hub">Fuente oficial</a>
+        </article>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Incidentes, Vulnerabilidades y Alertas</div>
+      <div class="items-grid">
+        <article class="card incident-card">
+          <div class="item-head">
+            <h3>CVE-2026-26030</h3>
+            <span class="badge red">Critica</span>
+          </div>
+          <p><strong>Producto:</strong> Microsoft Semantic Kernel Python SDK</p>
+          <p><strong>Impacto:</strong> RCE en InMemoryVectorStore filter functionality.</p>
+          <p><strong>Mitigacion:</strong> Actualizar a 1.39.4 o superior; evitar InMemoryVectorStore en produccion.</p>
+          <a href="https://github.com/advisories/GHSA-xjw9-4gw8-4rqx">Ver referencia</a>
+        </article>
+        
+        <article class="card incident-card">
+          <div class="item-head">
+            <h3>CVE-2026-25592</h3>
+            <span class="badge red">Critica</span>
+          </div>
+          <p><strong>Producto:</strong> Microsoft Semantic Kernel .NET SDK</p>
+          <p><strong>Impacto:</strong> Arbitrary File Write en SessionsPythonPlugin / function calling.</p>
+          <p><strong>Mitigacion:</strong> Actualizar a 1.71.0 o superior y aplicar allow list en localFilePath.</p>
+          <a href="https://osv.dev/vulnerability/GHSA-2ww3-72rp-wpp4">Ver referencia</a>
+        </article>
+        
+        <article class="card incident-card">
+          <div class="item-head">
+            <h3>OpenAI Responses API - errores 404 elevados</h3>
+            <span class="badge blue">Media</span>
+          </div>
+          <p><strong>Producto:</strong> OpenAI Responses API - errores 404 elevados</p>
+          <p><strong>Impacto:</strong> Interrupcion parcial de continuidad para clientes del endpoint Responses API.</p>
+          <p><strong>Mitigacion:</strong> No hay incidencia activa; conviene reforzar retry logic y monitorizar despliegues dependientes.</p>
+          <a href="https://status.openai.com/incidents/01KR50YN2DBMTXGPC6BQSJN48J">Ver referencia</a>
+        </article>
+        </div>
+      <div class="card">
+        <div class="mini-title">Alertas activas</div>
+        <div class="alert-stack">
+        <div class="alert-row">
+          <div>
+            <div class="alert-title">xAI retirement window</div>
+            <div class="alert-detail">Retirada efectiva el 15 May 2026 21:00 CEST. Quedan aprox. 3d 20h.</div>
+          </div>
+          <div class="alert-rec">Inventariar dependencias Grok y programar cambio de modelo antes de la ventana.</div>
+        </div>
+        
+        <div class="alert-row">
+          <div>
+            <div class="alert-title">AI Act transparency consultation</div>
+            <div class="alert-detail">Consulta publicada el 08 May 2026 y abierta hasta el 03 Jun 2026.</div>
+          </div>
+          <div class="alert-rec">Preparar posicion interna sobre etiquetado, deepfakes y sistemas de informacion a usuarios.</div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Oportunidades y Recomendaciones</div>
+      <div class="triple">
+        <div class="card mini-card">
+          <div class="mini-title">Piloto de voz transaccional para soporte o recepcion</div>
+          <span class="badge orange">Alta</span>
+          <p>Los nuevos modelos realtime de OpenAI ya encajan con atención multilingue y automatizacion de tareas.</p>
+        </div>
+        
+        <div class="card mini-card">
+          <div class="mini-title">Sandbox local con Mistral Small 4 para analisis documental seguro</div>
+          <span class="badge orange">Alta</span>
+          <p>Reduce dependencia externa y facilita pruebas soberanas en ciberseguridad y consultoria.</p>
+        </div>
+        
+        <div class="card mini-card">
+          <div class="mini-title">Servicios premium de vigilancia regulatoria AI Act</div>
+          <span class="badge blue">Media</span>
+          <p>La consulta abierta permite convertir compliance en oferta de acompanamiento y auditoria ligera.</p>
+        </div>
+        </div>
+      <div class="card">
+        <div class="mini-title">Recomendaciones ejecutivas</div>
+        <ul class="rec-list"><li><span>Critica</span><p>Revisar esta noche o primera hora SDKs y agentes basados en Semantic Kernel; bloquear despliegues sobre versiones vulnerables.</p></li><li><span>Alta</span><p>Cerrar un inventario de integraciones xAI antes del 13 de mayo y asignar modelo sustituto por workload.</p></li><li><span>Alta</span><p>Evaluar un caso de uso de voz operativa con OpenAI y definir guardrails de aprobacion, logs y fallback humano.</p></li><li><span>Media</span><p>Preparar una nota comercial sobre AI Act transparencia para clientes pyme con foco en bots, sinteticos y reputacion.</p></li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Calendario IA</div>
+      <div class="card">
+        <div class="timeline-row">
+          <div class="timeline-date">2026-05-15 21:00 CEST</div>
+          <div class="timeline-event">Retirada efectiva de modelos Grok heredados en xAI API</div>
+          <div class="timeline-type">operativo</div>
+        </div>
+        
+        <div class="timeline-row">
+          <div class="timeline-date">2026-06-03</div>
+          <div class="timeline-event">Cierre de consulta UE sobre transparencia del AI Act</div>
+          <div class="timeline-type">regulatorio</div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Fuentes Verificadas</div>
+      <div class="card"><ul class="sources"><li><a href="https://status.openai.com/incidents/01KR50YN2DBMTXGPC6BQSJN48J">OpenAI Status - Responses API incident resolved</a></li><li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">OpenAI - Advancing voice intelligence with new models in the API</a></li><li><a href="https://www.anthropic.com/news/claude-opus-4-7">Anthropic - Introducing Claude Opus 4.7</a></li><li><a href="https://docs.x.ai/developers/migration/may-15-retirement">xAI Docs - Grok model retirement on May 15, 2026</a></li><li><a href="https://mistral.ai/news/mistral-small-4">Mistral AI - Introducing Mistral Small 4</a></li><li><a href="https://www.perplexity.ai/hub">Perplexity Hub - Finance Search in the Agent API</a></li><li><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act">European Commission - AI Act transparency consultation</a></li><li><a href="https://github.com/advisories/GHSA-xjw9-4gw8-4rqx">GitHub Advisory - CVE-2026-26030</a></li><li><a href="https://osv.dev/vulnerability/GHSA-2ww3-72rp-wpp4">OSV / GitHub Advisory mirror - CVE-2026-25592</a></li></ul></div>
+    </section>
+
+    <footer class="footer">
+      <strong>MMarco Seguridad</strong><br />
+      Manuel Marco Sanchez · https://mmarcoseguridad.com · mmarco.seguridad@gmail.com · WhatsApp +34 656 33 93 55<br /><br />
+      Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.
+    </footer>
+  </div>
+</body>
+</html>
