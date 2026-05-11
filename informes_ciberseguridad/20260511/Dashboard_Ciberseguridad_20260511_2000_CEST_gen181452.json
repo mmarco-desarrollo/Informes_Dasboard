@@ -1,1 +1,386 @@
-PLACEHOLDER_JSON
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sánchez",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "generated_at": "2026-05-11T20:00:00+02:00",
+    "timezone": "Europe/Madrid",
+    "global_threat_level": "ALTA",
+    "next_update": "2026-05-12T08:00:00+02:00",
+    "ai_risk_state": "Elevado con probabilidad alta de continuidad en 72h",
+    "report_scope": "Ventana priorizada de señales y vulnerabilidades con evidencia reciente y fiable"
+  },
+  "kpis": {
+    "incidentes_activos_priorizados": 5,
+    "incidentes_criticos_priorizados": 3,
+    "vulnerabilidades_nuevas_priorizadas": 6,
+    "cves_criticas_priorizadas": 4,
+    "familias_malware_referenciadas": 5,
+    "campanas_phishing_referenciadas": 2,
+    "eventos_ddos_hacktivismo_relevantes": 1,
+    "ransomware_referenciado": 2,
+    "riesgo_global": "Alta",
+    "tendencia_24h": "Al alza",
+    "paises_mas_afectados": "Sin consolidado fiable único; foco observable en entornos occidentales, cloud/SaaS y perímetro expuesto"
+  },
+  "executive_summary": {
+    "estado_global": "El panorama permanece en nivel alto por la coincidencia de explotación activa o altamente prioritaria sobre Linux, firewalls, plataformas de acceso remoto y gestión empresarial.",
+    "riesgos_principales": [
+      "Escalada de privilegios en Linux tras compromiso inicial con evidencia de actividad real asociada a Dirty Frag.",
+      "RCE sin autenticación o bypass en appliances y plataformas expuestas a Internet: PAN-OS Captive Portal, Ivanti EPMM, BeyondTrust y productos Fortinet con FortiCloud SSO.",
+      "Persistencia del robo de credenciales y entrega de malware a través de phishing temático y abuso de marcas de confianza.",
+      "Aumento del riesgo de payloads disfrazados como herramientas de IA y del uso de extensiones o instaladores fraudulentos."
+    ],
+    "sectores_mas_afectados": [
+      "Logística y transporte",
+      "Utilities y software de facturación",
+      "Salud",
+      "Entornos industriales/OT",
+      "Cloud/SaaS"
+    ],
+    "tecnicas_mas_usadas": [
+      "RCE preautenticación",
+      "LPE post-compromiso",
+      "Phishing con QR y acortadores",
+      "Abuso de OAuth/secretos",
+      "Instaladores fraudulentos"
+    ],
+    "nivel_exposicion_estimado": "Elevado para organizaciones con Linux expuesto o con acceso local indirecto, firewalls/portales de autenticación publicados, y suites de gestión remota sin parchear.",
+    "recomendacion_principal": "Ejecutar en menos de 24 horas una revisión focalizada de exposición externa y aplicar mitigaciones/parches sobre Linux kernel, PAN-OS Captive Portal, Ivanti EPMM, BeyondTrust y Fortinet con FortiCloud SSO.",
+    "conclusion_rapida": [
+      "La presión ofensiva sigue favoreciendo el perímetro y el post-compromiso sobre Linux.",
+      "La combinación de phishing, robo de sesión y abuso de secretos mantiene un riesgo alto para SaaS y M365.",
+      "El entorno español sigue mostrando gran peso de phishing, malware y sistemas vulnerables según INCIBE.",
+      "La prioridad operativa debe centrarse en reducir exposición externa y acelerar parcheo de KEV y RCE críticas."
+    ]
+  },
+  "active_alerts": [
+    {
+      "title": "Dirty Frag en Linux con actividad limitada observada",
+      "status": "Hecho confirmado",
+      "urgency": "Crítica",
+      "details": "Microsoft describe una campaña activa en investigación con indicios de explotación de Dirty Frag/Copy Fail tras acceso local previo. Parches para CVE-2026-43284 publicados el 8 de mayo; el componente RxRPC asociado seguía sin parche en esa fecha.",
+      "sources": [
+        1,
+        2
+      ]
+    },
+    {
+      "title": "PAN-OS Captive Portal: RCE sin autenticación",
+      "status": "Hecho confirmado",
+      "urgency": "Crítica",
+      "details": "NVD describe CVE-2026-0300 como desbordamiento en el portal User-ID/Captive Portal que permite ejecución arbitraria con privilegios root. Riesgo especialmente alto si el portal está accesible desde IPs no confiables.",
+      "sources": [
+        3,
+        4
+      ]
+    },
+    {
+      "title": "Fortinet/FortiCloud SSO: autenticación cruzada entre dispositivos",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "details": "CVE-2026-24858 figura en KEV de CISA. Afecta a múltiples productos Fortinet cuando FortiCloud SSO está habilitado; permite acceso a dispositivos registrados en otras cuentas.",
+      "sources": [
+        7
+      ]
+    },
+    {
+      "title": "Ivanti EPMM y BeyondTrust siguen siendo referencias de máxima prioridad",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "details": "CVE-2026-1281 y CVE-2026-1731 están en KEV y mantienen perfil de alto valor para atacantes por su capacidad de RCE o inyección previa a autenticación en plataformas de administración remota.",
+      "sources": [
+        5,
+        6
+      ]
+    },
+    {
+      "title": "Phishing y malware siguen usando marcas de confianza y temática estacional",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "details": "Microsoft mantiene observación sobre campañas con QR, acortadores y páginas falsas de DocuSign/IRS; Talos documenta ransomware y loaders camuflados como instaladores de herramientas de IA.",
+      "sources": [
+        11,
+        12
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS User-ID / Captive Portal",
+      "cvss": "N/D en NVD; impacto crítico",
+      "severity": "Crítica",
+      "exploitation": "Alta prioridad / amenaza de alto perfil",
+      "patch": "Validar parche del proveedor y restringir acceso a IPs internas confiables",
+      "priority": "Crítica",
+      "source_ids": [
+        3,
+        4
+      ]
+    },
+    {
+      "cve": "CVE-2026-43284",
+      "product": "Linux kernel (Dirty Frag)",
+      "cvss": "N/D en NVD",
+      "severity": "Alta",
+      "exploitation": "Actividad limitada observada por Microsoft",
+      "patch": "Parches del kernel publicados el 2026-05-08",
+      "priority": "Crítica",
+      "source_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "cve": "CVE-2026-1731",
+      "product": "BeyondTrust Remote Support / PRA",
+      "cvss": "9.8 (NVD)",
+      "severity": "Crítica",
+      "exploitation": "En KEV; explotación observada y tooling post-explotación reportado",
+      "patch": "Boletín BT26-02 del proveedor",
+      "priority": "Crítica",
+      "source_ids": [
+        5,
+        4
+      ]
+    },
+    {
+      "cve": "CVE-2026-1281",
+      "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+      "cvss": "9.8 (CNA Ivanti)",
+      "severity": "Crítica",
+      "exploitation": "En KEV; RCE no autenticada",
+      "patch": "Actualización de Ivanti; seguimiento CCN-CERT",
+      "priority": "Crítica",
+      "source_ids": [
+        6
+      ]
+    },
+    {
+      "cve": "CVE-2026-24858",
+      "product": "Fortinet múltiples productos con FortiCloud SSO",
+      "cvss": "9.8 (Fortinet/NVD)",
+      "severity": "Crítica",
+      "exploitation": "En KEV; explotación activa alertada por CCN-CERT",
+      "patch": "Actualizar según FG-IR-26-060 y revisar SSO",
+      "priority": "Alta",
+      "source_ids": [
+        7
+      ]
+    },
+    {
+      "cve": "CVE-2026-35225",
+      "product": "CODESYS EtherNetIP",
+      "cvss": "Alta",
+      "severity": "Alta",
+      "exploitation": "Sin explotación confirmada en la fuente revisada",
+      "patch": "Actualizar a 4.9.0.0",
+      "priority": "Alta para OT",
+      "source_ids": [
+        8
+      ]
+    }
+  ],
+  "malware_and_ransomware": {
+    "families": [
+      "Latrodectus",
+      "Remcos",
+      "AHKBot",
+      "Lucky_Gh0'st",
+      "CyberLock"
+    ],
+    "target_sectors": [
+      "Usuarios corporativos con correo/M365",
+      "Pymes",
+      "Salud",
+      "OT/industrial",
+      "Entornos Windows"
+    ],
+    "techniques": [
+      "Phishing con PDF/QR",
+      "MSI/JS loaders",
+      "Abuso de herramientas legítimas",
+      "Borrado de espacio libre con cipher.exe",
+      "Persistencia por scheduled tasks"
+    ],
+    "trend": "Estable-al alza en ingeniería social y loaders; presión creciente sobre robo de sesión y credenciales",
+    "propagation_level": "Moderado con alto impacto potencial en organizaciones poco segmentadas",
+    "sources": [
+      11,
+      12
+    ]
+  },
+  "relevant_news": [
+    {
+      "title": "Google lleva Binary Transparency al ecosistema Android",
+      "date": "2026-05-04",
+      "why_it_matters": "Reduce riesgo de manipulación silenciosa del software firmado y fortalece la confianza en la cadena de suministro móvil.",
+      "source_ids": [
+        10
+      ]
+    },
+    {
+      "title": "Unit 42 destaca aceleración de brechas impulsadas por IA, identidad y complejidad",
+      "date": "2026-02-17",
+      "why_it_matters": "Refuerza que el vector identidad y la superficie SaaS/cloud deben seguir en primera línea ejecutiva.",
+      "source_ids": [
+        4
+      ]
+    },
+    {
+      "title": "INCIBE consolida un fuerte incremento de incidentes en España durante 2025",
+      "date": "2026-02-09",
+      "why_it_matters": "Proporciona señal local de volumen: 122.223 incidentes, 55.411 relacionados con malware y 25.133 de phishing.",
+      "source_ids": [
+        9
+      ]
+    }
+  ],
+  "spain_context": {
+    "confirmed_points": [
+      "INCIBE consolidó 122223 incidentes de ciberseguridad en 2025, un 26% más que en 2024.",
+      "55.411 incidentes estuvieron relacionados con malware y 25.133 con phishing.",
+      "INCIBE señala 237.028 sistemas vulnerables y que el 85% de sistemas infectados y controlados por botnet se relacionan con dispositivos inteligentes/IoT."
+    ],
+    "sources": [
+      9
+    ]
+  },
+  "executive_recommendations": {
+    "critica": [
+      "Inventariar y revisar de inmediato cualquier exposición de PAN-OS Captive Portal, BeyondTrust, Ivanti EPMM y Fortinet con FortiCloud SSO.",
+      "Aplicar o validar parches/mitigaciones de Linux kernel para Dirty Frag y reforzar controles de acceso local, SSH y contenedores.",
+      "Repriorizar patching según KEV y bloquear publicación a Internet de consolas o portales administrativos sin necesidad operativa."
+    ],
+    "alta": [
+      "Rotar secretos sensibles de SaaS/M365 y revisar service principals, OAuth apps y permisos elevados.",
+      "Reforzar controles anti-phishing con protección frente a QR, acortadores, páginas clonadas y archivos MSI/JS.",
+      "Aumentar detección de elevación de privilegios, uso anómalo de su/sudo y ejecución de binarios ELF o PowerShell no habituales."
+    ],
+    "media": [
+      "Revisar especialmente extensiones de navegador, instaladores de utilidades IA y software no corporativo en equipos de usuario.",
+      "Extender segmentación y mínimos privilegios a entornos OT/ICS y a dispositivos IoT con exposición lateral."
+    ],
+    "baja": [
+      "Planificar ejercicios de validación de integridad post-mitigación y simulacros ejecutivos ante secuestro de sesión o RCE en appliances."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo / estimativo",
+    "global_risk_estimate": "Alta",
+    "next_threats_prediction": [
+      "Continuidad de campañas de credenciales y sesión contra M365, SaaS y navegadores.",
+      "Más weaponización rápida de fallos en perimeter appliances y software de gestión remota.",
+      "Mayor uso de cebos relacionados con IA, productividad y utilidades para desplegar loaders y ransomware."
+    ],
+    "most_exposed_sectors": [
+      "Pymes con perímetro sin endurecer",
+      "Transporte/logística",
+      "Salud",
+      "Industria/OT",
+      "Servicios con M365/SaaS extensivo"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-0300",
+      "CVE-2026-43284",
+      "CVE-2026-1731",
+      "CVE-2026-1281",
+      "CVE-2026-24858"
+    ],
+    "attack_increase_probability": "Alta en 72h",
+    "automatic_recommendation": "Reducir superficie expuesta, cerrar brechas de identidad y completar un ciclo extraordinario de parcheo/mitigación en 24 horas."
+  },
+  "methodology": {
+    "confirmed_fact_definition": "Dato sustentado por una fuente oficial o un proveedor reconocido con detalles técnicos explícitos.",
+    "signal_definition": "Indicio o tendencia observada en más de una fuente o en un boletín de investigación, sin equivaler a impacto universal.",
+    "ai_estimate_definition": "Inferencia de priorización realizada a partir del conjunto de fuentes revisadas; no sustituye validación interna."
+  },
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.",
+  "sources": [
+    {
+      "id": 1,
+      "title": "Microsoft Security Blog: Dirty Frag active attack",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/",
+      "date": "2026-05-08",
+      "type": "Vendor research"
+    },
+    {
+      "id": 2,
+      "title": "NVD: CVE-2026-43284",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43284",
+      "date": "2026-05-08",
+      "type": "NVD"
+    },
+    {
+      "id": 3,
+      "title": "NVD: CVE-2026-0300 PAN-OS Captive Portal",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+      "date": "2026-05-06",
+      "type": "NVD"
+    },
+    {
+      "id": 4,
+      "title": "Unit 42 Latest Research Portal",
+      "url": "https://unit42.paloaltonetworks.com/",
+      "date": "2026-05-06",
+      "type": "Threat intelligence"
+    },
+    {
+      "id": 5,
+      "title": "NVD: CVE-2026-1731 BeyondTrust",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1731",
+      "date": "2026-02-06",
+      "type": "NVD"
+    },
+    {
+      "id": 6,
+      "title": "NVD: CVE-2026-1281 Ivanti EPMM",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1281",
+      "date": "2026-01-29",
+      "type": "NVD"
+    },
+    {
+      "id": 7,
+      "title": "NVD: CVE-2026-24858 Fortinet multiple products",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+      "date": "2026-01-27",
+      "type": "NVD"
+    },
+    {
+      "id": 8,
+      "title": "INCIBE-CERT: Boletines y avisos SCI / pymes NIS2",
+      "url": "https://www.incibe.es/incibe-cert/sectores-estrategicos/pymes-nis2/avisos-sci",
+      "date": "2026-05-05",
+      "type": "CERT España"
+    },
+    {
+      "id": 9,
+      "title": "INCIBE Balance de Ciberseguridad 2025",
+      "url": "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf",
+      "date": "2026-02-09",
+      "type": "Informe institucional"
+    },
+    {
+      "id": 10,
+      "title": "Google Security Blog: Binary transparency for Android ecosystem",
+      "url": "https://blog.google/security/bringing-binary-transparency-to-the-android-ecosystem/",
+      "date": "2026-05-04",
+      "type": "Vendor security"
+    },
+    {
+      "id": 11,
+      "title": "Microsoft Security Blog: tax-themed phishing campaigns",
+      "url": "https://www.microsoft.com/en-us/security/blog/2025/04/03/threat-actors-leverage-tax-season-to-deploy-tax-themed-phishing-campaigns/",
+      "date": "2025-04-03 / actualización 2026-03",
+      "type": "Vendor research"
+    },
+    {
+      "id": 12,
+      "title": "Cisco Talos: fake AI tool installers",
+      "url": "https://blog.talosintelligence.com/fake-ai-tool-installers/",
+      "date": "2025-05-29",
+      "type": "Threat research"
+    }
+  ]
+}
