@@ -1,0 +1,46 @@
+{
+  "brand": "MMarco Seguridad",
+  "generated_at": "2026-05-11 10:40:12 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "next_update": "11/05/2026 12:00 CEST",
+  "kpis": {
+    "incidentes_activos": 6,
+    "incidentes_criticos": 6,
+    "vulnerabilidades_nuevas": 7,
+    "cves_criticas": 6,
+    "malware_detectado": 1,
+    "campanas_phishing": 2,
+    "ataques_ddos": 0,
+    "ransomware_reportado_contexto_incibe_2025": 392,
+    "riesgo_global": "ALTO",
+    "tendencia_24h": "Estable+"
+  },
+  "priority_cves": [
+    {"cve": "CVE-2026-0300", "product": "Palo Alto PAN-OS User-ID Authentication Portal", "cvss": "9.8", "severity": "Critica", "exploitation": "Confirmada / KEV", "patch": "Si", "priority": "Inmediata"},
+    {"cve": "CVE-2026-42238", "product": "Nginx-UI", "cvss": "9.8", "severity": "Critica", "exploitation": "Exploit publico", "patch": "Si, 2.3.8", "priority": "Inmediata"},
+    {"cve": "CVE-2026-8076", "product": "CashDro 3", "cvss": "9.1", "severity": "Critica", "exploitation": "No confirmada", "patch": "Si, 26.01.00.16", "priority": "Alta"},
+    {"cve": "CVE-2026-0073", "product": "Android", "cvss": "8.8", "severity": "Alta", "exploitation": "No confirmada", "patch": "Si", "priority": "Alta"},
+    {"cve": "CVE-2026-20045", "product": "Cisco Unified Communications", "cvss": "9.8", "severity": "Critica", "exploitation": "KEV", "patch": "Si", "priority": "Inmediata"},
+    {"cve": "CVE-2026-33634", "product": "Aquasecurity Trivy", "cvss": "9.4", "severity": "Critica", "exploitation": "KEV", "patch": "Mitigaciones y rotacion de secretos", "priority": "Inmediata"},
+    {"cve": "CVE-2016-1000027", "product": "VMware Tanzu", "cvss": "N/D", "severity": "Critica", "exploitation": "No confirmada", "patch": "Si", "priority": "Alta"}
+  ],
+  "active_alerts": [
+    "Palo Alto CVE-2026-0300: explotacion confirmada y alta prioridad de mitigacion.",
+    "Cisco CVE-2026-20045 y Trivy CVE-2026-33634 en catalogo KEV de CISA.",
+    "CashDro 3 con actualizacion obligatoria a la rama soportada 26.01.00.16.",
+    "Campanas de phishing activas contra SumUp y falsas notificaciones de autoridad."
+  ],
+  "sources": [
+    {"label": "INCIBE-CERT Avisos", "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos", "note": "Listado de avisos criticos visibles el 11 de mayo de 2026."},
+    {"label": "INCIBE Balance 2025", "url": "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf", "note": "Contexto anual consolidado a 09/02/2026."},
+    {"label": "INCIBE SumUp phishing", "url": "https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup", "note": "Campana de phishing publicada el 17/04/2026."},
+    {"label": "INCIBE falsa Operacion Endgame", "url": "https://www.incibe.es/ciudadania/avisos/desconfia-de-supuestas-notificaciones-de-la-guardia-civil-y-europol-sobre-la", "note": "Phishing y extorsion publicado el 18/03/2026."},
+    {"label": "Android Security Bulletin May 2026", "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01", "note": "Boletin oficial publicado el 04/05/2026 y actualizado el 07/05/2026."},
+    {"label": "NVD CVE-2026-0300", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300", "note": "Palo Alto PAN-OS, CVSS 9.8 y entrada KEV."},
+    {"label": "NVD CVE-2026-42238", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42238", "note": "Nginx-UI, CVSS 9.8."},
+    {"label": "NVD CVE-2026-0073", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0073", "note": "Android wireless ADB, ADP 8.8."},
+    {"label": "NVD CVE-2026-20045", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20045", "note": "Cisco Unified Communications, CVE en KEV."},
+    {"label": "NVD CVE-2026-33634", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33634", "note": "Supply chain compromise de Trivy, CVSS 9.4."}
+  ]
+}
