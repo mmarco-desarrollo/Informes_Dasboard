@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Crypto Insights Executive | 2026-05-11 19:39</title>
+  <style>
+    :root {
+      --bg: #07111d;
+      --panel: #0d1a2a;
+      --panel2: #102238;
+      --line: #1d3958;
+      --text: #e8eef7;
+      --muted: #8ca0ba;
+      --bull: #16c784;
+      --bear: #ea3943;
+      --warn: #f0b90b;
+      --ai: #3aa8ff;
+      --soft: #d8e3f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 0 0, rgba(58,168,255,.16), transparent 32%),
+        radial-gradient(circle at 100% 0, rgba(22,199,132,.12), transparent 28%),
+        linear-gradient(180deg, #06101b 0%, #07111d 35%, #08131f 100%);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .shell {
+      width: min(1460px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 32px;
+    }
+    .header {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .brand, .hero-metrics, .panel {
+      border: 1px solid rgba(140,160,186,.18);
+      background: linear-gradient(180deg, rgba(13,26,42,.95), rgba(8,18,31,.95));
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .brand {
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand::after {
+      content: "";
+      position: absolute;
+      inset: auto -8% -35% auto;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(58,168,255,.18), transparent 68%);
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ai);
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+    .sub {
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 0 0 18px;
+    }
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .brand-grid div {
+      padding: 10px 12px;
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(140,160,186,.12);
+      border-radius: 12px;
+    }
+    .label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .value {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .hero-metrics {
+      padding: 18px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      align-content: start;
+    }
+    .stat {
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(140,160,186,.12);
+    }
+    .stat .big {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(58,168,255,.1);
+      color: var(--soft);
+    }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--ai);
+      box-shadow: 0 0 0 6px rgba(58,168,255,.12);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+    .panel {
+      padding: 18px;
+    }
+    .span-12 { grid-column: span 12; }
+    .span-8 { grid-column: span 8; }
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
+    .span-3 { grid-column: span 3; }
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: -2px;
+      margin-bottom: 14px;
+    }
+    ul.clean {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--soft);
+      line-height: 1.55;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .kpi {
+      padding: 14px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(16,34,56,.86), rgba(8,18,31,.92));
+      border: 1px solid rgba(140,160,186,.12);
+      min-height: 120px;
+    }
+    .kpi .big {
+      margin-top: 12px;
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .kpi p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .two-chart {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    svg { width: 100%; height: auto; display: block; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    thead th {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 10px 10px 12px;
+      border-bottom: 1px solid rgba(140,160,186,.12);
+      text-align: left;
+    }
+    tbody td {
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(140,160,186,.08);
+      font-size: 13px;
+      vertical-align: top;
+    }
+    tbody td span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 4px;
+    }
+    .pos { color: var(--bull); font-weight: 700; }
+    .neg { color: var(--bear); font-weight: 700; }
+    .flat { color: var(--soft); font-weight: 700; }
+    .scenario-grid, .signal-grid, .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .scenario-card, .signal-card, .news-card {
+      padding: 16px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+      border: 1px solid rgba(140,160,186,.12);
+      min-height: 220px;
+    }
+    .scenario-card header, .signal-card header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .scenario-card h4, .signal-card h4, .news-card h4 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .scenario-card header span, .signal-card header span {
+      color: var(--ai);
+      font-weight: 700;
+    }
+    .scenario-card p, .signal-card p, .news-card p {
+      margin: 8px 0 0;
+      color: var(--soft);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .signal-type {
+      color: var(--warn) !important;
+      font-weight: 700;
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 11px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .impact {
+      margin-top: 14px;
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(240,185,11,.2);
+      background: rgba(240,185,11,.1);
+      color: var(--warn);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .footer {
+      margin-top: 18px;
+      padding: 18px 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(140,160,186,.12);
+      background: rgba(255,255,255,.02);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    @media (max-width: 1180px) {
+      .header, .two-chart, .duo, .news-grid, .scenario-grid, .signal-grid { grid-template-columns: 1fr; }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .span-8, .span-6, .span-4, .span-3 { grid-column: span 12; }
+      .brand-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media print {
+      .shell { width: 100%; padding: 0; }
+      .brand, .hero-metrics, .panel, .footer { box-shadow: none; }
+      body { background: #07111d; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="header">
+      <div class="brand">
+        <div class="eyebrow">Crypto Insights Executive</div>
+        <h1>Informe Ejecutivo Premium del Mercado Cripto</h1>
+        <p class="sub">Mercado en consolidacion constructiva: BTC mantiene liderazgo, ETH sigue rezagado y las L1 muestran rebotes selectivos sin confirmacion plena de altseason.</p>
+        <div class="brand-grid">
+          <div><span class="label">Marca</span><span class="value">MMarco Seguridad</span></div>
+          <div><span class="label">Edicion</span><span class="value">Edicion 19:39 CEST</span></div>
+          <div><span class="label">Generado</span><span class="value">2026-05-11 19:39:07 CEST</span></div>
+          <div><span class="label">Proxima</span><span class="value">Edicion nocturna programada | 00:00 CEST</span></div>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        <div class="stat">
+          <span class="label">Estado general</span>
+          <div class="big">Neutral-alcista</div>
+          <div class="small-note">BTC lidera, alts rebotan de forma selectiva.</div>
+        </div>
+        <div class="stat">
+          <span class="label">Fear &amp; Greed</span>
+          <div class="big">47 / 100</div>
+          <div class="small-note">Neutral</div>
+        </div>
+        <div class="stat">
+          <span class="label">IA Market State</span>
+          <div class="big">Neutral-alcista</div>
+          <div class="small-note">Funding sin euforia, macro aun restrictiva.</div>
+        </div>
+        <div class="stat">
+          <span class="label">Riesgo operativo</span>
+          <div class="big">Medio</div>
+          <div class="small-note">CPI + seguridad DeFi + resistencia fuerte en BTC.</div>
+        </div>
+        <div class="stat" style="grid-column: span 2;">
+          <span class="status-chip"><span class="status-dot"></span> Dashboard institucional | HTML + PDF</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel span-6">
+        <h2>Resumen ejecutivo</h2>
+        <ul class="clean"><li>Bitcoin cotiza cerca de 81.9k con dominancia del 58.3%, manteniendo el liderazgo relativo del mercado mientras el sentimiento agregado sigue en zona neutral.</li><li>Ethereum permanece rezagado frente a BTC con caida semanal de -0.6%; la retirada de 21,271 ETH por parte de la Ethereum Foundation enfria el sesgo tactico.</li><li>Solana, BNB, XRP y ADA concentran la mejor resiliencia relativa entre majors, pero el Altcoin Season Index sigue en 48 y no confirma rotacion amplia.</li><li>El catalizador macro inmediato es el CPI de EEUU del martes 12 de mayo; la Fed dejo tipos sin cambios el 29 de abril, manteniendo sensibilidad alta a datos.</li></ul>
+      </article>
+
+      <article class="panel span-6">
+        <h2>Ballenas y flujo de capital</h2>
+        <ul class="clean"><li>Flujo institucional: los ETFs spot de BTC cerraron abril con 1.97B USD de entradas, el mejor mes del ano.</li><li>Flujo de tesoreria: Ethereum Foundation retiro 21,271 ETH del staking para rebalanceo.</li><li>Derivados BTC: open interest en 59.77B USD y futures volume en 62.56B USD, con funding mixto y sin euforia generalizada.</li><li>Nota operativa: no se localizaron con confianza suficiente datos agregados de liquidaciones 24h reutilizables para un KPI exacto.</li></ul>
+      </article>
+
+      <article class="panel span-12">
+        <h2>KPIs principales</h2>
+        <div class="kpi-grid">
+          <div class="kpi"><span class="label">Capitalizacion total</span><div class="big">$2.75T</div><p>24h +0.40%</p></div>
+          <div class="kpi"><span class="label">Volumen 24h</span><div class="big">$98.47B</div><p>Actividad spot alta respecto al promedio reciente.</p></div>
+          <div class="kpi"><span class="label">Dominancia BTC</span><div class="big">58.3%</div><p>Regimen de liderazgo de Bitcoin aun vigente.</p></div>
+          <div class="kpi"><span class="label">Dominancia ETH</span><div class="big">10.1%</div><p>ETH sigue rezagado frente a BTC.</p></div>
+          <div class="kpi"><span class="label">Altseason Index</span><div class="big">48</div><p>lectura publicada el 09 May; sigue en Bitcoin season</p></div>
+          <div class="kpi"><span class="label">BTC Open Interest</span><div class="big">$59.77B</div><p>Referencia CoinGlass para BTC futures.</p></div>
+          <div class="kpi"><span class="label">Futures Vol BTC</span><div class="big">$62.56B</div><p>Apalancamiento activo pero sin stress extremo validado.</p></div>
+          <div class="kpi"><span class="label">Funding</span><div class="big">Mixto y casi neutral</div><p>BTC ligeramente negativo; ETH y SOL suaves positivos.</p></div>
+          <div class="kpi"><span class="label">Liquidaciones</span><div class="big">N/D</div><p>Sin cifra agregada 24h validada con calidad suficiente.</p></div>
+          <div class="kpi"><span class="label">Volatilidad</span><div class="big">Moderada</div><p>Dispersion alta entre majors y memecoins.</p></div>
+        </div>
+      </article>
+
+      <article class="panel span-8">
+        <h2>Principales criptomonedas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Activo</th>
+              <th>Precio</th>
+              <th>24h</th>
+              <th>7d</th>
+              <th>Tendencia</th>
+              <th>Momentum</th>
+              <th>RSI</th>
+              <th>Volumen</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td><strong>BTC</strong><span>Bitcoin</span></td>
+              <td>$81,866.74</td>
+              <td class="pos">+0.70%</td>
+              <td class="pos">+2.30%</td>
+              <td>Lider defensivo</td>
+              <td>Alcista moderado</td>
+              <td>47.25 <small>Neutral</small></td>
+              <td>$39.35B</td>
+            </tr>
+            
+            <tr>
+              <td><strong>ETH</strong><span>Ethereum</span></td>
+              <td>$2,338.06</td>
+              <td class="neg">-0.90%</td>
+              <td class="neg">-0.60%</td>
+              <td>Lateral debil</td>
+              <td>Neutral</td>
+              <td>57.79 <small>Neutral</small></td>
+              <td>$19.08B</td>
+            </tr>
+            
+            <tr>
+              <td><strong>SOL</strong><span>Solana</span></td>
+              <td>$88.43</td>
+              <td class="pos">+0.60%</td>
+              <td class="pos">+6.50%</td>
+              <td>Rebote tecnico</td>
+              <td>Recuperacion selectiva</td>
+              <td>34.86 <small>Debil</small></td>
+              <td>$3.84B</td>
+            </tr>
+            
+            <tr>
+              <td><strong>BNB</strong><span>BNB</span></td>
+              <td>$662.25</td>
+              <td class="pos">+0.30%</td>
+              <td class="pos">+5.90%</td>
+              <td>Recuperacion tactica</td>
+              <td>Alcista tactico</td>
+              <td>62.84 <small>Fuerte</small></td>
+              <td>$1.01B</td>
+            </tr>
+            
+            <tr>
+              <td><strong>XRP</strong><span>XRP</span></td>
+              <td>$1.47</td>
+              <td class="neg">-1.30%</td>
+              <td class="pos">+5.20%</td>
+              <td>Rango alto</td>
+              <td>Mixto</td>
+              <td>56.36 <small>Neutral</small></td>
+              <td>$3.29B</td>
+            </tr>
+            
+            <tr>
+              <td><strong>ADA</strong><span>Cardano</span></td>
+              <td>$0.2630</td>
+              <td class="pos">+1.20%</td>
+              <td class="pos">+6.80%</td>
+              <td>Rebote tactico</td>
+              <td>Alcista especulativo</td>
+              <td>41.02 <small>Neutral</small></td>
+              <td>$429.60M</td>
+            </tr>
+            
+            <tr>
+              <td><strong>DOGE</strong><span>Dogecoin</span></td>
+              <td>$0.1115</td>
+              <td class="pos">+0.70%</td>
+              <td class="pos">+1.00%</td>
+              <td>Recuperacion fragil</td>
+              <td>Neutral-alcista</td>
+              <td>52.20 <small>Neutral</small></td>
+              <td>$1.83B</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </article>
+
+      <article class="panel span-4">
+        <h2>Dominancia y funding</h2>
+        <div><svg viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" fill="#d8e3f2" font-size="15" font-family="Arial" font-weight="700">Dominancia</text><circle cx="120" cy="122" r="80" stroke="#1d3958" stroke-width="24" fill="none"/><circle cx="120" cy="122" r="80" stroke="#16c784" stroke-width="24" fill="none" stroke-dasharray="293.04776272685586 209.60706184751103" stroke-dashoffset="-0" transform="rotate(-90 120 122)" stroke-linecap="round"/><rect x="230" y="62" width="10" height="10" rx="3" fill="#16c784"/><text x="246" y="71" fill="#d8e3f2" font-size="12" font-family="Arial">BTC 58.3%</text><circle cx="120" cy="122" r="80" stroke="#3aa8ff" stroke-width="24" fill="none" stroke-dasharray="50.768137282011054 451.8866872923559" stroke-dashoffset="-293.04776272685586" transform="rotate(-90 120 122)" stroke-linecap="round"/><rect x="230" y="96" width="10" height="10" rx="3" fill="#3aa8ff"/><text x="246" y="105" fill="#d8e3f2" font-size="12" font-family="Arial">ETH 10.1%</text><circle cx="120" cy="122" r="80" stroke="#6d7f96" stroke-width="24" fill="none" stroke-dasharray="158.83892456549995 343.81590000886695" stroke-dashoffset="-343.81590000886695" transform="rotate(-90 120 122)" stroke-linecap="round"/><rect x="230" y="130" width="10" height="10" rx="3" fill="#6d7f96"/><text x="246" y="139" fill="#d8e3f2" font-size="12" font-family="Arial">Resto 31.6%</text><text x="120" y="118" text-anchor="middle" fill="#d8e3f2" font-size="24" font-family="Arial" font-weight="700">58.3%</text><text x="120" y="138" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">BTC share</text></svg></div>
+        <div style="margin-top:14px;"><svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" fill="#d8e3f2" font-size="15" font-family="Arial" font-weight="700">Funding snapshot</text><text x="0" y="34" fill="#8ca0ba" font-size="10" font-family="Arial">tasas destacadas por exchange, no ponderadas</text><line x1="70" y1="99.0" x2="430" y2="99.0" stroke="#1d3958" stroke-width="1"/><rect x="70" y="99.0" width="34" height="44.15094339622641" rx="8" fill="#ea3943" opacity="0.92"/><text x="87" y="159.1509433962264" text-anchor="middle" fill="#d8e3f2" font-size="10" font-family="Arial">-0.0072%</text><text x="87" y="210" text-anchor="middle" fill="#8ca0ba" font-size="10" font-family="Arial">BTC</text><rect x="126" y="37.679245283018865" width="34" height="61.320754716981135" rx="8" fill="#16c784" opacity="0.92"/><text x="143" y="29.679245283018865" text-anchor="middle" fill="#d8e3f2" font-size="10" font-family="Arial">+0.0100%</text><text x="143" y="210" text-anchor="middle" fill="#8ca0ba" font-size="10" font-family="Arial">ETH</text><rect x="182" y="41.35849056603774" width="34" height="57.64150943396226" rx="8" fill="#16c784" opacity="0.92"/><text x="199" y="33.35849056603774" text-anchor="middle" fill="#d8e3f2" font-size="10" font-family="Arial">+0.0094%</text><text x="199" y="210" text-anchor="middle" fill="#8ca0ba" font-size="10" font-family="Arial">SOL</text><rect x="238" y="99.0" width="34" height="44.764150943396224" rx="8" fill="#ea3943" opacity="0.92"/><text x="255" y="159.76415094339623" text-anchor="middle" fill="#d8e3f2" font-size="10" font-family="Arial">-0.0073%</text><text x="255" y="210" text-anchor="middle" fill="#8ca0ba" font-size="10" font-family="Arial">XRP</text><rect x="294" y="34.0" width="34" height="65.0" rx="8" fill="#16c784" opacity="0.92"/><text x="311" y="26.0" text-anchor="middle" fill="#d8e3f2" font-size="10" font-family="Arial">+0.0106%</text><text x="311" y="210" text-anchor="middle" fill="#8ca0ba" font-size="10" font-family="Arial">ADA</text><rect x="350" y="37.679245283018865" width="34" height="61.320754716981135" rx="8" fill="#16c784" opacity="0.92"/><text x="367" y="29.679245283018865" text-anchor="middle" fill="#d8e3f2" font-size="10" font-family="Arial">+0.0100%</text><text x="367" y="210" text-anchor="middle" fill="#8ca0ba" font-size="10" font-family="Arial">DOGE</text></svg></div>
+      </article>
+
+      <article class="panel span-12">
+        <h2>Visualizacion de momentum</h2>
+        <div class="two-chart">
+          <div><svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" fill="#d8e3f2" font-size="15" font-family="Arial" font-weight="700">Variacion 24h</text><line x1="78" y1="100.0" x2="436" y2="100.0" stroke="#1d3958" stroke-width="1"/><rect x="78" y="63.38461538461539" width="44" height="36.61538461538461" rx="8" fill="#16c784" opacity="0.92"/><text x="100.0" y="55.38461538461539" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+0.7%</text><text x="100.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">BTC</text><rect x="138" y="100.0" width="44" height="47.07692307692307" rx="8" fill="#ea3943" opacity="0.92"/><text x="160.0" y="163.07692307692307" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">-0.9%</text><text x="160.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">ETH</text><rect x="198" y="68.61538461538461" width="44" height="31.384615384615383" rx="8" fill="#16c784" opacity="0.92"/><text x="220.0" y="60.61538461538461" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+0.6%</text><text x="220.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">SOL</text><rect x="258" y="84.3076923076923" width="44" height="15.692307692307692" rx="8" fill="#16c784" opacity="0.92"/><text x="280.0" y="76.3076923076923" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+0.3%</text><text x="280.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">BNB</text><rect x="318" y="100.0" width="44" height="68.0" rx="8" fill="#ea3943" opacity="0.92"/><text x="340.0" y="184.0" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">-1.3%</text><text x="340.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">XRP</text><rect x="378" y="37.23076923076923" width="44" height="62.76923076923077" rx="8" fill="#16c784" opacity="0.92"/><text x="400.0" y="29.230769230769234" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+1.2%</text><text x="400.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">ADA</text><rect x="438" y="63.38461538461539" width="44" height="36.61538461538461" rx="8" fill="#16c784" opacity="0.92"/><text x="460.0" y="55.38461538461539" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+0.7%</text><text x="460.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">DOGE</text></svg></div>
+          <div><svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" fill="#d8e3f2" font-size="15" font-family="Arial" font-weight="700">Variacion 7d</text><line x1="78" y1="100.0" x2="436" y2="100.0" stroke="#1d3958" stroke-width="1"/><rect x="78" y="77.0" width="44" height="22.999999999999996" rx="8" fill="#16c784" opacity="0.92"/><text x="100.0" y="69.0" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+2.3%</text><text x="100.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">BTC</text><rect x="138" y="100.0" width="44" height="6.0" rx="8" fill="#ea3943" opacity="0.92"/><text x="160.0" y="122.0" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">-0.6%</text><text x="160.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">ETH</text><rect x="198" y="35.0" width="44" height="65.0" rx="8" fill="#16c784" opacity="0.92"/><text x="220.0" y="27.0" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+6.5%</text><text x="220.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">SOL</text><rect x="258" y="41.0" width="44" height="59.0" rx="8" fill="#16c784" opacity="0.92"/><text x="280.0" y="33.0" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+5.9%</text><text x="280.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">BNB</text><rect x="318" y="47.99999999999999" width="44" height="52.00000000000001" rx="8" fill="#16c784" opacity="0.92"/><text x="340.0" y="39.99999999999999" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+5.2%</text><text x="340.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">XRP</text><rect x="378" y="32.0" width="44" height="68.0" rx="8" fill="#16c784" opacity="0.92"/><text x="400.0" y="24.0" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+6.8%</text><text x="400.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">ADA</text><rect x="438" y="90.0" width="44" height="10.0" rx="8" fill="#16c784" opacity="0.92"/><text x="460.0" y="82.0" text-anchor="middle" fill="#d8e3f2" font-size="11" font-family="Arial">+1.0%</text><text x="460.0" y="208" text-anchor="middle" fill="#8ca0ba" font-size="11" font-family="Arial">DOGE</text></svg></div>
+        </div>
+      </article>
+
+      <article class="panel span-12">
+        <h2>Predicciones IA</h2>
+        <div class="scenario-grid">
+          
+            <article class="scenario-card">
+              <header>
+                <h4>Alcista</h4>
+                <span>40%</span>
+              </header>
+              <p><strong>Targets:</strong> BTC 88.6k-94.5k | ETH 2.39k-2.46k | SOL 97.6-105.7</p>
+              <p><strong>Riesgo:</strong> Moderado | <strong>Confianza IA:</strong> 63%</p>
+              <p><strong>Soportes:</strong> BTC 76.8k | ETH 2.32k | SOL 81.2</p>
+              <p><strong>Resistencias:</strong> BTC 88.6k | ETH 2.46k | SOL 105.7</p>
+              <p><strong>Trigger:</strong> CPI benigno + continuidad del bid institucional + funding sin euforia.</p>
+            </article>
+            
+            <article class="scenario-card">
+              <header>
+                <h4>Neutral</h4>
+                <span>35%</span>
+              </header>
+              <p><strong>Targets:</strong> BTC 78.0k-84.0k | ETH 2.28k-2.39k | SOL 81-97</p>
+              <p><strong>Riesgo:</strong> Controlado | <strong>Confianza IA:</strong> 58%</p>
+              <p><strong>Soportes:</strong> BTC 76.8k | ETH 2.28k | SOL 81.2</p>
+              <p><strong>Resistencias:</strong> BTC 88.6k | ETH 2.39k | SOL 97.6</p>
+              <p><strong>Trigger:</strong> Macro sin sorpresas y flujos institucionales positivos pero no expansivos.</p>
+            </article>
+            
+            <article class="scenario-card">
+              <header>
+                <h4>Bajista</h4>
+                <span>25%</span>
+              </header>
+              <p><strong>Targets:</strong> BTC 74.6k-65.1k | ETH 2.25k-2.11k | SOL 79.2-78.1</p>
+              <p><strong>Riesgo:</strong> Elevado | <strong>Confianza IA:</strong> 55%</p>
+              <p><strong>Soportes:</strong> BTC 74.6k | ETH 2.25k | SOL 79.2</p>
+              <p><strong>Resistencias:</strong> BTC 76.8k | ETH 2.32k | SOL 90.5</p>
+              <p><strong>Trigger:</strong> CPI caliente, repunte de yields, reverso de ETFs y funding largo demasiado agresivo.</p>
+            </article>
+            
+        </div>
+      </article>
+
+      <article class="panel span-12">
+        <h2>Senales de trading IA</h2>
+        <div class="small-note">Solo se muestran setups donde la evidencia tecnica y de flujo ofrece una lectura util. Cuando no hay confirmacion, se evita forzar una senal.</div>
+        <div class="signal-grid">
+          
+            <article class="signal-card">
+              <header>
+                <h4>BTC</h4>
+                <span>62%</span>
+              </header>
+              <p class="signal-type">Largo tactico solo en confirmacion</p>
+              <p><strong>Entrada:</strong> Cierre > 82k con continuidad</p>
+              <p><strong>Stop:</strong> 76.8k</p>
+              <p><strong>Take profit:</strong> 88.6k / 94.5k</p>
+              <p><strong>Riesgo:</strong> Moderado | <strong>Horizonte:</strong> 24-72h</p>
+              <p><strong>Confirmacion:</strong> Dominancia alta, ETF bid persistente y funding aun no exuberante.</p>
+            </article>
+            
+            <article class="signal-card">
+              <header>
+                <h4>SOL</h4>
+                <span>64%</span>
+              </header>
+              <p class="signal-type">Momentum breakout</p>
+              <p><strong>Entrada:</strong> Recuperacion sostenida > 90.5 o pullback controlado 84-85</p>
+              <p><strong>Stop:</strong> 79.2</p>
+              <p><strong>Take profit:</strong> 97.6 / 105.7</p>
+              <p><strong>Riesgo:</strong> Medio-alto | <strong>Horizonte:</strong> 24-96h</p>
+              <p><strong>Confirmacion:</strong> 7d +6.5%, rebote tecnico con resistencia clara en 90.5 y 97.6.</p>
+            </article>
+            
+            <article class="signal-card">
+              <header>
+                <h4>ETH</h4>
+                <span>46%</span>
+              </header>
+              <p class="signal-type">Sin senal direccional fuerte</p>
+              <p><strong>Entrada:</strong> Esperar ruptura > 2.39k o perdida < 2.28k</p>
+              <p><strong>Stop:</strong> N/A</p>
+              <p><strong>Take profit:</strong> N/A</p>
+              <p><strong>Riesgo:</strong> Conflicto de factores | <strong>Horizonte:</strong> Observacion</p>
+              <p><strong>Confirmacion:</strong> Momentum lateral, Fed restrictiva y movimiento de tesoreria del Ethereum Foundation.</p>
+            </article>
+            
+        </div>
+      </article>
+
+      <article class="panel span-12">
+        <h2>Noticias relevantes</h2>
+        <div class="news-grid">
+          
+            <article class="news-card">
+              <div class="meta"><span>CoinMarketCap</span><span>01 May 2026</span></div>
+              <h4>Los ETFs spot de Bitcoin cerraron abril con 1.97B USD de entradas, el mejor mes de 2026</h4>
+              <p>El flujo regulado sigue reforzando la demanda spot de BTC y ayuda a sostener la dominancia frente al resto del mercado.</p>
+              <div class="impact">Positivo institucional</div>
+            </article>
+            
+            <article class="news-card">
+              <div class="meta"><span>Cryptopolitan</span><span>11 May 2026</span></div>
+              <h4>Ethereum Foundation retira 21,271 ETH del staking para rebalanceo de tesoreria</h4>
+              <p>La retirada de 49.6M USD introduce prudencia en el flujo de corto plazo de Ethereum.</p>
+              <div class="impact">Ligero negativo para ETH</div>
+            </article>
+            
+            <article class="news-card">
+              <div class="meta"><span>CryptoRank</span><span>28 Apr 2026</span></div>
+              <h4>La SEC revisa una propuesta de NYSE Arca para ETF multi-activo con BTC, ETH, SOL y XRP</h4>
+              <p>La propuesta acelera la narrativa de institucionalizacion y abre opcion a nuevos productos multiactivo.</p>
+              <div class="impact">Positivo regulatorio</div>
+            </article>
+            
+            <article class="news-card">
+              <div class="meta"><span>Federal Reserve</span><span>29 Apr 2026</span></div>
+              <h4>La Fed dejo sin cambios los tipos en su decision del 29 de abril</h4>
+              <p>La ausencia de recortes inmediatos mantiene presion sobre los activos de riesgo y eleva la sensibilidad del mercado al dato de CPI.</p>
+              <div class="impact">Restrictivo macro</div>
+            </article>
+            
+            <article class="news-card">
+              <div class="meta"><span>TRM Labs</span><span>02 May 2026</span></div>
+              <h4>TRM Labs atribuye el 76% de las perdidas por hackeos cripto de 2026 a actores norcoreanos</h4>
+              <p>El deterioro del frente de seguridad sigue justificando descuentos de riesgo en DeFi y altcoins.</p>
+              <div class="impact">Alerta de seguridad</div>
+            </article>
+            
+        </div>
+      </article>
+
+      <article class="panel span-6">
+        <h2>Calendario economico</h2>
+        <table>
+          <thead><tr><th>Fecha</th><th>Evento</th><th>Impacto potencial</th></tr></thead>
+          <tbody><tr><td>12 May 2026 | 08:30 ET</td><td>IPC EEUU (abril)</td><td>Catalizador principal para USD, yields y beta cripto.</td></tr><tr><td>14 May 2026 | 08:30 ET</td><td>Retail Sales EEUU (abril)</td><td>Lectura de consumo y crecimiento; afecta narrativa soft landing.</td></tr><tr><td>20 May 2026</td><td>FOMC Minutes</td><td>Puede mover expectativas de recortes y volatilidad en BTC/ETH.</td></tr><tr><td>10-11 Jun 2026</td><td>Reunion de politica monetaria del BCE</td><td>Referencia para EUR, riesgo europeo y tono global de bancos centrales.</td></tr></tbody>
+        </table>
+      </article>
+
+      <article class="panel span-6">
+        <h2>Alertas</h2>
+        <ul class="clean"><li>BTC mantiene el liderazgo, pero la zona 88.6k-94.5k concentra la resistencia visible de corto plazo y puede enfriar el avance si falla la ruptura.</li><li>ETH sigue sin confirmar rotacion propia; cualquier sorpresa inflacionaria puede agrandar el rezago frente a BTC.</li><li>DOGE conserva rebote, pero su estructura sigue fragil y dependiente de flujo especulativo.</li><li>Altseason no confirmada: el rebote en SOL y ADA es tactico, no todavia una rotacion de mercado amplia.</li><li>Seguridad DeFi bajo presion: el informe de TRM mantiene alta la prima de riesgo por exploits y drenajes de tesoreria.</li></ul>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <strong>MMarco Seguridad</strong> | https://mmarcoseguridad.com | mmarco.seguridad@gmail.com | +34 656 33 93 55<br/>
+      Ciberseguridad | Blockchain | IA | Telecomunicaciones<br/>
+      Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. No constituye asesoramiento financiero.
+    </footer>
+  </div>
+</body>
+</html>
