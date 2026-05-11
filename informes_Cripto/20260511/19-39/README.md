@@ -9,7 +9,13 @@
 ## Archivos
 
 - HTML: `dashboard.html`
-- PDF local generado para esta ejecucion: `dashboard.pdf`
+- PDF: `dashboard.pdf`
+
+## Enlaces directos
+
+- HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260511/19-39/dashboard.html
+- PDF: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260511/19-39/dashboard.pdf
+- Carpeta: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_Cripto/20260511/19-39
 
 ## Fuentes clave
 
@@ -22,5 +28,5 @@
 
 ## Nota operativa
 
-- El PDF final de esta ejecucion se genero correctamente y fue validado localmente.
-- La publicacion binaria en GitHub quedo pendiente en esta pasada; se uso el HTML como enlace archivado principal y el PDF se adjunta por email en la entrega.
+- El HTML y el PDF finales de esta ejecucion quedaron archivados en GitHub publico en la misma carpeta de entrega.
+- El PDF mantiene la version validada localmente y ya dispone de enlace verificable para distribucion.
