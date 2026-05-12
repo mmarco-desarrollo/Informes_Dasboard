@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo IA 16:00",
+    "generated_at": "12/05/2026 16:24:56 CEST",
+    "timezone": "Europe/Madrid",
+    "expected_next_update": "2026-05-12 20:00:00 CEST",
+    "global_state": "Activo y acelerado, con riesgo agentic en primer plano",
+    "impact_level": "Alto"
+  },
+  "kpis": {
+    "selected_signals": 16,
+    "critical_alerts": 2,
+    "high_impact_items": 15,
+    "primary_sources": 16,
+    "editorial_counts_by_category": {
+      "Lanzamiento": 1,
+      "Seguridad operacional": 1,
+      "Modelo": 1,
+      "Agentes de investigacion": 1,
+      "Modelo open source": 1,
+      "Herramienta / conectores": 1,
+      "Herramienta / datos": 1,
+      "Ciberseguridad IA": 1,
+      "Infraestructura": 1,
+      "Infraestructura open source": 1,
+      "Vulnerabilidad critica": 2,
+      "Incidente operativo": 3,
+      "Regulacion": 1
+    },
+    "editorial_counts_by_impact": {
+      "Alto": 6,
+      "Alta": 5,
+      "Media-Alta": 2,
+      "Critico": 2,
+      "Media": 1
+    }
+  },
+  "executive_summary": [
+    "La ventana de mayor valor inmediato esta en voz operativa, conectores y agentes de investigacion con fuentes y herramientas reales.",
+    "El principal frente de riesgo sigue siendo agentic security: function calling, MCP, plugins y almacenes locales mal acotados.",
+    "El movimiento regulatorio mas accionable es la consulta europea de transparencia del AI Act, con implicaciones directas para disclosure y etiquetado."
+  ],
+  "launches": [
+    {
+      "title": "Nueva familia de voz en tiempo real para la API",
+      "organization": "OpenAI",
+      "date": "2026-05-07",
+      "category": "Lanzamiento",
+      "impact": "Alto",
+      "utility_or_risk": "Utilidad inmediata en voz, traduccion y transcripcion operativa",
+      "summary": "OpenAI lanzo GPT-Realtime-2, GPT-Realtime-Translate y GPT-Realtime-Whisper. El bloque une razonamiento de clase GPT-5, traduccion en vivo y transcripcion streaming.",
+      "recommendation": "Piloto rapido en soporte multilingue, atencion telefonica y notas en tiempo real.",
+      "certainty": "Hecho confirmado",
+      "source_label": "OpenAI - Advancing voice intelligence with new models in the API",
+      "source_url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "title": "Controles operativos para agentes de codigo",
+      "organization": "OpenAI",
+      "date": "2026-05-08",
+      "category": "Seguridad operacional",
+      "impact": "Alto",
+      "utility_or_risk": "Patron reusable para gobierno de agentes",
+      "summary": "OpenAI detallo el despliegue seguro de Codex con sandboxing, aprobaciones, politicas de red y telemetria nativa para auditar el comportamiento del agente.",
+      "recommendation": "Usar este patron como blueprint interno para cualquier agente con shell, repos o conectores.",
+      "certainty": "Hecho confirmado",
+      "source_label": "OpenAI - Running Codex safely at OpenAI",
+      "source_url": "https://openai.com/index/running-codex-safely/"
+    },
+    {
+      "title": "Claude Opus 4.7 sube el liston en ingenieria de software",
+      "organization": "Anthropic",
+      "date": "2026-04-16",
+      "category": "Modelo",
+      "impact": "Alto",
+      "utility_or_risk": "Alta utilidad para tareas largas de codigo, vision y verificacion",
+      "summary": "Anthropic posiciona Opus 4.7 como mejora clara frente a 4.6 en ingenieria de software y tareas largas con mayor rigor y consistencia.",
+      "recommendation": "Vigilarlo para flujos de desarrollo asistido de alta supervision y trabajos visuales premium.",
+      "certainty": "Hecho confirmado",
+      "source_label": "Anthropic - Introducing Claude Opus 4.7",
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "title": "Deep Research y Deep Research Max pasan a preview de API",
+      "organization": "Google DeepMind",
+      "date": "2026-04-21",
+      "category": "Agentes de investigacion",
+      "impact": "Alto",
+      "utility_or_risk": "Utilidad inmediata en research complejo y pipelines citados",
+      "summary": "Google presenta Deep Research y Deep Research Max en preview de pago via Gemini API, basados en Gemini 3.1 Pro, con MCP y visualizaciones nativas.",
+      "recommendation": "Evaluar para estudios competitivos, regulacion, inteligencia comercial y life sciences.",
+      "certainty": "Hecho confirmado",
+      "source_label": "Google - Introducing Deep Research and Deep Research Max",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/"
+    },
+    {
+      "title": "Mistral Small 4 consolida razonamiento, codigo y multimodalidad abierta",
+      "organization": "Mistral AI",
+      "date": "2026-03-16",
+      "category": "Modelo open source",
+      "impact": "Alto",
+      "utility_or_risk": "Muy util para despliegues soberanos y control de coste",
+      "summary": "Mistral Small 4 se publica bajo Apache 2.0 con 119B parametros totales, 256k de contexto y razonamiento configurable en un solo modelo.",
+      "recommendation": "Prioridad alta para pruebas on-prem o entornos con soberania de datos.",
+      "certainty": "Hecho confirmado",
+      "source_label": "Mistral AI - Introducing Mistral Small 4",
+      "source_url": "https://mistral.ai/fr/news/mistral-small-4"
+    }
+  ],
+  "tools": [
+    {
+      "title": "Connectors + BYO MCP en Grok",
+      "organization": "xAI",
+      "date": "2026-05-06",
+      "category": "Herramienta / conectores",
+      "impact": "Alto",
+      "utility_or_risk": "Utilidad inmediata, pero con fuerte superficie de riesgo y permisos",
+      "summary": "xAI lleva Connectors a web, iOS y Android y añade Bring Your Own MCP para conectar servidores MCP propios a Grok.",
+      "recommendation": "Permitir solo conectores con inventario de permisos, cuentas separadas y logging.",
+      "certainty": "Hecho confirmado",
+      "source_label": "xAI - Connectors in web, iOS, and Android",
+      "source_url": "https://x.ai/news/grok-connectors"
+    },
+    {
+      "title": "Finance Search entra en el Agent API",
+      "organization": "Perplexity",
+      "date": "2026-05-06",
+      "category": "Herramienta / datos",
+      "impact": "Alta",
+      "utility_or_risk": "Ganancia inmediata para analisis financiero y due diligence",
+      "summary": "Perplexity habilita finance_search en Agent API para combinar datos estructurados de mercado, earnings y contexto web en una misma respuesta.",
+      "recommendation": "Explorarlo como acelerador para research de clientes, vertical finanzas y venta consultiva.",
+      "certainty": "Hecho confirmado",
+      "source_label": "Perplexity - Finance Search",
+      "source_url": "https://docs.perplexity.ai/docs/agent-api/finance-search"
+    },
+    {
+      "title": "Project Glasswing como piloto de defensa del software critico",
+      "organization": "Anthropic",
+      "date": "2026-04-07",
+      "category": "Ciberseguridad IA",
+      "impact": "Alta",
+      "utility_or_risk": "Ventana temprana en defensa asistida por frontier models",
+      "summary": "Project Glasswing agrupa a grandes actores de infraestructura y seguridad para usar Claude Mythos Preview en defensa ofensiva/defensiva del software critico.",
+      "recommendation": "Seguir sus aprendizajes como referencia para servicios de seguridad asistida por IA.",
+      "certainty": "Hecho confirmado",
+      "source_label": "Anthropic - Project Glasswing",
+      "source_url": "https://www.anthropic.com/project/glasswing"
+    },
+    {
+      "title": "Anthropic eleva limites y anuncia nueva capacidad con SpaceX",
+      "organization": "Anthropic",
+      "date": "2026-05-06",
+      "category": "Infraestructura",
+      "impact": "Alta",
+      "utility_or_risk": "Menor friccion de uso y señal de capacidad para clientes enterprise",
+      "summary": "Anthropic afirma acceso a mas de 300 MW y mas de 220.000 GPUs NVIDIA via Colossus 1, con mejoras directas de limites en Claude Code y API.",
+      "recommendation": "Lectura: sube probabilidad de adopcion enterprise sostenida y menos cuellos de botella.",
+      "certainty": "Hecho confirmado",
+      "source_label": "Anthropic - Higher usage limits for Claude and a compute deal with SpaceX",
+      "source_url": "https://www.anthropic.com/news/higher-limits-spacex"
+    },
+    {
+      "title": "Safetensors entra en la PyTorch Foundation",
+      "organization": "Hugging Face",
+      "date": "2026-04-08",
+      "category": "Infraestructura open source",
+      "impact": "Media-Alta",
+      "utility_or_risk": "Refuerza cadena de suministro de modelos y estandarizacion segura",
+      "summary": "Safetensors pasa a la PyTorch Foundation y la hoja de ruta incluye mejores APIs para carga paralela y nuevos formatos cuantizados.",
+      "recommendation": "Estandarizar uso de safetensors y reducir dependencia de formatos inseguros basados en pickle.",
+      "certainty": "Hecho confirmado",
+      "source_label": "Hugging Face - Safetensors is Joining the PyTorch Foundation",
+      "source_url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    }
+  ],
+  "incidents": [
+    {
+      "title": "Elevated errors for Responses API",
+      "organization": "OpenAI",
+      "date": "2026-05-08",
+      "category": "Incidente operativo",
+      "impact": "Alta",
+      "utility_or_risk": "Afecta integraciones con Responses API",
+      "summary": "OpenAI reporto 404 elevados en Responses API entre las 16:05 y 16:40 PT del 8 de mayo y lo atribuyo a un despliegue reciente que fue revertido.",
+      "recommendation": "Mantener fallback de proveedor o colas con reintentos y alertas por endpoint.",
+      "certainty": "Hecho confirmado",
+      "source_label": "OpenAI Status - Elevated errors for Responses API",
+      "source_url": "https://status.openai.com/incidents/01KR50YN2DBMTXGPC6BQSJN48J"
+    },
+    {
+      "title": "Increased error rate for gpt-5.5 in the API",
+      "organization": "OpenAI",
+      "date": "2026-05-08",
+      "category": "Incidente operativo",
+      "impact": "Media-Alta",
+      "utility_or_risk": "Riesgo de continuidad en workloads monomodelo",
+      "summary": "OpenAI resolvio una degradacion del modelo gpt-5.5 en API durante el 8 de mayo.",
+      "recommendation": "Reforzar observabilidad por modelo y no solo por endpoint general.",
+      "certainty": "Hecho confirmado",
+      "source_label": "OpenAI Status - Increased Error Rate for gpt-5.5 model in the API",
+      "source_url": "https://status.openai.com/incidents/yh4pyhjt"
+    },
+    {
+      "title": "Grok 4.3 pierde contexto de conversacion",
+      "organization": "xAI",
+      "date": "2026-05-10",
+      "category": "Incidente operativo",
+      "impact": "Media",
+      "utility_or_risk": "Impacta consistencia y calidad en sesiones largas",
+      "summary": "El status de xAI reporto un incidente de perdida de contexto en Grok Web para la rama 4.3.",
+      "recommendation": "No depender de sesiones largas sin checkpoints ni resumen intermedio.",
+      "certainty": "Hecho confirmado",
+      "source_label": "xAI Status - 4.3 losing conversation context",
+      "source_url": "https://status.x.ai/grok-com/INC7c527912"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "title": "CVE-2026-25592 en Semantic Kernel",
+      "organization": "Microsoft / GitHub Advisory",
+      "date": "2026-02-06",
+      "category": "Vulnerabilidad critica",
+      "impact": "Critico",
+      "utility_or_risk": "Riesgo directo en agentes con function calling y plugins",
+      "summary": "La vulnerabilidad permite escritura arbitraria de archivos a traves de SessionsPythonPlugin en el SDK de Semantic Kernel.",
+      "recommendation": "Actualizar a 1.71.0 en NuGet y 1.39.3 en pip o superior; revisar exposicion activa.",
+      "certainty": "Hecho confirmado",
+      "source_label": "GitHub Advisory - CVE-2026-25592",
+      "source_url": "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4"
+    },
+    {
+      "title": "CVE-2026-26030 en InMemoryVectorStore",
+      "organization": "Microsoft / GitHub Advisory",
+      "date": "2026-02-19",
+      "category": "Vulnerabilidad critica",
+      "impact": "Critico",
+      "utility_or_risk": "Posible RCE en pipelines agentic y RAG local",
+      "summary": "GitHub Advisory marca RCE critica en el filtro de InMemoryVectorStore del SDK Python de Semantic Kernel; la recomendacion oficial incluye no usarlo en produccion hasta parche.",
+      "recommendation": "Actualizar a 1.39.4 o superior y bloquear despliegues con InMemoryVectorStore legacy.",
+      "certainty": "Hecho confirmado",
+      "source_label": "GitHub Advisory - CVE-2026-26030",
+      "source_url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    }
+  ],
+  "regulation": [
+    {
+      "title": "Consulta sobre obligaciones de transparencia del AI Act",
+      "organization": "Comision Europea",
+      "date": "2026-05-08",
+      "category": "Regulacion",
+      "impact": "Alta",
+      "utility_or_risk": "Impacto directo en bots, contenido sintetico y etiquetado",
+      "summary": "La Comision Europea abrio la consulta sobre las draft guidelines del articulo 50 del AI Act, con cierre el 3 de junio de 2026.",
+      "recommendation": "Revisar politicas de etiquetado, disclosure y contenido manipulado en todos los productos IA.",
+      "certainty": "Hecho confirmado",
+      "source_label": "EU - Consultation on draft guidelines on transparency obligations under the AI Act",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "ai-dynamo/dynamo",
+      "language": "Rust / Python",
+      "stars": "6.8k",
+      "utility": "Sirve LLMs y workloads multimodales con serving distribuido, KV-aware routing y autoscaling.",
+      "warning": "Pensado para entornos maduros de infraestructura; curva de operacion alta.",
+      "source_url": "https://github.com/ai-dynamo/dynamo"
+    },
+    {
+      "name": "huggingface/safetensors",
+      "language": "Rust / Python",
+      "stars": "3.7k",
+      "utility": "Formato seguro para distribuir pesos sin pickle y base para estandarizacion del supply chain.",
+      "warning": "Requiere validar compatibilidad en pipelines heredados y conversion de artefactos.",
+      "source_url": "https://github.com/huggingface/safetensors"
+    },
+    {
+      "name": "microsoft/semantic-kernel",
+      "language": "C# / Python / Java",
+      "stars": "27.9k",
+      "utility": "Framework agentic ampliamente adoptado; ahora alineado con Microsoft Agent Framework.",
+      "warning": "Prioridad de hardening alta por historial reciente de CVEs criticas.",
+      "source_url": "https://github.com/microsoft/semantic-kernel"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-05-15 12:00 PT",
+      "title": "Retirada de modelos Grok legacy en xAI API",
+      "priority": "Critica"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "Cierre de consulta UE sobre transparencia del AI Act",
+      "priority": "Alta"
+    },
+    {
+      "date": "Proxima ventana 2026-Q2",
+      "title": "Disponibilidad en Google Cloud de Deep Research / Max",
+      "priority": "Media"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Auditar hoy cualquier despliegue con Semantic Kernel y aplicar parches 1.39.4 / 1.71.0 o superiores segun stack."
+    },
+    {
+      "priority": "Critica",
+      "text": "Cerrar inventario de modelos xAI en uso antes del 15 de mayo y programar migracion a Grok 4.3."
+    },
+    {
+      "priority": "Alta",
+      "text": "Introducir fallback y monitorizacion por modelo para Responses API y modelos criticos de proveedor."
+    },
+    {
+      "priority": "Alta",
+      "text": "Pilotar voz en tiempo real con OpenAI en soporte, ventas y automatizacion de reuniones multilingues."
+    },
+    {
+      "priority": "Alta",
+      "text": "Evaluar Deep Research Max y Finance Search como aceleradores comerciales para inteligencia competitiva y financiera."
+    },
+    {
+      "priority": "Media",
+      "text": "Estandarizar safetensors y politicas de validacion de artefactos de modelos en pipelines internos."
+    },
+    {
+      "priority": "Media",
+      "text": "Valorar Mistral Small 4 para despliegues locales o sector regulado donde soberania y coste pesen mas que marca."
+    }
+  ],
+  "opportunities": [
+    "Paquete de auditoria de agentes con foco en permisos, conectores, MCP y trazabilidad.",
+    "Servicio de copilotos de voz para soporte y operacion comercial multilingue.",
+    "Oferta de due diligence IA para pymes usando Deep Research Max + Finance Search + RAG seguro.",
+    "Linea de hardening de modelos y supply chain basada en safetensors, politicas de ingestion y validacion de repos."
+  ],
+  "regional_view": [
+    {
+      "region": "Estados Unidos",
+      "summary": "OpenAI, Anthropic, xAI, NVIDIA y Perplexity concentran las novedades de producto, compute y tooling."
+    },
+    {
+      "region": "Europa",
+      "summary": "La senal dominante es regulatoria: transparencia bajo AI Act y preparacion operativa de etiquetado."
+    },
+    {
+      "region": "Open source",
+      "summary": "Mistral Small 4, Safetensors y Dynamo apuntan a soberania, eficiencia y control del stack."
+    }
+  ],
+  "activity_series": [
+    {
+      "date": "2026-04-07",
+      "count": 1,
+      "note": "Glasswing"
+    },
+    {
+      "date": "2026-04-08",
+      "count": 1,
+      "note": "Safetensors"
+    },
+    {
+      "date": "2026-04-16",
+      "count": 1,
+      "note": "Opus 4.7"
+    },
+    {
+      "date": "2026-04-21",
+      "count": 1,
+      "note": "Deep Research Max"
+    },
+    {
+      "date": "2026-05-06",
+      "count": 4,
+      "note": "xAI / Anthropic / Perplexity"
+    },
+    {
+      "date": "2026-05-07",
+      "count": 1,
+      "note": "OpenAI Voice"
+    },
+    {
+      "date": "2026-05-08",
+      "count": 4,
+      "note": "OpenAI incidents + AI Act"
+    },
+    {
+      "date": "2026-05-10",
+      "count": 1,
+      "note": "xAI incident"
+    }
+  ]
+}
