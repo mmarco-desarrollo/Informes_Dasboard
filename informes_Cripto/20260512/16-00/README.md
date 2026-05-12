@@ -1,6 +1,6 @@
 # Informe Ejecutivo Cripto · 2026-05-12 16:00
 
-- Generado: 2026-05-12 16:18 CEST
+- Generado: 2026-05-12 16:39 CEST
 - Estado general: Mercado en consolidacion con sesgo defensivo
 - Fear & Greed: 49 (Neutral)
 - BTC dominance: 58.33%
@@ -15,11 +15,11 @@ La sesion combina market cap global en retroceso, funding positivo y liquidacion
 
 ## Fuentes base
 
-- CoinGecko API /global y paginas individuales BTC, ETH, SOL, BNB, XRP, ADA, DOGE
+- CoinGecko API /global y seguimiento de mercado de BTC, ETH, SOL, BNB, XRP, ADA y DOGE
 - Coinalyze Futures Market Data
-- Alternative.me Fear & Greed Index API
+- Alternative.me Fear & Greed Index
 - BlockchainCenter Altcoin Season Index
-- BLS CPI release y calendario
+- BLS CPI release y calendario oficial
 - Federal Reserve FOMC calendar
 - ECB Governing Council calendar
-- Reuters (via syndicated copies) para titulares sectoriales
+- Reuters (via syndicated copies), Cointelegraph/Farside y CoinGecko para titulares tacticos
