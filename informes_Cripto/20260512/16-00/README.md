@@ -12,6 +12,11 @@ BTC mantiene el control del ciclo y las altcoins solo muestran rotacion selectiv
 
 La sesion combina market cap global en retroceso, funding positivo y liquidaciones moderadas: no es un washout, pero tampoco un impulso limpio.
 
+## Enlaces de archivado
+
+- HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260512/16-00/dashboard.html
+- Carpeta de ejecucion: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_Cripto/20260512/16-00
+- PDF: pendiente de enlace publico en esta ejecucion; se distribuye por adjunto en correo mientras se mantiene la incidencia operativa del binario en GitHub.
 
 ## Fuentes base
 
