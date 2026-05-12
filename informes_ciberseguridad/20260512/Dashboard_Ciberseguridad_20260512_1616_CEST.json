@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "report_title": "Informe Ejecutivo de Ciberseguridad",
+    "generated_at": "2026-05-12 16:16 CEST",
+    "timezone": "Europe/Madrid",
+    "global_threat_level": "ALTO",
+    "global_threat_level_basis": "Valoracion analitica basada en explotacion activa de appliances expuestos, edge firewalls, plataformas de acceso remoto y gestion de endpoints.",
+    "risk_ai_status": "Vigilancia reforzada",
+    "next_update_recommended": "2026-05-12 20:00 CEST",
+    "scope_note": "Los KPI reflejan senales confirmadas y priorizadas en las fuentes revisadas durante esta ejecucion. Donde no hay base suficiente se informa N/D."
+  },
+  "kpis": [
+    {
+      "label": "Incidentes activos confirmados",
+      "value": 4,
+      "status": "confirmed",
+      "note": "Interlock sobre Cisco FMC, explotacion limitada de PAN-OS CVE-2026-0300, explotacion de BeyondTrust CVE-2026-1731 y FortiClient EMS CVE-2026-35616."
+    },
+    {
+      "label": "Incidentes criticos",
+      "value": 4,
+      "status": "confirmed"
+    },
+    {
+      "label": "Vulnerabilidades prioritarias revisadas",
+      "value": 6,
+      "status": "confirmed",
+      "note": "Cinco CVEs principales mas un bloque de alertas nacionales relevantes de INCIBE."
+    },
+    {
+      "label": "CVEs criticas priorizadas",
+      "value": 5,
+      "status": "confirmed"
+    },
+    {
+      "label": "Malware y herramientas relevantes",
+      "value": 5,
+      "status": "confirmed",
+      "note": "Interlock, SparkRAT, VShell, EarthWorm y ReverseSocks5."
+    },
+    {
+      "label": "Campanas de phishing nuevas confirmadas",
+      "value": "N/D",
+      "status": "insufficient_evidence"
+    },
+    {
+      "label": "Ataques DDoS nuevos confirmados",
+      "value": "N/D",
+      "status": "insufficient_evidence"
+    },
+    {
+      "label": "Ransomware reportado",
+      "value": 1,
+      "status": "confirmed",
+      "note": "Campana Interlock con explotacion de edge firewall."
+    },
+    {
+      "label": "Paises mas afectados",
+      "value": "N/D",
+      "status": "insufficient_evidence"
+    },
+    {
+      "label": "Tendencia ultimas 24h",
+      "value": "Alcista moderada",
+      "status": "analytic_estimate",
+      "note": "Estimacion analitica por nuevas publicaciones operativas y advisories criticos de la semana."
+    }
+  ],
+  "executive_summary": {
+    "global_state": "La presion operativa sigue alta y muy concentrada en sistemas expuestos a Internet con privilegios elevados: firewalls, portales cautivos, plataformas de soporte remoto y consolas de gestion.",
+    "main_risks": [
+      "Exposicion de interfaces de autenticacion o administracion accesibles desde redes no confiables.",
+      "Atraso de parcheo en appliances y software de acceso privilegiado con explotacion ya observada.",
+      "Escalada post-explotacion orientada a credenciales, enumeracion de Active Directory, tunelizacion y borrado de huellas."
+    ],
+    "most_affected_sectors": [
+      "Educacion",
+      "Ingenieria y construccion",
+      "Manufactura e industrial",
+      "Sanidad",
+      "Sector publico"
+    ],
+    "most_used_techniques": [
+      "Explotacion de aplicaciones expuestas",
+      "Ejecucion remota de codigo sin autenticacion",
+      "Web shells y persistencia fileless",
+      "Tuneles y herramientas remotas legitimas",
+      "Abuso de credenciales y enumeracion de AD",
+      "Borrado de logs y evidencias"
+    ],
+    "estimated_exposure": "Alta para organizaciones con PAN-OS User-ID Authentication Portal, Cisco Secure Firewall Management Center, BeyondTrust self-hosted, FortiClient EMS 7.4.5-7.4.6 o Android sin parche mayo 2026.",
+    "main_recommendation": "Cerrar exposicion externa innecesaria y aplicar mitigaciones y hotfixes en edge y acceso privilegiado hoy mismo, priorizando PAN-OS, Cisco FMC, BeyondTrust y FortiClient EMS.",
+    "quick_conclusions": [
+      "El mayor riesgo actual no esta en malware masivo, sino en la explotacion selectiva de infraestructura expuesta y con altos privilegios.",
+      "Los actores observados priorizan persistencia, tunelizacion y sustraccion de credenciales antes del impacto final.",
+      "El retraso en parcheo de appliances y consolas administrativas sigue siendo el principal multiplicador de riesgo.",
+      "Para entorno pyme y mid-market en Espana, la prioridad es revisar exposicion de portales, MFA efectivo, backups y hardening de acceso remoto."
+    ]
+  },
+  "incidents_and_activity": [
+    {
+      "title": "Interlock explota Cisco Secure Firewall Management Center",
+      "status": "confirmed",
+      "severity": "critical",
+      "summary": "AWS identifico una campana activa de Interlock explotando CVE-2026-20131 en Cisco FMC. La actividad precedio 36 dias a la divulgacion publica y mostro toolkit propio, implantes fileless, reconocimiento y doble extorsion.",
+      "notable_tactics": [
+        "Explotacion de zero-day previa a disclosure",
+        "Implantes fileless",
+        "Reconocimiento de red",
+        "RAT y tooling personalizado"
+      ]
+    },
+    {
+      "title": "Explotacion limitada de PAN-OS Captive Portal",
+      "status": "confirmed",
+      "severity": "critical",
+      "summary": "Palo Alto Networks y Unit 42 notifican explotacion limitada de CVE-2026-0300 con RCE root sin autenticacion en User-ID Authentication Portal expuesto. Se observaron EarthWorm, ReverseSocks5, enumeracion AD y destruccion de logs.",
+      "notable_tactics": [
+        "RCE root",
+        "Tunelizacion",
+        "Enumeracion AD",
+        "Borrado de evidencias"
+      ]
+    },
+    {
+      "title": "Compromisos asociados a BeyondTrust CVE-2026-1731",
+      "status": "confirmed",
+      "severity": "critical",
+      "summary": "BeyondTrust confirmo intentos activos sobre self-hosted y Unit 42 documenta multiples compromisos con VShell, SparkRAT, web shells PHP y robo de datos tras la explotacion.",
+      "notable_tactics": [
+        "RCE preautenticacion",
+        "Web shells",
+        "Backdoors Linux",
+        "Exfiltracion"
+      ]
+    },
+    {
+      "title": "FortiClient EMS con explotacion observada",
+      "status": "confirmed",
+      "severity": "critical",
+      "summary": "Fortinet informa de explotacion in the wild de CVE-2026-35616 en FortiClient EMS 7.4.5-7.4.6, con posibilidad de ejecutar codigo o comandos no autorizados mediante peticiones manipuladas.",
+      "notable_tactics": [
+        "Improper access control",
+        "Codigo no autorizado",
+        "Ataque sin autenticacion"
+      ]
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3",
+      "severity": "Critica",
+      "exploitation_status": "Explotacion limitada confirmada",
+      "patch_status": "Parche en releases escalonadas; mitigacion inmediata restringiendo o deshabilitando el portal",
+      "mitigation_priority": "Critica",
+      "source": "Palo Alto Networks / Unit 42"
+    },
+    {
+      "cve": "CVE-2026-20131",
+      "product": "Cisco Secure Firewall Management Center",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation_status": "Explotacion activa confirmada",
+      "patch_status": "Parche del fabricante disponible",
+      "mitigation_priority": "Critica",
+      "source": "Cisco / AWS"
+    },
+    {
+      "cve": "CVE-2026-1731",
+      "product": "BeyondTrust Remote Support y Privileged Remote Access",
+      "cvss": "9.9",
+      "severity": "Critica",
+      "exploitation_status": "Intentos y compromisos activos observados",
+      "patch_status": "Parches BT26-02-RS y BT26-02-PRA; SaaS ya parcheado",
+      "mitigation_priority": "Critica",
+      "source": "BeyondTrust / Unit 42"
+    },
+    {
+      "cve": "CVE-2026-35616",
+      "product": "FortiClient EMS",
+      "cvss": "9.1",
+      "severity": "Critica",
+      "exploitation_status": "Explotacion confirmada por el fabricante",
+      "patch_status": "Hotfix para 7.4.5 y 7.4.6; 7.4.7 corrige de forma general",
+      "mitigation_priority": "Critica",
+      "source": "Fortinet"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android adbd / boletin mayo 2026",
+      "cvss": "8.8 (ADP)",
+      "severity": "Critica en boletin del proveedor",
+      "exploitation_status": "No se confirma explotacion activa en las fuentes revisadas",
+      "patch_status": "Security patch level 2026-05-01 o posterior",
+      "mitigation_priority": "Alta",
+      "source": "Android / NVD"
+    }
+  ],
+  "malware_and_ransomware": {
+    "active_families": [
+      "Interlock",
+      "SparkRAT",
+      "VShell",
+      "EarthWorm",
+      "ReverseSocks5"
+    ],
+    "target_sectors": [
+      "Educacion",
+      "Ingenieria y construccion",
+      "Manufactura",
+      "Sanidad",
+      "Administracion publica"
+    ],
+    "techniques": [
+      "Persistencia fileless",
+      "Backdoors multiplataforma",
+      "Tuneles SOCKS",
+      "Reconocimiento del entorno",
+      "Exfiltracion previa al cifrado"
+    ],
+    "iocs_note": "Existen IoCs y hunting guidance en AWS y Unit 42 para Cisco FMC, PAN-OS y BeyondTrust. No se replican completos aqui para mantener enfoque ejecutivo.",
+    "trend": "Sostenida al alza en compromisos de edge y acceso remoto",
+    "propagation_level": "Selectiva, orientada a objetivos de alto valor"
+  },
+  "important_news": [
+    {
+      "type": "Hecho confirmado",
+      "headline": "Unit 42 publica explotacion limitada de un zero-day critico en PAN-OS",
+      "importance": "Afecta a firewalls y portales cautivos expuestos; alto riesgo para appliances en Internet."
+    },
+    {
+      "type": "Hecho confirmado",
+      "headline": "BeyondTrust y Unit 42 documentan explotacion y compromisos sobre CVE-2026-1731",
+      "importance": "Impacta plataformas de soporte remoto y acceso privilegiado, muy sensibles para terceros y MSP."
+    },
+    {
+      "type": "Hecho confirmado",
+      "headline": "Boletin Android mayo 2026 corrige CVE-2026-0073, una RCE critica sin interaccion",
+      "importance": "Relevante para flotas corporativas Android y BYOD."
+    },
+    {
+      "type": "Hecho confirmado",
+      "headline": "INCIBE publica nuevas alertas del 12 de mayo sobre SAP, Angular Expressions y ELECOM",
+      "importance": "Refuerza la presion de parcheo sobre ERP, software web y networking en el contexto espanol."
+    },
+    {
+      "type": "Hecho confirmado",
+      "headline": "Google observa un aumento relativo del 32 por ciento en prompt injections maliciosas en la web",
+      "importance": "Señal temprana para gobernanza de agentes y copilotos con navegacion o acceso a contenido externo."
+    }
+  ],
+  "active_alerts": [
+    {
+      "priority": "Critica",
+      "title": "Revisar de inmediato exposicion de PAN-OS User-ID Authentication Portal",
+      "action": "Restringir a IPs internas de confianza o deshabilitar si no es necesario; aplicar release corregida en cuanto este disponible para la rama usada."
+    },
+    {
+      "priority": "Critica",
+      "title": "Parchear Cisco FMC afectado por CVE-2026-20131",
+      "action": "Aplicar actualizacion del fabricante y revisar IoCs de AWS si el servicio ha estado expuesto a Internet."
+    },
+    {
+      "priority": "Critica",
+      "title": "Actualizar BeyondTrust self-hosted",
+      "action": "Aplicar BT26-02, revisar telemetria de web shells, procesos anommalos y actividad de exfiltracion."
+    },
+    {
+      "priority": "Critica",
+      "title": "Mitigar FortiClient EMS 7.4.5-7.4.6",
+      "action": "Aplicar hotfix o subir a 7.4.7; verificar exposicion y actividad API anomala."
+    },
+    {
+      "priority": "Alta",
+      "title": "Validar el parche Android mayo 2026 en dispositivos corporativos",
+      "action": "Exigir patch level 2026-05-01 o posterior en dispositivos gestionados."
+    },
+    {
+      "priority": "Alta",
+      "title": "Seguir alertas nacionales de INCIBE del 12/05",
+      "action": "Priorizar revision de entornos SAP, Angular Expressions y equipos ELECOM en organizaciones espanolas."
+    }
+  ],
+  "executive_recommendations": {
+    "critical": [
+      "Cerrar o restringir a red interna cualquier portal de autenticacion, administracion o soporte remoto expuesto a Internet.",
+      "Aplicar hoy hotfixes y versiones corregidas en PAN-OS, Cisco FMC, BeyondTrust y FortiClient EMS.",
+      "Buscar evidencias de post-explotacion: creacion de cuentas, herramientas remotas, web shells, tuneles y borrado de logs."
+    ],
+    "high": [
+      "Revisar permisos y credenciales de cuentas de servicio en firewalls, herramientas de soporte remoto y plataformas de gestion.",
+      "Acelerar parcheo de Android corporativo y reforzar cumplimiento minimo de version y patch level.",
+      "Activar caza orientada a AD enumeration, SOCKS tunneling, PHP shells y procesos fileless."
+    ],
+    "medium": [
+      "Confirmar que MFA y segmentacion protegen accesos administrativos y que los backups de configuracion estan cifrados y verificados.",
+      "Actualizar inventario de appliances expuestos y revisar publicacion DNS, NAT y reglas de acceso historicas."
+    ],
+    "low": [
+      "Revisar el gobierno de copilotos y agentes con acceso a navegacion web o datos externos ante el aumento de prompt injections maliciosas."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo",
+    "global_risk_estimate": "Alto",
+    "predicted_near_term_threats": [
+      "Mas explotacion de edge appliances y portales cautivos expuestos",
+      "Mas abuso de credenciales y tunelizacion tras compromiso inicial",
+      "Mayor uso de tecnicas AI-assisted para reconocimiento, ingenieria social y automatizacion"
+    ],
+    "most_exposed_sectors": [
+      "Sanidad",
+      "Industria",
+      "Servicios profesionales",
+      "Sector publico",
+      "Educacion"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-0300",
+      "CVE-2026-20131",
+      "CVE-2026-1731",
+      "CVE-2026-35616"
+    ],
+    "probability_of_attack_increase": "Alta",
+    "automatic_recommendation": "Reducir superficie expuesta, endurecer identidades y preparar contencion en minutos, no en horas. El patrOn observado sugiere que la ventana util de deteccion temprana se esta acortando."
+  },
+  "sources": [
+    {
+      "name": "AWS Security Blog - Interlock y Cisco FMC",
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/"
+    },
+    {
+      "name": "FortiGuard Labs - Interlock Ransomware",
+      "url": "https://fortiguard.fortinet.com/outbreak-alert/interlock-ransomware"
+    },
+    {
+      "name": "Palo Alto Networks Security Advisory - CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "name": "Unit 42 - Explotacion de CVE-2026-0300",
+      "url": "https://unit42.paloaltonetworks.com/captive-portal-zero-day/"
+    },
+    {
+      "name": "BeyondTrust Advisory BT26-02",
+      "url": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-02"
+    },
+    {
+      "name": "Unit 42 - CVE-2026-1731",
+      "url": "https://unit42.paloaltonetworks.com/beyondtrust-cve-2026-1731/"
+    },
+    {
+      "name": "Fortinet PSIRT - CVE-2026-35616",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099"
+    },
+    {
+      "name": "Android Security Bulletin May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    },
+    {
+      "name": "NVD - CVE-2026-0073",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0073"
+    },
+    {
+      "name": "INCIBE-CERT - Avisos",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos"
+    },
+    {
+      "name": "INCIBE-CERT - Angular Expressions de Peerigon",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-remoto-en-angular-expressions-de-peerigon"
+    },
+    {
+      "name": "INCIBE-CERT - Productos ELECOM",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-elecom-0"
+    },
+    {
+      "name": "Google Security Blog - Prompt injections on the web",
+      "url": "https://blog.google/security/prompt-injections-web/"
+    },
+    {
+      "name": "Unit 42 2026 Global Incident Response Report",
+      "url": "https://investors.paloaltonetworks.com/node/20231/pdf"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
