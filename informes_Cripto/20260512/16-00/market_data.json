@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "brand": {
+      "name": "MMarco Seguridad",
+      "owner": "Manuel Marco Sanchez",
+      "web": "https://mmarcoseguridad.com",
+      "email": "mmarco.seguridad@gmail.com",
+      "phone": "+34 656 33 93 55",
+      "specialization": "Ciberseguridad - Blockchain - IA - Telecomunicaciones"
+    },
+    "generated_at": "2026-05-12 16:18 CEST",
+    "slot": "Franja 16:00",
+    "next_update": "2026-05-12 20:00 CEST",
+    "countdown": "T-3h 42m aprox.",
+    "market_state": "Mercado en consolidacion con sesgo defensivo",
+    "ai_state": "IA detecta rotacion selectiva y largos apalancados aun presentes",
+    "summary": {
+      "headline": "BTC mantiene el control del ciclo y las altcoins solo muestran rotacion selectiva.",
+      "takeaway": "La sesion combina market cap global en retroceso, funding positivo y liquidaciones moderadas: no es un washout, pero tampoco un impulso limpio.",
+      "risk": "Riesgo medio. La presion macro sube tras el CPI de EE. UU. y el mercado sigue sensible a tipos, dolar y flujos ETF.",
+      "macro": "CPI de abril en EE. UU.: 3.8% interanual y core 2.8%. Proxima cita clave: FOMC 16-17 junio y BCE 10-11 junio."
+    },
+    "kpis": {
+      "market_cap": 2762254983061.089,
+      "market_cap_change_24h": -0.7038,
+      "volume_24h": 89116075239.8624,
+      "volume_change_24h": -19.5691,
+      "btc_dominance": 58.3253,
+      "eth_dominance": 9.9169,
+      "fear_greed": 49,
+      "fear_greed_label": "Neutral",
+      "altseason_index": 31,
+      "open_interest_total": 53500000000,
+      "liquidations_24h": 159900000
+    },
+    "macro_events": [
+      {
+        "date": "12 May 2026",
+        "title": "CPI EE. UU. abril",
+        "detail": "Inflacion general 3.8% interanual, core 2.8%; dato con sesgo hawkish para riesgo.",
+        "impact": "Alto",
+        "source": "BLS"
+      },
+      {
+        "date": "10 Jun 2026",
+        "title": "CPI EE. UU. mayo",
+        "detail": "Proxima lectura oficial a las 08:30 ET; puede redefinir expectativas de recortes.",
+        "impact": "Alto",
+        "source": "BLS"
+      },
+      {
+        "date": "10-11 Jun 2026",
+        "title": "BCE",
+        "detail": "Reunion de politica monetaria con rueda de prensa el 11 de junio.",
+        "impact": "Medio",
+        "source": "ECB"
+      },
+      {
+        "date": "16-17 Jun 2026",
+        "title": "FOMC",
+        "detail": "Siguiente reunion de la Reserva Federal con proyecciones economicas.",
+        "impact": "Muy alto",
+        "source": "Federal Reserve"
+      }
+    ],
+    "news": [
+      {
+        "time": "2h",
+        "source": "CoinGecko / agregacion de fuentes",
+        "title": "Solana ETFs ven entradas y la mejora Alpenglow entra en testing",
+        "impact": "Positivo para SOL y beta alt de capa 1"
+      },
+      {
+        "time": "2h",
+        "source": "CoinGecko / agregacion de fuentes",
+        "title": "Ripple asegura una facilidad de credito de 200 M$ para servicios institucionales XRP",
+        "impact": "Positivo para narrativa institucional y liquidez de XRP"
+      },
+      {
+        "time": "2h",
+        "source": "CoinGecko / agregacion de fuentes",
+        "title": "BNB avanza con eventos IA y crecimiento del ecosistema",
+        "impact": "Positivo moderado; mejora sentimiento en BNB Chain"
+      },
+      {
+        "time": "05-07 May",
+        "source": "Reuters (sindicado)",
+        "title": "Coinbase recorta plantilla y reporta segunda perdida trimestral consecutiva",
+        "impact": "Negativo para sentimiento sectorial y actividad de trading"
+      },
+      {
+        "time": "01 May",
+        "source": "Reuters (sindicado)",
+        "title": "Avance en una provision clave del proyecto de ley cripto en EE. UU.",
+        "impact": "Constructivo para claridad regulatoria de medio plazo"
+      }
+    ],
+    "alerts": [
+      "BTC dominance en 58.33% y Altseason Index en 31: la rotacion hacia altcoins sigue incompleta.",
+      "Funding positivo en la cesta principal y OI total de 53.5 B$: aun hay largos apalancados en mercado.",
+      "ETH y ADA lideran la debilidad intradia entre majors; si ETH pierde 2,250 USD aumenta el riesgo de barrido.",
+      "El CPI de hoy vuelve a poner a tipos y dolar en el centro; la ventana hasta junio puede mantener volatilidad macro."
+    ],
+    "flows": [
+      "BTC: CoinGecko destaca que los ETF siguen respaldando la percepcion de confianza institucional.",
+      "SOL: entradas semanales en ETFs y emision reciente de USDC refuerzan el flujo hacia ecosistema Solana.",
+      "XRP: facilidad de credito de 200 M$ orientada a servicios institucionales mejora la narrativa de adopcion.",
+      "BNB: ecosistema RWA en BNB Chain se aproxima a 4 B$, flujo constructivo pero aun localizado."
+    ],
+    "scenarios": [
+      {
+        "name": "Escenario alcista",
+        "probability": "35%",
+        "targets": "BTC 82.5k-84.0k | ETH 2.35k | SOL 99-102",
+        "risk": "Necesita absorcion de oferta y continuidad de ETF/risk-on",
+        "confidence": "Media",
+        "levels": "BTC > 81.2k y SOL > 95.5"
+      },
+      {
+        "name": "Escenario neutral",
+        "probability": "45%",
+        "targets": "BTC 79.0k-82.0k | ETH 2.23k-2.32k | SOL 91-96",
+        "risk": "Chop direccional con funding aun positivo y macro encima",
+        "confidence": "Alta",
+        "levels": "Rango dominante mientras no se rompan soportes macro"
+      },
+      {
+        "name": "Escenario bajista",
+        "probability": "20%",
+        "targets": "BTC 76.8k-78.5k | ETH 2.15k | ADA 0.25",
+        "risk": "Catalizado por dolar fuerte, decepcion en riesgo o ruptura de soportes",
+        "confidence": "Media-baja",
+        "levels": "BTC < 79.0k y ETH < 2.25k"
+      }
+    ],
+    "signals": [
+      {
+        "asset": "BTC",
+        "signal": "Condicional long solo con cierre sobre 81.2k",
+        "entry": "81.2k-81.5k",
+        "stop": "79.6k",
+        "take_profit": "83.4k / 84.0k",
+        "confidence": "Media-baja",
+        "horizon": "Intradia - swing corto",
+        "note": "Funding positivo pero no extremo; conviene esperar confirmacion."
+      },
+      {
+        "asset": "SOL",
+        "signal": "Continuacion alcista si consolida encima de 95.5",
+        "entry": "95.5-96.2",
+        "stop": "91.8",
+        "take_profit": "99.5 / 102.0",
+        "confidence": "Media",
+        "horizon": "Swing corto",
+        "note": "Flujo ETF y momentum 7d apoyan, pero sigue siendo activo beta."
+      },
+      {
+        "asset": "Market",
+        "signal": "Sin senal direccional amplia de alta conviccion para el resto de majors",
+        "entry": "Esperar rupturas confirmadas",
+        "stop": "N/A",
+        "take_profit": "N/A",
+        "confidence": "Alta",
+        "horizon": "N/A",
+        "note": "ETH, ADA y DOGE siguen mixtos; no se fuerzan setups sin evidencia adicional."
+      }
+    ],
+    "sources": [
+      "CoinGecko API /global y paginas individuales BTC, ETH, SOL, BNB, XRP, ADA, DOGE",
+      "Coinalyze Futures Market Data",
+      "Alternative.me Fear & Greed Index API",
+      "BlockchainCenter Altcoin Season Index",
+      "BLS CPI release y calendario",
+      "Federal Reserve FOMC calendar",
+      "ECB Governing Council calendar",
+      "Reuters (via syndicated copies) para titulares sectoriales"
+    ]
+  },
+  "assets": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": 80814.18,
+      "change_24h": -0.2,
+      "change_7d": -0.2,
+      "volume_24h": 32806853971.35,
+      "market_cap": 1618390697103,
+      "oi": 25900000000,
+      "oi_change_24h": 0.91,
+      "funding": 0.0034,
+      "liquidation_24h": 42000000,
+      "support": "79.0k",
+      "resistance": "81.2k / 84.0k"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": 2275.14,
+      "change_24h": -2.2,
+      "change_7d": -4.7,
+      "volume_24h": 15620856205.33,
+      "market_cap": 274254343063,
+      "oi": 13100000000,
+      "oi_change_24h": 2.38,
+      "funding": 0.0066,
+      "liquidation_24h": 32100000,
+      "support": "2.25k",
+      "resistance": "2.32k / 2.35k"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": 94.85,
+      "change_24h": -0.8,
+      "change_7d": 11.2,
+      "volume_24h": 3902534834.04,
+      "market_cap": 54810801782,
+      "oi": 2900000000,
+      "oi_change_24h": -1.41,
+      "funding": 0.0009,
+      "liquidation_24h": 13600000,
+      "support": "91.8",
+      "resistance": "95.5 / 99.5"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": 657.24,
+      "change_24h": 0.4,
+      "change_7d": 4.3,
+      "volume_24h": 1098130929.49,
+      "market_cap": 88526459813,
+      "oi": 661900000,
+      "oi_change_24h": 4.83,
+      "funding": 0.0048,
+      "liquidation_24h": 754800,
+      "support": "648",
+      "resistance": "672"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "price": 1.45,
+      "change_24h": -0.7,
+      "change_7d": 2.6,
+      "volume_24h": 2267620946.41,
+      "market_cap": 89513563504,
+      "oi": 1100000000,
+      "oi_change_24h": 0.86,
+      "funding": 0.0071,
+      "liquidation_24h": 3100000,
+      "support": "1.38",
+      "resistance": "1.50"
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.2722,
+      "change_24h": -3.3,
+      "change_7d": 5.1,
+      "volume_24h": 398369751.86,
+      "market_cap": 10064073286,
+      "oi": 257700000,
+      "oi_change_24h": -3.21,
+      "funding": 0.0043,
+      "liquidation_24h": 336200,
+      "support": "0.25",
+      "resistance": "0.282"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.109,
+      "change_24h": -0.2,
+      "change_7d": -2.7,
+      "volume_24h": 1240790349.99,
+      "market_cap": 16814028532,
+      "oi": 741900000,
+      "oi_change_24h": 2.18,
+      "funding": 0.0059,
+      "liquidation_24h": 1900000,
+      "support": "0.104",
+      "resistance": "0.112"
+    }
+  ]
+}
