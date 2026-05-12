@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-05-12T20:15:27",
+  "next_update": "2026-05-13T00:00:00",
+  "market": {
+    "market_cap": "$2.767T",
+    "market_cap_change": "+0.9%",
+    "volume_24h": "$84.84B",
+    "btc_dominance": 58.2,
+    "eth_dominance": 10.1,
+    "altseason": "35-45 / 100",
+    "altseason_value": 41,
+    "fear_greed": 48,
+    "fear_label": "Neutral",
+    "open_interest": "$53.8B",
+    "derivatives_volume": "$68.7B",
+    "liquidations": "$144.5M",
+    "volatility": "Moderada-alta",
+    "market_state": "Neutral-alcista con sesgo defensivo",
+    "ai_state": "Rotacion selectiva, sin confirmacion plena de altseason",
+    "risk_level": "Medio / macro-sensible"
+  },
+  "coins": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": 81555.43,
+      "change_24h": -0.1,
+      "change_7d": 5.0,
+      "volume": "$39.14B",
+      "trend": "Consolidacion alcista",
+      "momentum": "Firme",
+      "rsi": "n/d",
+      "support": "79.9k",
+      "resistance": "82.4k",
+      "confidence": "Alta",
+      "note": "Sigue liderando el flujo institucional y conserva dominancia elevada."
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": 2333.68,
+      "change_24h": -0.89,
+      "change_7d": 0.5,
+      "volume": "$14.89B",
+      "trend": "Lateral con sesgo alcista",
+      "momentum": "Moderado",
+      "rsi": "n/d",
+      "support": "2.27k",
+      "resistance": "2.41k",
+      "confidence": "Media",
+      "note": "Mantiene estructura estable, pero necesita catalizador para acelerar frente a BTC."
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": 88.43,
+      "change_24h": -0.78,
+      "change_7d": 6.5,
+      "volume": "$3.84B",
+      "trend": "Rebote tactico",
+      "momentum": "Agil",
+      "rsi": "n/d",
+      "support": "86.0",
+      "resistance": "93.3",
+      "confidence": "Media",
+      "note": "Recupera amplitud despues del tramo debil y sigue siendo beta alta del bloque L1."
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": 650.28,
+      "change_24h": 2.1,
+      "change_7d": 5.7,
+      "volume": "$946M",
+      "trend": "Alcista ordenada",
+      "momentum": "Solido",
+      "rsi": "n/d",
+      "support": "640",
+      "resistance": "673",
+      "confidence": "Media-alta",
+      "note": "Mantiene mejor tono relativo dentro de majors ex BTC."
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "price": 1.48,
+      "change_24h": 1.34,
+      "change_7d": 2.5,
+      "volume": "$1.50B",
+      "trend": "Rebote tactico",
+      "momentum": "Selectivo",
+      "rsi": "n/d",
+      "support": "1.42",
+      "resistance": "1.47-1.50",
+      "confidence": "Media",
+      "note": "Sostiene recuperacion, aunque aun depende de noticias regulatorias para extender tramo."
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.2642,
+      "change_24h": -1.9,
+      "change_7d": 6.6,
+      "volume": "$361M",
+      "trend": "Recuperacion tactica",
+      "momentum": "Medio",
+      "rsi": "n/d",
+      "support": "0.2607",
+      "resistance": "0.2698",
+      "confidence": "Media-baja",
+      "note": "Mejora semanal clara, pero el volumen sigue siendo inferior al de lideres del ciclo."
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.1074,
+      "change_24h": -3.6,
+      "change_7d": -0.7,
+      "volume": "$1.35B",
+      "trend": "Debilidad relativa",
+      "momentum": "Fragil",
+      "rsi": "n/d",
+      "support": "0.103",
+      "resistance": "0.112",
+      "confidence": "Media-baja",
+      "note": "Sigue sensible a rotacion memecoin y al posicionamiento minorista."
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Escenario alcista",
+      "probability": 35,
+      "targets": "BTC 83.5k-85.5k | ETH 2.40k-2.48k | SOL 92-96",
+      "risk": "Medio",
+      "confidence": "Media",
+      "levels": "Catalizadores: CPI asumible, presion regulatoria contenida, continuidad ETF.",
+      "tone": "green"
+    },
+    {
+      "name": "Escenario neutral",
+      "probability": 40,
+      "targets": "BTC 79.5k-82.8k | ETH 2.28k-2.38k | SOL 86-91",
+      "risk": "Bajo-medio",
+      "confidence": "Alta",
+      "levels": "Mercado en pausa hasta PPI, retail sales y pre-FOMC de junio.",
+      "tone": "blue"
+    },
+    {
+      "name": "Escenario bajista",
+      "probability": 25,
+      "targets": "BTC 76.8k-78.5k | ETH 2.18k-2.24k | SOL 82-85",
+      "risk": "Elevado",
+      "confidence": "Media",
+      "levels": "Disparo por macro caliente, fortaleza del dolar o shock geopolitico/energia.",
+      "tone": "red"
+    }
+  ],
+  "news": [
+    {
+      "title": "Coinbase reporta acuerdo sobre una clausula clave del proyecto legislativo cripto en EE.UU.",
+      "source": "Reuters via Yahoo Finance",
+      "time": "1 may 2026",
+      "impact": "Impulso a la claridad regulatoria y al re-rating de majors."
+    },
+    {
+      "title": "El Banco de Inglaterra advierte tensiones con EE.UU. por el encaje regulatorio de stablecoins.",
+      "source": "Reuters via MarketScreener",
+      "time": "8 may 2026",
+      "impact": "Mixto; sube la sensibilidad del mercado a titulares regulatorios."
+    },
+    {
+      "title": "Goldman Sachs registra su primer ETF vinculado a Bitcoin.",
+      "source": "Reuters via Investing.com / TradingView",
+      "time": "14 abr 2026",
+      "impact": "Refuerza la narrativa institucional y la absorcion de flujo."
+    },
+    {
+      "title": "Morgan Stanley activo su ETF spot de Bitcoin con marca propia en abril.",
+      "source": "Mercado / cobertura financiera sectorial",
+      "time": "8 abr 2026",
+      "impact": "Confirma integracion progresiva de crypto en canales tradicionales."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "13 may",
+      "event": "PPI EE.UU. - 08:30 ET",
+      "impact": "Alto",
+      "note": "Siguiente prueba para la narrativa de desinflacion tras el CPI."
+    },
+    {
+      "date": "14 may",
+      "event": "Retail Sales EE.UU. - 08:30 ET",
+      "impact": "Alto",
+      "note": "Mide resiliencia del consumo y sensibilidad de Nasdaq/cripto a crecimiento."
+    },
+    {
+      "date": "20 may",
+      "event": "Reunion de politica monetaria BCE",
+      "impact": "Medio-alto",
+      "note": "La energia y el conflicto en Oriente Medio endurecen el tono de riesgo."
+    },
+    {
+      "date": "28 may",
+      "event": "PIB EE.UU. 1T 2026 - segunda estimacion",
+      "impact": "Medio",
+      "note": "La primera estimacion marco +2.0% anualizado."
+    },
+    {
+      "date": "16-17 jun",
+      "event": "FOMC con SEP y rueda de prensa",
+      "impact": "Muy alto",
+      "note": "La Fed mantiene el rango 3.50%-3.75% y sigue dependiente de datos."
+    }
+  ],
+  "alerts": [
+    "El IPC de abril en EE.UU. subio al 3.8% interanual, desde 3.3%, y devuelve presion a los tipos reales y al dolar.",
+    "Open interest agregado elevado ($53.8B) con funding mixto: combustible suficiente para squeezes tacticos en ambos sentidos.",
+    "Dominancia BTC en 58.2% mantiene el sesgo de flujo defensivo; la altseason sigue sin confirmacion estructural.",
+    "La volatilidad macro de energia y regulacion de stablecoins sigue siendo foco de riesgo para beta alta y memecoins."
+  ],
+  "summary": {
+    "headline": "Mercado cripto en modo espera activa: BTC sostiene liderazgo, ETH aguanta, y el bloque alt rebota sin validar una altseason plena.",
+    "bullets": [
+      "La estructura general sigue siendo constructiva, pero dominada por Bitcoin y por el calendario macro de EE.UU.",
+      "El repunte del IPC introduce riesgo de compresion en activos beta si el dolar y los rendimientos vuelven a acelerarse.",
+      "El flujo institucional permanece vivo gracias a la capa ETF y a la mejora del marco regulatorio en EE.UU., aunque no elimina el riesgo tactico de barridos por apalancamiento.",
+      "No hay evidencia suficiente para emitir senales IA de alta conviccion; se mantiene sesgo de gestion tactica y confirmacion posterior."
+    ]
+  },
+  "sources": {
+    "market": "CoinGecko public pages and global market snippets",
+    "sentiment": "Alternative.me sentiment references surfaced by search",
+    "derivatives": "Coinalyze futures dashboard snippets",
+    "macro": "BLS, BEA, Federal Reserve, ECB and U.S. Census release schedules",
+    "news": "Reuters distribution via Yahoo Finance, Investing.com, TradingView and Reuters-attributed outlets"
+  }
+}
