@@ -1,0 +1,145 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "generated_at": "2026-05-13 00:18:56 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "Alto",
+  "next_update": "2026-05-13 08:00 CEST (estimada)",
+  "ai_risk_state": "Elevado en phishing y appliances expuestos",
+  "kpis": {
+    "alertas_priorizadas": 6,
+    "cves_urgentes": 7,
+    "campanas_destacadas": 2,
+    "riesgo_global": "Alto",
+    "enfoque_espana": "Retail, pymes y perimetro",
+    "tendencia_24h": "Empeora"
+  },
+  "summary": {
+    "global_state": "La fotografia nocturna combina robo de credenciales a escala y vulnerabilidades criticas en software expuesto a Internet o en entornos cloud Linux.",
+    "main_risks": [
+      "Explotacion prioritaria de PAN-OS, Ivanti EPMM, BeyondTrust y Nginx-UI.",
+      "Campanas AiTM y abuso del flujo OAuth device code.",
+      "Riesgo operacional para empresas espanolas con CashDro 3 en retail y hosteleria."
+    ],
+    "executive_recommendation": "Concentrar la ventana de remediacion en 24 horas sobre activos expuestos, revisar accesos administrativos y reforzar controles anti-phishing resistentes a robo de sesion."
+  },
+  "campaigns": [
+    {
+      "name": "Code of conduct phishing con AiTM",
+      "status": "Hecho confirmado",
+      "detail": "Microsoft observo entre el 14 y el 16 de abril una campana que impacto a mas de 35.000 usuarios en mas de 13.000 organizaciones y 26 paises."
+    },
+    {
+      "name": "Device code phishing automatizado",
+      "status": "Hecho confirmado",
+      "detail": "Microsoft describe abuso del flujo OAuth device code con generacion dinamica de codigos para comprometer cuentas organizacionales a escala."
+    }
+  ],
+  "spain_risks": [
+    "CashDro 3 impacta directamente retail y hosteleria en Espana.",
+    "PAN-OS, Ivanti EPMM, BeyondTrust y Nginx-UI afectan MSPs, integradores y administracion remota expuesta.",
+    "El abuso de device code y AiTM encaja con entornos Microsoft 365 muy extendidos en pymes espanolas."
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS User-ID Authentication Portal",
+      "severity": "Critica",
+      "exploitation": "Activa / en KEV",
+      "patch": "Hotfixes y ramas corregidas; restringir o deshabilitar portal",
+      "priority": "Critica"
+    },
+    {
+      "cve": "CVE-2026-31431",
+      "product": "Linux kernel Copy Fail",
+      "severity": "Alta",
+      "exploitation": "En KEV; PoC disponible",
+      "patch": "Actualizar distribucion y kernel",
+      "priority": "Critica"
+    },
+    {
+      "cve": "CVE-2026-6973",
+      "product": "Ivanti Endpoint Manager Mobile",
+      "severity": "Alta",
+      "exploitation": "Explotada",
+      "patch": "12.6.1.1 / 12.7.0.1 / 12.8.0.1",
+      "priority": "Alta"
+    },
+    {
+      "cve": "CVE-2026-1731",
+      "product": "BeyondTrust RS / PRA",
+      "severity": "Critica",
+      "exploitation": "Intentos observados",
+      "patch": "BT26-02; 25.3.2+ y 25.1.1+",
+      "priority": "Alta"
+    },
+    {
+      "cve": "CVE-2026-42238",
+      "product": "Nginx-UI < 2.3.8",
+      "severity": "Critica",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Actualizar a 2.3.8",
+      "priority": "Alta"
+    },
+    {
+      "cve": "CVE-2026-8076",
+      "product": "CashDro 3",
+      "severity": "Critica",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Actualizar a 26.01.00.16 y usar PIN alfanumerico",
+      "priority": "Alta"
+    },
+    {
+      "cve": "CVE-2026-8077",
+      "product": "CashDro 3",
+      "severity": "Alta",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Actualizar a 26.01.00.16",
+      "priority": "Alta"
+    }
+  ],
+  "recommendations": {
+    "critica": [
+      "Mitigar en menos de 24 horas cualquier portal PAN-OS User-ID expuesto.",
+      "Aplicar parches urgentes de Ivanti EPMM, BeyondTrust y Linux kernel.",
+      "Revocar sesiones y refresh tokens sospechosos y revisar uso de device code."
+    ],
+    "alta": [
+      "Comprobar instalaciones de Nginx-UI o CashDro 3.",
+      "Revisar administracion remota, segmentacion y publicacion por Internet.",
+      "Forzar MFA resistente a phishing donde sea posible."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo generado por IA",
+    "risk_estimate": "Alto",
+    "priority_vulns": ["CVE-2026-0300", "CVE-2026-31431", "CVE-2026-6973"],
+    "attack_increase_probability": "Alta"
+  },
+  "sources": [
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+    "https://security.paloaltonetworks.com/CVE-2026-0300",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/",
+    "https://www.beyondtrust.com/trust-center/security-advisories/bt26-02",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-ivanti-endpoint-manager-mobile-epmm",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-cashdro-3",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-remoto-en-nginx-ui-de-nginx",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+    "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+    "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+  ],
+  "artifacts": {
+    "tree": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260513",
+    "html": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260513/Dashboard_Ciberseguridad_20260513_0018_CEST.html",
+    "json": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260513/Dashboard_Ciberseguridad_20260513_0018_CEST.json"
+  },
+  "delivery": {
+    "github": "completed",
+    "gmail": "pending",
+    "slack": "pending",
+    "pdf": "not_available",
+    "google_drive": "omitted"
+  },
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
