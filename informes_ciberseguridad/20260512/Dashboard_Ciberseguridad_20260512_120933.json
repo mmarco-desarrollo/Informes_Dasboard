@@ -1,0 +1,397 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sánchez",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "generated_at": "2026-05-12 12:09:33 CEST",
+  "timezone": "Europe/Madrid",
+  "next_update": "2026-05-12 20:00:00 CEST",
+  "global_threat_level": "ALTO",
+  "ai_risk_state": "ALZA MODERADA",
+  "scope_note": "KPIs de observación priorizada a partir de muestra oficial y vendor-verified; no representan el universo total de incidentes globales.",
+  "delivery": {
+    "github_history_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260512/",
+    "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260512/Dashboard_Ciberseguridad_20260512_120933.html",
+    "html_raw_url": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_ciberseguridad/20260512/Dashboard_Ciberseguridad_20260512_120933.html",
+    "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260512/Dashboard_Ciberseguridad_20260512_120933.json",
+    "json_raw_url": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_ciberseguridad/20260512/Dashboard_Ciberseguridad_20260512_120933.json",
+    "pdf_url": null,
+    "pdf_raw_url": null
+  },
+  "kpis": [
+    {
+      "label": "Nivel global de amenaza",
+      "value": "ALTO",
+      "detail": "Persisten múltiples KEV y campañas de ingeniería social activas."
+    },
+    {
+      "label": "CVE priorizadas con KEV o explotación confirmada",
+      "value": "5",
+      "detail": "Fortinet, SmarterMail, marimo y Qualcomm/Android concentran prioridad."
+    },
+    {
+      "label": "Alertas críticas recientes priorizadas",
+      "value": "6",
+      "detail": "Android, MOVEit, CashDro 3, Nginx-UI, Spring Cloud Config y Fortinet."
+    },
+    {
+      "label": "Campañas de phishing y malware destacadas",
+      "value": "2",
+      "detail": "LinkedIn DM malware y Teams/Quick Assist con A0Backdoor."
+    },
+    {
+      "label": "Incidentes empresariales relevantes",
+      "value": "2",
+      "detail": "Booking y Rituals con exposición de datos personales."
+    },
+    {
+      "label": "Incidentes gestionados por INCIBE en 2025",
+      "value": "122.223",
+      "detail": "Dato España, +26% interanual."
+    },
+    {
+      "label": "Incidentes de malware en España 2025",
+      "value": "55.411",
+      "detail": "Más del 45% del total según INCIBE."
+    },
+    {
+      "label": "Ransomware en España 2025",
+      "value": "392",
+      "detail": "Base consolidada INCIBE a 09/02/2026."
+    }
+  ],
+  "executive_summary": {
+    "state": "El panorama de las 12:00 mantiene presión alta sobre superficies expuestas a internet y sobre los canales de colaboración empresarial. Lo más urgente sigue concentrándose en bypass de autenticación y RCE en productos de acceso, administración o colaboración, con varios casos ya catalogados por CISA como explotados en la naturaleza.",
+    "top_risks": [
+      "Exposición de dispositivos Fortinet con FortiCloud SSO habilitado o con FortiClient EMS 7.4.5/7.4.6 sin hotfix.",
+      "Instancias expuestas de software con consola o terminal web accesible, especialmente marimo y servidores de correo SmarterMail vulnerables.",
+      "Desplazamiento del phishing desde el correo hacia Teams, Quick Assist y mensajería directa en LinkedIn, con foco en perfiles corporativos de alto valor.",
+      "Riesgo de impacto secundario sobre clientes y marca por brechas recientes en plataformas de consumo y reservas."
+    ],
+    "sectors_affected": [
+      "Tecnología y proveedores hardware",
+      "Financiero",
+      "Sanidad",
+      "Retail/consumo",
+      "Viajes y reservas",
+      "Entornos con dispositivos IoT"
+    ],
+    "techniques": [
+      "Authentication bypass",
+      "Pre-auth RCE",
+      "Ingeniería social en plataformas colaborativas",
+      "Persistencia mediante cuentas locales o backdoors",
+      "Exfiltración de datos y preparación para ransomware"
+    ],
+    "estimated_exposure": "Alta en organizaciones con appliances Fortinet, gestión remota, movilidad Android corporativa y herramientas colaborativas abiertas a terceros.",
+    "main_recommendation": "Priorizar hoy mismo un barrido de exposición externa y parcheo/hardening de Fortinet, marimo, SmarterMail y Android corporativo, acompañado de revisión de Teams/Quick Assist y controles de descargas fuera del correo.",
+    "quick_points": [
+      "Fortinet concentra la mayor urgencia operativa por doble presencia en KEV y explotación observada.",
+      "La ventana entre divulgación y explotación sigue acortándose; marimo pasó a explotación en menos de 10 horas.",
+      "Las campañas de phishing ya no dependen del correo y explotan confianza en plataformas de trabajo y redes profesionales.",
+      "España mantiene una base de riesgo sostenida: el malware representó más del 45% de los incidentes gestionados por INCIBE en 2025."
+    ]
+  },
+  "active_alerts": [
+    {
+      "title": "FortiCloud SSO abuse en múltiples productos Fortinet",
+      "status": "Hecho confirmado",
+      "urgency": "Crítica",
+      "summary": "CVE-2026-24858 está en KEV y CCN-CERT pidió actualización inmediata. Fortinet deshabilitó temporalmente FortiCloud SSO para frenar el abuso y publicó guías de revisión de compromiso.",
+      "business_impact": "Compromiso administrativo de firewalls y consolas de seguridad con riesgo de persistencia y cambios de configuración."
+    },
+    {
+      "title": "FortiClient EMS con explotación observada",
+      "status": "Hecho confirmado",
+      "urgency": "Crítica",
+      "summary": "CVE-2026-35616 permite ejecución no autorizada mediante peticiones diseñadas y ya figura en KEV. Fortinet urgió instalar hotfix en 7.4.5 y 7.4.6.",
+      "business_impact": "Riesgo directo sobre gestión centralizada de endpoints y distribución de configuración."
+    },
+    {
+      "title": "Android mayo 2026",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "summary": "CVE-2026-0073 corrige una derivación de autenticación mutua de ADB inalámbrico que puede derivar en RCE remota/proximal sin interacción de usuario.",
+      "business_impact": "Riesgo en flotas móviles corporativas y en dispositivos con exposición de depuración inalámbrica."
+    },
+    {
+      "title": "Campañas de suplantación en Teams y LinkedIn",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "summary": "INCIBE documentó campañas recientes que usan Microsoft Teams/Quick Assist y mensajes directos de LinkedIn para desplegar A0Backdoor o RATs mediante ingeniería social.",
+      "business_impact": "Mayor probabilidad de compromiso inicial en usuarios con alta interacción externa: dirección, RR.HH., ventas y perfiles técnicos."
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-24858",
+      "product": "Fortinet FortiOS, FortiManager, FortiAnalyzer, FortiProxy, FortiWeb",
+      "cvss": "9.8 Critical",
+      "severity": "Crítica",
+      "exploitation": "Sí, confirmada / KEV",
+      "patch": "Sí",
+      "priority": "Inmediata",
+      "source": "NVD / Fortinet / CCN-CERT"
+    },
+    {
+      "cve": "CVE-2026-35616",
+      "product": "Fortinet FortiClient EMS 7.4.5-7.4.6",
+      "cvss": "9.8 Critical",
+      "severity": "Crítica",
+      "exploitation": "Sí, observada / KEV",
+      "patch": "Sí, hotfix",
+      "priority": "Inmediata",
+      "source": "NVD / FortiGuard"
+    },
+    {
+      "cve": "CVE-2026-39987",
+      "product": "marimo < 0.23.0",
+      "cvss": "N/D por NIST; criticidad operativa muy alta",
+      "severity": "Crítica",
+      "exploitation": "Sí, confirmada / KEV",
+      "patch": "Sí, 0.23.0",
+      "priority": "Inmediata",
+      "source": "NVD / GitHub advisory"
+    },
+    {
+      "cve": "CVE-2025-52691",
+      "product": "SmarterMail < 100.0.9413",
+      "cvss": "N/D en resumen NVD; vector crítico",
+      "severity": "Crítica",
+      "exploitation": "Sí, confirmada / KEV",
+      "patch": "Sí",
+      "priority": "Inmediata",
+      "source": "NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android 14, 15, 16, 16-qpr2 / adbd",
+      "cvss": "8.8 High / boletín crítico",
+      "severity": "Crítica en boletín",
+      "exploitation": "No confirmada",
+      "patch": "Sí, nivel 2026-05-01",
+      "priority": "Alta",
+      "source": "Android / NVD / INCIBE"
+    },
+    {
+      "cve": "CVE-2026-21385",
+      "product": "Qualcomm multiple chipsets",
+      "cvss": "7.8 High",
+      "severity": "Alta",
+      "exploitation": "Indicios de explotación limitada / KEV",
+      "patch": "Sí",
+      "priority": "Alta",
+      "source": "Android / NVD"
+    },
+    {
+      "cve": "CVE-2026-4670",
+      "product": "MOVEit Automation",
+      "cvss": "Crítica según INCIBE",
+      "severity": "Crítica",
+      "exploitation": "No confirmada",
+      "patch": "Sí",
+      "priority": "Alta",
+      "source": "INCIBE"
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      {
+        "name": "A0Backdoor",
+        "status": "Hecho confirmado",
+        "note": "Desplegado tras suplantación en Microsoft Teams/Quick Assist según INCIBE."
+      },
+      {
+        "name": "RAT vía LinkedIn DM",
+        "status": "Hecho confirmado",
+        "note": "INCIBE describe sideloading de DLL y persistencia tras descarga comprimida."
+      },
+      {
+        "name": "Medusa ransomware",
+        "status": "Contexto operativo válido",
+        "note": "CISA mantiene a Medusa como amenaza relevante con más de 300 víctimas conocidas hasta diciembre de 2024."
+      }
+    ],
+    "target_sectors": [
+      "Financiero",
+      "Sanidad",
+      "Perfiles ejecutivos",
+      "Entornos con acceso remoto",
+      "Infraestructura crítica y proveedores TIC"
+    ],
+    "techniques": [
+      "Quick Assist",
+      "LinkedIn DM phishing",
+      "DLL sideloading",
+      "Exfiltración previa a impacto",
+      "Uso de credenciales y accesos remotos legítimos"
+    ],
+    "trend": "La presión se mantiene alta y el vector humano se desplaza hacia plataformas de trabajo y redes sociales profesionales.",
+    "spread_level": "Moderado-alto"
+  },
+  "relevant_news": [
+    {
+      "title": "Rituals confirma brecha en datos de clientes",
+      "date": "2026-05-07",
+      "status": "Hecho confirmado",
+      "note": "Se expusieron datos personales de clientes de My Rituals; la compañía no reportó compromiso de contraseñas ni datos financieros."
+    },
+    {
+      "title": "Booking reconoce acceso no autorizado a datos vinculados a reservas",
+      "date": "2026-05-05",
+      "status": "Hecho confirmado",
+      "note": "INCIBE describe exposición de nombres, emails, teléfonos y detalles de reserva, con seguimiento internacional del caso."
+    },
+    {
+      "title": "Nuevos CVE coordinados por INCIBE en CashDro 3 y otros entornos empresariales",
+      "date": "2026-05-07",
+      "status": "Hecho confirmado",
+      "note": "Persisten publicaciones críticas en cadena de suministro y software empresarial español, lo que refuerza el riesgo para pymes y entornos NIS2."
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      "Inventariar y parchear hoy FortiOS/FortiManager/FortiAnalyzer/FortiProxy/FortiWeb con FortiCloud SSO o deshabilitar ese acceso hasta verificar versión corregida.",
+      "Aplicar hotfix inmediato a FortiClient EMS 7.4.5 y 7.4.6 y revisar logs en busca de actividad no autorizada.",
+      "Auditar exposición externa de marimo, SmarterMail y otros servicios con terminal web, consola administrativa o subida de archivos.",
+      "Ejecutar caza de compromiso en equipos y appliances buscando cuentas locales inesperadas, cambios de política local-in, shells remotas y exfiltración reciente."
+    ],
+    "high": [
+      "Acelerar actualización de dispositivos Android corporativos al nivel 2026-05-01 o superior y validar Quick Assist/ADB inalámbrico en políticas MDM.",
+      "Restringir Teams externo, Quick Assist y descargas iniciadas desde plataformas sociales o colaborativas; reforzar MFA y aprobación contextual.",
+      "Bloquear accesos administrativos desde internet cuando no sean estrictamente necesarios y segmentar redes de gestión."
+    ],
+    "medium": [
+      "Reforzar comunicación a negocio por riesgo de phishing derivado de brechas recientes en retail y travel.",
+      "Simular campañas de ingeniería social fuera del correo para medir exposición real de RR.HH., compras y comité directivo."
+    ],
+    "low": [
+      "Preparar trazabilidad de vulnerabilidades y reporting de producto de cara al marco CRA/EUVD cuando aplique.",
+      "Actualizar playbooks de terceros, fugas de datos y respuesta de marca ante incidentes con clientes."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo o estimativo generado por IA",
+    "global_risk_estimate": "Alto",
+    "predicted_threats": [
+      "Continuidad de explotación sobre appliances y consolas de administración expuestas.",
+      "Más campañas de suplantación en Teams, LinkedIn y canales de soporte remoto.",
+      "Mayor velocidad de weaponization en software open source con terminal o file upload."
+    ],
+    "most_exposed_sectors": [
+      "Sanidad",
+      "Financiero",
+      "Retail",
+      "Travel",
+      "TIC / MSSP / hardware"
+    ],
+    "priority_vulns": [
+      "CVE-2026-24858",
+      "CVE-2026-35616",
+      "CVE-2026-39987",
+      "CVE-2025-52691",
+      "CVE-2026-0073"
+    ],
+    "probability_of_increase": "Media-Alta en próximas 72 horas",
+    "automatic_recommendation": "Combinar priorización KEV con exposición real a internet y validar controles sobre colaboración remota y credenciales privilegiadas."
+  },
+  "delivery_status": {
+    "report_generated": "completado",
+    "github_history": "pendiente",
+    "gmail_html": "pendiente",
+    "pdf": "no disponible",
+    "page_images": "no disponibles",
+    "google_drive": "omitido",
+    "limitations": [
+      "Los KPIs operativos son una muestra priorizada de fuentes oficiales y no un censo global en tiempo real.",
+      "El PDF se omite para no presentar como entregado un artefacto no verificado fuera del workspace."
+    ]
+  },
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.",
+  "sources": [
+    {
+      "title": "NVD - CVE-2026-24858",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+      "type": "official"
+    },
+    {
+      "title": "Fortinet - Analysis of Single Sign-On Abuse on FortiOS",
+      "url": "https://www.fortinet.com/blog/psirt-blogs/analysis-of-sso-abuse-on-fortios",
+      "type": "vendor"
+    },
+    {
+      "title": "NVD - CVE-2026-35616",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35616",
+      "type": "official"
+    },
+    {
+      "title": "FortiGuard PSIRT - FG-IR-26-099",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+      "type": "vendor"
+    },
+    {
+      "title": "NVD - CVE-2026-39987",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39987",
+      "type": "official"
+    },
+    {
+      "title": "NVD - CVE-2025-52691",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52691",
+      "type": "official"
+    },
+    {
+      "title": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "type": "official"
+    },
+    {
+      "title": "NVD - CVE-2026-21385",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21385",
+      "type": "official"
+    },
+    {
+      "title": "Android Security Bulletin - March 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-03-01",
+      "type": "official"
+    },
+    {
+      "title": "INCIBE - Boletín de seguridad de Android: mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026",
+      "type": "official"
+    },
+    {
+      "title": "INCIBE - Múltiples vulnerabilidades en MOVEit Automation",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-moveit-automation",
+      "type": "official"
+    },
+    {
+      "title": "INCIBE - Refuerzo de la ciberseguridad empresarial frente a nuevas campañas de suplantación en plataformas colaborativas",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/refuerzo-de-la-ciberseguridad-empresarial-frente-nuevas-campanas-de",
+      "type": "official"
+    },
+    {
+      "title": "INCIBE - Detectan una campaña de malware distribuida a través de LinkedIn",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/detectan-una-campana-de-malware-distribuida-traves-de-linkedin",
+      "type": "official"
+    },
+    {
+      "title": "INCIBE - Detección de un acceso no autorizado a datos de usuarios de Booking",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking",
+      "type": "official"
+    },
+    {
+      "title": "INCIBE - Rituals detecta un incidente de seguridad que afecta a la base de datos de sus clientes",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/rituals-detecta-un-incidente-de-seguridad-que-afecta-la-base-de-datos-de",
+      "type": "official"
+    },
+    {
+      "title": "INCIBE - Balance de ciberseguridad 2025",
+      "url": "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf",
+      "type": "official"
+    },
+    {
+      "title": "CCN-CERT AL 01/26 - Explotación activa de vulnerabilidad crítica en FortiCloud SSO",
+      "url": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html",
+      "type": "official"
+    }
+  ]
+}
