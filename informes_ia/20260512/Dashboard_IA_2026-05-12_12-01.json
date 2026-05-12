@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo Premium de Inteligencia Artificial · Corte 12:00",
+    "generated_at": "2026-05-12 12:03 CEST",
+    "timezone": "Europe/Madrid",
+    "previous_execution": "2026-05-11 20:54 CEST",
+    "next_expected_update": "2026-05-12 16:00 CEST (estimada)",
+    "impact_level": "Alto",
+    "global_state": "Activo, con mayor presion operativa que competitiva en el corto plazo"
+  },
+  "comparison": {
+    "summary": "Sin ruptura nueva de modelo frontier; sube la prioridad de continuidad operativa, migraciones y transparencia regulatoria.",
+    "main_changes": [
+      "Incidentes operativos recientes de OpenAI ya resueltos, pero relevantes para continuidad.",
+      "xAI entra en ventana critica de retirada de modelos a 3 dias del corte.",
+      "No se detecta nueva vulnerabilidad IA critica confirmada esta manana.",
+      "Se mantiene utilidad alta en voz, conectores y seguridad de agentes."
+    ]
+  },
+  "kpis": [
+    {"label": "Cambios confirmados desde el ultimo corte", "value": "4", "note": "solo senales con delta real"},
+    {"label": "Alertas activas", "value": "2", "note": "xAI migracion + AI Act transparencia"},
+    {"label": "Incidentes operativos relevantes", "value": "2 resueltos", "note": "OpenAI"},
+    {"label": "Estado global IA", "value": "Activo", "note": "sin ruptura de frontera overnight"}
+  ],
+  "featured_news": [
+    {
+      "title": "xAI expande Connectors y habilita BYO MCP",
+      "impact": "Alto",
+      "utility": "Grok ya puede leer y escribir sobre SharePoint, Outlook, OneDrive, Google Workspace, Notion y GitHub.",
+      "risk": "Sube la superficie de permisos, exfiltracion y governance de conectores.",
+      "recommendation": "Inventario inmediato de apps conectadas y politicas de aprobacion.",
+      "source": "https://x.ai/news/grok-connectors"
+    },
+    {
+      "title": "OpenAI refuerza voz operativa en tiempo real",
+      "impact": "Alto",
+      "utility": "GPT-Realtime-2, GPT-Realtime-Translate y GPT-Realtime-Whisper refuerzan asistencia vocal, traduccion y transcripcion continua con tool calling.",
+      "risk": "Crece el riesgo en voz-a-accion, consentimiento y trazabilidad.",
+      "recommendation": "Pilotar en flujos acotados con logging y disclosure.",
+      "source": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "title": "Ventana critica de migracion en xAI para el 15 de mayo",
+      "impact": "Critica",
+      "utility": "Se retiran grok-3, grok-code-fast-1 y varias familias Grok 4 fast.",
+      "risk": "Ruptura directa de integraciones si no se actualiza el campo model.",
+      "recommendation": "Migrar a grok-4.3 o grok-4.20-non-reasoning antes del plazo.",
+      "source": "https://docs.x.ai/developers/migration/may-15-retirement"
+    }
+  ],
+  "incidents": [
+    {
+      "title": "Errores elevados con GPT-5.5",
+      "status": "Resuelto",
+      "source": "https://status.openai.com/history"
+    },
+    {
+      "title": "Errores en uploads de ChatGPT y creacion de tareas en Codex Cloud",
+      "status": "Resuelto",
+      "source": "https://status.openai.com/history"
+    }
+  ],
+  "recommendations": [
+    {"priority": "Critica", "text": "Revisar en 48 horas cualquier integracion con xAI API y sustituir modelos en retirada."},
+    {"priority": "Alta", "text": "Definir runbook de degradacion para GPT-5.5, subidas de archivos y tareas cloud."},
+    {"priority": "Alta", "text": "Preparar checklist de transparencia AI Act para agentes visibles al cliente y contenido sintetico."},
+    {"priority": "Media", "text": "Empaquetar servicio de auditoria de conectores, permisos y trazabilidad IA para pymes."}
+  ],
+  "events": [
+    {"date": "2026-05-15", "title": "Retiro de modelos xAI API", "priority": "Critica"},
+    {"date": "2026-06-01", "title": "Advanced Account Security exigido para Trusted Access for Cyber individual", "priority": "Alta"},
+    {"date": "2026-06-03", "title": "Cierre de consulta de transparencia del AI Act", "priority": "Alta"}
+  ],
+  "sources": [
+    "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+    "https://openai.com/index/introducing-b2b-signals/",
+    "https://openai.com/index/advanced-account-security/",
+    "https://openai.com/index/running-codex-safely/",
+    "https://status.openai.com/history",
+    "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/",
+    "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+    "https://x.ai/news/grok-connectors",
+    "https://docs.x.ai/developers/migration/may-15-retirement",
+    "https://www.anthropic.com/news/claude-opus-4-7"
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
