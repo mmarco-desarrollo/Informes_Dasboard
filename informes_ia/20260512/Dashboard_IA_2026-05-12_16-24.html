@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MMarco Seguridad | Informe Ejecutivo IA 16:00</title>
+  <style>
+    :root {
+      --bg: #020817;
+      --panel: rgba(10, 21, 39, 0.82);
+      --panel-strong: #091225;
+      --stroke: rgba(148, 163, 184, 0.18);
+      --text: #edf2ff;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --electric: #818cf8;
+      --good: #34d399;
+      --warn: #fb923c;
+      --danger: #f87171;
+      --soft: #0f172a;
+      --shadow: 0 20px 80px rgba(2, 8, 23, 0.45);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(129, 140, 248, 0.16), transparent 26%),
+        linear-gradient(180deg, #040b17 0%, #020817 100%);
+      color: var(--text);
+    }
+    a { color: #7dd3fc; text-decoration: none; }
+    .shell {
+      width: min(1500px, calc(100vw - 32px));
+      margin: 24px auto 48px;
+      display: grid;
+      gap: 20px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+    }
+    .hero {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 24px;
+      min-height: 280px;
+      background:
+        linear-gradient(145deg, rgba(8, 15, 28, 0.88), rgba(11, 24, 46, 0.82)),
+        linear-gradient(135deg, rgba(14, 165, 233, 0.18), rgba(129, 140, 248, 0.18));
+    }
+    .brandline {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: #c7d2fe;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+    .brand-chip {
+      padding: 8px 12px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      border-radius: 999px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.02;
+      max-width: 12ch;
+    }
+    .lede {
+      max-width: 70ch;
+      color: #cbd5e1;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .meta-stack {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      align-content: start;
+    }
+    .meta-box {
+      background: rgba(8, 15, 28, 0.66);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 18px;
+      padding: 16px;
+      min-height: 100px;
+    }
+    .meta-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .meta-box strong {
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 0 0 0;
+    }
+    .kpi {
+      padding: 22px 24px;
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .kpi .label {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .kpi .value {
+      font-size: 38px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .kpi .caption {
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+    }
+    .section {
+      padding: 24px;
+    }
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+    }
+    .section p.section-copy {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .summary-list, .plain-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #dbe4f0;
+      line-height: 1.8;
+    }
+    .chart {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+      margin-top: 16px;
+    }
+    .alert-stack {
+      display: grid;
+      gap: 14px;
+    }
+    .alert-card {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(8, 15, 28, 0.72);
+      border: 1px solid rgba(248, 113, 113, 0.2);
+    }
+    .alert-card strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .item-card, .repo-card, .region-card {
+      background: rgba(8, 15, 28, 0.72);
+      border: 1px solid var(--stroke);
+      border-radius: 20px;
+      padding: 18px;
+      min-height: 100%;
+    }
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+    .item-top h3, .region-card h3 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.3;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .muted {
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin: 0 0 14px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .meta-grid div {
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      min-height: 86px;
+    }
+    .meta-grid span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .meta-grid strong {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .recommendation {
+      color: #e2e8f0;
+      line-height: 1.7;
+      margin: 0 0 14px;
+    }
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #7dd3fc;
+      font-size: 14px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 88px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+    .badge.warning { background: rgba(251, 146, 60, 0.16); color: #fdba74; }
+    .badge.danger { background: rgba(248, 113, 113, 0.16); color: #fca5a5; }
+    .badge.accent { background: rgba(129, 140, 248, 0.16); color: #c7d2fe; }
+    .badge.neutral { background: rgba(148, 163, 184, 0.14); color: #cbd5e1; }
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .priority-row {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    }
+    .priority-row:last-child { border-bottom: 0; }
+    .priority-row p { margin: 0; line-height: 1.7; color: #dbe4f0; }
+    .priority-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 8px 10px;
+      height: fit-content;
+    }
+    .critica { background: rgba(248, 113, 113, 0.16); color: #fca5a5; }
+    .alta { background: rgba(251, 146, 60, 0.16); color: #fdba74; }
+    .media { background: rgba(56, 189, 248, 0.16); color: #7dd3fc; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(8, 15, 28, 0.72);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    th {
+      color: #c7d2fe;
+      background: rgba(15, 23, 42, 0.94);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+    }
+    .footer {
+      padding: 24px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+    @media (max-width: 1080px) {
+      .hero, .grid-two, .cards, .region-grid, .kpis {
+        grid-template-columns: 1fr;
+      }
+      .meta-stack, .meta-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 720px) {
+      .shell { width: min(100vw - 20px, 100%); margin: 10px auto 36px; }
+      .hero { padding: 20px; }
+      .section { padding: 20px; }
+      .meta-stack, .meta-grid { grid-template-columns: 1fr; }
+      h1 { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="panel hero">
+      <div>
+        <div class="brandline">
+          <span class="brand-chip">MMarco Seguridad</span>
+          <span>Radar Ejecutivo IA</span>
+        </div>
+        <h1>Informe Ejecutivo IA 16:00</h1>
+        <p class="lede">
+          Corte ejecutivo de las 16:00 con prioridad en incidentes, vulnerabilidades, modelos y herramientas
+          que ya estan moviendo operaciones, riesgos o ventaja competitiva para servicios de ciberseguridad,
+          automatizacion y consultoria tecnologica.
+        </p>
+      </div>
+      <div class="meta-stack">
+        <div class="meta-box"><span>Generado</span><strong>12/05/2026 16:24:56 CEST</strong></div>
+        <div class="meta-box"><span>Estado global</span><strong>Activo y acelerado, con riesgo agentic en primer plano</strong></div>
+        <div class="meta-box"><span>Nivel de impacto IA</span><strong>Alto</strong></div>
+        <div class="meta-box"><span>Proxima actualizacion esperada</span><strong>12/05/2026 20:00 CEST</strong></div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <article class="panel kpi">
+        <span class="label">Senales priorizadas</span>
+        <span class="value">16</span>
+        <span class="caption">hechos confirmados seleccionados para este corte</span>
+      </article>
+      <article class="panel kpi">
+        <span class="label">Alertas criticas</span>
+        <span class="value">2</span>
+        <span class="caption">vulnerabilidades o acciones urgentes</span>
+      </article>
+      <article class="panel kpi">
+        <span class="label">Impacto alto</span>
+        <span class="value">15</span>
+        <span class="caption">items con utilidad inmediata o riesgo directo</span>
+      </article>
+      <article class="panel kpi">
+        <span class="label">Fuentes primarias</span>
+        <span class="value">16</span>
+        <span class="caption">fuentes oficiales o tecnicas trazables</span>
+      </article>
+    </section>
+
+    <section class="grid-two">
+      <article class="panel section">
+        <h2>Resumen Ejecutivo</h2>
+        <p class="section-copy">
+          El mercado no solo esta lanzando modelos mas capaces: esta moviendo la capa operativa real de agentes,
+          conectores, voz, compute y controles de seguridad. La lectura del corte de las 16:00 es clara:
+          sube el valor practico, pero tambien la necesidad de gobierno tecnico.
+        </p>
+        <ul class="summary-list"><li>La ventana de mayor valor inmediato esta en voz operativa, conectores y agentes de investigacion con fuentes y herramientas reales.</li><li>El principal frente de riesgo sigue siendo agentic security: function calling, MCP, plugins y almacenes locales mal acotados.</li><li>El movimiento regulatorio mas accionable es la consulta europea de transparencia del AI Act, con implicaciones directas para disclosure y etiquetado.</li></ul>
+        
+    <svg viewBox="0 0 960 290" class="chart" role="img" aria-label="Evolucion de actividad">
+      <defs>
+        <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#22d3ee"/>
+          <stop offset="100%" stop-color="#6366f1"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="960" height="290" rx="24" fill="#07111f"/>
+      <line x1="32" y1="220" x2="920" y2="220" stroke="#1f2d44" stroke-width="2"/>
+      
+            <g>
+              <rect x="40" y="178" width="62" height="42" rx="16" fill="url(#barGrad)"></rect>
+              <text x="71" y="168" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">1</text>
+              <text x="71" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">04-07</text>
+              <text x="71" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">Glasswing</text>
+            </g>
+            
+            <g>
+              <rect x="150" y="178" width="62" height="42" rx="16" fill="url(#barGrad)"></rect>
+              <text x="181" y="168" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">1</text>
+              <text x="181" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">04-08</text>
+              <text x="181" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">Safetensors</text>
+            </g>
+            
+            <g>
+              <rect x="260" y="178" width="62" height="42" rx="16" fill="url(#barGrad)"></rect>
+              <text x="291" y="168" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">1</text>
+              <text x="291" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">04-16</text>
+              <text x="291" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">Opus 4.7</text>
+            </g>
+            
+            <g>
+              <rect x="370" y="178" width="62" height="42" rx="16" fill="url(#barGrad)"></rect>
+              <text x="401" y="168" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">1</text>
+              <text x="401" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">04-21</text>
+              <text x="401" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">Deep Research Max</text>
+            </g>
+            
+            <g>
+              <rect x="480" y="50" width="62" height="170" rx="16" fill="url(#barGrad)"></rect>
+              <text x="511" y="40" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">4</text>
+              <text x="511" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">05-06</text>
+              <text x="511" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">xAI / Anthropic / Perplexity</text>
+            </g>
+            
+            <g>
+              <rect x="590" y="178" width="62" height="42" rx="16" fill="url(#barGrad)"></rect>
+              <text x="621" y="168" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">1</text>
+              <text x="621" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">05-07</text>
+              <text x="621" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">OpenAI Voice</text>
+            </g>
+            
+            <g>
+              <rect x="700" y="50" width="62" height="170" rx="16" fill="url(#barGrad)"></rect>
+              <text x="731" y="40" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">4</text>
+              <text x="731" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">05-08</text>
+              <text x="731" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">OpenAI incidents + AI Act</text>
+            </g>
+            
+            <g>
+              <rect x="810" y="178" width="62" height="42" rx="16" fill="url(#barGrad)"></rect>
+              <text x="841" y="168" text-anchor="middle" fill="#eef2ff" font-size="16" font-weight="700">1</text>
+              <text x="841" y="252" text-anchor="middle" fill="#94a3b8" font-size="12">05-10</text>
+              <text x="841" y="270" text-anchor="middle" fill="#7dd3fc" font-size="11">xAI incident</text>
+            </g>
+            
+    </svg>
+    
+      </article>
+      <aside class="panel section">
+        <h2>Alertas Activas</h2>
+        <div class="alert-stack">
+          <article class="alert-card">
+            <strong>1. Migracion xAI antes del 15 de mayo</strong>
+            Modelos Grok legacy dejan de responder el 15/05/2026 a las 12:00 PT. Riesgo operativo inmediato si hay integraciones no migradas.
+          </article>
+          <article class="alert-card">
+            <strong>2. Hardening urgente de Semantic Kernel</strong>
+            Dos CVEs criticas recientes elevan el riesgo de tool calling, plugins y stores inseguros en agentes.
+          </article>
+          <article class="alert-card">
+            <strong>3. Resiliencia por proveedor y por modelo</strong>
+            OpenAI y xAI han mostrado incidencias recientes que justifican circuit breakers, retries y fallback.
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel section">
+      <h2>Vista Global De Actividad IA</h2>
+      <p class="section-copy">Lectura territorial y estructural del radar actual: producto, compliance e infraest[content truncated]
