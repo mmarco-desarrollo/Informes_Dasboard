@@ -1,0 +1,360 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "report": {
+    "title": "Informe Ejecutivo Premium de Inteligencia Artificial | Corte 12:00",
+    "generated_at": "2026-05-13 12:09:39 CEST",
+    "timezone": "Europe/Madrid",
+    "impact_level": "ALTO",
+    "global_status": "Sin ruptura competitiva nueva, pero con refuerzo claro del valor defensivo agentic y de la IA embebida en el flujo de trabajo",
+    "next_update_expected": "Corte de tarde del 13 mayo 2026 segun programacion del radar",
+    "profile": "MMarco Seguridad | Ciberseguridad · Blockchain · IA · Telecomunicaciones",
+    "window": "Cambios relevantes desde la ultima ejecucion confirmada (2026-05-13 08:18 CEST) hasta 2026-05-13 12:09 CEST"
+  },
+  "kpis": [
+    {
+      "label": "Cambios de alta prioridad",
+      "value": 3,
+      "note": "Conteo editorial del delta real frente al corte anterior"
+    },
+    {
+      "label": "Alertas criticas sin resolver",
+      "value": 2,
+      "note": "Mistral supply chain y Semantic Kernel siguen dominando el riesgo"
+    },
+    {
+      "label": "Senales nuevas de utilidad practica",
+      "value": 2,
+      "note": "MDASH y la interfaz contextual de Google cambian la lectura operativa"
+    },
+    {
+      "label": "Ventanas temporales activas",
+      "value": 2,
+      "note": "Retirada de modelos xAI y consulta europea de transparencia"
+    }
+  ],
+  "activity_evolution": [
+    "La intensidad del mercado no sube por un modelo nuevo, sino por la maduracion de sistemas agentic completos orientados a defensa, validacion y remediacion.",
+    "La superficie de riesgo sigue concentrada en paquetes, plugins, conectores y herramientas que ya tocan host, credenciales o datos empresariales.",
+    "La productividad se desplaza hacia IA contextual y embebida: navegar, comparar, resumir o actuar sobre contenido existente gana traccion frente al chat aislado."
+  ],
+  "global_view": [
+    "OpenAI y Microsoft consolidan la narrativa de ciberdefensa gobernada y usable en entornos verificados.",
+    "Google empuja la siguiente capa de adopcion: IA que entiende directamente la superficie de trabajo del usuario.",
+    "xAI y el ecosistema de conectores mantienen viva la presion competitiva sobre permisos, MCP y accion sobre sistemas reales.",
+    "Europa sigue marcando el frente de transparencia y disclosure con calendario concreto y consulta abierta."
+  ],
+  "delta": [
+    {
+      "title": "Microsoft eleva el liston de defensa agentic con MDASH",
+      "status": "Cambio nuevo desde la ultima ejecucion",
+      "impact": "Muy alto",
+      "summary": "Microsoft presenta MDASH como sistema multi-modelo y multiagente para investigacion de vulnerabilidades. El sistema coordina mas de 100 agentes especializados y se atribuye 16 nuevas vulnerabilidades encontradas en la cohorte de Patch Tuesday, incluidas 4 RCE criticas.",
+      "executive_note": "La lectura cambia: la ventaja ya no esta solo en el modelo, sino en el arnes agentic, el pipeline y la validacion end-to-end. Esto refuerza una oportunidad directa para servicios de hardening y discovery asistido.",
+      "source_id": "microsoft_mdash"
+    },
+    {
+      "title": "Google mueve la interfaz de IA hacia el contexto real de trabajo",
+      "status": "Cambio nuevo desde la ultima ejecucion",
+      "impact": "Alto",
+      "summary": "Google DeepMind publica su enfoque de puntero habilitado por IA y confirma que Gemini en Chrome ya puede actuar sobre partes concretas de la pagina mediante seleccion contextual.",
+      "executive_note": "No es solo UX. Es una senal fuerte de que los copilotos dejaran de vivir en ventanas separadas y pasaran a operar sobre el propio contenido y el propio flujo del usuario.",
+      "source_id": "google_pointer"
+    },
+    {
+      "title": "xAI entra en ventana operativa de retirada de modelos",
+      "status": "Urgencia aumentada",
+      "impact": "Media-Alta",
+      "summary": "La retirada de varios modelos Grok se ejecuta el 15 de mayo de 2026 a las 12:00 PT, por lo que el margen para migrar cargas queda ya en fase tactica.",
+      "executive_note": "Para clientes o vigilancias competitivas, la relevancia no esta en la novedad sino en la cercania. Toda dependencia de versiones antiguas deberia auditarse ya.",
+      "source_id": "xai_retirement"
+    },
+    {
+      "title": "No aparece un nuevo incidente critico que desplace el radar actual",
+      "status": "Continuidad confirmada",
+      "impact": "Critico",
+      "summary": "No se ha confirmado en esta ventana una vulnerabilidad nueva que reemplace el peso operativo del advisory de Mistral o de las CVE de Semantic Kernel.",
+      "executive_note": "El informe de las 12:00 debe priorizar accion y maduracion, no ruido. El riesgo principal sigue en supply chain, tool calling y agentes con acceso a host.",
+      "source_id": "mistral_advisory"
+    }
+  ],
+  "featured_news": [
+    {
+      "title": "MDASH convierte la investigacion de vulnerabilidades con IA en defensa de produccion",
+      "category": "Seguridad / Plataforma",
+      "impact": "Muy alto",
+      "status": "Hecho confirmado",
+      "source": "Microsoft Security",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
+      "date_label": "12 mayo 2026",
+      "utility_or_risk": "Demuestra que un sistema agentic bien orquestado puede encontrar y validar fallos a escala en superficies de alto valor.",
+      "executive_note": "Referencia inmediata para propuestas de auditoria asistida, validacion de exposicion y pipelines de remediation engineering."
+    },
+    {
+      "title": "Google integra puntero + Gemini para trabajar sobre contexto real",
+      "category": "Interfaz / Productividad",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "source": "Google DeepMind",
+      "source_url": "https://deepmind.google/blog/ai-pointer/",
+      "date_label": "12 mayo 2026",
+      "utility_or_risk": "Apunta a asistentes que entienden el contenido sin obligar al usuario a reexplicar el contexto en otra ventana.",
+      "executive_note": "Se convierte en senal a vigilar para navegadores, entornos de oficina, soporte y operaciones documentales."
+    },
+    {
+      "title": "xAI deja ya en fase tactica la retirada de modelos Grok antiguos",
+      "category": "Modelo / Migracion",
+      "impact": "Media-Alta",
+      "status": "Hecho confirmado",
+      "source": "xAI Docs",
+      "source_url": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "date_label": "15 mayo 2026",
+      "utility_or_risk": "Impacta continuidad de integraciones y obliga a revisar compatibilidad y coste de sustitucion en cargas existentes.",
+      "executive_note": "Lectura principal para operaciones: inventario, cambio de modelo, test de regresion y validacion de latencia y coste."
+    },
+    {
+      "title": "OpenAI consolida el discurso de ciberdefensa gobernada con GPT-5.5-Cyber",
+      "category": "Seguridad / Modelo",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/",
+      "date_label": "7 mayo 2026",
+      "utility_or_risk": "Refuerza el giro del mercado hacia modelos mas utiles para defensa, pero con identidad verificada, account security y control de uso.",
+      "executive_note": "Muy relevante para servicios de ciberseguridad ofensiva y defensiva con verificacion fuerte y entornos autorizados."
+    }
+  ],
+  "models": [
+    {
+      "name": "GPT-5.5-Cyber",
+      "company": "OpenAI",
+      "type": "Modelo especializado para ciberdefensa",
+      "capabilities": "Mayor permisividad para workflows defensivos autorizados, red teaming controlado y validacion de explotabilidad.",
+      "multimodal": "No especificado en la fuente revisada",
+      "context": "No disponible",
+      "license": "Acceso restringido / propietario",
+      "use_cases": "Defensa autorizada, investigacion de vulnerabilidades, validacion controlada.",
+      "impact": "Alto",
+      "source_url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "company": "Anthropic",
+      "type": "Frontier model para software engineering",
+      "capabilities": "Mejora en tareas complejas de ingenieria, supervision larga y verificacion de salidas.",
+      "multimodal": "Vision mejorada",
+      "context": "No disponible en la fuente revisada",
+      "license": "Propietario",
+      "use_cases": "Ingenieria compleja, documentos profesionales, interfaces y analisis visual.",
+      "impact": "Media-Alta",
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-7?hsLang=en"
+    },
+    {
+      "name": "Modelos Grok retirados el 15 de mayo",
+      "company": "xAI",
+      "type": "Racionalizacion de catalogo",
+      "capabilities": "Cambio de portfolio, no lanzamiento nuevo",
+      "multimodal": "Segun modelo",
+      "context": "No aplica",
+      "license": "API propietaria",
+      "use_cases": "Migracion y continuidad operacional",
+      "impact": "Media-Alta",
+      "source_url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    }
+  ],
+  "tools": [
+    {
+      "name": "MDASH",
+      "source": "Microsoft Security",
+      "description": "Arnes multi-modelo y multiagente para descubrimiento, debate, prueba y validacion de vulnerabilidades.",
+      "use_cases": "AppSec avanzada, investigacion de exposicion, discovery de bugs y validacion de hallazgos.",
+      "utility": "Muy alta",
+      "risk": "Exige gobernanza fuerte, datasets privados y disciplina de validacion para evitar ruido o abuso.",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/"
+    },
+    {
+      "name": "Gemini in Chrome con puntero contextual",
+      "source": "Google DeepMind / Google",
+      "description": "Interaccion contextual sobre contenido existente sin salir del flujo de navegacion.",
+      "use_cases": "Comparacion de productos, apoyo documental, resumen, visualizacion y asistencia contextual.",
+      "utility": "Alta",
+      "risk": "Amplia superficie de captura contextual y eleva la necesidad de controles de privacidad y permisos.",
+      "source_url": "https://deepmind.google/blog/ai-pointer/"
+    },
+    {
+      "name": "Grok Connectors + BYO MCP",
+      "source": "xAI",
+      "description": "Conectores para correo, calendario, archivos y servidores MCP personalizados.",
+      "use_cases": "Asistentes con acceso real a sistemas y datos empresariales.",
+      "utility": "Alta",
+      "risk": "Superficie de permisos, leakage y aprobaciones humanas sigue siendo el punto critico.",
+      "source_url": "https://x.ai/news/grok-connectors"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Microsoft Semantic Kernel",
+      "source": "Microsoft / GitHub",
+      "popularity": "Mas de 27.000 estrellas segun Microsoft Security",
+      "language": "Principalmente C# y Python en su ecosistema",
+      "description": "Framework abierto para construir agentes y orquestar modelos, plugins y workflows.",
+      "use_cases": "Agentes empresariales, tool calling, RAG y automatizacion.",
+      "utility": "Alta",
+      "risk": "Sigue siendo referencia directa para riesgo agentic por las CVE criticas publicadas en mayo.",
+      "source_url": "https://github.com/microsoft/semantic-kernel"
+    }
+  ],
+  "incidents_and_vulnerabilities": [
+    {
+      "name": "MAI-2026-002 | Mistral SDK supply chain",
+      "severity": "Critica",
+      "product": "Paquetes NPM y PyPI de Mistral",
+      "exploitation": "Compromiso confirmado de paquetes publicados; PyPI con script malicioso en import",
+      "impact": "Riesgo de robo de credenciales y contaminacion de estaciones de desarrollo, caches y CI.",
+      "mitigation": "Bloquear versiones afectadas, limpiar sistemas expuestos, rotar secretos y revisar logs de nube y conexiones salientes.",
+      "priority": "Critica",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "name": "CVE-2026-26030",
+      "severity": "Critica",
+      "product": "Semantic Kernel Python",
+      "exploitation": "RCE cuando coinciden prompt injection, Search Plugin e In-Memory Vector Store con configuracion vulnerable.",
+      "impact": "Escala prompt injection desde un problema de contenido a una primitiva de ejecucion remota de codigo.",
+      "mitigation": "Actualizar a semantic-kernel 1.39.4 o superior y revisar telemetria del host.",
+      "priority": "Critica",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "name": "CVE-2026-25592",
+      "severity": "Critica",
+      "product": "Semantic Kernel .NET y Python",
+      "exploitation": "Escritura arbitraria de ficheros a traves de SessionsPythonPlugin.",
+      "impact": "Amplia la superficie de tool calling hacia escritura fuera de rutas esperadas y mayor blast radius local.",
+      "mitigation": "Actualizar a versiones corregidas y filtrar rutas y plugins con listas permitidas.",
+      "priority": "Critica",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    }
+  ],
+  "trends": [
+    "La seguridad agentic deja de ser narrativa y pasa a sistema: Microsoft explicita que el arnes, la validacion y la orquestacion pesan mas que un modelo aislado.",
+    "La siguiente guerra de producto se mueve a la interfaz contextual. Google confirma un patron donde la IA opera sobre el contenido existente y no desde un chat separado.",
+    "El mercado sigue premiando conectores y MCP, pero la prioridad ejecutiva real sigue siendo gobernanza de permisos, aprobaciones humanas y trazabilidad.",
+    "Regulacion y tiempos operativos convergen: mientras la consulta europea sigue abierta hasta el 3 de junio, varios proveedores ya fuerzan decisiones de migracion o disclosure."
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "text": "Diseñar un servicio premium de hardening agentic para pymes y medianas empresas: inventario de herramientas, blast radius, aprobaciones y logging."
+    },
+    {
+      "priority": "Alta",
+      "text": "Crear una oferta de auditoria asistida y remediation engineering inspirada en el patron MDASH para software propio y pipelines CI."
+    },
+    {
+      "priority": "Media-Alta",
+      "text": "Probar casos de uso de IA contextual en navegador para analisis documental, comparativas comerciales y asistencia a operaciones."
+    },
+    {
+      "priority": "Media",
+      "text": "Ofrecer talleres ejecutivos de transparencia del AI Act orientados a bots, contenido sintetico y disclosure corporativo."
+    }
+  ],
+  "active_alerts": [
+    "Mistral: el advisory sigue bajo investigacion y la prioridad continua siendo limpieza y rotacion de secretos en equipos potencialmente expuestos.",
+    "Semantic Kernel: no bajar prioridad; las dos CVE siguen siendo el mejor caso practico para explicar riesgo real de agentes con herramientas.",
+    "xAI: revisar cualquier dependencia de modelos Grok retirados antes del 15 de mayo de 2026 a las 12:00 PT.",
+    "UE: mantener seguimiento de la consulta sobre transparencia del AI Act hasta el 3 de junio de 2026."
+  ],
+  "executive_recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Tratar agentes, MCP y tool calling como superficie de produccion. Exigir inventario, listas permitidas, aprobacion humana y segmentacion de credenciales."
+    },
+    {
+      "priority": "Alta",
+      "text": "Abrir cuanto antes una linea comercial de revision de supply chain IA y de hardening de agentes para clientes con desarrollo propio o automatizaciones internas."
+    },
+    {
+      "priority": "Alta",
+      "text": "Explorar pilotos de analisis contextual en navegador y escritorio, pero bajo un marco claro de privacidad, logging y control de datos."
+    },
+    {
+      "priority": "Media",
+      "text": "Preparar migraciones preventivas en catalogos de modelos externos para evitar cortes operativos por retiradas de proveedor."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "15 mayo 2026 · 12:00 PT",
+      "event": "Retirada efectiva de varios modelos Grok en xAI API",
+      "type": "Migracion / Operacion",
+      "source_url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "date": "19-20 mayo 2026",
+      "event": "Google I/O 2026",
+      "type": "Evento confirmado",
+      "source_url": "https://io.google/2026/"
+    },
+    {
+      "date": "3 junio 2026",
+      "event": "Cierre de la consulta europea sobre transparencia del AI Act",
+      "type": "Cumplimiento",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    }
+  ],
+  "sources": [
+    {
+      "id": "mistral_advisory",
+      "label": "Mistral Docs | Security advisories",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "id": "microsoft_mdash",
+      "label": "Microsoft Security Blog | MDASH",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/"
+    },
+    {
+      "id": "microsoft_shells",
+      "label": "Microsoft Security Blog | Semantic Kernel RCE paths",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "id": "eu_transparency",
+      "label": "European Commission | AI Act transparency consultation",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "id": "google_pointer",
+      "label": "Google DeepMind | AI-enabled pointer",
+      "url": "https://deepmind.google/blog/ai-pointer/"
+    },
+    {
+      "id": "xai_retirement",
+      "label": "xAI Docs | May 15 model retirement",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "id": "xai_connectors",
+      "label": "xAI | Connectors in web, iOS, and Android",
+      "url": "https://x.ai/news/grok-connectors"
+    },
+    {
+      "id": "openai_tac",
+      "label": "OpenAI | GPT-5.5 and Trusted Access for Cyber",
+      "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "id": "anthropic_opus47",
+      "label": "Anthropic | Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7?hsLang=en"
+    }
+  ],
+  "limitations": [
+    "No se confirma en esta ventana un lanzamiento nuevo de frontier model que desplace la prioridad del radar.",
+    "Los KPIs son editoriales y reflejan solo elementos priorizados en esta edicion.",
+    "No se genera PDF en esta ejecucion porque no hay una ruta de render verificada que garantice fidelidad premium respecto al dashboard HTML."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
