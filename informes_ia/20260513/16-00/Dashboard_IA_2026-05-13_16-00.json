@@ -1,0 +1,432 @@
+{
+  "brand": "MMarco Seguridad",
+  "report_title": "Informe Ejecutivo de Inteligencia Artificial",
+  "slot_date": "2026-05-13",
+  "slot_time": "16:00",
+  "generated_at": "2026-05-13 16:20 CEST",
+  "timezone": "Europe/Madrid",
+  "impact_level": "Alto",
+  "ecosystem_status": "Aceleracion alta con friccion operativa controlada",
+  "next_update": "2026-05-13 20:00 CEST",
+  "executive_summary": [
+    "El ecosistema entra en una fase donde conectores, MCP y acceso a sistemas reales pesan mas que el benchmark aislado.",
+    "Las alertas realmente accionables siguen estando en supply chain, RCE sobre tooling agentico y migraciones de API cercanas.",
+    "La oportunidad comercial se concentra en gobierno de agentes, research premium, copilotos de voz y verticales regulados."
+  ],
+  "news": [
+    {
+      "title": "OpenAI lanza GPT-Realtime-2, Realtime-Translate y Realtime-Whisper",
+      "category": "Lanzamiento",
+      "impact": "Alto",
+      "utility": "Utilidad inmediata",
+      "recommendation": "Priorizar pilotos de voz, traduccion en directo y atencion automatizada con supervisión.",
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+      "date": "2026-05-07",
+      "status": "Confirmado",
+      "summary": "Nueva capa de voz operativa con razonamiento, traduccion y transcripcion en tiempo real para agentes."
+    },
+    {
+      "title": "OpenAI publica controles operativos para desplegar agentes de codigo",
+      "category": "Seguridad",
+      "impact": "Alto",
+      "utility": "Arquitectura reusable",
+      "recommendation": "Tomar como blueprint interno: sandbox, aprobaciones, politicas de red y telemetria agent-native.",
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/running-codex-safely/",
+      "date": "2026-05-08",
+      "status": "Confirmado",
+      "summary": "El mensaje de mercado pasa de 'agentes que ayudan' a 'agentes gobernados', con limites tecnicos y auditoria."
+    },
+    {
+      "title": "Google consolida Deep Research Max y Gemma 4 en su narrativa agentic",
+      "category": "Modelos",
+      "impact": "Alto",
+      "utility": "Investigacion y open model",
+      "recommendation": "Vigilar Deep Research Max para flujos asincronos de diligence y Gemma 4 para despliegues controlados.",
+      "source_name": "Google",
+      "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/",
+      "date": "2026-05-04",
+      "status": "Confirmado",
+      "summary": "Google empuja investigacion autonoma, chips para agentes y un open model mas competitivo por parametro."
+    },
+    {
+      "title": "xAI extiende Connectors y BYO MCP en Grok",
+      "category": "Herramientas",
+      "impact": "Alto",
+      "utility": "Automatizacion conectada",
+      "recommendation": "Monitorear el riesgo de permisos y gobernanza antes de permitir conectores amplios sobre datos corporativos.",
+      "source_name": "xAI",
+      "source_url": "https://x.ai/news/grok-connectors",
+      "date": "2026-05-06",
+      "status": "Confirmado",
+      "summary": "Grok pasa a trabajar sobre correo, documentos y fuentes internas con conectores nativos y MCP propio."
+    },
+    {
+      "title": "Anthropic acelera el aterrizaje empresarial con firma de servicios IA y agentes financieros",
+      "category": "Empresa",
+      "impact": "Alto",
+      "utility": "Servicios verticales",
+      "recommendation": "Leerlo como señal de mercado: el valor ya no esta solo en el modelo, sino en la implantacion sectorial.",
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/enterprise-ai-services-company",
+      "date": "2026-05-04",
+      "status": "Confirmado",
+      "summary": "Anthropic combina delivery, integraciones y plantillas listas para trabajo regulado, especialmente en finanzas."
+    },
+    {
+      "title": "Perplexity convierte finanzas y MCP en herramientas operativas de su Agent API",
+      "category": "API",
+      "impact": "Media-Alta",
+      "utility": "Analisis financiero y busqueda",
+      "recommendation": "Explorar uso en consultoria financiera, comparativas de mercado y research asistido con trazabilidad.",
+      "source_name": "Perplexity",
+      "source_url": "https://docs.perplexity.ai/docs/agent-api/finance-search",
+      "date": "2026-05-06",
+      "status": "Confirmado",
+      "summary": "Finance Search y MCP Server acercan datos estructurados y busqueda razonada a flujos empresariales multi-herramienta."
+    }
+  ],
+  "incidents": [
+    {
+      "title": "Codex 5.5 sufrio error rate elevado y quedo resuelto el 13 de mayo",
+      "category": "Incidente",
+      "impact": "Media-Alta",
+      "utility": "Continuidad operativa",
+      "recommendation": "Mantener fallback de modelo o degradacion controlada en automatizaciones criticas de desarrollo.",
+      "source_name": "OpenAI Status",
+      "source_url": "https://status.openai.com/incidents/c5d7k685",
+      "date": "2026-05-13",
+      "status": "Resuelto",
+      "summary": "El servicio reporto error rate alto y latencia degradada, especialmente en Codex GPT-5.5."
+    },
+    {
+      "title": "Realtime API tuvo caida de flujo SIP/WebRTC durante la manana",
+      "category": "Incidente",
+      "impact": "Media",
+      "utility": "Voz en produccion",
+      "recommendation": "Evitar dependencias sin canal alternativo cuando la voz en tiempo real sea critica para negocio.",
+      "source_name": "OpenAI Status",
+      "source_url": "https://status.openai.com/incidents/01KRG0AZKH41DV4D9SNJSXM33Q",
+      "date": "2026-05-13",
+      "status": "Resuelto",
+      "summary": "La incidencia afecto el flujo SIP/WebRTC y refuerza la necesidad de redundancia en stacks de voz agentica."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "title": "Mistral confirma impacto del ataque de cadena de suministro de TanStack",
+      "category": "Supply chain",
+      "impact": "Critico",
+      "utility": "Riesgo inmediato",
+      "recommendation": "Inventariar instalaciones, bloquear `mistralai==2.4.6` y revisar cualquier pipeline entre 11-12 mayo UTC.",
+      "source_name": "Mistral",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories",
+      "date": "2026-05-12",
+      "status": "Bajo investigacion",
+      "summary": "Hubo paquetes NPM comprometidos y una release PyPI comprometida puesta en cuarentena; Mistral no ve compromiso de su infraestructura."
+    },
+    {
+      "title": "CVE-2026-26030 en Semantic Kernel Python permite RCE",
+      "category": "Vulnerabilidad",
+      "impact": "Critico 9.9",
+      "utility": "Riesgo estructural en agentes",
+      "recommendation": "Actualizar a 1.39.4 o superior y evitar `InMemoryVectorStore` en produccion si no hay parche aplicado.",
+      "source_name": "GitHub Advisory",
+      "source_url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx",
+      "date": "2026-02-19",
+      "status": "Confirmado",
+      "summary": "Sigue siendo una de las mejores referencias publicas del salto desde filtrado inseguro a ejecucion remota en tooling agentico."
+    }
+  ],
+  "models": [
+    {
+      "title": "GPT-Realtime-2",
+      "category": "Modelo",
+      "impact": "Alto",
+      "utility": "Voice agents",
+      "recommendation": "Usar para asistentes de voz que necesiten razonamiento y accion en vivo.",
+      "source_name": "OpenAI",
+      "source_url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+      "date": "2026-05-07",
+      "status": "Disponible",
+      "summary": "Modelo de voz con razonamiento clase GPT-5 para conversaciones y tareas mas complejas."
+    },
+    {
+      "title": "Gemini 3.1 Pro + Deep Research Max",
+      "category": "Modelo",
+      "impact": "Alto",
+      "utility": "Research asincrono",
+      "recommendation": "Interesante para procesos nocturnos, due diligence y analisis largo con sintesis final de alta calidad.",
+      "source_name": "Google",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/",
+      "date": "2026-04-21",
+      "status": "Disponible",
+      "summary": "Google posiciona Deep Research Max como motor de workflows largos, iterativos y de alta exhaustividad."
+    },
+    {
+      "title": "Claude Opus 4.7",
+      "category": "Modelo",
+      "impact": "Alta",
+      "utility": "Verticales regulados",
+      "recommendation": "Vigilarlo donde importe calidad en agentes, finanzas y trabajo con documentos largos.",
+      "source_name": "Anthropic",
+      "source_url": "https://www.anthropic.com/news",
+      "date": "2026-04-16",
+      "status": "Disponible",
+      "summary": "Anthropic lo usa como punta de lanza para agentes financieros y verticalizacion empresarial."
+    },
+    {
+      "title": "grok-4.3 como destino de migracion",
+      "category": "Modelo",
+      "impact": "Alta",
+      "utility": "Continuidad de API",
+      "recommendation": "Validar ya compatibilidad si hay cargas en Grok que aun dependan de familias retiradas.",
+      "source_name": "xAI Docs",
+      "source_url": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "date": "2026-05-13",
+      "status": "Migracion urgente",
+      "summary": "xAI retira varias familias el 15 de mayo y dirige el reemplazo hacia grok-4.3 y grok-imagine-image-quality."
+    }
+  ],
+  "tools": [
+    {
+      "title": "Microsoft Agent 365",
+      "category": "Control plane",
+      "impact": "Alta",
+      "utility": "Gobierno de agentes",
+      "recommendation": "Tomarlo como referencia para inventario de agentes, least privilege y telemetria defensiva.",
+      "source_name": "Microsoft",
+      "source_url": "https://learn.microsoft.com/en-us/security/security-for-ai/agent-365-security",
+      "date": "2026-04-30",
+      "status": "Confirmado",
+      "summary": "Microsoft formaliza una capa de seguridad y gobierno especifica para agentes sobre Defender, Entra y Purview."
+    },
+    {
+      "title": "Perplexity Finance Search",
+      "category": "Tool",
+      "impact": "Alta",
+      "utility": "Valor inmediato",
+      "recommendation": "Muy util para informes de mercado, comparativas rapidas y research financiero con menos bricolaje.",
+      "source_name": "Perplexity",
+      "source_url": "https://docs.perplexity.ai/docs/agent-api/finance-search",
+      "date": "2026-05-06",
+      "status": "Disponible",
+      "summary": "Permite extraer datos financieros estructurados y contexto de mercado dentro del Agent API."
+    },
+    {
+      "title": "Perplexity MCP Server",
+      "category": "Tool",
+      "impact": "Media-Alta",
+      "utility": "Integracion inmediata",
+      "recommendation": "Buena pieza de interoperabilidad para equipos que ya trabajan con clientes MCP como Codex o Cursor.",
+      "source_name": "Perplexity",
+      "source_url": "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server",
+      "date": "2026-05-06",
+      "status": "Disponible",
+      "summary": "Expone busqueda y razonamiento de Perplexity a clientes compatibles con MCP y soporte de instalacion rapida."
+    },
+    {
+      "title": "xAI Connectors + BYO MCP",
+      "category": "Tool",
+      "impact": "Alta",
+      "utility": "Conectividad",
+      "recommendation": "Pilotos solo con guardrails de permisos, registros y segmentacion por uso de datos.",
+      "source_name": "xAI",
+      "source_url": "https://x.ai/news/grok-connectors",
+      "date": "2026-05-06",
+      "status": "Disponible",
+      "summary": "La guerra competitiva ya se esta librando en la capa de conectores y protocolos de contexto, no solo en benchmarks."
+    }
+  ],
+  "repositories": [
+    {
+      "name": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "stars": "85.2k",
+      "language": "TypeScript / Python",
+      "utility": "Alta",
+      "warning": "Repositorio de referencia; el propio proyecto avisa que no debe tomarse como solucion production-ready sin hardening adicional.",
+      "summary": "La coleccion de referencia de MCP sigue siendo el indicador mas visible de la estandarizacion de conectores y herramientas.",
+      "source": "GitHub"
+    },
+    {
+      "name": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "stars": "26.3k",
+      "language": "Python",
+      "utility": "Alta",
+      "warning": "Requiere disciplina de guardrails, sessions y sandbox si se lleva a procesos sensibles.",
+      "summary": "Framework ligero de agentes multi-step con tools, handoffs, tracing y sandbox agents; release mas reciente visible: v0.17.2 (12 mayo).",
+      "source": "GitHub"
+    },
+    {
+      "name": "langchain-ai/open_deep_research",
+      "url": "https://github.com/langchain-ai/open_deep_research",
+      "stars": null,
+      "language": "Python",
+      "utility": "Media-Alta",
+      "warning": "Su valor esta en la arquitectura y benchmarking; el coste operativo depende del modelo y del search stack configurado.",
+      "summary": "Repositorio util para entender patrones de research largo, LangGraph, MCP y evaluacion sobre Deep Research Bench.",
+      "source": "GitHub"
+    }
+  ],
+  "alerts": [
+    {
+      "priority": "Critica",
+      "title": "Migracion xAI antes del 15 de mayo",
+      "detail": "Las familias Grok listadas por xAI dejaran de responder el 15/05/2026 a las 12:00 PT."
+    },
+    {
+      "priority": "Critica",
+      "title": "Revisar dependencias Mistral y Semantic Kernel",
+      "detail": "Hay riesgo real de supply chain y RCE sobre componentes muy usados en stacks agenticos."
+    },
+    {
+      "priority": "Alta",
+      "title": "Preparar respuesta a transparencia AI Act",
+      "detail": "La consulta europea sobre obligaciones de transparencia permanece abierta hasta el 03/06/2026."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Bloqueo e inventario urgente de dependencias",
+      "body": "Revisar esta misma tarde si existe uso de `mistralai==2.4.6`, paquetes NPM afectados por TanStack o Semantic Kernel Python < 1.39.4."
+    },
+    {
+      "priority": "Alta",
+      "title": "Piloto controlado de voz agentica",
+      "body": "Abrir un piloto de soporte o automatizacion con GPT-Realtime-2 y fallback de servicio, porque la capa de voz ya tiene utilidad operativa inmediata."
+    },
+    {
+      "priority": "Alta",
+      "title": "Diseñar un plano interno de conectores y MCP",
+      "body": "Antes de conectar correo, documentos o ERPs, definir permisos minimos, logging, aprobaciones y segmentacion por caso de uso."
+    },
+    {
+      "priority": "Media",
+      "title": "Explorar research financiero automatizado",
+      "body": "Perplexity Finance Search, Deep Research Max y los agentes financieros de Anthropic dibujan una oportunidad clara para servicios de analisis premium."
+    },
+    {
+      "priority": "Media",
+      "title": "Reforzar posicionamiento comercial",
+      "body": "Convertir el radar actual en oferta: auditoria de agentes, hardening MCP, due diligence de modelos y despliegues seguros para pymes y consultoria."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-05-15",
+      "title": "Retirada de modelos Grok en xAI",
+      "status": "Ventana critica"
+    },
+    {
+      "date": "2026-05-19 / 2026-05-20",
+      "title": "Google I/O 2026",
+      "status": "Alto potencial de anuncios"
+    },
+    {
+      "date": "2026-06-01",
+      "title": "Advanced Account Security para ciertos accesos Trusted Access for Cyber",
+      "status": "Control operativo"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "Cierre de consulta UE sobre transparencia AI Act",
+      "status": "Cumplimiento"
+    },
+    {
+      "date": "2026-08-02",
+      "title": "Aplicacion de reglas de transparencia del AI Act",
+      "status": "Fecha regulatoria clave"
+    }
+  ],
+  "sources": [
+    {
+      "name": "OpenAI - Advancing voice intelligence with new models in the API",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "name": "OpenAI - Running Codex safely at OpenAI",
+      "url": "https://openai.com/index/running-codex-safely/"
+    },
+    {
+      "name": "OpenAI - Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber",
+      "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "name": "OpenAI Status - Codex 5.5 engines are experiencing high error rate",
+      "url": "https://status.openai.com/incidents/c5d7k685"
+    },
+    {
+      "name": "OpenAI Status - Realtime API SIP/WebRTC flow are down",
+      "url": "https://status.openai.com/incidents/01KRG0AZKH41DV4D9SNJSXM33Q"
+    },
+    {
+      "name": "Google - The latest AI news we announced in April 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/"
+    },
+    {
+      "name": "Google - Deep Research Max",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/"
+    },
+    {
+      "name": "Anthropic - Building a new enterprise AI services company",
+      "url": "https://www.anthropic.com/news/enterprise-ai-services-company"
+    },
+    {
+      "name": "Anthropic - Agents for financial services",
+      "url": "https://www.anthropic.com/news/finance-agents"
+    },
+    {
+      "name": "Anthropic - Higher usage limits for Claude and a compute deal with SpaceX",
+      "url": "https://www.anthropic.com/news/higher-limits-spacex"
+    },
+    {
+      "name": "xAI - Connectors now on Grok Web",
+      "url": "https://x.ai/news/grok-connectors"
+    },
+    {
+      "name": "xAI Docs - Grok Model Retirement on May 15, 2026",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "name": "Perplexity Docs - Finance Search",
+      "url": "https://docs.perplexity.ai/docs/agent-api/finance-search"
+    },
+    {
+      "name": "Perplexity Docs - MCP Server",
+      "url": "https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server"
+    },
+    {
+      "name": "Microsoft Learn - Secure AI agents at scale using Microsoft Agent 365",
+      "url": "https://learn.microsoft.com/en-us/security/security-for-ai/agent-365-security"
+    },
+    {
+      "name": "Mistral - Security advisories",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "name": "GitHub Advisory - CVE-2026-26030",
+      "url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    },
+    {
+      "name": "EU - Consultation on transparency obligations under the AI Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "name": "GitHub - modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "GitHub - openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python"
+    },
+    {
+      "name": "GitHub - langchain-ai/open_deep_research",
+      "url": "https://github.com/langchain-ai/open_deep_research"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
