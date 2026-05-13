@@ -1,0 +1,325 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "period_cutoff": "13/05/2026 20:00 CEST",
+  "generated_at": "13/05/2026 20:20:07 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "next_update": "Según programación del agente",
+  "ai_status": "Riesgo IA estimativo: Alto con sesgo alcista moderado",
+  "methodology": "Muestra curada de alertas y avisos oficiales o de alta reputación publicados o vigentes en las últimas semanas; los contadores se refieren a esta muestra, no al universo global.",
+  "kpis": [
+    {
+      "label": "Campañas activas confirmadas",
+      "value": "5",
+      "detail": "Muestra curada de esta edición"
+    },
+    {
+      "label": "Campañas críticas",
+      "value": "3",
+      "detail": "Perímetro, SD-WAN y phishing asistido"
+    },
+    {
+      "label": "Vulnerabilidades nuevas",
+      "value": "4",
+      "detail": "Publicadas en los últimos 30 días"
+    },
+    {
+      "label": "CVEs críticas priorizadas",
+      "value": "6",
+      "detail": "Incluye cadena ASA/FTD"
+    },
+    {
+      "label": "Malware destacado",
+      "value": "1",
+      "detail": "FIRESTARTER"
+    },
+    {
+      "label": "Phishing activo",
+      "value": "2",
+      "detail": "SumUp + Teams/email bombing"
+    },
+    {
+      "label": "DDoS confirmados",
+      "value": "N/D",
+      "detail": "Sin base suficiente en la muestra"
+    },
+    {
+      "label": "Ransomware confirmado",
+      "value": "0",
+      "detail": "No confirmado en la ventana revisada"
+    }
+  ],
+  "top_alerts": [
+    "Prioridad inmediata sobre perímetro Cisco: la cadena CVE-2025-20333/CVE-2025-20362 sigue asociada a actividad activa y a evolución de persistencia en ASA/FTD.",
+    "Cisco Catalyst SD-WAN mantiene exposición crítica por CVE-2026-20127 con explotación activa; no hay workaround documentado.",
+    "FortiAuthenticator suma un nuevo crítico el 12/05/2026 (CVE-2026-44277) con vector no autenticado y parche ya disponible.",
+    "España y pymes: INCIBE mantiene alerta por phishing a SumUp y por campañas que combinan email bombing con falso soporte vía Microsoft Teams.",
+    "Microsoft llega a mayo de 2026 con 112 vulnerabilidades corregidas y 16 críticas, lo que sostiene la presión operativa de parcheo en entornos Windows."
+  ],
+  "executive_summary_points": [
+    "El nivel global de ciberamenaza se mantiene en ALTO por la combinación de explotación activa en appliances de perímetro, nueva superficie crítica en autenticación corporativa y persistencia del phishing orientado a credenciales.",
+    "Los principales riesgos inmediatos se concentran en firewalls, SD-WAN, plataformas de identidad y accesos remotos; los activos expuestos a Internet siguen siendo la mayor superficie de compromiso.",
+    "Los sectores más presionados en la muestra revisada son administraciones públicas, telecomunicaciones, tecnología y servicios financieros, con impacto también claro sobre pymes españolas.",
+    "Las técnicas dominantes combinan explotación de n-day/KEV en equipos perimetrales, abuso de credenciales, suplantación de soporte y entrega de malware o acceso remoto mediante ingeniería social.",
+    "La recomendación ejecutiva principal es forzar una ventana de verificación urgente sobre perímetro, identidad y endpoints móviles antes del siguiente ciclo de negocio."
+  ],
+  "incidents": [
+    {
+      "title": "Actividad activa sobre Cisco Firepower / ASA / FTD",
+      "type": "Hecho confirmado",
+      "summary": "Cisco Talos reporta que UAT-4356 continúa explotando vulnerabilidades n-day en dispositivos Firepower FXOS y despliega el backdoor FIRESTARTER. Cisco, además, ha publicado una actualización específica sobre la evolución del mecanismo de persistencia asociado a la cadena ASA/FTD.",
+      "impact": "Riesgo elevado de compromiso del perímetro, persistencia y acceso privilegiado.",
+      "vector": "Explotación de n-day y acceso remoto sobre dispositivos de seguridad expuestos."
+    },
+    {
+      "title": "Explotación activa de Cisco Catalyst SD-WAN",
+      "type": "Hecho confirmado",
+      "summary": "Cisco Talos y Cisco mantienen el foco sobre CVE-2026-20127, un bypass de autenticación CVSS 10.0 en Cisco Catalyst SD-WAN Controller / Manager, con indicios de explotación activa por UAT-8616.",
+      "impact": "Acceso administrativo no autenticado sobre infraestructura de conectividad crítica.",
+      "vector": "Peticiones remotas fabricadas al plano de control."
+    },
+    {
+      "title": "Campaña UAT-8302 contra administraciones",
+      "type": "Hecho confirmado",
+      "summary": "Cisco Talos atribuye a UAT-8302, grupo China-nexus, operaciones contra entidades gubernamentales de Sudamérica desde finales de 2024 y organismos del sudeste de Europa durante 2025.",
+      "impact": "Espionaje y persistencia prolongada en sectores públicos y críticos.",
+      "vector": "Intrusión avanzada multi-etapa y malware propio."
+    },
+    {
+      "title": "Phishing financiero y soporte falso",
+      "type": "Hecho confirmado",
+      "summary": "INCIBE documenta una campaña de phishing que suplanta a SumUp y otra tendencia que combina email bombing con suplantación de soporte técnico por Microsoft Teams para lograr acceso remoto no autorizado.",
+      "impact": "Robo de credenciales, secuestro de cuentas y acceso remoto en pymes y usuarios corporativos.",
+      "vector": "Correo electrónico, enlaces fraudulentos y colaboración empresarial."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-44277",
+      "product": "Fortinet FortiAuthenticator",
+      "cvss": "9.1",
+      "severity": "Crítica",
+      "exploitation": "Sin explotación confirmada en la evidencia revisada",
+      "patch": "Sí: 8.0.3 / 6.6.9 / 6.5.7",
+      "priority": "Crítica",
+      "source": "Fortinet PSIRT + NVD",
+      "notes": "Acceso no autorizado a código/comandos vía API; publicación 12/05/2026."
+    },
+    {
+      "cve": "CVE-2026-20147",
+      "product": "Cisco ISE / ISE-PIC",
+      "cvss": "9.9",
+      "severity": "Crítica",
+      "exploitation": "Sin explotación confirmada en la evidencia revisada",
+      "patch": "Sí; Cisco indica actualizar. Sin workarounds",
+      "priority": "Crítica",
+      "source": "Cisco + NVD",
+      "notes": "RCE autenticado con posible indisponibilidad del nodo."
+    },
+    {
+      "cve": "CVE-2026-20148",
+      "product": "Cisco ISE / ISE-PIC",
+      "cvss": "9.9",
+      "severity": "Crítica",
+      "exploitation": "Sin explotación confirmada en la evidencia revisada",
+      "patch": "Sí; Cisco indica actualizar. Sin workarounds",
+      "priority": "Crítica",
+      "source": "Cisco",
+      "notes": "Path traversal crítico emparejado con CVE-2026-20147."
+    },
+    {
+      "cve": "CVE-2026-20127",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation": "Explotación activa confirmada por Cisco Talos",
+      "patch": "Sí; sin workaround",
+      "priority": "Crítica",
+      "source": "Cisco + Talos",
+      "notes": "Bypass de autenticación con privilegios administrativos."
+    },
+    {
+      "cve": "CVE-2025-20333 + CVE-2025-20362",
+      "product": "Cisco Secure Firewall ASA / FTD",
+      "cvss": "9.9 + cadena KEV",
+      "severity": "Crítica",
+      "exploitation": "Explotación activa confirmada; CISA KEV",
+      "patch": "Sí; seguir mitigación Cisco/CISA",
+      "priority": "Crítica",
+      "source": "Cisco + Talos + CISA KEV + NVD",
+      "notes": "Cadena usada para acceso y RCE; Cisco reporta evolución de persistencia."
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android adbd / Wireless ADB",
+      "cvss": "8.8 (ADP)",
+      "severity": "Crítica en boletín Android",
+      "exploitation": "Sin explotación confirmada en la evidencia revisada",
+      "patch": "Sí: nivel de parche 2026-05-01 o posterior",
+      "priority": "Alta",
+      "source": "Android + NVD + INCIBE",
+      "notes": "RCE proximal/adyacente sin interacción del usuario."
+    }
+  ],
+  "malware": {
+    "family": "FIRESTARTER",
+    "status": "Activo / observado en campañas contra Cisco Firepower",
+    "target_sectors": "Infraestructura de red, administraciones y entornos con appliances de seguridad expuestos",
+    "techniques": "Explotación de vulnerabilidades en appliances, despliegue de backdoor y persistencia posterior",
+    "iocs": "No incluidos en el resumen ejecutivo; remitir a advisory de Cisco para detalle operativo.",
+    "trend": "Persistente",
+    "spread": "Selectiva, orientada a activos de alto valor"
+  },
+  "news": [
+    "Fortinet publicó el 12/05/2026 el crítico CVE-2026-44277 en FortiAuthenticator, con vector no autenticado y actualización inmediata disponible.",
+    "Google publicó el boletín Android de mayo de 2026 con el crítico CVE-2026-0073, corregido a partir del nivel de parche 2026-05-01.",
+    "Cisco publicó en abril de 2026 un doble crítico en ISE / ISE-PIC (CVE-2026-20147 y CVE-2026-20148) sin workarounds documentados.",
+    "Cisco Talos resume mayo de 2026 de Microsoft con 112 vulnerabilidades corregidas, 16 de ellas críticas, lo que mantiene alta la presión de parcheo en entornos Windows.",
+    "INCIBE situó en su boletín de avisos del 05/05/2026 al Android Bulletin de mayo y a múltiples vulnerabilidades críticas en MOVEit Automation entre los focos a revisar en el mercado español."
+  ],
+  "recommendations": {
+    "Crítica": [
+      "Validar y corregir hoy mismo la exposición de Cisco ASA/FTD, Cisco SD-WAN, Cisco ISE/FortiAuthenticator y cualquier interfaz administrativa accesible desde Internet.",
+      "Cruzar inventario expuesto con CISA KEV y lanzar un control expreso sobre cualquier activo afectado por CVE-2025-20333/CVE-2025-20362 y CVE-2026-20127.",
+      "Revisar logs de acceso VPN, peering SD-WAN, administración de firewalls y actividad privilegiada en dispositivos perimetrales durante los últimos 14 días."
+    ],
+    "Alta": [
+      "Aplicar el parche Android mayo 2026 en flota gestionada o, si no es posible, bloquear temporalmente el uso de Wireless ADB en entornos corporativos.",
+      "Reforzar controles anti-phishing con doble verificación fuera de banda para cualquier solicitud de soporte, pago, cambio bancario o acceso remoto.",
+      "Aislar y reimagenar cualquier appliance Cisco con señales compatibles con FIRESTARTER o persistencia anómala."
+    ],
+    "Media": [
+      "Acelerar el SLA de parcheo mensual de Windows y priorizar primero los sistemas perimetrales, de identidad y de acceso remoto.",
+      "Revisar exposición y versión de MOVEit Automation y otras plataformas de transferencia gestionada de archivos presentes en la organización.",
+      "Ejecutar simulacro corto de respuesta a phishing vía plataformas colaborativas para helpdesk, finanzas y dirección."
+    ],
+    "Baja": [
+      "Actualizar playbooks ejecutivos para campañas mixtas email + Teams y para explotación de appliances.",
+      "Mantener vigilancia de comunicaciones de INCIBE, Cisco, Fortinet, Google y CISA durante las próximas 72 horas."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo / estimativo IA",
+    "risk": "Alto con sesgo alcista moderado a 72 horas",
+    "prediction": "Es probable que continúen el escaneo automatizado y los intentos de explotación sobre appliances de perímetro e identidad, con apoyo de phishing y suplantación para ampliar acceso inicial.",
+    "exposed_sectors": "Administración pública, telecomunicaciones, tecnología, servicios financieros y pymes con soporte remoto tercerizado.",
+    "priority_vulns": "Cisco ASA/FTD, Cisco SD-WAN, Cisco ISE, FortiAuthenticator y endpoints Android no actualizados.",
+    "attack_probability": "Moderada-alta",
+    "recommendation": "Mantener postura de contención activa durante 72 horas, con revisión diaria de logs y exposición Internet-facing."
+  },
+  "distribution": [
+    {
+      "label": "Perímetro / Red",
+      "count": 4
+    },
+    {
+      "label": "Identidad / Acceso",
+      "count": 2
+    },
+    {
+      "label": "Phishing / Ingeniería social",
+      "count": 2
+    },
+    {
+      "label": "Endpoint / Móvil",
+      "count": 1
+    },
+    {
+      "label": "Regulación / Gestión",
+      "count": 1
+    }
+  ],
+  "sources": [
+    {
+      "label": "Cisco Talos - UAT-4356 Firepower",
+      "url": "https://blog.talosintelligence.com/uat-4356-firestarter/",
+      "note": "Actividad activa contra Cisco Firepower con CVE-2025-20333 y CVE-2025-20362; despliegue de FIRESTARTER."
+    },
+    {
+      "label": "Cisco Advisory - Persistencia ASA/FTD",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03",
+      "note": "Cisco documenta evolución del mecanismo de persistencia asociado a la cadena ASA/FTD."
+    },
+    {
+      "label": "Cisco Advisory - SD-WAN CVE-2026-20127",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk",
+      "note": "Bypass de autenticación crítico en Cisco Catalyst SD-WAN con CVSS 10.0."
+    },
+    {
+      "label": "Cisco Advisory - ISE CVE-2026-20147 / 20148",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-traversal-8bYndVrZ",
+      "note": "Cisco ISE publica RCE y path traversal críticos sin workaround."
+    },
+    {
+      "label": "Fortinet PSIRT - FG-IR-26-128",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-128",
+      "note": "FortiAuthenticator publica vulnerabilidad crítica CVE-2026-44277."
+    },
+    {
+      "label": "Android Security Bulletin - Mayo 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "note": "Boletín de Android con CVE crítico CVE-2026-0073."
+    },
+    {
+      "label": "INCIBE - Avisos mayo 2026",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos",
+      "note": "Android mayo 2026 y múltiples vulnerabilidades críticas en MOVEit Automation."
+    },
+    {
+      "label": "INCIBE - Phishing a SumUp",
+      "url": "https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup",
+      "note": "Campaña de phishing dirigida a usuarios y pymes en España."
+    },
+    {
+      "label": "INCIBE - Campañas en plataformas colaborativas",
+      "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns",
+      "note": "Email bombing + suplantación de soporte por Microsoft Teams."
+    },
+    {
+      "label": "Cisco Talos - UAT-8302",
+      "url": "https://blog.talosintelligence.com/category/apt/",
+      "note": "Campaña China-nexus contra entidades gubernamentales en Sudamérica y sudeste de Europa."
+    },
+    {
+      "label": "Cisco Talos - Microsoft Patch Tuesday mayo 2026",
+      "url": "https://blog.talosintelligence.com/category/microsoft-patch-tuesday/",
+      "note": "Resumen del parche mensual de Microsoft: 112 vulnerabilidades, 16 críticas."
+    },
+    {
+      "label": "CISA KEV Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "note": "Referencia prioritaria para vulnerabilidades explotadas; incluye la cadena Cisco ASA/FTD."
+    },
+    {
+      "label": "NVD - CVE-2026-44277",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44277",
+      "note": "Publicación NVD del FortiAuthenticator crítico."
+    },
+    {
+      "label": "NVD - CVE-2026-0073",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0073",
+      "note": "Detalle NVD del Android crítico de mayo."
+    },
+    {
+      "label": "NVD - CVE-2026-20147",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20147",
+      "note": "Detalle NVD del RCE crítico en Cisco ISE."
+    },
+    {
+      "label": "NVD - CVE-2025-20333",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-20333",
+      "note": "Detalle NVD del RCE crítico en Cisco ASA/FTD usado en la cadena activa."
+    },
+    {
+      "label": "NVD - CVE-2025-20362",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-20362",
+      "note": "Detalle NVD del bypass de autorización en Cisco ASA/FTD referenciado por CISA KEV."
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.",
+  "file_info": {
+    "daily_folder": "20260513",
+    "timestamp": "20260513_202007_CEST"
+  }
+}
