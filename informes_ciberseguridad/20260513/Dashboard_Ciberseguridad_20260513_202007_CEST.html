@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad - 20260513_202007_CEST</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b31;
+      --card: rgba(15, 26, 47, 0.86);
+      --card-2: rgba(10, 18, 34, 0.92);
+      --line: rgba(125, 168, 255, 0.16);
+      --text: #ebf2ff;
+      --muted: #9cb0d2;
+      --accent: #33d1ff;
+      --accent-2: #62f7c4;
+      --warn: #ffb454;
+      --danger: #ff5c7a;
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.32);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(51, 209, 255, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(98, 247, 196, 0.12), transparent 30%),
+        linear-gradient(180deg, #08121f 0%, #050b14 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      width: min(1380px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(18, 31, 58, 0.98), rgba(8, 16, 31, 0.92));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.6fr 0.95fr;
+      gap: 22px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(51, 209, 255, 0.18), transparent 65%);
+      pointer-events: none;
+    }
+    .brand {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      align-content: start;
+    }
+    .hero-stat {
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+    }
+    .hero-stat strong {
+      display: block;
+      font-size: 22px;
+      margin-top: 6px;
+    }
+    .hero-stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(255, 92, 122, 0.12);
+      color: #ffd7e0;
+      border: 1px solid rgba(255, 92, 122, 0.22);
+      margin-bottom: 16px;
+    }
+    .section {
+      margin-top: 22px;
+    }
+    .section-title {
+      font-size: 20px;
+      margin: 0 0 12px;
+    }
+    .card, .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+    .panel {
+      padding: 22px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .kpi {
+      background: var(--card-2);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 16px;
+      min-height: 148px;
+    }
+    .kpi-label {
+      color: var(--muted);
+      font-size: 13px;
+      min-height: 38px;
+    }
+    .kpi-value {
+      font-size: 34px;
+      font-weight: 700;
+      margin: 10px 0 8px;
+    }
+    .kpi-detail {
+      color: #c7d7f5;
+      font-size: 12px;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+    }
+    ul.clean {
+      margin: 0;
+      padding-left: 18px;
+    }
+    ul.clean li {
+      margin: 8px 0;
+      color: #d9e5fd;
+    }
+    .dist-row {
+      display: grid;
+      grid-template-columns: 160px 1fr 28px;
+      gap: 12px;
+      align-items: center;
+      margin: 12px 0;
+    }
+    .dist-row span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .bar-track {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+    .incident-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .incident-card {
+      padding: 20px;
+    }
+    .incident-card h3 {
+      margin: 8px 0 10px;
+      font-size: 20px;
+    }
+    .incident-card p {
+      color: #d8e5fb;
+      margin: 0 0 12px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-2);
+    }
+    .meta-pair {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 10px;
+      font-size: 14px;
+    }
+    .meta-pair span {
+      color: var(--muted);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 12px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: #b9c8e5;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: rgba(255,255,255,0.03);
+    }
+    .rec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .rec-card {
+      background: var(--card-2);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+    .rec-level {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--warn);
+    }
+    .rec-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .rec-card li {
+      margin: 8px 0;
+    }
+    .sources li {
+      margin: 12px 0;
+      color: #dfe8fb;
+    }
+    .sources a {
+      color: var(--accent);
+      word-break: break-word;
+    }
+    .legal {
+      margin-top: 18px;
+      color: #93a8cd;
+      font-size: 12px;
+    }
+    @media (max-width: 1100px) {
+      .hero, .split {
+        grid-template-columns: 1fr;
+      }
+      .kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .incident-grid, .rec-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 720px) {
+      .wrap {
+        width: min(100% - 20px, 1380px);
+      }
+      .hero {
+        padding: 20px;
+      }
+      .hero-grid, .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+      .dist-row {
+        grid-template-columns: 1fr;
+      }
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead {
+        display: none;
+      }
+      td {
+        padding: 8px 0;
+        border-bottom: none;
+      }
+      tr {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <div class="brand">MMarco Seguridad</div>
+        <div class="badge">Nivel global de amenaza: ALTO</div>
+        <h1>Informe Ejecutivo de Ciberseguridad</h1>
+        <p>Corte operativo: 13/05/2026 20:00 CEST · Generado: 13/05/2026 20:20:07 CEST · Zona horaria: Europe/Madrid.</p>
+        <p style="margin-top:12px;">Muestra curada de alertas y avisos oficiales o de alta reputación publicados o vigentes en las últimas semanas; los contadores se refieren a esta muestra, no al universo global.</p>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-stat"><span>Próxima actualización</span><strong>Según programación del agente</strong></div>
+        <div class="hero-stat"><span>Estado IA de riesgo</span><strong>Riesgo IA estimativo: Alto con sesgo alcista moderado</strong></div>
+        <div class="hero-stat"><span>Marca</span><strong>MMarco Seguridad</strong></div>
+        <div class="hero-stat"><span>Histórico</span><strong>20260513</strong></div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">KPIs Principales</h2>
+      <div class="kpi-grid">
+                <article class="kpi">
+                  <div class="kpi-label">Campañas activas confirmadas</div>
+                  <div class="kpi-value">5</div>
+                  <div class="kpi-detail">Muestra curada de esta edición</div>
+                </article>
+                
+
+                <article class="kpi">
+                  <div class="kpi-label">Campañas críticas</div>
+                  <div class="kpi-value">3</div>
+                  <div class="kpi-detail">Perímetro, SD-WAN y phishing asistido</div>
+                </article>
+                
+
+                <article class="kpi">
+                  <div class="kpi-label">Vulnerabilidades nuevas</div>
+                  <div class="kpi-value">4</div>
+                  <div class="kpi-detail">Publicadas en los últimos 30 días</div>
+                </article>
+                
+
+                <article class="kpi">
+                  <div class="kpi-label">CVEs críticas priorizadas</div>
+                  <div class="kpi-value">6</div>
+                  <div class="kpi-detail">Incluye cadena ASA/FTD</div>
+                </article>
+                
+
+                <article class="kpi">
+                  <div class="kpi-label">Malware destacado</div>
+                  <div class="kpi-value">1</div>
+                  <div class="kpi-detail">FIRESTARTER</div>
+                </article>
+                
+
+                <article class="kpi">
+                  <div class="kpi-label">Phishing activo</div>
+                  <div class="kpi-value">2</div>
+                  <div class="kpi-detail">SumUp + Teams/email bombing</div>
+                </article>
+                
+
+                <article class="kpi">
+                  <div class="kpi-label">DDoS confirmados</div>
+                  <div class="kpi-value">N/D</div>
+                  <div class="kpi-detail">Sin base suficiente en la muestra</div>
+                </article>
+                
+
+                <article class="kpi">
+                  <div class="kpi-label">Ransomware confirmado</div>
+                  <div class="kpi-value">0</div>
+                  <div class="kpi-detail">No confirmado en la ventana revisada</div>
+                </article>
+                </div>
+    </section>
+
+    <section class="section split">
+      <article class="panel">
+        <h2 class="section-title">Resumen Ejecutivo</h2>
+        <ul class="clean"><li>El nivel global de ciberamenaza se mantiene en ALTO por la combinación de explotación activa en appliances de perímetro, nueva superficie crítica en autenticación corporativa y persistencia del phishing orientado a credenciales.</li><li>Los principales riesgos inmediatos se concentran en firewalls, SD-WAN, plataformas de identidad y accesos remotos; los activos expuestos a Internet siguen siendo la mayor superficie de compromiso.</li><li>Los sectores más presionados en la muestra revisada son administraciones públicas, telecomunicaciones, tecnología y servicios financieros, con impacto también claro sobre pymes españolas.</li><li>Las técnicas dominantes combinan explotación de n-day/KEV en equipos perimetrales, abuso de credenciales, suplantación de soporte y entrega de malware o acceso remoto mediante ingeniería social.</li><li>La recomendación ejecutiva principal es forzar una ventana de verificación urgente sobre perímetro, identidad y endpoints móviles antes del siguiente ciclo de negocio.</li></ul>
+      </article>
+      <article class="panel">
+        <h2 class="section-title">Tendencia de la Muestra</h2>
+        
+                <div class="dist-row">
+                  <span>Perímetro / Red</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+                  <strong>4</strong>
+                </div>
+                
+
+                <div class="dist-row">
+                  <span>Identidad / Acceso</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+                  <strong>2</strong>
+                </div>
+                
+
+                <div class="dist-row">
+                  <span>Phishing / Ingeniería social</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+                  <strong>2</strong>
+                </div>
+                
+
+                <div class="dist-row">
+                  <span>Endpoint / Móvil</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:25%"></div></div>
+                  <strong>1</strong>
+                </div>
+                
+
+                <div class="dist-row">
+                  <span>Regulación / Gestión</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:25%"></div></div>
+                  <strong>1</strong>
+                </div>
+                
+        <p style="color:#9cb0d2; margin-top: 14px;">Lectura ejecutiva: el peso operativo sigue concentrado en perímetro, identidad y campañas de robo de credenciales.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Alertas Activas</h2>
+      <div class="panel"><ul class="clean"><li>Prioridad inmediata sobre perímetro Cisco: la cadena CVE-2025-20333/CVE-2025-20362 sigue asociada a actividad activa y a evolución de persistencia en ASA/FTD.</li><li>Cisco Catalyst SD-WAN mantiene exposición crítica por CVE-2026-20127 con explotación activa; no hay workaround documentado.</li><li>FortiAuthenticator suma un nuevo crítico el 12/05/2026 (CVE-2026-44277) con vector no autenticado y parche ya disponible.</li><li>España y pymes: INCIBE mantiene alerta por phishing a SumUp y por campañas que combinan email bombing con falso soporte vía Microsoft Teams.</li><li>Microsoft llega a mayo de 2026 con 112 vulnerabilidades corregidas y 16 críticas, lo que sostiene la presión operativa de parcheo en entornos Windows.</li></ul></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Incidentes y Actividad Relevante</h2>
+      <div class="incident-grid">
+                <article class="card incident-card">
+                  <div class="eyebrow">Hecho confirmado</div>
+                  <h3>Actividad activa sobre Cisco Firepower / ASA / FTD</h3>
+                  <p>Cisco Talos reporta que UAT-4356 continúa explotando vulnerabilidades n-day en dispositivos Firepower FXOS y despliega el backdoor FIRESTARTER. Cisco, además, ha publicado una actualización específica sobre la evolución del mecanismo de persistencia asociado a la cadena ASA/FTD.</p>
+                  <div class="meta-pair"><span>Impacto</span><strong>Riesgo elevado de compromiso del perímetro, persistencia y acceso privilegiado.</strong></div>
+                  <div class="meta-pair"><span>Vector</span><strong>Explotación de n-day y acceso remoto sobre dispositivos de seguridad expuestos.</strong></div>
+                </article>
+                
+
+                <article class="card incident-card">
+                  <div class="eyebrow">Hecho confirmado</div>
+                  <h3>Explotación activa de Cisco Catalyst SD-WAN</h3>
+                  <p>Cisco Talos y Cisco mantienen el foco sobre CVE-2026-20127, un bypass de autenticación CVSS 10.0 en Cisco Catalyst SD-WAN Controller / Manager, con indicios de explotación activa por UAT-8616.</p>
+                  <div class="meta-pair"><span>Impacto</span><strong>Acceso administrativo no autenticado sobre infraestructura de conectividad crítica.</strong></div>
+                  <div class="meta-pair"><span>Vector</span><strong>Peticiones remotas fabricadas al plano de control.</strong></div>
+                </article>
+                
+
+                <article class="card incident-card">
+                  <div class="eyebrow">Hecho confirmado</div>
+                  <h3>Campaña UAT-8302 contra administraciones</h3>
+                  <p>Cisco Talos atribuye a UAT-8302, grupo China-nexus, operaciones contra entidades gubernamentales de Sudamérica desde finales de 2024 y organismos del sudeste de Europa durante 2025.</p>
+                  <div class="meta-pair"><span>Impacto</span><strong>Espionaje y persistencia prolongada en sectores públicos y críticos.</strong></div>
+                  <div class="meta-pair"><span>Vector</span><strong>Intrusión avanzada multi-etapa y malware propio.</strong></div>
+                </article>
+                
+
+                <article class="card incident-card">
+                  <div class="eyebrow">Hecho confirmado</div>
+                  <h3>Phishing financiero y soporte falso</h3>
+                  <p>INCIBE documenta una campaña de phishing que suplanta a SumUp y otra tendencia que combina email bombing con suplantación de soporte técnico por Microsoft Teams para lograr acceso remoto no autorizado.</p>
+                  <div class="meta-pair"><span>Impacto</span><strong>Robo de credenciales, secuestro de cuentas y acceso remoto en pymes y usuarios corporativos.</strong></div>
+                  <div class="meta-pair"><span>Vector</span><strong>Correo electrónico, enlaces fraudulentos y colaboración empresarial.</strong></div>
+                </article>
+                </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 class="section-title">Vulnerabilidades Críticas Priorizadas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Explotación</th>
+              <th>Parche</th>
+              <th>Prioridad</th>
+              <th>Fuente</th>
+            </tr>
+          </thead>
+          <tbody>
+                <tr>
+                  <td>CVE-2026-44277</td>
+                  <td>Fortinet FortiAuthenticator</td>
+                  <td>9.1</td>
+                  <td>Crítica</td>
+                  <td>Sin explotación confirmada en la evidencia revisada</td>
+                  <td>Sí: 8.0.3 / 6.6.9 / 6.5.7</td>
+                  <td>Crítica</td>
+                  <td>Fortinet PSIRT + NVD</td>
+                </tr>
+                
+
+                <tr>
+                  <td>CVE-2026-20147</td>
+                  <td>Cisco ISE / ISE-PIC</td>
+                  <td>9.9</td>
+                  <td>Crítica</td>
+                  <td>Sin explotación confirmada en la evidencia revisada</td>
+                  <td>Sí; Cisco indica actualizar. Sin workarounds</td>
+                  <td>Crítica</td>
+                  <td>Cisco + NVD</td>
+                </tr>
+                
+
+                <tr>
+                  <td>CVE-2026-20148</td>
+                  <td>Cisco ISE / ISE-PIC</td>
+                  <td>9.9</td>
+                  <td>Crítica</td>
+                  <td>Sin explotación confirmada en la evidencia revisada</td>
+                  <td>Sí; Cisco indica actualizar. Sin workarounds</td>
+                  <td>Crítica</td>
+                  <td>Cisco</td>
+                </tr>
+                
+
+                <tr>
+                  <td>CVE-2026-20127</td>
+                  <td>Cisco Catalyst SD-WAN Controller / Manager</td>
+                  <td>10.0</td>
+                  <td>Crítica</td>
+                  <td>Explotación activa confirmada por Cisco Talos</td>
+                  <td>Sí; sin workaround</td>
+                  <td>Crítica</td>
+                  <td>Cisco + Talos</td>
+                </tr>
+                
+
+                <tr>
+                  <td>CVE-2025-20333 + CVE-2025-20362</td>
+                  <td>Cisco Secure Firewall ASA / FTD</td>
+                  <td>9.9 + cadena KEV</td>
+                  <td>Crítica</td>
+                  <td>Explotación activa confirmada; CISA KEV</td>
+                  <td>Sí; seguir mitigación Cisco/CISA</td>
+                  <td>Crítica</td>
+                  <td>Cisco + Talos + CISA KEV + NVD</td>
+                </tr>
+                
+
+                <tr>
+                  <td>CVE-2026-0073</td>
+                  <td>Android adbd / Wireless ADB</td>
+                  <td>8.8 (ADP)</td>
+                  <td>Crítica en boletín Android</td>
+                  <td>Sin explotación confirmada en la evidencia revisada</td>
+                  <td>Sí: nivel de parche 2026-05-01 o posterior</td>
+                  <td>Alta</td>
+                  <td>Android + NVD + INCIBE</td>
+                </tr>
+                </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section split">
+      <article class="panel">
+        <h2 class="section-title">Malware y Ransomware</h2>
+        <div class="meta-pair"><span>Familia</span><strong>FIRESTARTER</strong></div>
+        <div class="meta-pair"><span>Estado</span><strong>Activo / observado en campañas contra Cisco Firepower</strong></div>
+        <div class="meta-pair"><span>Sectores</span><strong>Infraestructura de red, administraciones y entornos con appliances de seguridad expuestos</strong></div>
+        <div class="meta-pair"><span>Técnicas</span><strong>Explotación de vulnerabilidades en appliances, despliegue de backdoor y persistencia posterior</strong></div>
+        <div class="meta-pair"><span>IOCs</span><strong>No incluidos en el resumen ejecutivo; remitir a advisory de Cisco para detalle operativo.</strong></div>
+        <div class="meta-pair"><span>Tendencia</span><strong>Persistente</strong></div>
+        <div class="meta-pair"><span>Propagación</span><strong>Selectiva, orientada a activos de alto valor</strong></div>
+      </article>
+      <article class="panel">
+        <h2 class="section-title">Noticias Importantes</h2>
+        <ul class="clean"><li>Fortinet publicó el 12/05/2026 el crítico CVE-2026-44277 en FortiAuthenticator, con vector no autenticado y actualización inmediata disponible.</li><li>Google publicó el boletín Android de mayo de 2026 con el crítico CVE-2026-0073, corregido a partir del nivel de parche 2026-05-01.</li><li>Cisco publicó en abril de 2026 un doble crítico en ISE / ISE-PIC (CVE-2026-20147 y CVE-2026-20148) sin workarounds documentados.</li><li>Cisco Talos resume mayo de 2026 de Microsoft con 112 vulnerabilidades corregidas, 16 de ellas críticas, lo que mantiene alta la presión de parcheo en entornos Windows.</li><li>INCIBE situó en su boletín de avisos del 05/05/2026 al Android Bulletin de mayo y a múltiples vulnerabilidades críticas en MOVEit Automation entre los focos a revisar en el mercado español.</li></ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Recomendaciones Ejecutivas</h2>
+      <div class="rec-grid">
+                <section class="rec-card">
+                  <div class="rec-level">Crítica</div>
+                  <ul><li>Validar y corregir hoy mismo la exposición de Cisco ASA/FTD, Cisco SD-WAN, Cisco ISE/FortiAuthenticator y cualquier interfaz administrativa accesible desde Internet.</li><li>Cruzar inventario expuesto con CISA KEV y lanzar un control expreso sobre cualquier activo afectado por CVE-2025-20333/CVE-2025-20362 y CVE-2026-20127.</li><li>Revisar logs de acceso VPN, peering SD-WAN, administración de firewalls y actividad privilegiada en dispositivos perimetrales durante los últimos 14 días.</li></ul>
+                </section>
+                
+
+                <section class="rec-card">
+                  <div class="rec-level">Alta</div>
+                  <ul><li>Aplicar el parche Android mayo 2026 en flota gestionada o, si no es posible, bloquear temporalmente el uso de Wireless ADB en entornos corporativos.</li><li>Reforzar controles anti-phishing con doble verificación fuera de banda para cualquier solicitud de soporte, pago, cambio bancario o acceso remoto.</li><li>Aislar y reimagenar cualquier appliance Cisco con señales compatibles con FIRESTARTER o persistencia anómala.</li></ul>
+                </section>
+                
+
+                <section class="rec-card">
+                  <div class="rec-level">Media</div>
+                  <ul><li>Acelerar el SLA de parcheo mensual de Windows y priorizar primero los sistemas perimetrales, de identidad y de acceso remoto.</li><li>Revisar exposición y versión de MOVEit Automation y otras plataformas de transferencia gestionada de archivos presentes en la organización.</li><li>Ejecutar simulacro corto de respuesta a phishing vía plataformas colaborativas para helpdesk, finanzas y dirección.</li></ul>
+                </section>
+                
+
+                <section class="rec-card">
+                  <div class="rec-level">Baja</div>
+                  <ul><li>Actualizar playbooks ejecutivos para campañas mixtas email + Teams y para explotación de appliances.</li><li>Mantener vigilancia de comunicaciones de INCIBE, Cisco, Fortinet, Google y CISA durante las próximas 72 horas.</li></ul>
+                </section>
+                </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 class="section-title">Sección IA</h2>
+        <div class="eyebrow">Análisis predictivo / estimativo IA</div>
+        <div class="meta-pair"><span>Riesgo</span><strong>Alto con sesgo alcista moderado a 72 horas</strong></div>
+        <div class="meta-pair"><span>Predicción</span><strong>Es probable que continúen el escaneo automatizado y los intentos de explotación sobre appliances de perímetro e identidad, con apoyo de phishing y suplantación para ampliar acceso inicial.</strong></div>
+        <div class="meta-pair"><span>Sectores</span><strong>Administración pública, telecomunicaciones, tecnología, servicios financieros y pymes con soporte remoto tercerizado.</strong></div>
+        <div class="meta-pair"><span>Vulns prioritarias</span><strong>Cisco ASA/FTD, Cisco SD-WAN, Cisco ISE, FortiAuthenticator y endpoints Android no actualizados.</strong></div>
+        <div class="meta-pair"><span>Probabilidad</span><strong>Moderada-alta</strong></div>
+        <div class="meta-pair"><span>Recomendación</span><strong>Mantener postura de contención activa durante 72 horas, con revisión diaria de logs y exposición Internet-facing.</strong></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <h2 class="section-title">Fuentes y Trazabilidad</h2>
+        <ol class="sources"><li><strong>Cisco Talos - UAT-4356 Firepower</strong>: Actividad activa contra Cisco Firepower con CVE-2025-20333 y CVE-2025-20362; despliegue de FIRESTARTER.<br><a href="https://blog.talosintelligence.com/uat-4356-firestarter/">https://blog.talosintelligence.com/uat-4356-firestarter/</a></li>
+<li><strong>Cisco Advisory - Persistencia ASA/FTD</strong>: Cisco documenta evolución del mecanismo de persistencia asociado a la cadena ASA/FTD.<br><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03</a></li>
+<li><strong>Cisco Advisory - SD-WAN CVE-2026-20127</strong>: Bypass de autenticación crítico en Cisco Catalyst SD-WAN con CVSS 10.0.<br><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk</a></li>
+<li><strong>Cisco Advisory - ISE CVE-2026-20147 / 20148</strong>: Cisco ISE publica RCE y path traversal críticos sin workaround.<br><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-traversal-8bYndVrZ">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-traversal-8bYndVrZ</a></li>
+<li><strong>Fortinet PSIRT - FG-IR-26-128</strong>: FortiAuthenticator publica vulnerabilidad crítica CVE-2026-44277.<br><a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-128">https://fortiguard.fortinet.com/psirt/FG-IR-26-128</a></li>
+<li><strong>Android Security Bulletin - Mayo 2026</strong>: Boletín de Android con CVE crítico CVE-2026-0073.<br><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">https://source.android.com/docs/security/bulletin/2026/2026-05-01</a></li>
+<li><strong>INCIBE - Avisos mayo 2026</strong>: Android mayo 2026 y múltiples vulnerabilidades críticas en MOVEit Automation.<br><a href="https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos">https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos</a></li>
+<li><strong>INCIBE - Phishing a SumUp</strong>: Campaña de phishing dirigida a usuarios y pymes en España.<br><a href="https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup">https://www.incibe.es/empresas/avisos/suplantacion-de-tipo-phishing-sumup</a></li>
+<li><strong>INCIBE - Campañas en plataformas colaborativas</strong>: Email bombing + suplantación de soporte por Microsoft Teams.<br><a href="https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns">https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns</a></li>
+<li><strong>Cisco Talos - UAT-8302</strong>: Campaña China-nexus contra entidades gubernamentales en Sudamérica y sudeste de Europa.<br><a href="https://blog.talosintelligence.com/category/apt/">https://blog.talosintelligence.com/category/apt/</a></li>
+<li><strong>Cisco Talos - Microsoft Patch Tuesday mayo 2026</strong>: Resumen del parche mensual de Microsoft: 112 vulnerabilidades, 16 críticas.<br><a href="https://blog.talosintelligence.com/category/microsoft-patch-tuesday/">https://blog.talosintelligence.com/category/microsoft-patch-tuesday/</a></li>
+<li><strong>CISA KEV Catalog</strong>: Referencia prioritaria para vulnerabilidades explotadas; incluye la cadena Cisco ASA/FTD.<br><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></li>
+<li><strong>NVD - CVE-2026-44277</strong>: Publicación NVD del FortiAuthenticator crítico.<br><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44277">https://nvd.nist.gov/vuln/detail/CVE-2026-44277</a></li>
+<li><strong>NVD - CVE-2026-0073</strong>: Detalle NVD del Android crítico de mayo.<br><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0073">https://nvd.nist.gov/vuln/detail/CVE-2026-0073</a></li>
+<li><strong>NVD - CVE-2026-20147</strong>: Detalle NVD del RCE crítico en Cisco ISE.<br><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20147">https://nvd.nist.gov/vuln/detail/CVE-2026-20147</a></li>
+<li><strong>NVD - CVE-2025-20333</strong>: Detalle NVD del RCE crítico en Cisco ASA/FTD usado en la cadena activa.<br><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20333">https://nvd.nist.gov/vuln/detail/CVE-2025-20333</a></li>
+<li><strong>NVD - CVE-2025-20362</strong>: Detalle NVD del bypass de autorización en Cisco ASA/FTD referenciado por CISA KEV.<br><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20362">https://nvd.nist.gov/vuln/detail/CVE-2025-20362</a></li></ol>
+        <p class="legal">Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
