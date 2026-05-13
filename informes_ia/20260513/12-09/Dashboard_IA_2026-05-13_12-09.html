@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo Premium de Inteligencia Artificial | Corte 12:00</title>
+  <style>
+    :root {
+      --bg: #050914;
+      --panel: rgba(10, 18, 33, 0.88);
+      --panel-strong: rgba(12, 22, 40, 0.96);
+      --text: #edf3ff;
+      --muted: #92a8cb;
+      --line: rgba(103, 138, 201, 0.22);
+      --blue: #51b1ff;
+      --violet: #826dff;
+      --green: #28d38b;
+      --orange: #ff9a3d;
+      --red: #ff5d73;
+      --soft: #d4e2f8;
+      --shadow: 0 22px 52px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(81,177,255,0.14), transparent 24%),
+        radial-gradient(circle at top left, rgba(130,109,255,0.12), transparent 20%),
+        linear-gradient(180deg, #030711 0%, #07101d 100%);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+    main {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 26px 22px 40px;
+    }
+    .frame {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(11,20,36,0.96), rgba(8,15,28,0.94));
+      box-shadow: var(--shadow);
+    }
+    .topbar {
+      border-radius: 26px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .topbar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(115deg, rgba(81,177,255,0.08), transparent 34%),
+        linear-gradient(160deg, rgba(130,109,255,0.08), transparent 46%);
+      pointer-events: none;
+    }
+    .label {
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.08;
+      max-width: 780px;
+    }
+    .lede {
+      color: var(--soft);
+      max-width: 860px;
+      line-height: 1.72;
+      font-size: 15px;
+      margin-top: 14px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .meta-cell {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .meta-title {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .meta-value {
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .section {
+      margin-top: 18px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 12px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .kpi {
+      padding: 18px;
+      border-radius: 20px;
+    }
+    .kpi-value {
+      font-size: 34px;
+      font-weight: 700;
+      margin: 8px 0 6px;
+    }
+    .kpi-note {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 13px;
+    }
+    .surface {
+      border-radius: 22px;
+      padding: 18px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 14px;
+    }
+    .tile, .plain-block {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--line);
+      min-height: 100%;
+    }
+    .tile h3, .plain-block h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+    .tile p, .plain-block p {
+      margin: 0 0 10px;
+      color: var(--soft);
+      line-height: 1.62;
+      font-size: 14px;
+    }
+    .tile a, .plain-block a, .calendar a, .sources a {
+      color: #93d4ff;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    .tile-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .badge, .status {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: .05em;
+    }
+    .status {
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .badge.critical {
+      background: rgba(255, 93, 115, 0.16);
+      color: #ffc3cc;
+      border: 1px solid rgba(255, 93, 115, 0.24);
+    }
+    .badge.very-high {
+      background: rgba(81, 177, 255, 0.16);
+      color: #c3e7ff;
+      border: 1px solid rgba(81, 177, 255, 0.24);
+    }
+    .badge.high {
+      background: rgba(255, 154, 61, 0.16);
+      color: #ffd6b1;
+      border: 1px solid rgba(255, 154, 61, 0.24);
+    }
+    .badge.mid-high {
+      background: rgba(40, 211, 139, 0.16);
+      color: #c6ffe1;
+      border: 1px solid rgba(40, 211, 139, 0.24);
+    }
+    .badge.mid {
+      background: rgba(130, 109, 255, 0.16);
+      color: #ddd6ff;
+      border: 1px solid rgba(130, 109, 255, 0.24);
+    }
+    .badge.neutral {
+      background: rgba(255,255,255,0.06);
+      color: var(--soft);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .smallcaps {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .note {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--text);
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--soft);
+      line-height: 1.68;
+    }
+    .table {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(8, 15, 28, 0.85);
+    }
+    .table-head, .table-row {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr .8fr .7fr .7fr .5fr;
+      gap: 14px;
+      padding: 15px 18px;
+    }
+    .table-head {
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+    }
+    .table-row {
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .table-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .calendar {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(8, 15, 28, 0.85);
+    }
+    .calendar-head, .calendar-row {
+      display: grid;
+      grid-template-columns: .9fr 1.5fr .8fr .3fr;
+      gap: 14px;
+      padding: 14px 16px;
+    }
+    .calendar-head {
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: 12px;
+    }
+    .calendar-row {
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .sources {
+      columns: 2;
+      gap: 18px;
+    }
+    .footer {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 16px;
+    }
+    @media (max-width: 1080px) {
+      .topbar, .kpi-grid, .grid-4, .grid-3, .split {
+        grid-template-columns: 1fr 1fr;
+      }
+      .table-head, .table-row {
+        grid-template-columns: 1.2fr .9fr .8fr .7fr .7fr .5fr;
+      }
+    }
+    @media (max-width: 760px) {
+      main {
+        padding: 18px 14px 30px;
+      }
+      .topbar, .kpi-grid, .grid-4, .grid-3, .split, .meta-grid,
+      .table-head, .table-row, .calendar-head, .calendar-row {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .sources {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="frame topbar">
+      <div>
+        <div class="label">MMarco Seguridad · Radar Ejecutivo IA</div>
+        <h1>Informe Ejecutivo Premium de Inteligencia Artificial | Corte 12:00</h1>
+        <p class="lede">
+          El corte de las 12:00 no trae una ruptura nueva de frontier models, pero sí ajusta la prioridad: la defensa agentic se profesionaliza con MDASH, Google empuja la IA contextual directamente dentro del flujo de trabajo y la ventana de migracion en xAI ya entra en fase tactica. El riesgo dominante sigue siendo tecnico y accionable: supply chain, tool calling y permisos reales.
+        </p>
+      </div>
+      <div class="meta-grid">
+        <div class="meta-cell"><div class="meta-title">Generado</div><div class="meta-value">2026-05-13 12:09:39 CEST</div></div>
+        <div class="meta-cell"><div class="meta-title">Zona horaria</div><div class="meta-value">Europe/Madrid</div></div>
+        <div class="meta-cell"><div class="meta-title">Impacto IA</div><div class="meta-value">ALTO</div></div>
+        <div class="meta-cell"><div class="meta-title">Estado global</div><div class="meta-value">Sin ruptura competitiva nueva, pero con refuerzo claro del valor defensivo agentic y de la IA embebida en el flujo de trabajo</div></div>
+        <div class="meta-cell"><div class="meta-title">Ventana analizada</div><div class="meta-value">Cambios relevantes desde la ultima ejecucion confirmada (2026-05-13 08:18 CEST) hasta 2026-05-13 12:09 CEST</div></div>
+        <div class="meta-cell"><div class="meta-title">Proxima actualizacion</div><div class="meta-value">Corte de tarde del 13 mayo 2026 segun programacion del radar</div></div>
+      </div>
+    </section>
+
+    <section class="section kpi-grid">
+      <article class="frame kpi"><div class="smallcaps">Cambios de alta prioridad</div><div class="kpi-value">3</div><div class="kpi-note">Conteo editorial del delta real frente al corte anterior</div></article><article class="frame kpi"><div class="smallcaps">Alertas criticas sin resolver</div><div class="kpi-value">2</div><div class="kpi-note">Mistral supply chain y Semantic Kernel siguen dominando el riesgo</div></article><article class="frame kpi"><div class="smallcaps">Senales nuevas de utilidad practica</div><div class="kpi-value">2</div><div class="kpi-note">MDASH y la interfaz contextual de Google cambian la lectura operativa</div></article><article class="frame kpi"><div class="smallcaps">Ventanas temporales activas</div><div class="kpi-value">2</div><div class="kpi-note">Retirada de modelos xAI y consulta europea de transparencia</div></article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Cambios Desde La Ultima Ejecucion</h2>
+          <p>Solo se resaltan cambios que alteran la lectura ejecutiva del radar o la urgencia operativa frente al corte previo.</p>
+        </div>
+      </div>
+      <div class="frame surface grid-4">
+        
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge very-high">Muy alto</span>
+                <span class="status">Cambio nuevo desde la ultima ejecucion</span>
+              </div>
+              <h3>Microsoft eleva el liston de defensa agentic con MDASH</h3>
+              <p>Microsoft presenta MDASH como sistema multi-modelo y multiagente para investigacion de vulnerabilidades. El sistema coordina mas de 100 agentes especializados y se atribuye 16 nuevas vulnerabilidades encontradas en la cohorte de Patch Tuesday, incluidas 4 RCE criticas.</p>
+              <div class="note">La lectura cambia: la ventaja ya no esta solo en el modelo, sino en el arnes agentic, el pipeline y la validacion end-to-end. Esto refuerza una oportunidad directa para servicios de hardening y discovery asistido.</div>
+              <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/" target="_blank" rel="noreferrer">Ver fuente</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge high">Alto</span>
+                <span class="status">Cambio nuevo desde la ultima ejecucion</span>
+              </div>
+              <h3>Google mueve la interfaz de IA hacia el contexto real de trabajo</h3>
+              <p>Google DeepMind publica su enfoque de puntero habilitado por IA y confirma que Gemini en Chrome ya puede actuar sobre partes concretas de la pagina mediante seleccion contextual.</p>
+              <div class="note">No es solo UX. Es una senal fuerte de que los copilotos dejaran de vivir en ventanas separadas y pasaran a operar sobre el propio contenido y el propio flujo del usuario.</div>
+              <a href="https://deepmind.google/blog/ai-pointer/" target="_blank" rel="noreferrer">Ver fuente</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge mid-high">Media-Alta</span>
+                <span class="status">Urgencia aumentada</span>
+              </div>
+              <h3>xAI entra en ventana operativa de retirada de modelos</h3>
+              <p>La retirada de varios modelos Grok se ejecuta el 15 de mayo de 2026 a las 12:00 PT, por lo que el margen para migrar cargas queda ya en fase tactica.</p>
+              <div class="note">Para clientes o vigilancias competitivas, la relevancia no esta en la novedad sino en la cercania. Toda dependencia de versiones antiguas deberia auditarse ya.</div>
+              <a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noreferrer">Ver fuente</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge critical">Critico</span>
+                <span class="status">Continuidad confirmada</span>
+              </div>
+              <h3>No aparece un nuevo incidente critico que desplace el radar actual</h3>
+              <p>No se ha confirmado en esta ventana una vulnerabilidad nueva que reemplace el peso operativo del advisory de Mistral o de las CVE de Semantic Kernel.</p>
+              <div class="note">El informe de las 12:00 debe priorizar accion y maduracion, no ruido. El riesgo principal sigue en supply chain, tool calling y agentes con acceso a host.</div>
+              <a href="https://docs.mistral.ai/resources/security-advisories" target="_blank" rel="noreferrer">Ver fuente</a>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Resumen Ejecutivo</h2>
+            <p>La clave de mediodia es menos novedad y mas cristalizacion: la industria muestra como la IA pasa de modelo a sistema operativo de defensa y de interfaz contextual.</p>
+          </div>
+        </div>
+        <ul>
+          <li>MDASH cambia el benchmark mental del mercado: el sistema agentic bien instrumentado se vuelve la nueva unidad de ventaja competitiva en ciberdefensa.</li>
+          <li>Google confirma un patron de producto muy relevante para empresa: asistentes que operan sobre el contenido y no desde una ventana aparte.</li>
+          <li>xAI obliga a decisiones practicas de migracion en menos de 48 horas si existen dependencias vivas.</li>
+          <li>El riesgo no baja: Mistral y Semantic Kernel siguen siendo los dos mejores ejemplos de por que supply chain, tool calling y blast radius deben tratarse como superficie critica.</li>
+        </ul>
+      </div>
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Lectura Operativa</h2>
+            <p>Priorizacion sugerida para MMarco Seguridad durante la franja de mediodia.</p>
+          </div>
+        </div>
+        <ul>
+          <li><strong>Primero:</strong> mantener la alerta sobre supply chain y agentes con acceso a host.</li>
+          <li><strong>Segundo:</strong> empaquetar el patron MDASH en oferta de auditoria y remediacion asistida.</li>
+          <li><strong>Tercero:</strong> vigilar interfaces IA contextuales como nueva capa de productividad y tambien de riesgo.</li>
+          <li><strong>Cuarto:</strong> no retrasar trabajo de transparencia del AI Act ni migraciones de catalogo de modelos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Evolucion de Actividad IA</h2>
+            <p>La lectura del corte se apoya mas en cambios de prioridad y madurez que en volumen de noticias.</p>
+          </div>
+        </div>
+        <ul><li>La intensidad del mercado no sube por un modelo nuevo, sino por la maduracion de sistemas agentic completos orientados a defensa, validacion y remediacion.</li><li>La superficie de riesgo sigue concentrada en paquetes, plugins, conectores y herramientas que ya tocan host, credenciales o datos empresariales.</li><li>La productividad se desplaza hacia IA contextual y embebida: navegar, comparar, resumir o actuar sobre contenido existente gana traccion frente al chat aislado.</li></ul>
+      </div>
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Vista Global de Actividad IA</h2>
+            <p>Mapa corto de donde se concentra hoy el movimiento con mas impacto empresarial y de seguridad.</p>
+          </div>
+        </div>
+        <ul><li>OpenAI y Microsoft consolidan la narrativa de ciberdefensa gobernada y usable en entornos verificados.</li><li>Google empuja la siguiente capa de adopcion: IA que entiende directamente la superficie de trabajo del usuario.</li><li>xAI y el ecosistema de conectores mantienen viva la presion competitiva sobre permisos, MCP y accion sobre sistemas reales.</li><li>Europa sigue marcando el frente de transparencia y disclosure con calendario concreto y consulta abierta.</li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Noticias Destacadas</h2>
+          <p>Senales con efecto real sobre ciberseguridad, automatizacion, continuidad operativa o posicionamiento de servicios.</p>
+        </div>
+      </div>
+      <div class="frame surface grid-4">
+        
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge very-high">Muy alto</span>
+                <span class="status">12 mayo 2026</span>
+              </div>
+              <h3>MDASH convierte la investigacion de vulnerabilidades con IA en defensa de produccion</h3>
+              <p class="smallcaps">Seguridad / Plataforma · Hecho confirmado</p>
+              <p>Demuestra que un sistema agentic bien orquestado puede encontrar y validar fallos a escala en superficies de alto valor.</p>
+              <div class="note">Referencia inmediata para propuestas de auditoria asistida, validacion de exposicion y pipelines de remediation engineering.</div>
+              <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/" target="_blank" rel="noreferrer">Microsoft Security</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge high">Alto</span>
+                <span class="status">12 mayo 2026</span>
+              </div>
+              <h3>Google integra puntero + Gemini para trabajar sobre contexto real</h3>
+              <p class="smallcaps">Interfaz / Productividad · Hecho confirmado</p>
+              <p>Apunta a asistentes que entienden el contenido sin obligar al usuario a reexplicar el contexto en otra ventana.</p>
+              <div class="note">Se convierte en senal a vigilar para navegadores, entornos de oficina, soporte y operaciones documentales.</div>
+              <a href="https://deepmind.google/blog/ai-pointer/" target="_blank" rel="noreferrer">Google DeepMind</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge mid-high">Media-Alta</span>
+                <span class="status">15 mayo 2026</span>
+              </div>
+              <h3>xAI deja ya en fase tactica la retirada de modelos Grok antiguos</h3>
+              <p class="smallcaps">Modelo / Migracion · Hecho confirmado</p>
+              <p>Impacta continuidad de integraciones y obliga a revisar compatibilidad y coste de sustitucion en cargas existentes.</p>
+              <div class="note">Lectura principal para operaciones: inventario, cambio de modelo, test de regresion y validacion de latencia y coste.</div>
+              <a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noreferrer">xAI Docs</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge high">Alto</span>
+                <span class="status">7 mayo 2026</span>
+              </div>
+              <h3>OpenAI consolida el discurso de ciberdefensa gobernada con GPT-5.5-Cyber</h3>
+              <p class="smallcaps">Seguridad / Modelo · Hecho confirmado</p>
+              <p>Refuerza el giro del mercado hacia modelos mas utiles para defensa, pero con identidad verificada, account security y control de uso.</p>
+              <div class="note">Muy relevante para servicios de ciberseguridad ofensiva y defensiva con verificacion fuerte y entornos autorizados.</div>
+              <a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/" target="_blank" rel="noreferrer">OpenAI</a>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Modelos y LLMs Recientes</h2>
+          <p>La novedad aqui es menor que en seguridad y herramientas, pero siguen siendo referencias utiles de mercado y continuidad.</p>
+        </div>
+      </div>
+      <div class="table">
+        <div class="table-head">
+          <div>Modelo</div><div>Tipo</div><div>Multimodal</div><div>Contexto</div><div>Licencia</div><div>Impacto</div>
+        </div>
+        
+            <div class="table-row">
+              <div><strong>GPT-5.5-Cyber</strong><span>OpenAI</span></div>
+              <div>Modelo especializado para ciberdefensa</div>
+              <div>No especificado en la fuente revisada</div>
+              <div>No disponible</div>
+              <div>Acceso restringido / propietario</div>
+              <div>Alto</div>
+            </div>
+            
+            <div class="table-row">
+              <div><strong>Claude Opus 4.7</strong><span>Anthropic</span></div>
+              <div>Frontier model para software engineering</div>
+              <div>Vision mejorada</div>
+              <div>No disponible en la fuente revisada</div>
+              <div>Propietario</div>
+              <div>Media-Alta</div>
+            </div>
+            
+            <div class="table-row">
+              <div><strong>Modelos Grok retirados el 15 de mayo</strong><span>xAI</span></div>
+              <div>Racionalizacion de catalogo</div>
+              <div>Segun modelo</div>
+              <div>No aplica</div>
+              <div>API propietaria</div>
+              <div>Media-Alta</div>
+            </div>
+            
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Herramientas Nuevas Destacadas</h2>
+          <p>La capa de herramientas sigue siendo el lugar donde se crea valor inmediato y donde se concentra el riesgo de permisos y accion.</p>
+        </div>
+      </div>
+      <div class="frame surface grid-3">
+        
+            <article class="plain-block">
+              <h3>MDASH</h3>
+              <p>Arnes multi-modelo y multiagente para descubrimiento, debate, prueba y validacion de vulnerabilidades.</p>
+              <p><strong>Uso:</strong> AppSec avanzada, investigacion de exposicion, discovery de bugs y validacion de hallazgos.</p>
+              <p><strong>Utilidad:</strong> Muy alta · <strong>Riesgo:</strong> Exige gobernanza fuerte, datasets privados y disciplina de validacion para evitar ruido o abuso.</p>
+              <a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/" target="_blank" rel="noreferrer">Microsoft Security</a>
+            </article>
+            
+            <article class="plain-block">
+              <h3>Gemini in Chrome con puntero contextual</h3>
+              <p>Interaccion contextual sobre contenido existente sin salir del flujo de navegacion.</p>
+              <p><strong>Uso:</strong> Comparacion de productos, apoyo documental, resumen, visualizacion y asistencia contextual.</p>
+              <p><strong>Utilidad:</strong> Alta · <strong>Riesgo:</strong> Amplia superficie de captura contextual y eleva la necesidad de controles de privacidad y permisos.</p>
+              <a href="https://deepmind.google/blog/ai-pointer/" target="_blank" rel="noreferrer">Google DeepMind / Google</a>
+            </article>
+            
+            <article class="plain-block">
+              <h3>Grok Connectors + BYO MCP</h3>
+              <p>Conectores para correo, calendario, archivos y servidores MCP personalizados.</p>
+              <p><strong>Uso:</strong> Asistentes con acceso real a sistemas y datos empresariales.</p>
+              <p><strong>Utilidad:</strong> Alta · <strong>Riesgo:</strong> Superficie de permisos, leakage y aprobaciones humanas sigue siendo el punto critico.</p>
+              <a href="https://x.ai/news/grok-connectors" target="_blank" rel="noreferrer">xAI</a>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Repositorios y Frameworks en Vigilancia</h2>
+            <p>No destaca hoy un repositorio emergente que cambie la prioridad del radar; el foco sigue en frameworks abiertos con riesgo o adopcion real.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          
+            <article class="plain-block">
+              <h3>Microsoft Semantic Kernel</h3>
+              <p>Framework abierto para construir agentes y orquestar modelos, plugins y workflows.</p>
+              <p><strong>Utilidad:</strong> Alta · <strong>Riesgo:</strong> Sigue siendo referencia directa para riesgo agentic por las CVE criticas publicadas en mayo.</p>
+              <p><strong>Popularidad:</strong> Mas de 27.000 estrellas segun Microsoft Security</p>
+              <a href="https://github.com/microsoft/semantic-kernel" target="_blank" rel="noreferrer">Microsoft / GitHub</a>
+            </article>
+            
+        </div>
+      </div>
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Tendencias y Radar</h2>
+            <p>Lecturas de segundo orden que ayudan a decidir que vigilar, que vender y que endurecer.</p>
+          </div>
+        </div>
+        <ul><li>La seguridad agentic deja de ser narrativa y pasa a sistema: Microsoft explicita que el arnes, la validacion y la orquestacion pesan mas que un modelo aislado.</li><li>La siguiente guerra de producto se mueve a la interfaz contextual. Google confirma un patron donde la IA opera sobre el contenido existente y no desde un chat separado.</li><li>El mercado sigue premiando conectores y MCP, pero la prioridad ejecutiva real sigue siendo gobernanza de permisos, aprobaciones humanas y trazabilidad.</li><li>Regulacion y tiempos operativos convergen: mientras la consulta europea sigue abierta hasta el 3 de junio, varios proveedores ya fuerzan decisiones de migracion o disclosure.</li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Incidentes y Vulnerabilidades IA</h2>
+          <p>La prioridad no cambia: siguen siendo los hechos con mayor urgencia practica para estaciones de desarrollo, CI y despliegues agentic.</p>
+        </div>
+      </div>
+      <div class="frame surface grid-3">
+        
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge critical">Critica</span>
+                <span class="status">Paquetes NPM y PyPI de Mistral</span>
+              </div>
+              <h3>MAI-2026-002 | Mistral SDK supply chain</h3>
+              <p><strong>Explotacion:</strong> Compromiso confirmado de paquetes publicados; PyPI con script malicioso en import</p>
+              <p><strong>Impacto:</strong> Riesgo de robo de credenciales y contaminacion de estaciones de desarrollo, caches y CI.</p>
+              <div class="note"><strong>Mitigacion:</strong> Bloquear versiones afectadas, limpiar sistemas expuestos, rotar secretos y revisar logs de nube y conexiones salientes.</div>
+              <a href="https://docs.mistral.ai/resources/security-advisories" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge critical">Critica</span>
+                <span class="status">Semantic Kernel Python</span>
+              </div>
+              <h3>CVE-2026-26030</h3>
+              <p><strong>Explotacion:</strong> RCE cuando coinciden prompt injection, Search Plugin e In-Memory Vector Store con configuracion vulnerable.</p>
+              <p><strong>Impacto:</strong> Escala prompt injection desde un problema de contenido a una primitiva de ejecucion remota de codigo.</p>
+              <div class="note"><strong>Mitigacion:</strong> Actualizar a semantic-kernel 1.39.4 o superior y revisar telemetria del host.</div>
+              <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+            <article class="tile">
+              <div class="tile-meta">
+                <span class="badge critical">Critica</span>
+                <span class="status">Semantic Kernel .NET y Python</span>
+              </div>
+              <h3>CVE-2026-25592</h3>
+              <p><strong>Explotacion:</strong> Escritura arbitraria de ficheros a traves de SessionsPythonPlugin.</p>
+              <p><strong>Impacto:</strong> Amplia la superficie de tool calling hacia escritura fuera de rutas esperadas y mayor blast radius local.</p>
+              <div class="note"><strong>Mitigacion:</strong> Actualizar a versiones corregidas y filtrar rutas y plugins con listas permitidas.</div>
+              <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Oportunidades</h2>
+            <p>Oportunidades accionables para empresa, consultoria y servicios tecnologicos.</p>
+          </div>
+        </div>
+        <ul><li><strong>Alta:</strong> Diseñar un servicio premium de hardening agentic para pymes y medianas empresas: inventario de herramientas, blast radius, aprobaciones y logging.</li><li><strong>Alta:</strong> Crear una oferta de auditoria asistida y remediation engineering inspirada en el patron MDASH para software propio y pipelines CI.</li><li><strong>Media-Alta:</strong> Probar casos de uso de IA contextual en navegador para analisis documental, comparativas comerciales y asistencia a operaciones.</li><li><strong>Media:</strong> Ofrecer talleres ejecutivos de transparencia del AI Act orientados a bots, contenido sintetico y disclosure corporativo.</li></ul>
+      </div>
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Alertas Activas</h2>
+            <p>Alertas que deben mantenerse en prioridad alta hasta nuevo hecho confirmado.</p>
+          </div>
+        </div>
+        <ul><li>Mistral: el advisory sigue bajo investigacion y la prioridad continua siendo limpieza y rotacion de secretos en equipos potencialmente expuestos.</li><li>Semantic Kernel: no bajar prioridad; las dos CVE siguen siendo el mejor caso practico para explicar riesgo real de agentes con herramientas.</li><li>xAI: revisar cualquier dependencia de modelos Grok retirados antes del 15 de mayo de 2026 a las 12:00 PT.</li><li>UE: mantener seguimiento de la consulta sobre transparencia del AI Act hasta el 3 de junio de 2026.</li></ul>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Recomendaciones Ejecutivas</h2>
+            <p>Priorizadas para accion inmediata y valor comercial real.</p>
+          </div>
+        </div>
+        <ul><li><strong>Critica:</strong> Tratar agentes, MCP y tool calling como superficie de produccion. Exigir inventario, listas permitidas, aprobacion humana y segmentacion de credenciales.</li><li><strong>Alta:</strong> Abrir cuanto antes una linea comercial de revision de supply chain IA y de hardening de agentes para clientes con desarrollo propio o automatizaciones internas.</li><li><strong>Alta:</strong> Explorar pilotos de analisis contextual en navegador y escritorio, pero bajo un marco claro de privacidad, logging y control de datos.</li><li><strong>Media:</strong> Preparar migraciones preventivas en catalogos de modelos externos para evitar cortes operativos por retiradas de proveedor.</li></ul>
+      </div>
+      <div class="frame surface">
+        <div class="section-head">
+          <div>
+            <h2>Calendario de Eventos IA</h2>
+            <p>Fechas y ventanas operativas que siguen condicionando el radar.</p>
+          </div>
+        </div>
+        <div class="calendar">
+          <div class="calendar-head"><div>Fecha</div><div>Evento</div><div>Tipo</div><div>URL</div></div>
+          
+        <div class="calendar-row">
+          <div>15 mayo 2026 · 12:00 PT</div>
+          <div>Retirada efectiva de varios modelos Grok en xAI API</div>
+          <div>Migracion / Operacion</div>
+          <div><a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noreferrer">Ver</a></div>
+        </div>
+        
+        <div class="calendar-row">
+          <div>19-20 mayo 2026</div>
+          <div>Google I/O 2026</div>
+          <div>Evento confirmado</div>
+          <div><a href="https://io.google/2026/" target="_blank" rel="noreferrer">Ver</a></div>
+        </div>
+        
+        <div class="calendar-row">
+          <div>3 junio 2026</div>
+          <div>Cierre de la consulta europea sobre transparencia del AI Act</div>
+          <div>Cumplimiento</div>
+          <div><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act" target="_blank" rel="noreferrer">Ver</a></div>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section class="section frame surface">
+      <div class="section-head">
+        <div>
+          <h2>Fuentes</h2>
+          <p>Fuentes oficiales o tecnicas fiables usadas para priorizar este corte.</p>
+        </div>
+      </div>
+      <ul class="sources"><li><a href="https://docs.mistral.ai/resources/security-advisories" target="_blank" rel="noreferrer">Mistral Docs | Security advisories</a></li><li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/" target="_blank" rel="noreferrer">Microsoft Security Blog | MDASH</a></li><li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">Microsoft Security Blog | Semantic Kernel RCE paths</a></li><li><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act" target="_blank" rel="noreferrer">European Commission | AI Act transparency consultation</a></li><li><a href="https://deepmind.google/blog/ai-pointer/" target="_blank" rel="noreferrer">Google DeepMind | AI-enabled pointer</a></li><li><a href="https://docs.x.ai/developers/migration/may-15-retirement" target="_blank" rel="noreferrer">xAI Docs | May 15 model retirement</a></li><li><a href="https://x.ai/news/grok-connectors" target="_blank" rel="noreferrer">xAI | Connectors in web, iOS, and Android</a></li><li><a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/" target="_blank" rel="noreferrer">OpenAI | GPT-5.5 and Trusted Access for Cyber</a></li><li><a href="https://www.anthropic.com/news/claude-opus-4-7?hsLang=en" target="_blank" rel="noreferrer">Anthropic | Claude Opus 4.7</a></li></ul>
+      <div class="footer">
+        <strong>Perfil corporativo:</strong> MMarco Seguridad | Ciberseguridad · Blockchain · IA · Telecomunicaciones<br>
+        <strong>Contacto:</strong> mmarcoseguridad.com · mmarco.seguridad@gmail.com · +34 656 33 93 55<br>
+        <strong>Limitaciones:</strong> No se confirma en esta ventana un lanzamiento nuevo de frontier model que desplace la prioridad del radar. Los KPIs son editoriales y reflejan solo elementos priorizados en esta edicion. No se genera PDF en esta ejecucion porque no hay una ruta de render verificada que garantice fidelidad premium respecto al dashboard HTML.<br>
+        Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
