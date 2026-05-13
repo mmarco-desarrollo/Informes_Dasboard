@@ -13,5 +13,5 @@ Activos incluidos:
 
 Referencias principales:
 - HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260513/08-10/dashboard.html
-- PDF: https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_Cripto/20260513/08-10/dashboard.pdf
+- PDF: publicación pública pendiente por incidencia operativa en la subida binaria de esta ejecución; copia entregada por email adjunta.
 - Carpeta archivada: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_Cripto/20260513/08-10
