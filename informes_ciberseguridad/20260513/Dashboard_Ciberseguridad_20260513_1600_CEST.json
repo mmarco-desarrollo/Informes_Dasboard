@@ -1,0 +1,433 @@
+{
+  "report_metadata": {
+    "brand": "MMarco Seguridad",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "owner": "Manuel Marco Sánchez",
+    "generated_at": "2026-05-13 16:12:34 CEST",
+    "timezone": "Europe/Madrid",
+    "threat_level": "ALTO",
+    "threat_level_score": 8.2,
+    "ai_risk_status": "Elevado y al alza",
+    "next_update": "2026-05-14 00:00 CEST",
+    "scope_note": "KPIs y hallazgos calculados sobre una ventana curada de avisos y campañas priorizadas entre el 30/04/2026 y el 13/05/2026."
+  },
+  "kpis": [
+    {
+      "label": "Incidentes activos",
+      "value": "4",
+      "note": "campañas o explotación confirmada priorizadas"
+    },
+    {
+      "label": "Incidentes críticos",
+      "value": "3",
+      "note": "Cisco FMC, PAN-OS User-ID, cPanel"
+    },
+    {
+      "label": "Vulnerabilidades nuevas priorizadas",
+      "value": "8",
+      "note": "ventana curada actual"
+    },
+    {
+      "label": "CVEs críticas priorizadas",
+      "value": "7",
+      "note": "incluye Cisco, PAN-OS, cPanel, Nginx-UI, CashDro y Tanzu"
+    },
+    {
+      "label": "Campañas de phishing",
+      "value": "2",
+      "note": "AiTM y device code phishing"
+    },
+    {
+      "label": "Ransomware reportado",
+      "value": "1",
+      "note": "Interlock con explotación de edge firewall"
+    },
+    {
+      "label": "Malware detectado",
+      "value": "N/D",
+      "note": "sin nueva telemetría abierta suficientemente comparable"
+    },
+    {
+      "label": "Ataques DDoS",
+      "value": "N/D",
+      "note": "sin señal prioritaria verificable en esta ventana"
+    },
+    {
+      "label": "Países más afectados",
+      "value": "EE. UU. predominante",
+      "note": "campaña de Microsoft observada en 26 países"
+    },
+    {
+      "label": "Nivel de riesgo global",
+      "value": "ALTO",
+      "note": "presión sobre edge, identidad y paneles expuestos"
+    },
+    {
+      "label": "Tendencia últimas 24h",
+      "value": "Sostenida",
+      "note": "sin relajación operativa observable"
+    }
+  ],
+  "executive_summary": {
+    "state": "La superficie de mayor riesgo sigue concentrándose en equipos perimetrales y portales expuestos a Internet, combinada con campañas de robo de credenciales cada vez más elaboradas. Para una pyme o integrador con exposición pública, el riesgo operativo inmediato se mantiene en nivel alto.",
+    "main_risks": [
+      "Explotación activa de CVE-2026-20131 en Cisco FMC dentro de la campaña Interlock, con impacto directo sobre firewalls de gestión y acceso inicial a red.",
+      "Explotación limitada pero confirmada de CVE-2026-0300 en PAN-OS cuando el User-ID Authentication Portal queda expuesto a Internet o a IPs no confiables.",
+      "Bypass de autenticación en cPanel (CVE-2026-41940) con parches, mitigaciones e incluso script de detección de compromiso publicados por el fabricante.",
+      "Campañas de phishing en escala usando AiTM y device code abuse con automatización y señuelos corporativos convincentes.",
+      "Persisten ventanas de exposición en software de administración y operación como Nginx-UI, CashDro 3, Android y componentes Tanzu con avisos muy recientes."
+    ],
+    "affected_sectors": [
+      "Healthcare & life sciences",
+      "Financial services",
+      "Professional services",
+      "Technology & software",
+      "Entornos con firewalls, hosting o paneles de gestión expuestos"
+    ],
+    "techniques": [
+      "Exploit Public-Facing Application",
+      "Credential phishing",
+      "Adversary-in-the-middle",
+      "Device code abuse",
+      "Privilege escalation"
+    ],
+    "estimated_exposure": "Alta para organizaciones con edge appliances, portales cautivos, cPanel/WHM accesible desde Internet, despliegues Nginx-UI sin endurecer o estaciones Android sin parche de mayo.",
+    "top_recommendation": "Reducir en horas, no en días, la exposición de paneles y portales a Internet y ejecutar un ciclo extraordinario de parcheo y revisión de compromiso en firewalls, cPanel y servicios de administración."
+  },
+  "quick_conclusions": [
+    "El riesgo inmediato no viene de una sola zero-day sino de la suma de edge appliances y portales de autenticación expuestos.",
+    "La identidad sigue siendo el segundo gran frente: el phishing industrializado ya trabaja con AiTM, device code y automatización.",
+    "En España, los avisos de INCIBE refuerzan que pymes y entornos operativos siguen expuestos por software de gestión y autenticación débil.",
+    "El parcheo debe ir acompañado de revisión de exposición, segmentación y búsqueda de indicios de compromiso donde el fabricante ya los facilita."
+  ],
+  "incidents_activity": [
+    {
+      "title": "Interlock usa Cisco FMC como acceso inicial",
+      "status": "Hecho confirmado",
+      "urgency": "Crítica",
+      "detail": "FortiGuard resume una campaña activa de Interlock explotando CVE-2026-20131 en Cisco Secure Firewall Management Center, con RCE no autenticado como root y cadena posterior de reconocimiento, persistencia y doble extorsión.",
+      "sources": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "title": "Phishing de “code of conduct” en escala con AiTM",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "detail": "Microsoft observó entre el 14 y el 16 de abril una campaña dirigida a más de 35.000 usuarios de más de 13.000 organizaciones en 26 países, con robo de tokens y señuelos de cumplimiento interno.",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "title": "Device code phishing con automatización y componente IA",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "detail": "Microsoft describe una campaña amplia que automatiza el abuso del flujo device code, asociada a EvilTokens y a una infraestructura más dinámica que los kits previos.",
+      "sources": [
+        "S11"
+      ]
+    },
+    {
+      "title": "Explotación limitada de PAN-OS User-ID Authentication Portal",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "detail": "Palo Alto y INCIBE confirman explotación observada cuando el portal queda expuesto a IPs no confiables o a Internet abierto.",
+      "sources": [
+        "S3",
+        "S5"
+      ]
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20131",
+      "product": "Cisco Secure Firewall Management Center (FMC)",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation": "Activa / usada por Interlock",
+      "patch": "Sí, Cisco publicó actualización; sin workaround eficaz",
+      "priority": "Inmediata",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3",
+      "severity": "Crítica",
+      "exploitation": "Sí, limitada y confirmada",
+      "patch": "Versiones corregidas y mitigación por restricción/desactivación del portal",
+      "priority": "Inmediata",
+      "source_ids": [
+        "S3",
+        "S5"
+      ]
+    },
+    {
+      "cve": "CVE-2026-41940",
+      "product": "cPanel & WHM / WP Squared",
+      "cvss": "Crítica",
+      "severity": "Crítica",
+      "exploitation": "Posible explotación; el fabricante publica parches, mitigaciones e IOC",
+      "patch": "Sí, múltiples ramas parchadas y script IOC publicado",
+      "priority": "Inmediata",
+      "source_ids": [
+        "S4",
+        "S6"
+      ]
+    },
+    {
+      "cve": "CVE-2026-42238",
+      "product": "Nginx-UI",
+      "cvss": "Crítica",
+      "severity": "Crítica",
+      "exploitation": "No confirmada en fuente abierta usada",
+      "patch": "Sí, actualizar a 2.3.8",
+      "priority": "Alta",
+      "source_ids": [
+        "S7"
+      ]
+    },
+    {
+      "cve": "CVE-2026-8076",
+      "product": "CashDro 3 panel de administración",
+      "cvss": "9.1 (v4.0)",
+      "severity": "Crítica",
+      "exploitation": "No confirmada",
+      "patch": "Nueva versión con PIN alfanumérico",
+      "priority": "Alta",
+      "source_ids": [
+        "S8"
+      ]
+    },
+    {
+      "cve": "CVE-2026-27143 / CVE-2026-33186",
+      "product": "VMware Tanzu RabbitMQ on Kubernetes",
+      "cvss": "9.8 (advisory)",
+      "severity": "Crítica",
+      "exploitation": "No confirmada en la fuente abierta usada",
+      "patch": "Sí, nuevas versiones publicadas 08/05/2026",
+      "priority": "Alta",
+      "source_ids": [
+        "S12"
+      ]
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      "Interlock ransomware"
+    ],
+    "target_sectors": [
+      "Empresas con infraestructura perimetral Cisco FMC expuesta",
+      "Redes empresariales con firewalls de gestión accesibles desde Internet"
+    ],
+    "techniques": [
+      "Explotación de edge appliance",
+      "Implantes fileless",
+      "Tooling personalizado",
+      "Doble extorsión"
+    ],
+    "iocs": "No se incluyen IOCs detallados en este resumen ejecutivo para evitar ruido operacional; revisar fuentes S1-S2 para detección e investigación técnica.",
+    "trend": "Persistente",
+    "propagation": "Selectiva pero de alto impacto"
+  },
+  "important_news": [
+    {
+      "headline": "Microsoft documenta una campaña AiTM a gran escala con señuelos de conducta corporativa",
+      "why_it_matters": "Impacta identidad corporativa y correo; refuerza el valor de MFA resistente al phishing y defensa del correo.",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "headline": "Microsoft vincula EvilTokens y automatización con el salto cualitativo del device code phishing",
+      "why_it_matters": "Sube el riesgo para Microsoft 365 y accesos federados incluso cuando no se reutilizan kits clásicos.",
+      "sources": [
+        "S11"
+      ]
+    },
+    {
+      "headline": "Android publica el boletín de mayo con una vulnerabilidad crítica en el componente System",
+      "why_it_matters": "Mantiene presión de parcheo sobre movilidad corporativa y flotas BYOD/COPE.",
+      "sources": [
+        "S9"
+      ]
+    },
+    {
+      "headline": "Broadcom publica un advisory crítico para Tanzu RabbitMQ on Kubernetes con 10 CVEs corregidas",
+      "why_it_matters": "Afecta pilas modernas con dependencia directa de componentes Go y cert-manager.",
+      "sources": [
+        "S12"
+      ]
+    }
+  ],
+  "active_alerts": [
+    "Parchear o aislar inmediatamente Cisco FMC afectado por CVE-2026-20131.",
+    "Restringir o deshabilitar User-ID Authentication Portal en PAN-OS si está expuesto a Internet o a zonas no confiables.",
+    "Actualizar cPanel/WHM a ramas corregidas y ejecutar el script de detección de IOC del fabricante.",
+    "Actualizar Nginx-UI a 2.3.8 y revisar procedimientos de reinicio y backup restore en despliegues recientes.",
+    "Reforzar defensa de correo e identidad frente a AiTM y device code phishing con MFA resistente al phishing, Safe Links/Safe Attachments o equivalentes y revisión de accesos anómalos."
+  ],
+  "recommendations": {
+    "Crítica": [
+      "Inventariar en el día los equipos Cisco FMC, PAN-OS con User-ID Portal y servidores cPanel expuestos públicamente.",
+      "Aplicar parches o aislamiento compensatorio inmediato en los activos afectados; si no se puede parchear hoy, retirar exposición pública.",
+      "Buscar indicios de compromiso en Cisco FMC y cPanel antes de dar por cerrado el riesgo de parcheo."
+    ],
+    "Alta": [
+      "Revisar políticas MFA y priorizar métodos resistentes al phishing para cuentas privilegiadas y administrativas.",
+      "Endurecer portales de autenticación, paneles de administración y servicios de restore o bootstrap en software de gestión.",
+      "Actualizar móviles y flotas Android al nivel de parche 2026-05-01 o posterior."
+    ],
+    "Media": [
+      "Ejecutar campañas internas de concienciación sobre señuelos de compliance, RR. HH. y aprobación documental.",
+      "Correlacionar accesos de M365/IdP con saltos de geografía, user agent anómalo y sesiones proxy/AiTM."
+    ],
+    "Baja": [
+      "Revisar dependencias de plataforma y bibliotecas en clústeres Kubernetes y productos con cadena Go/cert-manager.",
+      "Formalizar una cadencia semanal de revisión de avisos INCIBE, CCN-CERT, CISA KEV y proveedores críticos."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo o estimativo",
+    "global_risk_estimate": "Alto",
+    "threat_forecast": "Es probable que durante las próximas 72 horas continúe la presión sobre acceso inicial mediante edge appliances y flujos de autenticación web, con reutilización rápida de PoCs y explotación oportunista de paneles mal expuestos.",
+    "most_exposed_sectors": [
+      "Servicios profesionales",
+      "Hosting y MSP",
+      "Sanidad",
+      "Finanzas",
+      "Organizaciones con infraestructura híbrida y acceso remoto"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20131",
+      "CVE-2026-0300",
+      "CVE-2026-41940"
+    ],
+    "attack_increase_probability": "72%",
+    "automatic_recommendation": "Tratar todo panel de autenticación o administración accesible desde Internet como superficie en riesgo alto hasta verificar exposición, parche y ausencia de compromiso."
+  },
+  "delivery_status_template": {
+    "report_generated": "Completado",
+    "github_history": "Pendiente",
+    "gmail_html": "Pendiente",
+    "pdf": "No disponible",
+    "page_images": "No disponibles",
+    "google_drive": "Omitido",
+    "limitations": [
+      "El PDF se omite para no declarar como entregado un artefacto no verificado fuera del workspace.",
+      "Los KPIs reflejan una ventana curada de fuentes prioritarias, no un conteo global exhaustivo."
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Cisco Secure Firewall Management Center Software Remote Code Execution Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-rce-NKhnULJh",
+      "publisher": "Cisco",
+      "published": "2026-03-04",
+      "type": "vendor_advisory"
+    },
+    {
+      "id": "S2",
+      "title": "Interlock Ransomware Attack",
+      "url": "https://www.fortiguard.com/outbreak-alert/interlock-ransomware",
+      "publisher": "FortiGuard Labs",
+      "published": "2026-03-19",
+      "type": "threat_alert"
+    },
+    {
+      "id": "S3",
+      "title": "CVE-2026-0300 PAN-OS: Unauthenticated user initiated Buffer Overflow Vulnerability in User-ID Authentication Portal",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300",
+      "publisher": "Palo Alto Networks",
+      "published": "2026-05-05",
+      "type": "vendor_advisory"
+    },
+    {
+      "id": "S4",
+      "title": "Security: CVE-2026-41940 - cPanel & WHM / WP2 Security Update 04/28/2026",
+      "url": "https://support.cpanel.net/hc/en-us/articles/40073787579671-Security-CVE-2026-41940-cPanel-WHM-WP2-Security-Update-04-28-2026",
+      "publisher": "cPanel",
+      "published": "2026-04-28",
+      "type": "vendor_advisory"
+    },
+    {
+      "id": "S5",
+      "title": "Desbordamiento de búfer en User-ID Authentication Portal de Palo Alto",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto",
+      "publisher": "INCIBE-CERT",
+      "published": "2026-05-06",
+      "type": "national_cert"
+    },
+    {
+      "id": "S6",
+      "title": "Omisión de autenticación en cPanel",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos/omision-de-autenticacion-en-cpanel",
+      "publisher": "INCIBE-CERT",
+      "published": "2026-04-30",
+      "type": "national_cert"
+    },
+    {
+      "id": "S7",
+      "title": "Ejecución de código remoto en Nginx-UI de Nginx",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-remoto-en-nginx-ui-de-nginx",
+      "publisher": "INCIBE-CERT",
+      "published": "2026-05-07",
+      "type": "national_cert"
+    },
+    {
+      "id": "S8",
+      "title": "Múltiples vulnerabilidades en CashDro 3",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-cashdro-3",
+      "publisher": "INCIBE-CERT",
+      "published": "2026-05-07",
+      "type": "national_cert"
+    },
+    {
+      "id": "S9",
+      "title": "Android Security Bulletin—May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "publisher": "Android Open Source Project",
+      "published": "2026-05-04",
+      "type": "vendor_bulletin"
+    },
+    {
+      "id": "S10",
+      "title": "Breaking the code: Multi-stage code of conduct phishing campaign leads to AiTM token compromise",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "publisher": "Microsoft Security",
+      "published": "2026-05-04",
+      "type": "threat_research"
+    },
+    {
+      "id": "S11",
+      "title": "Inside an AI-enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "publisher": "Microsoft Security",
+      "published": "2026-04-06",
+      "type": "threat_research"
+    },
+    {
+      "id": "S12",
+      "title": "Product Release Advisory - VMware Tanzu RabbitMQ on Kubernetes 4.3.0, 4.2.6, 4.1.11, 4.0.20, 3.13.15",
+      "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37468",
+      "publisher": "Broadcom / VMware Tanzu",
+      "published": "2026-05-08",
+      "type": "vendor_advisory"
+    },
+    {
+      "id": "S13",
+      "title": "CCN-CERT - Alertas",
+      "url": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert.html",
+      "publisher": "CCN-CERT",
+      "published": "2026-01-29",
+      "type": "national_cert"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
+}
