@@ -1,0 +1,375 @@
+{
+  "brand": {
+    "name": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "web": "https://mmarcoseguridad.com",
+    "email": "mmarco.seguridad@gmail.com",
+    "phone": "+34 656 33 93 55",
+    "specialization": "Ciberseguridad | Blockchain | IA | Telecomunicaciones"
+  },
+  "slot_label": "Edicion intradia 12:00 CEST",
+  "generated_at": "2026-05-13 12:14:53 CEST",
+  "next_update": "Siguiente ejecucion programada",
+  "market_state": "Constructivo con sensibilidad macro elevada",
+  "ai_state": "Neutral-bullish tactico",
+  "fear_greed": {
+    "value": 42,
+    "label": "Fear"
+  },
+  "executive_summary": [
+    "Bitcoin sostiene liderazgo relativo con dominancia elevada y sesgo de refugio dentro del propio mercado cripto.",
+    "La amplitud de altcoins mejora en Solana y Cardano, pero el Altseason Index sigue en zona de Bitcoin Season.",
+    "El riesgo macro subio tras el CPI de EE.UU. en 3.8% interanual; la liquidez sigue disponible, pero la sensibilidad a datos se mantiene alta.",
+    "No hay senal de trading de alta conviccion en la cesta principal; el contexto favorece gestion tactica y confirmaciones antes de ampliar riesgo."
+  ],
+  "kpis": [
+    {
+      "label": "Market Cap Total",
+      "value": "$2.77T",
+      "delta": "+1.5%",
+      "tone": "up"
+    },
+    {
+      "label": "Volumen 24h",
+      "value": "$108.43B",
+      "delta": "Activo",
+      "tone": "neutral"
+    },
+    {
+      "label": "BTC Dominance",
+      "value": "58.4%",
+      "delta": "Alta",
+      "tone": "up"
+    },
+    {
+      "label": "ETH Dominance",
+      "value": "10.1%",
+      "delta": "Estable",
+      "tone": "neutral"
+    },
+    {
+      "label": "Altseason Index",
+      "value": "39/100",
+      "delta": "Bitcoin Season",
+      "tone": "warn"
+    },
+    {
+      "label": "Open Interest",
+      "value": "$130.17B",
+      "delta": "+6.47% ref.",
+      "tone": "warn"
+    },
+    {
+      "label": "Funding",
+      "value": "Mixto",
+      "delta": "Ligeramente positivo en alts",
+      "tone": "neutral"
+    },
+    {
+      "label": "Liquidaciones",
+      "value": "$369.39M",
+      "delta": "+114.06% ref.",
+      "tone": "down"
+    },
+    {
+      "label": "Fear & Greed",
+      "value": "42",
+      "delta": "Fear",
+      "tone": "warn"
+    },
+    {
+      "label": "Volatilidad",
+      "value": "Media-Alta",
+      "delta": "Macro-driven",
+      "tone": "warn"
+    }
+  ],
+  "macro": {
+    "headline": "CPI USA abril 2026: +0.6% mensual y +3.8% interanual. Core CPI: +2.8% interanual.",
+    "implication": "La inflacion vuelve a endurecer el umbral para recortes rapidos y mantiene la correlacion de cripto con activos de riesgo.",
+    "calendar": [
+      {
+        "date": "2026-05-28",
+        "event": "BEA GDP 1Q26 (segunda estimacion)",
+        "impact": "Alto"
+      },
+      {
+        "date": "2026-06-10",
+        "event": "BLS CPI mayo 2026",
+        "impact": "Muy alto"
+      },
+      {
+        "date": "2026-06-11",
+        "event": "ECB decision + press conference",
+        "impact": "Alto"
+      },
+      {
+        "date": "2026-06-16/17",
+        "event": "FOMC meeting",
+        "impact": "Muy alto"
+      }
+    ]
+  },
+  "coins": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": 80767.56,
+      "change_24h": 1.7,
+      "change_7d": 6.1,
+      "volume": 39086403951,
+      "trend": "Lider",
+      "momentum": "Alcista controlado",
+      "rsi": "N/D fiable",
+      "support": "79.5k / 78.0k",
+      "resistance": "82.0k / 84.0k",
+      "price_str": "$80,767.56",
+      "change_24h_str": "+1.7%",
+      "change_7d_str": "+6.1%",
+      "volume_str": "$39.09B",
+      "strength_24h": "Constructiva",
+      "strength_7d": "Fuerte"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": 2322.6,
+      "change_24h": 3.6,
+      "change_7d": 2.7,
+      "volume": 20886756170,
+      "trend": "Mejora",
+      "momentum": "Recuperacion tactica",
+      "rsi": "N/D fiable",
+      "support": "2280 / 2230",
+      "resistance": "2360 / 2450",
+      "price_str": "$2,322.60",
+      "change_24h_str": "+3.6%",
+      "change_7d_str": "+2.7%",
+      "volume_str": "$20.89B",
+      "strength_24h": "Fuerte",
+      "strength_7d": "Constructiva"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": 93.33,
+      "change_24h": 1.1,
+      "change_7d": 11.1,
+      "volume": 3316343506.98,
+      "trend": "Fuerte",
+      "momentum": "Lider alt",
+      "rsi": "N/D fiable",
+      "support": "90 / 88",
+      "resistance": "96 / 100",
+      "price_str": "$93.33",
+      "change_24h_str": "+1.1%",
+      "change_7d_str": "+11.1%",
+      "volume_str": "$3.32B",
+      "strength_24h": "Constructiva",
+      "strength_7d": "Fuerte"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": 647.48,
+      "change_24h": 0.0,
+      "change_7d": 4.9,
+      "volume": 1660129396,
+      "trend": "Estable",
+      "momentum": "Positivo moderado",
+      "rsi": "N/D fiable",
+      "support": "640 / 628",
+      "resistance": "660 / 675",
+      "price_str": "$647.48",
+      "change_24h_str": "+0.0%",
+      "change_7d_str": "+4.9%",
+      "volume_str": "$1.66B",
+      "strength_24h": "Fragil",
+      "strength_7d": "Fuerte"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "price": 1.41,
+      "change_24h": 2.7,
+      "change_7d": 2.8,
+      "volume": 2448938540,
+      "trend": "Constructivo",
+      "momentum": "Compresion alcista",
+      "rsi": "N/D fiable",
+      "support": "1.36 / 1.32",
+      "resistance": "1.45 / 1.50",
+      "price_str": "$1.4100",
+      "change_24h_str": "+2.7%",
+      "change_7d_str": "+2.8%",
+      "volume_str": "$2.45B",
+      "strength_24h": "Constructiva",
+      "strength_7d": "Constructiva"
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.2703,
+      "change_24h": -2.6,
+      "change_7d": 9.0,
+      "volume": 253740223.76,
+      "trend": "Volatil",
+      "momentum": "Rebote fragil",
+      "rsi": "N/D fiable",
+      "support": "0.260 / 0.250",
+      "resistance": "0.280 / 0.295",
+      "price_str": "$0.2703",
+      "change_24h_str": "-2.6%",
+      "change_7d_str": "+9.0%",
+      "volume_str": "$254M",
+      "strength_24h": "Fragil",
+      "strength_7d": "Fuerte"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.1074,
+      "change_24h": -3.6,
+      "change_7d": -0.7,
+      "volume": 1351318333.69,
+      "trend": "Debil",
+      "momentum": "Retail sensible",
+      "rsi": "N/D fiable",
+      "support": "0.104 / 0.100",
+      "resistance": "0.111 / 0.118",
+      "price_str": "$0.1074",
+      "change_24h_str": "-3.6%",
+      "change_7d_str": "-0.7%",
+      "volume_str": "$1.35B",
+      "strength_24h": "Debil",
+      "strength_7d": "Fragil"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Neutral",
+      "prob": 40,
+      "targets": "BTC 79k-83k | ETH 2.25k-2.40k",
+      "risk": "Medio",
+      "confidence": "64%",
+      "supports": "BTC 79.5k | ETH 2280",
+      "resistances": "BTC 82k | ETH 2360",
+      "critical": "CPI/Fed"
+    },
+    {
+      "name": "Bajista",
+      "prob": 35,
+      "targets": "BTC 76k-78k | ETH 2.15k-2.22k",
+      "risk": "Alto",
+      "confidence": "58%",
+      "supports": "Perdida de 79.5k / 2280",
+      "resistances": "Rebotes vendidos",
+      "critical": "Shock macro + liquidaciones"
+    },
+    {
+      "name": "Alcista",
+      "prob": 25,
+      "targets": "BTC 84k-86k | ETH 2.45k-2.55k",
+      "risk": "Medio",
+      "confidence": "52%",
+      "supports": "Rotacion hacia ETH/SOL",
+      "resistances": "BTC 84k | ETH 2450",
+      "critical": "Compresion de shorts"
+    }
+  ],
+  "signals": [
+    {
+      "title": "BTC swing",
+      "signal": "Sin senal de alta conviccion",
+      "confidence": "Baja",
+      "entry": "Esperar cierre > 82k o test limpio 79.5k",
+      "stop": "N/A",
+      "take_profit": "N/A",
+      "risk": "Macro alto",
+      "horizon": "24h-72h",
+      "confirmation": "Ruptura con volumen y funding controlado"
+    },
+    {
+      "title": "ETH beta trade",
+      "signal": "Watchlist",
+      "confidence": "Media-baja",
+      "entry": "Solo con sostenibilidad > 2360",
+      "stop": "Debajo de 2280",
+      "take_profit": "2450 / 2550",
+      "risk": "Sensibilidad a flujos institucionales",
+      "horizon": "2-5 dias",
+      "confirmation": "ETH recuperando dominancia relativa"
+    }
+  ],
+  "flows": [
+    "Flujo institucional positivo: BlackRock intensifica el uso de Ethereum en estructuras tokenizadas y en ETF spot/staked.",
+    "Colateral institucional: Standard Chartered, BlackRock y OKX activan un marco para usar BUIDL como colateral tokenizado.",
+    "Whale tracking on-chain: sin senal consolidada de alta confianza en el perimetro de esta edicion.",
+    "Exchange flows: no se dispone de una lectura agregada y fiable en tiempo real para publicar como dato duro en esta tirada."
+  ],
+  "news": [
+    {
+      "title": "BlackRock amplia tokenizacion sobre Ethereum",
+      "source": "BlackRock / filings",
+      "time": "2026-05-10/11",
+      "impact": "Alcista institucional",
+      "summary": "La firma preparo nuevas estructuras tokenizadas ligadas a Ethereum, reforzando la tesis de settlement institucional sobre la red."
+    },
+    {
+      "title": "ETHA mantiene escala institucional relevante",
+      "source": "BlackRock",
+      "time": "2026-05-06",
+      "impact": "Soporte de narrativa",
+      "summary": "El iShares Ethereum Trust ETF reporta 7.49B USD en activos del fondo, validando profundidad de demanda regulada."
+    },
+    {
+      "title": "Standard Chartered + BlackRock + OKX conectan colateral RWA",
+      "source": "Reuters/OKX",
+      "time": "2026-04-28",
+      "impact": "Infraestructura de mercado",
+      "summary": "BUIDL pasa a integrarse como colateral operativo en workflows institucionales, acercando treasury tokenizado y trading crypto."
+    },
+    {
+      "title": "CPI de EE.UU. vuelve a endurecer el cuadro macro",
+      "source": "BLS",
+      "time": "2026-05-12",
+      "impact": "Riesgo para beta cripto",
+      "summary": "La inflacion anual sube a 3.8%, elevando la sensibilidad de BTC y ETH a las expectativas de tipos y liquidez."
+    },
+    {
+      "title": "Persisten alertas de ciberamenaza sobre el ecosistema",
+      "source": "TRM/TechRadar",
+      "time": "abril-mayo 2026",
+      "impact": "Riesgo operativo",
+      "summary": "Los actores norcoreanos siguen dominando el robo de cripto en 2026 y mantienen el sesgo de riesgo sobre infra y custodios."
+    }
+  ],
+  "alerts": [
+    {
+      "level": "Prioridad alta",
+      "text": "Derivados: open interest y liquidaciones recientes sugieren apalancamiento aun sensible a shocks."
+    },
+    {
+      "level": "Prioridad alta",
+      "text": "Macro: CPI de EE.UU. por encima de marzo; el mercado puede castigar repuntes si se endurece la narrativa de tipos."
+    },
+    {
+      "level": "Prioridad media",
+      "text": "Altcoins: mejora selectiva en SOL y ADA, pero sin confirmacion estructural de altseason."
+    },
+    {
+      "level": "Prioridad media",
+      "text": "Seguridad: la superficie de riesgo para exchanges, bridges y equipos core sigue elevada."
+    }
+  ],
+  "sources": [
+    "CoinGecko market snapshots and coin pages",
+    "Alternative.me Fear & Greed Index API",
+    "BLS CPI release for April 2026",
+    "Federal Reserve meeting calendar",
+    "ECB Governing Council meeting calendar",
+    "BEA release schedule",
+    "BlackRock product pages and recent filings",
+    "Reuters-reported collateral framework via Standard Chartered / OKX coverage"
+  ]
+}
