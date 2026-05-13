@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "report_id": "20260513_0800",
+    "report_date": "2026-05-13",
+    "report_slot": "08:00 CEST",
+    "generated_at": "2026-05-13 08:21:59 CEST",
+    "timezone": "Europe/Madrid",
+    "threat_level": "ALTO",
+    "next_update": "Siguiente ejecución programada",
+    "ai_risk_state": "ALTO (estimación IA, confianza media)"
+  },
+  "kpis": [
+    {"label": "Nivel global de amenaza", "value": "ALTO"},
+    {"label": "CVEs priorizadas", "value": 8},
+    {"label": "KEV recientes priorizadas", "value": 6},
+    {"label": "Campañas activas destacadas", "value": 3},
+    {"label": "Boletines críticos revisados", "value": 5},
+    {"label": "Tendencia 24h", "value": "AL ALZA"}
+  ],
+  "executive_summary": {
+    "state": "El panorama de las 08:00 CEST se mantiene en nivel ALTO por la combinación de nuevas entradas KEV, phishing avanzado con robo de token y exposición de paneles perimetrales.",
+    "main_risks": [
+      "Ventanas KEV en LiteLLM, cPanel, PAN-OS, Ivanti EPMM y Windows.",
+      "Campañas de phishing con AiTM, device code abuse y HTML legítimo aparente.",
+      "Presión adicional de parcheo en Android, SAP y Broadcom/VMware Tanzu."
+    ],
+    "main_recommendation": "Cerrar hoy la remediación de KEV recientes y endurecer controles contra token theft y device code phishing."
+  },
+  "active_alerts": [
+    {
+      "severity": "Crítica",
+      "title": "Cierre urgente de remediación KEV",
+      "detail": "CVE-2026-42208, CVE-2026-0300, CVE-2026-6973, CVE-2026-32202, CVE-2026-33825 y CVE-2026-41940 requieren atención inmediata."
+    },
+    {
+      "severity": "Alta",
+      "title": "Phishing AiTM a gran escala",
+      "detail": "Microsoft observó una campaña del 14 al 16 de abril que alcanzó más de 35.000 usuarios en más de 13.000 organizaciones de 26 países."
+    },
+    {
+      "severity": "Alta",
+      "title": "Device code phishing asistido por automatización",
+      "detail": "Microsoft documentó abuso del flujo device code con alineamiento con la oferta PhaaS EvilTokens."
+    },
+    {
+      "severity": "Alta",
+      "title": "Riesgo operativo en paneles expuestos",
+      "detail": "PAN-OS User-ID Authentication Portal y cPanel/WHM concentran riesgo elevado si siguen expuestos sin parche."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-42208",
+      "product": "BerriAI LiteLLM",
+      "cvss": "9.8",
+      "severity": "Crítica",
+      "exploitation": "KEV / explotación confirmada",
+      "patch": "v1.83.7-stable",
+      "priority": "Crítica"
+    },
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3",
+      "severity": "Crítica",
+      "exploitation": "KEV / explotación priorizada",
+      "patch": "Hotfixes escalonados desde 2026-05-13",
+      "priority": "Crítica"
+    },
+    {
+      "cve": "CVE-2026-41940",
+      "product": "cPanel & WHM / WP2",
+      "cvss": "9.8",
+      "severity": "Crítica",
+      "exploitation": "KEV / explotación confirmada",
+      "patch": "Ramas 11.110.0.97 a 11.136.0.5 y WP2 136.1.7",
+      "priority": "Crítica"
+    },
+    {
+      "cve": "CVE-2026-6973",
+      "product": "Ivanti Endpoint Manager Mobile",
+      "cvss": "7.2",
+      "severity": "Alta",
+      "exploitation": "KEV / prioridad alta",
+      "patch": "12.6.1.1 / 12.7.0.1 / 12.8.0.1",
+      "priority": "Crítica"
+    },
+    {
+      "cve": "CVE-2026-32202",
+      "product": "Microsoft Windows Shell",
+      "cvss": "4.3",
+      "severity": "Media",
+      "exploitation": "KEV / explotación confirmada",
+      "patch": "Mitigar y actualizar según Microsoft",
+      "priority": "Alta"
+    },
+    {
+      "cve": "CVE-2026-33825",
+      "product": "Microsoft Defender",
+      "cvss": "7.8",
+      "severity": "Alta",
+      "exploitation": "KEV / explotación confirmada",
+      "patch": "Actualizar plataforma antimalware",
+      "priority": "Alta"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android / adbd",
+      "cvss": "8.8",
+      "severity": "Crítica",
+      "exploitation": "No confirmada",
+      "patch": "Parche 2026-05-01 o posterior",
+      "priority": "Alta"
+    },
+    {
+      "cve": "CVE-2026-27681",
+      "product": "SAP BPC / SAP BW",
+      "cvss": "9.9",
+      "severity": "Crítica",
+      "exploitation": "Sin evidencia pública en la muestra revisada",
+      "patch": "Security Patch Day SAP abril 2026",
+      "priority": "Alta"
+    }
+  ],
+  "recommendations": {
+    "critica": [
+      "Aplicar hoy mitigaciones o parches a LiteLLM, PAN-OS, cPanel, Ivanti EPMM y CVEs KEV de Microsoft; si no es posible, reducir exposición o aislar el servicio.",
+      "Revisar accesibilidad externa de paneles de administración, portales User-ID, cPanel/WHM y consolas ligadas a SSO.",
+      "Endurecer Microsoft 365 frente a AiTM y device code phishing con MFA resistente al phishing y Conditional Access."
+    ],
+    "alta": [
+      "Actualizar Android corporativo al parche 2026-05-01 o posterior y validar cobertura de MDM.",
+      "Programar despliegue acelerado de parches SAP y Broadcom/VMware Tanzu.",
+      "Ajustar controles de correo para HTML adjunto, CAPTCHA falso, QR phishing y señuelos corporativos."
+    ],
+    "media": [
+      "Reducir SLA interno de parcheo de Internet-facing a 24-72 horas para CVEs con KEV o vendor advisory crítico.",
+      "Monitorizar creación de cuentas, RMM no autorizado y cambios en políticas de seguridad."
+    ],
+    "baja": [
+      "Revisar con dirección la exposición residual de paneles de administración externos."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo / estimativo",
+    "risk": "ALTO",
+    "forecast": [
+      "Aumento probable de explotación oportunista contra PAN-OS, cPanel y stacks LLM self-hosted en 3 a 7 días.",
+      "Persistencia del desplazamiento hacia token theft, autenticación delegada y flujos legítimos de login.",
+      "Mayor exposición en servicios digitales, consultoría tecnológica, pymes con hosting propio y entornos M365 federados."
+    ],
+    "automatic_recommendation": "Priorizar superficie expuesta y autenticación fuerte antes de otras líneas de hardening menos urgentes.",
+    "disclaimer": "Esta sección es una estimación asistida por IA basada en señales actuales y no debe leerse como hecho confirmado."
+  },
+  "sources": [
+    "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?page=0",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-42208",
+    "https://security.paloaltonetworks.com/CVE-2026-0300",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-41940",
+    "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizacion-de-seguridad-de-sap-de-abril-de-2026",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+    "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+    "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/"
+  ],
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
+}
