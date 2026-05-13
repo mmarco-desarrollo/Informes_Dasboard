@@ -1,0 +1,158 @@
+{
+  "report_type": "morning_executive_report",
+  "generated_at": "2026-05-13T07:18:12.416528+02:00",
+  "timezone": "Europe/Madrid",
+  "repository": "mmarco-desarrollo/Informes_Dasboard",
+  "repository_path": "informes_RGPD/20260513",
+  "filenames": {
+    "html": "Dashboard_RGPD_2026-05-13_07-18.html",
+    "pdf": "Dashboard_RGPD_2026-05-13_07-18.pdf",
+    "json": "Dashboard_RGPD_2026-05-13_07-18.json"
+  },
+  "links": {
+    "html_github": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260513/Dashboard_RGPD_2026-05-13_07-18.html",
+    "pdf_github": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260513/Dashboard_RGPD_2026-05-13_07-18.pdf",
+    "json_github": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260513/Dashboard_RGPD_2026-05-13_07-18.json"
+  },
+  "corporate_profile": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "website": "https://mmarcoseguridad.com",
+    "email": "mmarco.seguridad@gmail.com",
+    "whatsapp": "+34 656 33 93 55",
+    "specialization": [
+      "Ciberseguridad",
+      "Blockchain",
+      "IA",
+      "Telecomunicaciones",
+      "RGPD",
+      "Proteccion de Datos"
+    ]
+  },
+  "global_status": {
+    "compliance_score_estimated": 72,
+    "compliance_label": "medio-alto",
+    "risk_score_estimated": 63,
+    "risk_label": "medio-alto",
+    "trend_30d": "estable con presion al alza",
+    "ai_privacy_state": "vigilancia reforzada",
+    "disclaimer": "Estimacion IA / radar externo. No es auditoria interna ni medicion certificada."
+  },
+  "facts_confirmed": [
+    "La AEPD publico el 30 de abril de 2026 una herramienta interactiva para consultar notificaciones de brechas de datos personales.",
+    "El EDPB adopto el 14 de abril de 2026 una plantilla de DPIA y la sometio a consulta publica hasta el 9 de junio de 2026.",
+    "Las Guidelines 1/2026 del EDPB sobre investigacion cientifica estan en consulta hasta el 25 de junio de 2026.",
+    "La AEPD participa en la accion coordinada europea de 2026 centrada en transparencia e informacion.",
+    "La AEPD destaco el 28 de abril de 2026 que el cumplimiento RGPD empieza ya en la fase de solicitud del dato."
+  ],
+  "interpretation": [
+    "La combinacion de accion coordinada sobre transparencia, nueva plantilla DPIA y advertencias sobre biometria anticipa mas requerimientos documentales y de explicabilidad en 2026.",
+    "Para pymes espanolas, el mayor riesgo inmediato no es una reforma legislativa brusca, sino fallar en evidencias de minimizacion, informacion previa y gestion de proveedores."
+  ],
+  "estimated_risk": [
+    "Nivel global de cumplimiento estimado: 72/100 (estimacion IA sobre radar externo; no es auditoria interna).",
+    "Riesgo global RGPD estimado: 63/100, con presion al alza en transparencia, EIPD y cadena de encargados."
+  ],
+  "automatic_recommendation": [
+    "Priorizar hoy una revision express de transparencia, minimizacion y tratamientos de alto riesgo con IA o biometria."
+  ],
+  "highlights": [
+    {
+      "date": "2026-03-19",
+      "title": "Transparencia y primera capa, foco europeo inmediato",
+      "source": "AEPD + EDPB",
+      "impact": "alto"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "Nueva plantilla europea de DPIA/EIPD",
+      "source": "EDPB",
+      "impact": "alto"
+    },
+    {
+      "date": "2026-04-16",
+      "title": "Guidelines 1/2026 en consulta",
+      "source": "EDPB + AEPD",
+      "impact": "medio"
+    },
+    {
+      "date": "2026-05-07",
+      "title": "Mas vigilancia institucional sobre IA y biometria",
+      "source": "AEPD + EDPS",
+      "impact": "alto"
+    }
+  ],
+  "incidents": [
+    {
+      "date": "2026-05-07",
+      "type": "brecha de datos",
+      "entity": "Rituals",
+      "status": "hecho confirmado por INCIBE; investigacion en curso"
+    },
+    {
+      "date": "2026-05-05",
+      "type": "acceso no autorizado",
+      "entity": "Booking",
+      "status": "hecho confirmado por INCIBE; alcance completo aun no precisado"
+    },
+    {
+      "date": "2026-01-13",
+      "type": "filtracion de datos",
+      "entity": "Endesa",
+      "status": "hecho confirmado por INCIBE"
+    }
+  ],
+  "sanctions_and_resolutions": [
+    {
+      "date": "2026-05-06",
+      "entity": "A.A.A. (anonimizada por la AEPD)",
+      "kind": "resolucion / apercibimiento",
+      "topic": "minimizacion de datos"
+    },
+    {
+      "date": "2026-05-06",
+      "entity": "Tools for Humanity GmbH",
+      "kind": "advertencia preventiva",
+      "topic": "biometria, transparencia y posible EIPD"
+    }
+  ],
+  "top_recommendations": [
+    "Revisar hoy mismo todas las capas informativas y politicas de privacidad expuestas al cliente o empleado.",
+    "Bloquear la solicitud de copia completa del DNI, pasaporte o informes medicos salvo necesidad legal concreta y documentada.",
+    "Inventariar tratamientos que exijan EIPD: biometria, IA generativa con datos personales, scoring, videovigilancia avanzada y monitorizacion masiva.",
+    "Verificar contratos de encargado, subencargados y transferencias internacionales de proveedores SaaS, CRM, marketing y soporte."
+  ],
+  "sources": [
+    {
+      "publisher": "AEPD",
+      "published_at": "2026-04-30",
+      "title": "Nueva herramienta interactiva para consultar las notificaciones de brechas de datos personales",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/nueva-herramienta-interactiva-consultar-notificaciones-brechas-datos-personales"
+    },
+    {
+      "publisher": "EDPB",
+      "published_at": "2026-04-14",
+      "title": "Enhancing compliance and consistency: EDPB adopts DPIA template",
+      "url": "https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_pt"
+    },
+    {
+      "publisher": "AEPD",
+      "published_at": "2026-04-28",
+      "title": "¿En que momento comienza legalmente un tratamiento de datos personales?",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales"
+    },
+    {
+      "publisher": "INCIBE-CERT",
+      "published_at": "2026-05-07",
+      "title": "Rituals detecta un incidente de seguridad que afecta a la base de datos de sus clientes",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/rituals-detecta-un-incidente-de-seguridad-que-afecta-la-base-de-datos-de"
+    },
+    {
+      "publisher": "INCIBE-CERT",
+      "published_at": "2026-05-05",
+      "title": "Deteccion de un acceso no autorizado a datos de usuarios de Booking",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos, tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional."
+}
