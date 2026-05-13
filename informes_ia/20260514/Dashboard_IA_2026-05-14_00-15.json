@@ -1,0 +1,265 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "report_title": "Informe Resumido Nocturno de Inteligencia Artificial",
+    "generated_at": "2026-05-14 00:15:18 CEST",
+    "timezone": "Europe/Madrid",
+    "report_mode": "nocturno_resumido",
+    "period_note": "Corte nocturno acumulado con prioridad en senales confirmadas recientes y arrastre de 48-72 horas cuando el impacto sigue activo.",
+    "global_status": "Aceleracion comercial con presion creciente en seguridad agentic y supply chain",
+    "impact_level": "alto",
+    "next_update_expected": "siguiente ejecucion programada del radar"
+  },
+  "kpis": {
+    "confirmed_priority_signals": 8,
+    "critical_incidents_or_vulnerabilities": 2,
+    "active_alerts": 4,
+    "actionable_opportunities": 3
+  },
+  "executive_summary": [
+    {
+      "type": "hecho_confirmado",
+      "text": "Microsoft describio dos vulnerabilidades criticas en Semantic Kernel, CVE-2026-25592 y CVE-2026-26030, mostrando que una prompt injection puede escalar a ejecucion remota de codigo si el agente combina vector de entrada y configuracion vulnerable."
+    },
+    {
+      "type": "hecho_confirmado",
+      "text": "Mistral publico una alerta oficial de supply chain sobre paquetes npm y PyPI comprometidos; el paquete mistralai==2.4.6 ejecuta un script malicioso en el import orientado a robo de credenciales."
+    },
+    {
+      "type": "hecho_confirmado",
+      "text": "Google resume que ya observa uso de IA por actores hostiles para reconocimiento, phishing realista, malware y extraccion frecuente de modelos en el sector privado."
+    },
+    {
+      "type": "hecho_confirmado",
+      "text": "La UE aclaro el calendario del AI Act tras el acuerdo politico del 7 de mayo de 2026: la mayoria de reglas y la aplicacion general arrancan el 2 de agosto de 2026, mientras parte del alto riesgo se desplaza a 2027 y 2028."
+    },
+    {
+      "type": "interpretacion",
+      "text": "El valor competitivo se esta moviendo del modelo al sistema de despliegue completo: voz, conectores, aprobaciones, ingenieria de implantacion y gobierno."
+    }
+  ],
+  "sections": {
+    "featured_news": [
+      {
+        "name": "Claude for Small Business",
+        "company": "Anthropic",
+        "date": "2026-05-13",
+        "category": "lanzamiento",
+        "impact": "alto",
+        "utility_or_risk": "utilidad inmediata para SMB con riesgo de adopcion rapida sin madurez de gobierno",
+        "quick_recommendation": "vigilar este patron para servicios de auditoria y hardening de automatizaciones SMB",
+        "source_url": "https://www.anthropic.com/news/claude-for-small-business"
+      },
+      {
+        "name": "OpenAI Deployment Company",
+        "company": "OpenAI",
+        "date": "2026-05-11",
+        "category": "estrategia_empresarial",
+        "impact": "alto",
+        "utility_or_risk": "refuerza el cambio de foco desde el modelo hacia el despliegue y operacion",
+        "quick_recommendation": "reposicionar comparativas y ofertas sobre capacidades de implantacion y gobierno",
+        "source_url": "https://openai.com/index/openai-launches-the-deployment-company/"
+      }
+    ],
+    "models_and_tools": [
+      {
+        "name": "GPT-Realtime-2 / GPT-Realtime-Translate / GPT-Realtime-Whisper",
+        "company": "OpenAI",
+        "date": "2026-05-07",
+        "category": "audio_realtime",
+        "impact": "alto",
+        "capabilities": [
+          "razonamiento de voz en tiempo real",
+          "traduccion en vivo",
+          "transcripcion streaming",
+          "contexto ampliado a 128K en GPT-Realtime-2"
+        ],
+        "use_cases": [
+          "atencion al cliente",
+          "asistentes operativos",
+          "automatizacion conversacional",
+          "traduccion en directo"
+        ],
+        "source_url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+      },
+      {
+        "name": "GPT-5.5 Instant",
+        "company": "OpenAI",
+        "date": "2026-05-05",
+        "category": "modelo_generalista",
+        "impact": "alto",
+        "capabilities": [
+          "modelo por defecto en ChatGPT",
+          "52.5% menos afirmaciones alucinadas que GPT-5.3 Instant en prompts de alta exigencia"
+        ],
+        "risk_note": "el system card indica tratamiento como high capability en ciberseguridad y bioquimica",
+        "source_url": "https://openai.com/index/gpt-5-5-instant/"
+      },
+      {
+        "name": "Copilot Studio monthly update",
+        "company": "Microsoft",
+        "date": "2026-05-11",
+        "category": "gobernanza_agentic",
+        "impact": "medio_alto",
+        "capabilities": [
+          "agent governance",
+          "intelligent workflows",
+          "connected app experiences"
+        ],
+        "source_url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/"
+      }
+    ],
+    "incidents_and_vulnerabilities": [
+      {
+        "name": "Semantic Kernel prompt injection to RCE",
+        "identifier": [
+          "CVE-2026-25592",
+          "CVE-2026-26030"
+        ],
+        "company": "Microsoft",
+        "affected_product": "Semantic Kernel",
+        "severity": "critica",
+        "exploitation_status": "camino de explotacion demostrado por investigacion oficial; fallos corregidos segun Microsoft",
+        "impact": "ejecucion remota de codigo y escritura de archivos no autorizada en agentes con ciertas configuraciones",
+        "mitigation": [
+          "actualizar componentes afectados",
+          "revisar Search Plugin e In-Memory Vector Store",
+          "limitar tool calling",
+          "anadir aprobacion humana y telemetria"
+        ],
+        "priority": "critica",
+        "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+      },
+      {
+        "name": "TanStack supply chain attack affecting Mistral AI SDK packages",
+        "identifier": [
+          "MAI-2026-002",
+          "GHSA-wx9m-wx4f-4cmg",
+          "GHSA-jgg6-4rpr-wfh7"
+        ],
+        "company": "Mistral AI",
+        "affected_product": "SDK packages for npm and PyPI",
+        "severity": "alta",
+        "exploitation_status": "investigacion en curso; infraestructura de Mistral no comprometida segun la compania",
+        "impact": "riesgo de ejecucion de script malicioso y robo de credenciales en entornos que instalaron versiones afectadas",
+        "affected_versions": [
+          "@mistralai/mistralai 2.2.2, 2.2.3, 2.2.4",
+          "@mistralai/mistralai-azure 1.7.1, 1.7.2, 1.7.3",
+          "@mistralai/mistralai-gcp 1.7.1, 1.7.2, 1.7.3",
+          "mistralai 2.4.6"
+        ],
+        "mitigation": [
+          "bloquear versiones afectadas",
+          "auditar lockfiles, caches y contenedores",
+          "rotar credenciales si hubo exposicion"
+        ],
+        "priority": "alta",
+        "source_url": "https://docs.mistral.ai/resources/security-advisories"
+      }
+    ],
+    "trends_and_radar": [
+      {
+        "name": "Model extraction and malicious AI tooling",
+        "category": "tendencia_confirmada",
+        "impact": "alto",
+        "note": "Google resume mitigacion de ataques frecuentes de extraccion de modelos y observacion de IA usada para reconocimiento, phishing y malware.",
+        "source_url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gtig-report-ai-cyber-attacks-feb-2026/"
+      },
+      {
+        "name": "AI Act implementation clarity",
+        "category": "regulacion",
+        "impact": "alto",
+        "note": "La mayoria de reglas y la aplicacion general arrancan el 2 de agosto de 2026; ciertas categorias de alto riesgo se mueven a 2027 y 2028.",
+        "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      }
+    ],
+    "opportunities": [
+      {
+        "priority": "alta",
+        "title": "Assessment de seguridad agentic para SMB y mid-market",
+        "note": "El empaquetado de Anthropic para pymes crea una ventana clara para auditar conectores, permisos y flujos con aprobacion humana."
+      },
+      {
+        "priority": "media",
+        "title": "Pilotos de voz operativa con supervision",
+        "note": "Los nuevos modelos realtime permiten productos de atencion y automatizacion con retorno visible, si se acotan bien los permisos."
+      },
+      {
+        "priority": "alta",
+        "title": "Servicio de higiene de dependencias IA",
+        "note": "La cadena de suministro de SDKs y paquetes de IA se perfila como nuevo dolor operativo para clientes con equipos pequeños."
+      }
+    ],
+    "executive_recommendations": [
+      {
+        "priority": "critica",
+        "text": "Inventariar de inmediato agentes con tool calling, shell, navegador, RAG, conectores o escritura en sistemas."
+      },
+      {
+        "priority": "alta",
+        "text": "Revisar pipelines y entornos por las versiones afectadas en el advisory de Mistral y aplicar rotacion de credenciales si procede."
+      },
+      {
+        "priority": "alta",
+        "text": "Actualizar el roadmap de cumplimiento AI Act con hitos internos previos al 2 de agosto de 2026."
+      },
+      {
+        "priority": "media",
+        "text": "Orientar ofertas comerciales a gobierno y despliegue seguro de agentes, no solo a comparativas de modelos."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Introducing Claude for Small Business",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-for-small-business"
+    },
+    {
+      "title": "OpenAI launches the OpenAI Deployment Company to help businesses build around intelligence",
+      "publisher": "OpenAI",
+      "url": "https://openai.com/index/openai-launches-the-deployment-company/"
+    },
+    {
+      "title": "Advancing voice intelligence with new models in the API",
+      "publisher": "OpenAI",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "title": "GPT-5.5 Instant: smarter, clearer, and more personalized",
+      "publisher": "OpenAI",
+      "url": "https://openai.com/index/gpt-5-5-instant/"
+    },
+    {
+      "title": "GPT-5.5 Instant System Card",
+      "publisher": "OpenAI",
+      "url": "https://openai.com/index/gpt-5-5-instant-system-card/"
+    },
+    {
+      "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
+      "publisher": "Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "title": "Security advisories",
+      "publisher": "Mistral Docs",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "title": "Google Threat Intelligence Group reports on AI threat trends",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gtig-report-ai-cyber-attacks-feb-2026/"
+    },
+    {
+      "title": "AI Act",
+      "publisher": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "title": "Timeline for the Implementation of the EU AI Act",
+      "publisher": "AI Act Service Desk",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act"
+    }
+  ]
+}
