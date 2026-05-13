@@ -1,0 +1,370 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "report": {
+    "title": "Informe Ejecutivo Premium de Inteligencia Artificial | Corte 08:00",
+    "generated_at": "2026-05-13 08:18:33 CEST",
+    "timezone": "Europe/Madrid",
+    "impact_level": "ALTO",
+    "global_status": "Aceleracion comercial con presion creciente en seguridad agentic y supply chain",
+    "next_update_expected": "Siguiente ciclo programado del radar",
+    "profile": "MMarco Seguridad | Ciberseguridad · Blockchain · IA · Telecomunicaciones",
+    "window": "Ultimas 12 horas con arrastre tactico de seguridad y cumplimiento"
+  },
+  "kpis": [
+    {
+      "label": "Alertas criticas priorizadas",
+      "value": 3,
+      "note": "Conteo editorial de este informe"
+    },
+    {
+      "label": "Lanzamientos utiles priorizados",
+      "value": 5,
+      "note": "Solo hechos confirmados"
+    },
+    {
+      "label": "Modelos a vigilar",
+      "value": 4,
+      "note": "Impacto potencial alto"
+    },
+    {
+      "label": "Frentes regulatorios activos",
+      "value": 1,
+      "note": "Consulta europea en curso"
+    }
+  ],
+  "featured_news": [
+    {
+      "title": "Mistral confirma impacto por el incidente TanStack en sus paquetes SDK",
+      "category": "Incidente / Supply chain",
+      "impact": "Critico",
+      "status": "Hecho confirmado",
+      "source": "Mistral Docs",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories",
+      "date_label": "12 mayo 2026",
+      "utility_or_risk": "Riesgo directo para estaciones de desarrollo, CI y entornos que instalaran paquetes comprometidos.",
+      "executive_note": "Bloquear de inmediato el paquete PyPI `mistralai==2.4.6`, revisar instalaciones entre 11 mayo 22:45 UTC y 12 mayo 01:53 UTC, y rotar secretos en equipos expuestos."
+    },
+    {
+      "title": "OpenAI lanza nueva generacion de voz en la API",
+      "category": "Lanzamiento",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+      "date_label": "7 mayo 2026",
+      "utility_or_risk": "Abre casos de uso de voz con razonamiento, traduccion en vivo y transcripcion de baja latencia para soporte, ventas y operaciones.",
+      "executive_note": "Prioridad alta para pilotos de atencion y automatizacion por voz donde importe la orquestacion de herramientas y el multilenguaje."
+    },
+    {
+      "title": "Microsoft eleva el riesgo agentic con dos fallos criticos en Semantic Kernel",
+      "category": "Vulnerabilidad",
+      "impact": "Critico",
+      "status": "Hecho confirmado",
+      "source": "Microsoft Security / GitHub Advisory",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+      "date_label": "7 mayo 2026",
+      "utility_or_risk": "Prompt injection deja de ser solo un problema de contenido y puede escalar a escritura arbitraria y RCE en agentes con herramientas.",
+      "executive_note": "Inventariar uso de Semantic Kernel en .NET y Python, aplicar parches y revisar telemetria host desde el periodo vulnerable."
+    },
+    {
+      "title": "xAI extiende Connectors a Grok Web, iOS y Android",
+      "category": "Herramienta / Plataforma",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "source": "xAI",
+      "source_url": "https://x.ai/news/grok-connectors",
+      "date_label": "6 mayo 2026",
+      "utility_or_risk": "Consolida el movimiento competitivo hacia asistentes con acceso real a correo, calendario, ficheros y suites de productividad.",
+      "executive_note": "Seguir como referencia competitiva y tambien como recordatorio de gobernanza de permisos, aprobaciones y auditoria."
+    },
+    {
+      "title": "Google activa File Search multimodal con citas por pagina",
+      "category": "Lanzamiento",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "source": "Google",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/",
+      "date_label": "5 mayo 2026",
+      "utility_or_risk": "Mejora RAG verificable con soporte multimodal, filtros por metadatos y grounding mas visible.",
+      "executive_note": "Oportunidad clara para ofertas de buscador documental y asistentes corporativos con trazabilidad por pagina."
+    },
+    {
+      "title": "Anthropic activa Project Glasswing para defensa sobre software critico",
+      "category": "Seguridad / Tendencia",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/glasswing?pubDate=20260416",
+      "date_label": "16 abril 2026",
+      "utility_or_risk": "La industria entra en fase de hardening acelerado: los modelos defensivos ya encuentran vulnerabilidades de alto impacto a escala.",
+      "executive_note": "Se confirma una linea de servicio rentable: auditoria de agentes, code scanning asistido y remediacion acelerada."
+    }
+  ],
+  "models": [
+    {
+      "name": "GPT-5.5",
+      "company": "OpenAI",
+      "type": "Frontier model / agentic coding",
+      "capabilities": "Codificacion agentic, investigacion, analisis de datos y trabajo multipaso con herramientas.",
+      "multimodal": "Texto y flujos de trabajo con herramientas",
+      "context": "No especificado en la fuente revisada",
+      "license": "API / producto propietario",
+      "use_cases": "Copilotos de desarrollo, automatizacion de backoffice, investigacion profesional.",
+      "impact": "Muy alto",
+      "source_url": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    {
+      "name": "GPT-Realtime-2 / Translate / Whisper",
+      "company": "OpenAI",
+      "type": "Audio models",
+      "capabilities": "Razonamiento por voz, traduccion en tiempo real y transcripcion streaming.",
+      "multimodal": "Audio",
+      "context": "No especificado en la fuente revisada",
+      "license": "API / producto propietario",
+      "use_cases": "Call centers, agentes de voz, soporte multilenguaje, meeting intelligence.",
+      "impact": "Alto",
+      "source_url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "name": "Mistral Medium 3.5",
+      "company": "Mistral AI",
+      "type": "Frontier multimodal",
+      "capabilities": "Agentes, coding, OCR, function calling y document QnA.",
+      "multimodal": "Si",
+      "context": "256k",
+      "license": "Modified MIT",
+      "use_cases": "Asistentes multimodales, RAG corporativo, automatizaciones con OCR y coding.",
+      "impact": "Alto",
+      "source_url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04"
+    },
+    {
+      "name": "Gemini Robotics-ER 1.6",
+      "company": "Google DeepMind",
+      "type": "Embodied reasoning model",
+      "capabilities": "Razonamiento espacial y llamada nativa a herramientas para tareas fisicas y robotica.",
+      "multimodal": "Si",
+      "context": "128k",
+      "license": "Propietario",
+      "use_cases": "Robotica industrial, agentes fisicos y automatizacion de operaciones.",
+      "impact": "Alto",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-er-1-6/"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Mistral Connectors + custom MCPs",
+      "source": "Mistral AI",
+      "description": "Conectores reutilizables, tool calling directo y aprobacion humana en el flujo.",
+      "use_cases": "Apps empresariales con datos internos, aprobacion antes de ejecucion y gobierno de herramientas.",
+      "utility": "Alta",
+      "risk": "Requiere control de permisos y politicas de aprobacion.",
+      "source_url": "https://mistral.ai/news/connectors"
+    },
+    {
+      "name": "Grok Connectors",
+      "source": "xAI",
+      "description": "Conectores nativos para correo, calendario, unidades y suites corporativas.",
+      "use_cases": "Asistentes de productividad con acceso operacional real.",
+      "utility": "Alta",
+      "risk": "Expande la superficie de permisos y data access.",
+      "source_url": "https://x.ai/news/grok-connectors"
+    },
+    {
+      "name": "Gemini API File Search multimodal",
+      "source": "Google",
+      "description": "RAG multimodal con metadatos y citas por pagina.",
+      "use_cases": "Buscadores internos, compliance documental, asistentes de conocimiento.",
+      "utility": "Alta",
+      "risk": "La calidad depende del pipeline documental y la gobernanza de fuentes.",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/"
+    },
+    {
+      "name": "Perplexity Agent API + Finance Search",
+      "source": "Perplexity",
+      "description": "API interoperable con web search, tool use y busqueda financiera estructurada.",
+      "use_cases": "Research empresarial, vigilancia competitiva, inteligencia financiera asistida.",
+      "utility": "Media-Alta",
+      "risk": "Requiere politicas claras sobre datos consultados y modelos terceros usados.",
+      "source_url": "https://docs.perplexity.ai/docs/agent-api/quickstart"
+    }
+  ],
+  "incidents_and_vulnerabilities": [
+    {
+      "name": "MAI-2026-002 | Mistral SDK supply chain",
+      "severity": "Critica",
+      "product": "Paquetes NPM y PyPI de Mistral",
+      "exploitation": "Compromiso confirmado de paquetes publicados",
+      "impact": "Posible ejecucion maliciosa, robo de credenciales y contaminacion de pipelines de desarrollo.",
+      "mitigation": "Bloqueo de versiones afectadas, IOC en endpoints y CI, rotacion de secretos y reimagen si hay evidencia.",
+      "priority": "Critica",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "name": "CVE-2026-26030",
+      "severity": "Critica",
+      "product": "Semantic Kernel Python",
+      "exploitation": "RCE si coincide vector de prompt injection + InMemoryVectorStore + Search Plugin por defecto",
+      "impact": "Ejecucion remota de codigo desde la capa agentic.",
+      "mitigation": "Actualizar a `semantic-kernel` 1.39.4 o superior y revisar telemetria del host durante la ventana vulnerable.",
+      "priority": "Critica",
+      "source_url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    },
+    {
+      "name": "CVE-2026-25592",
+      "severity": "Critica",
+      "product": "Semantic Kernel .NET / Python",
+      "exploitation": "Escritura arbitraria de ficheros via `SessionsPythonPlugin`",
+      "impact": "Escala la superficie de tool calling hacia escritura fuera de directorios permitidos.",
+      "mitigation": "Actualizar a Microsoft.SemanticKernel.Core 1.71.0 o a `semantic-kernel` 1.39.3+ y filtrar argumentos de rutas.",
+      "priority": "Critica",
+      "source_url": "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4"
+    }
+  ],
+  "trends": [
+    "Los lanzamientos de mayo confirman que la competicion ya no se centra solo en el modelo, sino en voz, conectores, RAG verificable y aprobaciones humanas.",
+    "Seguridad agentic pasa de teoria a operativa: Microsoft y Anthropic muestran que la explotacion y la remediacion asistidas por IA ya se miden en ventanas mas cortas.",
+    "La infraestructura sigue tensionada: Anthropic amplifica compute en AWS y OpenAI refuerza posicion institucional con FedRAMP Moderate.",
+    "Cumplimiento gana urgencia: la consulta europea de transparencia del AI Act deja poco margen para aplazar etiquetado, disclosure y trazabilidad de contenido sintetico."
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "text": "Crear un servicio de auditoria de agentes y MCP para pymes y medianas empresas, combinando inventario de permisos, sandboxes y aprobaciones humanas."
+    },
+    {
+      "priority": "Alta",
+      "text": "Lanzar pilotos de voz operativa para atencion y soporte con GPT-Realtime-2 y traduccion en vivo en sectores con carga telefonica o multilenguaje."
+    },
+    {
+      "priority": "Media-Alta",
+      "text": "Construir una oferta de RAG verificable con citas por pagina y metadatos usando Gemini File Search o stacks equivalentes."
+    },
+    {
+      "priority": "Media",
+      "text": "Preparar workshops ejecutivos sobre AI Act y transparencia para clientes que desplegaran chatbots, deepfakes o contenido sintetico antes de agosto de 2026."
+    }
+  ],
+  "active_alerts": [
+    "Supply chain IA: revisar hoy mismo instalaciones de SDKs y paquetes para agentes, especialmente en estaciones de desarrollo y CI.",
+    "Semantic Kernel: mantener visibilidad sobre versiones vulnerables y accesos de host permitidos a agentes con tool calling.",
+    "AI Act transparencia: comenzar etiquetado, disclosure y trazabilidad de contenido sintetico antes del 2 de agosto de 2026."
+  ],
+  "executive_recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Inventariar paquetes, frameworks y MCPs con acceso a host, secretos o correo. Bloquear versiones afectadas y centralizar aprobaciones humanas donde existan acciones irreversibles."
+    },
+    {
+      "priority": "Alta",
+      "text": "Reducir blast radius en agentes: listas permitidas de herramientas, aislamiento por tarea, sesiones efimeras, rotacion de credenciales y logging de uso."
+    },
+    {
+      "priority": "Alta",
+      "text": "Abrir una linea comercial de hardening de agentes para clientes de MMarco Seguridad con discovery tecnico, remediacion y monitorizacion."
+    },
+    {
+      "priority": "Media",
+      "text": "Seleccionar dos pilotos de negocio de alto retorno: voz operativa y RAG documental verificable."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "19-20 mayo 2026",
+      "event": "Google I/O 2026",
+      "type": "Evento confirmado",
+      "source_url": "https://io.google/2026/"
+    },
+    {
+      "date": "3 junio 2026",
+      "event": "Cierre de consulta sobre transparencia del AI Act",
+      "type": "Cumplimiento",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "date": "19 mayo 2026",
+      "event": "Anthropic | Claude Security webinar",
+      "type": "Mercado / Seguridad",
+      "source_url": "https://www.anthropic.com/webinars/claude-security-putting-claude-to-work-for-defenders"
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai_voice",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "id": "openai_gpt55",
+      "url": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    {
+      "id": "openai_fedramp",
+      "url": "https://openai.com/index/openai-available-at-fedramp-moderate/"
+    },
+    {
+      "id": "microsoft_shells",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "id": "semantic_kernel_26030",
+      "url": "https://github.com/advisories/GHSA-xjw9-4gw8-4rqx"
+    },
+    {
+      "id": "semantic_kernel_25592",
+      "url": "https://github.com/microsoft/semantic-kernel/security/advisories/GHSA-2ww3-72rp-wpp4"
+    },
+    {
+      "id": "mistral_advisory",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "id": "mistral_connectors",
+      "url": "https://mistral.ai/news/connectors"
+    },
+    {
+      "id": "mistral_medium35",
+      "url": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04"
+    },
+    {
+      "id": "xai_connectors",
+      "url": "https://x.ai/news/grok-connectors"
+    },
+    {
+      "id": "anthropic_glasswing",
+      "url": "https://www.anthropic.com/glasswing?pubDate=20260416"
+    },
+    {
+      "id": "anthropic_amazon",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute"
+    },
+    {
+      "id": "google_file_search",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/"
+    },
+    {
+      "id": "google_ai_recap",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/"
+    },
+    {
+      "id": "google_io",
+      "url": "https://io.google/2026/"
+    },
+    {
+      "id": "eu_ai_act",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "id": "perplexity_agent_api",
+      "url": "https://docs.perplexity.ai/docs/agent-api/quickstart"
+    },
+    {
+      "id": "perplexity_finance_search",
+      "url": "https://docs.perplexity.ai/docs/agent-api/finance-search"
+    }
+  ],
+  "limitations": [
+    "El recuento de KPIs es editorial y solo refleja los elementos priorizados en esta edicion.",
+    "No se han incluido rumores no verificados ni cifras no contrastadas."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
