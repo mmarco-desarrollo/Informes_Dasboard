@@ -23,3 +23,8 @@ El mercado cripto llega a la franja de las 20:00 con sesgo defensivo tactico. La
 ## Nota operativa
 
 El HTML es el entregable principal para consulta y archivo historico. El PDF replica la misma estructura visual en formato de presentacion.
+
+## Publicacion
+
+- HTML archivado en GitHub: `informes_Cripto/20260513/20-00/dashboard.html`
+- PDF accesible mediante export de Google Slides proxy visual: `Crypto Insights 2026-05-13 20-00 PDF proxy`
