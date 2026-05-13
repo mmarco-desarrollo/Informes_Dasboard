@@ -1,0 +1,267 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "generated_at": "2026-05-13 12:08:30 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "next_update": "2026-05-13 18:00:00 CEST",
+  "ai_risk_state": "Estimativo: alto en infraestructura expuesta a Internet",
+  "summary": {
+    "global_state": "La presion operativa sigue alta por la coincidencia de vulnerabilidades criticas muy recientes en perimetro, gestion remota, MFT y Android, junto con senales de explotacion activa y persistencia posterior al parche en equipamiento de seguridad.",
+    "main_risks": [
+      "Exposicion de firewalls y portales de autenticacion a Internet con riesgo de RCE o persistencia posterior al parche.",
+      "Riesgo elevado en servicios de transferencia y automatizacion expuestos (MOVEit Automation, Nginx-UI).",
+      "Phishing dirigido a credenciales y servicios financieros con impacto probable en pymes y equipos no maduros."
+    ],
+    "sectors": [
+      "Infraestructura TI corporativa",
+      "Redes y seguridad perimetral",
+      "Retail y gestion de efectivo",
+      "Movilidad y parque Android"
+    ],
+    "techniques": [
+      "RCE sin autenticacion",
+      "Bypass u omision de autenticacion",
+      "Persistencia post-upgrade",
+      "Phishing de robo de credenciales"
+    ],
+    "estimated_exposure": "Alta para organizaciones con superficie expuesta, administracion remota abierta o ventanas de parcheo lentas.",
+    "executive_recommendation": "Priorizar en las proximas 24 horas la revision de PAN-OS expuesto, Cisco ASA/FTD e ISE, Nginx-UI, MOVEit Automation y parque Android, con comprobacion de compromiso antes de dar por cerrada la mitigacion.",
+    "quick_points": [
+      "Hay al menos una vulnerabilidad critica con explotacion activa confirmada en PAN-OS (CVE-2026-0300).",
+      "Cisco advierte de persistencia de ArcaneDoor en ASA/FTD incluso despues de actualizar si no se verifica compromiso previo.",
+      "INCIBE ha publicado varios avisos criticos en la ultima semana con foco en RCE, autenticacion y escalada de privilegios.",
+      "El phishing sigue activo en Espana, con una campana reciente de suplantacion a SumUp orientada a robo de credenciales."
+    ]
+  },
+  "kpis": [
+    {
+      "label": "Nivel global",
+      "value": "Alto",
+      "note": "Hecho + criterio analitico"
+    },
+    {
+      "label": "Alertas criticas priorizadas",
+      "value": "6",
+      "note": "Curacion del informe"
+    },
+    {
+      "label": "Incidentes/campanas activas",
+      "value": "3",
+      "note": "Palo Alto, ArcaneDoor, phishing SumUp"
+    },
+    {
+      "label": "CVEs prioritarias",
+      "value": "7",
+      "note": "Curacion del informe"
+    },
+    {
+      "label": "Explotacion activa confirmada",
+      "value": "2",
+      "note": "PAN-OS y compromiso Cisco a verificar"
+    },
+    {
+      "label": "Sectores mas expuestos",
+      "value": "4",
+      "note": "Perimetro, MFT, efectivo, Android"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Alta sostenida",
+      "note": "Estimacion analitica"
+    },
+    {
+      "label": "Foco geografico",
+      "value": "Espana + exposicion global",
+      "note": "Fuentes INCIBE y fabricantes"
+    }
+  ],
+  "incidents": [
+    {
+      "title": "Explotacion activa de PAN-OS User-ID Authentication Portal",
+      "status": "Hecho confirmado",
+      "priority": "Critica",
+      "detail": "INCIBE recoge que CVE-2026-0300 permite RCE no autenticado con privilegios root en PA-Series y VM-Series cuando User-ID Authentication Portal esta expuesto a IPs no confiables o Internet.",
+      "action": "Aplicar versiones corregidas disponibles a partir del 13 y 28 de mayo segun rama, o deshabilitar/restringir el portal inmediatamente.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto"
+    },
+    {
+      "title": "Riesgo residual en Cisco ASA/FTD por persistencia ArcaneDoor",
+      "status": "Hecho confirmado",
+      "priority": "Critica",
+      "detail": "Cisco informo el 23 de abril de 2026 de una evolucion del mecanismo de persistencia asociado a ArcaneDoor en ASA/FTD; el compromiso puede preservarse incluso tras actualizar a versiones corregidas si no se valida integridad.",
+      "action": "No dar por suficiente el parcheo: revisar indicadores, persistencia y reconstruccion de confianza en dispositivos potencialmente expuestos.",
+      "source": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03"
+    },
+    {
+      "title": "Campana de phishing contra usuarios de SumUp en Espana",
+      "status": "Hecho confirmado",
+      "priority": "Alta",
+      "detail": "INCIBE identifico una campana que suplanta a SumUp para capturar credenciales por correo electronico, con afectacion potencial a autonomos y pymes.",
+      "action": "Reforzar concienciacion, bloquear remitentes e incorporar detecciones para dominios y asuntos relacionados.",
+      "source": "https://www.incibe.es/node/618253"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation": "Si, activa segun Palo Alto/INCIBE",
+      "patch": "Versiones por rama entre 13 y 28 de mayo; mitigacion temporal disponible",
+      "priority": "P1 inmediata",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto"
+    },
+    {
+      "cve": "CVE-2026-20147 / CVE-2026-20148",
+      "product": "Cisco ISE / ISE-PIC",
+      "cvss": "9.9",
+      "severity": "Critica",
+      "exploitation": "No indicada como activa en el advisory",
+      "patch": "Cisco ha publicado actualizaciones; sin workaround",
+      "priority": "P1 si hay ISE expuesto o con cuentas admin extensas",
+      "source": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-traversal-8bYndVrZ"
+    },
+    {
+      "cve": "CVE-2026-42238",
+      "product": "Nginx-UI",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation": "No confirmada",
+      "patch": "Actualizar a 2.3.8",
+      "priority": "P1 si existe exposicion o reinicios programados",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-remoto-en-nginx-ui-de-nginx"
+    },
+    {
+      "cve": "CVE-2026-8076",
+      "product": "CashDro 3 panel web",
+      "cvss": "9.1 (CVSS v4.0)",
+      "severity": "Critica",
+      "exploitation": "No confirmada",
+      "patch": "Nueva version con PIN alfanumerico",
+      "priority": "P1 si el sistema es accesible por red",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-cashdro-3"
+    },
+    {
+      "cve": "CVE-2026-4670",
+      "product": "MOVEit Automation",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation": "No confirmada",
+      "patch": "2025.1.5 / 2025.0.9 / 2024.1.8",
+      "priority": "P1 por historial de abuso sobre MFT",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-moveit-automation"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android System / adbd",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation": "No indicada como activa",
+      "patch": "Nivel de parche 2026-05-01 o posterior",
+      "priority": "P2 alta en movilidad corporativa",
+      "source": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    },
+    {
+      "cve": "CVE-2026-31431",
+      "product": "VMware Tanzu / Linux kernel Copy Fail",
+      "cvss": "7.8",
+      "severity": "Alta",
+      "exploitation": "Publica; advisory abierto",
+      "patch": "Segun lineas de producto Tanzu afectadas",
+      "priority": "P2 si hay cargas Linux multi-tenant o Kubernetes",
+      "source": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Tanzu-Security-Advisory-CVE-2026-341431/37431"
+    }
+  ],
+  "news": [
+    {
+      "title": "Android publica boletin de mayo con una RCE critica en System/adbd",
+      "detail": "Google publico el 4 de mayo el boletin de Android con una vulnerabilidad critica que puede derivar en ejecucion remota de codigo proximal/adyacente sin interaccion del usuario.",
+      "source": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    },
+    {
+      "title": "INCIBE concentra varios avisos criticos en la ultima semana",
+      "detail": "Entre el 5 y el 7 de mayo, INCIBE publico avisos criticos sobre Nginx-UI, CashDro 3, MOVEit Automation, Android y PAN-OS, reflejando una semana especialmente densa en exposiciones de perimetro y autenticacion.",
+      "source": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos"
+    },
+    {
+      "title": "Cisco refuerza el mensaje de hunting y no solo parcheo en dispositivos de seguridad",
+      "detail": "La actualizacion sobre ASA/FTD remarca que en ciertos escenarios la persistencia puede sobrevivir al upgrade, lo que obliga a complementar el parche con verificacion forense y de integridad.",
+      "source": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03"
+    }
+  ],
+  "alerts": [
+    "Revisar de inmediato PAN-OS con User-ID Authentication Portal habilitado y expuesto.",
+    "Comprobar compromiso y persistencia en Cisco ASA/FTD antes de considerar cerrada la remediacion.",
+    "Actualizar Nginx-UI a 2.3.8 antes de reinicios o despliegues planificados.",
+    "Actualizar MOVEit Automation si existe exposicion del backend command port.",
+    "Desplegar parches Android 2026-05-01 o superiores en parque corporativo."
+  ],
+  "malware": {
+    "status": "Cobertura del dia sin nueva familia dominante confirmada en fuentes oficiales priorizadas.",
+    "families": [
+      "No se prioriza una familia nueva concreta en este corte.",
+      "Predominan tecnicas de phishing para robo de credenciales y persistencia en dispositivos perimetrales."
+    ],
+    "iocs_note": "No se incluyen IOCs porque las fuentes revisadas del dia no aportan un set consolidado y verificable suficiente."
+  },
+  "recommendations": {
+    "critica": [
+      "Parchar o aislar hoy mismo PAN-OS expuesto con User-ID Authentication Portal.",
+      "Ejecutar hunting de persistencia y validacion de integridad en Cisco ASA/FTD comprometible, no solo parcheo.",
+      "Aplicar actualizaciones urgentes a Nginx-UI, MOVEit Automation y Cisco ISE si estan desplegados."
+    ],
+    "alta": [
+      "Revisar exposicion de interfaces de administracion, backup restore y servicios MFT desde Internet.",
+      "Acelerar el parcheo de Android corporativo al nivel 2026-05-01 o superior.",
+      "Elevar la vigilancia sobre credenciales de administracion y MFA en servicios perimetrales."
+    ],
+    "media": [
+      "Actualizar playbooks de comunicacion interna frente a phishing con marcas financieras y SaaS.",
+      "Aumentar correlacion entre eventos de reinicio de servicios y actividad anomala posterior.",
+      "Verificar copias de seguridad y tiempos reales de reconstruccion para activos de seguridad perimetral."
+    ],
+    "baja": [
+      "Revisar inventario de productos afectados por avisos de INCIBE publicados esta semana.",
+      "Ajustar cuadros de mando para distinguir parche aplicado de remediacion verificada."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo / estimativo generado por IA",
+    "risk_estimate": "Alto durante las proximas 72 horas en organizaciones con exposicion perimetral y deuda de parcheo.",
+    "predictions": [
+      "Seguiran apareciendo intentos de explotacion oportunista sobre portales de autenticacion y appliances de seguridad expuestos.",
+      "Las pymes con baja higiene de correo seguiran viendo campanas de phishing de robo de credenciales financieras.",
+      "Los equipos que solo parcheen sin validar compromiso mantendran riesgo residual en casos similares a ArcaneDoor."
+    ],
+    "sectors": [
+      "Servicios gestionados",
+      "Retail",
+      "Industria ligera",
+      "Entornos con teletrabajo y acceso remoto"
+    ],
+    "priority_vulns": [
+      "CVE-2026-0300",
+      "CVE-2026-20147",
+      "CVE-2026-20148",
+      "CVE-2026-42238",
+      "CVE-2026-4670"
+    ],
+    "attack_increase_probability": "Alta",
+    "auto_recommendation": "Combinar parcheo acelerado con hunting de compromiso, segmentacion y cierre de exposicion externa evitable."
+  },
+  "sources": [
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-cashdro-3",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-moveit-automation",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-remoto-en-nginx-ui-de-nginx",
+    "https://www.incibe.es/node/618253",
+    "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+    "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-traversal-8bYndVrZ",
+    "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-CISAED25-03",
+    "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Tanzu-Security-Advisory-CVE-2026-341431/37431",
+    "https://nvd.nist.gov/general/nvd-dashboard"
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
