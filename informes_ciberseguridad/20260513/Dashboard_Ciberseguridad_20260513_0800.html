@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | MMarco Seguridad</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(17,29,47,.94);
+      --panel2: rgba(8,17,30,.92);
+      --text: #edf4ff;
+      --muted: #9db2cf;
+      --line: rgba(132,162,204,.18);
+      --cyan: #47d4ff;
+      --teal: #5ef2c6;
+      --amber: #ffbf69;
+      --red: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(71,212,255,.14), transparent 28%),
+        radial-gradient(circle at top left, rgba(94,242,198,.10), transparent 24%),
+        linear-gradient(180deg, #06101c 0%, #081321 38%, #050c16 100%);
+    }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 18px 54px; }
+    .hero, .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    .hero { padding: 28px; }
+    .section { padding: 22px; margin-top: 20px; }
+    .hero-grid, .cols-2, .kpi-grid, .alerts, .rec-grid { display: grid; gap: 14px; }
+    .hero-grid { grid-template-columns: minmax(0,1.7fr) minmax(280px,.9fr); }
+    .cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .kpi-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .alerts { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .rec-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .meta, .card {
+      background: var(--panel2);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .brand { color: var(--cyan); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 12px 0 10px; font-size: clamp(30px, 4vw, 48px); line-height: 1.03; max-width: 760px; }
+    h2 { margin: 0 0 12px; font-size: 23px; }
+    h3 { margin: 0 0 10px; font-size: 17px; }
+    p, li { line-height: 1.58; }
+    .subtle, .meta div, .kpi-note, td:last-child { color: var(--muted); }
+    .badge {
+      display: inline-flex; align-items: center; gap: 10px; margin-top: 14px; padding: 10px 14px;
+      border-radius: 999px; border: 1px solid rgba(255,107,107,.28); background: rgba(255,107,107,.12); color: #ffd9d9; font-weight: 700;
+    }
+    .meta-row { display: grid; grid-template-columns: 150px 1fr; gap: 10px; font-size: 14px; }
+    .kpi-label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+    .kpi-value { margin-top: 14px; font-size: 34px; font-weight: 800; }
+    .kpi-note { margin-top: 10px; font-size: 14px; }
+    .pill { display: inline-block; border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+    .crit { background: rgba(255,107,107,.16); color: #ffd1d1; }
+    .high { background: rgba(255,191,105,.16); color: #ffe2ba; }
+    .prio-crit { border-color: rgba(255,107,107,.28); }
+    .prio-high { border-color: rgba(255,191,105,.28); }
+    .prio-med { border-color: rgba(71,212,255,.2); }
+    .prio-low { border-color: rgba(94,242,198,.2); }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { padding: 12px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { color: var(--cyan); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; background: rgba(255,255,255,.02); }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { margin: 0; padding-left: 18px; }
+    footer { margin-top: 18px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 1100px) {
+      .hero-grid, .cols-2, .kpi-grid, .alerts, .rec-grid { grid-template-columns: 1fr; }
+      .meta-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="brand">MMarco Seguridad · Executive SOC Brief</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class="subtle">El panorama de las 08:00 CEST se mantiene en nivel ALTO por la combinación de nuevas entradas KEV, phishing avanzado con robo de token y exposición de paneles perimetrales.</p>
+          <div class="badge">Nivel global de amenaza: ALTO</div>
+        </div>
+        <div class="meta">
+          <div class="meta-row"><span>Fecha</span><strong>13/05/2026</strong></div>
+          <div class="meta-row"><span>Corte</span><strong>08:00 CEST</strong></div>
+          <div class="meta-row"><span>Generado</span><strong>13/05/2026 08:21:59 CEST</strong></div>
+          <div class="meta-row"><span>Zona horaria</span><strong>Europe/Madrid</strong></div>
+          <div class="meta-row"><span>Próxima actualización</span><strong>Siguiente ejecución programada</strong></div>
+          <div class="meta-row"><span>Estado IA de riesgo</span><strong>ALTO (estimación IA, confianza media)</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>KPIs principales</h2>
+      <div class="kpi-grid">
+        <div class="card"><div class="kpi-label">Nivel global de amenaza</div><div class="kpi-value">ALTO</div><div class="kpi-note">Presión sostenida por KEV y phishing avanzado.</div></div>
+        <div class="card"><div class="kpi-label">CVEs priorizadas</div><div class="kpi-value">8</div><div class="kpi-note">Con impacto alto o explotación prioritaria.</div></div>
+        <div class="card"><div class="kpi-label">KEV recientes priorizadas</div><div class="kpi-value">6</div><div class="kpi-note">Ventana 20/04 a 12/05.</div></div>
+        <div class="card"><div class="kpi-label">Campañas activas destacadas</div><div class="kpi-value">3</div><div class="kpi-note">AiTM, device code phishing y malware firmado.</div></div>
+        <div class="card"><div class="kpi-label">Boletines críticos revisados</div><div class="kpi-value">5</div><div class="kpi-note">Microsoft, Android, SAP, Palo Alto y Broadcom.</div></div>
+        <div class="card"><div class="kpi-label">Tendencia 24h</div><div class="kpi-value">AL ALZA</div><div class="kpi-note">Nuevo Patch Tuesday y cierres de ventana KEV.</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Resumen ejecutivo</h2>
+      <div class="cols-2">
+        <div class="card">
+          <h3>Riesgos principales</h3>
+          <ul>
+            <li>Ventanas KEV en LiteLLM, cPanel, PAN-OS, Ivanti EPMM y Windows.</li>
+            <li>Campañas de phishing con AiTM, device code abuse y HTML legítimo aparente.</li>
+            <li>Presión adicional de parcheo en Android, SAP y Broadcom/VMware Tanzu.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Conclusión rápida</h3>
+          <ul>
+            <li>La urgencia no está solo en CVSS altos: hay CVEs ya explotadas con severidad media y alta.</li>
+            <li>La campaña AiTM de Microsoft tuvo escala multinacional y volumen relevante.</li>
+            <li>El riesgo práctico está en activos expuestos y autenticación federada débil.</li>
+            <li>La prioridad de hoy es cerrar superficie expuesta y reforzar identidad.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Alertas activas</h2>
+      <div class="alerts">
+        <div class="card"><span class="pill crit">Crítica</span><h3>Cierre urgente de remediación KEV</h3><p class="subtle">CVE-2026-42208, CVE-2026-0300, CVE-2026-6973, CVE-2026-32202, CVE-2026-33825 y CVE-2026-41940 requieren atención inmediata.</p></div>
+        <div class="card"><span class="pill high">Alta</span><h3>Phishing AiTM a gran escala</h3><p class="subtle">Campaña observada por Microsoft con más de 35.000 usuarios objetivo en más de 13.000 organizaciones.</p></div>
+        <div class="card"><span class="pill high">Alta</span><h3>Device code phishing asistido por automatización</h3><p class="subtle">Abuso del flujo device code con alineamiento con la oferta PhaaS EvilTokens.</p></div>
+        <div class="card"><span class="pill high">Alta</span><h3>Riesgo operativo en paneles expuestos</h3><p class="subtle">PAN-OS User-ID Authentication Portal y cPanel/WHM concentran riesgo elevado si siguen expuestos sin parche.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vulnerabilidades críticas priorizadas</h2>
+      <table>
+        <thead>
+          <tr><th>CVE</th><th>Producto</th><th>CVSS</th><th>Explotación</th><th>Parche / prioridad</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>CVE-2026-42208</td><td>BerriAI LiteLLM</td><td>9.8</td><td>KEV / explotación confirmada</td><td>v1.83.7-stable / Crítica</td></tr>
+          <tr><td>CVE-2026-0300</td><td>Palo Alto PAN-OS User-ID Authentication Portal</td><td>9.3</td><td>KEV / explotación priorizada</td><td>Hotfixes escalonados desde 13/05 / Crítica</td></tr>
+          <tr><td>CVE-2026-41940</td><td>cPanel &amp; WHM / WP2</td><td>9.8</td><td>KEV / explotación confirmada</td><td>Ramas 11.110.0.97 a 11.136.0.5 / Crítica</td></tr>
+          <tr><td>CVE-2026-6973</td><td>Ivanti Endpoint Manager Mobile</td><td>7.2</td><td>KEV / prioridad alta</td><td>12.6.1.1 / 12.7.0.1 / 12.8.0.1 / Crítica</td></tr>
+          <tr><td>CVE-2026-32202</td><td>Microsoft Windows Shell</td><td>4.3</td><td>KEV / explotación confirmada</td><td>Mitigar y actualizar / Alta</td></tr>
+          <tr><td>CVE-2026-33825</td><td>Microsoft Defender</td><td>7.8</td><td>KEV / explotación confirmada</td><td>Actualizar plataforma antimalware / Alta</td></tr>
+          <tr><td>CVE-2026-0073</td><td>Android / adbd</td><td>8.8</td><td>No confirmada</td><td>Parche 2026-05-01 o posterior / Alta</td></tr>
+          <tr><td>CVE-2026-27681</td><td>SAP BPC / SAP BW</td><td>9.9</td><td>Sin evidencia pública en la muestra</td><td>Security Patch Day SAP abril 2026 / Alta</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Noticias y campañas clave</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Microsoft publica su ciclo de seguridad de mayo 2026.</strong> Los acumulativos de Windows y Windows Server del 12 de mayo ya remiten a la guía de vulnerabilidades del mes y añaden el aviso sobre expiración de certificados Secure Boot a partir de junio de 2026.</li>
+          <li><strong>Microsoft registra 8,3 mil millones de amenazas de phishing por correo en Q1 2026.</strong> El informe de fin de abril destaca QR phishing, HTML malicioso y técnicas ClickFix/fake CAPTCHA.</li>
+          <li><strong>Palo Alto publica CVE crítica en PAN-OS con hotfixes escalonados.</strong> Varias ramas reciben corrección hoy 13 de mayo y otras el 28 de mayo.</li>
+          <li><strong>Android y SAP mantienen presión en movilidad y ERP.</strong> Android corrige una RCE crítica sin interacción del usuario y SAP una SQL injection crítica en BPC/BW.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Recomendaciones ejecutivas</h2>
+      <div class="rec-grid">
+        <div class="card prio-crit"><h3>Crítica</h3><ul><li>Aplicar hoy mitigaciones o parches a LiteLLM, PAN-OS, cPanel, Ivanti EPMM y CVEs KEV de Microsoft.</li><li>Revisar accesibilidad externa de paneles de administración y portales User-ID.</li><li>Endurecer Microsoft 365 frente a AiTM y device code phishing.</li></ul></div>
+        <div class="card prio-high"><h3>Alta</h3><ul><li>Actualizar Android corporativo al parche 2026-05-01 o posterior.</li><li>Programar despliegue acelerado de parches SAP y Broadcom/VMware Tanzu.</li><li>Ajustar controles de correo para HTML adjunto, CAPTCHA falso y QR phishing.</li></ul></div>
+        <div class="card prio-med"><h3>Media</h3><ul><li>Reducir SLA de parcheo Internet-facing a 24-72 horas para CVEs con KEV o advisory crítico.</li><li>Monitorizar creación de cuentas, RMM no autorizado y cambios en políticas de seguridad.</li></ul></div>
+        <div class="card prio-low"><h3>Baja</h3><ul><li>Revisar con dirección la exposición residual de paneles de administración externos.</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Sección IA</h2>
+      <div class="cols-2">
+        <div class="card">
+          <h3>Análisis predictivo / estimativo</h3>
+          <ul>
+            <li>Aumento probable de explotación oportunista contra PAN-OS, cPanel y stacks LLM self-hosted en 3 a 7 días.</li>
+            <li>Persistencia del desplazamiento hacia token theft, autenticación delegada y flujos legítimos de login.</li>
+            <li>Mayor exposición en servicios digitales, consultoría tecnológica, pymes con hosting propio y entornos M365 federados.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Lectura operativa</h3>
+          <p class="subtle"><strong>Riesgo global estimado:</strong> ALTO.</p>
+          <p class="subtle"><strong>Recomendación automática:</strong> Priorizar superficie expuesta y autenticación fuerte antes de otras líneas de hardening menos urgentes.</p>
+          <p class="subtle">Esta sección es una estimación asistida por IA basada en señales actuales y no debe leerse como hecho confirmado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Fuentes destacadas</h2>
+      <div class="card">
+        <ul>
+          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?page=0">CISA Known Exploited Vulnerabilities Catalog</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42208">NVD - CVE-2026-42208</a></li>
+          <li><a href="https://security.paloaltonetworks.com/CVE-2026-0300">Palo Alto Networks - CVE-2026-0300</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41940">NVD - CVE-2026-41940</a></li>
+          <li><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">Android Security Bulletin - May 2026</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizacion-de-seguridad-de-sap-de-abril-de-2026">INCIBE - SAP abril 2026</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/deserializacion-de-datos-no-confiables-en-vmware-tanzu">INCIBE - VMware Tanzu 06/05/2026</a></li>
+          <li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/">Microsoft - Code of Conduct AiTM Campaign</a></li>
+          <li><a href="https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/">Microsoft - AI-enabled device code phishing</a></li>
+          <li><a href="https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/">Microsoft - Email threat landscape Q1 2026</a></li>
+        </ul>
+        <p class="subtle" style="margin-top:14px;"><strong>Estado PDF:</strong> generado localmente para revisión, pero no verificado todavía fuera del workspace en el momento de esta publicación web.</p>
+      </div>
+    </section>
+
+    <footer>
+      Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.
+    </footer>
+  </div>
+</body>
+</html>
