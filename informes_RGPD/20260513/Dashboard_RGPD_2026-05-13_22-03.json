@@ -1,0 +1,96 @@
+{
+  "report_type": "Daily Closing Report",
+  "title": "Informe Ejecutivo RGPD",
+  "generated_at": "2026-05-13 22:03:02 CEST",
+  "timezone": "Europe/Madrid",
+  "brand": "MMarco Seguridad",
+  "repo_path": "informes_RGPD/20260513/Dashboard_RGPD_2026-05-13_22-03.json",
+  "scope": "Radar ejecutivo de contexto regulatorio y riesgo externo; no auditoria interna confirmada.",
+  "global_compliance_estimate": {
+    "value": 67,
+    "label": "Cumplimiento medio condicionado",
+    "type": "estimacion_ia"
+  },
+  "global_risk_estimate": {
+    "value": "Medio-Alto",
+    "type": "estimacion_analitica"
+  },
+  "today_changes": [
+    {
+      "status": "hecho_confirmado",
+      "headline": "BOE sin novedad RGPD material para negocio; solo resolucion de destinos en la AEPD",
+      "published": "2026-05-13",
+      "source": "BOE",
+      "url": "https://www.boe.es/boe/dias/2026/05/13/"
+    },
+    {
+      "status": "interpretacion",
+      "headline": "No se detecta una publicacion oficial espanola equivalente a sancion mayor o guia nueva de impacto inmediato durante la jornada",
+      "published": "2026-05-13",
+      "source": "Analisis MMarco Seguridad"
+    },
+    {
+      "status": "hecho_confirmado",
+      "headline": "Continua activa la consulta de la Comision Europea sobre transparencia de IA",
+      "published": "2026-05-08",
+      "source": "Comision Europea",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+    }
+  ],
+  "incidents": [
+    {
+      "date": "2026-05-11",
+      "type": "Brecha de datos / ciberataque",
+      "severity": "Alta",
+      "authority": "ICO",
+      "headline": "South Staffordshire fined GBP 963,900 after major cyber attack and data breach"
+    },
+    {
+      "date": "2026-05-05",
+      "type": "Acceso no autorizado",
+      "severity": "Alta",
+      "authority": "INCIBE",
+      "headline": "Booking incident monitored by INCIBE"
+    }
+  ],
+  "priority_actions": [
+    "Revisar protocolo de brechas y tiempos de deteccion",
+    "Priorizar DPIA de IA, biometria y perfilado",
+    "Auditar encargados, subencargados y transferencias internacionales",
+    "Revisar cookies y consentimiento",
+    "Refuerzo formativo en IA y phishing"
+  ],
+  "sources": [
+    {
+      "authority": "AEPD",
+      "title": "Nueva herramienta interactiva para consultar las notificaciones de brechas de datos personales",
+      "published": "2026-04-30",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/nueva-herramienta-interactiva-consultar-notificaciones-brechas-datos-personales"
+    },
+    {
+      "authority": "AEPD",
+      "title": "Memoria AEPD 2025",
+      "published": "2026-05-06",
+      "url": "https://www.aepd.es/memorias/memoria-aepd-2025.pdf"
+    },
+    {
+      "authority": "EDPB",
+      "title": "DPIA Template",
+      "published": "2026-04-14",
+      "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/edpb-dpia-template_en"
+    },
+    {
+      "authority": "EDPS",
+      "title": "Annual Report 2025 press release",
+      "published": "2026-05-07",
+      "url": "https://www.edps.europa.eu/press-publications/press-news/press-releases_en"
+    },
+    {
+      "authority": "ICO",
+      "title": "Fine of nearly GBP 1m issued against South Staffordshire",
+      "published": "2026-05-11",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/"
+    }
+  ],
+  "legal_note": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional."
+}
