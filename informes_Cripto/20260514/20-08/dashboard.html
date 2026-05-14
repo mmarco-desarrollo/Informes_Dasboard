@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crypto Insights 20:00</title>
+  <style>
+    :root {
+      --bg: #07111D;
+      --panel: #0E1B2C;
+      --panel-2: #12253B;
+      --border: #203550;
+      --text: #EEF3FB;
+      --muted: #9FB2C8;
+      --bull: #2BD576;
+      --bear: #FF6B6B;
+      --warn: #F3C969;
+      --accent: #3AA3FF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(58,163,255,0.12), transparent 26%),
+        radial-gradient(circle at top left, rgba(43,213,118,0.08), transparent 24%),
+        linear-gradient(180deg, #07111d 0%, #08131f 50%, #0a1421 100%);
+      color: var(--text);
+    }
+    .page {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero, .card {
+      background: linear-gradient(180deg, rgba(18,37,59,0.92), rgba(14,27,44,0.94));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    }
+    .hero {
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 18px;
+      align-items: end;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -55% auto;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(58,163,255,0.24), transparent 68%);
+      pointer-events: none;
+    }
+    .brand {
+      font-size: 14px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.02;
+      max-width: 12ch;
+    }
+    .hero p {
+      color: var(--muted);
+      margin: 14px 0 0;
+      max-width: 54ch;
+      line-height: 1.55;
+    }
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .status-pill {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(7,17,29,0.68);
+      border: 1px solid rgba(95,128,166,0.35);
+    }
+    .status-pill .label { color: var(--muted); font-size: 12px; margin-bottom: 7px; }
+    .status-pill .value { font-size: 18px; font-weight: 700; }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .metric {
+      padding: 18px;
+      min-height: 112px;
+    }
+    .metric .label { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+    .metric .value { font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; }
+    .metric .sub { color: var(--muted); font-size: 12px; margin-top: 10px; }
+    .section {
+      margin-top: 16px;
+      display: grid;
+      gap: 16px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 16px;
+    }
+    .card { padding: 18px 20px; }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    .card p, .card li {
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+    .bullets {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 16px;
+      padding: 0;
+      list-style: none;
+      margin: 12px 0 0;
+    }
+    .bullets li::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 8px;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .chart-card {
+      padding: 12px;
+      border-radius: 20px;
+      background: rgba(7,17,29,0.56);
+      border: 1px solid var(--border);
+    }
+    .chart-card img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(95,128,166,0.2);
+      text-align: left;
+      vertical-align: middle;
+    }
+    th { color: var(--muted); font-size: 12px; font-weight: 600; }
+    .positive { color: var(--bull); }
+    .negative { color: var(--bear); }
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .scenario {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(7,17,29,0.56);
+    }
+    .scenario h3 { margin: 0 0 6px; font-size: 17px; }
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      margin-bottom: 10px;
+    }
+    .news-list, .alert-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .news-item, .alert {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(7,17,29,0.48);
+      padding: 15px 16px;
+    }
+    .news-item a { color: var(--text); text-decoration: none; }
+    .news-item small, .alert small { color: var(--muted); }
+    .footer {
+      margin-top: 18px;
+      padding: 18px 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid rgba(95,128,166,0.2);
+    }
+    @media (max-width: 1080px) {
+      .hero, .grid-4, .two-col, .chart-grid, .scenario-grid, .bullets {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media print {
+      body { background: var(--bg); }
+      .page { width: 100%; padding: 14px; }
+      .hero, .card { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div>
+        <div class="brand">MMarco Seguridad • Crypto Insights Executive</div>
+        <h1>Informe Ejecutivo Cripto | Franja 20:00 • Cierre nocturno</h1>
+        <p>Dashboard institucional premium con foco en dirección de mercado, riesgo, momentum, dominancia y catalizadores regulatorios/macro. La referencia operativa es la ejecución de las 14 May 2026 | 20:08 CEST.</p>
+      </div>
+      <div class="status-grid">
+        <div class="status-pill"><div class="label">Estado general</div><div class="value">Constructivo</div></div>
+        <div class="status-pill"><div class="label">Estado IA</div><div class="value">Sesgo de cierre constructivo con prudencia</div></div>
+        <div class="status-pill"><div class="label">Fear & Greed</div><div class="value">51 / Greed</div></div>
+        <div class="status-pill"><div class="label">Próxima actualización</div><div class="value">00:00 CEST</div></div>
+      </div>
+    </section>
+
+    <section class="grid-4">
+      <article class="card metric"><div class="label">Capitalización total</div><div class="value" style="color:#EEF3FB">$2.71T</div><div class="sub">Slot 20:00</div></article><article class="card metric"><div class="label">Volumen 24h</div><div class="value" style="color:#EEF3FB">$94.04B</div><div class="sub">Slot 20:00</div></article><article class="card metric"><div class="label">BTC Dominance</div><div class="value" style="color:#F3C969">60.3%</div><div class="sub">Slot 20:00</div></article><article class="card metric"><div class="label">ETH Dominance</div><div class="value" style="color:#3AA3FF">10.3%</div><div class="sub">Slot 20:00</div></article>
+    </section>
+
+    <section class="section two-col">
+      <article class="card">
+        <h2>Resumen ejecutivo</h2>
+        <p><b>Tendencia general:</b> Constructivo con amplitud moderada y dominancia BTC en 60.3%.<br/><b>Sentimiento IA:</b> Sesgo de cierre constructivo con prudencia. Fear & Greed en 51 / Greed.<br/><b>Nivel de riesgo:</b> Controlado. Volatilidad táctica compuesta en 23.2%.<br/><b>Momentum:</b> Positivo. El promedio de variación del bloque monitorizado es +2.86% en 24h y +4.19% en 7d.<br/><b>Macro:</b> Sesión positiva en spot, pero con fondo macro todavía sensible a inflación, Fed y tono regulatorio estadounidense.<br/><b>Derivados:</b> BTC open interest en 60,04 BUSD, funding BTC en 0,0043% cada 8h, funding ETH en 0,0066% cada 8h y liquidaciones 24h cercanas a 230 MUSD, mayoritariamente de largos.<br/><b>Siguiente actualización:</b> 00:00 CEST.</p>
+      </article>
+      <article class="card">
+        <h2>Lectura táctica</h2>
+        <ul class="bullets">
+          <li>Momentum general: <strong>Positivo</strong></li>
+          <li>Nivel de riesgo: <strong>Controlado</strong></li>
+          <li>Market cap 24h: <strong>+2.48%</strong></li>
+          <li>Altseason Index: <strong>83 (proxy)</strong></li>
+          <li>Volatilidad agregada: <strong>23.2%</strong></li>
+          <li>Macro: <strong>event driven</strong></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>KPIs ampliados</h2>
+        <div class="grid-4">
+          <div class="chart-card"><div class="label">Fear & Greed</div><div class="value" style="font-size:22px;color:#2BD576">51 / Greed</div></div><div class="chart-card"><div class="label">Altseason Index</div><div class="value" style="font-size:22px;color:#3AA3FF">83 (proxy)</div></div><div class="chart-card"><div class="label">Volatilidad táctica</div><div class="value" style="font-size:22px;color:#F3C969">23.2%</div></div><div class="chart-card"><div class="label">Funding / OI / Liquidaciones</div><div class="value" style="font-size:22px;color:#9FB2C8">OI alto / funding neutral</div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>Gráficas y visualizaciones</h2>
+        <div class="chart-grid">
+          <div class="chart-card"><img src="data:image/png;base64,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[... truncated to fit size ...]
