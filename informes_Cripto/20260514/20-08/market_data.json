@@ -1,0 +1,261 @@
+{
+  "timestamp_label": "14 May 2026 | 20:08 CEST",
+  "slot_label": "20:00",
+  "display_title": "Crypto Insights Dashboard | Franja 20:00 | Cierre nocturno",
+  "market_state": "Constructivo",
+  "signals": {
+    "momentum": "Positivo",
+    "risk": "Controlado",
+    "fear_greed": "51 / Greed",
+    "volatility": "23.2%"
+  },
+  "kpis": [
+    {
+      "label": "Capitalización total",
+      "value": "$2.71T",
+      "tone": "#EEF3FB"
+    },
+    {
+      "label": "Volumen 24h",
+      "value": "$94.04B",
+      "tone": "#EEF3FB"
+    },
+    {
+      "label": "BTC Dominance",
+      "value": "60.3%",
+      "tone": "#F3C969"
+    },
+    {
+      "label": "ETH Dominance",
+      "value": "10.3%",
+      "tone": "#3AA3FF"
+    },
+    {
+      "label": "Fear & Greed",
+      "value": "51 / Greed",
+      "tone": "#2BD576"
+    },
+    {
+      "label": "Altseason Index",
+      "value": "83 (proxy)",
+      "tone": "#3AA3FF"
+    },
+    {
+      "label": "Volatilidad táctica",
+      "value": "23.2%",
+      "tone": "#F3C969"
+    },
+    {
+      "label": "Funding / OI / Liquidaciones",
+      "value": "OI alto / funding neutral",
+      "tone": "#9FB2C8"
+    }
+  ],
+  "coin_rows": [
+    {
+      "symbol": "BTC",
+      "price": "$81.39K",
+      "change_24h": "+2.91%",
+      "change_7d": "+1.98%",
+      "rsi": "N/D",
+      "momentum": "Positivo",
+      "trend": "Lateral",
+      "volume": "$38.45B"
+    },
+    {
+      "symbol": "ETH",
+      "price": "$2.30K",
+      "change_24h": "+2.32%",
+      "change_7d": "+0.45%",
+      "rsi": "N/D",
+      "momentum": "Positivo",
+      "trend": "Lateral",
+      "volume": "$15.35B"
+    },
+    {
+      "symbol": "SOL",
+      "price": "$93.26",
+      "change_24h": "+2.61%",
+      "change_7d": "+5.15%",
+      "rsi": "N/D",
+      "momentum": "Positivo",
+      "trend": "Alcista",
+      "volume": "$4.05B"
+    },
+    {
+      "symbol": "BNB",
+      "price": "$681.60",
+      "change_24h": "+1.89%",
+      "change_7d": "+6.09%",
+      "rsi": "N/D",
+      "momentum": "Positivo",
+      "trend": "Alcista",
+      "volume": "$1.58B"
+    },
+    {
+      "symbol": "XRP",
+      "price": "$1.47",
+      "change_24h": "+3.78%",
+      "change_7d": "+5.83%",
+      "rsi": "N/D",
+      "momentum": "Fuerte",
+      "trend": "Alcista",
+      "volume": "$2.38B"
+    },
+    {
+      "symbol": "ADA",
+      "price": "$0.27",
+      "change_24h": "+2.91%",
+      "change_7d": "+3.24%",
+      "rsi": "N/D",
+      "momentum": "Positivo",
+      "trend": "Lateral",
+      "volume": "$385.48M"
+    },
+    {
+      "symbol": "DOGE",
+      "price": "$0.12",
+      "change_24h": "+3.59%",
+      "change_7d": "+6.62%",
+      "rsi": "N/D",
+      "momentum": "Fuerte",
+      "trend": "Alcista",
+      "volume": "$2.51B"
+    }
+  ],
+  "news": [
+    {
+      "title": "ETF spot BTC: 630,4 MUSD de salidas netas",
+      "source": "The Block",
+      "time": "14 May 2026",
+      "impact": "La señal institucional no acompaña del todo al rebote del spot y mantiene presión sobre el tramo alto de BTC.",
+      "url": "https://www.theblock.co/post/401247/rally-without-conviction-bitcoin-etfs-see-630m-in-outflows-as-corporate-treasury-demand-drops-and-resistance-builds"
+    },
+    {
+      "title": "El Senado de EE.UU. examina la Clarity Act",
+      "source": "US Senate Banking Committee",
+      "time": "14 May 2026",
+      "impact": "El frente regulatorio sigue siendo catalizador de corto plazo para majors y tokens sensibles a clasificación legal.",
+      "url": "https://www.banking.senate.gov/hearings/05/08/2026/executive-session"
+    },
+    {
+      "title": "La SEC mantiene su guía interpretativa cripto",
+      "source": "SEC",
+      "time": "17 Mar 2026",
+      "impact": "La claridad regulatoria mejora el marco estructural, aunque el mercado sigue esperando su aterrizaje legislativo completo.",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets"
+    },
+    {
+      "title": "CPI abril: 0,6% m/m y 3,8% interanual",
+      "source": "BLS",
+      "time": "12 May 2026",
+      "impact": "Dato más duro de lo deseado para activos beta; sostiene la sensibilidad del mercado a yields, dólar y tono de la Fed.",
+      "url": "https://www.bls.gov/cpi/"
+    }
+  ],
+  "alerts": [
+    "Spot en verde, pero ETF spot BTC con salidas diarias muy agresivas.",
+    "Open interest alto con funding neutral: el rebote aún no refleja convicción institucional plena.",
+    "Junio concentra catalizadores macro; conviene gestionar tamaño antes de CPI y FOMC."
+  ],
+  "capital_flows": [
+    "ETF spot BTC: salida neta de 630,4 MUSD el 13 de mayo, la mayor retirada diaria desde mediados de febrero.",
+    "ETF spot ETH: salida neta de 36,3 MUSD el 13 de mayo; posicionamiento institucional todavía frágil.",
+    "Derivados: BTC OI en 60,04 BUSD y SOL OI en 6,01 BUSD con funding cercano a neutral, lo que sugiere apalancamiento activo pero no eufórico."
+  ],
+  "macro_events": [
+    {
+      "date": "05 Jun 2026",
+      "title": "Employment Situation (BLS)",
+      "impact": "Primera gran referencia de junio para yields y dólar; una sorpresa al alza reforzaría la presión sobre activos de riesgo.",
+      "url": "https://www.bls.gov/schedule/news_release/empsit.htm?mod=article_inline"
+    },
+    {
+      "date": "10 Jun 2026",
+      "title": "CPI mayo 2026 (BLS)",
+      "impact": "Evento clave para validar si la inflación vuelve a moderarse o prolonga el sesgo restrictivo monetario.",
+      "url": "https://www.bls.gov/cpi/"
+    },
+    {
+      "date": "10-11 Jun 2026",
+      "title": "Reunión monetaria del BCE",
+      "impact": "Relevante para el tono global de liquidez y para el cruce EUR/USD, con efecto indirecto sobre apetito por riesgo.",
+      "url": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"
+    },
+    {
+      "date": "16-17 Jun 2026",
+      "title": "FOMC",
+      "impact": "Principal catalizador macro del mes para cripto; cualquier ajuste en lenguaje o dot plot puede alterar beta y dominancia.",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm?os=nirstv"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Alcista",
+      "probability": "40%",
+      "summary": "Recuperación de flujos tras la salida puntual de ETFs y consolidación de BTC sobre $79.08K. ETH y SOL extenderían rotación si RSI no entra en sobrecompra."
+    },
+    {
+      "name": "Neutral",
+      "probability": "35%",
+      "summary": "Rango con dominancia BTC sostenida y selectividad en majors. Mercado a la espera de CPI/FOMC, con compresión de volatilidad en torno a $94.04B de volumen diario."
+    },
+    {
+      "name": "Bajista",
+      "probability": "25%",
+      "summary": "Persisten salidas institucionales y el bloque macro sigue duro. Si BTC pierde $79.08K, el daño se amplifica sobre alts de beta alta."
+    }
+  ],
+  "trading_signals": [
+    {
+      "asset": "BTC",
+      "signal": "Observación táctica",
+      "confidence": "Media",
+      "entry": "$79.87K",
+      "stop": "$76.71K",
+      "take_profit": "$80.57K",
+      "risk": "Asimetría moderada, dependiente de flujos ETF y macro."
+    },
+    {
+      "asset": "SOL",
+      "signal": "Momentum relativo",
+      "confidence": "Media",
+      "entry": "$90.47",
+      "stop": "$85.14",
+      "take_profit": "$91.39",
+      "risk": "Beta alta: mejor solo con confirmación de mercado amplio."
+    }
+  ],
+  "executive_summary_html": "<b>Tendencia general:</b> Constructivo con amplitud moderada y dominancia BTC en 60.3%.<br/><b>Sentimiento IA:</b> Sesgo de cierre constructivo con prudencia. Fear & Greed en 51 / Greed.<br/><b>Nivel de riesgo:</b> Controlado. Volatilidad táctica compuesta en 23.2%.<br/><b>Momentum:</b> Positivo. El promedio de variación del bloque monitorizado es +2.86% en 24h y +4.19% en 7d.<br/><b>Macro:</b> Sesión positiva en spot, pero con fondo macro todavía sensible a inflación, Fed y tono regulatorio estadounidense.<br/><b>Derivados:</b> BTC open interest en 60,04 BUSD, funding BTC en 0,0043% cada 8h, funding ETH en 0,0066% cada 8h y liquidaciones 24h cercanas a 230 MUSD, mayoritariamente de largos.<br/><b>Siguiente actualización:</b> 00:00 CEST.",
+  "executive_summary_pdf_html": "<b>Tendencia general:</b> Constructivo con dominancia BTC en 60.3%.<br/><b>Sentimiento IA:</b> Sesgo de cierre constructivo con prudencia. Fear & Greed en 51 / Greed.<br/><b>Riesgo:</b> Controlado. Volatilidad táctica en 23.2%.<br/><b>Momentum:</b> Positivo. Bloque monitorizado en +2.86% en 24h y +4.19% en 7d.<br/><b>Macro:</b> Sesión positiva en spot, pero con fondo macro todavía sensible a inflación, Fed y tono regulatorio estadounidense..",
+  "sources": {
+    "market_snapshot": {
+      "global": [
+        {
+          "label": "CoinMarketCap market overview",
+          "url": "https://coinmarketcap.com/",
+          "note": "Global market cap, 24h volume and BTC dominance snapshot for 14 May 2026."
+        }
+      ],
+      "coins": [
+        {
+          "label": "CoinMarketCap live table",
+          "url": "https://coinmarketcap.com/",
+          "note": "Spot prices, 24h, 7d, market cap and 24h volume for BTC, ETH, SOL, BNB, XRP, ADA and DOGE."
+        }
+      ],
+      "sentiment": [
+        {
+          "label": "CoinStats Fear & Greed",
+          "url": "https://coinstats.app/fear-and-greed/",
+          "note": "Fear & Greed last updated on 14 May 2026."
+        }
+      ]
+    },
+    "snapshot_timestamp": "2026-05-14T20:08:00+02:00",
+    "derivatives": {
+      "headline": "OI alto / funding neutral",
+      "summary": "BTC open interest en 60,04 BUSD, funding BTC en 0,0043% cada 8h, funding ETH en 0,0066% cada 8h y liquidaciones 24h cercanas a 230 MUSD, mayoritariamente de largos."
+    }
+  }
+}
