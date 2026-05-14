@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | 2026-05-15 00:18 CEST</title>
+  <style>
+    :root {
+      --bg: #07111a;
+      --bg2: #0c1722;
+      --panel: rgba(14, 25, 37, 0.92);
+      --panel-2: rgba(10, 20, 30, 0.82);
+      --border: rgba(132, 196, 255, 0.16);
+      --text: #eef6ff;
+      --muted: #9eb6c9;
+      --cyan: #5ad7ff;
+      --teal: #3fd0b2;
+      --amber: #ffb454;
+      --red: #ff6b6b;
+      --ink: #081019;
+      --shadow: 0 24px 70px rgba(0,0,0,.34);
+      --max: 1240px;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(90,215,255,.14), transparent 30%),
+        radial-gradient(circle at 100% 15%, rgba(63,208,178,.12), transparent 25%),
+        linear-gradient(180deg, #08111a 0%, #07111a 45%, #050b12 100%);
+      line-height: 1.5;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .shell { width: min(100% - 32px, var(--max)); margin: 0 auto; }
+    .hero { padding: 48px 0 20px; }
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(8,16,25,.97), rgba(11,24,36,.88));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(90,215,255,.10), transparent 38%, rgba(255,180,84,.08));
+      pointer-events: none;
+    }
+    .brand { letter-spacing: .12em; text-transform: uppercase; color: var(--cyan); font-size: 12px; font-weight: 700; }
+    h1 { margin: 10px 0 10px; font-size: clamp(32px, 5vw, 58px); line-height: 1.02; font-weight: 750; }
+    .sub { max-width: 860px; color: #d4e4f4; font-size: 16px; }
+    .meta-strip { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 12px; margin-top: 24px; }
+    .meta-box { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 14px 16px; }
+    .meta-k { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .meta-v { margin-top: 6px; font-size: 15px; font-weight: 650; }
+    .grid { display: grid; gap: 18px; }
+    .kpis { grid-template-columns: repeat(6, minmax(0,1fr)); margin: 22px 0 14px; }
+    .kpi { background: var(--panel-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; min-height: 132px; }
+    .kpi-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .kpi-value { font-size: 28px; font-weight: 760; margin: 10px 0 10px; }
+    .kpi-note { color: #c5d6e5; font-size: 13px; }
+    .section { padding: 14px 0 8px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .section-head h2 { margin: 0; font-size: 24px; }
+    .eyebrow { color: var(--cyan); text-transform: uppercase; letter-spacing: .1em; font-size: 12px; font-weight: 700; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 22px; padding: 22px; box-shadow: var(--shadow); }
+    .two { grid-template-columns: 1.25fr .95fr; }
+    .three { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .card { background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; padding: 18px; }
+    .incident h3, .card h3 { margin: 0 0 10px; font-size: 19px; }
+    .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .between { justify-content: space-between; align-items: start; }
+    .badge { display: inline-flex; align-items: center; border-radius: 999px; padding: 6px 10px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; }
+    .badge.neutral { background: rgba(90,215,255,.12); color: #bff2ff; border: 1px solid rgba(90,215,255,.2); }
+    .badge.warn { background: rgba(255,180,84,.14); color: #ffd8a1; border: 1px solid rgba(255,180,84,.22); }
+    .badge.hot { background: rgba(255,107,107,.16); color: #ffd0d0; border: 1px solid rgba(255,107,107,.26); }
+    .lead { font-size: 17px; color: #dbe8f5; margin-top: 0; }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 8px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .pill { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 999px; padding: 7px 12px; color: #d9e6f3; font-size: 13px; }
+    .pill.hot { background: rgba(255,107,107,.14); border-color: rgba(255,107,107,.24); }
+    .risk-bar { display: grid; gap: 10px; margin-top: 18px; }
+    .risk-line { display: grid; grid-template-columns: 180px 1fr 58px; gap: 14px; align-items: center; }
+    .bar { height: 12px; border-radius: 999px; background: rgba(255,255,255,.08); overflow: hidden; }
+    .fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--teal), var(--cyan)); }
+    .fill.hot { background: linear-gradient(90deg, #ffb454, #ff6b6b); }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 12px 10px; border-bottom: 1px solid rgba(255,255,255,.08); vertical-align: top; text-align: left; }
+    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .meta { display: grid; gap: 8px; color: #d4e3ef; font-size: 14px; }
+    .sources { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+    .sources li { display: flex; justify-content: space-between; gap: 10px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; padding: 12px 14px; margin: 0; }
+    .delivery a { display: block; margin-top: 8px; }
+    .footer { color: #b5c7d8; font-size: 12px; padding: 18px 0 44px; }
+    .small { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <section class="hero-card">
+        <div class="brand">MMarco Seguridad</div>
+        <h1>Informe Ejecutivo de Ciberseguridad</h1>
+        <p class="sub">Edicion nocturna con foco en alertas activas, CVEs criticas, riesgo para empresas espanolas y decisiones ejecutivas inmediatas.</p>
+        <div class="meta-strip">
+          <div class="meta-box"><div class="meta-k">Fecha</div><div class="meta-v">2026-05-15 00:18 CEST</div></div>
+          <div class="meta-box"><div class="meta-k">Zona horaria</div><div class="meta-v">Europe/Madrid</div></div>
+          <div class="meta-box"><div class="meta-k">Nivel global</div><div class="meta-v">ALTO</div></div>
+          <div class="meta-box"><div class="meta-k">Proxima actualizacion</div><div class="meta-v">2026-05-15 08:00 CEST</div></div>
+          <div class="meta-box"><div class="meta-k">Estado IA de riesgo</div><div class="meta-v">ALTO (estimativo)</div></div>
+        </div>
+      </section>
+    </header>
+    <section class="grid kpis"><article class="kpi"><div class="kpi-label">Alertas criticas priorizadas</div><div class="kpi-value">5</div><div class="kpi-note">Muestra oficial revisada</div></article><article class="kpi"><div class="kpi-label">Explotacion activa o KEV</div><div class="kpi-value">3</div><div class="kpi-note">PAN-OS, cPanel, FortiCloud SSO</div></article><article class="kpi"><div class="kpi-label">Campanas de phishing destacadas</div><div class="kpi-value">2</div><div class="kpi-note">LastPass y tacticas Medusa</div></article><article class="kpi"><div class="kpi-label">Riesgo para empresas espanolas</div><div class="kpi-value">ALTO</div><div class="kpi-note">Perimetro, hosting, pymes NIS2 y OT</div></article><article class="kpi"><div class="kpi-label">Tendencia 24h</div><div class="kpi-value">Presion sostenida</div><div class="kpi-note">Cualitativo, sin serie numerica oficial diaria</div></article><article class="kpi"><div class="kpi-label">Estado de entrega</div><div class="kpi-value">En preparacion</div><div class="kpi-note">Pendiente de publicacion externa</div></article></section>
+    <section class="section"><div class="section-head"><div><div class="eyebrow">Resumen Ejecutivo</div><h2>Decision Rapida</h2></div></div><div class="grid two"><article class="panel"><p class="lead">El estado global de ciberamenaza se mantiene alto. La prioridad inmediata recae en activos expuestos a Internet relacionados con autenticacion, firewalls, paneles de administracion y automatizacion de transferencias, donde coinciden vulnerabilidades criticas recientes, actividad observada y obligacion de mitigacion rapida.</p><p><strong>Exposicion estimada:</strong> Alta para organizaciones con portales de autenticacion, cPanel, firewalls PAN-OS o Fortinet, y media-alta para organizaciones con parque Android corporativo y flujos MOVEit sin parchear.</p><p><strong>Recomendacion principal:</strong> Cerrar en menos de 24 horas la brecha de exposicion en perimetro y autenticacion: aplicar parches o mitigaciones de PAN-OS y cPanel, revisar uso de FortiCloud SSO, limitar accesos a zonas de confianza y ejecutar busqueda de IOCs en equipos expuestos.</p><div class="pills"><span class="pill">Pymes con servicios expuestos</span><span class="pill">Proveedores TI y hosting</span><span class="pill">Energia e industria</span><span class="pill">Sanidad, educacion y servicios profesionales</span></div><div class="pills"><span class="pill">Authentication bypass</span><span class="pill">RCE en perimetro</span><span class="pill">Escalada de privilegios</span><span class="pill">Phishing con urgencia operativa</span><span class="pill">Abuso de SSO y paneles web</span></div></article><article class="panel"><div class="eyebrow">Conclusion en 4 puntos</div><ul><li>La combinacion de perimetro expuesto y credenciales administrativas vuelve a ser el principal vector de riesgo.</li><li>Hay evidencia suficiente para priorizar patching y hunting sobre autenticacion remota antes de otras tareas de hardening.</li><li>Las empresas espanolas deben vigilar especialmente hosting, firewalls, plataformas OT/energia y campanas de phishing de marca confiable.</li><li>La exposicion no parcheada en servicios publicados puede traducirse en impacto operativo rapido y acceso lateral posterior.</li></ul></article></div></section>
+    <section class="section"><div class="section-head"><div><div class="eyebrow">Amenaza Viva</div><h2>Alertas y Actividad Relevante</h2></div></div><div class="grid"><article class="card incident"><div class="row between"><h3>Explotacion limitada pero real de PAN-OS CVE-2026-0300</h3><span class="badge warn">Hecho confirmado</span></div><p>Palo Alto publico la alerta el 6 de mayo y Unit 42 confirmo explotacion limitada con post-explotacion orientada a tuneles, enumeracion de AD y borrado de huellas.</p><div class="meta"><span><strong>Impacto:</strong> RCE no autenticada con privilegios root sobre firewalls vulnerables.</span><span><strong>Relevancia ES:</strong> Muy alta para empresas con perimetro PAN-OS expuesto o portales cautivos habilitados.</span></div></article><article class="card incident"><div class="row between"><h3>cPanel CVE-2026-41940 bajo prioridad maxima de contencion</h3><span class="badge warn">Hecho confirmado / explotacion probable</span></div><p>CISA lo anadio a KEV el 30 de abril; INCIBE lo publica como critica y senala que podria estar siendo explotada. cPanel difundio versiones corregidas y script de comprobacion de sesiones/IoC.</p><div class="meta"><span><strong>Impacto:</strong> Omitir autenticacion y obtener acceso no autorizado al panel de control.</span><span><strong>Relevancia ES:</strong> Alta para proveedores de hosting, pymes con cPanel expuesto y equipos de administracion web.</span></div></article><article class="card incident"><div class="row between"><h3>FortiCloud SSO: riesgo persistente en inventarios Fortinet</h3><span class="badge warn">Hecho confirmado</span></div><p>CCN-CERT aviso explotacion activa; Fortinet indico abuso por dos cuentas maliciosas y desactivo FortiCloud SSO en su lado como medida de proteccion el 26 de enero.</p><div class="meta"><span><strong>Impacto:</strong> Bypass de autenticacion cruzando cuentas cuando FortiCloud SSO estaba habilitado.</span><span><strong>Relevancia ES:</strong> Alta para administracion publica, MSSP y empresas con FortiOS/FortiManager/FortiWeb/FortiProxy.</span></div></article><article class="card incident"><div class="row between"><h3>Phishing que suplanta comunicaciones de LastPass</h3><span class="badge warn">Hecho confirmado</span></div><p>INCIBE situo el arranque de la campana en enero de 2026 y la vinculo a un intento coordinado de suplantacion con fuerte componente de urgencia.</p><div class="meta"><span><strong>Impacto:</strong> Robo de credenciales maestras con mensajes de mantenimiento o copia de seguridad.</span><span><strong>Relevancia ES:</strong> Alta para plantillas con uso extendido de gestores de contrasenas y teletrabajo.</span></div></article></div></section>
+    <section class="section"><div class="section-head"><div><div class="eyebrow">Vulnerabilidades Criticas</div><h2>Prioridad de Mitigacion</h2></div></div><article class="panel"><table><thead><tr><th>CVE</th><th>Producto</th><th>CVSS</th><th>Severidad</th><th>Explotacion</th><th>Parche / Mitigacion</th><th>Prioridad</th><th>Fuente</th></tr></thead><tbody><tr><td>CVE-2026-0300</td><td>Palo Alto Networks PAN-OS User-ID Authentication Portal</td><td>No visible en la fuente consultada</td><td>Critica</td><td>Si; explotacion limitada observada y CVE en KEV</td><td>Aplicar parches publicados por Palo Alto; mientras tanto restringir el portal a zonas de confianza o deshabilitarlo si no es necesario.</td><td>Critica inmediata</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">Fuente</a></td></tr><tr><td>CVE-2026-41940</td><td>cPanel &amp; WHM / WP2</td><td>NVD aun sin puntuacion visible</td><td>Critica</td><td>KEV y explotacion indicada por fuentes oficiales y sectoriales</td><td>Actualizar a 11.86.0.41, 11.110.0.97, 11.118.0.63, 11.126.0.54, 11.130.0.19, 11.132.0.29, 11.134.0.20 o 11.136.0.5; WP Squared 136.1.7.</td><td>Critica inmediata</td><td><a href="https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos/omision-de-autenticacion-en-cpanel">Fuente</a></td></tr><tr><td>CVE-2026-24858</td><td>FortiOS / FortiManager / FortiAnalyzer / FortiProxy / FortiWeb con FortiCloud SSO</td><td>No visible en la fuente consultada</td><td>Critica</td><td>Si; explotada en entorno real</td><td>Actualizar a versiones corregidas del fabricante y revisar configuraciones donde FortiCloud SSO haya estado habilitado.</td><td>Critica inmediata</td><td><a href="https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html">Fuente</a></td></tr><tr><td>CVE-2026-4670</td><td>Progress MOVEit Automation</td><td>Critica en aviso de INCIBE</td><td>Critica</td><td>No confirmada en las fuentes revisadas</td><td>Actualizar a 2025.1.5, 2025.0.9 o 2024.1.8 segun rama.</td><td>Alta</td><td><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-moveit-automation">Fuente</a></td></tr><tr><td>CVE-2026-0073</td><td>Android System / adbd</td><td>Critica en boletin Android</td><td>Critica</td><td>No indicada en la fuente consultada</td><td>Nivel de parche 2026-05-01 o posterior.</td><td>Alta</td><td><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">Fuente</a></td></tr></tbody></table></article></section>
+    <section class="section"><div class="grid two"><article class="panel"><div class="eyebrow">Riesgo En Espana</div><h2 style="margin-top:6px">Empresas Espanolas</h2><p>El contexto espanol muestra crecimiento de incidentes, volumen alto de sistemas vulnerables detectados y un ecosistema de pymes con exposicion frecuente en servicios publicados, hosting y proveedores TI.</p><div class="pills"><span class="pill">Hosting y paneles de administracion</span><span class="pill">Firewalls y portales cautivos</span><span class="pill">Cadena de suministro TI</span><span class="pill">Entornos industriales y energia</span><span class="pill">Phishing dirigido a credenciales</span></div><ul style="margin-top:16px"><li>Un 28% de usuarios reportaron intentos de phishing/vishing/smishing en el balance 2025 de INCIBE.</li><li>Las pymes NIS2 y operadores importantes siguen siendo especialmente sensibles a fallos en perimetro y tercerizacion TI.</li></ul><div class="risk-bar"><div class="risk-line"><div>Perimetro y firewalls</div><div class="bar"><div class="fill hot" style="width:96%"></div></div><div>96</div></div><div class="risk-line"><div>Hosting y paneles</div><div class="bar"><div class="fill hot" style="width:93%"></div></div><div>93</div></div><div class="risk-line"><div>Credenciales / phishing</div><div class="bar"><div class="fill hot" style="width:88%"></div></div><div>88</div></div><div class="risk-line"><div>OT / energia</div><div class="bar"><div class="fill" style="width:79%"></div></div><div>79</div></div></div><p class="small">Escala cualitativa interna de prioridad operativa basada en la muestra oficial revisada.</p></article><article class="panel"><div class="eyebrow">Campanas y Tendencias</div><h2 style="margin-top:6px">Malware y Ransomware</h2><p><strong>Familias y vectores destacados:</strong></p><div class="pills"><span class="pill hot">Medusa ransomware</span><span class="pill hot">Phishing tematico LastPass</span></div><p style="margin-top:16px"><strong>Sectores objetivo:</strong></p><div class="pills"><span class="pill">Infraestructura critica</span><span class="pill">Sanidad</span><span class="pill">Educacion</span><span class="pill">Legal</span><span class="pill">Seguros</span><span class="pill">Tecnologia</span><span class="pill">Manufactura</span></div><p style="margin-top:16px"><strong>Tecnicas observadas:</strong></p><div class="pills"><span class="pill">Phishing</span><span class="pill">Explotacion de software sin parchear</span><span class="pill">Movimiento lateral</span><span class="pill">Doble extorsion</span><span class="pill">Borrado de copias y servicios</span></div><p style="margin-top:16px"><strong>Nivel de propagacion:</strong> Alto para organizaciones con higiene de parcheo desigual y acceso remoto expuesto</p><p><strong>Nota ejecutiva:</strong> No se incluyen IOCs operativos en esta edicion ejecutiva para evitar mezclar inteligencia estrategica con datos tecnicos no validados de forma adicional.</p></article></div></section>
+    <section class="section"><div class="grid two"><article class="panel"><div class="eyebrow">Accion Inmediata</div><h2 style="margin-top:6px">Alertas Activas</h2><ul><li>PAN-OS con User-ID Authentication Portal activo: aplicar parche o mitigacion hoy mismo.</li><li>cPanel expuesto a Internet: actualizar e investigar sesiones anomales con el script del fabricante.</li><li>Inventario Fortinet con FortiCloud SSO historicamente habilitado: revisar cuentas, logs y versionado.</li><li>Entornos OT o sector energia en Espana: vigilar avisos INCIBE SCI sobre Ingecon EMS Board, Tellus de Fuji Electric y PowerSYSTEM Center.</li></ul></article><article class="panel"><div class="eyebrow">Noticias Importantes</div><h2 style="margin-top:6px">Lo Que Cambia La Prioridad</h2><ul><li><strong>INCIBE informa de 122.223 incidentes gestionados en 2025, un 26% mas que en 2024.</strong> Confirma un contexto de aumento sostenido de presion sobre empresas espanolas.</li><li><strong>INCIBE detecta 237.028 sistemas vulnerables relevantes y 392 incidentes de ransomware en 2025.</strong> Apoya una priorizacion centrada en reduccion de superficie expuesta y deteccion temprana.</li><li><strong>Unit 42 vincula la explotacion de CVE-2026-0300 a una actividad probablemente estatal.</strong> Refuerza el caracter critico del riesgo en firewalls y entornos de alto valor.</li><li><strong>Android publica parche critico de mayo con RCE sin interaccion de usuario.</strong> Afecta a flotas moviles corporativas y dispositivos BYOD.</li></ul></article></div></section>
+    <section class="section"><div class="section-head"><div><div class="eyebrow">Recomendaciones Ejecutivas</div><h2>Orden de Respuesta</h2></div></div><div class="grid three"><article class="panel"><h3>Critica</h3><ul><li>Inventariar en las proximas horas los activos PAN-OS, cPanel y Fortinet expuestos a Internet y verificar version/mitigacion.</li><li>Aplicar parches o deshabilitar temporalmente portales de autenticacion y paneles no esenciales.</li><li>Revisar logs, cuentas administrativas, tokens y eventos de login sobre firewalls y paneles desde el 30 de abril.</li></ul></article><article class="panel"><h3>Alta</h3><ul><li>Ejecutar busqueda de IOCs y evidencia de tuneles, enumeracion AD y borrado de logs en equipos de perimetro.</li><li>Rotar credenciales administrativas y reforzar MFA resistente a phishing en servicios criticos.</li><li>Actualizar MOVEit Automation y establecer ventana de validacion de flujos de transferencia.</li></ul></article><article class="panel"><h3>Media / Baja</h3><ul><li>Refrescar comunicacion interna sobre phishing que suplanta marcas confiables como LastPass.</li><li>Reforzar segmentacion y limitar administracion remota a zonas y origenes de confianza.</li><li>Revisar preparacion NIS2, procedimientos de crisis y dependencia de proveedores de hosting o MSSP.</li><li>Mantener tablero ejecutivo diario con foco en activos expuestos y deuda de parcheo.</li></ul></article></div></section>
+    <section class="section"><div class="grid two"><article class="panel"><div class="eyebrow">Analisis IA</div><h2 style="margin-top:6px">Prediccion Estimativa</h2><p><strong>Riesgo global estimado:</strong> Alto</p><p>Es probable un aumento de intentos oportunistas y semidirigidos contra servicios de autenticacion y paneles expuestos durante las proximas 48-72 horas, especialmente tras la publicacion de parches y workarounds.</p><p><strong>Probabilidad de aumento:</strong> Alta</p><div class="pills"><span class="pill hot">CVE-2026-0300</span><span class="pill hot">CVE-2026-41940</span><span class="pill hot">CVE-2026-24858</span></div><p style="margin-top:16px"><strong>Recomendacion automatica:</strong> Priorizar reduccion de superficie expuesta y caza de compromiso en vez de esperar a la siguiente ventana ordinaria de mantenimiento.</p></article><article class="panel delivery"><div class="eyebrow">Persistencia Externa</div><h2 style="margin-top:6px">Historico y Enlaces</h2><p><strong>GitHub:</strong> informes_ciberseguridad/20260515</p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260515">Historico diario</a><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_0018_CEST.html">Dashboard HTML</a><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_0018_CEST.json">Datos JSON</a><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_0018_CEST.pdf">PDF</a><p class="small">Los enlaces quedan preparados para verificacion tras la publicacion en GitHub.</p></article></div></section>
+    <section class="section"><div class="section-head"><div><div class="eyebrow">Fuentes</div><h2>Trazabilidad</h2></div></div><ul class="sources"><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">NVD - CVE-2026-0300</a><span>oficial</span></li><li><a href="https://security.paloaltonetworks.com/CVE-2026-0300">Palo Alto Networks advisory - CVE-2026-0300</a><span>oficial</span></li><li><a href="https://unit42.paloaltonetworks.com/captive-portal-zero-day/">Unit 42 threat brief - CVE-2026-0300</a><span>oficial</span></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41940">NVD - CVE-2026-41940</a><span>oficial</span></li><li><a href="https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos/omision-de-autenticacion-en-cpanel">INCIBE - Omision de autenticacion en cPanel</a><span>oficial</span></li><li><a href="https://www.cpanel.net/blog/security/security-update-cve-2026-41940/">cPanel response - CVE-2026-41940</a><span>oficial</span></li><li><a href="https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html">CCN-CERT AL 01/26 FortiCloud SSO</a><span>oficial</span></li><li><a href="https://www.fortiguard.com/psirt/FG-IR-26-060">Fortinet FG-IR-26-060</a><span>oficial</span></li><li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-moveit-automation">INCIBE - MOVEit Automation</a><span>oficial</span></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5174">NVD - CVE-2026-5174</a><span>oficial</span></li><li><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">Android Security Bulletin - May 2026</a><span>oficial</span></li><li><a href="https://www.incibe.es/incibe/sala-de-prensa/incibe-detecto-mas-de-122000-incidentes-de-ciberseguridad-en-2025">INCIBE detecto mas de 122.000 incidentes en 2025</a><span>oficial</span></li><li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-y-respuesta-coordinada-ante-una-campana-de-phishing-que">INCIBE - phishing que suplanta LastPass</a><span>oficial</span></li><li><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-071a">CISA / FBI / MS-ISAC - Medusa ransomware</a><span>oficial</span></li><li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci">INCIBE SCI advisories</a><span>oficial</span></li></ul></section>
+    <footer class="footer"><p>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</p></footer>
+  </div>
+</body>
+</html>
