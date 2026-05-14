@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "generated_at": "2026-05-14 16:11:14 CEST",
+    "timezone": "Europe/Madrid",
+    "threat_level": "ALTO",
+    "report_slot": "Edicion 16:00"
+  },
+  "kpis": {
+    "alertas_criticas_priorizadas": 7,
+    "explotacion_activa_confirmada": 1,
+    "cves_criticas_priorizadas": 5,
+    "riesgos_ot_ics_destacados": 2,
+    "sectores_mas_expuestos": 5,
+    "tendencia_24h": "Estable-Alcista"
+  },
+  "priority_alerts": [
+    {
+      "type": "Hecho confirmado",
+      "title": "PAN-OS CVE-2026-0300 en explotacion activa limitada",
+      "action": "Restringir o deshabilitar User-ID Authentication Portal y aplicar versiones corregidas por rama."
+    },
+    {
+      "type": "Hecho confirmado",
+      "title": "Exim CVE-2026-45185 expone correo perimetral",
+      "action": "Actualizar a Exim 4.99.3 y revisar telemetria y exposicion publica."
+    },
+    {
+      "type": "Hecho confirmado",
+      "title": "Ingecon EMS Board con CVE-2026-8072",
+      "action": "Priorizar firmware corregido y aislar acceso SAT hasta validacion."
+    },
+    {
+      "type": "Hecho confirmado",
+      "title": "SAP Patch Day de mayo amplia deuda de parcheo",
+      "action": "Acelerar despliegue de notas criticas CVSS 9.6 en S/4HANA y Commerce Cloud."
+    }
+  ],
+  "critical_vulnerabilities": [
+    "CVE-2026-0300",
+    "CVE-2026-45185",
+    "CVE-2026-8072",
+    "CVE-2026-34260",
+    "CVE-2026-34263"
+  ],
+  "links": {
+    "history": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260514",
+    "html": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.html",
+    "json": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.json",
+    "pdf": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.pdf"
+  },
+  "sources": [
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+    "https://security.paloaltonetworks.com/CVE-2026-0300",
+    "https://unit42.paloaltonetworks.com/captive-portal-zero-day/",
+    "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim",
+    "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos-sci/generacion-insegura-de-credenciales-de-acceso-sat-en-ingecon-ems-board",
+    "https://cert-portal.siemens.com/productcert/html/ssa-032379.html",
+    "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+    "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/may-2026.html"
+  ]
+}
