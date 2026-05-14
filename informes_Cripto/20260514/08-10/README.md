@@ -16,9 +16,12 @@
 ## Archivos
 
 - HTML: [dashboard.html](dashboard.html)
-- PDF: [dashboard.pdf](dashboard.pdf)
+- PDF local: [dashboard.pdf](dashboard.pdf)
+- PDF proxy visual en Google Slides: `https://docs.google.com/presentation/d/1F8gSNJka6lUZ6jBgDoa0pMDBjLpR3Gs8WZ9iEJs1X50`
 - Snapshot de datos: [market_snapshot.json](market_snapshot.json)
 
 ## Nota operativa
 
 El PDF replica la misma composicion visual del dashboard HTML usando la misma plantilla base y exportacion de oficina para preservar jerarquia, paleta y bloques.
+
+El binario `dashboard.pdf` no quedo accesible desde GitHub con el conector disponible en esta ejecucion. Como fallback operativo se publico un proxy visual estable en Google Slides y el PDF binario se adjunta por correo.
