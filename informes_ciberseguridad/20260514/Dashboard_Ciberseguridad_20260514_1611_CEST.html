@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad - MMarco Seguridad</title>
+  <style>
+    :root {
+      --bg: #07111a;
+      --panel: rgba(10, 24, 38, 0.88);
+      --panel-strong: #0d1f31;
+      --line: rgba(134, 181, 216, 0.18);
+      --text: #e8f3fb;
+      --muted: #9ab0c1;
+      --accent: #54d1ff;
+      --accent-2: #10b981;
+      --alert: #ffb74d;
+      --critical: #ff6b6b;
+      --estimate: #9f7aea;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(84, 209, 255, 0.12), transparent 32%),
+        radial-gradient(circle at top left, rgba(16, 185, 129, 0.08), transparent 28%),
+        linear-gradient(180deg, #061019 0%, #09131c 55%, #07111a 100%);
+      color: var(--text);
+    }
+    .shell {
+      width: min(1220px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(84, 209, 255, 0.14), rgba(84, 209, 255, 0.02)),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -8% -30% auto;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(84, 209, 255, 0.18), transparent 70%);
+      pointer-events: none;
+    }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .brand-mark {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+    }
+    .subtitle {
+      color: var(--muted);
+      max-width: 840px;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .status-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .status-box {
+      background: rgba(5, 17, 29, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+    .status-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .status-value {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(9, 27, 42, 0.9);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+    }
+    .section {
+      margin-top: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+    .section-intro {
+      color: var(--muted);
+      margin: 0 0 16px;
+      line-height: 1.55;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .kpi-card, .mini-card, .priority-card, .alert-card {
+      background: rgba(8, 19, 31, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .kpi-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .kpi-value {
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .kpi-detail {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 18px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .summary-callout {
+      background: rgba(8, 19, 31, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .summary-callout h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .summary-callout p,
+    .mini-card p,
+    .alert-card p,
+    .priority-card li {
+      color: var(--text);
+      line-height: 1.58;
+      margin: 0;
+    }
+    .summary-callout ul,
+    .priority-card ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+    .chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .chip {
+      font-size: 13px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(84, 209, 255, 0.08);
+      border: 1px solid rgba(84, 209, 255, 0.18);
+      color: #dff6ff;
+    }
+    .alert-grid, .activity-grid, .news-grid, .priority-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .alert-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge.confirmed { background: rgba(255, 107, 107, 0.12); color: #ffd5d5; border: 1px solid rgba(255, 107, 107, 0.26); }
+    .badge.signal { background: rgba(255, 183, 77, 0.12); color: #ffe0b2; border: 1px solid rgba(255, 183, 77, 0.26); }
+    .badge.estimate { background: rgba(159, 122, 234, 0.12); color: #e6d9ff; border: 1px solid rgba(159, 122, 234, 0.28); }
+    .alert-level {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .alert-card h3, .mini-card h3, .priority-card h3 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+    .action-box {
+      margin-top: 14px;
+      padding: 12px 13px;
+      border-left: 3px solid var(--accent);
+      background: rgba(84, 209, 255, 0.06);
+      border-radius: 10px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(8, 19, 31, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(134, 181, 216, 0.12);
+      line-height: 1.45;
+    }
+    th {
+      background: rgba(84, 209, 255, 0.08);
+      color: #eaf8ff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .notice {
+      border: 1px dashed rgba(159, 122, 234, 0.35);
+      background: rgba(159, 122, 234, 0.08);
+      border-radius: 14px;
+      padding: 16px;
+      color: var(--text);
+      line-height: 1.58;
+    }
+    .link-box {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .link-box a, table a {
+      color: #87e6ff;
+      word-break: break-word;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 24px;
+      padding: 0 4px 10px;
+    }
+    @media (max-width: 980px) {
+      .status-strip,
+      .kpi-grid,
+      .two-col,
+      .summary-grid,
+      .alert-grid,
+      .activity-grid,
+      .news-grid,
+      .priority-grid,
+      .link-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="brand">
+        <div>
+          <div class="brand-mark">MMarco Seguridad</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class="subtitle">La ciberamenaza se mantiene en nivel alto por la combinacion de explotacion activa en perimetro PAN-OS, nuevas correcciones criticas en correo expuesto y un bloque relevante de avisos OT/ICS y empresariales publicados entre el 12 y el 14 de mayo.</p>
+        </div>
+        <div class="status-box">
+          <div class="status-label">Edicion</div>
+          <div class="status-value">Edicion 16:00</div>
+        </div>
+      </div>
+
+      <div class="status-strip">
+        <div class="status-box">
+          <div class="status-label">Fecha y hora</div>
+          <div class="status-value">14/05/2026 16:11 CEST</div>
+        </div>
+        <div class="status-box">
+          <div class="status-label">Zona horaria</div>
+          <div class="status-value">Europe/Madrid</div>
+        </div>
+        <div class="status-box">
+          <div class="status-label">Nivel global de amenaza</div>
+          <div class="status-value" style="color:#ffd5d5;">ALTO</div>
+        </div>
+        <div class="status-box">
+          <div class="status-label">Estado IA de riesgo</div>
+          <div class="status-value">Analisis predictivo activo</div>
+        </div>
+      </div>
+
+      <div class="pill-row">
+        <span class="pill">Proxima actualizacion: Segun la siguiente ejecucion programada</span>
+        <span class="pill">Resumen para direccion</span>
+        <span class="pill">Fuentes oficiales priorizadas</span>
+        <span class="pill">Historico previsto en GitHub</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>KPIs principales</h2>
+      <p class="section-intro">KPIs y priorizacion basados en una muestra oficial y reciente revisada entre el 12/05/2026 y el 14/05/2026.</p>
+      <div class="kpi-grid">
+        <article class="kpi-card"><div class="kpi-label">Alertas criticas priorizadas</div><div class="kpi-value">7</div><div class="kpi-detail">Muestra oficial 12-14 mayo</div></article>
+        <article class="kpi-card"><div class="kpi-label">Explotacion activa confirmada</div><div class="kpi-value">1</div><div class="kpi-detail">PAN-OS en KEV y con actividad observada</div></article>
+        <article class="kpi-card"><div class="kpi-label">CVEs criticas priorizadas</div><div class="kpi-value">5</div><div class="kpi-detail">Perimetro, correo, SAP y OT</div></article>
+        <article class="kpi-card"><div class="kpi-label">Riesgos OT/ICS destacados</div><div class="kpi-value">2</div><div class="kpi-detail">Siemens e Ingeteam/Ingecon</div></article>
+        <article class="kpi-card"><div class="kpi-label">Sectores mas expuestos</div><div class="kpi-value">5</div><div class="kpi-detail">Perimetro, correo, energia, movilidad, ERP</div></article>
+        <article class="kpi-card"><div class="kpi-label">Tendencia 24h</div><div class="kpi-value">Estable-Alcista</div><div class="kpi-detail">Presion alta sobre servicios expuestos</div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Resumen ejecutivo</h2>
+      <div class="two-col">
+        <div class="summary-callout">
+          <h3>Riesgos principales del momento</h3>
+          <ul><li>Explotacion confirmada de CVE-2026-0300 en PAN-OS con impacto directo en firewalls expuestos y acceso sin autenticacion.</li><li>Exposicion de servidores Exim vulnerables a CVE-2026-45185 si siguen en 4.97-4.99.2 y aceptan trafico de red malicioso.</li><li>Presion continuada sobre entornos industriales y de energia por avisos criticos de Siemens y la vulnerabilidad CVE-2026-8072 en Ingecon EMS Board.</li><li>Superficie empresarial amplia por el Patch Day de SAP de mayo, con dos notas criticas de CVSS 9.6.</li></ul>
+        </div>
+        <div class="summary-callout">
+          <h3>Recomendacion ejecutiva principal</h3>
+          <p>Ejecutar hoy una ventana de mitigacion prioritaria sobre activos expuestos a Internet: PAN-OS, Exim y sistemas OT/energia con mantenimiento pendiente, acompañada de una revision express de exposicion y segmentacion.</p>
+          <div class="chip-list"><span class="chip">Servicios TIC</span><span class="chip">Energia</span><span class="chip">Industria/OT</span><span class="chip">Entornos SAP</span><span class="chip">Movilidad Android</span></div>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <div class="summary-callout">
+          <h3>Tecnicas mas usadas</h3>
+          <div class="chip-list"><span class="chip">RCE sin autenticacion</span><span class="chip">Desbordamiento de bufer</span><span class="chip">Use-after-free</span><span class="chip">Credenciales debiles</span><span class="chip">Inyeccion SQL</span><span class="chip">Falta de autenticacion</span></div>
+        </div>
+        <div class="summary-callout">
+          <h3>Nivel de exposicion estimado</h3>
+          <p>Alta para organizaciones con activos perimetrales expuestos, MTA basados en Exim, equipamiento OT en energia y despliegues SAP sin ciclo de parche acelerado.</p>
+        </div>
+      </div>
+      <div class="summary-callout" style="margin-top:14px;">
+        <h3>Conclusion rapida</h3>
+        <ul><li>El riesgo operativo inmediato se concentra en servicios expuestos a Internet.</li><li>La prioridad numero uno es perimetro, correo y OT critico antes que endurecimientos de menor impacto.</li><li>No hay base suficiente en la muestra revisada para declarar una nueva ola confirmada de ransomware hoy, pero si hay suficiente senal de vulnerabilidades que facilitan intrusiones iniciales.</li><li>La situacion exige velocidad de parcheo y visibilidad de inventario mas que nuevas compras de herramientas.</li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Alertas activas y accionables</h2>
+      <div class="alert-grid">
+        <article class="alert-card"><div class="alert-top"><span class="badge confirmed">Hecho confirmado</span><span class="alert-level">Critica</span></div><h3>PAN-OS CVE-2026-0300 en explotacion activa limitada</h3><p>Palo Alto confirma una vulnerabilidad de desbordamiento en User-ID Authentication Portal y Unit 42 indica explotacion real para RCE sin autenticacion. NVD la marca en KEV y recomienda mitigaciones del fabricante.</p><div class="action-box"><strong>Accion recomendada:</strong> Restringir inmediatamente el acceso al portal a zonas de confianza o deshabilitarlo si no es necesario, y aplicar las versiones corregidas publicadas/planificadas por rama.</div></article>
+        <article class="alert-card"><div class="alert-top"><span class="badge confirmed">Hecho confirmado</span><span class="alert-level">Critica</span></div><h3>Exim CVE-2026-45185 expone correo electronico perimetral</h3><p>INCIBE detalla una vulnerabilidad critica use-after-free en Exim 4.97-4.99.2 capaz de derivar en ejecucion arbitraria por un atacante de red no autenticado.</p><div class="action-box"><strong>Accion recomendada:</strong> Actualizar a Exim 4.99.3 y revisar exposicion publica, reglas TLS, telemetria y logs de conexiones anmalas sobre CHUNKING/BDAT.</div></article>
+        <article class="alert-card"><div class="alert-top"><span class="badge confirmed">Hecho confirmado</span><span class="alert-level">Critica</span></div><h3>OT/energia: Ingecon EMS Board con CVE-2026-8072</h3><p>INCIBE coordino una vulnerabilidad critica en Ingecon Sun EMS Board, catalogada como 0day y asociada a credenciales generadas con un esquema criptografico debil.</p><div class="action-box"><strong>Accion recomendada:</strong> Priorizar actualizacion de firmware y aislar el acceso SAT local y remoto hasta confirmar la version corregida en campo.</div></article>
+        <article class="alert-card"><div class="alert-top"><span class="badge confirmed">Hecho confirmado</span><span class="alert-level">Alta</span></div><h3>Patch Day de SAP de mayo amplia deuda de parcheo empresarial</h3><p>SAP publico 15 notas nuevas, incluidas dos criticas CVSS 9.6 para S/4HANA Enterprise Search for ABAP y SAP Commerce Cloud.</p><div class="action-box"><strong>Accion recomendada:</strong> Acelerar validacion y despliegue de notas criticas en entornos Internet-facing y revisar controles compensatorios mientras se planifica la parada.</div></article>
+        <article class="alert-card"><div class="alert-top"><span class="badge estimate">Estimacion IA</span><span class="alert-level">Alta</span></div><h3>Sesgo creciente hacia intrusiones iniciales rapidas sobre activos expuestos</h3><p>La combinacion de un zero-day/explotacion activa en firewall, una RCE critica en MTA y varias correcciones OT/ERP sugiere que la ventana de mayor valor para atacantes sigue siendo la exposicion directa a Internet y las credenciales de alto privilegio.</p><div class="action-box"><strong>Accion recomendada:</strong> Cruzar inventario expuesto, autenticacion privilegiada y backlog de parches durante la misma jornada.</div></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Incidentes y actividad relevante</h2>
+      <div class="activity-grid">
+        <article class="mini-card"><h3>Perimetro</h3><p>La actividad mas urgente de la muestra esta en perimetro corporativo: PAN-OS CVE-2026-0300 combina explotacion limitada confirmada, impacto de RCE y presencia en el catalogo KEV.</p></article>
+        <article class="mini-card"><h3>Correo</h3><p>Exim introduce una prioridad inmediata para organizaciones con MTA expuestos porque el fallo afecta a versiones recientes y permite ejecucion arbitraria desde red sin autenticar.</p></article>
+        <article class="mini-card"><h3>OT/ICS</h3><p>Los avisos de Siemens e Ingeteam reafirman un bloque OT/energia con riesgo elevado, especialmente donde exista gestion remota, mantenimiento diferido o baja capacidad de parada.</p></article>
+        <article class="mini-card"><h3>Tendencia 24h vs 7 dias</h3><p>Sin evidencia suficiente para afirmar un repunte brusco de incidentes finales hoy, pero si una acumulacion de avisos criticos que incrementa la probabilidad de accesos iniciales si el parcheo sigue retrasado.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Vulnerabilidades criticas priorizadas</h2>
+      <table>
+        <thead><tr><th>CVE</th><th>Producto afectado</th><th>CVSS</th><th>Severidad</th><th>Estado de explotacion</th><th>Parche</th><th>Prioridad</th><th>Fuente</th></tr></thead>
+        <tbody>
+          <tr><td>CVE-2026-0300</td><td>Palo Alto Networks PAN-OS User-ID Authentication Portal</td><td>9.8 (NVD) / 9.3 (vendor)</td><td>Critica</td><td>Si, explotacion activa limitada y en KEV</td><td>Si, versiones corregidas por rama; mitigacion temporal disponible</td><td>Critica</td><td>NVD + Palo Alto Networks + Unit 42</td></tr>
+          <tr><td>CVE-2026-45185</td><td>Exim 4.97-4.99.2</td><td>No visible en la ficha revisada</td><td>Critica</td><td>No confirmada en la ficha revisada</td><td>Si, actualizar a 4.99.3</td><td>Critica</td><td>INCIBE-CERT</td></tr>
+          <tr><td>CVE-2026-8072</td><td>Ingecon Sun EMS Board</td><td>9.2 (CVSS v4.0)</td><td>Critica</td><td>No confirmada; aviso coordinado 0day</td><td>Si, firmware corregido por referencia</td><td>Critica</td><td>INCIBE-CERT</td></tr>
+          <tr><td>CVE-2026-34260</td><td>SAP S/4HANA Enterprise Search for ABAP</td><td>9.6</td><td>Critica</td><td>No confirmada en la fuente revisada</td><td>Si, SAP Security Note 3724838</td><td>Alta</td><td>SAP Security Patch Day</td></tr>
+          <tr><td>CVE-2026-34263</td><td>SAP Commerce Cloud</td><td>9.6</td><td>Critica</td><td>No confirmada en la fuente revisada</td><td>Si, SAP Security Note 3733064</td><td>Alta</td><td>SAP Security Patch Day</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Malware, ransomware y senales de campana</h2>
+      <div class="two-col">
+        <div class="summary-callout"><h3>Lectura operativa</h3><p>Sin nueva campana de ransomware confirmada en la ventana revisada del 12-14 de mayo dentro de la muestra oficial priorizada.</p><ul><li>INCIBE mantiene visibilidad sobre campanas de phishing y malware por canales no tradicionales, incluido LinkedIn, relevantes para perfiles ejecutivos y comerciales.</li><li>La presion actual observada se orienta mas a explotacion de vulnerabilidades y robo de acceso inicial que a un evento de cifrado confirmado de hoy.</li></ul></div>
+        <div class="summary-callout"><h3>IOC e inteligencia compartible</h3><p>No se incluyen IOCs en este informe porque la muestra revisada no aporta indicadores suficientemente consolidados para distribucion ejecutiva.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Noticias importantes</h2>
+      <div class="news-grid">
+        <article class="mini-card"><h3>SAP Security Patch Day - Mayo 2026</h3><p>15 notas nuevas, 2 criticas con CVSS 9.6 y una nota media sobre SAP NetWeaver ABAP que merece seguimiento por presencia historica en muchas organizaciones.</p></article>
+        <article class="mini-card"><h3>Boletin de seguridad Android - Mayo 2026</h3><p>Google publica un boletin con una vulnerabilidad critica en el componente System que puede permitir RCE proximal/adjacent sin interaccion del usuario.</p></article>
+        <article class="mini-card"><h3>Siemens ProductCERT - mayo 2026</h3><p>SIMATIC CN 4100 antes de V5.0 acumula multiples vulnerabilidades con base score CVSS 9.6 y recomendacion expresa de actualizar.</p></article>
+        <article class="mini-card"><h3>INCIBE empresas - phishing a SumUp</h3><p>Permanece como referencia util para pymes espanolas una campana de phishing a SumUp basada en verificacion falsa de cuenta y robo de credenciales.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Alertas para empresas espanolas, pymes e infraestructura critica</h2>
+      <div class="summary-callout"><ul><li>Vulnerabilidades explotadas o con explotacion observada en servicios expuestos a Internet.</li><li>Riesgo elevado para empresas espanolas con correo expuesto, firewalls PAN-OS, equipamiento OT en energia y entornos SAP con parches pendientes.</li><li>Necesidad de especial vigilancia en pymes con inventario incompleto, acceso remoto amplio y dependencia de terceros para mantenimiento.</li><li>Impacto potencial alto en infraestructura critica por avisos OT/ICS con componente de autenticacion, RCE y gestion remota.</li></ul></div>
+    </section>
+
+    <section class="section">
+      <h2>Recomendaciones ejecutivas</h2>
+      <div class="priority-grid">
+        <article class="priority-card"><h3>Critica</h3><ul><li>Aplicar mitigaciones y parches de PAN-OS CVE-2026-0300 hoy mismo; si no es posible, aislar o deshabilitar el portal afectado.</li><li>Actualizar Exim a 4.99.3 y revisar inmediatamente si existen instancias publicas o relay expuestos.</li><li>Verificar firmware corregido en Ingecon EMS Board y validar segmentacion de accesos SAT/soporte.</li></ul></article>
+        <article class="priority-card"><h3>Alta</h3><ul><li>Acelerar el despliegue de notas criticas de SAP y revisar controles compensatorios en sistemas con acceso desde red corporativa extensa o terceros.</li><li>Cruzar inventario de activos expuestos con backlog de parcheo y credenciales privilegiadas en un informe unico para direccion.</li><li>Reforzar monitorizacion de EDR/SIEM en firewalls, correo y bastiones de acceso remoto durante las proximas 48 horas.</li></ul></article>
+        <article class="priority-card"><h3>Media</h3><ul><li>Validar que terminales Android corporativos reciban parche 2026-05-01 o posterior.</li><li>Revisar procedimientos de mantenimiento OT para reducir ventanas prolongadas sin parcheo y dependencias de acceso remoto no esencial.</li></ul></article>
+        <article class="priority-card"><h3>Baja</h3><ul><li>Actualizar materiales de concienciacion sobre phishing empresarial con ejemplos recientes como SumUp y fraude en RRHH.</li><li>Preparar una cadencia semanal de revision ejecutiva del backlog de vulnerabilidades expuestas.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Seccion IA</h2>
+      <div class="notice"><strong>Analisis predictivo o estimativo:</strong> este bloque contiene juicio analitico y estimaciones operativas. No debe interpretarse como hecho confirmado si no va acompanado de evidencia independiente.</div>
+      <div class="summary-grid" style="margin-top:14px;">
+        <div class="summary-callout"><h3>Riesgo global estimado</h3><p>Alto</p><p style="margin-top:10px;"><strong>Probabilidad de aumento de ataques:</strong> Media-Alta</p></div>
+        <div class="summary-callout"><h3>Prediccion de amenazas proximas</h3><ul><li>Mayor probabilidad de intentos oportunistas contra portales de autenticacion y servicios de borde expuestos.</li><li>Incremento de valor atacante en correo expuesto y dispositivos OT con soporte remoto heredado.</li></ul></div>
+      </div>
+      <div class="summary-grid" style="margin-top:14px;">
+        <div class="summary-callout"><h3>Sectores mas expuestos</h3><div class="chip-list"><span class="chip">Energia</span><span class="chip">Servicios TIC</span><span class="chip">Industria</span><span class="chip">Empresas con SAP</span><span class="chip">Pymes con acceso remoto amplio</span></div></div>
+        <div class="summary-callout"><h3>Vulnerabilidades prioritarias</h3><div class="chip-list"><span class="chip">CVE-2026-0300</span><span class="chip">CVE-2026-45185</span><span class="chip">CVE-2026-8072</span><span class="chip">CVE-2026-34260</span><span class="chip">CVE-2026-34263</span></div></div>
+      </div>
+      <div class="summary-callout" style="margin-top:14px;"><h3>Recomendacion automatica</h3><p>Reducir superficie expuesta a Internet hoy y convertir el inventario expuesto en una lista cerrada de remediacion con responsables y plazo maximo de 24-72 horas.</p></div>
+    </section>
+
+    <section class="section">
+      <h2>Persistencia y enlaces previstos</h2>
+      <div class="link-box">
+        <div class="mini-card"><h3>Historico GitHub</h3><p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260514">https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260514</a></p></div>
+        <div class="mini-card"><h3>HTML</h3><p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.html">https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.html</a></p></div>
+        <div class="mini-card"><h3>JSON y PDF</h3><p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.json">https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.json</a></p><p style="margin-top:8px;"><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.pdf">https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260514/Dashboard_Ciberseguridad_20260514_1611_CEST.pdf</a></p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Fuentes principales</h2>
+      <table>
+        <thead><tr><th>Fuente</th><th>URL</th><th>Uso en el informe</th></tr></thead>
+        <tbody>
+          <tr><td>NVD - CVE-2026-0300</td><td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">https://nvd.nist.gov/vuln/detail/CVE-2026-0300</a></td><td>CVE critica 9.8 y marcada en KEV.</td></tr>
+          <tr><td>Palo Alto Networks - CVE-2026-0300 advisory</td><td><a href="https://security.paloaltonetworks.com/CVE-2026-0300">https://security.paloaltonetworks.com/CVE-2026-0300</a></td><td>Versiones afectadas, calendario de parches y mitigacion.</td></tr>
+          <tr><td>Unit 42 - Exploitation of PAN-OS Captive Portal Zero-Day</td><td><a href="https://unit42.paloaltonetworks.com/captive-portal-zero-day/">https://unit42.paloaltonetworks.com/captive-portal-zero-day/</a></td><td>Actividad de explotacion limitada observada.</td></tr>
+          <tr><td>INCIBE-CERT - Exim CVE-2026-45185</td><td><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim">https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim</a></td><td>Fallo critico con parche en 4.99.3.</td></tr>
+          <tr><td>INCIBE-CERT - Ingecon EMS Board CVE-2026-8072</td><td><a href="https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos-sci/generacion-insegura-de-credenciales-de-acceso-sat-en-ingecon-ems-board">https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos-sci/generacion-insegura-de-credenciales-de-acceso-sat-en-ingecon-ems-board</a></td><td>Vulnerabilidad critica 0day en energia.</td></tr>
+          <tr><td>Siemens ProductCERT - SSA-032379</td><td><a href="https://cert-portal.siemens.com/productcert/html/ssa-032379.html">https://cert-portal.siemens.com/productcert/html/ssa-032379.html</a></td><td>SIMATIC CN 4100 con CVSS 9.6.</td></tr>
+          <tr><td>Android Security Bulletin - May 2026</td><td><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">https://source.android.com/docs/security/bulletin/2026/2026-05-01</a></td><td>Boletin oficial Android con vulnerabilidad critica.</td></tr>
+          <tr><td>SAP Security Patch Day - May 2026</td><td><a href="https://support.sap.com/en/my-support/knowledge-base/security-notes-news/may-2026.html">https://support.sap.com/en/my-support/knowledge-base/security-notes-news/may-2026.html</a></td><td>15 notas nuevas y 2 criticas.</td></tr>
+          <tr><td>INCIBE Empresas - phishing a SumUp</td><td><a href="https://www.incibe.es/node/618253">https://www.incibe.es/node/618253</a></td><td>Referencia reciente y util para pymes espanolas.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer><p>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</p></footer>
+  </div>
+</body>
+</html>
