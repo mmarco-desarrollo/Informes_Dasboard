@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo Nocturno de Inteligencia Artificial | 2026-05-15 00:16 CEST</title>
+  <style>
+    :root {
+      --bg: #07111d;
+      --bg2: #0c1624;
+      --panel: rgba(13, 24, 39, 0.82);
+      --line: rgba(126, 154, 191, 0.2);
+      --text: #eef4ff;
+      --muted: #9fb3ce;
+      --blue: #4aa8ff;
+      --electric: #3b82f6;
+      --violet: #8b5cf6;
+      --green: #22c55e;
+      --orange: #f97316;
+      --red: #ef4444;
+      --soft: #d8e4ff;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      --radius: 18px;
+      --font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background:
+      radial-gradient(circle at top left, rgba(59,130,246,0.16), transparent 28%),
+      radial-gradient(circle at top right, rgba(139,92,246,0.12), transparent 24%),
+      linear-gradient(180deg, #050c15 0%, #09111d 32%, #0a1220 100%);
+      color: var(--text);
+      font-family: var(--font);
+    }
+    body { padding: 28px; }
+    .wrap { max-width: 1440px; margin: 0 auto; }
+    .hero {
+      position: relative;
+      padding: 30px 32px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(14, 28, 46, 0.9), rgba(9, 18, 31, 0.92));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(74,168,255,0.08), transparent 34%),
+        linear-gradient(180deg, transparent, rgba(34,197,94,0.06));
+      pointer-events: none;
+    }
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+      color: var(--soft);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .brand { font-weight: 700; color: #fff; }
+    .hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 34px;
+      line-height: 1.1;
+    }
+    .subtitle {
+      max-width: 960px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+      margin: 0 0 24px 0;
+    }
+    .meta-grid, .kpi-grid, .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 16px;
+    }
+    .meta-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .kpi-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .panel, .kpi, .mini, .card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      backdrop-filter: blur(12px);
+    }
+    .panel, .card { padding: 20px; }
+    .mini { padding: 16px; }
+    .kpi { padding: 18px; min-height: 126px; }
+    .section { margin-top: 18px; }
+    .section-title {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+    }
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .value { font-size: 22px; font-weight: 800; margin: 6px 0 8px 0; }
+    .note, .muted, .small { color: var(--muted); }
+    .note, .small { font-size: 13px; line-height: 1.5; }
+    .muted { line-height: 1.55; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(74,168,255,0.12);
+      color: var(--soft);
+      border: 1px solid rgba(74,168,255,0.18);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .badge.ok { background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.2); }
+    .badge.high { background: rgba(249,115,22,0.12); border-color: rgba(249,115,22,0.2); }
+    .badge.medium { background: rgba(74,168,255,0.12); border-color: rgba(74,168,255,0.2); }
+    .badge.critical { background: rgba(239,68,68,0.12); border-color: rgba(239,68,68,0.22); color: #ffdada; }
+    .summary-list, .bullet-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .summary-list li, .bullet-list li { margin-bottom: 10px; }
+    .card h3, .panel h3 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+    .card p, .panel p { margin: 0 0 10px 0; line-height: 1.6; }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 12px 0;
+    }
+    .kv {
+      display: grid;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+    .evolution {
+      display: grid;
+      gap: 10px;
+    }
+    .evo-row {
+      display: grid;
+      grid-template-columns: 180px 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+    .track {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      overflow: hidden;
+    }
+    .fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--electric), var(--violet)); }
+    .fill.high { width: 82%; }
+    .fill.veryhigh { width: 94%; background: linear-gradient(90deg, var(--red), var(--orange)); }
+    .fill.medium { width: 58%; background: linear-gradient(90deg, var(--blue), var(--green)); }
+    a {
+      color: #8dc5ff;
+      text-decoration: none;
+    }
+    .source-list {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.55;
+    }
+    .footer {
+      margin-top: 18px;
+      padding: 18px 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      background: rgba(11, 18, 30, 0.88);
+    }
+    @media (max-width: 1180px) {
+      .meta-grid, .kpi-grid, .grid-4, .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 820px) {
+      body { padding: 16px; }
+      .hero { padding: 22px; }
+      .hero h1 { font-size: 28px; }
+      .meta-grid, .kpi-grid, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .evo-row { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { padding: 8mm; background: #07111d; }
+      .wrap { max-width: none; }
+      .hero, .panel, .kpi, .mini, .card, .footer { break-inside: avoid; box-shadow: none; }
+      a { color: #9fd0ff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="topline">
+        <div class="brand">MMarco Seguridad | Radar Ejecutivo IA</div>
+        <div>Europe/Madrid | 2026-05-15 00:16 CEST</div>
+      </div>
+      <h1>Informe Ejecutivo Nocturno de Inteligencia Artificial</h1>
+      <p class="subtitle">Resumen nocturno compacto para Manuel Marco Sanchez. Prioriza cambios acumulados, incidentes, vulnerabilidades, riesgos y decisiones ejecutivas accionables para servicios de IA, ciberseguridad y automatizacion.</p>
+      <div class="meta-grid">
+        <div class="mini">
+          <div class="label">Nivel de impacto IA</div>
+          <div class="value">ALTO</div>
+          <div class="note">Riesgo actual dominado por seguridad agentic, supply chain y fiabilidad operativa.</div>
+        </div>
+        <div class="mini">
+          <div class="label">Estado global</div>
+          <div class="value" style="font-size:18px">Riesgo de seguridad persistente con tension operativa moderada</div>
+          <div class="note">No aparece una ruptura nocturna en modelos; si se intensifica la presion sobre gobernanza y control.</div>
+        </div>
+        <div class="mini">
+          <div class="label">Ventana analizada</div>
+          <div class="value" style="font-size:18px">2026-05-14 20:10 CEST - 2026-05-15 00:16 CEST</div>
+          <div class="note">Ventana nocturna consolidada</div>
+        </div>
+        <div class="mini">
+          <div class="label">Proxima actualizacion</div>
+          <div class="value" style="font-size:18px">2026-05-15 08:00 CEST</div>
+          <div class="note">Sin contador artificial. Se muestra la siguiente referencia operativa prevista.</div>
+        </div>
+      </div>
+      <div class="kpi-grid">
+        
+          <div class="kpi">
+            <div class="label">Incidentes operativos confirmados</div>
+            <div class="value">3</div>
+            <div class="note">OpenAI status</div>
+          </div>
+        
+
+          <div class="kpi">
+            <div class="label">Alertas de seguridad activas</div>
+            <div class="value">4</div>
+            <div class="note">supply chain, memoria, prompt injection y regulacion</div>
+          </div>
+        
+
+          <div class="kpi">
+            <div class="label">Cambios estrategicos confirmados</div>
+            <div class="value">3</div>
+            <div class="note">Anthropic, Google, UE</div>
+          </div>
+        
+
+          <div class="kpi">
+            <div class="label">Lanzamientos de modelo nocturnos</div>
+            <div class="value">sin senal fiable</div>
+            <div class="note">sin ruptura nueva confirmada en la ventana</div>
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <div class="eyebrow">Resumen Ejecutivo</div>
+        <ul class="summary-list">
+          <li>La ventana nocturna no deja una ruptura nueva en frontier models, pero si consolida un cambio de foco: seguridad de agentes, memoria conversacional y supply chain pesan hoy mas que un anuncio de benchmark.</li>
+<li>El hecho nuevo mas limpio y con mayor lectura institucional es la alianza de Anthropic con la Gates Foundation por 200 millones de dolares, que convierte IA aplicada a salud, educacion y movilidad economica en una senal de legitimacion sectorial y de nuevos servicios B2B de alto valor.</li>
+<li>En paralelo, Google empuja IA proactiva en Android con Gemini Intelligence, pero el propio lanzamiento reconoce la necesidad de controles explicitos, activity logs y defensas adicionales frente a prompt injection, lo que confirma que la seguridad ya es parte del producto y no una capa posterior.</li>
+<li>La UE sigue moviendo el terreno regulatorio: el acuerdo politico del 7 de mayo retrasa obligaciones clave para sistemas de alto riesgo, pero no reduce la presion de gobernanza; al contrario, desplaza el trabajo hacia preparacion documental, transparencia y pruebas de cumplimiento.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Evolucion de Actividad IA</div>
+        <div class="evolution">
+          
+              <div class="evo-row">
+                <div>Seguridad agentic</div>
+                <div class="track"><div class="fill veryhigh"></div></div>
+                <div class="badge high">Muy alta</div>
+              </div>
+            
+
+              <div class="evo-row">
+                <div>Riesgo regulatorio</div>
+                <div class="track"><div class="fill high"></div></div>
+                <div class="badge high">Alta</div>
+              </div>
+            
+
+              <div class="evo-row">
+                <div>Producto enterprise</div>
+                <div class="track"><div class="fill high"></div></div>
+                <div class="badge high">Alta</div>
+              </div>
+            
+
+              <div class="evo-row">
+                <div>Novedad en modelos</div>
+                <div class="track"><div class="fill medium"></div></div>
+                <div class="badge medium">Media</div>
+              </div>
+            
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="eyebrow">Vista Global de Actividad IA</div>
+      <div class="grid-4">
+        
+          <div class="card">
+            <div class="label">EE.UU.</div>
+            <h3>Anthropic y OpenAI marcan la agenda</h3>
+            <p class="muted">Anthropic abre un frente institucional de despliegue social; OpenAI mantiene presion en fiabilidad operativa y adopcion de GPT-5.5.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="label">UE</div>
+            <h3>La AI Act se simplifica, no desaparece</h3>
+            <p class="muted">El retraso de hitos para alto riesgo baja friccion inmediata, pero obliga a rediseñar hojas de ruta de cumplimiento.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="label">Android / edge</div>
+            <h3>IA proactiva con seguridad embebida</h3>
+            <p class="muted">Google presenta asistentes mas contextuales, pero con permisos, logs y limites mas visibles.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="label">Open source / frameworks</div>
+            <h3>Supply chain y memoria siguen siendo la zona roja</h3>
+            <p class="muted">Mistral y Spring AI recuerdan que la cadena de dependencias y el estado conversacional son superficie de ataque real.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="eyebrow">Noticias Destacadas</div>
+      <div class="grid-3">
+        
+          <article class="card">
+            <div class="meta-row">
+              <span class="badge ok">Hecho confirmado</span>
+              <span class="badge">Alto</span>
+            </div>
+            <h3>Anthropic firma una alianza de 200 millones con la Gates Foundation</h3>
+            <p><strong>Fuente:</strong> Anthropic | <strong>Fecha:</strong> 2026-05-14</p>
+            <p>Abre oportunidades en salud, educacion y programas sectoriales con IA gobernada.</p>
+            <p class="muted"><strong>Recomendacion:</strong> Seguir el caso como referencia comercial para verticales regulados y sector publico.</p>
+            <a href="https://www.anthropic.com/news/gates-foundation-partnership">Abrir fuente</a>
+          </article>
+        
+
+          <article class="card">
+            <div class="meta-row">
+              <span class="badge ok">Hecho confirmado</span>
+              <span class="badge">Alto</span>
+            </div>
+            <h3>Google activa Gemini Intelligence como capa proactiva para Android</h3>
+            <p><strong>Fuente:</strong> Google | <strong>Fecha:</strong> 2026-05-12</p>
+            <p>Confirma que los asistentes pasan de responder a actuar, con automatizacion de apps y contexto local.</p>
+            <p class="muted"><strong>Recomendacion:</strong> Revisar impacto en privacidad, permisos y gobierno de asistentes en endpoints moviles.</p>
+            <a href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/">Abrir fuente</a>
+          </article>
+        
+
+          <article class="card">
+            <div class="meta-row">
+              <span class="badge ok">Hecho confirmado</span>
+              <span class="badge">Alto</span>
+            </div>
+            <h3>UE acuerda simplificar y retrasar parte del calendario del AI Act</h3>
+            <p><strong>Fuente:</strong> Consilium | <strong>Fecha:</strong> 2026-05-07</p>
+            <p>Da mas aire de implantacion a sistemas de alto riesgo y sandboxes, pero mantiene obligaciones de transparencia.</p>
+            <p class="muted"><strong>Recomendacion:</strong> Actualizar roadmap de cumplimiento con fechas 2026-12-02, 2027-08-02, 2027-12-02 y 2028-08-02.</p>
+            <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">Abrir fuente</a>
+          </article>
+        
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <div class="eyebrow">Modelos y LLMs Recientes</div>
+        
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge">OpenAI</span>
+              <span class="badge">Alto</span>
+            </div>
+            <h3>GPT-5.5</h3>
+            <div class="kv">
+              <div><strong>Tipo:</strong> LLM frontier</div>
+              <div><strong>Capacidades:</strong> uso de herramientas, vision, computer use y contexto amplio</div>
+              <div><strong>Ventana de contexto:</strong> 400K en Codex; 1M en API</div>
+            </div>
+            <p class="muted">Sigue siendo la referencia tactica del momento, pero sin novedad nocturna adicional confirmada.</p>
+            <a href="https://openai.com/index/introducing-gpt-5-5/">Abrir referencia</a>
+          </div>
+        
+
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge">Anthropic</span>
+              <span class="badge high">Alta vigilancia</span>
+            </div>
+            <h3>Claude Opus 4.7</h3>
+            <div class="kv">
+              <div><strong>Tipo:</strong> LLM frontier</div>
+              <div><strong>Capacidades:</strong> coding, agents, vision, multi-step tasks</div>
+              <div><strong>Ventana de contexto:</strong> no detallado en esta ventana</div>
+            </div>
+            <p class="muted">Se mantiene en el radar por rendimiento en codigo y agentes, sin cambio nuevo verificado esta noche.</p>
+            <a href="https://www.anthropic.com/news">Abrir referencia</a>
+          </div>
+        
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Herramientas Nuevas Destacadas</div>
+        
+          <div class="card">
+            <h3>Gemini Intelligence security stack</h3>
+            <p><strong>Fuente:</strong> Google Security Blog</p>
+            <p>modelo de referencia para permisos, logs y defensas de asistentes con accion</p>
+            <p class="muted"><strong>Advertencia:</strong> no elimina el riesgo de prompt injection; lo gestiona con capas</p>
+            <a href="https://blog.google/security/android-gemini-intelligence-security-privacy/">Abrir fuente</a>
+          </div>
+        
+
+          <div class="card">
+            <h3>Spring AI 2.0.0-M5 / 1.1.5</h3>
+            <p><strong>Fuente:</strong> Spring</p>
+            <p>integra mejoras de tool calling, MCP y SDK oficial de OpenAI</p>
+            <p class="muted"><strong>Advertencia:</strong> requiere revisiones por cambios rotos y CVEs recientes en memoria y vector stores</p>
+            <a href="https://spring.io/blog/2026/04/27/spring-ai-1-0-6-1-1-5-2-0-0-M5-available-now/">Abrir fuente</a>
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <div class="eyebrow">Incidentes IA</div>
+        
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge medium">Media</span>
+              <span class="badge">Resuelto</span>
+              <span class="badge high">Alta</span>
+            </div>
+            <h3>Codex Cloud y Code Review sufrieron alta tasa de fallos y quedaron resueltos</h3>
+            <p><strong>Producto afectado:</strong> OpenAI Codex</p>
+            <p>Riesgo operativo para pipelines asistidos por IA y revisiones automatizadas.</p>
+            <p class="muted"><strong>Mitigacion:</strong> Mantener fallback manual y vigilancia de dependencias en flujos de revision.</p>
+            <a href="https://status.openai.com/incidents/01KRM4H2T37TNSS7BCSGXVS8RQ">Abrir incidente</a>
+          </div>
+        
+
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge medium">Media</span>
+              <span class="badge">Resuelto</span>
+              <span class="badge medium">Media</span>
+            </div>
+            <h3>ChatGPT tuvo una incidencia para usuarios no autenticados</h3>
+            <p><strong>Producto afectado:</strong> ChatGPT</p>
+            <p>Afecta disponibilidad de acceso publico y soporte con frontends abiertos.</p>
+            <p class="muted"><strong>Mitigacion:</strong> No basar canales publicos criticos en acceso anonimo sin pagina de respaldo.</p>
+            <a href="https://status.openai.com/incidents/0peem54d">Abrir incidente</a>
+          </div>
+        
+
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge medium">Media</span>
+              <span class="badge">Resuelto</span>
+              <span class="badge high">Alta</span>
+            </div>
+            <h3>Codex 5.5 registro alta tasa de error el 13 de mayo</h3>
+            <p><strong>Producto afectado:</strong> OpenAI Codex 5.5</p>
+            <p>Afecta confianza en automatizaciones de desarrollo y tareas en background.</p>
+            <p class="muted"><strong>Mitigacion:</strong> Versionar prompts, reintentos y tolerancia a fallos antes de delegar tareas criticas.</p>
+            <a href="https://status.openai.com/incidents/01KRG6MF021JQ997JCR7R8Y9A0">Abrir incidente</a>
+          </div>
+        
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Vulnerabilidades y Riesgos</div>
+        
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge high">Alta</span>
+              <span class="badge">Confirmada</span>
+              <span class="badge critical">Critica</span>
+            </div>
+            <h3>MAI-2026-002: ataque de supply chain sobre SDKs de Mistral</h3>
+            <p><strong>Producto / superficie:</strong> SDKs npm y PyPI de Mistral</p>
+            <p>La version `mistralai==2.4.6` ejecuta un script malicioso al importar en Linux.</p>
+            <p class="muted"><strong>Mitigacion:</strong> Buscar versiones afectadas, revisar lockfiles, caches y contenedores, y aislar hosts sospechosos.</p>
+            <a href="https://docs.mistral.ai/resources/security-advisories">Abrir fuente</a>
+          </div>
+        
+
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge high">Alta</span>
+              <span class="badge">No confirmada en produccion dentro de esta ventana</span>
+              <span class="badge critical">Critica</span>
+            </div>
+            <h3>Spring AI: fuga entre usuarios por ChatMemory y memory poisoning por prompt injection</h3>
+            <p><strong>Producto / superficie:</strong> Spring AI 1.0.x y 1.1.x</p>
+            <p>Puede exponer datos entre usuarios y contaminar memoria persistente con instrucciones maliciosas.</p>
+            <p class="muted"><strong>Mitigacion:</strong> Actualizar, separar memoria por usuario y revisar asesores de memoria con input no confiable.</p>
+            <a href="https://spring.io/security/">Abrir fuente</a>
+          </div>
+        
+
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge high">Alta</span>
+              <span class="badge">Tendencia confirmada</span>
+              <span class="badge high">Alta</span>
+            </div>
+            <h3>Prompt injection ya muestra crecimiento en la web abierta</h3>
+            <p><strong>Producto / superficie:</strong> Agentes web y asistentes con browsing</p>
+            <p>Google detecto un aumento relativo del 32% de contenido malicioso entre noviembre de 2025 y febrero de 2026.</p>
+            <p class="muted"><strong>Mitigacion:</strong> Aplicar aislamiento de privilegios, confirmaciones humanas y politicas de tool use por confianza.</p>
+            <a href="https://blog.google/security/prompt-injections-web/">Abrir fuente</a>
+          </div>
+        
+
+          <div class="card">
+            <div class="meta-row">
+              <span class="badge high">Alta</span>
+              <span class="badge">Riesgo estructural</span>
+              <span class="badge high">Alta</span>
+            </div>
+            <h3>El propio diseño defensivo de agentes sigue sin resolver el problema solo con filtrado</h3>
+            <p><strong>Producto / superficie:</strong> Agentes con herramientas</p>
+            <p>OpenAI advierte que clasificar entradas maliciosas no basta y que hay que limitar capacidades y contexto.</p>
+            <p class="muted"><strong>Mitigacion:</strong> Rediseñar agentes como sistemas con privilegios minimos, outputs verificables y tool scopes estrictos.</p>
+            <a href="https://openai.com/index/designing-agents-to-resist-prompt-injection/">Abrir fuente</a>
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <div class="eyebrow">Tendencias y Radar IA</div>
+        <ul class="bullet-list">
+          <li>La seguridad de memoria, browsing y herramientas ya es el cuello de botella para agentes utiles.</li>
+<li>La IA proactiva en dispositivo gana traccion, pero su adopcion enterprise dependera de controles auditables.</li>
+<li>La presion regulatoria se vuelve mas operativa: menos miedo abstracto y mas trabajo de inventario, trazabilidad y transparencia.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Oportunidades</div>
+        
+          <div class="card">
+            <div class="badge high">Alta</div>
+            <h3>Auditoria express de supply chain IA</h3>
+            <p class="muted">Servicio directo para clientes con dependencias en SDKs de IA y pipelines CI/CD.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="badge high">Alta</div>
+            <h3>Hardening de memoria y permisos para agentes</h3>
+            <p class="muted">Oferta concreta de evaluacion de RAG, memoria conversacional y tool execution.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="badge medium">Media</div>
+            <h3>Paquete AI Act readiness para pymes y entornos regulados</h3>
+            <p class="muted">Aprovecha el retraso regulatorio para vender preparacion anticipada, no reaccion tardia.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <div class="eyebrow">Alertas Activas</div>
+        <ul class="bullet-list">
+          <li>Revisar esta madrugada cualquier entorno que haya instalado `mistralai==2.4.6` o paquetes npm afectados en la ventana del 11-12 de mayo.</li>
+<li>Suspender o restringir agentes con memoria persistente y tool write actions en flujos sensibles hasta validar aislamiento por usuario y aprobaciones.</li>
+<li>Revisar dependencias Spring AI 1.0.x y 1.1.x si hay uso de ChatMemory, PromptChatMemoryAdvisor o MilvusVectorStore.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Recomendaciones Ejecutivas</div>
+        
+          <div class="card">
+            <div class="badge critical">Critica</div>
+            <p>Lanzar revision inmediata de supply chain en SDKs de IA, lockfiles, caches de build y contenedores, con foco en Mistral y cualquier espejo interno.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="badge critical">Critica</div>
+            <p>Auditar agentes con memoria compartida o persistente; separar conversaciones por identidad y bloquear que memoria no confiable alimente prompts privilegiados.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="badge high">Alta</div>
+            <p>Imponer aprobacion humana para acciones de alto impacto y limitar browsing/tool use a dominios y operaciones de confianza.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="badge high">Alta</div>
+            <p>Actualizar hoja de ruta de AI Act con fechas revisadas y preparar evidencias de transparencia antes del cierre de 2026.</p>
+          </div>
+        
+
+          <div class="card">
+            <div class="badge medium">Media</div>
+            <p>Vigilar el avance de asistentes proactivos en Android como indicador de demanda futura en endpoint security y gestion de permisos IA.</p>
+          </div>
+        
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <div class="eyebrow">Calendario de Eventos IA</div>
+        
+          <div class="card">
+            <h3>Google I/O 2026</h3>
+            <p><strong>Fecha:</strong> 2026-05-19 / 2026-05-20</p>
+            <p class="muted">Google adelanta actualizaciones de IA desde Gemini hasta Android.</p>
+            <a href="https://blog.google/innovation-and-ai/technology/developers-tools/io-2026-save-the-date/">Abrir evento</a>
+          </div>
+        
+
+          <div class="card">
+            <h3>OpenAI DevDay 2026</h3>
+            <p><strong>Fecha:</strong> 2026-09-29</p>
+            <p class="muted">Save the date oficial en San Francisco.</p>
+            <a href="https://openai.com/index/devday-2026/">Abrir evento</a>
+          </div>
+        
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Fuentes Utilizadas</div>
+        <ol class="source-list">
+          <li><strong>Anthropic:</strong> <a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic forms $200 million partnership with the Gates Foundation</a></li>
+<li><strong>Google:</strong> <a href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/">Gemini Intelligence brings proactive AI to Android</a></li>
+<li><strong>Google Security Blog:</strong> <a href="https://blog.google/security/android-gemini-intelligence-security-privacy/">Android’s Agentic Future: Building Gemini Intelligence on a Foundation of Security &amp; Privacy</a></li>
+<li><strong>Google Security Blog:</strong> <a href="https://blog.google/security/prompt-injections-web/">AI threats in the wild: The current state of prompt injections on the web</a></li>
+<li><strong>OpenAI:</strong> <a href="https://openai.com/index/designing-agents-to-resist-prompt-injection/">Designing AI agents to resist prompt injection</a></li>
+<li><strong>OpenAI:</strong> <a href="https://openai.com/index/introducing-gpt-5-5/">Introducing GPT-5.5</a></li>
+<li><strong>Consilium:</strong> <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">Artificial Intelligence: Council and Parliament agree to simplify and streamline rules</a></li>
+<li><strong>Mistral Docs:</strong> <a href="https://docs.mistral.ai/resources/security-advisories">Security advisories</a></li>
+<li><strong>Spring:</strong> <a href="https://spring.io/security/">Spring Security Advisories</a></li>
+<li><strong>OpenAI Status:</strong> <a href="https://status.openai.com/history">OpenAI Status incidents</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div><strong>MMarco Seguridad</strong> | Manuel Marco Sanchez | Especializacion en ciberseguridad, blockchain, IA y telecomunicaciones.</div>
+      <div>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.</div>
+    </footer>
+  </div>
+</body>
+</html>
