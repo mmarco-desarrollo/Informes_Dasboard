@@ -1,0 +1,322 @@
+{
+  "run": {
+    "slot": "08-10",
+    "date": "2026-05-14",
+    "timestamp_iso": "2026-05-14T08:10:02+02:00",
+    "label": "14 May 2026 | 08:10 CEST"
+  },
+  "market": {
+    "market_cap": 2660000000000,
+    "market_cap_change_24h": 1.4,
+    "volume_24h": 94920000000,
+    "btc_dominance": 60.1,
+    "eth_dominance": 10.3,
+    "altseason_index": 35,
+    "fear_greed": 47,
+    "fear_greed_label": "Neutral",
+    "btc_open_interest": 60220000000,
+    "btc_futures_volume": 61920000000,
+    "funding": null,
+    "liquidations": null,
+    "volatility_proxy": 3.1
+  },
+  "coins": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": 79831.14,
+      "change_24h": -1.52,
+      "change_7d": -1.6,
+      "volume_24h": 36186433179,
+      "market_cap": 1598947503521,
+      "range_24h_low": 78725.5,
+      "range_24h_high": 81276.67,
+      "range_7d_low": 78827.55,
+      "range_7d_high": 82145.66,
+      "note": "Las salidas ETF del 12 de mayo y el macro mas duro mantienen a BTC debajo de la banda 81.2k-81.3k.",
+      "trend": "Correctiva",
+      "momentum": "Negativo"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": 2268.29,
+      "change_24h": -1.26,
+      "change_7d": -2.5,
+      "volume_24h": 15677092839,
+      "market_cap": 273751218270,
+      "range_24h_low": 2237.51,
+      "range_24h_high": 2321.39,
+      "range_7d_low": 2237.51,
+      "range_7d_high": 2373.93,
+      "note": "ETH sigue rezagado tras los reembolsos recientes en ETFs spot; 2.24k sigue siendo el soporte clave.",
+      "trend": "Correctiva",
+      "momentum": "Negativo"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": 91.36,
+      "change_24h": -4.09,
+      "change_7d": 3.1,
+      "volume_24h": 4639500441,
+      "market_cap": 52806817113,
+      "range_24h_low": 89.87,
+      "range_24h_high": 95.76,
+      "range_7d_low": 87.96,
+      "range_7d_high": 98.1,
+      "note": "La narrativa mejora con Alpenglow en testing, pero el precio sigue comportandose como beta alta.",
+      "trend": "Recuperacion",
+      "momentum": "Negativo"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": 670.41,
+      "change_24h": 1.16,
+      "change_7d": 3.8,
+      "volume_24h": 1760000000,
+      "market_cap": 90350000000,
+      "range_24h_low": 664.41,
+      "range_24h_high": 685.1,
+      "range_7d_low": 664.16,
+      "range_7d_high": 684.84,
+      "note": "BNB conserva una de las mejores lecturas relativas del top beta y mantiene tono constructivo intradia.",
+      "trend": "Alcista",
+      "momentum": "Fuerte"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "price": 1.43,
+      "change_24h": -1.3,
+      "change_7d": 1.7,
+      "volume_24h": 2363913356,
+      "market_cap": 88664225962,
+      "range_24h_low": 1.41,
+      "range_24h_high": 1.47,
+      "range_7d_low": 1.38,
+      "range_7d_high": 1.5,
+      "note": "XRP no convierte todavia la narrativa en ruptura limpia; necesita recuperar 1.47-1.50 para extender.",
+      "trend": "Recuperacion",
+      "momentum": "Mixto"
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.265927,
+      "change_24h": -2.8,
+      "change_7d": 0.3,
+      "volume_24h": 489391764,
+      "market_cap": 9626807977,
+      "range_24h_low": 0.2623,
+      "range_24h_high": 0.2772,
+      "range_7d_low": 0.2611,
+      "range_7d_high": 0.2871,
+      "note": "ADA sigue lateralizada cerca de 0.266 y todavia no valida una recuperacion sostenida frente a sus pares.",
+      "trend": "Recuperacion",
+      "momentum": "Negativo"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.114122,
+      "change_24h": 1.69,
+      "change_7d": 4.0,
+      "volume_24h": 2149376745,
+      "market_cap": 17601167546,
+      "range_24h_low": 0.1102,
+      "range_24h_high": 0.115,
+      "range_7d_low": 0.1062,
+      "range_7d_high": 0.1144,
+      "note": "DOGE mantiene bid especulativo, pero sigue siendo una posicion tactica y no una cobertura defensiva.",
+      "trend": "Alcista",
+      "momentum": "Fuerte"
+    }
+  ],
+  "news": [
+    {
+      "title": "Spot Bitcoin ETFs see $233.2M in outflows as the brief inflow streak ends",
+      "source": "CryptoRank",
+      "time": "May 13, 2026",
+      "impact": "High",
+      "tag": "BTC / ETF flows"
+    },
+    {
+      "title": "US spot Ethereum ETFs reverse course with $103.5M in outflows on May 7",
+      "source": "CryptoRank",
+      "time": "May 8, 2026",
+      "impact": "High",
+      "tag": "ETH / ETF flows"
+    },
+    {
+      "title": "Solana Alpenglow upgrade goes live for community validator testing",
+      "source": "CoinSpeaker",
+      "time": "May 12, 2026",
+      "impact": "Medium",
+      "tag": "SOL / Upgrade"
+    },
+    {
+      "title": "Augustus wins a rare OCC charter and raises fresh capital for stablecoin banking",
+      "source": "Fortune",
+      "time": "May 11, 2026",
+      "impact": "Medium",
+      "tag": "AI / Banking"
+    },
+    {
+      "title": "US stablecoin rules take shape as the CLARITY Act gains momentum in Washington",
+      "source": "Forbes",
+      "time": "May 8, 2026",
+      "impact": "Medium",
+      "tag": "US Regulation"
+    },
+    {
+      "title": "April CPI rises 0.6% m/m and 3.8% y/y, keeping macro pressure elevated",
+      "source": "US BLS",
+      "time": "May 12, 2026",
+      "impact": "High",
+      "tag": "Macro / Inflation"
+    },
+    {
+      "title": "Chaos Labs rotates keys after suspected nation-state attack attempt",
+      "source": "Cointelegraph",
+      "time": "May 8, 2026",
+      "impact": "Medium",
+      "tag": "Security"
+    }
+  ],
+  "calendar": [
+    {
+      "date": "May 20, 2026",
+      "event": "FOMC minutes from April 28-29 meeting",
+      "impact": "High",
+      "focus": "Tone on inflation and cuts will steer BTC beta and leverage appetite."
+    },
+    {
+      "date": "May 28, 2026",
+      "event": "US GDP second estimate for Q1 2026",
+      "impact": "Medium",
+      "focus": "Growth resilience would keep rate-path debate alive."
+    },
+    {
+      "date": "June 5, 2026",
+      "event": "US Employment Situation for May 2026",
+      "impact": "High",
+      "focus": "Labor resilience can reshape cut expectations and pressure crypto beta."
+    },
+    {
+      "date": "June 10, 2026",
+      "event": "US CPI for May 2026",
+      "impact": "High",
+      "focus": "Main macro catalyst for risk assets after April CPI printed +0.6% m/m and +3.8% y/y."
+    },
+    {
+      "date": "June 11, 2026",
+      "event": "ECB monetary policy press conference",
+      "impact": "Medium",
+      "focus": "Euro liquidity tone and policy divergence matter for global risk rotation."
+    },
+    {
+      "date": "June 16-17, 2026",
+      "event": "Next FOMC meeting",
+      "impact": "High",
+      "focus": "Rates path and inflation tone remain the key macro risk for crypto leverage."
+    }
+  ],
+  "alerts": [
+    "Fear & Greed en 47/100: el sentimiento mejora frente al miedo extremo, pero no valida risk-on amplio.",
+    "Bitcoin conserva dominancia del 60.1%: la rotacion a altcoins sigue siendo parcial y tactica.",
+    "ETH mantiene debilidad relativa frente a BTC y BNB tras las ultimas salidas en ETFs spot.",
+    "El open interest de BTC sigue elevado en $60.22B: cualquier sorpresa macro puede amplificar el movimiento.",
+    "Funding y liquidaciones no ofrecen una lectura publica suficientemente limpia en este corte; se mantienen en fallback operativo."
+  ],
+  "whales": [
+    "CoinMarketCap refleja treasury holdings publicos de 1.31M BTC, una base institucional que sigue siendo estructural.",
+    "BNB mantiene 686.07K BNB en holdings de tesoreria rastreados publicamente por CoinMarketCap.",
+    "Las salidas recientes en ETFs spot de BTC y ETH indican reduccion tactica de riesgo institucional, no capitulacion total.",
+    "No hay lectura publica consolidada y de alta confianza para exchange inflows/outflows en este corte.",
+    "La prioridad operativa sigue siendo vigilar soporte, dominancia BTC y el impacto macro antes que perseguir flow incompleto."
+  ],
+  "sources": [
+    {
+      "label": "CoinMarketCap global market page",
+      "url": "https://coinmarketcap.com/charts/"
+    },
+    {
+      "label": "CoinMarketCap - Bitcoin",
+      "url": "https://coinmarketcap.com/currencies/bitcoin/"
+    },
+    {
+      "label": "CoinMarketCap - Ethereum",
+      "url": "https://coinmarketcap.com/currencies/ethereum/"
+    },
+    {
+      "label": "CoinMarketCap - Solana",
+      "url": "https://coinmarketcap.com/currencies/solana/"
+    },
+    {
+      "label": "CoinMarketCap - BNB",
+      "url": "https://coinmarketcap.com/currencies/bnb/"
+    },
+    {
+      "label": "CoinMarketCap - XRP",
+      "url": "https://coinmarketcap.com/currencies/xrp/"
+    },
+    {
+      "label": "CoinMarketCap - Cardano",
+      "url": "https://coinmarketcap.com/currencies/cardano/"
+    },
+    {
+      "label": "CoinMarketCap - Dogecoin",
+      "url": "https://coinmarketcap.com/currencies/dogecoin/"
+    },
+    {
+      "label": "CoinMarketCap Fear and Greed Index",
+      "url": "https://coinmarketcap.com/charts/fear-and-greed-index/"
+    },
+    {
+      "label": "Federal Reserve monetary policy calendar",
+      "url": "https://www.federalreserve.gov/monetarypolicy.htm"
+    },
+    {
+      "label": "US BLS CPI schedule",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm?lv=true"
+    },
+    {
+      "label": "US BLS CPI home",
+      "url": "https://www.bls.gov/cpi/home.htm"
+    },
+    {
+      "label": "US BEA GDP Q1 2026 advance estimate",
+      "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-1st-quarter-2026"
+    },
+    {
+      "label": "ECB June 11, 2026 press conference information",
+      "url": "https://www.ecb.europa.eu/press/conferences/html/20260611_ecb_media_seminar.pl.html"
+    },
+    {
+      "label": "CryptoRank BTC ETF outflows",
+      "url": "https://cryptorank.io/news/feed/02264-bitcoin-etf-outflows-may-12"
+    },
+    {
+      "label": "CryptoRank ETH ETF outflows",
+      "url": "https://cryptorank.io/news/feed/26f2e-us-spot-ethereum-etfs-103-million-outflows-may-7"
+    },
+    {
+      "label": "CoinSpeaker - Solana Alpenglow testing",
+      "url": "https://www.coinspeaker.com/solana-alpenglow-upgrade-live-validator-testing/"
+    },
+    {
+      "label": "Fortune - Augustus OCC charter",
+      "url": "https://fortune.com/2026/05/11/augustus-stablecoins-occ-charter/"
+    },
+    {
+      "label": "Forbes - CLARITY Act momentum",
+      "url": "https://www.forbes.com/sites/digital-assets/2026/05/08/us-stablecoin-rules-take-shape-as-clarity-act-gains-momentum/"
+    },
+    {
+      "label": "Cointelegraph - Chaos Labs attack",
+      "url": "https://cointelegraph.com/news/chaos-labs-nation-state-wallet-attack-oracles-secure/"
+    }
+  ]
+}
