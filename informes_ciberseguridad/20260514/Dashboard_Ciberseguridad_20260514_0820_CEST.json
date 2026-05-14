@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "generated_at": "2026-05-14 08:20 CEST",
+    "timezone": "Europe/Madrid",
+    "global_threat_level": "ALTO",
+    "next_update": "2026-05-14 16:00 CEST (estimada)",
+    "ai_risk_state": "Estimacion IA: presion alcista de explotacion oportunista durante las proximas 24-72 horas.",
+    "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+  },
+  "kpis": [
+    {
+      "label": "Alertas criticas priorizadas",
+      "value": "6",
+      "note": "Fuentes oficiales o reconocidas"
+    },
+    {
+      "label": "Explotacion activa confirmada",
+      "value": "1",
+      "note": "PAN-OS CVE-2026-0300"
+    },
+    {
+      "label": "Campanas bajo monitorizacion",
+      "value": "2",
+      "note": "1 confirmada, 1 senal monitorizada"
+    },
+    {
+      "label": "CVEs prioritarias",
+      "value": "5",
+      "note": "Riesgo inmediato o alta exposicion"
+    },
+    {
+      "label": "Superficies mas expuestas",
+      "value": "4",
+      "note": "Perimetro, correo, Android, OT"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "ALCISTA",
+      "note": "Carga de parcheo y riesgo de escaneo"
+    }
+  ],
+  "executive_summary": {
+    "status": "La postura de riesgo se mantiene en ALTO por la combinacion de explotacion activa confirmada en PAN-OS, una semana de parcheo especialmente intensa en Microsoft, una vulnerabilidad critica reciente en Exim y nuevas alertas relevantes para Android y entornos OT/ICS.",
+    "main_risks": [
+      "Explotacion activa confirmada de CVE-2026-0300 en PAN-OS, con impacto potencial de ejecucion remota como root en firewalls expuestos.",
+      "Aumento de la carga de remediacion tras el bloque de actualizaciones de Microsoft de mayo de 2026, con 137 vulnerabilidades y 14 criticas segun INCIBE.",
+      "Exim presenta una vulnerabilidad critica reciente que puede permitir ejecucion remota no autenticada en ciertas configuraciones GnuTLS.",
+      "Android publico un boletin con una vulnerabilidad critica sin interaccion de usuario para explotacion proximal/adyacente.",
+      "El entorno OT/ICS sigue expuesto por el boletin mensual de Siemens, con multiples vulnerabilidades criticas y alta densidad de activos afectados."
+    ],
+    "sectors_most_affected": [
+      "Empresas con firewalls PAN-OS en borde o segmentacion interna",
+      "Organizaciones con infraestructura de correo autogestionada basada en Exim",
+      "Parques moviles Android con perfiles privilegiados o administradores",
+      "Industria y operadores con activos Siemens o brokers Artemis expuestos"
+    ],
+    "techniques": [
+      "RCE en perimetro y servicios de autenticacion",
+      "Bypass de autenticacion",
+      "Abuso de servicios de gestion y VPN",
+      "Automatizacion ofensiva asistida por IA"
+    ],
+    "estimated_exposure": "Elevada en organizaciones con perimetro expuesto a Internet, gestion remota abierta o ventanas de parcheo lentas.",
+    "primary_recommendation": "Acelerar en las proximas 24 horas el cierre de exposicion en PAN-OS, desplegar el parche de Exim donde aplique, priorizar el lote de Microsoft en activos expuestos y revisar segmentacion/compensaciones para OT.",
+    "quick_takeaways": [
+      "La prioridad numero uno es PAN-OS CVE-2026-0300 por explotacion activa y pertenencia al catalogo KEV.",
+      "La prioridad numero dos es contener el riesgo de superficie amplia: Microsoft mayo 2026 y Exim.",
+      "Android y OT no deben quedar fuera del ciclo de parcheo ejecutivo de esta semana.",
+      "La senal sobre automatizacion ofensiva con IA refuerza la necesidad de mas velocidad de deteccion y cierre de huecos perimetrales."
+    ]
+  },
+  "incidents": [
+    {
+      "title": "PAN-OS CVE-2026-0300 con explotacion activa",
+      "severity": "Critica",
+      "confidence": "Hecho confirmado",
+      "summary": "Palo Alto reporta la vulnerabilidad como ATTACKED y NVD indica inclusion en el catalogo KEV de CISA.",
+      "impact": "Ejecucion arbitraria con privilegios de root en PA-Series y VM-Series si User-ID Authentication Portal esta habilitado.",
+      "executive_action": "Aplicar mitigaciones de acceso inmediatamente y parchear segun la rama afectada.",
+      "sources": [
+        "https://security.paloaltonetworks.com/CVE-2026-0300",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-0300"
+      ]
+    },
+    {
+      "title": "Semana de parcheo de alta presion en Microsoft",
+      "severity": "Alta",
+      "confidence": "Hecho confirmado",
+      "summary": "INCIBE resume 137 vulnerabilidades y 14 criticas en la publicacion de mayo de 2026; Microsoft subraya que la IA esta acelerando el ritmo de descubrimiento de fallos.",
+      "impact": "Incremento del backlog de remediacion y mayor probabilidad de explotacion oportunista en las proximas jornadas.",
+      "executive_action": "Priorizar activos expuestos, administracion remota, identidad, Office/SharePoint y entornos con fuerte dependencia Microsoft.",
+      "sources": [
+        "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+        "https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday"
+      ]
+    },
+    {
+      "title": "Campana CyberStrikeAI contra Fortinet bajo monitorizacion",
+      "severity": "Alta",
+      "confidence": "Senal monitorizada",
+      "summary": "INCIBE describe una campana entre enero y marzo de 2026 que automatiza fases del ataque con IA sobre dispositivos FortiGate. La comunidad continua monitorizando el caso sin nuevas olas de la misma intensidad.",
+      "impact": "Refuerza el riesgo estructural en perimetro y la necesidad de detectar automatizacion ofensiva a escala.",
+      "executive_action": "Mantener endurecimiento en Fortinet, reforzar telemetria de autenticacion y revisar accesos administrativos.",
+      "sources": [
+        "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/cyberstrikeai-emplea-inteligencia-artificial-para-lanzar-ofensivas"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "9.8 (NVD) / 9.3 CVSS-BT",
+      "severity": "Critica",
+      "exploitation": "Activa; ATTACKED; KEV",
+      "patch": "Disponible por ramas; algunas versiones corrigen el 2026-05-28",
+      "priority": "Inmediata",
+      "source": "Palo Alto / NVD / CISA KEV via NVD",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "cve": "CVE-2026-0263",
+      "product": "Palo Alto PAN-OS IKEv2 Processing",
+      "cvss": "7.2 CVSS-BT / 9.2 CVSS-B",
+      "severity": "Alta",
+      "exploitation": "No reportada",
+      "patch": "Disponible segun version afectada",
+      "priority": "Alta",
+      "source": "Palo Alto / NVD",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0263"
+    },
+    {
+      "cve": "CVE-2026-0265",
+      "product": "Palo Alto PAN-OS Cloud Authentication Service",
+      "cvss": "7.2 CVSS-BT",
+      "severity": "Alta",
+      "exploitation": "No reportada",
+      "patch": "Disponible segun rama",
+      "priority": "Alta",
+      "source": "Palo Alto",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0265"
+    },
+    {
+      "cve": "CVE-2026-45185",
+      "product": "Exim con ciertas configuraciones GnuTLS",
+      "cvss": "9.8 (MITRE via NVD)",
+      "severity": "Critica",
+      "exploitation": "Sin explotacion reportada en la fuente consultada",
+      "patch": "Corregida en Exim 4.99.3",
+      "priority": "Alta",
+      "source": "Exim / INCIBE / NVD",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android System / adbd",
+      "cvss": "8.8 (CISA-ADP via NVD)",
+      "severity": "Critica",
+      "exploitation": "No se requiere interaccion de usuario; explotacion proximal/adyacente",
+      "patch": "Nivel de parche 2026-05-01 o superior",
+      "priority": "Alta",
+      "source": "Android / NVD",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    }
+  ],
+  "news": [
+    {
+      "title": "Microsoft mayo 2026: lote amplio de actualizaciones",
+      "type": "Hecho confirmado",
+      "summary": "INCIBE resume 137 vulnerabilidades, 14 criticas, en un ciclo que amplia la presion sobre equipos de parcheo.",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026"
+    },
+    {
+      "title": "Android mayo 2026 publica una vulnerabilidad critica en el componente System",
+      "type": "Hecho confirmado",
+      "summary": "La vulnerabilidad podria permitir RCE proximal/adyacente como usuario shell sin interaccion adicional.",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    },
+    {
+      "title": "Siemens mayo 2026 mantiene alta densidad de vulnerabilidades OT/ICS",
+      "type": "Hecho confirmado",
+      "summary": "INCIBE resume multiples CVEs criticas en activos industriales y de red de Siemens.",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026"
+    },
+    {
+      "title": "La IA acelera el ritmo operativo del parcheo",
+      "type": "Hecho confirmado",
+      "summary": "Microsoft advierte de un aumento de escala y velocidad en el descubrimiento de vulnerabilidades impulsado por IA.",
+      "url": "https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday"
+    }
+  ],
+  "active_alerts": [
+    "PAN-OS CVE-2026-0300: tratar como exposicion urgente si User-ID Authentication Portal esta habilitado.",
+    "PAN-OS CVE-2026-0263 y CVE-2026-0265: revisar IKEv2 con PQC y Cloud Authentication Service en interfaces de gestion o acceso.",
+    "Exim CVE-2026-45185: priorizar si existe servicio SMTP expuesto o relay critico.",
+    "Android CVE-2026-0073: acelerar parches en dispositivos con privilegios administrativos o uso corporativo sensible.",
+    "Siemens mayo 2026: revisar backlog OT/ICS y compensar con segmentacion si el parcheo no es inmediato."
+  ],
+  "recommendations": {
+    "critica": [
+      "Restringir o deshabilitar de inmediato User-ID Authentication Portal en PAN-OS si no es imprescindible; aplicar el parche correspondiente sin esperar a ventana ordinaria.",
+      "Ejecutar caza de compromiso en firewalls perimetrales y revisar accesos de administracion, logs de autenticacion y cambios de configuracion desde el 5 de mayo."
+    ],
+    "alta": [
+      "Actualizar Exim a 4.99.3 donde aplique y, si no es posible hoy, aislar el servicio y reforzar monitorizacion del trafico SMTP/TLS.",
+      "Priorizar el ciclo de Microsoft de mayo en activos expuestos a Internet, servidores de colaboracion, identidad y puestos de administracion.",
+      "Revisar en PAN-OS el uso de IKEv2 con PQC y CAS para cerrar tambien las rutas CVE-2026-0263 y CVE-2026-0265."
+    ],
+    "media": [
+      "Desplegar el parche Android de mayo en dispositivos corporativos privilegiados y reforzar politicas de movilidad segura.",
+      "Revisar inventario OT/ICS y planificar remediacion/segmentacion especifica para activos Siemens y brokers Artemis si existen dependencias operativas."
+    ],
+    "baja": [
+      "Actualizar el comite de direccion con una ventana de riesgo ampliada para perimetro, correo y OT durante las proximas 72 horas.",
+      "Ajustar playbooks para contemplar ataques mas automatizados y mas rapidos en superficie expuesta."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo por IA",
+    "global_risk_estimate": "Alto",
+    "forecast": "Es probable un aumento de escaneos oportunistas y de intentos de explotacion en perimetro durante las proximas 24-72 horas, especialmente en productos con alta visibilidad publica y parches recien publicados.",
+    "exposed_sectors": [
+      "Empresas con fuerte dependencia del perimetro VPN/firewall",
+      "Entornos industriales y utilities con activos Siemens",
+      "Organizaciones con correo autogestionado y MTA expuesto",
+      "Equipos con flota Android corporativa y roles privilegiados"
+    ],
+    "priority_vulns": [
+      "CVE-2026-0300",
+      "CVE-2026-45185",
+      "CVE-2026-0263",
+      "CVE-2026-0265",
+      "CVE-2026-0073"
+    ],
+    "attack_growth_probability": "Alta (65-75%)",
+    "automatic_recommendation": "Reducir tiempo de exposicion mas que aumentar complejidad: cerrar servicios no necesarios, limitar interfaces administrativas y acelerar validacion de parcheo en borde y correo."
+  },
+  "delivery": {
+    "report_generated": "Completado",
+    "github_history": "Pendiente durante la generacion local",
+    "gmail_html": "Pendiente",
+    "pdf": "No generado para evitar una entrega externa no verificada",
+    "page_images": "No generadas",
+    "google_drive": "Omitido",
+    "limitations": [
+      "No se genera PDF en esta ejecucion para no declarar un artefacto no verificado fuera del workspace.",
+      "No se incluyen metricas globales de paises afectados o DDoS por falta de base suficiente y reciente en las fuentes revisadas.",
+      "La seccion IA esta marcada expresamente como estimativa y no sustituye evidencia confirmada."
+    ]
+  }
+}
