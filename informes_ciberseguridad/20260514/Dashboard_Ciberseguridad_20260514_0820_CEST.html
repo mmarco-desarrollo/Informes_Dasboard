@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | 2026-05-14 08:20 CEST</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1a2d;
+      --panel: rgba(12, 25, 45, 0.92);
+      --panel-2: rgba(15, 31, 54, 0.9);
+      --line: rgba(150, 180, 220, 0.18);
+      --text: #f4f8fb;
+      --muted: #9fb2c8;
+      --accent: #53d8fb;
+      --accent-2: #41f0c7;
+      --warning: #ffb347;
+      --danger: #ff6b6b;
+      --ok: #55d38b;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "IBM Plex Sans", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(83, 216, 251, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(65, 240, 199, 0.11), transparent 22%),
+        linear-gradient(180deg, #050c17 0%, #081321 46%, #09111d 100%);
+      line-height: 1.5;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      width: min(1320px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(11, 22, 40, 0.98), rgba(8, 16, 29, 0.94)),
+        linear-gradient(120deg, rgba(83, 216, 251, 0.06), transparent 55%);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(83, 216, 251, 0.18);
+      background: rgba(83, 216, 251, 0.08);
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 8px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.02;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .status-card {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line);
+      min-height: 94px;
+    }
+
+    .status-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .status-value {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .status-note {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section {
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 14px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .kpi-card {
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(16, 31, 54, 0.95), rgba(10, 20, 37, 0.95));
+      min-height: 148px;
+    }
+
+    .kpi-label {
+      color: var(--muted);
+      font-size: 13px;
+      min-height: 42px;
+    }
+
+    .kpi-value {
+      font-size: 34px;
+      font-weight: 800;
+      margin: 10px 0 8px;
+    }
+
+    .kpi-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 20px;
+    }
+
+    .panel {
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .panel h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .panel p {
+      margin: 10px 0 0;
+      color: #d8e2ee;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+
+    .hecho {
+      background: rgba(85, 211, 139, 0.12);
+      color: #9bf7bc;
+      border-color: rgba(85, 211, 139, 0.24);
+    }
+
+    .senal {
+      background: rgba(255, 179, 71, 0.12);
+      color: #ffd395;
+      border-color: rgba(255, 179, 71, 0.22);
+    }
+
+    .neutral {
+      background: rgba(83, 216, 251, 0.11);
+      color: #9beafc;
+      border-color: rgba(83, 216, 251, 0.22);
+    }
+
+    .threat-bar {
+      margin-top: 16px;
+      border-radius: 999px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.07);
+      overflow: hidden;
+    }
+
+    .threat-fill {
+      width: 78%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--warning), var(--danger));
+    }
+
+    .columns-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    li + li { margin-top: 8px; }
+
+    .sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .source-link {
+      display: inline-flex;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      border-radius: 12px;
+      padding: 8px 10px;
+      background: rgba(83, 216, 251, 0.08);
+      border: 1px solid rgba(83, 216, 251, 0.14);
+      font-size: 12px;
+      color: #bdefff;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+
+    table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+      background: rgba(7, 16, 28, 0.88);
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(155, 180, 207, 0.12);
+      font-size: 14px;
+    }
+
+    th {
+      color: #cbe4ff;
+      background: rgba(255, 255, 255, 0.03);
+      position: sticky;
+      top: 0;
+    }
+
+    .priority-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .priority-card {
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      min-height: 100%;
+    }
+
+    .priority-card h3 {
+      margin: 0 0 10px;
+    }
+
+    .priority-card.critical { background: rgba(255, 107, 107, 0.09); }
+    .priority-card.high { background: rgba(255, 179, 71, 0.08); }
+    .priority-card.medium { background: rgba(83, 216, 251, 0.08); }
+    .priority-card.low { background: rgba(85, 211, 139, 0.07); }
+
+    .footer-note {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      padding: 18px 22px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 1120px) {
+      .hero-grid,
+      .summary-grid,
+      .columns-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .kpi-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .priority-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .wrap {
+        width: min(100% - 20px, 1320px);
+        padding-top: 18px;
+      }
+
+      .hero, .section {
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .kpi-grid,
+      .priority-grid,
+      .status-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">MMarco Seguridad · SOC Executive Intelligence</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p>La postura de riesgo se mantiene en ALTO por la combinacion de explotacion activa confirmada en PAN-OS, una semana de parcheo especialmente intensa en Microsoft, una vulnerabilidad critica reciente en Exim y nuevas alertas relevantes para Android y entornos OT/ICS.</p>
+        </div>
+        <div class="status-grid">
+          <article class="status-card">
+            <div class="status-label">Fecha y hora</div>
+            <div class="status-value">2026-05-14 08:20 CEST</div>
+            <div class="status-note">Zona horaria Europe/Madrid</div>
+          </article>
+          <article class="status-card">
+            <div class="status-label">Nivel global de amenaza</div>
+            <div class="status-value">ALTO</div>
+            <div class="status-note">Prioridad directiva de hoy</div>
+          </article>
+          <article class="status-card">
+            <div class="status-label">Proxima actualizacion</div>
+            <div class="status-value">16:00 CEST</div>
+            <div class="status-note">2026-05-14 16:00 CEST (estimada)</div>
+          </article>
+          <article class="status-card">
+            <div class="status-label">Estado IA de riesgo</div>
+            <div class="status-value">Presion alcista</div>
+            <div class="status-note">Estimacion IA: presion alcista de explotacion oportunista durante las proximas 24-72 horas.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>KPIs Principales</h2>
+          <div class="section-subtitle">Metricas ejecutivas derivadas de la evidencia revisada en esta ejecucion. Cuando no existe base suficiente reciente, se prioriza la explicitud frente al relleno artificial.</div>
+        </div>
+      </div>
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <div class="kpi-label">Alertas criticas priorizadas</div>
+          <div class="kpi-value">6</div>
+          <div class="kpi-note">Fuentes oficiales o reconocidas</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Explotacion activa confirmada</div>
+          <div class="kpi-value">1</div>
+          <div class="kpi-note">PAN-OS CVE-2026-0300</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Campanas bajo monitorizacion</div>
+          <div class="kpi-value">2</div>
+          <div class="kpi-note">1 confirmada, 1 senal monitorizada</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">CVEs prioritarias</div>
+          <div class="kpi-value">5</div>
+          <div class="kpi-note">Riesgo inmediato o alta exposicion</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Superficies mas expuestas</div>
+          <div class="kpi-value">4</div>
+          <div class="kpi-note">Perimetro, correo, Android, OT</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Tendencia 24h</div>
+          <div class="kpi-value">ALCISTA</div>
+          <div class="kpi-note">Carga de parcheo y riesgo de escaneo</div>
+        </article>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Resumen Ejecutivo</h2>
+          <div class="section-subtitle">Vision de direccion con separacion entre hechos confirmados, senales monitorizadas y analisis estimativo.</div>
+        </div>
+      </div>
+      <div class="summary-grid">
+        <article class="panel">
+          <h3>Situacion global</h3>
+          <p>La postura de riesgo se mantiene en ALTO por la combinacion de explotacion activa confirmada en PAN-OS, una semana de parcheo especialmente intensa en Microsoft, una vulnerabilidad critica reciente en Exim y nuevas alertas relevantes para Android y entornos OT/ICS.</p>
+          <div class="threat-bar"><div class="threat-fill"></div></div>
+          <ul><li>La prioridad numero uno es PAN-OS CVE-2026-0300 por explotacion activa y pertenencia al catalogo KEV.</li><li>La prioridad numero dos es contener el riesgo de superficie amplia: Microsoft mayo 2026 y Exim.</li><li>Android y OT no deben quedar fuera del ciclo de parcheo ejecutivo de esta semana.</li><li>La senal sobre automatizacion ofensiva con IA refuerza la necesidad de mas velocidad de deteccion y cierre de huecos perimetrales.</li></ul>
+        </article>
+        <article class="panel">
+          <h3>Lectura directiva</h3>
+          <p><strong>Riesgos principales:</strong></p>
+          <ul><li>Explotacion activa confirmada de CVE-2026-0300 en PAN-OS, con impacto potencial de ejecucion remota como root en firewalls expuestos.</li><li>Aumento de la carga de remediacion tras el bloque de actualizaciones de Microsoft de mayo de 2026, con 137 vulnerabilidades y 14 criticas segun INCIBE.</li><li>Exim presenta una vulnerabilidad critica reciente que puede permitir ejecucion remota no autenticada en ciertas configuraciones GnuTLS.</li><li>Android publico un boletin con una vulnerabilidad critica sin interaccion de usuario para explotacion proximal/adyacente.</li><li>El entorno OT/ICS sigue expuesto por el boletin mensual de Siemens, con multiples vulnerabilidades criticas y alta densidad de activos afectados.</li></ul>
+          <p><strong>Recomendacion ejecutiva principal:</strong> Acelerar en las proximas 24 horas el cierre de exposicion en PAN-OS, desplegar el parche de Exim donde aplique, priorizar el lote de Microsoft en activos expuestos y revisar segmentacion/compensaciones para OT.</p>
+        </article>
+      </div>
+      <div class="columns-2" style="margin-top:18px;">
+        <article class="panel">
+          <h3>Sectores y superficies mas afectadas</h3>
+          <ul><li>Empresas con firewalls PAN-OS en borde o segmentacion interna</li><li>Organizaciones con infraestructura de correo autogestionada basada en Exim</li><li>Parques moviles Android con perfiles privilegiados o administradores</li><li>Industria y operadores con activos Siemens o brokers Artemis expuestos</li></ul>
+        </article>
+        <article class="panel">
+          <h3>Tecnicas y exposicion estimada</h3>
+          <ul><li>RCE en perimetro y servicios de autenticacion</li><li>Bypass de autenticacion</li><li>Abuso de servicios de gestion y VPN</li><li>Automatizacion ofensiva asistida por IA</li></ul>
+          <p><strong>Nivel de exposicion estimado:</strong> Elevada en organizaciones con perimetro expuesto a Internet, gestion remota abierta o ventanas de parcheo lentas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Incidentes y Actividad Relevante</h2>
+          <div class="section-subtitle">Se priorizan hechos confirmados y se senalizan aparte las observaciones aun en seguimiento.</div>
+        </div>
+      </div>
+      <div class="columns-2">
+        <article class="panel incident">
+          <div class="panel-head">
+            <h3>PAN-OS CVE-2026-0300 con explotacion activa</h3>
+            <span class="badge hecho">Hecho confirmado</span>
+          </div>
+          <p><strong>Resumen:</strong> Palo Alto reporta la vulnerabilidad como ATTACKED y NVD indica inclusion en el catalogo KEV de CISA.</p>
+          <p><strong>Impacto:</strong> Ejecucion arbitraria con privilegios de root en PA-Series y VM-Series si User-ID Authentication Portal esta habilitado.</p>
+          <p><strong>Accion ejecutiva:</strong> Aplicar mitigaciones de acceso inmediatamente y parchear segun la rama afectada.</p>
+          <div class="sources"><a class="source-link" href="https://security.paloaltonetworks.com/CVE-2026-0300" target="_blank" rel="noreferrer">https://security.paloaltonetworks.com/CVE-2026-0300</a><a class="source-link" href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300" target="_blank" rel="noreferrer">https://nvd.nist.gov/vuln/detail/CVE-2026-0300</a></div>
+        </article>
+        
+        <article class="panel incident">
+          <div class="panel-head">
+            <h3>Semana de parcheo de alta presion en Microsoft</h3>
+            <span class="badge hecho">Hecho confirmado</span>
+          </div>
+          <p><strong>Resumen:</strong> INCIBE resume 137 vulnerabilidades y 14 criticas en la publicacion de mayo de 2026; Microsoft subraya que la IA esta acelerando el ritmo de descubrimiento de fallos.</p>
+          <p><strong>Impacto:</strong> Incremento del backlog de remediacion y mayor probabilidad de explotacion oportunista en las proximas jornadas.</p>
+          <p><strong>Accion ejecutiva:</strong> Priorizar activos expuestos, administracion remota, identidad, Office/SharePoint y entornos con fuerte dependencia Microsoft.</p>
+          <div class="sources"><a class="source-link" href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026" target="_blank" rel="noreferrer">https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026</a><a class="source-link" href="https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday" target="_blank" rel="noreferrer">https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday</a></div>
+        </article>
+        
+        <article class="panel incident">
+          <div class="panel-head">
+            <h3>Campana CyberStrikeAI contra Fortinet bajo monitorizacion</h3>
+            <span class="badge senal">Senal monitorizada</span>
+          </div>
+          <p><strong>Resumen:</strong> INCIBE describe una campana entre enero y marzo de 2026 que automatiza fases del ataque con IA sobre dispositivos FortiGate. La comunidad continua monitorizando el caso sin nuevas olas de la misma intensidad.</p>
+          <p><strong>Impacto:</strong> Refuerza el riesgo estructural en perimetro y la necesidad de detectar automatizacion ofensiva a escala.</p>
+          <p><strong>Accion ejecutiva:</strong> Mantener endurecimiento en Fortinet, reforzar telemetria de autenticacion y revisar accesos administrativos.</p>
+          <div class="sources"><a class="source-link" href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/cyberstrikeai-emplea-inteligencia-artificial-para-lanzar-ofensivas" target="_blank" rel="noreferrer">https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/cyberstrikeai-emplea-inteligencia-artificial-para-lanzar-ofensivas</a></div>
+        </article>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Vulnerabilidades Criticas</h2>
+          <div class="section-subtitle">Tabla priorizada para accion ejecutiva y seguimiento de mitigacion.</div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto afectado</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Estado de explotacion</th>
+              <th>Parche</th>
+              <th>Prioridad</th>
+              <th>Fuente</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td>CVE-2026-0300</td>
+          <td>Palo Alto PAN-OS User-ID Authentication Portal</td>
+          <td>9.8 (NVD) / 9.3 CVSS-BT</td>
+          <td>Critica</td>
+          <td>Activa; ATTACKED; KEV</td>
+          <td>Disponible por ramas; algunas versiones corrigen el 2026-05-28</td>
+          <td>Inmediata</td>
+          <td><a href="https://security.paloaltonetworks.com/CVE-2026-0300" target="_blank" rel="noreferrer">Palo Alto / NVD / CISA KEV via NVD</a></td>
+        </tr>
+        
+        <tr>
+          <td>CVE-2026-0263</td>
+          <td>Palo Alto PAN-OS IKEv2 Processing</td>
+          <td>7.2 CVSS-BT / 9.2 CVSS-B</td>
+          <td>Alta</td>
+          <td>No reportada</td>
+          <td>Disponible segun version afectada</td>
+          <td>Alta</td>
+          <td><a href="https://security.paloaltonetworks.com/CVE-2026-0263" target="_blank" rel="noreferrer">Palo Alto / NVD</a></td>
+        </tr>
+        
+        <tr>
+          <td>CVE-2026-0265</td>
+          <td>Palo Alto PAN-OS Cloud Authentication Service</td>
+          <td>7.2 CVSS-BT</td>
+          <td>Alta</td>
+          <td>No reportada</td>
+          <td>Disponible segun rama</td>
+          <td>Alta</td>
+          <td><a href="https://security.paloaltonetworks.com/CVE-2026-0265" target="_blank" rel="noreferrer">Palo Alto</a></td>
+        </tr>
+        
+        <tr>
+          <td>CVE-2026-45185</td>
+          <td>Exim con ciertas configuraciones GnuTLS</td>
+          <td>9.8 (MITRE via NVD)</td>
+          <td>Critica</td>
+          <td>Sin explotacion reportada en la fuente consultada</td>
+          <td>Corregida en Exim 4.99.3</td>
+          <td>Alta</td>
+          <td><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim" target="_blank" rel="noreferrer">Exim / INCIBE / NVD</a></td>
+        </tr>
+        
+        <tr>
+          <td>CVE-2026-0073</td>
+          <td>Android System / adbd</td>
+          <td>8.8 (CISA-ADP via NVD)</td>
+          <td>Critica</td>
+          <td>No se requiere interaccion de usuario; explotacion proximal/adyacente</td>
+          <td>Nivel de parche 2026-05-01 o superior</td>
+          <td>Alta</td>
+          <td><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01" target="_blank" rel="noreferrer">Android / NVD</a></td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Noticias y Alertas Activas</h2>
+          <div class="section-subtitle">Resumen de novedades con impacto potencial inmediato sobre el backlog de remediacion.</div>
+        </div>
+      </div>
+      <div class="columns-2">
+        <article class="panel news-item">
+          <div class="panel-head">
+            <h3>Microsoft mayo 2026: lote amplio de actualizaciones</h3>
+            <span class="badge neutral">Hecho confirmado</span>
+          </div>
+          <p>INCIBE resume 137 vulnerabilidades, 14 criticas, en un ciclo que amplia la presion sobre equipos de parcheo.</p>
+          <a class="source-link" href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026" target="_blank" rel="noreferrer">https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026</a>
+        </article>
+        
+        <article class="panel news-item">
+          <div class="panel-head">
+            <h3>Android mayo 2026 publica una vulnerabilidad critica en el componente System</h3>
+            <span class="badge neutral">Hecho confirmado</span>
+          </div>
+          <p>La vulnerabilidad podria permitir RCE proximal/adyacente como usuario shell sin interaccion adicional.</p>
+          <a class="source-link" href="https://source.android.com/docs/security/bulletin/2026/2026-05-01" target="_blank" rel="noreferrer">https://source.android.com/docs/security/bulletin/2026/2026-05-01</a>
+        </article>
+        
+        <article class="panel news-item">
+          <div class="panel-head">
+            <h3>Siemens mayo 2026 mantiene alta densidad de vulnerabilidades OT/ICS</h3>
+            <span class="badge neutral">Hecho confirmado</span>
+          </div>
+          <p>INCIBE resume multiples CVEs criticas en activos industriales y de red de Siemens.</p>
+          <a class="source-link" href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026" target="_blank" rel="noreferrer">https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026</a>
+        </article>
+        
+        <article class="panel news-item">
+          <div class="panel-head">
+            <h3>La IA acelera el ritmo operativo del parcheo</h3>
+            <span class="badge neutral">Hecho confirmado</span>
+          </div>
+          <p>Microsoft advierte de un aumento de escala y velocidad en el descubrimiento de vulnerabilidades impulsado por IA.</p>
+          <a class="source-link" href="https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday" target="_blank" rel="noreferrer">https://www.microsoft.com/en-us/msrc/blog/2026/05/a-note-on-patch-tuesday</a>
+        </article>
+        </div>
+      <div class="panel" style="margin-top:18px;">
+        <h3>Alertas activas</h3>
+        <ul><li>PAN-OS CVE-2026-0300: tratar como exposicion urgente si User-ID Authentication Portal esta habilitado.</li><li>PAN-OS CVE-2026-0263 y CVE-2026-0265: revisar IKEv2 con PQC y Cloud Authentication Service en interfaces de gestion o acceso.</li><li>Exim CVE-2026-45185: priorizar si existe servicio SMTP expuesto o relay critico.</li><li>Android CVE-2026-0073: acelerar parches en dispositivos con privilegios administrativos o uso corporativo sensible.</li><li>Siemens mayo 2026: revisar backlog OT/ICS y compensar con segmentacion si el parcheo no es inmediato.</li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Recomendaciones Ejecutivas</h2>
+          <div class="section-subtitle">Priorizacion orientada a direccion, continuidad operativa y reduccion de superficie expuesta.</div>
+        </div>
+      </div>
+      <div class="priority-grid">
+        <article class="priority-card critical">
+          <h3>Critica</h3>
+          <ul><li>Restringir o deshabilitar de inmediato User-ID Authentication Portal en PAN-OS si no es imprescindible; aplicar el parche correspondiente sin esperar a ventana ordinaria.</li><li>Ejecutar caza de compromiso en firewalls perimetrales y revisar accesos de administracion, logs de autenticacion y cambios de configuracion desde el 5 de mayo.</li></ul>
+        </article>
+        
+        <article class="priority-card high">
+          <h3>Alta</h3>
+          <ul><li>Actualizar Exim a 4.99.3 donde aplique y, si no es posible hoy, aislar el servicio y reforzar monitorizacion del trafico SMTP/TLS.</li><li>Priorizar el ciclo de Microsoft de mayo en activos expuestos a Internet, servidores de colaboracion, identidad y puestos de administracion.</li><li>Revisar en PAN-OS el uso de IKEv2 con PQC y CAS para cerrar tambien las rutas CVE-2026-0263 y CVE-2026-0265.</li></ul>
+        </article>
+        
+        <article class="priority-card medium">
+          <h3>Media</h3>
+          <ul><li>Desplegar el parche Android de mayo en dispositivos corporativos privilegiados y reforzar politicas de movilidad segura.</li><li>Revisar inventario OT/ICS y planificar remediacion/segmentacion especifica para activos Siemens y brokers Artemis si existen dependencias operativas.</li></ul>
+        </article>
+        
+        <article class="priority-card low">
+          <h3>Baja</h3>
+          <ul><li>Actualizar el comite de direccion con una ventana de riesgo ampliada para perimetro, correo y OT durante las proximas 72 horas.</li><li>Ajustar playbooks para contemplar ataques mas automatizados y mas rapidos en superficie expuesta.</li></ul>
+        </article>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Seccion IA</h2>
+          <div class="section-subtitle">Analisis predictivo o estimativo por IA. Esta seccion separa estimacion de evidencia confirmada.</div>
+        </div>
+      </div>
+      <div class="columns-2">
+        <article class="panel">
+          <h3>Estimacion de riesgo</h3>
+          <p><strong>Riesgo global estimado:</strong> Alto</p>
+          <p><strong>Prediccion proxima:</strong> Es probable un aumento de escaneos oportunistas y de intentos de explotacion en perimetro durante las proximas 24-72 horas, especialmente en productos con alta visibilidad publica y parches recien publicados.</p>
+          <p><strong>Probabilidad de aumento de ataques:</strong> Alta (65-75%)</p>
+        </article>
+        <article class="panel">
+          <h3>Foco recomendado</h3>
+          <p><strong>Sectores mas expuestos:</strong></p>
+          <ul><li>Empresas con fuerte dependencia del perimetro VPN/firewall</li><li>Entornos industriales y utilities con activos Siemens</li><li>Organizaciones con correo autogestionado y MTA expuesto</li><li>Equipos con flota Android corporativa y roles privilegiados</li></ul>
+          <p><strong>Vulnerabilidades prioritarias:</strong> CVE-2026-0300, CVE-2026-45185, CVE-2026-0263, CVE-2026-0265, CVE-2026-0073</p>
+          <p><strong>Recomendacion automatica:</strong> Reducir tiempo de exposicion mas que aumentar complejidad: cerrar servicios no necesarios, limitar interfaces administrativas y acelerar validacion de parcheo en borde y correo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <h2>Estado de Entrega</h2>
+          <div class="section-subtitle">Estado local antes de persistencia y envio multicanal.</div>
+        </div>
+      </div>
+      <div class="columns-2">
+        <article class="panel">
+          <ul>
+            <li><strong>Informe generado:</strong> Completado</li>
+            <li><strong>Historico en GitHub:</strong> Pendiente durante la generacion local</li>
+            <li><strong>Correo HTML por Gmail:</strong> Pendiente</li>
+            <li><strong>PDF:</strong> No generado para evitar una entrega externa no verificada</li>
+            <li><strong>Imagenes por pagina:</strong> No generadas</li>
+            <li><strong>Google Drive:</strong> Omitido</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>Limitaciones relevantes</h3>
+          <ul><li>No se genera PDF en esta ejecucion para no declarar un artefacto no verificado fuera del workspace.</li><li>No se incluyen metricas globales de paises afectados o DDoS por falta de base suficiente y reciente en las fuentes revisadas.</li><li>La seccion IA esta marcada expresamente como estimativa y no sustituye evidencia confirmada.</li></ul>
+        </article>
+      </div>
+      <div class="footer-note">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</div>
+    </section>
+  </main>
+</body>
+</html>
