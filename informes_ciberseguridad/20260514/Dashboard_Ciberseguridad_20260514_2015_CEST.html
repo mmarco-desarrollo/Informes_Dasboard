@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo de Ciberseguridad | MMarco Seguridad</title>
+  <style>
+    :root {
+      --bg: #061018;
+      --bg2: #0d1824;
+      --panel: rgba(9, 22, 34, 0.78);
+      --panel-soft: rgba(13, 29, 43, 0.55);
+      --line: rgba(158, 202, 255, 0.14);
+      --text: #eef5fb;
+      --muted: #9db3c5;
+      --accent: #49dcb1;
+      --alert: #ff7d68;
+      --warn: #f5c05d;
+      --sky: #70b9ff;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(73, 220, 177, 0.14), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(112, 185, 255, 0.18), transparent 24%),
+        linear-gradient(180deg, #07111a 0%, #08131d 42%, #09131b 100%);
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.45;
+    }
+    .shell {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+    header {
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .brand-mark {
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 6px 0 0;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.02;
+      max-width: 10ch;
+    }
+    .lede {
+      max-width: 70ch;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .status-band {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .status-pill {
+      padding: 14px 16px;
+      background: linear-gradient(180deg, rgba(15, 33, 49, 0.92), rgba(9, 24, 37, 0.82));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      min-height: 92px;
+    }
+    .status-pill strong {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+    .status-pill span {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .status-pill small {
+      display: block;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .threat-high span { color: var(--alert); }
+    main {
+      display: grid;
+      gap: 22px;
+      padding-top: 28px;
+    }
+    section {
+      padding: 22px;
+      background: linear-gradient(180deg, var(--panel), rgba(7, 17, 27, 0.84));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    section h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      letter-spacing: 0.02em;
+    }
+    .section-note {
+      color: var(--muted);
+      margin: 0 0 16px;
+      max-width: 88ch;
+    }
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 22px;
+    }
+    .grid-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .kpi {
+      min-height: 150px;
+      padding: 16px;
+      background: linear-gradient(180deg, rgba(14, 31, 45, 0.88), rgba(10, 24, 36, 0.72));
+      border: 1px solid var(--line);
+    }
+    .kpi-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .kpi-value {
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 16px 0 10px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .kpi-context {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    li + li {
+      margin-top: 8px;
+    }
+    .feed-row + .feed-row {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+    .feed-tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border: 1px solid rgba(245, 192, 93, 0.24);
+      color: var(--warn);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .feed-row h3, .news-item h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+    .feed-row p, .news-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 12px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--sky);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .priority-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .priority-block {
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      min-height: 260px;
+    }
+    .priority-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sky);
+      margin-bottom: 12px;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .news-item {
+      padding: 16px;
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      min-height: 168px;
+    }
+    .news-type {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #9ed6ff;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    footer {
+      padding: 22px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 12px;
+      font-size: 13px;
+    }
+    .source-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    @media (max-width: 1100px) {
+      .status-band,
+      .grid-kpis,
+      .priority-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grid-two,
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 720px) {
+      .shell { width: min(100% - 20px, 1280px); }
+      .status-band,
+      .grid-kpis,
+      .priority-grid {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 18px;
+      }
+      th, td {
+        font-size: 13px;
+        padding: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand">
+        <div>
+          <div class="brand-mark">MMarco Seguridad</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+        </div>
+        <p class="lede">
+          Edicion programada de las 20:00. Informe ejecutivo con foco en explotacion activa, criticidades
+          recientes, exposicion prioritaria y medidas accionables para direccion.
+        </p>
+      </div>
+      <div class="status-band">
+        <div class="status-pill">
+          <strong>Fecha y hora</strong>
+          <span>2026-05-14 20:15:00 CEST</span>
+          <small>Europe/Madrid</small>
+        </div>
+        <div class="status-pill threat-high">
+          <strong>Nivel global de amenaza</strong>
+          <span>ALTO</span>
+          <small>Se mantiene un nivel ALTO por explotacion activa o intentos confirmados sobre firewalls perimetrales, un volumen elevado de criticidades en Microsoft/Siemens, y señal de escalado operativo mediante IA sobre superficies expuestas.</small>
+        </div>
+        <div class="status-pill">
+          <strong>Proxima actualizacion</strong>
+          <span>2026-05-15 00:15:00 CEST</span>
+          <small>Cadencia estimada del servicio</small>
+        </div>
+        <div class="status-pill">
+          <strong>Estado IA de riesgo</strong>
+          <span>Elevado (estimativo)</span>
+          <small>Seccion predictiva separada del hecho confirmado</small>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>KPIs principales</h2>
+        <p class="section-note">KPIs calculados sobre fuentes oficiales y priorizadas revisadas para esta edicion; no representan el universo completo de incidentes globales.</p>
+        <div class="grid-kpis">
+        <article class="kpi">
+          <div class="kpi-label">Campanas activas confirmadas</div>
+          <div class="kpi-value">2</div>
+          <div class="kpi-context">Interlock y acceso FortiGate escalado con IA</div>
+        </article>
+        
+
+        <article class="kpi">
+          <div class="kpi-label">KEV prioritarias</div>
+          <div class="kpi-value">2</div>
+          <div class="kpi-context">PAN-OS y Cisco FMC/SCC</div>
+        </article>
+        
+
+        <article class="kpi">
+          <div class="kpi-label">Boletines de alto impacto</div>
+          <div class="kpi-value">6</div>
+          <div class="kpi-context">Palo Alto, Android, Microsoft, Ivanti, Siemens, INCIBE OT</div>
+        </article>
+        
+
+        <article class="kpi">
+          <div class="kpi-label">Vulnerabilidades reportadas</div>
+          <div class="kpi-value">169</div>
+          <div class="kpi-context">Suma de boletines priorizados recientes</div>
+        </article>
+        
+
+        <article class="kpi">
+          <div class="kpi-label">Criticas observadas</div>
+          <div class="kpi-value">40</div>
+          <div class="kpi-context">14 Microsoft, 22 Siemens y 4 criticas unitarias</div>
+        </article>
+        
+
+        <article class="kpi">
+          <div class="kpi-label">Paises impactados</div>
+          <div class="kpi-value">55+</div>
+          <div class="kpi-context">Campana FortiGate observada por AWS</div>
+        </article>
+        
+
+        <article class="kpi">
+          <div class="kpi-label">Tendencia 24h</div>
+          <div class="kpi-value">Alta sostenida</div>
+          <div class="kpi-context">Estimativa basada en nuevos avisos criticos y explotacion perimetral</div>
+        </article>
+        
+
+        <article class="kpi">
+          <div class="kpi-label">Sectores mas expuestos</div>
+          <div class="kpi-value">Edge, Windows, OT, movilidad</div>
+          <div class="kpi-context">Segun las fuentes priorizadas revisadas</div>
+        </article>
+        </div>
+      </section>
+
+      <div class="grid-two">
+        <section>
+          <h2>Resumen ejecutivo</h2>
+          <p class="section-note">La presion principal sigue concentrada en el perimetro corporativo y en plataformas de administracion, con especial urgencia para firewalls, consolas de gestion y activos OT de energia.</p>
+          <p><strong>Riesgos dominantes</strong></p>
+          <ul><li>Exposicion de portales y consolas de administracion a internet con explotacion o intentos confirmados.</li>
+<li>Ventana de riesgo alta por el volumen de boletines criticos de mayo en Microsoft y Siemens.</li>
+<li>Aceleracion de ataques de baja sofisticacion apoyados en servicios GenAI y credenciales debiles.</li></ul>
+          <p style="margin-top:16px;"><strong>Exposicion estimada</strong></p>
+          <p class="section-note">Media-alta para pymes y empresas con gestion remota expuesta; alta para OT expuesto y equipos sin parche de mayo.</p>
+          <p><strong>Conclusion rapida</strong></p>
+          <ul><li>Confirmado: existe actividad real sobre firewalls y consolas de gestion.</li>
+<li>Confirmado: mayo acumula una carga elevada de criticidades en Microsoft y Siemens.</li>
+<li>Confirmado: Android mantiene una criticidad remota en el componente System.</li>
+<li>Estimativo: el volumen de abuso de IA por actores oportunistas seguira creciendo durante las proximas semanas.</li></ul>
+        </section>
+        <section>
+          <h2>Alertas activas</h2>
+          <ul><li>Critica inmediata: revisar PAN-OS con User-ID Authentication Portal habilitado y accesible desde zonas no confiables.</li>
+<li>Critica inmediata: verificar Cisco FMC/SCC y aplicar version corregida; no existe workaround efectivo.</li>
+<li>Alta: desplegar el ciclo de parches de Microsoft de mayo con especial foco en las 14 criticidades.</li>
+<li>Alta: revisar Siemens e Ingeteam en entornos OT/energia por la carga critica publicada por INCIBE.</li>
+<li>Alta: auditar FortiGate, cerrar puertos de gestion expuestos, aplicar MFA y rotar credenciales VPN.</li></ul>
+        </section>
+      </div>
+
+      <div class="grid-two">
+        <section>
+          <h2>Incidentes y actividad relevante</h2>
+          
+        <div class="feed-row">
+          <div class="feed-tag">Hecho confirmado</div>
+          <h3>Interlock explota Cisco FMC</h3>
+          <p>AWS identifica una campaña activa de Interlock explotando CVE-2026-20131, con indicios de uso 36 dias antes de la divulgacion publica.</p>
+        </div>
+        
+
+        <div class="feed-row">
+          <div class="feed-tag">Hecho confirmado</div>
+          <h3>Abuso de GenAI contra FortiGate</h3>
+          <p>AWS observa mas de 600 dispositivos comprometidos en 55+ paises mediante puertos de gestion expuestos y credenciales debiles, sin zero-day.</p>
+        </div>
+        
+
+        <div class="feed-row">
+          <div class="feed-tag">Hecho confirmado</div>
+          <h3>Explotacion limitada en PAN-OS</h3>
+          <p>Palo Alto confirma explotacion limitada de CVE-2026-0300 en portales User-ID expuestos a IPs no confiables o internet.</p>
+        </div>
+        
+          <p style="margin:16px 0 8px;"><strong>Vectores mas usados</strong></p>
+          <ul><li>Interfaces de gestion expuestas</li>
+<li>Portales de autenticacion perimetral</li>
+<li>Deserializacion insegura en interfaces web</li>
+<li>Credenciales reutilizadas o debiles</li></ul>
+        </section>
+        <section>
+          <h2>Distribucion y tendencia</h2>
+          <p class="section-note">Global, con concentraciones de la campana FortiGate en Asia del Sur, America Latina y Caribe, Africa Occidental, Norte de Europa y Sudeste Asiatico.</p>
+          <p class="section-note">Mayor presion sobre dispositivos perimetrales y consolas de administracion accesibles desde internet.</p>
+          <p><strong>Lectura 24h frente a 7 dias</strong></p>
+          <p class="section-note">No hay un feed consolidado comparable 24h/7d en todas las fuentes. La lectura ejecutiva es de riesgo elevado sostenido, no de relajacion.</p>
+          <p><strong>Recomendacion ejecutiva principal</strong></p>
+          <p class="section-note">Cerrar hoy mismo la exposicion de interfaces de administracion, aplicar parches urgentes en PAN-OS/Cisco/Microsoft y forzar MFA y rotacion de credenciales en acceso remoto y VPN.</p>
+        </section>
+      </div>
+
+      <section>
+        <h2>Vulnerabilidades criticas priorizadas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto afectado</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Estado de explotacion</th>
+              <th>Parche / mitigacion</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td>CVE-2026-0300</td>
+          <td>Palo Alto Networks PAN-OS User-ID Authentication Portal</td>
+          <td>9.3</td>
+          <td>Critica</td>
+          <td>Activa / KEV / ATTACKED</td>
+          <td>Parches disponibles desde 2026-05-13 segun rama; mitigar restringiendo el portal o deshabilitandolo.</td>
+          <td>Critica inmediata</td>
+        </tr>
+        
+
+        <tr>
+          <td>CVE-2026-20131</td>
+          <td>Cisco Secure Firewall Management Center / SCC Firewall Management</td>
+          <td>10.0</td>
+          <td>Critica</td>
+          <td>Intentos confirmados / KEV / campaña Interlock</td>
+          <td>Actualizar a versiones corregidas; no hay workaround efectivo.</td>
+          <td>Critica inmediata</td>
+        </tr>
+        
+
+        <tr>
+          <td>CVE-2026-0073</td>
+          <td>Android System component</td>
+          <td>Critica (boletin Android)</td>
+          <td>Critica</td>
+          <td>No confirmada en el boletin; alto impacto</td>
+          <td>Nivel de parche 2026-05-01 o posterior.</td>
+          <td>Alta en flota movil</td>
+        </tr>
+        
+
+        <tr>
+          <td>CVE-2026-8072</td>
+          <td>Ingeteam Ingecon Sun EMS Board</td>
+          <td>9.2</td>
+          <td>Critica</td>
+          <td>No confirmada; 0day coordinado por INCIBE</td>
+          <td>Actualizar a firmware corregido publicado por el fabricante.</td>
+          <td>Alta en energia / OT</td>
+        </tr>
+        
+
+        <tr>
+          <td>CVE-2026-8043 / CVE-2026-8111</td>
+          <td>Ivanti Xtraction / Ivanti Endpoint Manager</td>
+          <td>Critica + alta</td>
+          <td>Critica y alta</td>
+          <td>No confirmada en la fuente revisada</td>
+          <td>Actualizar a 2026.2, 2024 SU6, 22.9r4 y 22.8R6 segun producto.</td>
+          <td>Alta</td>
+        </tr>
+        </tbody>
+        </table>
+      </section>
+
+      <div class="grid-two">
+        <section>
+          <h2>Malware y ransomware</h2>
+          <p class="section-note"><strong>Familias activas:</strong> Interlock</p>
+          <p class="section-note"><strong>Sectores objetivo:</strong> Empresas con firewalls perimetrales, Entornos con backups y AD accesibles desde segmentos comprometidos</p>
+          <p class="section-note"><strong>Tecnicas:</strong> Explotacion edge para acceso inicial, Implantes fileless, Herramientas personalizadas, Doble extorsion</p>
+          <p class="section-note"><strong>IOCs principales:</strong> 206.251.239[.]164, 199.217.98[.]153, 89.46.237[.]33, browser-updater[.]com, os-update-server[.]com</p>
+          <p class="section-note"><strong>Tendencia:</strong> Activa | <strong>Nivel de propagacion:</strong> Selectiva pero madura, con foco en dispositivos perimetrales y movimiento posterior hacia AD y backups.</p>
+        </section>
+        <section>
+          <h2>Noticias importantes</h2>
+          <div class="news-grid">
+        <article class="news-item">
+          <div class="news-type">Vulnerabilidad critica / explotacion activa</div>
+          <h3>Palo Alto publica parches para una critica en PAN-OS ya atacada en produccion</h3>
+          <p><a href="https://security.paloaltonetworks.com/CVE-2026-0300">https://security.paloaltonetworks.com/CVE-2026-0300</a></p>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="news-type">Boletin oficial</div>
+          <h3>Android corrige CVE-2026-0073, una RCE critica en el componente System</h3>
+          <p><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01">https://source.android.com/docs/security/bulletin/2026/2026-05-01</a></p>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="news-type">Patch wave</div>
+          <h3>Microsoft mayo 2026: 137 vulnerabilidades, 14 criticas</h3>
+          <p><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026">https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026</a></p>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="news-type">OT / infraestructura critica</div>
+          <h3>INCIBE destaca 22 vulnerabilidades criticas en productos Siemens para entornos industriales</h3>
+          <p><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026">https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026</a></p>
+        </article>
+        
+
+        <article class="news-item">
+          <div class="news-type">IA aplicada a ciberataques</div>
+          <h3>AWS documenta una campana de acceso a FortiGate a escala amplificada con GenAI</h3>
+          <p><a href="https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/">https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/</a></p>
+        </article>
+        </div>
+        </section>
+      </div>
+
+      <section>
+        <h2>Recomendaciones ejecutivas</h2>
+        <div class="priority-grid">
+        <section class="priority-block">
+          <div class="priority-title">Critica</div>
+          <ul><li>Bloquear o retirar de internet todas las interfaces de administracion, portales cautivos y consolas de seguridad no imprescindibles.</li>
+<li>Aplicar hoy los parches o mitigaciones de PAN-OS CVE-2026-0300 y Cisco FMC CVE-2026-20131.</li>
+<li>Forzar MFA y rotacion inmediata de credenciales administrativas, VPN y cuentas de backup si existe exposicion remota.</li></ul>
+        </section>
+        
+
+        <section class="priority-block">
+          <div class="priority-title">Alta</div>
+          <ul><li>Priorizar el ciclo de parches de Microsoft de mayo y el boletin Android 2026-05-01 en endpoints corporativos.</li>
+<li>Revisar exposicion de FortiGate, deshabilitar gestion directa desde internet y auditar reutilizacion de contrasenas con AD.</li>
+<li>En OT, validar firmware corregido para Ingeteam y revisar el paquete mensual de Siemens en activos criticos.</li></ul>
+        </section>
+        
+
+        <section class="priority-block">
+          <div class="priority-title">Media</div>
+          <ul><li>Buscar actividad post-explotacion en AD, Veeam, VPN y nuevas tareas programadas o cuentas de servicio anomales.</li>
+<li>Actualizar reglas de deteccion para IOCs y comportamientos asociados a Interlock y abuso de herramientas legitimas.</li></ul>
+        </section>
+        
+
+        <section class="priority-block">
+          <div class="priority-title">Baja</div>
+          <ul><li>Reforzar simulaciones de phishing y controles de concienciacion para reducir el impacto de campanas oportunistas.</li>
+<li>Documentar un inventario ejecutivo de superficies expuestas para seguimiento diario por direccion y operaciones.</li></ul>
+        </section>
+        </div>
+      </section>
+
+      <section>
+        <h2>Seccion IA</h2>
+        <p class="section-note"><strong>Analisis predictivo o estimativo.</strong> Esta seccion no debe interpretarse como confirmacion de incidente.</p>
+        <p class="section-note"><strong>Riesgo global estimado:</strong> Elevado | <strong>Probabilidad de aumento de ataques:</strong> Alta</p>
+        <p class="section-note"><strong>Sectores mas expuestos:</strong> Pymes con firewalls mal expuestos, OT/energia, Organizaciones con MFA incompleto, Equipos con backlog de parcheo</p>
+        <p class="section-note"><strong>Vulnerabilidades prioritarias:</strong> CVE-2026-0300, CVE-2026-20131, CVE-2026-0073, CVE-2026-8072</p>
+        <ul><li>Es probable que continue el abuso de servicios GenAI comerciales para reconocimiento, automatizacion de scripts y priorizacion de blancos.</li>
+<li>Los dispositivos perimetrales y los entornos con gestion remota expuesta seguiran siendo la via mas rentable para actores oportunistas.</li></ul>
+        <p class="section-note" style="margin-top:16px;"><strong>Recomendacion automatica:</strong> Reducir superficie expuesta y endurecer credenciales ofrece mejor retorno inmediato que esperar a nuevas firmas o inteligencia adicional.</p>
+        <p class="section-note">Las predicciones se basan en tendencias observadas por AWS y Google Cloud; no son hechos confirmados.</p>
+      </section>
+
+      <section>
+        <h2>Fuentes revisadas</h2>
+        <p class="source-note">Prioridad aplicada: fuentes oficiales, institucionales y de fabricante. Se excluye informacion no verificable.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Fuente</th>
+              <th>Fecha</th>
+              <th>Nota</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td>Palo Alto Networks Advisory CVE-2026-0300</td>
+          <td>2026-05-05 / updated 2026-05-13</td>
+          <td>PAN-OS User-ID Authentication Portal, CVSS 9.3, exploit maturity ATTACKED, limited exploitation observed.</td>
+        </tr>
+        
+
+        <tr>
+          <td>NVD CVE-2026-0300</td>
+          <td>NVD published 2026-05-06 / modified 2026-05-12</td>
+          <td>Listed in CISA KEV on 2026-05-06 with due date 2026-05-09.</td>
+        </tr>
+        
+
+        <tr>
+          <td>Cisco Advisory CVE-2026-20131</td>
+          <td>2026-03-04 / updated 2026-03-25</td>
+          <td>Critical FMC/SCC deserialization bug, CVSS 10.0, no workarounds, attempted exploitation observed.</td>
+        </tr>
+        
+
+        <tr>
+          <td>NVD CVE-2026-20131</td>
+          <td>NVD published 2026-03-04 / modified 2026-03-25</td>
+          <td>Listed in CISA KEV on 2026-03-19 with due date 2026-03-22.</td>
+        </tr>
+        
+
+        <tr>
+          <td>AWS Security Blog - Interlock</td>
+          <td>2026-03-18</td>
+          <td>Active Interlock ransomware campaign exploiting CVE-2026-20131; exploitation seen 36 days before disclosure.</td>
+        </tr>
+        
+
+        <tr>
+          <td>Android Security Bulletin - May 2026</td>
+          <td>2026-05-04 / updated 2026-05-07</td>
+          <td>Critical System component RCE, CVE-2026-0073, fixed at patch level 2026-05-01.</td>
+        </tr>
+        
+
+        <tr>
+          <td>INCIBE - Microsoft updates May 2026</td>
+          <td>2026-05-13</td>
+          <td>137 vulnerabilities, including 14 critical.</td>
+        </tr>
+        
+
+        <tr>
+          <td>INCIBE - Ivanti vulnerabilities</td>
+          <td>2026-05-13</td>
+          <td>7 vulnerabilities in four advisories, including one critical and multiple RCE/privilege escalation issues.</td>
+        </tr>
+        
+
+        <tr>
+          <td>INCIBE SCI - Siemens May 2026</td>
+          <td>2026-05-12</td>
+          <td>22 critical vulnerabilities across Siemens products affecting industrial environments.</td>
+        </tr>
+        
+
+        <tr>
+          <td>INCIBE SCI - Ingecon EMS Board</td>
+          <td>2026-05-12</td>
+          <td>CVE-2026-8072, CVSS v4 9.2, critical issue affecting remote management in solar energy infrastructure.</td>
+        </tr>
+        
+
+        <tr>
+          <td>AWS Security Blog - AI-augmented FortiGate access</td>
+          <td>2026-02-20</td>
+          <td>Over 600 FortiGate devices across more than 55 countries compromised via exposed management and weak credentials, scaled with commercial GenAI.</td>
+        </tr>
+        </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</p>
+    </footer>
+  </div>
+</body>
+</html>
