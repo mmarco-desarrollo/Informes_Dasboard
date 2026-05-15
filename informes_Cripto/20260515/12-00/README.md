@@ -1,4 +1,4 @@
-# Crypto Insights | 2026-05-15 12:00
+# Crypto Insights | 2026-05-15 12:05
 
 - Marca: MMarco Seguridad
 - Fecha: 15 May 2026
@@ -14,7 +14,7 @@ BTC conserva liderazgo estructural con dominancia alta, mientras SOL, BNB, XRP, 
 ## Archivos
 
 - Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260515/12-00/dashboard.html
-- Dashboard PDF: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260515/12-00/dashboard.pdf
+- Dashboard PDF: incidencia operativa de enlace externo; distribuido por adjunto en Gmail en esta ejecucion
 - Dataset local de apoyo: market_snapshot.json
 
 ## Nota operativa
