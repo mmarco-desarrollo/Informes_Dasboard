@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "edition": "Edicion 08:00 CEST",
+    "generated_at": "15/05/2026 08:15 CEST",
+    "timezone": "Europe/Madrid",
+    "next_update": "15/05/2026 12:00 CEST",
+    "global_threat_level": "ALTO",
+    "threat_trend_24h": "ALCISTA",
+    "ai_risk_state": "ALTO",
+    "scope_note": "KPIs y prioridades calculados sobre fuentes oficiales y publicaciones verificables monitorizadas entre el 9 y el 15 de mayo de 2026, con enfasis en las ultimas 24-72 horas."
+  },
+  "kpis": [
+    {
+      "label": "Amenazas phishing por email Q1 2026",
+      "value": "8.3B",
+      "note": "Microsoft Threat Intelligence"
+    },
+    {
+      "label": "Ataques BEC Q1 2026",
+      "value": "10.7M",
+      "note": "Microsoft Threat Intelligence"
+    },
+    {
+      "label": "Usuarios objetivo campana AiTM",
+      "value": ">35k",
+      "note": "14-16 abril 2026"
+    },
+    {
+      "label": "Organizaciones objetivo campana AiTM",
+      "value": ">13k",
+      "note": "26 paises"
+    },
+    {
+      "label": "Vulnerabilidades Microsoft mayo 2026",
+      "value": "137",
+      "note": "14 criticas"
+    },
+    {
+      "label": "Alertas criticas priorizadas",
+      "value": "7",
+      "note": "Seleccion operativa"
+    },
+    {
+      "label": "Incidentes de ciberseguridad en Espana 2025",
+      "value": "122,223",
+      "note": "Balance INCIBE 2025"
+    },
+    {
+      "label": "Incidentes phishing en Espana 2025",
+      "value": "25,133",
+      "note": "Balance INCIBE 2025"
+    }
+  ],
+  "executive_summary": {
+    "state": "La ciberamenaza se mantiene en nivel ALTO con sesgo alcista por la combinacion de explotacion activa en perimetro, acumulacion de parches criticos de mayo y crecimiento sostenido del robo de credenciales.",
+    "main_risks": [
+      "Explotacion activa de PAN-OS CVE-2026-0300 en portales User-ID expuestos a Internet.",
+      "Oleada de vulnerabilidades criticas y de red en Microsoft, con especial prioridad en DNS Client y Netlogon por su alcance transversal.",
+      "Incremento y sofisticacion del phishing de robo de tokens y sesiones, con AiTM, QR phishing y CAPTCHA como tecnicas dominantes.",
+      "Riesgo elevado en entornos OT e industriales por las alertas criticas de Siemens e Ingeteam y por la sensibilidad del sector energia.",
+      "Presion continuada de ransomware oportunista sobre activos perimetrales vulnerables, ejemplificada por operaciones Medusa con weaponization rapida de N-days."
+    ],
+    "sectors": [
+      "Sanidad",
+      "Financiero",
+      "Servicios profesionales",
+      "Tecnologia",
+      "Energia e industria"
+    ],
+    "techniques": [
+      "AiTM phishing",
+      "QR phishing",
+      "CAPTCHA-gated phishing",
+      "Explotacion de N-days en perimetro",
+      "Uso de herramientas legitimas de acceso remoto"
+    ],
+    "estimated_exposure": "Media-alta para pymes y organizaciones con correo Microsoft 365, firewalls expuestos, Exim accesible desde Internet y activos OT conectados.",
+    "executive_recommendation": "Tratar las proximas 24 horas como ventana de contencion prioritaria: reducir exposicion externa, aplicar parches de perimetro y correo, y desplegar hunting focalizado en robo de credenciales, Quick Assist/Teams, RMM no autorizado y actividad anomala en autenticacion.",
+    "quick_conclusion": [
+      "La prioridad numero uno es contener riesgo en el perimetro de autenticacion y firewall.",
+      "El riesgo de compromiso por phishing sigue siendo mas probable que un exploit sofisticado aislado.",
+      "Entornos OT y energia merecen seguimiento especifico por criticidad operacional.",
+      "La combinacion de parcheo acelerado y control de acceso remoto reduce significativamente la exposicion inmediata."
+    ]
+  },
+  "alerts": [
+    {
+      "title": "PAN-OS CVE-2026-0300 con explotacion activa",
+      "priority": "Critica",
+      "detail": "La vulnerabilidad afecta al User-ID Authentication Portal de PAN-OS y permite ejecucion de codigo como root sin autenticacion. Palo Alto e INCIBE confirman explotacion cuando el portal esta expuesto a IPs no confiables; NVD indica inclusion en CISA KEV con fecha 06/05/2026.",
+      "action": "Aplicar parches disponibles y, de forma inmediata, restringir el portal a zonas de confianza o deshabilitarlo si no es necesario."
+    },
+    {
+      "title": "Mayo 2026 de Microsoft abre una ventana de parcheo de alto impacto",
+      "priority": "Critica",
+      "detail": "Microsoft publico 137 vulnerabilidades con 14 criticas. Entre las mas sensibles destacan CVE-2026-41089 (Netlogon RCE) y CVE-2026-41096 (DNS Client RCE), ambas con alcance potencialmente transversal.",
+      "action": "Priorizar Windows expuesto, servidores, controladores de dominio y puestos con funciones administrativas; validar despliegue en menos de 24 horas."
+    },
+    {
+      "title": "Exim 4.97-4.99.2: RCE critica en determinadas configuraciones GnuTLS",
+      "priority": "Alta",
+      "detail": "CVE-2026-45185 permite corrupcion de memoria y posible RCE remota no autenticada en el path BDAT/CHUNKING. El fix esta en Exim 4.99.3.",
+      "action": "Actualizar de inmediato y revisar exposicion de servicios SMTP accesibles desde Internet, especialmente en hosting y correo propio."
+    },
+    {
+      "title": "Ivanti concentra debilidades de acceso y ejecucion remota",
+      "priority": "Alta",
+      "detail": "El paquete de mayo incluye vulnerabilidades en Xtraction, Endpoint Manager, Virtual Traffic Manager y Secure Access Client. El impacto combina lectura de ficheros, escritura arbitraria, RCE y elevacion de privilegios.",
+      "action": "Actualizar a 2026.2, 2024 SU6, 22.9r4 y 22.8R6 segun producto, y revisar cuentas privilegiadas y accesos remotos."
+    },
+    {
+      "title": "OT/energia: riesgo elevado por Ingeteam y Siemens",
+      "priority": "Alta",
+      "detail": "INCIBE coordino la publicacion de CVE-2026-8072 en Ingecon Sun EMS Board con CVSS v4 9.2. Siemens reporto 22 vulnerabilidades criticas en su ronda mensual de mayo.",
+      "action": "Segmentar, validar parches y restringir accesos remotos y de mantenimiento en entornos industriales y energeticos."
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Campana AiTM de 'code of conduct'",
+      "status": "Hecho confirmado",
+      "detail": "Microsoft observo entre el 14 y el 16 de abril una campana que apunto a mas de 35.000 usuarios en mas de 13.000 organizaciones de 26 paises, con mayoria en EE. UU. El flujo uso PDFs, dominios controlados por atacantes, CAPTCHA y robo de tokens de sesion.",
+      "impacted": "Sanidad, financiero, servicios profesionales y tecnologia",
+      "takeaway": "El control de sesiones y MFA resistente a phishing es ahora tan prioritario como el filtrado de email."
+    },
+    {
+      "name": "Phishing en plataformas colaborativas con Teams + Quick Assist",
+      "status": "Seguimiento activo",
+      "detail": "INCIBE documento una campana publicada el 9 de abril que combina email bombing, suplantacion de soporte en Microsoft Teams y uso de Quick Assist para desplegar A0Backdoor y preparar robo de informacion o ransomware.",
+      "impacted": "Financiero y sanitario",
+      "takeaway": "Las herramientas legitimas de asistencia remota deben tratarse como superficie de riesgo y quedar sometidas a politica y telemetria."
+    },
+    {
+      "name": "Tycoon2FA, QR phishing y CAPTCHA-gated phishing",
+      "status": "Hecho confirmado",
+      "detail": "En Q1 2026 Microsoft detecto 8.3 mil millones de amenazas phishing por email. El QR phishing fue el vector de mayor crecimiento y Tycoon2FA redujo un 15% su volumen tras la disrupcion de marzo, aunque adapto infraestructura y dominios.",
+      "impacted": "Organizaciones con Microsoft 365 y correo cloud",
+      "takeaway": "La superficie de credenciales sigue siendo el vector dominante para acceso inicial."
+    },
+    {
+      "name": "Medusa / Storm-1175",
+      "status": "Hecho confirmado",
+      "detail": "Microsoft describe operaciones de ransomware de alta velocidad que explotan activos web vulnerables y pueden pasar de acceso inicial a impacto en uno o pocos dias, con fuerte incidencia reciente en sanidad.",
+      "impacted": "Sanidad, educacion, finanzas y servicios profesionales",
+      "takeaway": "Las ventanas entre divulgacion y parcheo siguen siendo el mejor punto de entrada para ransomware oportunista."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS User-ID Authentication Portal",
+      "cvss": "9.8 (CVSS v3.1)",
+      "severity": "Critica",
+      "exploitation": "Si, explotacion activa y presencia en CISA KEV",
+      "patch": "Parches escalonados 13-28 mayo 2026; mitigacion inmediata disponible",
+      "priority": "Critica",
+      "source": "INCIBE / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-45185",
+      "product": "Exim 4.97-4.99.2",
+      "cvss": "9.8 (CNA/MITRE)",
+      "severity": "Critica",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Actualizar a Exim 4.99.3",
+      "priority": "Alta",
+      "source": "INCIBE / NVD / Exim"
+    },
+    {
+      "cve": "CVE-2026-8072",
+      "product": "Ingecon Sun EMS Board",
+      "cvss": "9.2 (CVSS v4.0)",
+      "severity": "Critica",
+      "exploitation": "No confirmada publicamente; 0day coordinada por INCIBE",
+      "patch": "Parche disponible en versiones mitigadas publicadas por el fabricante",
+      "priority": "Critica",
+      "source": "INCIBE"
+    },
+    {
+      "cve": "CVE-2026-8043",
+      "product": "Ivanti Xtraction",
+      "cvss": "N/D publico consolidado",
+      "severity": "Critica",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Actualizar a 2026.2",
+      "priority": "Alta",
+      "source": "INCIBE / NVD / Ivanti"
+    },
+    {
+      "cve": "CVE-2026-8111",
+      "product": "Ivanti Endpoint Manager",
+      "cvss": "N/D publico consolidado",
+      "severity": "Alta",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Actualizar a 2024 SU6",
+      "priority": "Alta",
+      "source": "INCIBE / Ivanti"
+    },
+    {
+      "cve": "CVE-2026-41096",
+      "product": "Windows DNS Client",
+      "cvss": "N/D publico consolidado",
+      "severity": "Critica",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Aplicar actualizaciones de seguridad de Microsoft de mayo 2026",
+      "priority": "Alta",
+      "source": "INCIBE / Microsoft"
+    },
+    {
+      "cve": "CVE-2026-41089",
+      "product": "Windows Netlogon",
+      "cvss": "N/D publico consolidado",
+      "severity": "Critica",
+      "exploitation": "No confirmada publicamente",
+      "patch": "Aplicar actualizaciones de seguridad de Microsoft de mayo 2026",
+      "priority": "Alta",
+      "source": "INCIBE / Microsoft"
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      "Medusa ransomware",
+      "A0Backdoor",
+      "Tycoon2FA (PhaaS)",
+      "BadBox botnet (contexto Google anti-fraude)"
+    ],
+    "sectors": [
+      "Sanidad",
+      "Finanzas",
+      "Tecnologia",
+      "Energia",
+      "Servicios profesionales"
+    ],
+    "techniques": [
+      "Explotacion de activos web vulnerables",
+      "RMM legitimo",
+      "Quick Assist",
+      "AiTM",
+      "Exfiltracion previa al cifrado"
+    ],
+    "iocs_note": "No se incluyen IOCs operativos en este informe ejecutivo para evitar ruido; se recomienda extraccion tactica desde Microsoft Defender, CISA e informes tecnicos asociados si se requiere hunting detallado.",
+    "trend": "Persistencia alta del ransomware oportunista y del robo de credenciales con servicios phishing-as-a-service y abuso de herramientas legitimas.",
+    "propagation": "Media-alta en organizaciones con perimetro expuesto, correo cloud y controles de acceso remoto laxos."
+  },
+  "news": [
+    "Microsoft publico 137 vulnerabilidades en mayo de 2026, 14 de ellas criticas, con impacto en Windows, Azure, Office y componentes de red.",
+    "Microsoft detallo una campana AiTM multietapa de alta escala con mas de 35.000 usuarios objetivo y robo de tokens de sesion.",
+    "Google reforzo su narrativa anti-fraude: afirma bloquear casi 15.000 millones de emails no deseados al dia y apoyo en una base de mas de 1.2 mil millones de senales en GSE.",
+    "Google anuncio nuevas protecciones Android 2026 orientadas a banking scam calls, abuso de accesibilidad, APKs maliciosos y proteccion de OTPs.",
+    "INCIBE publico una 0day critica en Ingeteam para entorno solar y un lote amplio de avisos criticos en Microsoft, Ivanti, Exim y Siemens."
+  ],
+  "recommendations": {
+    "critica": [
+      "Cerrar o restringir hoy mismo cualquier portal PAN-OS User-ID expuesto a Internet y validar si existe exposicion historica.",
+      "Aplicar el ciclo urgente de parches de Microsoft mayo 2026, Exim 4.99.3 e Ivanti segun producto.",
+      "Bloquear o gobernar Quick Assist, AnyDesk y otros RMM no aprobados; revisar Teams y autenticaciones anomalias."
+    ],
+    "alta": [
+      "Forzar MFA resistente a phishing para cuentas privilegiadas y correo corporativo; priorizar FIDO2, passkeys o equivalentes.",
+      "Ejecutar hunting sobre clics en URLs maliciosas, tokens de sesion anómalos, logins imposibles, QR phishing y CAPTCHA previos al login.",
+      "Revisar activos OT/energia y segmentar accesos de mantenimiento, con inventario y reduccion de exposicion remota."
+    ],
+    "media": [
+      "Actualizar playbooks de respuesta para phishing con robo de sesion y para abuso de herramientas legitimas de soporte.",
+      "Reforzar formacion a usuarios con foco en PDFs con enlaces, Teams/Quick Assist y mensajes urgentes de compliance o RRHH."
+    ],
+    "baja": [
+      "Consolidar inventario de exposicion externa y calendario de parcheo basado en KEV/NVD/INCIBE para proximas ediciones.",
+      "Planificar indicadores ejecutivos estables para seguimiento semanal y mensual."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo generado por IA",
+    "global_estimated_risk": "ALTO",
+    "forecast": [
+      "Alta probabilidad de continuidad del phishing de robo de credenciales y de tokens en las proximas 72 horas.",
+      "Probabilidad media-alta de escaneo oportunista sobre PAN-OS, Exim y otros servicios expuestos tras la divulgacion reciente.",
+      "Probabilidad alta de intentos de intrusion sobre entornos sanitarios, financieros y energeticos por su valor operativo y sensibilidad de datos."
+    ],
+    "most_exposed_sectors": [
+      "Sanidad",
+      "Finanzas",
+      "Energia",
+      "Tecnologia",
+      "Administracion y servicios intensivos en correo"
+    ],
+    "priority_vulns": [
+      "CVE-2026-0300",
+      "CVE-2026-45185",
+      "CVE-2026-8072",
+      "CVE-2026-41096",
+      "CVE-2026-41089"
+    ],
+    "attack_increase_probability": "Alta durante la ventana de 3 a 5 dias posterior a la publicacion de parches y avisos criticos.",
+    "automatic_recommendation": "Activar modo de defensa reforzada en correo, identidades y perimetro hasta completar parcheo y validacion de telemetria.",
+    "disclaimer": "Esta seccion es estimativa. No confirma actividad futura; sintetiza tendencias observadas en fuentes oficiales y de alta confianza."
+  },
+  "spain_context": {
+    "summary": "El Balance de Ciberseguridad 2025 de INCIBE, publicado en mayo de 2026, confirma una superficie de riesgo elevada para Espana.",
+    "facts": [
+      "122.223 incidentes de ciberseguridad en 2025.",
+      "55.411 incidentes relacionados con malware.",
+      "25.133 incidentes de phishing.",
+      "392 incidentes de ransomware.",
+      "237.028 sistemas vulnerables detectados.",
+      "85% de los sistemas en botnet se relacionan con dispositivos IoT."
+    ]
+  },
+  "sources": [
+    {
+      "name": "Microsoft Security Blog - AiTM campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "type": "official"
+    },
+    {
+      "name": "Microsoft Security Blog - Email threat landscape Q1 2026",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/",
+      "type": "official"
+    },
+    {
+      "name": "Microsoft Security Blog - Storm-1175 and Medusa",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/",
+      "type": "official"
+    },
+    {
+      "name": "Microsoft Security Blog - AI-powered vulnerability discovery",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Microsoft mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Ivanti mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-2",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Exim CVE-2026-45185",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Ingecon EMS Board CVE-2026-8072",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos-sci/generacion-insegura-de-credenciales-de-acceso-sat-en-ingecon-ems-board",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Siemens mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Teams + Quick Assist campaign",
+      "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Balance de Ciberseguridad 2025",
+      "url": "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf",
+      "type": "official"
+    },
+    {
+      "name": "Google - scams and fraud protection",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/scams-fraud-protection/",
+      "type": "official"
+    },
+    {
+      "name": "Google - Android security 2026",
+      "url": "https://blog.google/security/whats-new-in-android-security-privacy-2026/",
+      "type": "official"
+    },
+    {
+      "name": "NVD - CVE-2026-0300",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+      "type": "official"
+    },
+    {
+      "name": "NVD - CVE-2026-45185",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45185",
+      "type": "official"
+    },
+    {
+      "name": "NVD - CVE-2026-8043",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8043",
+      "type": "official"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
