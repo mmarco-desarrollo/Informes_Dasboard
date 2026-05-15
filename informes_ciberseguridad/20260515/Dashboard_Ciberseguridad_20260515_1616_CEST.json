@@ -1,0 +1,392 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "edition": "Edicion 16:00 CEST",
+  "generated_at": "2026-05-15 16:16:37 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "next_update": "2026-05-15 20:00:00 CEST",
+  "ai_risk_state": "Probable aumento de phishing asistido por IA en 48-72h",
+  "repository": "mmarco-desarrollo/Informes_Dasboard",
+  "github_day_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260515",
+  "github_html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_1616_CEST.html",
+  "github_json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_1616_CEST.json",
+  "kpis": [
+    {
+      "label": "Incidentes activos confirmados",
+      "value": "2",
+      "note": "Microsoft AiTM y UAT-4356"
+    },
+    {
+      "label": "Incidentes criticos",
+      "value": "2",
+      "note": "Perimetro y robo de credenciales"
+    },
+    {
+      "label": "Vulnerabilidades nuevas priorizadas",
+      "value": "170",
+      "note": "Lotes Microsoft, Siemens, Ivanti y avisos criticos asociados"
+    },
+    {
+      "label": "CVEs criticas monitorizadas",
+      "value": "40",
+      "note": "14 Microsoft, 22 Siemens y 4 criticas adicionales priorizadas"
+    },
+    {
+      "label": "Campanas de phishing confirmadas",
+      "value": "2",
+      "note": "AiTM y phishing con IA/Softr"
+    },
+    {
+      "label": "Ransomware confirmado en la muestra",
+      "value": "0",
+      "note": "Talos no observo despliegues consumados en Q1"
+    },
+    {
+      "label": "Paises afectados en campana Microsoft",
+      "value": "26",
+      "note": "EE. UU. concentrando el 92%"
+    },
+    {
+      "label": "Nivel de riesgo global",
+      "value": "ALTO",
+      "note": "Presion creciente sobre identidad, correo y perimetro"
+    }
+  ],
+  "top_findings": [
+    "Microsoft encadena un ciclo de 137 vulnerabilidades en mayo, 14 criticas, incluyendo RCE de red en Windows Netlogon, DNS y Dynamics 365 on-premises.",
+    "Microsoft y Cisco confirman presion sostenida sobre identidad y perimetro: AiTM a gran escala y actividad continuada contra Cisco Firepower con backdoor FIRESTARTER.",
+    "Exim, FortiAuthenticator, Android e Ivanti publicaron vulnerabilidades de alto impacto entre el 12 y el 13 de mayo y requieren parcheo acelerado.",
+    "OT y energia mantienen tension alta: Siemens publica 22 vulnerabilidades criticas y INCIBE coordina una vulnerabilidad critica en Ingecon EMS Board.",
+    "La barrera de entrada del phishing sigue bajando: Talos documenta uso de Softr para generar paginas de robo de credenciales y Microsoft sigue observando CAPTCHA gates, QR y AiTM."
+  ],
+  "executive_summary": {
+    "estado_global": "La ciberamenaza se mantiene en nivel ALTO con dos focos dominantes: identidad/correo y perimetro expuesto. La ventana 12-15 de mayo deja una combinacion exigente de alto volumen de parches, varias RCE de red y campanas activas de phishing/AiTM.",
+    "principales_riesgos": [
+      "RCE de red en Windows Netlogon, Windows DNS y Dynamics 365 on-premises.",
+      "Robo de credenciales y secuestro de sesion mediante AiTM y phishing escalable con IA.",
+      "Exposicion de appliances de autenticacion, correo y perimetro (FortiAuthenticator, Cisco Firepower, Ivanti vTM, Exim).",
+      "Riesgo OT/energia por nuevos boletines criticos de Siemens e Ingeteam."
+    ],
+    "sectores_afectados": [
+      "Administracion publica",
+      "Sanidad",
+      "Empresas con Microsoft 365 y correo expuesto",
+      "Industria y energia",
+      "Organizaciones con appliances perimetrales y acceso remoto"
+    ],
+    "tecnicas_mas_usadas": [
+      "Phishing multi-etapa",
+      "Adversary-in-the-middle",
+      "Credential harvesting",
+      "Uso de cuentas validas y herramientas legitimas",
+      "Explotacion de infraestructura expuesta"
+    ],
+    "exposicion_estimacion": "Alta para organizaciones con deuda de parcheo en Windows, correo o appliances perimetrales, y media-alta para pymes con controles incompletos de MFA, logging y segmentacion.",
+    "recomendacion_principal": "Cerrar la superficie expuesta y completar en menos de 24 horas el parcheo/hunting sobre identidad, correo, DNS, Netlogon, Dynamics 365 on-premises, Exim y appliances de autenticacion/perimetro.",
+    "conclusion_rapida": [
+      "Prioridad inmediata en identidad, correo y perimetro.",
+      "No hay margen para diferir el parcheo critico de Microsoft, Exim y Fortinet.",
+      "Las pymes espanolas siguen especialmente expuestas a phishing con MFA debil y correo mal protegido.",
+      "OT/energia exige seguimiento diferenciado por el volumen critico de Siemens y la alerta Ingeteam."
+    ]
+  },
+  "alerts": [
+    {
+      "title": "Campana AiTM de Microsoft en curso reciente",
+      "severity": "Critica",
+      "detail": "Microsoft observo entre el 14 y el 16 de abril una campana de phishing multi-etapa que apunto a mas de 35.000 usuarios en mas de 13.000 organizaciones de 26 paises.",
+      "business_impact": "Alto riesgo de robo de credenciales, secuestro de sesion y acceso a correo corporativo."
+    },
+    {
+      "title": "Cisco Firepower bajo actividad continuada de UAT-4356",
+      "severity": "Critica",
+      "detail": "Cisco Talos confirma que UAT-4356 sigue explotando CVE-2025-20333 y CVE-2025-20362 para desplegar el backdoor FIRESTARTER en dispositivos Cisco Firepower.",
+      "business_impact": "Compromiso del perimetro y persistencia furtiva en equipos de seguridad."
+    },
+    {
+      "title": "Volumen elevado de parcheo Microsoft mayo 2026",
+      "severity": "Alta",
+      "detail": "El ciclo de mayo incorpora 137 vulnerabilidades, con 14 criticas y varias RCE remotas de red en componentes de autenticacion y DNS.",
+      "business_impact": "Riesgo transversal en entorno Windows y apps de negocio expuestas."
+    },
+    {
+      "title": "Exim critica en servidores de correo",
+      "severity": "Alta",
+      "detail": "CVE-2026-45185 permite a un atacante de red no autenticado provocar corrupcion de memoria y ejecutar codigo arbitrario en Exim 4.97-4.99.2.",
+      "business_impact": "Impacto directo en disponibilidad e integridad del correo."
+    },
+    {
+      "title": "Presion OT en energia e industria",
+      "severity": "Alta",
+      "detail": "Siemens publica 22 vulnerabilidades criticas y INCIBE coordina una vulnerabilidad critica en Ingecon EMS Board con CVSS 9.2.",
+      "business_impact": "Riesgo operativo y de continuidad en entornos industriales y solares."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-41089",
+      "product": "Windows Netlogon",
+      "cvss": "9.8",
+      "severity": "Critica",
+      "exploitation": "Sin confirmacion publica en la muestra",
+      "patch": "Si, mayo 2026",
+      "priority": "Critica",
+      "source": "NVD / MSRC"
+    },
+    {
+      "cve": "CVE-2026-41096",
+      "product": "Microsoft Windows DNS",
+      "cvss": "9.8",
+      "severity": "Critica",
+      "exploitation": "Sin confirmacion publica en la muestra",
+      "patch": "Si, mayo 2026",
+      "priority": "Critica",
+      "source": "NVD / MSRC"
+    },
+    {
+      "cve": "CVE-2026-42898",
+      "product": "Dynamics 365 on-premises",
+      "cvss": "9.9",
+      "severity": "Critica",
+      "exploitation": "Sin confirmacion publica en la muestra",
+      "patch": "Si, fixed release >= 9.1.45.11",
+      "priority": "Critica",
+      "source": "NVD / MSRC"
+    },
+    {
+      "cve": "CVE-2026-45185",
+      "product": "Exim",
+      "cvss": "N/D",
+      "severity": "Critica",
+      "exploitation": "No",
+      "patch": "Si, Exim 4.99.3",
+      "priority": "Critica",
+      "source": "INCIBE / Exim"
+    },
+    {
+      "cve": "CVE-2026-44277",
+      "product": "FortiAuthenticator",
+      "cvss": "9.1",
+      "severity": "Critica",
+      "exploitation": "No",
+      "patch": "Si, 8.0.3 / 6.6.9 / 6.5.7",
+      "priority": "Alta",
+      "source": "Fortinet PSIRT"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android System / adbd",
+      "cvss": "N/D",
+      "severity": "Critica",
+      "exploitation": "No indicada",
+      "patch": "Si, patch level 2026-05-01",
+      "priority": "Alta",
+      "source": "Android Security Bulletin"
+    },
+    {
+      "cve": "CVE-2026-8051",
+      "product": "Ivanti Virtual Traffic Manager",
+      "cvss": "7.2",
+      "severity": "Alta",
+      "exploitation": "No",
+      "patch": "Si, 22.9r4",
+      "priority": "Alta",
+      "source": "INCIBE / NVD"
+    },
+    {
+      "cve": "CVE-2026-8072",
+      "product": "Ingecon EMS Board",
+      "cvss": "9.2",
+      "severity": "Critica",
+      "exploitation": "No confirmada",
+      "patch": "Pendiente de validar en la muestra",
+      "priority": "Alta",
+      "source": "INCIBE"
+    }
+  ],
+  "malware_and_ransomware": [
+    {
+      "family": "FIRESTARTER",
+      "type": "Backdoor",
+      "target": "Cisco Firepower / perimetro",
+      "trend": "Activa",
+      "note": "Asociada a UAT-4356 en actividad reciente documentada por Cisco Talos."
+    },
+    {
+      "family": "Rhysida",
+      "type": "Ransomware",
+      "target": "Entornos corporativos",
+      "trend": "Intentos pre-ransomware",
+      "note": "Talos vio actividad asociada, pero no despliegue consumado en su muestra de Q1 2026."
+    },
+    {
+      "family": "Gootloader / MeowBackConn",
+      "type": "Loader / backdoor",
+      "target": "Entornos Windows",
+      "trend": "Persistente",
+      "note": "Aparecen en el caso atribuido con confianza moderada a Rhysida segun Talos."
+    },
+    {
+      "family": "Kazuar",
+      "type": "Malware de espionaje",
+      "target": "Operaciones de ciberespionaje",
+      "trend": "Evolucion continua",
+      "note": "Microsoft destaca desarrollo sostenido en 2026."
+    }
+  ],
+  "news": [
+    "Microsoft confirma un Patch Tuesday grande y al alza, con 137 vulnerabilidades y 14 criticas publicadas el 12 de mayo.",
+    "Microsoft publico una investigacion sobre una campana de phishing 'code of conduct' que afecto a mas de 35.000 usuarios y 13.000 organizaciones.",
+    "Cisco Talos confirma actividad continuada de UAT-4356 contra Cisco Firepower y despliegue del backdoor FIRESTARTER.",
+    "Android publico su boletin de mayo con una vulnerabilidad critica de ejecucion remota en el componente System/adbd.",
+    "Fortinet publico una vulnerabilidad critica no explotada aun en FortiAuthenticator y nuevas investigaciones sobre dependencias Linux."
+  ],
+  "recommendations": {
+    "Critica": [
+      "Aplicar en menos de 24 horas el parcheo de Microsoft mayo 2026 en activos expuestos y controladores/servicios criticos.",
+      "Actualizar Exim a 4.99.3 y verificar exposicion externa de SMTP con TLS/CHUNKING.",
+      "Revisar appliances de perimetro y autenticacion: Cisco Firepower, FortiAuthenticator e Ivanti vTM."
+    ],
+    "Alta": [
+      "Refuerzo inmediato de MFA resistente a phishing, Conditional Access y revocacion de tokens sospechosos.",
+      "Hunting de indicadores AiTM: proxys intermedios, sesiones anomalas, reenvios y correo autenticado desde dominios atacantes.",
+      "Limitar gestion remota, WinRM y accesos administrativos expuestos a Internet."
+    ],
+    "Media": [
+      "Separar entornos OT/energia y revisar accesos SAT/remotos, especialmente en Siemens e Ingeteam.",
+      "Mejorar logs en identidad, correo, proxies, VPN y firewalls para reducir brechas de visibilidad."
+    ],
+    "Baja": [
+      "Actualizar inventario de activos Internet-facing y ensayar respuesta ejecutiva ante robo de credenciales.",
+      "Planificar simulacros de phishing y playbooks para AiTM y third-party compromise."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo / estimativo",
+    "riesgo_global_estimado": "Alto",
+    "prediccion": "Es probable que aumenten durante las proximas 48-72 horas los intentos de phishing con plantillas corporativas, CAPTCHA gates y robo de tokens de sesion, asi como el scanning sobre dispositivos perimetrales.",
+    "sectores_expuestos": [
+      "Administracion publica",
+      "Sanidad",
+      "Servicios profesionales",
+      "Pymes con Microsoft 365",
+      "Energia e industria con gestion remota"
+    ],
+    "vulnerabilidades_prioritarias": [
+      "CVE-2026-41089",
+      "CVE-2026-41096",
+      "CVE-2026-42898",
+      "CVE-2026-45185",
+      "CVE-2026-44277"
+    ],
+    "probabilidad_aumento_ataques": "Alta",
+    "recomendacion_automatica": "Activar maximo nivel de vigilancia sobre identidad, correo y perimetro; forzar revisiones de token/session, endurecer MFA y acelerar validacion de parches en activos expuestos."
+  },
+  "delivery_status": {
+    "informe_generado": "Completado",
+    "historico_github": "Pendiente en esta fase local",
+    "correo_html_gmail": "Pendiente en esta fase local",
+    "pdf": "No disponible",
+    "imagenes_por_pagina": "No disponibles",
+    "google_drive": "Omitido",
+    "limitaciones": [
+      "PDF e imagenes no se generan en esta edicion para no declarar como entregado un artefacto sin persistencia externa verificable.",
+      "Las cifras de KPIs reflejan la muestra priorizada de fuentes oficiales monitorizadas en esta ejecucion, no el total global de Internet."
+    ]
+  },
+  "sources": [
+    {
+      "name": "INCIBE - Actualizaciones de seguridad de Microsoft de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+      "published": "2026-05-13",
+      "type": "Aviso oficial"
+    },
+    {
+      "name": "NVD - CVE-2026-41089",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41089",
+      "published": "2026-05-12",
+      "type": "NVD"
+    },
+    {
+      "name": "NVD - CVE-2026-41096",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41096",
+      "published": "2026-05-12",
+      "type": "NVD"
+    },
+    {
+      "name": "NVD - CVE-2026-42898",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42898",
+      "published": "2026-05-12",
+      "type": "NVD"
+    },
+    {
+      "name": "INCIBE - Exim CVE-2026-45185",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim",
+      "published": "2026-05-13",
+      "type": "Aviso oficial"
+    },
+    {
+      "name": "Fortinet PSIRT - FG-IR-26-128 / CVE-2026-44277",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-26-128",
+      "published": "2026-05-12",
+      "type": "PSIRT"
+    },
+    {
+      "name": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "published": "2026-05-04",
+      "type": "Boletin oficial"
+    },
+    {
+      "name": "INCIBE - Multiples vulnerabilidades en productos de Ivanti",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-2",
+      "published": "2026-05-13",
+      "type": "Aviso oficial"
+    },
+    {
+      "name": "INCIBE SCI - Ingecon EMS Board",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos-sci/generacion-insegura-de-credenciales-de-acceso-sat-en-ingecon-ems-board",
+      "published": "2026-05-12",
+      "type": "Aviso SCI"
+    },
+    {
+      "name": "INCIBE SCI - Avisos de seguridad de Siemens de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026",
+      "published": "2026-05-12",
+      "type": "Aviso SCI"
+    },
+    {
+      "name": "Microsoft Security - Code of conduct phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "published": "2026-05-04",
+      "type": "Threat intelligence"
+    },
+    {
+      "name": "Microsoft Security - Email threat landscape Q1 2026",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/",
+      "published": "2026-04-30",
+      "type": "Threat intelligence"
+    },
+    {
+      "name": "Microsoft Security - Defense at AI speed",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-finds-16-new-vulnerabilities/",
+      "published": "2026-05-12",
+      "type": "Research"
+    },
+    {
+      "name": "Cisco Talos - IR Trends Q1 2026",
+      "url": "https://blog.talosintelligence.com/ir-trends-q1-2026/",
+      "published": "2026-04-22",
+      "type": "Threat intelligence"
+    },
+    {
+      "name": "Cisco Talos - UAT-4356 targeting Cisco Firepower devices",
+      "url": "https://blog.talosintelligence.com/uat-4356-firestarter/",
+      "published": "2026-04-23",
+      "type": "Threat advisory"
+    }
+  ],
+  "disclaimer": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
