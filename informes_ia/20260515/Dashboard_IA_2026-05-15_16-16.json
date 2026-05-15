@@ -1,0 +1,469 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "title": "Informe Ejecutivo Premium de Inteligencia Artificial",
+  "report_cut": "16:00",
+  "generated_at": "2026-05-15 16:16:38 CEST",
+  "timezone": "Europe/Madrid",
+  "next_update": "2026-05-15 20:00 CEST",
+  "ecosystem_status": "Activo, competitivo y con tension operativa",
+  "impact_level": "Alto",
+  "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+  "kpis": [
+    {
+      "label": "Incidentes criticos",
+      "value": "3",
+      "note": "2 de supply chain, 1 operativo resuelto"
+    },
+    {
+      "label": "Vulns prioritarias",
+      "value": "2",
+      "note": "Flowise y Mistral SDK"
+    },
+    {
+      "label": "Lanzamientos con utilidad inmediata",
+      "value": "5",
+      "note": "Codex, Claude SMB, Grok Build, Gemini, Dynamo"
+    },
+    {
+      "label": "Nivel de impacto IA",
+      "value": "ALTO",
+      "note": "Fuerte tracción de producto con presión de riesgo real"
+    }
+  ],
+  "summary": [
+    "El corte de las 16:00 confirma un mercado de IA muy activo, pero con el peso ejecutivo desplazado desde el modelo puro hacia seguridad operativa, agentes con permisos reales y tooling listo para producción.",
+    "La prioridad inmediata de riesgo sigue en supply chain y ejecución autónoma: OpenAI formalizó su respuesta al incidente TanStack sin evidencias de impacto a datos de usuario, Mistral mantiene bajo investigación paquetes comprometidos y Flowise conserva una vulnerabilidad crítica de RCE por prompt injection si no está en 3.1.0 o superior.",
+    "En producto, el bloque con utilidad inmediata lo lideran Codex móvil con access tokens y Hooks GA, Claude for Small Business con conectores listos para PyME, Grok Build como nuevo competidor agentic y Gemini Intelligence como señal de automatización proactiva en dispositivo.",
+    "Para consultoría y ciberseguridad, la oportunidad más clara es combinar revisión de supply chain, gobierno de identidades y pilotos controlados de agentes con herramientas que ya están maduras para explotación comercial."
+  ],
+  "news": [
+    {
+      "title": "OpenAI endurece respuesta a TanStack y fuerza actualización de apps macOS antes del 12 de junio",
+      "category": "Seguridad / Incidente",
+      "impact": "Alto",
+      "utility_or_risk": "Riesgo de confianza en cadena de suministro y certificados de firma.",
+      "recommendation": "Revisar inventario de apps OpenAI en macOS y bloquear instaladores no oficiales.",
+      "source_id": "openai-tanstack",
+      "status": "Hecho confirmado",
+      "detail": "OpenAI informó que dos dispositivos corporativos fueron impactados, que no encontró evidencia de exposición de datos de usuario y que rotará certificados de firma, con fecha límite del 12 de junio de 2026 para usuarios de macOS."
+    },
+    {
+      "title": "Codex llega al móvil y consolida tokens programáticos para automatización",
+      "category": "Lanzamiento",
+      "impact": "Alto",
+      "utility_or_risk": "Aumenta control operativo sobre agentes largos y automatización de CI.",
+      "recommendation": "Evaluar supervisión móvil y tokens para flujos internos con trazabilidad.",
+      "source_id": "openai-codex-mobile",
+      "status": "Hecho confirmado",
+      "detail": "OpenAI anunció vista previa de Codex en la app móvil, access tokens para entornos Enterprise/Business y disponibilidad general de Hooks, con Remote SSH y Hooks disponibles en todos los planes."
+    },
+    {
+      "title": "Anthropic empaqueta Claude para PyME con conectores listos para negocio",
+      "category": "Go-to-market",
+      "impact": "Alto",
+      "utility_or_risk": "Caso comercial inmediato para asesoría a pymes y automatización administrativa.",
+      "recommendation": "Probar oferta como base para verticales de back office y ventas asistidas.",
+      "source_id": "anthropic-smb",
+      "status": "Hecho confirmado",
+      "detail": "Claude for Small Business conecta QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace y Microsoft 365, orientado a tareas operativas ya conocidas por la PyME."
+    },
+    {
+      "title": "xAI entra en beta temprana con Grok Build y obliga a migrar modelos heredados hoy",
+      "category": "Herramientas / Modelos",
+      "impact": "Alto",
+      "utility_or_risk": "Nueva presión competitiva en coding agents y riesgo de rotura por retiro de slugs.",
+      "recommendation": "Cerrar inventario de integraciones xAI y mapear retiro de modelos antes de la ventana PT.",
+      "source_id": "xai-grok-build",
+      "status": "Hecho confirmado",
+      "detail": "xAI lanzó Grok Build Early Beta para terminal y la documentación de modelos marca retiro de varios alias heredados el 15 de mayo de 2026 a las 12:00 PM PT."
+    }
+  ],
+  "models": [
+    {
+      "name": "Grok 4.3",
+      "company": "xAI",
+      "type": "LLM generalista / agentic",
+      "capabilities": "Function calling, structured outputs, razonamiento configurable",
+      "multimodal": "No verificado en esta fuente",
+      "context": "1,000,000 tokens",
+      "license": "Propietario",
+      "use_cases": "Agentes con herramientas, outputs estructurados, sustitución de slugs heredados",
+      "impact": "Alto",
+      "source_id": "xai-models"
+    },
+    {
+      "name": "GPT-Realtime-2 / Translate / Whisper",
+      "company": "OpenAI",
+      "type": "Voz / tiempo real",
+      "capabilities": "Conversación de baja latencia, traducción en vivo y transcripción",
+      "multimodal": "Audio",
+      "context": "No indicado",
+      "license": "API propietaria",
+      "use_cases": "Atención, telefonía, traducción y automatización de voz",
+      "impact": "Alto",
+      "source_id": "openai-codex-mobile",
+      "note": "El radar mantiene este bloque como utilidad inmediata, aunque el anuncio específico es del 7 de mayo."
+    },
+    {
+      "name": "Gemini Intelligence",
+      "company": "Google",
+      "type": "Capa de IA proactiva sobre dispositivo",
+      "capabilities": "Automatización de tareas multiapp, contexto personal con control del usuario",
+      "multimodal": "Sí, orientado a dispositivo",
+      "context": "No indicado",
+      "license": "Propietario",
+      "use_cases": "Automatización personal, asistente proactivo, UX móvil avanzada",
+      "impact": "Medio-Alto",
+      "source_id": "google-gemini-intelligence"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Codex móvil + Hooks GA + access tokens",
+      "source_id": "openai-codex-mobile",
+      "utility": "Muy alta",
+      "warning": "Gobierno de credenciales y trazabilidad obligatorios."
+    },
+    {
+      "name": "Claude for Small Business",
+      "source_id": "anthropic-smb",
+      "utility": "Muy alta",
+      "warning": "Revisar alcance de conectores y permisos por herramienta."
+    },
+    {
+      "name": "Grok Build Early Beta",
+      "source_id": "xai-grok-build",
+      "utility": "Alta",
+      "warning": "Beta restringida y entorno aún temprano."
+    },
+    {
+      "name": "NVIDIA Dynamo 1.0",
+      "source_id": "nvidia-dynamo",
+      "utility": "Alta",
+      "warning": "Requiere madurez operativa e infraestructura para extraer valor."
+    },
+    {
+      "name": "Perplexity Finance Search / Computer at Work",
+      "source_id": "nvidia-dynamo",
+      "utility": "Media-Alta",
+      "warning": "Señal de mercado, no prioritaria frente a seguridad y gobierno."
+    }
+  ],
+  "repositories": [
+    {
+      "name": "openai/codex",
+      "stars": "81k",
+      "language": "Rust",
+      "description": "Agente de programación ligero para terminal con alta tracción.",
+      "use_cases": "Ingeniería asistida, workflows locales, supervisión humana.",
+      "utility": "Muy alta",
+      "risk": "Necesita política clara de permisos y secretos.",
+      "source_id": "openai-codex-repo"
+    },
+    {
+      "name": "openai/openai-agents-python",
+      "stars": "26k",
+      "language": "Python",
+      "description": "SDK para workflows multiagente con sandbox agents, guardrails y tracing.",
+      "use_cases": "Pilotos empresariales y servicios a medida.",
+      "utility": "Alta",
+      "risk": "Gobierno de herramientas y sesiones imprescindible.",
+      "source_id": "openai-agents-sdk"
+    },
+    {
+      "name": "ai-dynamo/dynamo",
+      "stars": "Señal alta; cifra no consolidada en esta ejecución",
+      "language": "Mixto",
+      "description": "Stack open source de inferencia distribuida a escala datacenter.",
+      "use_cases": "Serving multi-node, caché KV, routing y escalado automático.",
+      "utility": "Alta",
+      "risk": "Complejidad operativa elevada.",
+      "source_id": "ai-dynamo-repo"
+    },
+    {
+      "name": "mistralai/mistral-vibe",
+      "stars": "3.9k",
+      "language": "Python",
+      "description": "CLI coding agent mínimo de Mistral con skills y perfiles.",
+      "use_cases": "Desarrollo asistido y comparación competitiva.",
+      "utility": "Media-Alta",
+      "risk": "Producto joven; revisar seguridad de herramientas.",
+      "source_id": "mistral-vibe"
+    },
+    {
+      "name": "FlowiseAI/Flowise",
+      "stars": "52.6k",
+      "language": "TypeScript",
+      "description": "Builder visual de agentes con tracción muy alta.",
+      "use_cases": "Prototipado rápido de flujos y chatflows.",
+      "utility": "Alta",
+      "risk": "Exposición alta por histórico reciente de vulnerabilidades críticas.",
+      "source_id": "flowise-cve"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "OpenAI / TanStack supply chain",
+      "severity": "Alta",
+      "product": "Apps y cadena interna de firma",
+      "exploitation": "Actividad confirmada en dos dispositivos internos; sin evidencia de impacto a datos de usuario",
+      "impact": "Rotación de certificados y actualización obligatoria de apps macOS antes del 12 de junio",
+      "mitigation": "Actualizar apps OpenAI en macOS, evitar instaladores externos y reforzar minimumReleaseAge/provenance",
+      "priority": "Critica",
+      "source_id": "openai-tanstack"
+    },
+    {
+      "name": "Codex Cloud / Code Review high failure rate",
+      "severity": "Media",
+      "product": "Codex Cloud y Code Review",
+      "exploitation": "No aplica; incidente operativo resuelto",
+      "impact": "Elevated errors en la noche del 14 de mayo",
+      "mitigation": "Mantener plan de contingencia y supervisar continuidad",
+      "priority": "Media",
+      "source_id": "openai-status-codex"
+    },
+    {
+      "name": "Mistral SDK supply chain advisory",
+      "severity": "Alta",
+      "product": "Paquetes npm y PyPI de Mistral",
+      "exploitation": "Bajo investigacion; versiones comprometidas publicadas durante una ventana corta",
+      "impact": "Riesgo de ejecución en hosts Linux al importar `mistralai==2.4.6`",
+      "mitigation": "Buscar versiones afectadas en lockfiles, caches y artefactos; eliminar y rotar credenciales si hubo exposición",
+      "priority": "Critica",
+      "source_id": "mistral-advisory"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "identifier": "CVE-2026-41264 / GHSA-3hjv-c53m-58jj",
+      "product": "Flowise",
+      "severity": "Critica",
+      "status": "Explotable sin autenticacion",
+      "impact": "RCE mediante prompt injection en CSV Agent por falta de sandboxing",
+      "mitigation": "Actualizar a 3.1.0 o superior y revisar exposición de chatflows",
+      "priority": "Critica",
+      "source_id": "flowise-cve"
+    },
+    {
+      "identifier": "MAI advisory May 12, 2026",
+      "product": "mistralai SDK / package mirrors",
+      "severity": "Alta",
+      "status": "Investigacion en curso",
+      "impact": "Payload import-time en Linux desde `mistralai==2.4.6`",
+      "mitigation": "Hunt de IoCs, revisión de lockfiles y rotación si hubo importación",
+      "priority": "Critica",
+      "source_id": "mistral-advisory"
+    }
+  ],
+  "radar": [
+    "Los agentes ya no son solo copilotos: Microsoft insiste en que pasan de generar contenido a ejecutar acciones, lo que amplifica blast radius y obliga a defense in depth.",
+    "La fricción competitiva se mueve hacia experiencia de despliegue: Codex móvil, Grok Build y Vibe reflejan carrera por el terminal y el loop humano-in-the-loop.",
+    "La cadena de suministro se consolida como superficie de riesgo dominante para IA aplicada, con efecto cascada sobre SDKs, certificados, builds y confianza de marca.",
+    "La regulación europea sigue viva pero más pragmática: la simplificación pactada no elimina cumplimiento, solo comprime carga y mueve fechas operativas concretas."
+  ],
+  "opportunities": [
+    {
+      "title": "Servicio de hardening para agentes y copilotos internos",
+      "priority": "Alta",
+      "why": "Hay necesidad clara de identidad separada, mínimo privilegio, sandboxing y trazabilidad en despliegues agentic."
+    },
+    {
+      "title": "Paquete PyME de automatización administrativa con Claude/OpenAI",
+      "priority": "Alta",
+      "why": "Conectores listos para negocio bajan la barrera de implantación y permiten servicios recurrentes."
+    },
+    {
+      "title": "Auditoría express de supply chain IA",
+      "priority": "Critica",
+      "why": "TanStack y Mistral muestran una ventana comercial clara para revisión de lockfiles, mirrors, CI/CD y secretos."
+    },
+    {
+      "title": "Laboratorio de inferencia open source con Dynamo",
+      "priority": "Media",
+      "why": "Puede abrir oferta de optimización de costes e inferencia on-prem para clientes avanzados."
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Revisar hoy integraciones xAI por retiro de modelos",
+      "level": "Alta"
+    },
+    {
+      "title": "Confirmar que no existen dependencias `mistralai==2.4.6` ni npm afectados en entornos Linux",
+      "level": "Critica"
+    },
+    {
+      "title": "Actualizar Flowise a 3.1.0+ si existe exposición pública o semipública",
+      "level": "Critica"
+    },
+    {
+      "title": "Plan de actualización de apps OpenAI en macOS antes del 12 de junio de 2026",
+      "level": "Alta"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Lanzar hunting de supply chain IA en dependencias, build runners y cachés",
+      "action": "Buscar paquetes comprometidos, revisar importaciones Linux, rotar credenciales si hubo exposición y documentar hallazgos."
+    },
+    {
+      "priority": "Alta",
+      "title": "Definir estándar mínimo para agentes con permisos",
+      "action": "Separar identidad del agente, mínimo privilegio, aprobación humana para acciones sensibles y logging utilizable."
+    },
+    {
+      "priority": "Alta",
+      "title": "Abrir piloto comercial PyME con conectores listos",
+      "action": "Diseñar oferta sobre automatización administrativa, facturación, seguimiento comercial y documentación."
+    },
+    {
+      "priority": "Media",
+      "title": "Monitorizar presión competitiva en coding agents",
+      "action": "Comparar Codex, Grok Build y Vibe en coste, seguridad, autonomía y encaje con entornos de cliente."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-05-15 12:00 PM PT",
+      "event": "Retiro de varios modelos heredados de xAI",
+      "relevance": "Impacto operativo inmediato si existen alias antiguos en producción"
+    },
+    {
+      "date": "2026-06-12",
+      "event": "Fin de soporte efectivo para apps macOS de OpenAI firmadas con certificado antiguo",
+      "relevance": "Hito de continuidad y confianza de software"
+    },
+    {
+      "date": "2026-12-02",
+      "event": "Nuevo plazo de soluciones de transparencia para contenido generado en acuerdo de simplificación AI Act",
+      "relevance": "Seguimiento regulatorio para clientes con contenido sintético"
+    }
+  ],
+  "sources": [
+    {
+      "id": "openai-tanstack",
+      "title": "Our response to the TanStack npm supply chain attack",
+      "source": "OpenAI",
+      "published": "2026-05-13",
+      "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+    },
+    {
+      "id": "openai-codex-mobile",
+      "title": "Work with Codex from anywhere",
+      "source": "OpenAI",
+      "published": "2026-05-14",
+      "url": "https://openai.com/index/work-with-codex-from-anywhere/"
+    },
+    {
+      "id": "openai-status-codex",
+      "title": "Codex Cloud and Code Review experiencing high failure rate",
+      "source": "OpenAI Status",
+      "published": "2026-05-14",
+      "url": "https://status.openai.com/incidents/01KRM4H2T37TNSS7BCSGXVS8RQ"
+    },
+    {
+      "id": "anthropic-smb",
+      "title": "Introducing Claude for Small Business",
+      "source": "Anthropic",
+      "published": "2026-05-13",
+      "url": "https://www.anthropic.com/news/claude-for-small-business"
+    },
+    {
+      "id": "microsoft-defense-in-depth",
+      "title": "Defense in depth for autonomous AI agents",
+      "source": "Microsoft Security",
+      "published": "2026-05-14",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    },
+    {
+      "id": "google-gemini-intelligence",
+      "title": "Gemini Intelligence brings proactive AI to Android",
+      "source": "Google",
+      "published": "2026-05-12",
+      "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/"
+    },
+    {
+      "id": "xai-grok-build",
+      "title": "Introducing Grok Build Early Beta",
+      "source": "xAI",
+      "published": "2026-05-14",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "id": "xai-models",
+      "title": "xAI Models",
+      "source": "xAI Docs",
+      "published": "2026-05-15",
+      "url": "https://docs.x.ai/developers/models"
+    },
+    {
+      "id": "mistral-advisory",
+      "title": "Security advisories",
+      "source": "Mistral Docs",
+      "published": "2026-05-12",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "id": "flowise-cve",
+      "title": "CVE-2026-41264 / GHSA-3hjv-c53m-58jj",
+      "source": "GitHub Advisory Database",
+      "published": "2026-04-15",
+      "url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj"
+    },
+    {
+      "id": "nvidia-dynamo",
+      "title": "NVIDIA Enters Production With Dynamo",
+      "source": "NVIDIA Newsroom",
+      "published": "2026-03-16",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories"
+    },
+    {
+      "id": "consilium-ai-act",
+      "title": "Council and Parliament agree to simplify and streamline rules",
+      "source": "Council of the EU",
+      "published": "2026-05-07",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/"
+    },
+    {
+      "id": "openai-codex-repo",
+      "title": "openai/codex",
+      "source": "GitHub",
+      "published": "2026-05-07",
+      "url": "https://github.com/openai/codex"
+    },
+    {
+      "id": "openai-agents-sdk",
+      "title": "openai/openai-agents-python",
+      "source": "GitHub",
+      "published": "2026-05-07",
+      "url": "https://github.com/openai/openai-agents-python"
+    },
+    {
+      "id": "mistral-vibe",
+      "title": "mistralai/mistral-vibe",
+      "source": "GitHub",
+      "published": "2026-04-16",
+      "url": "https://github.com/mistralai/mistral-vibe"
+    },
+    {
+      "id": "ai-dynamo-repo",
+      "title": "ai-dynamo/dynamo",
+      "source": "GitHub",
+      "published": "2026-05-09",
+      "url": "https://github.com/ai-dynamo/dynamo"
+    }
+  ],
+  "artifacts": {
+    "html_github": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ia/20260515/Dashboard_IA_2026-05-15_16-16.html",
+    "json_github": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ia/20260515/Dashboard_IA_2026-05-15_16-16.json",
+    "html_raw": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_ia/20260515/Dashboard_IA_2026-05-15_16-16.html",
+    "json_raw": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_ia/20260515/Dashboard_IA_2026-05-15_16-16.json"
+  },
+  "limitations": [
+    "No se dispone en esta ejecucion de una via verificada para persistir un PDF binario con enlace publico en GitHub mediante el conector disponible.",
+    "El PDF se genera localmente con identidad visual coherente y puede adjuntarse al borrador de correo, pero el acceso externo confirmado queda en HTML y JSON archivados en GitHub."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
