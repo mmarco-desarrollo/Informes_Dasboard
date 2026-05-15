@@ -1,0 +1,240 @@
+{
+  "report_title": "Informe Ejecutivo Nocturno de Inteligencia Artificial",
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "generated_at": "2026-05-16 00:16:45 CEST",
+  "generated_timezone": "Europe/Madrid",
+  "window_label": "Corte nocturno acumulado hasta 2026-05-16 00:16 CEST",
+  "impact_level": "Alto vigilado",
+  "ecosystem_status": "Consolidacion productiva con presion alta en seguridad de agentes",
+  "next_update": "16 de mayo de 2026, franja matinal CEST",
+  "corporate_profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+  "summary": [
+    "La noche no deja una ruptura de modelo comparable a un gran lanzamiento fundacional, pero si confirma un giro fuerte del mercado hacia despliegues verticales, conectores y operacion real.",
+    "El bloque de mayor riesgo sigue siendo seguridad operativa: supply chain en SDKs y estaciones de desarrollo, mas agentes con tool calling mal aislado que convierten prompt injection en impacto de sistema.",
+    "Para MMarco Seguridad, la oportunidad inmediata no es perseguir cada novedad, sino vender y aplicar gobierno de agentes, arquitectura segura y automatizacion con trazabilidad."
+  ],
+  "kpis": [
+    {
+      "label": "Senales validadas",
+      "value": "7",
+      "tone": "neutral"
+    },
+    {
+      "label": "Alertas prioritarias",
+      "value": "3",
+      "tone": "critical"
+    },
+    {
+      "label": "Movimientos enterprise",
+      "value": "2",
+      "tone": "good"
+    },
+    {
+      "label": "Ruptura regulatoria nocturna",
+      "value": "Sin cambios",
+      "tone": "neutral"
+    }
+  ],
+  "signals": [
+    {
+      "title": "OpenAI abre una vertical financiera con cuentas conectadas en ChatGPT",
+      "category": "Producto",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "summary": "OpenAI activa una vista financiera conectada para usuarios Pro en EE. UU., con sincronizacion de cuentas, dashboard financiero y consultas contextualizadas.",
+      "implication": "La carrera se mueve de chat generalista a experiencias verticales con conectores y memoria utilizable.",
+      "recommendation": "Vigilar esta linea como patron replicable para servicios de banca, compliance y analitica asistida en pymes.",
+      "source": {
+        "title": "A new personal finance experience in ChatGPT",
+        "url": "https://openai.com/index/personal-finance-chatgpt/",
+        "publisher": "OpenAI",
+        "published_at": "2026-05-15"
+      }
+    },
+    {
+      "title": "Microsoft fija el marco de seguridad para agentes autonomos",
+      "category": "Seguridad",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "summary": "Microsoft destaca cinco clases de riesgo amplificadas por agentes: secuestro del agente, ruptura de intencion, fuga de datos sensibles, supply chain y dependencia inapropiada.",
+      "implication": "El problema central ya no es solo el modelo; es la arquitectura, identidad, permisos y observabilidad del agente.",
+      "recommendation": "Usar esta taxonomia como baseline para auditorias de agentes y flujos con tool calling.",
+      "source": {
+        "title": "Defense in depth for autonomous AI agents",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/",
+        "publisher": "Microsoft Security",
+        "published_at": "2026-05-14"
+      }
+    },
+    {
+      "title": "Anthropic acelera el despliegue enterprise con PwC",
+      "category": "Empresa",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "summary": "PwC desplegara Claude Code y Cowork, formara a 30.000 profesionales en EE. UU. y expandira el uso hacia una plantilla global de cientos de miles.",
+      "implication": "El mercado enterprise entra en fase de ejecucion real: menos piloto y mas reinvencion operativa con gobierno y auditoria.",
+      "recommendation": "Tomar este movimiento como referencia comercial para ofertas de modernizacion segura, automatizacion y SOC asistido.",
+      "source": {
+        "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+        "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+        "publisher": "Anthropic",
+        "published_at": "2026-05-14"
+      }
+    },
+    {
+      "title": "Anthropic y Gates Foundation anuncian compromiso de 200 M$",
+      "category": "Impacto y sector publico",
+      "status": "Hecho confirmado",
+      "impact": "Medio-Alto",
+      "summary": "La alianza moviliza financiacion, creditos Claude y soporte tecnico para salud global, ciencias de la vida, educacion y movilidad economica durante cuatro anos.",
+      "implication": "Aumenta la presion competitiva para casos de uso con narrativa de beneficio publico, datos y evaluacion sectorial.",
+      "recommendation": "Seguir oportunidades en sanidad, educacion y administracion con foco en trazabilidad y evaluacion de impacto.",
+      "source": {
+        "title": "Anthropic forms $200 million partnership with the Gates Foundation",
+        "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+        "publisher": "Anthropic",
+        "published_at": "2026-05-14"
+      }
+    }
+  ],
+  "incidents": [
+    {
+      "title": "OpenAI confirma impacto interno por el ataque de supply chain a TanStack",
+      "category": "Incidente",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "summary": "OpenAI indica que dos dispositivos corporativos fueron afectados, sin evidencia de acceso a datos de usuarios ni compromiso de produccion o propiedad intelectual.",
+      "implication": "La cadena de suministro de dependencias sigue siendo una via de entrada real incluso para actores maduros.",
+      "recommendation": "Reforzar SBOM, bloqueo de versiones, escaneo de secretos y revisiones de estaciones de desarrollo con acceso a artefactos firmados.",
+      "source": {
+        "title": "Our response to the TanStack npm supply chain attack",
+        "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+        "publisher": "OpenAI",
+        "published_at": "2026-05-13"
+      }
+    },
+    {
+      "title": "Mistral publica advisory propio por paquetes SDK comprometidos",
+      "category": "Incidente",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "summary": "Mistral marca como mitigado el incidente, acota una ventana corta de exposicion y detalla versiones npm y PyPI afectadas, IOC y pasos de verificacion.",
+      "implication": "La respuesta con IOC verificables es una referencia util para playbooks de terceros y cadena de suministro.",
+      "recommendation": "Buscar inmediatamente `mistralai==2.4.6` y las versiones npm afectadas en lockfiles, caches e imagenes.",
+      "source": {
+        "title": "Security advisories - TanStack supply chain attack affecting Mistral AI SDK packages",
+        "url": "https://docs.mistral.ai/resources/security-advisories",
+        "publisher": "Mistral Docs",
+        "published_at": "2026-05-12"
+      }
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "title": "Flowise CSV Agent RCE por prompt injection",
+      "category": "Vulnerabilidad",
+      "status": "Hecho confirmado",
+      "impact": "Critico",
+      "summary": "El advisory CVE-2026-41264 describe ejecucion remota de codigo sin autenticacion en Flowise <= 3.0.13 por evaluacion insegura de Python generado por el LLM. La version corregida es 3.1.0.",
+      "implication": "Es una prueba directa de que un agente mal encapsulado convierte prompt injection en RCE operativo.",
+      "recommendation": "Actualizar a 3.1.0 o superior, aislar ejecucion, revisar nodos CSV Agent expuestos y deshabilitar despliegues legacy vulnerables.",
+      "source": {
+        "title": "CVE-2026-41264 - Flowise CSV Agent Prompt Injection Remote Code Execution Vulnerability",
+        "url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj",
+        "publisher": "GitHub Advisory Database",
+        "published_at": "2026-04-15"
+      }
+    }
+  ],
+  "radar": [
+    {
+      "title": "Mistral 3 consolida el polo open multimodal",
+      "category": "Modelo",
+      "status": "Hecho confirmado",
+      "impact": "Medio",
+      "summary": "Mistral 3 agrupa modelos abiertos multimodales y multilingues bajo licencia Apache 2.0, con despliegue desde edge hasta enterprise.",
+      "implication": "Sigue creciendo la opcion open para despliegues controlados y personalizados.",
+      "recommendation": "Mantener Mistral 3 en el radar para entornos donde privacidad, coste y despliegue local sean prioritarios.",
+      "source": {
+        "title": "Introducing Mistral 3",
+        "url": "https://mistral.ai/news/mistral-3",
+        "publisher": "Mistral AI",
+        "published_at": "2026-05-09"
+      }
+    },
+    {
+      "title": "AI Act: simplificacion sin rebajar la disciplina de cumplimiento",
+      "category": "Regulacion",
+      "status": "Hecho confirmado",
+      "impact": "Medio-Alto",
+      "summary": "La Comision Europea fija 2 de diciembre de 2027 para buena parte de sistemas de alto riesgo y 2 de agosto de 2028 para sistemas integrados en productos, manteniendo el marco general del AI Act.",
+      "implication": "La narrativa de simplificacion no elimina la necesidad de evidencia, trazabilidad y gobierno.",
+      "recommendation": "Seguir documentando evaluaciones, trazas y controles desde ahora, especialmente en casos con agentes y datos sensibles.",
+      "source": {
+        "title": "EU agrees to simplify AI rules to boost innovation and ban nudification apps to protect citizens",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens",
+        "publisher": "European Commission",
+        "published_at": "2026-05-07"
+      }
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Auditar de inmediato exposicion a Flowise y paquetes comprometidos",
+      "detail": "Buscar versiones vulnerables de Flowise y SDKs de Mistral en lockfiles, contenedores, caches y pipelines; cortar despliegues heredados y regenerar imagenes."
+    },
+    {
+      "priority": "Alta",
+      "title": "Formalizar un baseline de seguridad para agentes",
+      "detail": "Separar identidad de agente y usuario, aplicar minimo privilegio, tool allowlists, aprobacion humana en acciones de impacto y telemetria por llamada."
+    },
+    {
+      "priority": "Alta",
+      "title": "Empaquetar una oferta comercial de evaluacion de agentes para pymes",
+      "detail": "Combinar assessment de riesgo, arquitectura segura, pruebas de prompt injection, gobierno de conectores y roadmap de automatizacion."
+    },
+    {
+      "priority": "Media",
+      "title": "Explorar copilotos verticales con conectores y datos propios",
+      "detail": "El movimiento de OpenAI y Anthropic refuerza la oportunidad en finanzas, soporte, cumplimiento y operaciones internas con IA contextualizada."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-05-19 / 2026-05-20",
+      "title": "Google I/O 2026",
+      "note": "Posible concentracion de anuncios sobre Gemini, tooling y agentes.",
+      "source": {
+        "title": "Google I/O 2026: Save the date, event information",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/io-2026-save-the-date/",
+        "publisher": "Google",
+        "published_at": "2026-03-06"
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "title": "Fecha limite recomendada por OpenAI para actualizar apps macOS",
+      "note": "La rotacion de certificados busca bloquear falsificaciones posteriores al incidente TanStack.",
+      "source": {
+        "title": "Our response to the TanStack npm supply chain attack",
+        "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+        "publisher": "OpenAI",
+        "published_at": "2026-05-13"
+      }
+    },
+    {
+      "date": "2026-08-02",
+      "title": "Mayor parte del AI Act empieza a aplicar",
+      "note": "Mantener evidencias y controles preparados antes del verano regulatorio europeo.",
+      "source": {
+        "title": "EU agrees to simplify AI rules to boost innovation and ban nudification apps to protect citizens",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens",
+        "publisher": "European Commission",
+        "published_at": "2026-05-07"
+      }
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
