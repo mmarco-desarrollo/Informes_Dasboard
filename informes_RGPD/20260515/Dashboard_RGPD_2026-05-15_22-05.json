@@ -1,0 +1,501 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "web": "https://mmarcoseguridad.com",
+    "email": "mmarco.seguridad@gmail.com",
+    "whatsapp": "+34 656 33 93 55",
+    "specialisation": "Ciberseguridad, Blockchain, IA, Telecomunicaciones, RGPD y Proteccion de Datos",
+    "report_type": "Informe Ejecutivo RGPD - Cierre del dia",
+    "generated_at": "2026-05-15 22:05 CEST",
+    "timezone": "Europe/Madrid (CEST)",
+    "next_update": "Siguiente ejecucion programada del agente",
+    "scope_note": "Radar ejecutivo de contexto regulatorio y riesgo externo para empresas espanolas. No constituye auditoria interna de una organizacion concreta.",
+    "compliance_level": "Medio",
+    "compliance_score_estimated": 72,
+    "compliance_label": "Estimacion IA sectorial, no auditoria interna",
+    "risk_level": "Medio-Alto",
+    "privacy_ai_state": "Vigilancia activa con foco en IA, brechas, transferencias y cookies",
+    "today_status": "Jornada regulatoria estable, sin cambio transversal confirmado publicado hoy en las fuentes oficiales revisadas"
+  },
+  "kpis": [
+    {
+      "label": "Cumplimiento global",
+      "value": "72%",
+      "subvalue": "Estimacion IA sectorial",
+      "tone": "green"
+    },
+    {
+      "label": "Riesgo global RGPD",
+      "value": "Medio-Alto",
+      "subvalue": "Presion regulatoria sostenida",
+      "tone": "orange"
+    },
+    {
+      "label": "Incidentes RGPD detectados",
+      "value": "2",
+      "subvalue": "Incidentes externos monitorizados",
+      "tone": "orange"
+    },
+    {
+      "label": "Brechas relevantes",
+      "value": "2",
+      "subvalue": "Rituals y Booking en seguimiento",
+      "tone": "orange"
+    },
+    {
+      "label": "Reclamaciones AEPD",
+      "value": "Alta presion",
+      "subvalue": "Sin dato puntual del dia",
+      "tone": "yellow"
+    },
+    {
+      "label": "Sanciones publicadas",
+      "value": "Sin novedad verificada",
+      "subvalue": "Barrido oficial sin hallazgo transversal hoy",
+      "tone": "blue"
+    },
+    {
+      "label": "Novedades legales",
+      "value": "Sin cambio general hoy",
+      "subvalue": "Entorno estable al cierre",
+      "tone": "blue"
+    },
+    {
+      "label": "Consultas AEPD / EDPB",
+      "value": "1 foco activo",
+      "subvalue": "Consulta EDPB abierta hasta 25/06",
+      "tone": "teal"
+    },
+    {
+      "label": "DPIA pendientes",
+      "value": "Sin dato interno",
+      "subvalue": "Recomendado revisar tratamientos con IA",
+      "tone": "yellow"
+    },
+    {
+      "label": "Derechos de interesados",
+      "value": "Sin dato interno",
+      "subvalue": "Riesgo operativo medio",
+      "tone": "yellow"
+    },
+    {
+      "label": "Transferencias internacionales",
+      "value": "Atencion media",
+      "subvalue": "Seguir SCC, DPF y proveedores SaaS",
+      "tone": "yellow"
+    },
+    {
+      "label": "Contratos de encargados",
+      "value": "Sin dato interno",
+      "subvalue": "Revisar proveedores criticos",
+      "tone": "yellow"
+    }
+  ],
+  "executive_summary": [
+    {
+      "kind": "Hecho confirmado",
+      "text": "En el cierre del 15/05/2026 no se identifica una novedad regulatoria general publicada hoy por AEPD, EDPB o EDPS con efecto transversal inmediato."
+    },
+    {
+      "kind": "Hecho confirmado",
+      "text": "Siguen vigentes las senales recientes: AEPD refuerza apoyo practico, EDPB mantiene foco en investigacion, anonimizacion y transferencias, y EDPS subraya IA y Digital Rulebook."
+    },
+    {
+      "kind": "Hecho confirmado",
+      "text": "INCIBE mantiene visibles dos casos de referencia: afectacion de base de datos de clientes en Rituals y acceso no autorizado a datos de usuarios de Booking."
+    },
+    {
+      "kind": "Interpretacion",
+      "text": "La jornada cierra por consolidacion de tendencia: pesa mas la prueba de cumplimiento y el control de terceros."
+    },
+    {
+      "kind": "Recomendacion automatica",
+      "text": "Conviene revisar tratamientos con IA, encargados, flujos internacionales y protocolo de brechas, porque siguen siendo los focos mas sensibles para el siguiente dia."
+    }
+  ],
+  "quick_conclusions": [
+    "No se confirma una publicacion sancionadora o regulatoria de gran alcance emitida hoy.",
+    "La presion regulatoria sigue alta, aunque hoy domina la continuidad sobre la novedad.",
+    "Los incidentes recientes refuerzan el control de accesos, terceros y respuesta a brechas.",
+    "Europa sigue empujando claridad en investigacion, anonimizacion y transferencias.",
+    "La prioridad ejecutiva inmediata es reforzar gobierno documental y evidencia de cumplimiento."
+  ],
+  "compliance_state": {
+    "score_estimated": 72,
+    "label": "Cumplimiento medio",
+    "trend_30d": "Estable con ligera tension al alza en IA, transferencias y terceros",
+    "trend_direction": "Estable",
+    "high_risk_areas": [
+      "Seguridad de la informacion",
+      "Encargados de tratamiento",
+      "Cookies y consentimiento",
+      "Transferencias internacionales",
+      "Tratamientos con IA"
+    ],
+    "warning": "Metrica estimativa construida como radar sectorial externo. No representa una auditoria confirmada de MMarco Seguridad ni de un cliente concreto."
+  },
+  "risk_by_area": [
+    {
+      "area": "Gestion de datos personales",
+      "level": "Medio",
+      "basis": "No hay novedad disruptiva hoy, pero se mantiene exigencia de trazabilidad y minimizacion.",
+      "action": "Revisar base juridica, plazos y evidencias."
+    },
+    {
+      "area": "Derechos de los interesados",
+      "level": "Medio",
+      "basis": "Sin dato interno; riesgo operativo si no hay circuito de respuesta y control de plazos.",
+      "action": "Verificar SLA interno y plantillas de respuesta."
+    },
+    {
+      "area": "Seguridad de la informacion",
+      "level": "Alto",
+      "basis": "Los incidentes recientes monitorizados por INCIBE recuerdan impacto directo sobre datos personales.",
+      "action": "Auditar accesos privilegiados, MFA y logging."
+    },
+    {
+      "area": "Encargados de tratamiento",
+      "level": "Alto",
+      "basis": "Los proveedores siguen siendo punto de exposicion recurrente.",
+      "action": "Priorizar revision contractual y evidencias tecnicas."
+    },
+    {
+      "area": "Transferencias internacionales",
+      "level": "Medio-Alto",
+      "basis": "El EDPB mantiene foco en mecanismos de transferencia y sellos de garantia.",
+      "action": "Confirmar SCC, DPF y mapa real de proveedores."
+    },
+    {
+      "area": "Documentacion y politicas",
+      "level": "Medio",
+      "basis": "Sin novedad general hoy, pero la carga probatoria sigue aumentando.",
+      "action": "Actualizar politicas y versionado documental."
+    },
+    {
+      "area": "Registro de actividades",
+      "level": "Medio",
+      "basis": "Area sensible si se incorporan flujos con IA o nuevos terceros sin reflejo documental.",
+      "action": "Cruzar RAT con aplicaciones y proveedores activos."
+    },
+    {
+      "area": "Evaluaciones DPIA",
+      "level": "Medio-Alto",
+      "basis": "La presion sobre IA y tratamientos complejos eleva la necesidad de DPIA bien trazadas.",
+      "action": "Listar tratamientos gatillo y priorizar revision."
+    },
+    {
+      "area": "Consentimiento",
+      "level": "Medio-Alto",
+      "basis": "Cookies, marketing y analitica siguen siendo frente clasico de incumplimiento.",
+      "action": "Comprobar granularidad, prueba y revocacion."
+    },
+    {
+      "area": "Cookies",
+      "level": "Medio-Alto",
+      "basis": "Riesgo permanente por terceros, etiquetas y asimetrias entre banner y despliegue real.",
+      "action": "Reauditar CMP, scripts y rechazo equivalente."
+    },
+    {
+      "area": "Formacion y concienciacion",
+      "level": "Medio",
+      "basis": "La via mas barata para reducir errores humanos y envios indebidos.",
+      "action": "Plan trimestral con foco en phishing y privacidad."
+    },
+    {
+      "area": "Notificacion de brechas",
+      "level": "Medio-Alto",
+      "basis": "La AEPD mantiene visibilidad publica sobre notificaciones y taxonomias de brechas.",
+      "action": "Ensayar clasificacion, escalado y 72 horas."
+    }
+  ],
+  "incidents": [
+    {
+      "date": "2026-05-07",
+      "type": "Brecha de datos",
+      "severity": "Alta",
+      "description": "INCIBE destaca un incidente de seguridad que afecto a parte de la base de datos de clientes de Rituals, vinculado al programa de fidelizacion.",
+      "data_affected": "Datos de clientes del programa de fidelizacion",
+      "sector": "Retail / eCommerce",
+      "status": "Confirmado por fuente institucional de ciberseguridad",
+      "recommended_action": "Reforzar segmentacion de datos, control de terceros y plan de comunicacion de brechas."
+    },
+    {
+      "date": "2026-05-05",
+      "type": "Acceso no autorizado",
+      "severity": "Alta",
+      "description": "INCIBE recoge acceso no autorizado a datos de usuarios de Booking, con valor como caso de referencia para turismo y plataformas.",
+      "data_affected": "Datos de usuarios de plataforma",
+      "sector": "Turismo / plataforma digital",
+      "status": "Confirmado por fuente institucional de ciberseguridad",
+      "recommended_action": "Revisar MFA, hardening de cuentas, segregacion y playbooks de notificacion."
+    }
+  ],
+  "regulatory_updates": [
+    {
+      "icon": "AEPD",
+      "headline": "Sin novedad AEPD general publicada hoy en la revision de cierre; la ultima senal visible sigue siendo la convocatoria de articulos de la Revista PIT sobre el 10o aniversario del RGPD.",
+      "source": "AEPD",
+      "date": "2026-05-11",
+      "jurisdiction": "Espana",
+      "impact": "Medio",
+      "recommendation": "Seguir publicaciones AEPD con foco en IA, herramientas practicas y criterios para pymes."
+    },
+    {
+      "icon": "EDPB",
+      "headline": "El EDPB mantiene como eje visible su guia sobre investigacion cientifica, el sprint de anonimizacion y Europrivacy como herramienta para transferencias.",
+      "source": "EDPB",
+      "date": "2026-04-16",
+      "jurisdiction": "Union Europea",
+      "impact": "Alto",
+      "recommendation": "Revisar tratamientos de investigacion, pseudonimizacion, anonimizacion y mecanismos de transferencia."
+    },
+    {
+      "icon": "EDPS",
+      "headline": "El EDPS subraya en su Annual Report 2025 el peso creciente de la IA, las consultas legislativas y el Digital Rulebook.",
+      "source": "EDPS",
+      "date": "2026-05-07",
+      "jurisdiction": "Union Europea",
+      "impact": "Medio-Alto",
+      "recommendation": "Alinear privacidad, IA y gobierno regulatorio en la agenda de compliance."
+    },
+    {
+      "icon": "BOE",
+      "headline": "La revision del sumario del BOE de 15/05/2026 no muestra una disposicion general de proteccion de datos con impacto transversal inmediato.",
+      "source": "BOE",
+      "date": "2026-05-15",
+      "jurisdiction": "Espana",
+      "impact": "Bajo",
+      "recommendation": "Mantener monitorizacion diaria sin activar cambio urgente de politicas."
+    }
+  ],
+  "sanctions": [
+    {
+      "source": "AEPD / Fuentes oficiales revisadas",
+      "sector": "Multisector",
+      "reason": "Barrido de cierre sin sancion nueva de alcance general verificada hoy",
+      "amount": "Sin dato verificado",
+      "lesson": "La ausencia de publicacion hoy no reduce el nivel de exigencia probatoria.",
+      "preventive_action": "Continuar vigilancia de resoluciones y reforzar evidencias de cumplimiento.",
+      "status": "No confirmada como novedad hoy"
+    }
+  ],
+  "rights": {
+    "access": "Sin dato interno",
+    "rectification": "Sin dato interno",
+    "erasure": "Sin dato interno",
+    "objection": "Sin dato interno",
+    "restriction": "Sin dato interno",
+    "portability": "Sin dato interno",
+    "automated_decisions": "Riesgo teorico al alza por uso de IA y scoring",
+    "response_deadlines": "Recomendado controlar vencimientos a 30 dias",
+    "pending_requests": "Sin dato interno",
+    "overdue_requests": "Sin dato verificado",
+    "interpretation": "Sin inventario interno no procede afirmar actividad real; se mantiene riesgo operativo medio por ausencia de trazabilidad visible."
+  },
+  "dpia": {
+    "completed": "Sin dato interno",
+    "in_progress": "Sin dato interno",
+    "pending": "Sin dato interno",
+    "high_risk": "Probable foco en IA, perfilado, videovigilancia avanzada y grandes bases de clientes",
+    "last_completed": "No verificado",
+    "next_reviews": "Recomendada revision trimestral de tratamientos complejos",
+    "priority_treatments": [
+      "IA generativa con datos personales",
+      "Analitica avanzada",
+      "Sistemas con terceros SaaS",
+      "Videovigilancia inteligente"
+    ]
+  },
+  "transfers": {
+    "outside_eea": "Sin mapa interno confirmado",
+    "scc": "Revisar clausulas contractuales tipo con proveedores criticos",
+    "adequacy": "Aplicar decisiones de adecuacion cuando proceda",
+    "usa": "Verificar proveedores adscritos a DPF y contratos complementarios",
+    "dpf": "Control documental recomendado",
+    "vendor_risk": "Medio-Alto",
+    "guarantees_review": "Prioridad alta si hay SaaS o IA de origen extracomunitario",
+    "pending_actions": [
+      "Inventario real de transferencias",
+      "Contraste entre contrato y flujo tecnico",
+      "Evaluacion de medidas suplementarias"
+    ]
+  },
+  "cookies": {
+    "banner_status": "Sin dato interno",
+    "valid_consents": "Sin dato interno",
+    "expired_consents": "Sin dato interno",
+    "rejections": "Sin dato interno",
+    "granular_config": "Recomendada",
+    "aepd_guide_alignment": "Debe verificarse tecnicamente",
+    "risk": "Medio-Alto por terceros, analitica y marketing",
+    "recommendations": [
+      "Comprobar rechazo equivalente",
+      "Bloqueo previo real",
+      "Inventario de scripts",
+      "Revision de CMP"
+    ]
+  },
+  "processors": {
+    "pending_contracts": "Sin dato interno",
+    "updated_contracts": "Sin dato interno",
+    "critical_vendors": "Proveedores cloud, CRM, email, analitica, soporte y IA",
+    "vendor_risk": "Alto si no existe evidencia tecnica y contractual suficiente",
+    "subprocessors": "Requieren visibilidad y aprobacion",
+    "associated_transfers": "Probables en stacks SaaS internacionales",
+    "pending_reviews": [
+      "DPA",
+      "Anexo tecnico",
+      "Subencargados",
+      "Lugar real del tratamiento"
+    ]
+  },
+  "training": {
+    "completed": "Sin dato interno",
+    "pending": "Sin dato interno",
+    "next_training": "Recomendada antes del siguiente ciclo trimestral",
+    "lower_compliance_areas": [
+      "Phishing con datos personales",
+      "Envio indebido",
+      "Uso de IA con datos de clientes",
+      "Cookies y marketing"
+    ],
+    "risk": "Medio",
+    "recommendations": [
+      "Microformacion mensual",
+      "Simulaciones de brecha",
+      "Pildoras sobre IA y privacidad"
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Revisar tratamientos con IA y su encaje en RAT, base juridica y DPIA",
+      "why": "Es la zona con mayor exposicion regulatoria y probatoria.",
+      "type": "Recomendacion automatica"
+    },
+    {
+      "priority": "Alta",
+      "title": "Validar contratos de encargados y mapa real de subencargados",
+      "why": "Los incidentes recientes refuerzan el riesgo por terceros.",
+      "type": "Recomendacion automatica"
+    },
+    {
+      "priority": "Alta",
+      "title": "Reauditar cookies, analitica, marketing y bloqueo previo",
+      "why": "Sigue siendo un frente recurrente de incumplimiento visible.",
+      "type": "Recomendacion automatica"
+    },
+    {
+      "priority": "Alta",
+      "title": "Ensayar protocolo de brechas con ventana de 72 horas",
+      "why": "La AEPD mantiene visibilidad publica sobre taxonomias de brecha.",
+      "type": "Recomendacion automatica"
+    },
+    {
+      "priority": "Media",
+      "title": "Verificar circuito de derechos de interesados y control de plazos",
+      "why": "Sin trazabilidad interna no conviene asumir madurez operativa.",
+      "type": "Recomendacion automatica"
+    },
+    {
+      "priority": "Media",
+      "title": "Actualizar politicas y evidencias documentales con versionado",
+      "why": "La exigencia real se desplaza a poder demostrar cumplimiento.",
+      "type": "Recomendacion automatica"
+    },
+    {
+      "priority": "Baja",
+      "title": "Seguir publicaciones AEPD, EDPB, EDPS e INCIBE en un panel diario",
+      "why": "La jornada ha sido estable, pero el entorno sigue activo.",
+      "type": "Recomendacion automatica"
+    }
+  ],
+  "alerts": [
+    {
+      "level": "Alta",
+      "title": "Riesgo por terceros y encargados",
+      "detail": "Persisten incidentes de referencia que aconsejan revisar contratos, accesos y segmentacion."
+    },
+    {
+      "level": "Alta",
+      "title": "IA y tratamientos de alto impacto",
+      "detail": "La presion europea se mantiene sobre gobernanza, anonimizacion y evidencia de cumplimiento."
+    },
+    {
+      "level": "Media",
+      "title": "Cookies y consentimiento",
+      "detail": "No hay novedad hoy, pero sigue siendo frente de riesgo visible para pymes y negocios digitales."
+    },
+    {
+      "level": "Media",
+      "title": "Transferencias internacionales",
+      "detail": "Requieren trazabilidad contractual y tecnica continua."
+    },
+    {
+      "level": "Media",
+      "title": "Brechas y plazo de 72 horas",
+      "detail": "Conviene verificar escalado interno y criterio de notificacion."
+    }
+  ],
+  "ai_section": {
+    "estimated_risk": "Medio-Alto",
+    "exposure_areas": [
+      "IA generativa con datos personales",
+      "Analitica avanzada",
+      "Clasificacion de clientes",
+      "Uso de proveedores extracomunitarios"
+    ],
+    "trend_prediction": "Probable aumento de expectativas regulatorias sobre trazabilidad, minimizacion, base juridica y prueba de salvaguardas.",
+    "automatic_recommendation": "Congelar nuevos usos de IA con datos personales hasta confirmar inventario, base juridica y necesidad de DPIA.",
+    "action_priority": "Alta",
+    "business_impact": "Riesgo reputacional, contractual y de sancion si el uso de IA no esta documentado ni controlado.",
+    "urgency": "7/10",
+    "caution": "Las predicciones son analiticas y no deben leerse como hechos confirmados."
+  },
+  "sources": [
+    {
+      "title": "AEPD - La AEPD abre la convocatoria de articulos para el segundo numero de la Revista PIT, dedicado al 10o aniversario del RGPD",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-abre-convocatoria-articulos-segundo-numero-revista-pit",
+      "date": "2026-05-11",
+      "kind": "AEPD"
+    },
+    {
+      "title": "AEPD - Notificaciones de brechas de datos personales a la AEPD",
+      "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion/notificaciones-de-brechas-de-datos-personales",
+      "date": "2026-04-30",
+      "kind": "AEPD"
+    },
+    {
+      "title": "EDPB - Data processing for scientific research, anonymisation sprint team and Europrivacy seal",
+      "url": "https://www.edpb.europa.eu/news/news/2026/edpb-brings-clarity-data-processing-scientific-research-speeds-finalisation_en",
+      "date": "2026-04-16",
+      "kind": "EDPB"
+    },
+    {
+      "title": "EDPS - Annual Report 2025 highlights record legislative consultations and AI transition",
+      "url": "https://www.edps.europa.eu/press-publications/press-news/press-releases_en",
+      "date": "2026-05-07",
+      "kind": "EDPS"
+    },
+    {
+      "title": "INCIBE-CERT - Rituals has detected a security incident affecting its customer database",
+      "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights",
+      "date": "2026-05-07",
+      "kind": "INCIBE"
+    },
+    {
+      "title": "INCIBE-CERT - Detection of unauthorized access to Booking user data",
+      "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights",
+      "date": "2026-05-05",
+      "kind": "INCIBE"
+    },
+    {
+      "title": "BOE - Sumario del dia 15/05/2026",
+      "url": "https://www.boe.es/boe/dias/2026/05/15/index.php",
+      "date": "2026-05-15",
+      "kind": "BOE"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad exclusivamente informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional."
+}
