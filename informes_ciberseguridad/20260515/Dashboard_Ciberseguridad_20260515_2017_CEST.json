@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "report_title": "Informe Ejecutivo de Ciberseguridad",
+    "edition_slot": "2026-05-15 20:00 CEST",
+    "generated_at": "2026-05-15 20:17:59 CEST",
+    "timezone": "Europe/Madrid",
+    "threat_level": "ALTO",
+    "next_update": "2026-05-16 00:00 CEST",
+    "ai_risk_state": "Prediccion moderadamente alcista a 24-72h por concentracion de fallos en perimetro, correo y autenticacion"
+  },
+  "kpis": [
+    {
+      "label": "Alertas criticas priorizadas",
+      "value": 6,
+      "scope": "seleccion curada del informe"
+    },
+    {
+      "label": "Explotacion activa confirmada",
+      "value": 3,
+      "scope": "Cisco SD-WAN, PAN-OS, Exchange"
+    },
+    {
+      "label": "Vulnerabilidades Microsoft mayo 2026",
+      "value": 137,
+      "scope": "12 de mayo; 14 criticas"
+    },
+    {
+      "label": "Campanas de phishing relevantes para Espana",
+      "value": 3,
+      "scope": "SumUp, Netflix, Guardia Civil/Europol"
+    },
+    {
+      "label": "Nivel de riesgo global",
+      "value": "ALTO",
+      "scope": "evaluacion ejecutiva"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "ASCENDENTE",
+      "scope": "estimacion analitica"
+    }
+  ],
+  "executive_summary": {
+    "global_state": "La fotografia de las ultimas horas apunta a una presion alta sobre el perimetro corporativo y los servicios de correo/autenticacion. La combinacion de un nuevo CVE 10.0 en Cisco SD-WAN con explotacion limitada, la explotacion continuada de PAN-OS y la aparicion de un fallo en Exchange explotado en ataques eleva el riesgo operativo para organizaciones con servicios expuestos a Internet.",
+    "main_risks": [
+      "Compromiso de controladores SD-WAN y firewalls expuestos",
+      "Abuso de portales de autenticacion y acceso administrativo",
+      "Impacto en correo corporativo y OWA/Exchange on-prem",
+      "Fraude por suplantacion de marca y robo de credenciales"
+    ],
+    "affected_sectors": [
+      "Telecomunicaciones y redes",
+      "Servicios corporativos y correo",
+      "Pymes con Microsoft 365 o appliances perimetrales",
+      "Industria y energia con acceso remoto u OT conectado"
+    ],
+    "most_used_techniques": [
+      "Bypass de autenticacion",
+      "Ejecucion remota de codigo sin autenticacion",
+      "Explotacion de superficies expuestas a Internet",
+      "Phishing y suplantacion de marca"
+    ],
+    "estimated_exposure": "Alta para organizaciones con SD-WAN, PAN-OS, Exchange on-prem, Exim o Fortinet expuestos; media-alta para pymes espanolas con correo y MFA debil; alta en industria con deuda de parcheo OT.",
+    "executive_recommendation": "Aplicar en menos de 24 horas un plan de choque sobre perimetro, correo e identidad: inventario, cierre de exposicion innecesaria, parcheo urgente, rotacion de credenciales administrativas y hunting orientado a accesos anomalos.",
+    "quick_conclusion": [
+      "El foco mas urgente de esta ventana es Cisco SD-WAN CVE-2026-20182 por severidad maxima, explotacion observada y ausencia de workaround.",
+      "PAN-OS CVE-2026-0300 sigue siendo prioritaria en equipos con User-ID Authentication Portal expuesto a zonas no confiables.",
+      "Exchange entra en vigilancia reforzada tras la divulgacion de CVE-2026-42897 con explotacion en ataques contra OWA.",
+      "Exim y los nuevos avisos criticos de Fortinet amplian la superficie de remediacion de esta noche.",
+      "Para Espana, persisten senales de phishing y fraude con suplantacion de marcas y organismos de alta confianza."
+    ]
+  },
+  "active_alerts": [
+    {
+      "title": "Cisco SD-WAN bajo prioridad maxima",
+      "status": "hecho confirmado",
+      "details": "Cisco publico el 14 de mayo CVE-2026-20182, CVSS 10.0, sin workaround, con explotacion limitada observada y recomendacion de upgrade inmediato.",
+      "priority": "critica",
+      "impact": "Afecta al plano de control y puede derivar en manipulacion de configuracion de la malla SD-WAN."
+    },
+    {
+      "title": "Continuidad de explotacion en PAN-OS",
+      "status": "hecho confirmado",
+      "details": "Palo Alto mantiene CVE-2026-0300 con explotacion limitada sobre User-ID Authentication Portal expuesto a IPs no confiables o Internet.",
+      "priority": "critica",
+      "impact": "RCE con privilegios root en firewalls PA-Series y VM-Series afectados."
+    },
+    {
+      "title": "Exchange on-prem en observacion reforzada",
+      "status": "hecho confirmado",
+      "details": "Microsoft divulgo el 14 de mayo CVE-2026-42897 afectando Exchange OWA; el vector descrito parte de un correo especialmente manipulado.",
+      "priority": "alta",
+      "impact": "Riesgo elevado para organizaciones con OWA expuesto y alto valor de credenciales."
+    },
+    {
+      "title": "RCE critica en Exim",
+      "status": "hecho confirmado",
+      "details": "INCIBE reporta CVE-2026-45185 como critica en Exim 4.97 a 4.99.2; la solucion es actualizar a 4.99.3.",
+      "priority": "alta",
+      "impact": "Compromiso remoto de servidores de correo basados en Exim."
+    },
+    {
+      "title": "Fortinet amplia la carga de parcheo",
+      "status": "hecho confirmado",
+      "details": "FortiAuthenticator CVE-2026-44277 y FortiSandbox CVE-2026-26083 se publicaron el 12 de mayo con CVSS 9.1, sin explotacion conocida por ahora.",
+      "priority": "alta",
+      "impact": "Nueva deuda critica en autenticacion y sandboxing, especialmente relevante en entornos expuestos o con poca segmentacion."
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation_status": "Explotacion limitada observada",
+      "patch_status": "Parche disponible; sin workaround",
+      "mitigation_priority": "P1 inmediata",
+      "source": "Cisco Security Advisory"
+    },
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3",
+      "severity": "Critica",
+      "exploitation_status": "Explotacion limitada observada",
+      "patch_status": "Versiones corregidas disponibles; endurecimiento y cierre de exposicion recomendados",
+      "mitigation_priority": "P1 inmediata",
+      "source": "Palo Alto Networks Security Advisories"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server OWA",
+      "cvss": "N/D",
+      "severity": "Alta",
+      "exploitation_status": "Explotada en ataques segun Microsoft",
+      "patch_status": "Seguimiento diario de mitigaciones y guidance del fabricante",
+      "mitigation_priority": "P1 inmediata",
+      "source": "Microsoft Exchange Team"
+    },
+    {
+      "cve": "CVE-2026-45185",
+      "product": "Exim",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation_status": "No confirmada",
+      "patch_status": "Corregida en Exim 4.99.3",
+      "mitigation_priority": "P1 en servidores expuestos",
+      "source": "INCIBE-CERT / Exim advisory"
+    },
+    {
+      "cve": "CVE-2026-44277",
+      "product": "FortiAuthenticator",
+      "cvss": "9.1",
+      "severity": "Critica",
+      "exploitation_status": "No conocida",
+      "patch_status": "Upgrade a 8.0.3 / 6.6.9 / 6.5.7 o superior",
+      "mitigation_priority": "P2 alta",
+      "source": "Fortinet PSIRT"
+    },
+    {
+      "cve": "CVE-2026-26083",
+      "product": "FortiSandbox / FortiSandbox Cloud / PaaS",
+      "cvss": "9.1",
+      "severity": "Critica",
+      "exploitation_status": "No conocida",
+      "patch_status": "Upgrade o migracion a versiones corregidas",
+      "mitigation_priority": "P2 alta",
+      "source": "Fortinet PSIRT"
+    }
+  ],
+  "malware_ransomware": {
+    "status": "cobertura parcial",
+    "families_active": [
+      "Campanas de malware distribuidas por LinkedIn mediante DLL sideloading",
+      "Phishing tematico de robo de credenciales con marcas de alto reconocimiento"
+    ],
+    "target_sectors": [
+      "Ejecutivos y profesionales corporativos",
+      "Pymes y usuarios de servicios financieros y streaming",
+      "Entornos con correo corporativo y autenticacion expuesta"
+    ],
+    "techniques": [
+      "Mensajes directos en plataformas colaborativas",
+      "Archivos comprimidos con cargas aparentemente legitimas",
+      "DLL sideloading",
+      "Fraude por urgencia y verificacion de cuenta"
+    ],
+    "supported_iocs": "No se incluyen IOCs en esta edicion por no disponer de un set oficial compacto y verificado para difusion ejecutiva.",
+    "trend": "estable-alcista",
+    "propagation_level": "moderado"
+  },
+  "relevant_news": [
+    {
+      "title": "Rituals hace publico un incidente que afecta a parte de su base de clientes",
+      "type": "brecha de datos",
+      "status": "hecho confirmado",
+      "relevance": "Refuerza el riesgo reputacional y regulatorio en comercio y servicios digitales."
+    },
+    {
+      "title": "Booking reconoce acceso no autorizado a datos de usuarios",
+      "type": "brecha de datos",
+      "status": "hecho confirmado",
+      "relevance": "Mantiene la atencion sobre terceros con alta concentracion de PII y credenciales."
+    },
+    {
+      "title": "Microsoft mayo 2026: 137 vulnerabilidades corregidas",
+      "type": "patch tuesday",
+      "status": "hecho confirmado",
+      "relevance": "Carga elevada de remediacion en Windows, Azure y servicios asociados."
+    },
+    {
+      "title": "Android mayo 2026 corrige una vulnerabilidad critica en System",
+      "type": "movil",
+      "status": "hecho confirmado",
+      "relevance": "Implica revisar flotas moviles corporativas y cumplimiento de nivel de parche."
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      "Actualizar de inmediato Cisco SD-WAN a las versiones fijas y recoger evidencia antes del upgrade si existe exposicion a Internet.",
+      "Revisar y cerrar el acceso no confiable a PAN-OS User-ID Authentication Portal; aplicar la version corregida o deshabilitar el portal si no es imprescindible.",
+      "Activar vigilancia reforzada sobre Exchange OWA, aplicar guidance del fabricante y buscar senales de correos maliciosos dirigidos a OWA."
+    ],
+    "high": [
+      "Actualizar Exim a 4.99.3 y verificar que no existan instancias heredadas 4.97-4.99.2 expuestas.",
+      "Planificar parcheo de FortiAuthenticator y FortiSandbox en la siguiente ventana prioritaria, empezando por activos expuestos o en zonas de administracion.",
+      "Completar el ciclo de Microsoft mayo 2026 en activos Windows, Azure y servicios con exposicion externa o privilegios altos."
+    ],
+    "medium": [
+      "Reforzar MFA resistente a phishing y revisar acceso administrativo desde IPs de confianza unicamente.",
+      "Actualizar reglas de deteccion para auth.log, accesos anommalos a portales y patrones de correo con verificacion urgente de cuenta.",
+      "Informar a usuarios sobre campanas de suplantacion que usan marcas como SumUp, Netflix o supuestos organismos policiales."
+    ],
+    "low": [
+      "Validar el nivel de parche Android de dispositivos corporativos y BYOD con acceso a correo o apps sensibles.",
+      "Mantener un inventario vivo de appliances y versiones para reducir tiempos de reaccion en futuras ventanas de explotacion."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo",
+    "global_estimated_risk": "ALTO",
+    "next_threats_prediction": [
+      "Mayor presion sobre equipos perimetrales y de autenticacion expuestos",
+      "Incremento de phishing tematico apoyado en marcas de confianza y plataformas colaborativas",
+      "Aumento de intentos de explotacion oportunista sobre correo y servicios de administracion remota"
+    ],
+    "most_exposed_sectors": [
+      "Pymes con correo y MFA debil",
+      "Operadores con SD-WAN o firewall expuesto",
+      "Industria y energia con componentes OT accesibles remotamente"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-0300",
+      "CVE-2026-42897",
+      "CVE-2026-45185"
+    ],
+    "probability_of_attack_increase": "media-alta en 24-72h",
+    "automatic_recommendation": "Mantener cadencia de seguimiento cada 4 horas hasta cerrar el backlog de perimetro, correo e identidad."
+  },
+  "spain_focus": {
+    "companies_and_smes": [
+      "INCIBE mantiene avisos de phishing con suplantacion de SumUp para empresas.",
+      "INCIBE mantiene avisos a ciudadania por fraudes que usan marcas de gran confianza, como Netflix, y por correos que suplantan organismos policiales."
+    ],
+    "critical_infrastructure": [
+      "INCIBE-SCI publico avisos de severidad critica y alta para Siemens, Ingecon EMS Board, Schneider Electric y CODESYS en la ventana del 12-13 de mayo."
+    ]
+  },
+  "sources": [
+    {
+      "title": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW"
+    },
+    {
+      "title": "Palo Alto CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "title": "Microsoft Exchange Team - CVE-2026-42897",
+      "url": "https://techcommunity.microsoft.com/blog/exchange/addressing-exchange-server-may-2026-vulnerability-cve-2026-42897/4518498"
+    },
+    {
+      "title": "INCIBE - Exim CVE-2026-45185",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim"
+    },
+    {
+      "title": "Fortinet PSIRT - CVE-2026-44277",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-128"
+    },
+    {
+      "title": "Fortinet PSIRT - CVE-2026-26083",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-136"
+    },
+    {
+      "title": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    },
+    {
+      "title": "INCIBE - Microsoft mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026"
+    },
+    {
+      "title": "INCIBE - Avisos y bitacora",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
