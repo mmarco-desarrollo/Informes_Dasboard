@@ -102,3 +102,30 @@ Este informe ha sido generado automaticamente mediante sistemas avanzados de int
 ### Aviso legal
 
 Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+
+---
+
+## Informe ejecutivo de ciberseguridad - 2026-05-15 20:00 CEST
+
+### Artefactos archivados
+
+- Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_2017_CEST.html
+- Respaldo JSON: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_2017_CEST.json
+- Directorio diario: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260515
+
+### Resumen rapido
+
+- Nivel global de amenaza: ALTO.
+- Alertas clave: explotacion limitada confirmada en Cisco SD-WAN CVE-2026-20182, continuidad de explotacion en PAN-OS CVE-2026-0300, divulgacion de Exchange CVE-2026-42897 y RCE critica en Exim CVE-2026-45185.
+- Riesgo prioritario para Espana: pymes con correo, MFA debil o appliances expuestos; y entornos industriales o de energia con deuda de parcheo OT.
+- Recomendacion ejecutiva: ejecutar esta noche un plan de choque de inventario, cierre de exposicion, parcheo y hunting sobre SD-WAN, PAN-OS, Exchange, Exim y Fortinet critico.
+
+### Estado de artefactos
+
+- HTML y JSON publicados y verificables en GitHub.
+- PDF no generado en esta edicion para no declarar como entregado un artefacto sin persistencia externa fiable.
+- Google Drive omitido en esta edicion.
+
+### Aviso legal
+
+Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
