@@ -48,3 +48,30 @@ Este informe ha sido generado automaticamente mediante sistemas avanzados de int
 ### Aviso legal
 
 Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+
+---
+
+## Informe ejecutivo de ciberseguridad - 2026-05-15 12:07 CEST
+
+### Artefactos archivados
+
+- Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_1207_CEST.html
+- Respaldo JSON: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_1207_CEST.json
+- Directorio diario: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260515
+
+### Resumen rapido
+
+- Nivel global de amenaza: ALTO.
+- Alertas clave: CVE-2026-35616 en FortiClient EMS con explotacion confirmada, 137 vulnerabilidades Microsoft de mayo 2026, nuevo fallo critico CVE-2026-44277 en FortiAuthenticator y presion OT por Siemens/Ingeteam.
+- Riesgo prioritario para Espana: organizaciones con Microsoft 365, APIs expuestas, infraestructura Windows pendiente de parche y entornos energia/industria con acceso remoto.
+- Recomendacion ejecutiva: parcheo inmediato en Fortinet y Microsoft, cierre de exposicion API y refuerzo de controles de identidad y telemetria.
+
+### Estado de artefactos
+
+- HTML y JSON publicados y verificables en GitHub.
+- PDF no generado en esta edicion para no declarar como entregado un artefacto sin persistencia externa fiable.
+- Google Drive omitido en esta edicion.
+
+### Aviso legal
+
+Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
