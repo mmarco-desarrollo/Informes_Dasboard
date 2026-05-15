@@ -1,0 +1,352 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "specialty": "Ciberseguridad | Blockchain | IA | Telecomunicaciones",
+  "website": "https://mmarcoseguridad.com",
+  "email": "mmarco.seguridad@gmail.com",
+  "phone": "+34 656 33 93 55",
+  "report_title": "Crypto Insights Executive | Corte 16:56 CEST",
+  "date_local": "2026-05-15 16:56 CEST",
+  "run_date": "20260515",
+  "run_time": "16-56",
+  "state_general": "Recuperacion selectiva con sesgo BTC-led",
+  "state_ai": "Constructivo tactico",
+  "fear_greed": {
+    "value": 43,
+    "label": "Fear"
+  },
+  "fear_greed_context": "mejora frente a 34 ayer",
+  "next_update": "Ventana automatica programada",
+  "html_url": "https://cdn.jsdelivr.net/gh/mmarco-desarrollo/informes_Dasboard@main/informes_Cripto/20260515/16-56/dashboard.html",
+  "pdf_url": "https://cdn.jsdelivr.net/gh/mmarco-desarrollo/informes_Dasboard@main/informes_Cripto/20260515/16-56/dashboard.pdf",
+  "executive_summary": [
+    "CoinGecko sitia la capitalizacion global cripto en $2.72T y el volumen 24h en $120.49B, con BTC dominance en 58.3% y ETH dominance en 9.84%, una combinacion que sigue describiendo un mercado liderado por Bitcoin.",
+    "El sentimiento mejora, pero no ha girado a euforia: Alternative.me marca Fear & Greed en 43 (Fear), por encima de 34 ayer, mientras CoinMarketCap mantiene el Altcoin Season Index en 35/100, aun claramente en Bitcoin Season.",
+    "Derivados siguen pesando en la lectura tactica: CoinMarketCap muestra $499.04B en open interest de perpetuos y $2.87B en futuros, con volatilidad implicita de 41.66 para BTC y 56.48 para ETH; el funding agregado no ofrece una cifra publica suficientemente estable en el crawl actual.",
+    "Las majors van en verde en esta ventana, pero con amplitud todavia selectiva: BTC +1.6% en 24h, ETH +2.0%, SOL +3.0%, XRP +1.7%, ADA +3.7% y DOGE +2.7%; el sesgo regulatorio ayuda, aunque el calendario macro de fin de mayo y junio sigue siendo el principal foco de riesgo."
+  ],
+  "kpis": [
+    {
+      "label": "Market Cap Total",
+      "value": "$2.72T",
+      "delta": "+2.2% 24h",
+      "tone": "green"
+    },
+    {
+      "label": "Volumen 24h",
+      "value": "$120.49B",
+      "delta": "actividad elevada",
+      "tone": "blue"
+    },
+    {
+      "label": "BTC Dominance",
+      "value": "58.3%",
+      "delta": "liderazgo BTC",
+      "tone": "amber"
+    },
+    {
+      "label": "ETH Dominance",
+      "value": "9.84%",
+      "delta": "recuperacion parcial",
+      "tone": "blue"
+    },
+    {
+      "label": "Altseason Index",
+      "value": "35 / 100",
+      "delta": "Bitcoin Season",
+      "tone": "soft"
+    },
+    {
+      "label": "Open Interest",
+      "value": "$499.04B",
+      "delta": "perpetuos agregados",
+      "tone": "cyan"
+    },
+    {
+      "label": "Funding Bias",
+      "value": "Mixto",
+      "delta": "sin media agregada estable",
+      "tone": "amber"
+    },
+    {
+      "label": "Liquidaciones 24h",
+      "value": "n/d",
+      "delta": "dashboard publico sin cifra estable",
+      "tone": "soft"
+    },
+    {
+      "label": "Fear & Greed",
+      "value": "43 / 100",
+      "delta": "Fear | ayer 34",
+      "tone": "amber"
+    },
+    {
+      "label": "Volatilidad",
+      "value": "BTC 41.66 | ETH 56.48",
+      "delta": "Volmex impl. CMC",
+      "tone": "red"
+    }
+  ],
+  "coins": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": "$79,177.21",
+      "change_24h": 1.6,
+      "change_7d": 1.1,
+      "volume": "$49.29B",
+      "market_cap": "$1.59T",
+      "range_low": "$78,742.81",
+      "range_high": "$81,957.65",
+      "rsi": "n/d",
+      "trend": "Rebote tactico",
+      "momentum": "Positivo",
+      "tone": "green"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": "$2,216.67",
+      "change_24h": 2.0,
+      "change_7d": 3.0,
+      "volume": "$21.03B",
+      "market_cap": "$267.88B",
+      "range_low": "$2,211.27",
+      "range_high": "$2,316.78",
+      "rsi": "n/d",
+      "trend": "Rebote tactico",
+      "momentum": "Positivo",
+      "tone": "green"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": "$88.88",
+      "change_24h": 3.0,
+      "change_7d": 0.7,
+      "volume": "$3.75B",
+      "market_cap": "$51.39B",
+      "range_low": "$88.76",
+      "range_high": "$93.58",
+      "rsi": "n/d",
+      "trend": "Rebote tactico",
+      "momentum": "Positivo",
+      "tone": "green"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": "$675.08",
+      "change_24h": 0.5,
+      "change_7d": 5.5,
+      "volume": "$1.29B",
+      "market_cap": "$90.98B",
+      "range_low": "$671.24",
+      "range_high": "$689.51",
+      "rsi": "n/d",
+      "trend": "Fortaleza relativa",
+      "momentum": "Alto",
+      "tone": "green"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "price": "$1.44",
+      "change_24h": 1.7,
+      "change_7d": 3.6,
+      "volume": "$4.27B",
+      "market_cap": "$88.90B",
+      "range_low": "$1.43",
+      "range_high": "$1.54",
+      "rsi": "n/d",
+      "trend": "Rebote tactico",
+      "momentum": "Positivo",
+      "tone": "green"
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": "$0.2590",
+      "change_24h": 3.7,
+      "change_7d": 2.0,
+      "volume": "$507.24M",
+      "market_cap": "$9.59B",
+      "range_low": "$0.2580",
+      "range_high": "$0.2797",
+      "rsi": "n/d",
+      "trend": "Rebote tactico",
+      "momentum": "Positivo",
+      "tone": "green"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": "$0.1120",
+      "change_24h": 2.7,
+      "change_7d": 5.0,
+      "volume": "$2.42B",
+      "market_cap": "$17.34B",
+      "range_low": "$0.1114",
+      "range_high": "$0.1181",
+      "rsi": "n/d",
+      "trend": "Fortaleza relativa",
+      "momentum": "Alto",
+      "tone": "green"
+    }
+  ],
+  "signals": [
+    {
+      "asset": "BTC",
+      "signal": "Sesgo alcista tactico mientras sostenga el tercio medio del rango semanal",
+      "entry": "continuidad sobre $81,958",
+      "stop": "$78,743",
+      "target": "$82,800",
+      "risk": "Medio",
+      "horizon": "24-72h",
+      "confidence": "60/100"
+    },
+    {
+      "asset": "ETH",
+      "signal": "Rebote tecnico en curso, todavia dependiente de confirmacion sobre resistencia",
+      "entry": "cierre valido > $2,316.78",
+      "stop": "$2,211.27",
+      "target": "$2,380",
+      "risk": "Medio",
+      "horizon": "24-72h",
+      "confidence": "59/100"
+    },
+    {
+      "asset": "ADA",
+      "signal": "Impulso corto positivo, pero con menor profundidad de liquidez que BTC y ETH",
+      "entry": "sostenimiento sobre $0.2797",
+      "stop": "$0.2580",
+      "target": "$0.2880",
+      "risk": "Medio",
+      "horizon": "24-72h",
+      "confidence": "56/100"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Alcista",
+      "prob": 37,
+      "tone": "green",
+      "desc": "El avance regulatorio en EE. UU. y la mejora institucional sostienen el rebote, BTC vuelve a la parte alta del rango y ETH/SOL extienden sin deterioro macro adicional.",
+      "targets": "BTC > 81.9k | ETH > 2.32k | SOL > 93.6",
+      "risk": "Medio",
+      "confidence": "62/100"
+    },
+    {
+      "name": "Neutral",
+      "prob": 43,
+      "tone": "blue",
+      "desc": "Predomina la consolidacion: el mercado absorbe los titulares regulatorios, mejora el sentimiento sin llegar a codicia y se mantiene el sesgo BTC-led con rotacion selectiva.",
+      "targets": "BTC 78.7k-82.0k | ETH 2.21k-2.32k | ADA 0.258-0.280",
+      "risk": "Medio",
+      "confidence": "66/100"
+    },
+    {
+      "name": "Bajista",
+      "prob": 20,
+      "tone": "red",
+      "desc": "Una nueva subida de rendimientos, decepcion macro o contagio adicional desde incidentes DeFi activa toma de beneficios y compresion del riesgo en derivados.",
+      "targets": "BTC < 78.7k | ETH < 2.21k | DOGE < 0.1114",
+      "risk": "Alto",
+      "confidence": "52/100"
+    }
+  ],
+  "capital_flows": [
+    "La combinacion de BTC dominance en 58.3% y Altcoin Season Index en 35/100 sigue describiendo una rotacion limitada: mejora el tono de riesgo, pero el liderazgo sigue concentrado en BTC y majors.",
+    "El open interest agregado sigue elevado y la volatilidad implicita continua exigente, por lo que el mercado conserva sensibilidad a squeezes y a titulares macro o regulatorios.",
+    "La mejora de Fear & Greed desde 34 ayer a 43 hoy sugiere alivio, no euforia; por eso el flujo parece mas de reconstruccion tactica que de expansion agresiva de riesgo.",
+    "No hay una lectura publica suficientemente limpia y verificable de ballenas o de inflows/outflows agregados por exchange para esta ventana; se mantiene fallback elegante y el analisis se apoya en dominancias, derivados y headlines institucionales."
+  ],
+  "news": [
+    {
+      "title": "El Senate Banking Committee avanzo el Digital Asset Market CLARITY Act",
+      "source": "U.S. Senate Banking Committee",
+      "time": "14 May 2026",
+      "impact": "Positivo regulatorio",
+      "desc": "El comite marco la norma de estructura de mercado y la envio al siguiente tramo legislativo, reforzando la expectativa de mayor claridad regulatoria para cripto en EE. UU."
+    },
+    {
+      "title": "CME Group y Nasdaq planean lanzar futuros del Nasdaq CME Crypto Index el 8 de junio",
+      "source": "Nasdaq / CME Group",
+      "time": "14 May 2026",
+      "impact": "Positivo institucional",
+      "desc": "El nuevo futuro ampliaria la via regulada para exposicion institucional diversificada a cripto, sujeto a revision regulatoria."
+    },
+    {
+      "title": "Hana Bank adquirira una participacion relevante en Dunamu, matriz de Upbit",
+      "source": "Forbes / Reuters / MarketScreener",
+      "time": "15 May 2026",
+      "impact": "Positivo institucional APAC",
+      "desc": "La operacion refuerza la convergencia entre banca tradicional y ecosistema cripto en Corea del Sur, uno de los mercados mas activos de la region."
+    },
+    {
+      "title": "THORChain pauso el trading tras un exploit multi-chain cercano a $10M",
+      "source": "The Block / Cointelegraph",
+      "time": "15 May 2026",
+      "impact": "Negativo seguridad DeFi",
+      "desc": "El incidente eleva de nuevo la prima de riesgo operativa en infraestructura cross-chain y recuerda que el frente de seguridad DeFi sigue abierto."
+    }
+  ],
+  "macro_calendar": [
+    {
+      "event": "PIB EE. UU. 1T26 (segunda estimacion)",
+      "date": "28 May 2026",
+      "impact": "Alto",
+      "note": "BEA confirma la segunda lectura del PIB tras el avance de +2.0% anualizado del 1T26."
+    },
+    {
+      "event": "Employment Situation EE. UU.",
+      "date": "05 Jun 2026",
+      "impact": "Alto",
+      "note": "BLS publicara el dato de empleo de mayo; puede mover dolar y Nasdaq."
+    },
+    {
+      "event": "CPI EE. UU. (mayo)",
+      "date": "10 Jun 2026",
+      "impact": "Muy alto",
+      "note": "La agenda oficial de BLS fija el siguiente IPC para el 10 de junio a las 08:30 ET."
+    },
+    {
+      "event": "ECB monetary policy press conference",
+      "date": "11 Jun 2026",
+      "impact": "Medio-Alto",
+      "note": "La conferencia del BCE puede mover FX, bonos y apetito por riesgo."
+    },
+    {
+      "event": "FOMC",
+      "date": "16-17 Jun 2026",
+      "impact": "Muy alto",
+      "note": "El calendario de la Fed confirma reunion de dos dias y rueda de prensa el 17 de junio."
+    }
+  ],
+  "alerts": [
+    {
+      "level": "ALERTA",
+      "text": "Altseason Index en 35/100: mejora la amplitud, pero el mercado sigue lejos de una rotacion agresiva hacia alts."
+    },
+    {
+      "level": "ALERTA",
+      "text": "Open interest agregado cercano a $499B mantiene elevada la sensibilidad a squeezes y a barridos de liquidez."
+    },
+    {
+      "level": "RIESGO",
+      "text": "El exploit de THORChain recuerda que el riesgo operacional DeFi sigue vivo aunque el contagio sistemico sea limitado por ahora."
+    },
+    {
+      "level": "MACRO",
+      "text": "El CPI de abril en EE. UU. quedo en 3.8% interanual; el binomio IPC de junio + FOMC sigue siendo el principal riesgo macro de la siguiente fase."
+    }
+  ],
+  "sources": [
+    "CoinGecko - market cap total, volumen, dominancias, spot y rangos 24h/7d",
+    "Alternative.me - Crypto Fear & Greed 43 Fear",
+    "CoinMarketCap charts - Altcoin Season Index, open interest y volatilidad implicita",
+    "CoinMarketCap liquidations dashboard - cifra 24h no estable en el crawl publico",
+    "U.S. Senate Banking Committee / Nasdaq / CME / Forbes / Reuters / The Block / Cointelegraph - noticias",
+    "BLS / Federal Reserve / ECB / BEA - calendario y macro"
+  ]
+}
