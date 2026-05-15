@@ -24,4 +24,4 @@
 
 - Estructura local preparada con formato objetivo de repositorio.
 - Dashboard HTML archivado en GitHub.
-- PDF pendiente de publicacion accesible durante esta actualizacion.
+- PDF archivado en GitHub.
