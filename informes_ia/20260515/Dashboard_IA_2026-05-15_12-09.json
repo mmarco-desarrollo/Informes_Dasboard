@@ -1,0 +1,344 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "report_title": "Informe Ejecutivo de Inteligencia Artificial | Corte 12:00",
+  "generated_at": "2026-05-15T12:09:00+02:00",
+  "timezone": "Europe/Madrid",
+  "analysis_window": {
+    "since_last_execution": "2026-05-14T20:10:00+02:00",
+    "through": "2026-05-15T12:09:00+02:00"
+  },
+  "global_status": {
+    "impact_level": "alto",
+    "ecosystem_state": "alta actividad con riesgo controlable",
+    "dominant_theme": "la ventaja competitiva se desplaza desde el modelo aislado hacia despliegue, gobernanza, identidad y herramientas agentic"
+  },
+  "kpis": {
+    "confirmed_changes": 5,
+    "active_alerts": 3,
+    "new_incidents": 1,
+    "dominant_signal": "despliegue"
+  },
+  "executive_summary": [
+    {
+      "type": "confirmed_fact",
+      "priority": "alta",
+      "summary": "OpenAI llevo Codex a la app movil en preview y amplio la capa enterprise con Remote SSH GA, Hooks GA, access tokens programaticos y soporte HIPAA elegible en entornos locales.",
+      "practical_value": "sube la utilidad de supervision y continuidad para agentes largos y automatizaciones internas"
+    },
+    {
+      "type": "confirmed_fact",
+      "priority": "alta",
+      "summary": "Microsoft publico una guia de defensa en profundidad para agentes autonomos centrada en minimo privilegio, identidad propia del agente, arquitectura modular y escalado humano determinista.",
+      "practical_value": "refuerza que el riesgo principal ya no esta solo en el modelo sino en permisos y ensamblaje"
+    },
+    {
+      "type": "confirmed_fact",
+      "priority": "alta",
+      "summary": "xAI lanzo Grok Build en beta temprana y entra hoy en la retirada de varios slugs legacy con redireccion automatica a grok-4.3 y nuevos destinos de imagen.",
+      "practical_value": "urge inventario y sustitucion explicita para evitar cambios no deseados de precio o comportamiento"
+    },
+    {
+      "type": "confirmed_fact",
+      "priority": "media",
+      "summary": "OpenAI registro una alta tasa de fallos en Codex Cloud y Code Review el 14 de mayo y luego marco la recuperacion total.",
+      "practical_value": "senal de continuidad operativa a considerar en workflows agentic dependientes de review y ejecucion remota"
+    },
+    {
+      "type": "interpretation",
+      "priority": "alta",
+      "summary": "La ventana no confirma una ruptura nueva de frontier models; el foco competitivo sigue trasladandose hacia despliegue, conectividad, identidad y gobierno.",
+      "practical_value": "favorece servicios premium de integracion, hardening y automatizacion segura"
+    }
+  ],
+  "featured_news": [
+    {
+      "title": "Work with Codex from anywhere",
+      "entity": "OpenAI",
+      "date": "2026-05-14",
+      "category": "productivity_agents",
+      "impact": "alto",
+      "utility": "alta",
+      "quick_recommendation": "vigilar adopcion de accesos moviles, tokens y hooks en entornos empresariales",
+      "source_url": "https://openai.com/index/work-with-codex-from-anywhere/"
+    },
+    {
+      "title": "Defense in depth for autonomous AI agents",
+      "entity": "Microsoft Security",
+      "date": "2026-05-14",
+      "category": "agent_security",
+      "impact": "alto",
+      "risk": "alto",
+      "quick_recommendation": "usar como marco de referencia para auditorias de agentes y diseno de permisos",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    },
+    {
+      "title": "Introducing Grok Build Early Beta",
+      "entity": "xAI",
+      "date": "2026-05-14",
+      "category": "coding_agents",
+      "impact": "medio",
+      "utility": "media",
+      "quick_recommendation": "tratar como herramienta de laboratorio y benchmarking inicial",
+      "source_url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "title": "2028: Two scenarios for global AI leadership",
+      "entity": "Anthropic",
+      "date": "2026-05-14",
+      "category": "policy_strategy",
+      "impact": "medio",
+      "utility": "media",
+      "quick_recommendation": "vigilar implicaciones en seguridad, export controls y narrativa comercial de frontier labs",
+      "source_url": "https://www.anthropic.com/research/2028-ai-leadership?hl=en-US"
+    }
+  ],
+  "recent_models_and_llms": [
+    {
+      "name": "grok-4.3",
+      "company": "xAI",
+      "type": "llm",
+      "status": "destino principal de redireccion para varios slugs retirados",
+      "impact_estimate": "alto para integraciones existentes",
+      "notes": "no es un nuevo lanzamiento de esta ventana, pero si el punto de migracion operativo dominante",
+      "source_url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "name": "Gemini Intelligence",
+      "company": "Google",
+      "type": "agentic_experience",
+      "status": "continua como rollout relevante",
+      "capabilities": [
+        "automatizar tareas complejas",
+        "resumir web",
+        "ayudar a completar formularios"
+      ],
+      "impact_estimate": "medio",
+      "source_url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Codex mobile + access tokens + hooks",
+      "source": "OpenAI",
+      "description": "movilidad, supervision remota y automatizacion con identidad de workspace",
+      "use_cases": [
+        "seguimiento de agentes largos",
+        "aprobaciones fuera del escritorio",
+        "automatizaciones internas",
+        "pipelines CI con control enterprise"
+      ],
+      "utility_level": "alta",
+      "risks": [
+        "mayor superficie de gobierno",
+        "necesidad de control fino de permisos"
+      ],
+      "source_url": "https://openai.com/index/work-with-codex-from-anywhere/"
+    },
+    {
+      "name": "Grok Build CLI",
+      "source": "xAI",
+      "description": "agente de coding para terminal en beta temprana",
+      "use_cases": [
+        "benchmarking de agentes de desarrollo",
+        "exploracion comparativa de stacks"
+      ],
+      "utility_level": "media",
+      "risks": [
+        "madurez temprana",
+        "sin evidencia suficiente para estandarizarlo aun"
+      ],
+      "source_url": "https://x.ai/news/grok-build-cli"
+    }
+  ],
+  "repositories_and_scripts": [
+    {
+      "status": "sin_senal_prioritaria_nueva_confirmada",
+      "note": "la ventana estuvo dominada por producto, seguridad y migraciones oficiales",
+      "practical_read": "mantener esta seccion en modo observacion hasta que aparezca una novedad open source con traccion real"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Codex Cloud and Code Review experiencing high failure rate",
+      "affected_product": "OpenAI Codex Cloud / Code Review",
+      "severity": "media",
+      "status": "resuelto",
+      "impact": "interrupcion temporal de continuidad operativa en flujos agentic",
+      "mitigation": "mantener fallback operativo y ventanas manuales para review critica",
+      "priority": "alta",
+      "source_url": "https://status.openai.com/history"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "identifier": "MAI-2026-002",
+      "name": "TanStack supply chain attack affecting Mistral AI SDK packages",
+      "affected_product": "Mistral SDKs npm y PyPI",
+      "severity": "alta",
+      "exploitation_status": "mitigated, pero con remediacion pendiente para entornos impactados",
+      "impact": "el paquete PyPI 2.4.6 ejecutaba codigo malicioso al importar y podia recolectar credenciales",
+      "mitigation": "limpiar sistemas, rotar secretos, revisar imagenes y caches, sustituir versiones afectadas",
+      "priority": "critica",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories"
+    }
+  ],
+  "regulation": [
+    {
+      "title": "Consultation on the draft guidelines on transparency obligations under the AI Act",
+      "entity": "European Commission",
+      "opened": "2026-05-08",
+      "closing": "2026-06-03",
+      "impact": "alto para proveedores y deployers que deban cumplir el articulo 50",
+      "quick_recommendation": "seguir el cierre de consulta y preparar discurso comercial/compliance en transparencia",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "title": "Council and Parliament agree to simplify and streamline rules",
+      "entity": "Consilium",
+      "date": "2026-05-07",
+      "impact": "alto",
+      "notes": [
+        "high-risk standalone AI systems pasan a 2 December 2027",
+        "high-risk AI embedded in products pasan a 2 August 2028",
+        "transparency solutions for artificially generated content quedan en 2 December 2026"
+      ],
+      "source_url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/"
+    }
+  ],
+  "trends_and_radar": [
+    {
+      "signal": "el sistema supera al modelo como fuente de ventaja y riesgo",
+      "confidence": "alta",
+      "type": "interpretation"
+    },
+    {
+      "signal": "los permisos heredados y la identidad difusa de agentes se consolidan como superficie critica",
+      "confidence": "alta",
+      "type": "interpretation"
+    },
+    {
+      "signal": "la utilidad comercial inmediata se concentra en despliegue gestionado, no en demos genericas",
+      "confidence": "media",
+      "type": "interpretation"
+    }
+  ],
+  "opportunities": [
+    {
+      "priority": "alta",
+      "title": "Auditoria de agentes y permisos",
+      "business_fit": "consultoria y ciberseguridad",
+      "why_now": "alineada con Microsoft Security y OpenAI en gobierno agentic"
+    },
+    {
+      "priority": "alta",
+      "title": "Migracion gestionada de stacks agentic",
+      "business_fit": "automatizacion e integracion",
+      "why_now": "xAI y Mistral fuerzan inventario, saneamiento y sustitucion explicita"
+    },
+    {
+      "priority": "media",
+      "title": "Productividad movil supervisada",
+      "business_fit": "servicios internos y soporte",
+      "why_now": "Codex movil abre nuevas rutas para aprobacion y seguimiento"
+    }
+  ],
+  "active_alerts": [
+    {
+      "priority": "critica",
+      "title": "Bloquear e investigar mistralai==2.4.6",
+      "action": "buscar lockfiles, hosts Linux, contenedores e importaciones; limpiar y rotar secretos si hubo ejecucion"
+    },
+    {
+      "priority": "alta",
+      "title": "Cerrar inventario xAI hoy",
+      "action": "sustituir slugs retirados antes de las 21:00 CEST y revisar impacto de precio y comportamiento"
+    },
+    {
+      "priority": "alta",
+      "title": "Separar identidad de usuario y agente",
+      "action": "aplicar minimo privilegio, duracion limitada y logs por agente"
+    }
+  ],
+  "executive_recommendations": [
+    {
+      "priority": "critica",
+      "title": "No dejar redirecciones ni parches implícitos como control",
+      "detail": "migrar slugs, versiones y permisos de forma explicita"
+    },
+    {
+      "priority": "alta",
+      "title": "Ofrecer un servicio premium de hardening agentic",
+      "detail": "permite capturar valor donde el mercado ya esta poniendo el foco"
+    },
+    {
+      "priority": "media",
+      "title": "Mantener vigilancia sobre cierres regulatorios del AI Act",
+      "detail": "ayuda a convertir cumplimiento en argumento comercial y de confianza"
+    }
+  ],
+  "events_calendar": [
+    {
+      "date": "2026-05-15T21:00:00+02:00",
+      "title": "xAI retirement effective",
+      "note": "entra la redireccion de slugs legacy a grok-4.3 y destinos de imagen"
+    },
+    {
+      "date": "2026-06-03T23:59:00+02:00",
+      "title": "Fin de la consulta del articulo 50",
+      "note": "cierra la ventana de feedback sobre transparencia AI Act"
+    },
+    {
+      "date": "2026-12-02T00:00:00+01:00",
+      "title": "Deadline de transparencia",
+      "note": "nueva fecha fijada para soluciones de transparencia en contenido generado"
+    }
+  ],
+  "limitations": [
+    "No se genero PDF en esta sesion porque no fue posible materializar una conversion visualmente fiel del dashboard HTML con las capacidades disponibles del entorno.",
+    "Se priorizaron HTML premium y JSON estructurado, ambos listos para archivado y enlace en GitHub."
+  ],
+  "sources": [
+    {
+      "label": "OpenAI - Work with Codex from anywhere",
+      "url": "https://openai.com/index/work-with-codex-from-anywhere/"
+    },
+    {
+      "label": "OpenAI Status - History",
+      "url": "https://status.openai.com/history"
+    },
+    {
+      "label": "Microsoft Security - Defense in depth for autonomous AI agents",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    },
+    {
+      "label": "xAI - Introducing Grok Build Early Beta",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "label": "xAI Docs - Grok Model Retirement on May 15, 2026",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "label": "Mistral Docs - Security advisories",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "label": "Anthropic - 2028: Two scenarios for global AI leadership",
+      "url": "https://www.anthropic.com/research/2028-ai-leadership?hl=en-US"
+    },
+    {
+      "label": "European Commission - Consultation on the draft guidelines on transparency obligations under the AI Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "label": "Consilium - simplify and streamline rules",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/"
+    },
+    {
+      "label": "Google - Gemini Intelligence brings proactive AI to Android",
+      "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
