@@ -1,0 +1,25 @@
+## Informe ejecutivo de ciberseguridad - 2026-05-16 00:18 CEST
+
+### Artefactos archivados
+
+- Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_0018_CEST.html
+- Respaldo JSON: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_0018_CEST.json
+- Directorio diario: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260516
+
+### Resumen rapido
+
+- Nivel global de amenaza: ALTO.
+- Alertas clave: explotacion activa de Cisco SD-WAN CVE-2026-20182, RCE critico en Exim CVE-2026-45185, exposicion OT en Siemens/Ingeteam y riesgo operativo para pymes por cPanel, MOVEit y phishing de marca.
+- Riesgo prioritario para Espana: conectividad gestionada, correo expuesto, hosting administrado y entornos energia/industria con acceso remoto.
+- Recomendacion ejecutiva: ejecutar durante la madrugada un plan de choque de inventario, parcheo y hunting sobre SD-WAN, Exim, cPanel y activos OT con acceso remoto.
+
+### Estado de artefactos
+
+- HTML y JSON publicados y verificables en GitHub.
+- PDF generado y validado en local, pero no publicado externamente en esta ejecucion al no disponer de una via verificable de persistencia binaria mediante el conector utilizado.
+- Imagenes por pagina generadas en local y pendientes de una persistencia externa verificable.
+- Google Drive omitido en esta edicion.
+
+### Aviso legal
+
+Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
