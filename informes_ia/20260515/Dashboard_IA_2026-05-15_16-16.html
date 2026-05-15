@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MMarco Seguridad | Informe Ejecutivo IA 2026-05-15 16:00</title>
+  <style>
+    :root {
+      --bg: #07111d;
+      --bg-2: #0d1b2d;
+      --panel: rgba(15, 28, 46, 0.9);
+      --panel-2: rgba(18, 36, 58, 0.88);
+      --line: rgba(141, 168, 201, 0.18);
+      --text: #ecf4ff;
+      --muted: #9cb2cf;
+      --electric: #3f8cff;
+      --violet: #7d67ff;
+      --green: #29d391;
+      --orange: #ff9a3c;
+      --red: #ff5d67;
+      --soft: #cfe1ff;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      --radius: 20px;
+      --max: 1360px;
+      --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background:
+      radial-gradient(circle at 20% 20%, rgba(63,140,255,0.16), transparent 24%),
+      radial-gradient(circle at 80% 0%, rgba(125,103,255,0.14), transparent 22%),
+      linear-gradient(180deg, #040b13 0%, #08111d 45%, #07101a 100%);
+      color: var(--text); font-family: var(--sans); }
+    a { color: #8fc8ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .shell { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; padding: 28px 0 48px; }
+    .hero {
+      border: 1px solid rgba(145, 176, 214, 0.14);
+      background:
+        linear-gradient(135deg, rgba(32, 63, 104, 0.86), rgba(11, 22, 39, 0.94)),
+        linear-gradient(135deg, rgba(41, 211, 145, 0.08), transparent);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(63, 140, 255, 0.24), transparent 65%);
+      pointer-events: none;
+    }
+    .hero-top, .hero-bottom, .kpis, .grid-2, .grid-3, .timeline {
+      display: grid;
+      gap: 16px;
+    }
+    .hero-top { grid-template-columns: 1.3fr .9fr; align-items: start; }
+    .hero-bottom { grid-template-columns: repeat(4, 1fr); margin-top: 22px; }
+    .eyebrow {
+      display: inline-flex; gap: 10px; align-items: center; font: 600 12px/1 var(--mono);
+      color: #bed0ea; text-transform: uppercase; letter-spacing: .12em;
+    }
+    .eyebrow span {
+      background: rgba(255,255,255,0.06); padding: 7px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.08);
+    }
+    h1 {
+      margin: 18px 0 14px; font-size: clamp(32px, 6vw, 54px); line-height: 1.02; max-width: 10ch;
+    }
+    .lead { margin: 0; color: var(--soft); font-size: 16px; line-height: 1.65; max-width: 64ch; }
+    .meta-panel, .kpi, .card, .strip, .table-card, .footer {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel), rgba(8, 16, 28, 0.96));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .meta-panel { padding: 18px; }
+    .meta-panel dl {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; margin: 0;
+    }
+    .meta-panel dt { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .meta-panel dd { margin: 6px 0 0; font-weight: 600; }
+    .kpis { grid-template-columns: repeat(4, 1fr); margin: 22px 0; }
+    .kpi { padding: 18px; min-height: 132px; }
+    .kpi .value { font-size: 34px; font-weight: 700; margin: 10px 0 8px; }
+    .kpi .label { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .1em; }
+    .kpi .note { color: var(--soft); font-size: 14px; line-height: 1.5; }
+    section { margin-top: 22px; }
+    .section-head {
+      display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 14px;
+    }
+    .section-head h2 { margin: 0; font-size: 22px; }
+    .section-head p { margin: 0; color: var(--muted); max-width: 72ch; }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .card { padding: 18px; }
+    .card-head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
+    .card h3 { margin: 0; font-size: 18px; line-height: 1.25; }
+    .card .meta {
+      color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
+    }
+    .card p, .card li { color: var(--soft); line-height: 1.58; }
+    .card ul, .summary ul, .strip ul, .footer ul { margin: 0; padding-left: 18px; }
+    .impact { border-color: rgba(63, 140, 255, 0.32); }
+    .warning { border-color: rgba(255, 154, 60, 0.34); }
+    .critical { border-color: rgba(255, 93, 103, 0.36); }
+    .strip {
+      padding: 18px 20px;
+      background: linear-gradient(90deg, rgba(18, 39, 64, 0.94), rgba(9, 18, 30, 0.98));
+    }
+    .activity {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 10px;
+    }
+    .meter {
+      border-top: 1px solid var(--line); padding-top: 14px;
+    }
+    .meter .row {
+      display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--soft);
+      margin-bottom: 8px;
+    }
+    .bar {
+      height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden;
+    }
+    .bar > span {
+      display: block; height: 100%;
+      background: linear-gradient(90deg, var(--electric), var(--violet));
+      border-radius: inherit;
+    }
+    table { width: 100%; border-collapse: collapse; }
+    .table-card { padding: 6px 0 0; overflow: hidden; }
+    th, td {
+      padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(141, 168, 201, 0.12);
+      font-size: 14px; line-height: 1.5;
+    }
+    th { color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
+    tbody tr:last-child td { border-bottom: 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04);
+      border-radius: 999px; padding: 7px 10px; font-size: 12px; color: var(--soft);
+    }
+    .timeline { grid-template-columns: repeat(3, 1fr); }
+    .timeline .card { min-height: 190px; }
+    .footer {
+      margin-top: 26px; padding: 22px;
+      background: linear-gradient(180deg, rgba(9, 16, 28, 0.96), rgba(5, 10, 18, 0.98));
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 18px; }
+    .muted { color: var(--muted); }
+    @media (max-width: 1100px) {
+      .hero-top, .hero-bottom, .kpis, .grid-2, .grid-3, .timeline, .activity, .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 760px) {
+      .hero-top, .hero-bottom, .kpis, .grid-2, .grid-3, .timeline, .activity, .footer-grid { grid-template-columns: 1fr; }
+      .shell { width: min(calc(100% - 20px), var(--max)); }
+      .hero { padding: 22px 18px; }
+      h1 { max-width: 100%; }
+      th, td { padding: 12px 12px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="eyebrow">
+            <span>MMarco Seguridad</span>
+            <span>Radar Ejecutivo IA</span>
+            <span>Corte 16:00</span>
+          </div>
+          <h1>Informe Ejecutivo Premium de Inteligencia Artificial</h1>
+          <p class="lead">Panorama ejecutivo para Manuel Marco Sanchez. Este corte prioriza novedades con impacto alto o utilidad inmediata en producto, seguridad, modelos, herramientas, repositorios y cumplimiento.</p>
+        </div>
+        <aside class="meta-panel">
+          <dl>
+            <div><dt>Generado</dt><dd>2026-05-15 16:16:38 CEST</dd></div>
+            <div><dt>Zona horaria</dt><dd>Europe/Madrid</dd></div>
+            <div><dt>Impacto IA</dt><dd>ALTO</dd></div>
+            <div><dt>Estado ecosistema</dt><dd>Activo, competitivo y con tension operativa</dd></div>
+            <div><dt>Proxima actualizacion</dt><dd>2026-05-15 20:00 CEST</dd></div>
+            <div><dt>Perfil corporativo</dt><dd>Ciberseguridad, Blockchain, IA y Telecomunicaciones</dd></div>
+          </dl>
+        </aside>
+      </div>
+      <div class="hero-bottom">
+        <div class="chip">Foco 1: supply chain y agentes con permisos</div>
+        <div class="chip">Foco 2: coding agents y supervision movil</div>
+        <div class="chip">Foco 3: conectores PyME listos para monetizar</div>
+        <div class="chip">Foco 4: AI Act con fechas operativas visibles</div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="kpi"><div class="label">Incidentes criticos</div><div class="value">3</div><div class="note">2 de supply chain, 1 operativo resuelto</div></div><div class="kpi"><div class="label">Vulns prioritarias</div><div class="value">2</div><div class="note">Flowise y Mistral SDK</div></div><div class="kpi"><div class="label">Lanzamientos con utilidad inmediata</div><div class="value">5</div><div class="note">Codex, Claude SMB, Grok Build, Gemini, Dynamo</div></div><div class="kpi"><div class="label">Nivel de impacto IA</div><div class="value">ALTO</div><div class="note">Fuerte tracción de producto con presión de riesgo real</div></div>
+    </section>
+
+    <section class="summary">
+      <div class="section-head">
+        <h2>Resumen Ejecutivo</h2>
+        <p>Lectura sintetica para decision ejecutiva, separando hechos confirmados de implicaciones operativas.</p>
+      </div>
+      <div class="strip">
+        <ul>
+          <li>El corte de las 16:00 confirma un mercado de IA muy activo, pero con el peso ejecutivo desplazado desde el modelo puro hacia seguridad operativa, agentes con permisos reales y tooling listo para producción.</li><li>La prioridad inmediata de riesgo sigue en supply chain y ejecución autónoma: OpenAI formalizó su respuesta al incidente TanStack sin evidencias de impacto a datos de usuario, Mistral mantiene bajo investigación paquetes comprometidos y Flowise conserva una vulnerabilidad crítica de RCE por prompt injection si no está en 3.1.0 o superior.</li><li>En producto, el bloque con utilidad inmediata lo lideran Codex móvil con access tokens y Hooks GA, Claude for Small Business con conectores listos para PyME, Grok Build como nuevo competidor agentic y Gemini Intelligence como señal de automatización proactiva en dispositivo.</li><li>Para consultoría y ciberseguridad, la oportunidad más clara es combinar revisión de supply chain, gobierno de identidades y pilotos controlados de agentes con herramientas que ya están maduras para explotación comercial.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Evolucion de Actividad IA</h2>
+        <p>La jornada combina crecimiento de tooling con tension real en seguridad de agentes y supply chain.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Producto</h3>
+          <div class="activity">
+            <div class="meter"><div class="row"><span>Agentes de codigo</span><strong>92/100</strong></div><div class="bar"><span style="width:92%"></span></div></div>
+            <div class="meter"><div class="row"><span>Conectores empresariales</span><strong>84/100</strong></div><div class="bar"><span style="width:84%"></span></div></div>
+            <div class="meter"><div class="row"><span>IA en dispositivo</span><strong>76/100</strong></div><div class="bar"><span style="width:76%"></span></div></div>
+          </div>
+        </div>
+        <div class="card warning">
+          <h3>Seguridad</h3>
+          <div class="activity">
+            <div class="meter"><div class="row"><span>Supply chain</span><strong>94/100</strong></div><div class="bar"><span style="width:94%; background:linear-gradient(90deg, var(--orange), var(--red))"></span></div></div>
+            <div class="meter"><div class="row"><span>Prompt injection</span><strong>88/100</strong></div><div class="bar"><span style="width:88%; background:linear-gradient(90deg, var(--orange), var(--red))"></span></div></div>
+            <div class="meter"><div class="row"><span>Continuidad operativa</span><strong>61/100</strong></div><div class="bar"><span style="width:61%; background:linear-gradient(90deg, var(--orange), var(--red))"></span></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Regulacion</h3>
+          <div class="activity">
+            <div class="meter"><div class="row"><span>AI Act transparencia</span><strong>70/100</strong></div><div class="bar"><span style="width:70%; background:linear-gradient(90deg, var(--green), var(--electric))"></span></div></div>
+            <div class="meter"><div class="row"><span>Sandboxes</span><strong>48/100</strong></div><div class="bar"><span style="width:48%; background:linear-gradient(90deg, var(--green), var(--electric))"></span></div></div>
+            <div class="meter"><div class="row"><span>Guias sectoriales</span><strong>65/100</strong></div><div class="bar"><span style="width:65%; background:linear-gradient(90deg, var(--green), var(--electric))"></span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Vista Global de Actividad IA</h2>
+        <p>Mapa de actores y lectura ejecutiva del momento.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><h3>OpenAI</h3><p>Fuerte avance en tooling y supervision de agentes, pero con foco intenso en integridad de cadena de suministro y continuidad de producto.</p></div>
+        <div class="card"><h3>Anthropic</h3><p>Movimiento comercial directo a PyME con conectores listos y narrativa de adopcion utilizable para servicios recurrentes.</p></div>
+        <div class="card"><h3>Google</h3><p>Empuja IA proactiva en dispositivo y automatizacion multiapp con narrativa de privacidad y control.</p></div>
+        <div class="card"><h3>xAI</h3><p>Aprieta el mercado de coding agents con Grok Build, mientras fuerza migraciones por retiro de modelos heredados.</p></div>
+        <div class="card"><h3>Microsoft</h3><p>La tesis dominante es de gobierno: identidad, permisos, defense in depth y manejo del blast radius en agentes autonomos.</p></div>
+        <div class="card"><h3>NVIDIA / Open Source</h3><p>Dynamo refuerza la capa de inferencia productiva como palanca real de coste, latencia y escalado.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Noticias Destacadas</h2>
+        <p>Solo hechos confirmados con impacto alto o utilidad inmediata.</p>
+      </div>
+      <div class="grid-2">
+    <article class="card impact">
+      <div class="card-head">
+        <h3>OpenAI endurece respuesta a TanStack y fuerza actualización de apps macOS antes del 12 de junio</h3>
+        <div class="meta">Seguridad / Incidente · Alto</div>
+      </div>
+      <div class="card-body">
+            <p>OpenAI informó que dos dispositivos corporativos fueron impactados, que no encontró evidencia de exposición de datos de usuario y que rotará certificados de firma, con fecha límite del 12 de junio de 2026 para usuarios de macOS.</p>
+            <ul>
+              <li><strong>Categoria:</strong> Seguridad / Incidente</li>
+              <li><strong>Impacto:</strong> Alto</li>
+              <li><strong>Utilidad / riesgo:</strong> Riesgo de confianza en cadena de suministro y certificados de firma.</li>
+              <li><strong>Recomendacion:</strong> Revisar inventario de apps OpenAI en macOS y bloquear instaladores no oficiales.</li>
+              <li><strong>Estado:</strong> Hecho confirmado</li>
+              <li><strong>Fuente:</strong> <a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/" target="_blank" rel="noreferrer">OpenAI</a></li>
+            </ul>
+            </div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Codex llega al móvil y consolida tokens programáticos para automatización</h3>
+        <div class="meta">Lanzamiento · Alto</div>
+      </div>
+      <div class="card-body">
+            <p>OpenAI anunció vista previa de Codex en la app móvil, access tokens para entornos Enterprise/Business y disponibilidad general de Hooks, con Remote SSH y Hooks disponibles en todos los planes.</p>
+            <ul>
+              <li><strong>Categoria:</strong> Lanzamiento</li>
+              <li><strong>Impacto:</strong> Alto</li>
+              <li><strong>Utilidad / riesgo:</strong> Aumenta control operativo sobre agentes largos y automatización de CI.</li>
+              <li><strong>Recomendacion:</strong> Evaluar supervisión móvil y tokens para flujos internos con trazabilidad.</li>
+              <li><strong>Estado:</strong> Hecho confirmado</li>
+              <li><strong>Fuente:</strong> <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank" rel="noreferrer">OpenAI</a></li>
+            </ul>
+            </div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Anthropic empaqueta Claude para PyME con conectores listos para negocio</h3>
+        <div class="meta">Go-to-market · Alto</div>
+      </div>
+      <div class="card-body">
+            <p>Claude for Small Business conecta QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace y Microsoft 365, orientado a tareas operativas ya conocidas por la PyME.</p>
+            <ul>
+              <li><strong>Categoria:</strong> Go-to-market</li>
+              <li><strong>Impacto:</strong> Alto</li>
+              <li><strong>Utilidad / riesgo:</strong> Caso comercial inmediato para asesoría a pymes y automatización administrativa.</li>
+              <li><strong>Recomendacion:</strong> Probar oferta como base para verticales de back office y ventas asistidas.</li>
+              <li><strong>Estado:</strong> Hecho confirmado</li>
+              <li><strong>Fuente:</strong> <a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noreferrer">Anthropic</a></li>
+            </ul>
+            </div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>xAI entra en beta temprana con Grok Build y obliga a migrar modelos heredados hoy</h3>
+        <div class="meta">Herramientas / Modelos · Alto</div>
+      </div>
+      <div class="card-body">
+            <p>xAI lanzó Grok Build Early Beta para terminal y la documentación de modelos marca retiro de varios alias heredados el 15 de mayo de 2026 a las 12:00 PM PT.</p>
+            <ul>
+              <li><strong>Categoria:</strong> Herramientas / Modelos</li>
+              <li><strong>Impacto:</strong> Alto</li>
+              <li><strong>Utilidad / riesgo:</strong> Nueva presión competitiva en coding agents y riesgo de rotura por retiro de slugs.</li>
+              <li><strong>Recomendacion:</strong> Cerrar inventario de integraciones xAI y mapear retiro de modelos antes de la ventana PT.</li>
+              <li><strong>Estado:</strong> Hecho confirmado</li>
+              <li><strong>Fuente:</strong> <a href="https://x.ai/news/grok-build-cli" target="_blank" rel="noreferrer">xAI</a></li>
+            </ul>
+            </div>
+    </article>
+    </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Modelos y LLMs Recientes</h2>
+        <p>Modelos, capas de producto o modalidades con efecto practico para consultoria, operaciones o automatizacion.</p>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Empresa</th>
+              <th>Capacidades</th>
+              <th>Contexto</th>
+              <th>Impacto</th>
+              <th>Fuente</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td>Grok 4.3</td>
+          <td>xAI</td>
+          <td>Function calling, structured outputs, razonamiento configurable</td>
+          <td>1,000,000 tokens</td>
+          <td>Alto</td>
+          <td><a href="https://docs.x.ai/developers/models" target="_blank" rel="noreferrer">xAI Docs</a></td>
+        </tr>
+        
+        <tr>
+          <td>GPT-Realtime-2 / Translate / Whisper</td>
+          <td>OpenAI</td>
+          <td>Conversación de baja latencia, traducción en vivo y transcripción</td>
+          <td>No indicado</td>
+          <td>Alto</td>
+          <td><a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank" rel="noreferrer">OpenAI</a></td>
+        </tr>
+        
+        <tr>
+          <td>Gemini Intelligence</td>
+          <td>Google</td>
+          <td>Automatización de tareas multiapp, contexto personal con control del usuario</td>
+          <td>No indicado</td>
+          <td>Medio-Alto</td>
+          <td><a href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/" target="_blank" rel="noreferrer">Google</a></td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Herramientas Nuevas Destacadas</h2>
+        <p>Selección corta con valor de prueba inmediata.</p>
+      </div>
+      <div class="grid-3">
+        
+    <article class="card ">
+      <div class="card-head">
+        <h3>Codex móvil + Hooks GA + access tokens</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Utilidad:</strong> Muy alta</p><p><strong>Advertencia:</strong> Gobierno de credenciales y trazabilidad obligatorios.</p><p><strong>Fuente:</strong> <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank" rel="noreferrer">OpenAI</a></p></div>
+    </article>
+    
+    <article class="card ">
+      <div class="card-head">
+        <h3>Claude for Small Business</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Utilidad:</strong> Muy alta</p><p><strong>Advertencia:</strong> Revisar alcance de conectores y permisos por herramienta.</p><p><strong>Fuente:</strong> <a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noreferrer">Anthropic</a></p></div>
+    </article>
+    
+    <article class="card ">
+      <div class="card-head">
+        <h3>Grok Build Early Beta</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Utilidad:</strong> Alta</p><p><strong>Advertencia:</strong> Beta restringida y entorno aún temprano.</p><p><strong>Fuente:</strong> <a href="https://x.ai/news/grok-build-cli" target="_blank" rel="noreferrer">xAI</a></p></div>
+    </article>
+    
+    <article class="card ">
+      <div class="card-head">
+        <h3>NVIDIA Dynamo 1.0</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Utilidad:</strong> Alta</p><p><strong>Advertencia:</strong> Requiere madurez operativa e infraestructura para extraer valor.</p><p><strong>Fuente:</strong> <a href="https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories" target="_blank" rel="noreferrer">NVIDIA Newsroom</a></p></div>
+    </article>
+    
+    <article class="card ">
+      <div class="card-head">
+        <h3>Perplexity Finance Search / Computer at Work</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Utilidad:</strong> Media-Alta</p><p><strong>Advertencia:</strong> Señal de mercado, no prioritaria frente a seguridad y gobierno.</p><p><strong>Fuente:</strong> <a href="https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories" target="_blank" rel="noreferrer">NVIDIA Newsroom</a></p></div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Scripts y Repositorios Destacados</h2>
+        <p>Repos con señal fuerte de utilidad o de riesgo operativo.</p>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Repositorio</th>
+              <th>Stars</th>
+              <th>Lenguaje</th>
+              <th>Utilidad</th>
+              <th>Riesgo / advertencia</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td>openai/codex</td>
+          <td>81k</td>
+          <td>Rust</td>
+          <td>Muy alta</td>
+          <td>Necesita política clara de permisos y secretos.</td>
+        </tr>
+        
+        <tr>
+          <td>openai/openai-agents-python</td>
+          <td>26k</td>
+          <td>Python</td>
+          <td>Alta</td>
+          <td>Gobierno de herramientas y sesiones imprescindible.</td>
+        </tr>
+        
+        <tr>
+          <td>ai-dynamo/dynamo</td>
+          <td>Señal alta; cifra no consolidada en esta ejecución</td>
+          <td>Mixto</td>
+          <td>Alta</td>
+          <td>Complejidad operativa elevada.</td>
+        </tr>
+        
+        <tr>
+          <td>mistralai/mistral-vibe</td>
+          <td>3.9k</td>
+          <td>Python</td>
+          <td>Media-Alta</td>
+          <td>Producto joven; revisar seguridad de herramientas.</td>
+        </tr>
+        
+        <tr>
+          <td>FlowiseAI/Flowise</td>
+          <td>52.6k</td>
+          <td>TypeScript</td>
+          <td>Alta</td>
+          <td>Exposición alta por histórico reciente de vulnerabilidades críticas.</td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Incidentes IA</h2>
+        <p>Incidentes confirmados y su lectura ejecutiva.</p>
+      </div>
+      <div class="grid-3">
+    <article class="card warning">
+      <div class="card-head">
+        <h3>OpenAI / TanStack supply chain</h3>
+        <div class="meta">Prioridad Critica</div>
+      </div>
+      <div class="card-body">
+            <ul>
+              <li><strong>Producto:</strong> Apps y cadena interna de firma</li>
+              <li><strong>Severidad:</strong> Alta</li>
+              <li><strong>Impacto:</strong> Rotación de certificados y actualización obligatoria de apps macOS antes del 12 de junio</li>
+              <li><strong>Mitigacion:</strong> Actualizar apps OpenAI en macOS, evitar instaladores externos y reforzar minimumReleaseAge/provenance</li>
+              <li><strong>Prioridad:</strong> Critica</li>
+              <li><strong>Fuente:</strong> <a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/" target="_blank" rel="noreferrer">OpenAI</a></li>
+            </ul>
+            </div>
+    </article>
+    
+    <article class="card warning">
+      <div class="card-head">
+        <h3>Codex Cloud / Code Review high failure rate</h3>
+        <div class="meta">Prioridad Media</div>
+      </div>
+      <div class="card-body">
+            <ul>
+              <li><strong>Producto:</strong> Codex Cloud y Code Review</li>
+              <li><strong>Severidad:</strong> Media</li>
+              <li><strong>Impacto:</strong> Elevated errors en la noche del 14 de mayo</li>
+              <li><strong>Mitigacion:</strong> Mantener plan de contingencia y supervisar continuidad</li>
+              <li><strong>Prioridad:</strong> Media</li>
+              <li><strong>Fuente:</strong> <a href="https://status.openai.com/incidents/01KRM4H2T37TNSS7BCSGXVS8RQ" target="_blank" rel="noreferrer">OpenAI Status</a></li>
+            </ul>
+            </div>
+    </article>
+    
+    <article class="card warning">
+      <div class="card-head">
+        <h3>Mistral SDK supply chain advisory</h3>
+        <div class="meta">Prioridad Critica</div>
+      </div>
+      <div class="card-body">
+            <ul>
+              <li><strong>Producto:</strong> Paquetes npm y PyPI de Mistral</li>
+              <li><strong>Severidad:</strong> Alta</li>
+              <li><strong>Impacto:</strong> Riesgo de ejecución en hosts Linux al importar `mistralai==2.4.6`</li>
+              <li><strong>Mitigacion:</strong> Buscar versiones afectadas en lockfiles, caches y artefactos; eliminar y rotar credenciales si hubo exposición</li>
+              <li><strong>Prioridad:</strong> Critica</li>
+              <li><strong>Fuente:</strong> <a href="https://docs.mistral.ai/resources/security-advisories" target="_blank" rel="noreferrer">Mistral Docs</a></li>
+            </ul>
+            </div>
+    </article>
+    </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Vulnerabilidades IA</h2>
+        <p>Superficie prioritaria para accion inmediata.</p>
+      </div>
+      <div class="grid-2">
+    <article class="card critical">
+      <div class="card-head">
+        <h3>CVE-2026-41264 / GHSA-3hjv-c53m-58jj</h3>
+        <div class="meta">Severidad Critica</div>
+      </div>
+      <div class="card-body">
+            <ul>
+              <li><strong>Producto:</strong> Flowise</li>
+              <li><strong>Estado:</strong> Explotable sin autenticacion</li>
+              <li><strong>Impacto:</strong> RCE mediante prompt injection en CSV Agent por falta de sandboxing</li>
+              <li><strong>Mitigacion:</strong> Actualizar a 3.1.0 o superior y revisar exposición de chatflows</li>
+              <li><strong>Prioridad:</strong> Critica</li>
+              <li><strong>Fuente:</strong> <a href="https://github.com/advisories/GHSA-3hjv-c53m-58jj" target="_blank" rel="noreferrer">GitHub Advisory Database</a></li>
+            </ul>
+            </div>
+    </article>
+    
+    <article class="card critical">
+      <div class="card-head">
+        <h3>MAI advisory May 12, 2026</h3>
+        <div class="meta">Severidad Alta</div>
+      </div>
+      <div class="card-body">
+            <ul>
+              <li><strong>Producto:</strong> mistralai SDK / package mirrors</li>
+              <li><strong>Estado:</strong> Investigacion en curso</li>
+              <li><strong>Impacto:</strong> Payload import-time en Linux desde `mistralai==2.4.6`</li>
+              <li><strong>Mitigacion:</strong> Hunt de IoCs, revisión de lockfiles y rotación si hubo importación</li>
+              <li><strong>Prioridad:</strong> Critica</li>
+              <li><strong>Fuente:</strong> <a href="https://docs.mistral.ai/resources/security-advisories" target="_blank" rel="noreferrer">Mistral Docs</a></li>
+            </ul>
+            </div>
+    </article>
+    </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Tendencias y Radar IA</h2>
+        <p>Interpretacion ejecutiva separada de hechos confirmados.</p>
+      </div>
+      <div class="grid-2">
+        <div class="strip"><ul><li>Los agentes ya no son solo copilotos: Microsoft insiste en que pasan de generar contenido a ejecutar acciones, lo que amplifica blast radius y obliga a defense in depth.</li><li>La fricción competitiva se mueve hacia experiencia de despliegue: Codex móvil, Grok Build y Vibe reflejan carrera por el terminal y el loop humano-in-the-loop.</li><li>La cadena de suministro se consolida como superficie de riesgo dominante para IA aplicada, con efecto cascada sobre SDKs, certificados, builds y confianza de marca.</li><li>La regulación europea sigue viva pero más pragmática: la simplificación pactada no elimina cumplimiento, solo comprime carga y mueve fechas operativas concretas.</li></ul></div>
+        <div class="card">
+          <h3>Mapa rapido</h3>
+          <div class="chips">
+            <span class="chip">Agentes autonomos</span>
+            <span class="chip">Supply chain</span>
+            <span class="chip">MCP / tool use</span>
+            <span class="chip">PyME automation</span>
+            <span class="chip">Inference ops</span>
+            <span class="chip">AI Act</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Oportunidades</h2>
+        <p>Orientadas a empresa, consultoria y ciberseguridad aplicada.</p>
+      </div>
+      <div class="grid-2">
+        
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Servicio de hardening para agentes y copilotos internos</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Prioridad:</strong> Alta</p><p>Hay necesidad clara de identidad separada, mínimo privilegio, sandboxing y trazabilidad en despliegues agentic.</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Paquete PyME de automatización administrativa con Claude/OpenAI</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Prioridad:</strong> Alta</p><p>Conectores listos para negocio bajan la barrera de implantación y permiten servicios recurrentes.</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Auditoría express de supply chain IA</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Prioridad:</strong> Critica</p><p>TanStack y Mistral muestran una ventana comercial clara para revisión de lockfiles, mirrors, CI/CD y secretos.</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Laboratorio de inferencia open source con Dynamo</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Prioridad:</strong> Media</p><p>Puede abrir oferta de optimización de costes e inferencia on-prem para clientes avanzados.</p></div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Alertas Activas</h2>
+        <p>Checklist ejecutivo del corte.</p>
+      </div>
+      <div class="grid-2">
+        
+    <article class="card warning">
+      <div class="card-head">
+        <h3>Revisar hoy integraciones xAI por retiro de modelos</h3>
+        
+      </div>
+      <div class="card-body"><p>Nivel: <strong>Alta</strong></p></div>
+    </article>
+    
+    <article class="card critical">
+      <div class="card-head">
+        <h3>Confirmar que no existen dependencias `mistralai==2.4.6` ni npm afectados en entornos Linux</h3>
+        
+      </div>
+      <div class="card-body"><p>Nivel: <strong>Critica</strong></p></div>
+    </article>
+    
+    <article class="card critical">
+      <div class="card-head">
+        <h3>Actualizar Flowise a 3.1.0+ si existe exposición pública o semipública</h3>
+        
+      </div>
+      <div class="card-body"><p>Nivel: <strong>Critica</strong></p></div>
+    </article>
+    
+    <article class="card warning">
+      <div class="card-head">
+        <h3>Plan de actualización de apps OpenAI en macOS antes del 12 de junio de 2026</h3>
+        
+      </div>
+      <div class="card-body"><p>Nivel: <strong>Alta</strong></p></div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Recomendaciones Ejecutivas</h2>
+        <p>Priorizadas por impacto y urgencia.</p>
+      </div>
+      <div class="grid-2">
+        
+    <article class="card critical">
+      <div class="card-head">
+        <h3>Lanzar hunting de supply chain IA en dependencias, build runners y cachés</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Critica</strong></p><p>Buscar paquetes comprometidos, revisar importaciones Linux, rotar credenciales si hubo exposición y documentar hallazgos.</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Definir estándar mínimo para agentes con permisos</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Alta</strong></p><p>Separar identidad del agente, mínimo privilegio, aprobación humana para acciones sensibles y logging utilizable.</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Abrir piloto comercial PyME con conectores listos</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Alta</strong></p><p>Diseñar oferta sobre automatización administrativa, facturación, seguimiento comercial y documentación.</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>Monitorizar presión competitiva en coding agents</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Media</strong></p><p>Comparar Codex, Grok Build y Vibe en coste, seguridad, autonomía y encaje con entornos de cliente.</p></div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Calendario de Eventos IA</h2>
+        <p>Hitos concretos a vigilar.</p>
+      </div>
+      <div class="timeline">
+        
+    <article class="card impact">
+      <div class="card-head">
+        <h3>2026-05-15 12:00 PM PT</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Retiro de varios modelos heredados de xAI</strong></p><p>Impacto operativo inmediato si existen alias antiguos en producción</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>2026-06-12</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Fin de soporte efectivo para apps macOS de OpenAI firmadas con certificado antiguo</strong></p><p>Hito de continuidad y confianza de software</p></div>
+    </article>
+    
+    <article class="card impact">
+      <div class="card-head">
+        <h3>2026-12-02</h3>
+        
+      </div>
+      <div class="card-body"><p><strong>Nuevo plazo de soluciones de transparencia para contenido generado en acuerdo de simplificación AI Act</strong></p><p>Seguimiento regulatorio para clientes con contenido sintético</p></div>
+    </article>
+    
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="footer-grid">
+        <div>
+          <h2 style="margin-top:0">Fuentes y archivado</h2>
+          <ul>
+        <li>
+          <strong>OpenAI</strong> · 2026-05-13 ·
+          <a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/" target="_blank" rel="noreferrer">Our response to the TanStack npm supply chain attack</a>
+        </li>
+        
+        <li>
+          <strong>OpenAI</strong> · 2026-05-14 ·
+          <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank" rel="noreferrer">Work with Codex from anywhere</a>
+        </li>
+        
+        <li>
+          <strong>OpenAI Status</strong> · 2026-05-14 ·
+          <a href="https://status.openai.com/incidents/01KRM4H2T37TNSS7BCSGXVS8RQ" target="_blank" rel="noreferrer">Codex Cloud and Code Review experiencing high failure rate</a>
+        </li>
+        
+        <li>
+          <strong>Anthropic</strong> · 2026-05-13 ·
+          <a href="https://www.anthropic.com/news/claude-for-small-business" target="_blank" rel="noreferrer">Introducing Claude for Small Business</a>
+        </li>
+        
+        <li>
+          <strong>Microsoft Security</strong> · 2026-05-14 ·
+          <a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/" target="_blank" rel="noreferrer">Defense in depth for autonomous AI agents</a>
+        </li>
+        
+        <li>
+          <strong>Google</strong> · 2026-05-12 ·
+          <a href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/" target="_blank" rel="noreferrer">Gemini Intelligence brings proactive AI to Android</a>
+        </li>
+        
+        <li>
+          <strong>xAI</strong> · 2026-05-14 ·
+          <a href="https://x.ai/news/grok-build-cli" target="_blank" rel="noreferrer">Introducing Grok Build Early Beta</a>
+        </li>
+        
+        <li>
+          <strong>xAI Docs</strong> · 2026-05-15 ·
+          <a href="https://docs.x.ai/developers/models" target="_blank" rel="noreferrer">xAI Models</a>
+        </li>
+        
+        <li>
+          <strong>Mistral Docs</strong> · 2026-05-12 ·
+          <a href="https://docs.mistral.ai/resources/security-advisories" target="_blank" rel="noreferrer">Security advisories</a>
+        </li>
+        
+        <li>
+          <strong>GitHub Advisory Database</strong> · 2026-04-15 ·
+          <a href="https://github.com/advisories/GHSA-3hjv-c53m-58jj" target="_blank" rel="noreferrer">CVE-2026-41264 / GHSA-3hjv-c53m-58jj</a>
+        </li>
+        
+        <li>
+          <strong>NVIDIA Newsroom</strong> · 2026-03-16 ·
+          <a href="https://nvidianews.nvidia.com/news/nvidia-enters-production-with-dynamo-the-broadly-adopted-inference-operating-system-for-ai-factories" target="_blank" rel="noreferrer">NVIDIA Enters Production With Dynamo</a>
+        </li>
+        
+        <li>
+          <strong>Council of the EU</strong> · 2026-05-07 ·
+          <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" target="_blank" rel="noreferrer">Council and Parliament agree to simplify and streamline rules</a>
+        </li>
+        
+        <li>
+          <strong>GitHub</strong> · 2026-05-07 ·
+          <a href="https://github.com/openai/codex" target="_blank" rel="noreferrer">openai/codex</a>
+        </li>
+        
+        <li>
+          <strong>GitHub</strong> · 2026-05-07 ·
+          <a href="https://github.com/openai/openai-agents-python" target="_blank" rel="noreferrer">openai/openai-agents-python</a>
+        </li>
+        
+        <li>
+          <strong>GitHub</strong> · 2026-04-16 ·
+          <a href="https://github.com/mistralai/mistral-vibe" target="_blank" rel="noreferrer">mistralai/mistral-vibe</a>
+        </li>
+        
+        <li>
+          <strong>GitHub</strong> · 2026-05-09 ·
+          <a href="https://github.com/ai-dynamo/dynamo" target="_blank" rel="noreferrer">ai-dynamo/dynamo</a>
+        </li>
+        </ul>
+          <p class="muted">Archivado previsto en GitHub: <a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ia/20260515/Dashboard_IA_2026-05-15_16-16.html" target="_blank" rel="noreferrer">Dashboard_IA_2026-05-15_16-16.html</a> y <a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ia/20260515/Dashboard_IA_2026-05-15_16-16.json" target="_blank" rel="noreferrer">Dashboard_IA_2026-05-15_16-16.json</a>.</p>
+          <p class="muted">Limitacion operativa: no existe en esta ejecucion una via verificada para publicar el PDF binario con enlace publico desde el conector disponible. El PDF queda generado localmente para adjunto o revision.</p>
+        </div>
+        <div>
+          <h2 style="margin-top:0">Perfil Corporativo</h2>
+          <p><strong>MMarco Seguridad</strong><br>Manuel Marco Sanchez</p>
+          <p class="muted">Web: https://mmarcoseguridad.com<br>Email: mmarco.seguridad@gmail.com<br>WhatsApp: +34 656 33 93 55</p>
+          <p class="muted">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
