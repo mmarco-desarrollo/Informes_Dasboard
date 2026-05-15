@@ -75,3 +75,30 @@ Este informe ha sido generado automaticamente mediante sistemas avanzados de int
 ### Aviso legal
 
 Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+
+---
+
+## Informe ejecutivo de ciberseguridad - 2026-05-15 16:16 CEST
+
+### Artefactos archivados
+
+- Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_1616_CEST.html
+- Respaldo JSON: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260515/Dashboard_Ciberseguridad_20260515_1616_CEST.json
+- Directorio diario: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260515
+
+### Resumen rapido
+
+- Nivel global de amenaza: ALTO.
+- Alertas clave: campana AiTM a gran escala documentada por Microsoft, actividad continuada de UAT-4356 contra Cisco Firepower, ciclo de 137 vulnerabilidades Microsoft y nuevas criticas en Exim, FortiAuthenticator, Android e Ingeteam.
+- Riesgo prioritario para Espana: pymes con Microsoft 365, correo o MFA debil; organizaciones con appliances perimetrales expuestos; e industria/energia con acceso remoto o deuda de parcheo OT.
+- Recomendacion ejecutiva: completar en menos de 24 horas el parcheo y hunting sobre identidad, correo, Netlogon, DNS, Dynamics 365 on-premises, Exim y appliances de autenticacion/perimetro.
+
+### Estado de artefactos
+
+- HTML y JSON publicados y verificables en GitHub.
+- PDF no generado en esta edicion para no declarar como entregado un artefacto sin persistencia externa fiable.
+- Google Drive omitido en esta edicion.
+
+### Aviso legal
+
+Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
