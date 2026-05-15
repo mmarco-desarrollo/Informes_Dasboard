@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crypto Insights | 2026-05-15 08:00</title>
+  <style>
+    :root {
+      --bg:#06111a;
+      --panel:#0c1b27;
+      --panel2:#112433;
+      --panel3:#152c3e;
+      --line:#223a4d;
+      --text:#e6eef5;
+      --muted:#8fa6b8;
+      --bull:#28c98a;
+      --bear:#ff6b6b;
+      --warn:#f7c948;
+      --info:#4da3ff;
+      --cyan:#5dd6ff;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(77,163,255,0.18), transparent 26%),
+        radial-gradient(circle at left 10%, rgba(40,201,138,0.12), transparent 22%),
+        linear-gradient(180deg, #08131d 0%, #06111a 100%);
+    }
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 28px; }
+    .hero {
+      background: linear-gradient(135deg, rgba(17,36,51,0.92), rgba(9,19,29,0.96));
+      border:1px solid rgba(93,214,255,0.18);
+      border-radius: 22px;
+      padding: 28px;
+      display:grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      box-shadow: 0 18px 48px rgba(0,0,0,0.28);
+    }
+    .brand {
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+    }
+    .brand-mark {
+      width:56px;height:56px;border-radius:16px;
+      background:linear-gradient(135deg,var(--info),var(--cyan));
+      color:#04111d;
+      font-weight:700;
+      display:flex;align-items:center;justify-content:center;
+      font-size:22px;
+      letter-spacing:0;
+    }
+    .eyebrow {
+      text-transform:uppercase;
+      letter-spacing:1.4px;
+      font-size:12px;
+      color:var(--cyan);
+    }
+    h1,h2,h3,h4,p { margin:0; }
+    h1 { font-size:34px; line-height:1.08; margin-top:8px; }
+    h2 { font-size:24px; margin-bottom:14px; }
+    h3 { font-size:20px; }
+    h4 { font-size:16px; }
+    .summary {
+      margin-top:16px;
+      color:#d9e5ef;
+      line-height:1.55;
+      max-width:860px;
+    }
+    .hero-grid {
+      margin-top:22px;
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap:12px;
+    }
+    .hero-chip, .kpi-card, .section, .coin-card, .news-card, .scenario-card, .signal-card, .summary-card {
+      background: rgba(12,27,39,0.9);
+      border: 1px solid rgba(34,58,77,0.9);
+      border-radius: 18px;
+    }
+    .hero-chip {
+      padding:14px 16px;
+      min-height:96px;
+    }
+    .hero-chip span, .kpi-card span, .coin-grid span, .signal-grid label, .metric-label {
+      display:block;
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:8px;
+    }
+    .hero-chip strong {
+      font-size:18px;
+      line-height:1.2;
+    }
+    .hero-right {
+      display:grid;
+      gap:14px;
+      align-content:start;
+    }
+    .state-box {
+      padding:18px;
+      background: linear-gradient(180deg, rgba(17,36,51,0.92), rgba(12,27,39,0.98));
+      border:1px solid rgba(77,163,255,0.24);
+      border-radius:18px;
+    }
+    .state-line {
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      padding:8px 0;
+      border-bottom:1px solid rgba(34,58,77,0.7);
+    }
+    .state-line:last-child { border-bottom:none; }
+    .section {
+      margin-top:22px;
+      padding:22px;
+    }
+    .section-head {
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:16px;
+      margin-bottom:16px;
+    }
+    .section-head p {
+      color:var(--muted);
+      max-width:720px;
+      line-height:1.45;
+    }
+    .kpi-grid {
+      display:grid;
+      grid-template-columns: repeat(5, minmax(0,1fr));
+      gap:12px;
+    }
+    .kpi-card {
+      padding:14px;
+      min-height:110px;
+    }
+    .kpi-card strong { font-size:24px; line-height:1.1; display:block; }
+    .kpi-card small { color:var(--muted); display:block; margin-top:10px; line-height:1.35; }
+    .layout-2 {
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:18px;
+    }
+    .summary-stack {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:12px;
+      margin-top:16px;
+    }
+    .summary-card {
+      padding:16px;
+    }
+    .summary-card strong { display:block; font-size:18px; margin-bottom:8px; }
+    .heatmap {
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap:10px;
+      margin-top:16px;
+    }
+    .heat {
+      border:1px solid;
+      border-radius:14px;
+      padding:14px;
+      min-height:86px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .heat strong { font-size:24px; }
+    .coins-grid {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+    .coin-card {
+      padding:18px;
+    }
+    .coin-head {
+      display:flex;
+      justify-content:space-between;
+      align-items:start;
+      gap:16px;
+      margin-bottom:10px;
+    }
+    .price { font-size:26px; font-weight:700; text-align:right; }
+    .delta { text-align:right; font-size:13px; margin-top:6px; }
+    .spark-wrap {
+      margin: 8px 0 12px;
+      padding: 8px 0;
+      border-top:1px solid rgba(34,58,77,0.7);
+      border-bottom:1px solid rgba(34,58,77,0.7);
+    }
+    .coin-grid {
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap:12px;
+    }
+    .coin-grid strong {
+      display:block;
+      font-size:15px;
+      line-height:1.2;
+    }
+    .news-grid, .scenario-grid, .signal-grid-outer {
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap:14px;
+    }
+    .news-card, .scenario-card, .signal-card {
+      padding:16px;
+    }
+    .news-meta, .scenario-head, .signal-head {
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+    .news-card p, .scenario-card p, .signal-card p, .bullet-list li {
+      color:#dbe7f0;
+      line-height:1.45;
+      margin-top:8px;
+    }
+    .signal-grid {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:10px;
+      margin-bottom:10px;
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:14px;
+      border:1px solid rgba(34,58,77,0.9);
+    }
+    th, td {
+      padding:12px 14px;
+      text-align:left;
+      border-bottom:1px solid rgba(34,58,77,0.8);
+      vertical-align:top;
+    }
+    th {
+      background: rgba(17,36,51,0.9);
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:12px;
+    }
+    tbody tr:last-child td { border-bottom:none; }
+    .two-col {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+    .bullet-list {
+      padding-left:18px;
+      margin:0;
+    }
+    .footer {
+      margin-top:22px;
+      padding:22px;
+      border-top:1px solid rgba(34,58,77,0.9);
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:20px;
+      color:var(--muted);
+    }
+    .legal {
+      margin-top:10px;
+      color:#b8c8d6;
+      line-height:1.5;
+    }
+    @media (max-width: 1100px) {
+      .hero, .layout-2, .footer, .two-col, .coins-grid, .news-grid, .scenario-grid, .signal-grid-outer {
+        grid-template-columns: 1fr;
+      }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .coin-grid, .hero-grid, .heatmap { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 700px) {
+      .wrap { padding: 14px; }
+      .hero, .section { padding: 16px; border-radius: 16px; }
+      h1 { font-size: 28px; }
+      .hero-grid, .kpi-grid, .summary-stack, .coin-grid, .heatmap {
+        grid-template-columns: 1fr;
+      }
+      .price { text-align:left; }
+      .delta { text-align:left; }
+      .coin-head { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="brand">
+          <div class="brand-mark">MM</div>
+          <div>
+            <div class="eyebrow">MMarco Seguridad</div>
+            <h1>Crypto Insights Executive Dashboard</h1>
+            <p class="summary">El mercado cripto mantiene tracción positiva en los grandes activos, pero con amplitud todavía estrecha. BTC conserva el liderazgo con 58.4% de dominancia, mientras BNB, XRP y DOGE muestran mejor impulso relativo que ETH. El marco macro sigue siendo exigente tras un CPI y PPI más calientes de lo deseable; por eso el sesgo sigue siendo alcista, aunque con disciplina táctica y foco en zonas de soporte.</p>
+          </div>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-chip"><span>Fecha y Hora</span><strong>2026-05-15 08:15:43 CEST</strong></div>
+          <div class="hero-chip"><span>Franja</span><strong>08:00 CEST</strong></div>
+          <div class="hero-chip"><span>Proxima Actualizacion</span><strong>12:00 CEST (operativa sugerida)</strong></div>
+          <div class="hero-chip"><span>Fear & Greed</span><strong>Proxy IA: cautela constructiva</strong></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="state-box">
+          <div class="eyebrow">Estado de Mercado</div>
+          <div class="state-line"><span>Mercado general</span><strong>Sesgo selectivamente alcista</strong></div>
+          <div class="state-line"><span>Estado IA</span><strong>Constructivo con cautela macro</strong></div>
+          <div class="state-line"><span>Nivel de riesgo</span><strong>Moderado-Alto</strong></div>
+          <div class="state-line"><span>Momentum</span><strong>Positivo, concentrado en majors y beta selectiva</strong></div>
+          <div class="state-line"><span>Macro</span><strong>Inflacion caliente + tipos restrictivos + consumo aun resistente</strong></div>
+        </div>
+        <div class="state-box">
+          <div class="eyebrow">Resumen tactico</div>
+          <div class="summary-stack">
+            <div class="summary-card"><span class="metric-label">Sesgo</span><strong>BTC sigue mandando</strong><p>Dominancia alta y breadth limitada.</p></div>
+            <div class="summary-card"><span class="metric-label">Rotacion</span><strong>BNB / XRP / DOGE</strong><p>Mejor impulso relativo de corto plazo.</p></div>
+            <div class="summary-card"><span class="metric-label">Riesgo</span><strong>Macro restrictiva</strong><p>CPI y PPI presionan multiples.</p></div>
+            <div class="summary-card"><span class="metric-label">Lectura IA</span><strong>Constructivo</strong><p>Alcismo tactico, no euforia amplia.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">KPI Block</div>
+          <h2>KPIs Principales</h2>
+        </div>
+        <p>Panel de referencia institucional con foco en tamano de mercado, amplitud, leverage y sentimiento.</p>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span>Capitalizacion Total</span>
+          <strong>$2.76T</strong>
+          <small>CoinGecko global</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>Volumen 24h</span>
+          <strong>$109.3B</strong>
+          <small>CoinGecko global</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>BTC Dominance</span>
+          <strong>58.4%</strong>
+          <small>Liderazgo claro</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>ETH Dominance</span>
+          <strong>9.86%</strong>
+          <small>Recuperacion contenida</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>Altseason Index</span>
+          <strong>39/100</strong>
+          <small>Proxy - Bitcoin Season</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>Open Interest</span>
+          <strong>Elevado</strong>
+          <small>BTC OI cerca de $30B en picos recientes</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>Funding Rates</span>
+          <strong>Mixtas</strong>
+          <small>Sesgo menos limpio que el spot</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>Liquidaciones</span>
+          <strong>~$230M</strong>
+          <small>Evento reciente de long squeeze</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>Fear & Greed</span>
+          <strong>N/D oficial</strong>
+          <small>Usar proxy de cautela</small>
+        </div>
+        
+
+        <div class="kpi-card">
+          <span>Volatilidad</span>
+          <strong>Alta pero no extrema</strong>
+          <small>Sensibilidad macro y ETF</small>
+        </div>
+        </div>
+    </section>
+
+    <section class="section layout-2">
+      <div>
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Executive Summary</div>
+            <h2>Resumen Ejecutivo</h2>
+          </div>
+        </div>
+        <div class="summary-stack">
+          <div class="summary-card"><span class="metric-label">Tendencia general</span><strong>Alcista con selectividad</strong><p>Los activos grandes aguantan mejor que el resto del mercado.</p></div>
+          <div class="summary-card"><span class="metric-label">Sentimiento IA</span><strong>Cautela constructiva</strong><p>Se favorecen setups confirmados y no persecucion de precio.</p></div>
+          <div class="summary-card"><span class="metric-label">Nivel de riesgo</span><strong>Moderado-Alto</strong><p>La macro sigue dominando el descuento de activos de riesgo.</p></div>
+          <div class="summary-card"><span class="metric-label">Situacion macro</span><strong>Inflacion aun incomoda</strong><p>Consumo firme y precios productores altos sostienen el tono hawkish.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Market Heat</div>
+            <h2>Heatmap 24h</h2>
+          </div>
+        </div>
+        <div class="heatmap">
+            <div class="heat" style="background:rgba(40, 201, 138, 0.18);border-color:#28c98a;">
+              <span>BTC</span>
+              <strong>+0.9%</strong>
+            </div>
+            
+
+            <div class="heat" style="background:rgba(40, 201, 138, 0.18);border-color:#28c98a;">
+              <span>ETH</span>
+              <strong>+1.0%</strong>
+            </div>
+            
+
+            <div class="heat" style="background:rgba(40, 201, 138, 0.18);border-color:#28c98a;">
+              <span>SOL</span>
+              <strong>+0.7%</strong></div>
+[... omitted 638 of 983 lines ...]
