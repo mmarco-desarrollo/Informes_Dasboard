@@ -1,0 +1,36 @@
+{
+  "report_title": "Crypto Insights Executive | Corte 17:38 CEST",
+  "date_local": "2026-05-15 17:38 CEST",
+  "repo_path": "informes_Cripto/20260515/17-38",
+  "html_url": "https://cdn.jsdelivr.net/gh/mmarco-desarrollo/Informes_Dasboard@main/informes_Cripto/20260515/17-38/dashboard.html",
+  "pdf_publication_status": "pending_web_link",
+  "pdf_distribution": "email_attachment",
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "state_general": "Sesgo neutro-constructivo con BTC dominante y amplitud de alts todavia limitada",
+  "state_ai": "Neutral-constructivo",
+  "fear_greed": {"value": 47, "label": "Neutral", "yesterday": 46},
+  "market": {
+    "market_cap_str": "$2.72T",
+    "volume_str": "$118.54B",
+    "btc_dominance": 58.3,
+    "eth_dominance": 9.82,
+    "altseason_index": "40 / 100",
+    "volatility": "Moderada-Alta"
+  },
+  "coins": [
+    {"symbol": "BTC", "price": "$80,585.90", "change_24h": "+0.9%", "change_7d": "+1.0%", "volume": "$45.40B"},
+    {"symbol": "ETH", "price": "$2,255.57", "change_24h": "+0.6%", "change_7d": "+1.2%", "volume": "$19.71B"},
+    {"symbol": "SOL", "price": "$91.10", "change_24h": "+0.1%", "change_7d": "+3.2%", "volume": "$4.18B"},
+    {"symbol": "BNB", "price": "$684.59", "change_24h": "+1.9%", "change_7d": "+7.6%", "volume": "$1.79B"},
+    {"symbol": "XRP", "price": "$1.46", "change_24h": "+2.2%", "change_7d": "+5.7%", "volume": "$4.33B"},
+    {"symbol": "ADA", "price": "$0.2671", "change_24h": "+0.9%", "change_7d": "+1.6%", "volume": "$535.71M"},
+    {"symbol": "DOGE", "price": "$0.1145", "change_24h": "+1.1%", "change_7d": "+7.4%", "volume": "$2.59B"}
+  ],
+  "news": [
+    "CLARITY Act avanza en Senate Banking Committee",
+    "CME Group prepara futuros Nasdaq CME Crypto Index para el 8 de junio",
+    "THORChain pausa el trading por presunto exploit multi-chain",
+    "Hana Bank refuerza la narrativa institucional APAC con Dunamu"
+  ]
+}
