@@ -79,3 +79,31 @@ Este informe ha sido generado automaticamente mediante sistemas avanzados de int
 ### Aviso legal
 
 Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+
+---
+
+## Informe ejecutivo de ciberseguridad - 2026-05-16 16:18 CEST
+
+### Artefactos archivados
+
+- Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_1618_CEST.html
+- Respaldo JSON: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_1618_CEST.json
+- Directorio diario: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260516
+
+### Resumen rapido
+
+- Nivel global de amenaza: ALTO.
+- Alertas clave: Cisco SD-WAN CVE-2026-20182 con explotacion limitada, campana Interlock sobre Cisco FMC CVE-2026-20131, cPanel CVE-2026-41940 en KEV y Exim CVE-2026-45185 con RCE remota.
+- Riesgo prioritario para Espana: edge expuesto, correo y hosting administrado, pymes y MSPs con paneles de gestion accesibles desde Internet.
+- Recomendacion ejecutiva: abrir hoy una ventana extraordinaria para parcheo, reduccion de exposicion y hunting sobre Cisco, cPanel, Exim y activos Microsoft del lote de mayo.
+
+### Estado de artefactos
+
+- HTML y JSON publicados y verificables en GitHub.
+- PDF no generado en esta edicion para no declarar un artefacto no persistido externamente.
+- Imagenes por pagina no generadas en esta edicion.
+- Google Drive omitido en esta edicion.
+
+### Aviso legal
+
+Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
