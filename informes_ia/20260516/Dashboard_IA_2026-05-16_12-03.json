@@ -1,0 +1,382 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "title": "Informe Ejecutivo de Inteligencia Artificial - Corte 12:00",
+  "generated_at": "2026-05-16 12:03:12 CEST",
+  "timezone": "Europe/Madrid",
+  "impact_level": "Alto",
+  "global_state": "Competitivo, util y con riesgo operativo elevado",
+  "next_update": "Siguiente ejecucion programada",
+  "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+  "comparison_window": {
+    "previous_execution": "2026-05-16 00:16 CEST",
+    "focus": "Cambios confirmados desde la ultima ejecucion, priorizando impacto, riesgo y utilidad practica."
+  },
+  "kpis": [
+    {
+      "label": "Deltas confirmadas",
+      "value": "4",
+      "note": "Cambios con evidencia util para este corte"
+    },
+    {
+      "label": "Riesgos activos",
+      "value": "2",
+      "note": "Uno nuevo y uno persistente"
+    },
+    {
+      "label": "Acciones inmediatas",
+      "value": "4",
+      "note": "Seguridad, coste, piloto y cumplimiento"
+    },
+    {
+      "label": "Calidad de senal",
+      "value": "Alta",
+      "note": "Predominio de fuentes oficiales"
+    }
+  ],
+  "executive_summary": [
+    "La novedad mas accionable frente a la madrugada es la concrecion del riesgo supply chain en el SDK de Mistral: el advisory ya delimita ventanas de exposicion, paquetes afectados e IOC para Linux, por lo que la recomendacion pasa de vigilancia general a verificacion tecnica inmediata.",
+    "OpenAI eleva el valor practico del bloque agentic con una referencia enterprise medible: Databricks ya posiciona GPT-5.5 en flujos de agentes documentales complejos, con 50% de accuracy en OfficeQA Pro y 46% menos errores frente a GPT-5.4.",
+    "xAI entra con mas claridad en la guerra de agentes de codigo: Grok Build aparece como producto terminal-first con plan/review/approve, mientras que la retirada de slugs antiguos hacia grok-4.3 introduce riesgo de coste y gobernanza para equipos que sigan usando nombres heredados.",
+    "No hay ruptura regulatoria nueva en esta franja, pero sigue ganando peso operativo el frente de cumplimiento: la consulta europea sobre obligaciones de transparencia mantiene una fecha util cercana para preparar etiquetado, disclosures y machine-readable marks."
+  ],
+  "activity_evolution": [
+    {
+      "segment": "Madrugada",
+      "status": "base",
+      "signal": "Predominio de verticalizacion, seguridad agentic y consolidacion enterprise."
+    },
+    {
+      "segment": "Mediodia",
+      "status": "up",
+      "signal": "Sube la utilidad practica en agentes empresariales y sube la urgencia supply chain."
+    },
+    {
+      "segment": "Riesgo",
+      "status": "alert",
+      "signal": "Mas detalle tecnico y mas accion inmediata sobre SDKs y entornos Linux."
+    },
+    {
+      "segment": "Cumplimiento",
+      "status": "watch",
+      "signal": "Sin shock nuevo, pero con deadlines claros para transparencia y AI Act."
+    }
+  ],
+  "global_view": [
+    {
+      "entity": "OpenAI",
+      "status": "acelera",
+      "detail": "Mas senal productiva en agentes enterprise y hardening operativo."
+    },
+    {
+      "entity": "Microsoft",
+      "status": "estable",
+      "detail": "El marco de defensa por capas se consolida como referencia arquitectonica."
+    },
+    {
+      "entity": "Anthropic",
+      "status": "estable",
+      "detail": "PwC mantiene la referencia de ejecucion enterprise a gran escala."
+    },
+    {
+      "entity": "xAI",
+      "status": "sube",
+      "detail": "Nuevo agente de codigo y migracion forzada de slugs hacia grok-4.3."
+    },
+    {
+      "entity": "Mistral",
+      "status": "alerta",
+      "detail": "Advisory utilizable de supply chain con IOC concretos y paquete PyPI afectado."
+    },
+    {
+      "entity": "Regulacion UE",
+      "status": "vigilancia",
+      "detail": "Consulta y calendario de transparencia siguen siendo operativos para 2026."
+    }
+  ],
+  "featured_news": [
+    {
+      "name": "OpenAI + Databricks llevan GPT-5.5 a flujos enterprise de agentes",
+      "category": "Lanzamiento / enterprise",
+      "date": "2026-05-15",
+      "impact": "Alto",
+      "delta_type": "nuevo_vs_00_16",
+      "utility_or_risk": "Muy alta utilidad para agentes documentales, RAG sobre PDFs escaneados y workflows largos.",
+      "summary": "Databricks posiciona GPT-5.5 en AgentBricks y Agent Supervisor API con mejora medible en tareas documentales complejas.",
+      "quick_recommendation": "Pilotar sobre expedientes, OCR sucio, contratos escaneados y bases documentales heterogeneas.",
+      "source_url": "https://openai.com/index/databricks/",
+      "source_name": "OpenAI"
+    },
+    {
+      "name": "xAI lanza Grok Build Early Beta",
+      "category": "Herramienta / agentes de codigo",
+      "date": "2026-05-14",
+      "impact": "Media-Alta",
+      "delta_type": "nuevo_vs_00_16",
+      "utility_or_risk": "Alta utilidad para comparativa competitiva en agentes terminal-first.",
+      "summary": "Nuevo agente CLI con modo plan, revision, headless, ACP y subagentes en paralelo para desarrollo profesional.",
+      "quick_recommendation": "Seguir como benchmark competitivo, no como estandar operativo todavia.",
+      "source_url": "https://x.ai/news/grok-build-cli",
+      "source_name": "xAI"
+    },
+    {
+      "name": "OpenAI endurece Codex en Windows con sandbox propio",
+      "category": "Seguridad / ingenieria",
+      "date": "2026-05-13",
+      "impact": "Media",
+      "delta_type": "nuevo_en_prioridad",
+      "utility_or_risk": "Alta utilidad conceptual para diseno de agentes con permisos restringidos.",
+      "summary": "OpenAI describe una implementacion propia para aislar comandos, limitar escritura al workspace y contener procesos descendientes en Windows.",
+      "quick_recommendation": "Tomar el enfoque como patron de gobierno tecnico para agentes internos.",
+      "source_url": "https://openai.com/index/building-codex-windows-sandbox/",
+      "source_name": "OpenAI"
+    },
+    {
+      "name": "Anthropic y PwC refuerzan la fase de ejecucion enterprise",
+      "category": "Alianza / despliegue",
+      "date": "2026-05-14",
+      "impact": "Alta",
+      "delta_type": "seguimiento",
+      "utility_or_risk": "Senal de mercado: la conversacion se mueve de piloto a operacion auditada y sectorial.",
+      "summary": "La alianza amplia rollout de Claude Code y Cowork, entrenamiento de 30.000 profesionales y una nueva practica Office of the CFO.",
+      "quick_recommendation": "Usar como referencia de oferta consultiva para finanzas, underwriting y ciberseguridad.",
+      "source_url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+      "source_name": "Anthropic"
+    }
+  ],
+  "recent_models": [
+    {
+      "name": "GPT-5.5",
+      "company": "OpenAI",
+      "type": "Modelo de razonamiento aplicado a agentes enterprise",
+      "capabilities": "Parsing, retrieval y razonamiento grounded en documentos complejos",
+      "multimodality": "No especificada en esta pieza",
+      "context_window": "No especificada en esta pieza",
+      "license": "Propietaria",
+      "use_cases": "OfficeQA Pro, documentos legacy, PDFs escaneados, supervisores de agentes",
+      "estimated_impact": "Alto",
+      "source_url": "https://openai.com/index/databricks/"
+    },
+    {
+      "name": "Grok 4.3",
+      "company": "xAI",
+      "type": "Modelo de reemplazo para slugs retirados",
+      "capabilities": "Agentic tool calling, instruction following, niveles de reasoning",
+      "multimodality": "Imagen para reemplazo de grok-imagine-image-pro",
+      "context_window": "1M tokens",
+      "license": "Propietaria",
+      "use_cases": "Migracion de cargas heredadas, razonamiento y codigo",
+      "estimated_impact": "Media-Alta",
+      "source_url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    }
+  ],
+  "standout_tools": [
+    {
+      "name": "Grok Build Early Beta",
+      "source": "xAI",
+      "description": "Agente CLI para ingenieria de software con modo plan, aprobacion previa, headless y subagentes.",
+      "use_cases": "Benchmark de agentes de codigo, automatizacion en terminal, flujos ACP",
+      "utility_level": "Media-Alta",
+      "warnings": "Beta cerrada a SuperGrok Heavy; no es una referencia madura de gobierno.",
+      "source_url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "name": "Codex Windows sandbox architecture",
+      "source": "OpenAI",
+      "description": "Patron de aislamiento con limites de escritura, sin internet por defecto y herencia del perimetro a procesos hijos.",
+      "use_cases": "Diseno seguro de agentes locales y pipelines con permisos minimos",
+      "utility_level": "Alta",
+      "warnings": "Es una referencia de arquitectura, no un paquete reutilizable listo para terceros.",
+      "source_url": "https://openai.com/index/building-codex-windows-sandbox/"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Sin senal fiable de nuevo repositorio prioritario para este corte",
+      "source": "Monitor de fuentes oficiales y tecnicas",
+      "language": "Datos limitados",
+      "description": "La ventana actual concentra mas riesgo operativo y producto enterprise que novedad open source verificable.",
+      "use_cases": "Mantener vigilancia, sin recomendar adopcion nueva en esta franja",
+      "utility_level": "Datos limitados",
+      "warnings": "Evitar rellenar esta seccion con ruido de baja trazabilidad."
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Supply chain attack en SDKs de Mistral ligados al caso TanStack",
+      "identifier": "MAI-2026-002",
+      "affected_product": "SDKs npm y PyPI de Mistral",
+      "severity": "Alta",
+      "exploitation_status": "Confirmado y mitigado; requiere verificacion local",
+      "impact": "Riesgo de robo de credenciales en Linux al importar `mistralai==2.4.6`",
+      "mitigation": "Buscar version 2.4.6 en lockfiles, caches, imagenes y artefactos; revisar IOC y conexiones salientes",
+      "priority": "Critica",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "name": "Flowise CSV Agent Prompt Injection RCE",
+      "identifier": "CVE-2026-41264 / GHSA-3hjv-c53m-58jj",
+      "affected_product": "Flowise",
+      "severity": "Critica",
+      "exploitation_status": "Sin cambio confirmado en esta ventana; sigue siendo referencia operativa vigente",
+      "impact": "RCE no autenticado en chatflows con CSV Agent por evaluacion insegura de script generado por LLM",
+      "mitigation": "Actualizar a 3.1.0 o superior y revisar exposicion de nodos agentes",
+      "priority": "Alta",
+      "source_url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj"
+    }
+  ],
+  "trends_and_radar": [
+    {
+      "name": "El application layer se impone como centro real del riesgo agentic",
+      "type": "Interpretacion",
+      "impact": "Alta",
+      "detail": "Microsoft insiste en que permisos, workflows, scopes y escalado humano son la capa decisiva cuando un agente puede actuar.",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    },
+    {
+      "name": "La batalla competitiva se desplaza del modelo puro al runtime y la orquestacion",
+      "type": "Interpretacion",
+      "impact": "Alta",
+      "detail": "OpenAI, xAI y Anthropic estan compitiendo mas en agentes, sandboxes, supervisores y despliegue productivo que en anuncios aislados de benchmark.",
+      "source_url": "https://openai.com/index/databricks/"
+    },
+    {
+      "name": "La transparencia regulatoria ya tiene reloj operativo",
+      "type": "Hecho confirmado",
+      "impact": "Media-Alta",
+      "detail": "La consulta europea sigue abierta hasta el 3 de junio y las obligaciones de transparencia arrancan el 2 de agosto de 2026.",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+    }
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "name": "Auditoria express de SDKs y espejos internos",
+      "detail": "Servicio rapido para revisar lockfiles, caches, contenedores y mirrors privados por `mistralai==2.4.6` y paquetes npm afectados."
+    },
+    {
+      "priority": "Alta",
+      "name": "Piloto document-heavy con GPT-5.5",
+      "detail": "Probar expedientes, OCR mixto y documentos legacy donde las pequenas extracciones erradas rompen el agente completo."
+    },
+    {
+      "priority": "Media",
+      "name": "Oferta de hardening agentic",
+      "detail": "Convertir el marco de Microsoft y el ejemplo de sandbox de OpenAI en una metodologia propia de permisos, observabilidad y aprobaciones."
+    },
+    {
+      "priority": "Media",
+      "name": "Checklist de AI Act para transparencia",
+      "detail": "Preparar etiquetado, disclosure y machine-readable marks antes de agosto de 2026 para clientes que generen contenido sintetico."
+    }
+  ],
+  "active_alerts": [
+    {
+      "level": "Critica",
+      "title": "Revisar Linux hosts y artefactos por `mistralai==2.4.6`",
+      "detail": "El import puede descargar y ejecutar `/tmp/transformers.pyz` y abrir conexiones salientes hacia `83.142.209.194`."
+    },
+    {
+      "level": "Alta",
+      "title": "Revisar cargas xAI heredadas",
+      "detail": "Los slugs retirados siguen resolviendo, pero ya redirigen a `grok-4.3` con otra estructura de precios y reasoning."
+    },
+    {
+      "level": "Alta",
+      "title": "Mantener Flowise fuera de exposicion innecesaria",
+      "detail": "Sigue siendo una referencia clara de como prompt injection + tool execution puede escalar a RCE."
+    }
+  ],
+  "executive_recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Lanzar hoy una comprobacion de supply chain en Python y npm",
+      "detail": "Buscar `mistralai==2.4.6`, `@mistralai/mistralai` 2.2.2-2.2.4 y variantes cloud en repos, contenedores y caches."
+    },
+    {
+      "priority": "Alta",
+      "title": "Abrir piloto controlado de GPT-5.5 para flujos documentales",
+      "detail": "Elegir un caso interno con documentos escaneados y medir errores de parsing, tiempos y necesidad de supervision."
+    },
+    {
+      "priority": "Alta",
+      "title": "Actualizar el modelo de gobierno de agentes",
+      "detail": "Definir scopes, permisos, aprobaciones y trazabilidad en application layer antes de escalar agentes autonomos."
+    },
+    {
+      "priority": "Media",
+      "title": "Preparar posicion juridico-operativa para transparencia IA",
+      "detail": "Mapear donde habra que avisar al usuario, marcar contenido sintetico y documentar procesos antes del verano."
+    }
+  ],
+  "ai_events_calendar": [
+    {
+      "date": "2026-06-03",
+      "name": "Cierre de consulta sobre guidelines de transparencia del AI Act",
+      "importance": "Alta"
+    },
+    {
+      "date": "2026-06",
+      "name": "Esperado codigo de buenas practicas para marcado y etiquetado de contenido IA",
+      "importance": "Media-Alta"
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Entrada en vigor de obligaciones de transparencia del AI Act",
+      "importance": "Alta"
+    }
+  ],
+  "sources": [
+    {
+      "name": "OpenAI - Databricks brings GPT-5.5 to enterprise agent workflows",
+      "url": "https://openai.com/index/databricks/"
+    },
+    {
+      "name": "OpenAI - Building a safe, effective sandbox to enable Codex on Windows",
+      "url": "https://openai.com/index/building-codex-windows-sandbox/"
+    },
+    {
+      "name": "OpenAI - A new personal finance experience in ChatGPT",
+      "url": "https://openai.com/index/personal-finance-chatgpt/"
+    },
+    {
+      "name": "OpenAI - Helping ChatGPT better recognize context in sensitive conversations",
+      "url": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/"
+    },
+    {
+      "name": "Anthropic - PwC expanded partnership",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership"
+    },
+    {
+      "name": "Microsoft Security Blog - Defense in depth for autonomous AI agents",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    },
+    {
+      "name": "xAI - Introducing Grok Build Early Beta",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "name": "xAI Docs - Grok Model Retirement on May 15, 2026",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "name": "Mistral Docs - Security advisories",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "name": "GitHub Advisory - Flowise CVE-2026-41264",
+      "url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj"
+    },
+    {
+      "name": "European Commission - Draft guidelines for AI transparency obligations",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+    },
+    {
+      "name": "European Commission - AI simplification agreement",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-agrees-simplify-ai-rules-boost-innovation-and-ban-nudification-apps-protect-citizens"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
