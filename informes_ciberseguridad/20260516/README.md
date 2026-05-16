@@ -51,3 +51,31 @@ Este informe ha sido generado automaticamente mediante sistemas avanzados de int
 ### Aviso legal
 
 Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+
+---
+
+## Informe ejecutivo de ciberseguridad - 2026-05-16 12:08 CEST
+
+### Artefactos archivados
+
+- Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_1208_CEST.html
+- Respaldo JSON: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_1208_CEST.json
+- Directorio diario: https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260516
+
+### Resumen rapido
+
+- Nivel global de amenaza: ALTO.
+- Alertas clave: explotacion activa de Cisco SD-WAN CVE-2026-20127, explotacion activa de FortiCloud SSO CVE-2026-24858, presion de parcheo en Microsoft mayo 2026 y aumento del riesgo de robo de OTP por CloudZ/Phone Link.
+- Riesgo prioritario para Espana: edge appliances, entornos Microsoft hibridos, pymes con soporte remoto y sectores administracion publica, sanidad y educacion.
+- Recomendacion ejecutiva: ejecutar hoy una ventana acelerada de parcheo y hunting en Cisco/Fortinet/Windows, reduciendo ademas la dependencia de MFA por SMS en cuentas privilegiadas.
+
+### Estado de artefactos
+
+- HTML y JSON publicados y verificables en GitHub.
+- PDF no generado en esta edicion para no declarar como entregado un artefacto sin persistencia externa verificable.
+- Imagenes por pagina no generadas en esta edicion.
+- Google Drive omitido en esta edicion.
+
+### Aviso legal
+
+Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
