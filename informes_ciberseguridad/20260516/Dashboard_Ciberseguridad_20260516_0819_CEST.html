@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | 2026-05-16 08:19 CEST</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0d1b2f;
+      --panel-2: #10243f;
+      --line: rgba(148, 178, 216, 0.18);
+      --text: #edf4ff;
+      --muted: #9fb2cc;
+      --accent: #4fd1c5;
+      --accent-2: #5aa9ff;
+      --warn: #ffb454;
+      --danger: #ff6b6b;
+      --ok: #71e39c;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(90, 169, 255, 0.18), transparent 30%),
+        radial-gradient(circle at top left, rgba(79, 209, 197, 0.12), transparent 25%),
+        linear-gradient(180deg, #040b14 0%, var(--bg) 55%, #050b12 100%);
+      color: var(--text);
+    }
+    a { color: var(--accent); }
+    .wrap {
+      width: min(1280px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+    .hero {
+      background: linear-gradient(160deg, rgba(17, 36, 63, 0.95), rgba(8, 19, 35, 0.94));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -120px auto;
+      width: 260px;
+      height: 260px;
+      background: linear-gradient(180deg, rgba(79, 209, 197, 0.18), rgba(90, 169, 255, 0.02));
+      transform: rotate(24deg);
+      filter: blur(8px);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    h1 {
+      margin: 18px 0 10px;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.02;
+      max-width: 14ch;
+    }
+    .sub {
+      max-width: 72ch;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(16, 36, 63, 0.92), rgba(10, 24, 42, 0.94));
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+    .meta-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .meta-k {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .meta-v {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .threat {
+      border-left: 4px solid var(--danger);
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .metric-value {
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .section {
+      margin-top: 20px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      margin: 8px 0 12px;
+    }
+    .section h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 16px;
+    }
+    ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+      line-height: 1.7;
+    }
+    .bullets-compact li {
+      margin-bottom: 4px;
+    }
+    .alert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .alert h3,
+    .news-item h3 {
+      margin: 10px 0 8px;
+      font-size: 18px;
+    }
+    .alert p,
+    .news-item p,
+    .sources {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .alert-top {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .severity { background: rgba(255, 107, 107, 0.16); color: #ffd2d2; }
+    .classif { background: rgba(90, 169, 255, 0.12); color: #d5e8ff; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+    th, td {
+      padding: 14px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    th {
+      color: #dce8f7;
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .recommend-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .ia-box {
+      border-left: 4px solid var(--accent);
+    }
+    .delivery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .state-list div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+      padding: 18px 8px 0;
+    }
+    @media (max-width: 1040px) {
+      .hero-grid,
+      .grid-4,
+      .two-col,
+      .alert-grid,
+      .recommend-grid,
+      .delivery {
+        grid-template-columns: 1fr;
+      }
+      .meta-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="brand">MMarco Seguridad | SOC Executive Intelligence</div>
+      <h1>Informe Ejecutivo de Ciberseguridad</h1>
+      <p class="sub">Resumen de direccion con foco en explotacion activa, vulnerabilidades criticas, actividad relevante y medidas accionables para empresas y entornos espanoles.</p>
+      <div class="hero-grid">
+        <div class="card threat">
+          <div class="meta-list">
+            <div><div class="meta-k">Fecha exacta</div><div class="meta-v">2026-05-16 08:19 CEST</div></div>
+            <div><div class="meta-k">Zona horaria</div><div class="meta-v">Europe/Madrid</div></div>
+            <div><div class="meta-k">Nivel global</div><div class="meta-v">ALTO</div></div>
+            <div><div class="meta-k">Tendencia 24h</div><div class="meta-v">ASCENDENTE</div></div>
+            <div><div class="meta-k">Proxima actualizacion</div><div class="meta-v">2026-05-16 16:00 CEST</div></div>
+            <div><div class="meta-k">Estado IA de riesgo</div><div class="meta-v" style="font-size:16px">Analisis predictivo IA: tension alta con foco en perimetro, identidad y cadena de suministro</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Resumen ejecutivo</div>
+          <p style="margin:0; line-height:1.7; color:var(--muted);">El nivel global de amenaza se mantiene ALTO por la coincidencia de explotacion activa en perimetro de red, nuevas vulnerabilidades criticas en proveedores de alto uso y continuidad de campanas contra dispositivos de borde y cadenas de suministro de software.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">KPIs</div>
+          <h2>Panel de situacion</h2>
+        </div>
+      </div>
+      <div class="grid-4">
+            <div class="card metric">
+              <div class="metric-label">Incidentes activos</div>
+              <div class="metric-value">4</div>
+            </div>
+            
+            <div class="card metric">
+              <div class="metric-label">Incidentes criticos</div>
+              <div class="metric-value">2</div>
+            </div>
+            
+            <div class="card metric">
+              <div class="metric-label">Vulns destacadas</div>
+              <div class="metric-value">7</div>
+            </div>
+            
+            <div class="card metric">
+              <div class="metric-label">CVEs priorizadas</div>
+              <div class="metric-value">6</div>
+            </div>
+            
+            <div class="card metric">
+              <div class="metric-label">Malware/campanas</div>
+              <div class="metric-value">4</div>
+            </div>
+            
+            <div class="card metric">
+              <div class="metric-label">Phishing</div>
+              <div class="metric-value">1</div>
+            </div>
+            
+            <div class="card metric">
+              <div class="metric-label">DDoS</div>
+              <div class="metric-value">N/D</div>
+            </div>
+            
+            <div class="card metric">
+              <div class="metric-label">Ransomware</div>
+              <div class="metric-value">N/D</div>
+            </div>
+            </div>
+    </section>
+
+    <section class="section two-col">
+      <div class="card">
+        <div class="eyebrow">Direccion</div>
+        <h2 style="margin-top:0">Riesgos del momento</h2>
+        <p style="color:var(--muted); line-height:1.7;">Priorizar hoy mismo un plan de choque sobre activos expuestos a Internet: cierre o restriccion de portales User-ID, actualizacion urgente de Cisco SD-WAN, revisión de edge devices, rotacion de secretos de desarrollo y comprobacion de accesos remotos en energia/OT.</p>
+        <ul class="bullets-compact"><li>Explotacion activa y remota de PAN-OS CVE-2026-0300 en portales User-ID expuestos.</li><li>Explotacion limitada confirmada de Cisco SD-WAN CVE-2026-20182 con impacto administrativo completo.</li><li>Persistencia de targeting a dispositivos perimetrales Cisco Firepower con el backdoor FIRESTARTER.</li><li>Nueva ola de supply chain npm contra ecosistemas enterprise y CI/CD.</li><li>Repunte de phishing y uso operativo de IA para credenciales y paginas de captura.</li></ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Impacto</div>
+        <h2 style="margin-top:0">Sectores y tecnicas</h2>
+        <p><strong>Sectores mas afectados</strong></p>
+        <ul class="bullets-compact"><li>Administracion publica</li><li>Salud</li><li>Energia y OT</li><li>Operadores con edge expuesto</li><li>Equipos de desarrollo</li></ul>
+        <p><strong>Tecnicas predominantes</strong></p>
+        <ul class="bullets-compact"><li>RCE sobre servicios expuestos</li><li>Bypass de autenticacion</li><li>Abuso de portales de identidad</li><li>Phishing y credential harvesting</li><li>Compromiso de dependencias y robo de tokens</li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Alertas</div>
+          <h2>Alertas activas y actividad relevante</h2>
+        </div>
+      </div>
+      <div class="alert-grid">
+            <article class="card alert">
+              <div class="alert-top">
+                <span class="badge severity">Critica</span>
+                <span class="badge classif">Hecho confirmado</span>
+              </div>
+              <h3>PAN-OS CVE-2026-0300 en explotacion activa</h3>
+              <p>Palo Alto confirma explotacion observada contra User-ID Authentication Portal expuesto a IPs no confiables o Internet abierta. Hay mitigacion inmediata y parches publicados.</p>
+              <div class="sources"><a href="https://security.paloaltonetworks.com/CVE-2026-0300" target="_blank" rel="noreferrer">Palo Alto Networks PAN-OS CVE-2026-0300</a> | <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300" target="_blank" rel="noreferrer">NVD CVE-2026-0300</a></div>
+            </article>
+            
+            <article class="card alert">
+              <div class="alert-top">
+                <span class="badge severity">Critica</span>
+                <span class="badge classif">Hecho confirmado</span>
+              </div>
+              <h3>Cisco SD-WAN CVE-2026-20182 con explotacion limitada</h3>
+              <p>Cisco reporta explotacion limitada de una vulnerabilidad 10.0 que permite bypass de autenticacion y privilegios administrativos remotos. NVD indica inclusion en KEV.</p>
+              <div class="sources"><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW" target="_blank" rel="noreferrer">Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability</a> | <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20182" target="_blank" rel="noreferrer">NVD CVE-2026-20182</a></div>
+            </article>
+            
+            <article class="card alert">
+              <div class="alert-top">
+                <span class="badge severity">Alta</span>
+                <span class="badge classif">Hecho confirmado</span>
+              </div>
+              <h3>Targeting continuado sobre Cisco Firepower</h3>
+              <p>Cisco Talos sigue observando targeting activo de UAT-4356 contra Cisco Firepower mediante n-days y despliegue del backdoor FIRESTARTER.</p>
+              <div class="sources"><a href="https://blog.talosintelligence.com/uat-4356-firestarter/" target="_blank" rel="noreferrer">UAT-4356's Targeting of Cisco Firepower Devices</a></div>
+            </article>
+            
+            <article class="card alert">
+              <div class="alert-top">
+                <span class="badge severity">Alta</span>
+                <span class="badge classif">Hecho confirmado</span>
+              </div>
+              <h3>Nueva ola supply chain npm / Mini Shai-Hulud</h3>
+              <p>Unit 42 documenta una nueva ola activa contra el ecosistema SAP CAP con exfiltracion de secretos y robo de tokens desde CI/CD y entornos de desarrollo.</p>
+              <div class="sources"><a href="https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/" target="_blank" rel="noreferrer">The npm Threat Landscape: Attack Surface and Mitigations</a></div>
+            </article>
+            
+            <article class="card alert">
+              <div class="alert-top">
+                <span class="badge severity">Alta</span>
+                <span class="badge classif">Hecho confirmado</span>
+              </div>
+              <h3>Phishing vuelve a liderar el acceso inicial y ya integra IA</h3>
+              <p>Talos IR reporta que phishing vuelve a ser el vector inicial mas visto, con mas de un tercio de los casos observados y el primer uso documentado de un servicio de IA para generar una pagina de robo de credenciales.</p>
+              <div class="sources"><a href="https://blog.talosintelligence.com/ir-trends-q1-2026/" target="_blank" rel="noreferrer">IR Trends Q1 2026</a></div>
+            </article>
+            </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Vulnerabilidades</div>
+          <h2>Tabla priorizada</h2>
+        </div>
+      </div>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto afectado</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Explotacion</th>
+              <th>Parche / mitigacion</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>CVE-2026-0300</td>
+              <td>Palo Alto PAN-OS User-ID Authentication Portal</td>
+              <td>9.8 (NVD)</td>
+              <td>Critica</td>
+              <td>Activa / atacada</td>
+              <td>Disponible; tambien mitigacion por restriccion a zonas de confianza o desactivacion</td>
+              <td>Critica</td>
+            </tr>
+            
+            <tr>
+              <td>CVE-2026-20182</td>
+              <td>Cisco Catalyst SD-WAN Controller / Manager</td>
+              <td>10.0 (Cisco)</td>
+              <td>Critica</td>
+              <td>Limitada, confirmada</td>
+              <td>Disponible via versiones corregidas de Cisco</td>
+              <td>Critica</td>
+            </tr>
+            
+            <tr>
+              <td>CVE-2026-44277</td>
+              <td>FortiAuthenticator API</td>
+              <td>9.1 (Fortinet)</td>
+              <td>Critica</td>
+              <td>No confirmada</td>
+              <td>Actualizar a 8.0.3+, 6.6.9+ o 6.5.7+; deshabilitar API en interfaces expuestas</td>
+              <td>Alta</td>
+            </tr>
+            
+            <tr>
+              <td>CVE-2026-8043</td>
+              <td>Ivanti Xtraction</td>
+              <td>Critica en fuente resumida</td>
+              <td>Critica</td>
+              <td>No confirmada</td>
+              <td>Actualizar a 2026.2</td>
+              <td>Alta</td>
+            </tr>
+            
+            <tr>
+              <td>CVE-2026-0073</td>
+              <td>Android / adbd</td>
+              <td>Critica en boletin</td>
+              <td>Critica</td>
+              <td>No confirmada</td>
+              <td>Aplicar parche de seguridad 2026-05-01 o posterior del fabricante</td>
+              <td>Alta</td>
+            </tr>
+            
+            <tr>
+              <td>CVE-2026-8072</td>
+              <td>Ingeteam Ingecon Sun EMS Board</td>
+              <td>9.2 (CVSS v4.0)</td>
+              <td>Critica</td>
+              <td>No confirmada</td>
+              <td>Parche disponible desde diciembre de 2025; actualizar firmware afectado</td>
+              <td>Alta</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Noticias</div>
+          <h2>Noticias relevantes</h2>
+        </div>
+      </div>
+      <div class="alert-grid">
+            <div class="card news-item">
+              <h3>Microsoft publica 137 vulnerabilidades en su ciclo de mayo, con 14 criticas</h3>
+              <p>Aumenta la presion de parcheo sobre Windows, Azure, Office y servicios de identidad.</p>
+              <div class="sources"><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026" target="_blank" rel="noreferrer">Actualizaciones de seguridad de Microsoft de mayo de 2026</a></div>
+            </div>
+            
+            <div class="card news-item">
+              <h3>Siemens publica 22 vulnerabilidades criticas en su comunicado mensual</h3>
+              <p>Refuerza el riesgo para energia, industria y entornos OT conectados.</p>
+              <div class="sources"><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026" target="_blank" rel="noreferrer">Avisos de seguridad de Siemens de mayo de 2026</a></div>
+            </div>
+            
+            <div class="card news-item">
+              <h3>Fortinet e Ivanti publican vulnerabilidades criticas en componentes de alto uso</h3>
+              <p>Perimetro, gestion remota y trafico privilegiado requieren respuesta rapida.</p>
+              <div class="sources"><a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-128" target="_blank" rel="noreferrer">Fortinet FG-IR-26-128</a> | <a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-2" target="_blank" rel="noreferrer">Multiples vulnerabilidades en productos de Ivanti</a></div>
+            </div>
+            </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Recomendaciones</div>
+          <h2>Prioridades de actuacion</h2>
+        </div>
+      </div>
+      <div class="recommend-grid">
+        <div class="card"><div class="pill">Critica</div><ul><li>Restringir inmediatamente PAN-OS User-ID Authentication Portal a zonas de confianza o deshabilitarlo si no es necesario.</li><li>Aplicar sin demora las versiones corregidas de Cisco SD-WAN y revisar signos de acceso administrativo no autorizado.</li><li>Ejecutar hunting en dispositivos de borde y firewalls expuestos, con especial foco en Cisco Firepower, PAN-OS y Fortinet.</li><li>Rotar secretos de npm, GitHub, cloud y CI/CD si existe exposicion reciente a paquetes o runners potencialmente comprometidos.</li></ul></div>
+        <div class="card"><div class="pill">Alta</div><ul><li>Actualizar FortiAuthenticator, Ivanti y Android gestionado a las versiones o parches publicados.</li><li>Priorizar OT energetico y accesos SAT/remotos, incluyendo Ingeteam y dispositivos Siemens expuestos o integrados.</li><li>Verificar exposiciones externas de portales, APIs y management interfaces con inventario y cierre de superficies innecesarias.</li></ul></div>
+        <div class="card"><div class="pill">Media</div><ul><li>Aumentar monitoreo de phishing, MFA resistente y controles sobre OWA, Exchange y federacion de identidad.</li><li>Reforzar controles de dependencias y caches internos para detectar paquetes maliciosos y robo de tokens.</li></ul></div>
+        <div class="card"><div class="pill">Baja</div><ul><li>Actualizar playbooks de crisis, comunicacion ejecutiva y continuidad con escenarios de edge compromise y supply chain.</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div class="card ia-box">
+        <div class="eyebrow">Seccion IA</div>
+        <h2 style="margin-top:0">Analisis predictivo o estimativo</h2>
+        <p style="color:var(--muted); line-height:1.7;">Mantener ventana extraordinaria de parcheo y comprobacion de exposiciones externas durante hoy, con validacion de tokens y de accesos remotos privilegiados.</p>
+        <ul>
+          <li><strong>Riesgo global estimado:</strong> Alto con sesgo ascendente</li>
+          <li><strong>Amenazas proximas:</strong> Mas explotacion sobre edge appliances y portales de identidad expuestos, Mayor abuso de IA para phishing y suplantacion operativa, Nuevas iteraciones de supply chain sobre npm, GitHub Actions y secretos cloud</li>
+          <li><strong>Sectores mas expuestos:</strong> Servicios TIC, Pymes con gestion externa, Energia e industria, Administracion publica y salud</li>
+          <li><strong>Vulnerabilidades prioritarias:</strong> CVE-2026-0300, CVE-2026-20182, CVE-2026-44277, CVE-2026-8043, CVE-2026-8072</li>
+          <li><strong>Probabilidad de aumento:</strong> Media-alta en las proximas 24-72 horas</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Historico</div>
+        <h2 style="margin-top:0">Enlaces verificables</h2>
+        <div class="state-list">
+          <div><span>Directorio diario</span><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260516" target="_blank" rel="noreferrer">abrir</a></div>
+          <div><span>Dashboard HTML</span><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_0819_CEST.html" target="_blank" rel="noreferrer">abrir</a></div>
+          <div><span>Respaldo JSON</span><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_0819_CEST.json" target="_blank" rel="noreferrer">abrir</a></div>
+          <div><span>PDF</span><span>No disponible</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section delivery">
+      <div class="card">
+        <div class="eyebrow">Cierre visible</div>
+        <h2 style="margin-top:0">Conclusion rapida</h2>
+        <ul><li>La ventana de riesgo esta en el perimetro y la identidad, no solo en endpoints.</li><li>Los fabricantes estan publicando correcciones criticas en varios frentes el mismo ciclo semanal.</li><li>El riesgo para pymes aumenta cuando dependen de firewalls, acceso remoto y servicios gestionados sin inventario fino.</li><li>La cadena de suministro de software vuelve a ser prioritaria por el robo de tokens y la propagacion automatizada.</li></ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Estado de entrega</div>
+        <h2 style="margin-top:0">Operacion</h2>
+        <div class="state-list">
+          <div><span>Informe generado</span><strong>Completado</strong></div>
+          <div><span>Historico en GitHub</span><strong>Pendiente al render</strong></div>
+          <div><span>Correo HTML por Gmail</span><strong>Pendiente al render</strong></div>
+          <div><span>PDF</span><strong>No disponible</strong></div>
+          <div><span>Imagenes por pagina</span><strong>No disponibles</strong></div>
+          <div><span>Google Drive</span><strong>Omitido</strong></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Fuentes</div>
+        <h2 style="margin-top:0">Trazabilidad</h2>
+        <table>
+          <thead><tr><th>Fuente</th><th>Fecha</th><th>Tipo</th><th>Link</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Actualizaciones de seguridad de Microsoft de mayo de 2026</td>
+              <td>2026-05-13</td>
+              <td>official</td>
+              <td><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>Palo Alto Networks PAN-OS CVE-2026-0300</td>
+              <td>2026-05-05</td>
+              <td>vendor</td>
+              <td><a href="https://security.paloaltonetworks.com/CVE-2026-0300" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>NVD CVE-2026-0300</td>
+              <td>2026-05-06</td>
+              <td>official</td>
+              <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability</td>
+              <td>2026-05-14</td>
+              <td>vendor</td>
+              <td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>NVD CVE-2026-20182</td>
+              <td>2026-05-14</td>
+              <td>official</td>
+              <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20182" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>Fortinet FG-IR-26-128</td>
+              <td>2026-05-12</td>
+              <td>vendor</td>
+              <td><a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-128" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>Multiples vulnerabilidades en productos de Ivanti</td>
+              <td>2026-05-13</td>
+              <td>official</td>
+              <td><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-2" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>Android Security Bulletin - May 2026</td>
+              <td>2026-05-04</td>
+              <td>official</td>
+              <td><a href="https://source.android.com/docs/security/bulletin/2026/2026-05-01" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>Generacion insegura de credenciales de acceso SAT en Ingecon EMS Board</td>
+              <td>2026-05-12</td>
+              <td>official</td>
+              <td><a href="https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos-sci/generacion-insegura-de-credenciales-de-acceso-sat-en-ingecon-ems-board" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>Avisos de seguridad de Siemens de mayo de 2026</td>
+              <td>2026-05-12</td>
+              <td>official</td>
+              <td><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>IR Trends Q1 2026</td>
+              <td>2026-04-22</td>
+              <td>vendor</td>
+              <td><a href="https://blog.talosintelligence.com/ir-trends-q1-2026/" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>UAT-4356's Targeting of Cisco Firepower Devices</td>
+              <td>2026-04-23</td>
+              <td>vendor</td>
+              <td><a href="https://blog.talosintelligence.com/uat-4356-firestarter/" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>The npm Threat Landscape: Attack Surface and Mitigations</td>
+              <td>2026-05-01</td>
+              <td>vendor</td>
+              <td><a href="https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            
+            <tr>
+              <td>New Lua-based malware LucidRook observed in targeted attacks</td>
+              <td>2026-04-08</td>
+              <td>vendor</td>
+              <td><a href="https://blog.talosintelligence.com/new-lua-based-malware-lucidrook/" target="_blank" rel="noreferrer">abrir</a></td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="footer">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</div>
+  </div>
+</body>
+</html>
