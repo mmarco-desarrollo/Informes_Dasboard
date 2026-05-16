@@ -1,0 +1,358 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sánchez",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "generated_at": "2026-05-16 12:08:59 CEST",
+    "timezone": "Europe/Madrid",
+    "edition": "12:00",
+    "global_threat_level": "ALTO",
+    "threat_score": 78,
+    "next_update": "16/05/2026 16:00 CEST (estimado)",
+    "ai_risk_state": "Activo - estimativo",
+    "github": {
+      "repository": "mmarco-desarrollo/Informes_Dasboard",
+      "directory": "informes_ciberseguridad/20260516",
+      "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_1208_CEST.html",
+      "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_1208_CEST.json",
+      "day_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260516"
+    }
+  },
+  "kpis": [
+    {
+      "label": "Incidentes activos destacados",
+      "value": "5",
+      "sub": "muestra priorizada"
+    },
+    {
+      "label": "Incidentes críticos",
+      "value": "2",
+      "sub": "Cisco SD-WAN y FortiCloud SSO"
+    },
+    {
+      "label": "Vulnerabilidades priorizadas",
+      "value": "5",
+      "sub": "4 críticas, 1 alta"
+    },
+    {
+      "label": "Campañas malware",
+      "value": "4",
+      "sub": "CloudZ, Dohdoor, PowMix, UAT-8302"
+    },
+    {
+      "label": "Phishing / fraude",
+      "value": "Alta",
+      "sub": "TOAD y social engineering"
+    },
+    {
+      "label": "Países / regiones foco",
+      "value": "4",
+      "sub": "EE. UU., Chequia, Sudamérica, SE Europa"
+    },
+    {
+      "label": "Nivel de riesgo global",
+      "value": "ALTO",
+      "sub": "78/100"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Sostenida",
+      "sub": "más presión de parcheo que de ruido"
+    }
+  ],
+  "executive_summary": [
+    "La ciberamenaza se mantiene en nivel ALTO por la combinación de explotación activa en dispositivos de borde, volumen elevado de parcheo pendiente en Microsoft y continuidad de campañas con fuerte componente de phishing y fraude telefónico.",
+    "Los riesgos más urgentes siguen concentrándose en edge appliances y plataformas de gestión: Cisco SD-WAN y Fortinet con FortiCloud SSO exigen validación inmediata.",
+    "La presión operacional no viene solo de zero-days: el lote de mayo de Microsoft incorpora 137 vulnerabilidades y obliga a priorizar Windows DNS, Netlogon y activos híbridos.",
+    "Las campañas recientes muestran una deriva práctica hacia robo de credenciales y evasión silenciosa: abuso de Phone Link para OTP, PowerShell in-memory, DLL sideloading y C2 oculto tras servicios reputados.",
+    "Para dirección, la recomendación principal es sencilla: acelerar parcheo y hunting en borde y Windows hoy, y rebajar exposición del factor humano en MFA y callbacks durante las próximas 72 horas."
+  ],
+  "quick_conclusions": [
+    "Borde corporativo y appliances de gestión siguen siendo el punto más peligroso.",
+    "El mes de mayo eleva deuda de parcheo en Microsoft y navegador.",
+    "Phishing, TOAD y robo de OTP vuelven a pesar más que el ruido mediático.",
+    "Gobierno, sanidad y educación concentran la peor victimología observada."
+  ],
+  "alerts": [
+    {
+      "title": "Cisco SD-WAN sigue como prioridad de borde",
+      "status": "Hecho confirmado",
+      "detail": "CVE-2026-20127 permite bypass de autenticación remoto y privilegios administrativos; CISA lo mantiene en KEV y exige mitigación prioritaria.",
+      "impact": "Riesgo elevado para MPLS/SD-WAN gestionado, sedes distribuidas y entornos críticos con networking Cisco expuesto."
+    },
+    {
+      "title": "FortiCloud SSO mantiene riesgo severo para appliances Fortinet",
+      "status": "Hecho confirmado",
+      "detail": "CCN-CERT alertó de explotación activa de CVE-2026-24858 y recomendó actualización inmediata en productos Fortinet afectados.",
+      "impact": "Alta sensibilidad en firewalls, proxys y plataformas de gestión con FortiCloud SSO habilitado."
+    },
+    {
+      "title": "Patch Tuesday de mayo exige ciclo acelerado de parcheo",
+      "status": "Hecho confirmado",
+      "detail": "INCIBE resume 137 CVE en Microsoft mayo 2026; destacan Windows DNS, Netlogon y componentes Azure/Dynamics.",
+      "impact": "Riesgo transversal en estaciones Windows, servidores y servicios híbridos Microsoft."
+    },
+    {
+      "title": "CloudZ RAT amplía el riesgo de robo de OTP",
+      "status": "Hecho confirmado",
+      "detail": "Talos observó abuso de Microsoft Phone Link para interceptar SMS y mensajes de autenticación en equipos comprometidos.",
+      "impact": "Aumenta el riesgo para MFA basado en SMS/notificaciones en Windows 10/11 enlazados a móviles."
+    },
+    {
+      "title": "Fraude TOAD mantiene presión sobre usuarios y pymes",
+      "status": "Hecho confirmado",
+      "detail": "Talos registró reutilización de números telefónicos en campañas de scam/phishing con vida mediana de 14 días y fuerte peso de VoIP.",
+      "impact": "Mayor exposición en recepción, finanzas, RR. HH. y usuarios con procesos de callback o soporte remoto."
+    }
+  ],
+  "incidents": [
+    {
+      "name": "UAT-8302",
+      "status": "Hecho confirmado",
+      "summary": "Grupo China-nexus con foco en entidades gubernamentales de Sudamérica y agencias del sureste de Europa.",
+      "sectors": "Gobierno, sector público, administración.",
+      "ttP": "Uso de NetDraft, CloudSorcerer v3, VSHELL, SNOWLIGHT y tooling de proliferación lateral.",
+      "priority": "Alta"
+    },
+    {
+      "name": "CloudZ + Pheno",
+      "status": "Hecho confirmado",
+      "summary": "Intrusión activa desde al menos enero de 2026 con robo potencial de credenciales y OTP.",
+      "sectors": "Usuarios Windows enlazados a móvil, personal privilegiado, operaciones y soporte.",
+      "ttP": "Fake update, task scheduler, evasión de sandbox y abuso de Microsoft Phone Link.",
+      "priority": "Alta"
+    },
+    {
+      "name": "Dohdoor",
+      "status": "Hecho confirmado",
+      "summary": "Campaña multi-etapa en EE. UU. contra educación y sanidad con C2 oculto tras Cloudflare y DoH.",
+      "sectors": "Educación, sanidad.",
+      "ttP": "Phishing, PowerShell, DLL sideloading, process hollowing, Cobalt Strike potencial.",
+      "priority": "Alta"
+    },
+    {
+      "name": "PowMix",
+      "status": "Hecho confirmado",
+      "summary": "Botnet no documentada contra fuerza laboral checa con señuelos de cumplimiento y contratación.",
+      "sectors": "RR. HH., legal, reclutamiento, TI, finanzas y logística.",
+      "ttP": "LNK + PowerShell, AMSI bypass, persistencia por scheduled task y abuso de Heroku para C2.",
+      "priority": "Media-Alta"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-20127",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation": "Sí, incluida en KEV / explotación activa observada",
+      "patch": "Mitigaciones y versiones corregidas publicadas por Cisco",
+      "priority": "Crítica inmediata",
+      "source": "NVD / Cisco / CISA"
+    },
+    {
+      "cve": "CVE-2026-24858",
+      "product": "FortiOS, FortiManager, FortiAnalyzer, FortiProxy, FortiWeb",
+      "cvss": "9.8",
+      "severity": "Crítica",
+      "exploitation": "Sí, explotación activa",
+      "patch": "Sí, parches y mitigaciones disponibles; revisar FortiCloud SSO",
+      "priority": "Crítica inmediata",
+      "source": "CCN-CERT / NVD / Fortinet"
+    },
+    {
+      "cve": "CVE-2026-41096",
+      "product": "Microsoft Windows DNS",
+      "cvss": "9.8",
+      "severity": "Crítica",
+      "exploitation": "No observada activamente en el lote de mayo",
+      "patch": "Sí, actualización mensual de Microsoft",
+      "priority": "Alta",
+      "source": "NVD / Microsoft / INCIBE"
+    },
+    {
+      "cve": "CVE-2026-39808",
+      "product": "Fortinet FortiSandbox",
+      "cvss": "9.8",
+      "severity": "Crítica",
+      "exploitation": "No confirmada en fuentes consultadas",
+      "patch": "Sí, advisory FG-IR-26-100",
+      "priority": "Alta",
+      "source": "NVD / Fortinet"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android adbd / wireless ADB",
+      "cvss": "8.8",
+      "severity": "Alta",
+      "exploitation": "INCIBE indica sin explotación conocida",
+      "patch": "Sí, boletín de mayo de Android",
+      "priority": "Alta",
+      "source": "INCIBE / NVD / Android"
+    }
+  ],
+  "news": [
+    "Google actualizó Chrome 148 con 127 correcciones de seguridad y varias CVE de alta severidad, reforzando la necesidad de navegador siempre al día.",
+    "Google amplió Binary Transparency a apps Android firmadas por Google a partir del 1 de mayo de 2026, elevando la trazabilidad frente a supply chain tampering.",
+    "Talos confirma que el phishing volvió a ser el vector inicial más observado en Q1 2026 y que administración pública y sanidad empatan como sectores más castigados.",
+    "El paquete de seguridad de Microsoft de mayo añade presión operativa por volumen: 137 vulnerabilidades con 14 críticas según el resumen de INCIBE."
+  ],
+  "recommendations": {
+    "Crítica": [
+      "Verificar hoy mismo exposición de Cisco SD-WAN y appliances Fortinet con SSO en Internet; aplicar mitigaciones y versiones corregidas sin esperar a la siguiente ventana.",
+      "Ejecutar hunting dirigido en logs de autenticación, creación de cuentas locales admin, cambios de configuración y conexiones inusuales a controladores SD-WAN o Fortinet.",
+      "Forzar endurecimiento inmediato de MFA: reducir dependencia de SMS en cuentas privilegiadas y revisar equipos Windows enlazados con Phone Link."
+    ],
+    "Alta": [
+      "Acelerar el despliegue del Patch Tuesday de mayo de Microsoft, priorizando Windows DNS, Netlogon, SharePoint, Office y activos híbridos Azure.",
+      "Actualizar Chrome/Chromium y validar cumplimiento de navegador en endpoints corporativos, terceros y kioscos operativos.",
+      "Reforzar filtrado y concienciación frente a campañas TOAD, con bloqueo de llamadas de devolución sospechosas y revisión de procesos de soporte remoto."
+    ],
+    "Media": [
+      "Revisar controles EDR/Proxy para detectar PowerShell con carga en memoria, uso de curl/bitsadmin, DLL sideloading y DoH anómalo.",
+      "Mapear inventario Android y comprobar nivel de parche de mayo en flotas corporativas o BYOD con acceso a datos sensibles."
+    ],
+    "Baja": [
+      "Ajustar playbooks de inteligencia para separar mejor hechos confirmados, indicios y predicciones; la calidad de decisión mejora cuando el panel lo deja explícito."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo / estimativo",
+    "risk_estimate": "Riesgo global estimado: alto (78/100).",
+    "prediction": "Probabilidad de aumento de ataques en 72 horas: media-alta, especialmente en edge devices, Microsoft estate y fraude telefónico asistido por phishing.",
+    "sectors": "Sectores más expuestos a corto plazo: administración pública, sanidad, educación, empresas con sedes distribuidas y pymes con soporte remoto externalizado.",
+    "priority_vulns": "Vulnerabilidades prioritarias próximas: CVE-2026-20127, CVE-2026-24858, CVE-2026-41096 y cualquier cadena que combine acceso inicial por phishing con bypass de MFA.",
+    "recommendation": "Recomendación automática: ventana extraordinaria de parcheo y validación de logs en edge y Windows, más revisión de MFA y procesos de callback."
+  },
+  "sector_exposure": [
+    [
+      "Administración pública",
+      5
+    ],
+    [
+      "Sanidad",
+      5
+    ],
+    [
+      "Educación",
+      4
+    ],
+    [
+      "Telecom y networking",
+      4
+    ],
+    [
+      "Pymes con soporte remoto",
+      4
+    ],
+    [
+      "Entornos Microsoft híbridos",
+      4
+    ]
+  ],
+  "sources": [
+    {
+      "title": "NVD - CVE-2026-20127",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20127",
+      "type": "Oficial / NIST",
+      "note": "Cisco SD-WAN, CVSS 10.0, en KEV de CISA."
+    },
+    {
+      "title": "CCN-CERT AL 01/26 - Explotación activa de vulnerabilidad crítica en FortiCloud SSO",
+      "url": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html",
+      "type": "Oficial / CCN-CERT",
+      "note": "Alerta de explotación activa de CVE-2026-24858."
+    },
+    {
+      "title": "NVD - CVE-2026-24858",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24858",
+      "type": "Oficial / NIST",
+      "note": "FortiCloud SSO, CVSS 9.8, múltiples productos Fortinet."
+    },
+    {
+      "title": "INCIBE-CERT - Actualizaciones de seguridad de Microsoft de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+      "type": "Oficial / INCIBE",
+      "note": "137 vulnerabilidades; 14 críticas, 99 altas y 24 medias."
+    },
+    {
+      "title": "NVD - CVE-2026-41096",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41096",
+      "type": "Oficial / NIST",
+      "note": "Windows DNS, CVSS 9.8, RCE sobre red."
+    },
+    {
+      "title": "INCIBE-CERT - Boletín de seguridad de Android: mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026",
+      "type": "Oficial / INCIBE",
+      "note": "Android corrige una vulnerabilidad crítica con posible RCE."
+    },
+    {
+      "title": "NVD - CVE-2026-0073",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0073",
+      "type": "Oficial / NIST",
+      "note": "Android adbd, CVSS 8.8, RCE adyacente sin interacción."
+    },
+    {
+      "title": "NVD - CVE-2026-39808",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39808",
+      "type": "Oficial / NIST",
+      "note": "FortiSandbox, CVSS 9.8, command injection no autenticado."
+    },
+    {
+      "title": "Chrome Releases - Stable Channel Update for Desktop",
+      "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop.html",
+      "type": "Oficial / Google",
+      "note": "Chrome 148 incorpora 127 correcciones de seguridad."
+    },
+    {
+      "title": "Cisco Talos - Microsoft Patch Tuesday for May 2026",
+      "url": "https://blog.talosintelligence.com/microsoft-patch-tuesday-may-2026/",
+      "type": "Proveedor / Talos",
+      "note": "Microsoft no observó explotación activa en las CVE del lote de mayo."
+    },
+    {
+      "title": "Cisco Talos - UAT-8302 and its box full of malware",
+      "url": "https://blog.talosintelligence.com/uat-8302/",
+      "type": "Proveedor / Talos",
+      "note": "APT china-nexus contra gobiernos en Sudamérica y sureste de Europa."
+    },
+    {
+      "title": "Cisco Talos - CloudZ RAT potentially steals OTP messages using Pheno plugin",
+      "url": "https://blog.talosintelligence.com/cloudz-pheno-infostealer/",
+      "type": "Proveedor / Talos",
+      "note": "Robo potencial de OTP mediante abuso de Microsoft Phone Link."
+    },
+    {
+      "title": "Cisco Talos - Insights into the clustering and reuse of phone numbers in scam emails",
+      "url": "https://blog.talosintelligence.com/insights-into-the-clustering-and-reuse-of-phone-numbers-in-scam-emails/",
+      "type": "Proveedor / Talos",
+      "note": "TOAD y fraude con mediana de vida de 14 días por número."
+    },
+    {
+      "title": "Cisco Talos - New Dohdoor malware campaign targets education and health care",
+      "url": "https://blog.talosintelligence.com/new-dohdoor-malware-campaign/",
+      "type": "Proveedor / Talos",
+      "note": "Campaña activa con DoH C2 y foco en educación y sanidad."
+    },
+    {
+      "title": "Cisco Talos - PowMix botnet targets Czech workforce",
+      "url": "https://blog.talosintelligence.com/powmix-botnet-targets-czech-workforce/",
+      "type": "Proveedor / Talos",
+      "note": "Botnet no documentada con lures de cumplimiento y RR. HH."
+    },
+    {
+      "title": "Cisco Talos - IR Trends Q1 2026",
+      "url": "https://blog.talosintelligence.com/ir-trends-q1-2026/",
+      "type": "Proveedor / Talos",
+      "note": "Phishing vuelve a ser el vector inicial más observado; administración pública y sanidad, 24% cada una."
+    },
+    {
+      "title": "Google Security Blog - Binary Transparency for Android apps",
+      "url": "https://blog.google/security/bringing-binary-transparency-to-the-android-ecosystem/",
+      "type": "Oficial / Google",
+      "note": "Nueva medida defensiva relevante para integridad de software Android."
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
+}
