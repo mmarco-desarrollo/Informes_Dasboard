@@ -1,0 +1,432 @@
+{
+  "report": {
+    "brand": "MMarco Seguridad",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "generated_at": "2026-05-16 08:19 CEST",
+    "report_slot": "Edicion 08:00 CEST",
+    "timezone": "Europe/Madrid",
+    "threat_level": "ALTO",
+    "threat_trend_24h": "ASCENDENTE",
+    "next_update": "2026-05-16 16:00 CEST",
+    "ai_risk_state": "Analisis predictivo IA: tension alta con foco en perimetro, identidad y cadena de suministro",
+    "artifact_urls": {
+      "daily_directory": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260516",
+      "html": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_0819_CEST.html",
+      "json": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_0819_CEST.json",
+      "pdf": null
+    },
+    "kpis": {
+      "incidentes_activos_confirmados": 4,
+      "incidentes_criticos_confirmados": 2,
+      "vulnerabilidades_destacadas": 7,
+      "cves_criticas_priorizadas": 6,
+      "malware_y_campanas_destacadas": 4,
+      "campanas_de_phishing_confirmadas": 1,
+      "ataques_ddos_confirmados": null,
+      "ransomware_confirmado_prioritario": null,
+      "sectores_mas_expuestos": [
+        "Administracion publica",
+        "Salud",
+        "Energia e industria",
+        "Perimetro corporativo",
+        "Desarrollo y CI/CD"
+      ],
+      "paises_y_regiones_observadas": [
+        "Espana (riesgo por exposicion tecnologica y OT)",
+        "Taiwan",
+        "Sudamerica",
+        "Sudeste de Europa"
+      ]
+    },
+    "executive_summary": {
+      "global_state": "El nivel global de amenaza se mantiene ALTO por la coincidencia de explotacion activa en perimetro de red, nuevas vulnerabilidades criticas en proveedores de alto uso y continuidad de campanas contra dispositivos de borde y cadenas de suministro de software.",
+      "main_risks": [
+        "Explotacion activa y remota de PAN-OS CVE-2026-0300 en portales User-ID expuestos.",
+        "Explotacion limitada confirmada de Cisco SD-WAN CVE-2026-20182 con impacto administrativo completo.",
+        "Persistencia de targeting a dispositivos perimetrales Cisco Firepower con el backdoor FIRESTARTER.",
+        "Nueva ola de supply chain npm contra ecosistemas enterprise y CI/CD.",
+        "Repunte de phishing y uso operativo de IA para credenciales y paginas de captura."
+      ],
+      "affected_sectors": [
+        "Administracion publica",
+        "Salud",
+        "Energia y OT",
+        "Operadores con edge expuesto",
+        "Equipos de desarrollo"
+      ],
+      "most_used_techniques": [
+        "RCE sobre servicios expuestos",
+        "Bypass de autenticacion",
+        "Abuso de portales de identidad",
+        "Phishing y credential harvesting",
+        "Compromiso de dependencias y robo de tokens"
+      ],
+      "estimated_exposure": "Alta para organizaciones con PAN-OS, Cisco SD-WAN, Fortinet, Ivanti, Android gestionado, OT energetico o pipelines con npm/GitHub tokens.",
+      "main_recommendation": "Priorizar hoy mismo un plan de choque sobre activos expuestos a Internet: cierre o restriccion de portales User-ID, actualizacion urgente de Cisco SD-WAN, revisión de edge devices, rotacion de secretos de desarrollo y comprobacion de accesos remotos en energia/OT.",
+      "quick_conclusion": [
+        "La ventana de riesgo esta en el perimetro y la identidad, no solo en endpoints.",
+        "Los fabricantes estan publicando correcciones criticas en varios frentes el mismo ciclo semanal.",
+        "El riesgo para pymes aumenta cuando dependen de firewalls, acceso remoto y servicios gestionados sin inventario fino.",
+        "La cadena de suministro de software vuelve a ser prioritaria por el robo de tokens y la propagacion automatizada."
+      ]
+    },
+    "active_alerts": [
+      {
+        "title": "PAN-OS CVE-2026-0300 en explotacion activa",
+        "classification": "Hecho confirmado",
+        "severity": "Critica",
+        "details": "Palo Alto confirma explotacion observada contra User-ID Authentication Portal expuesto a IPs no confiables o Internet abierta. Hay mitigacion inmediata y parches publicados.",
+        "sources": [
+          "PANOS-CVE-2026-0300",
+          "NVD-CVE-2026-0300"
+        ]
+      },
+      {
+        "title": "Cisco SD-WAN CVE-2026-20182 con explotacion limitada",
+        "classification": "Hecho confirmado",
+        "severity": "Critica",
+        "details": "Cisco reporta explotacion limitada de una vulnerabilidad 10.0 que permite bypass de autenticacion y privilegios administrativos remotos. NVD indica inclusion en KEV.",
+        "sources": [
+          "CISCO-SDWAN-2026-20182",
+          "NVD-CVE-2026-20182"
+        ]
+      },
+      {
+        "title": "Targeting continuado sobre Cisco Firepower",
+        "classification": "Hecho confirmado",
+        "severity": "Alta",
+        "details": "Cisco Talos sigue observando targeting activo de UAT-4356 contra Cisco Firepower mediante n-days y despliegue del backdoor FIRESTARTER.",
+        "sources": [
+          "TALOS-FIREPOWER-2026"
+        ]
+      },
+      {
+        "title": "Nueva ola supply chain npm / Mini Shai-Hulud",
+        "classification": "Hecho confirmado",
+        "severity": "Alta",
+        "details": "Unit 42 documenta una nueva ola activa contra el ecosistema SAP CAP con exfiltracion de secretos y robo de tokens desde CI/CD y entornos de desarrollo.",
+        "sources": [
+          "UNIT42-NPM-MAY-2026"
+        ]
+      },
+      {
+        "title": "Phishing vuelve a liderar el acceso inicial y ya integra IA",
+        "classification": "Hecho confirmado",
+        "severity": "Alta",
+        "details": "Talos IR reporta que phishing vuelve a ser el vector inicial mas visto, con mas de un tercio de los casos observados y el primer uso documentado de un servicio de IA para generar una pagina de robo de credenciales.",
+        "sources": [
+          "TALOS-IR-Q1-2026"
+        ]
+      }
+    ],
+    "critical_vulnerabilities": [
+      {
+        "cve": "CVE-2026-0300",
+        "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+        "cvss": "9.8 (NVD)",
+        "severity": "Critica",
+        "exploitation": "Activa / atacada",
+        "patch": "Disponible; tambien mitigacion por restriccion a zonas de confianza o desactivacion",
+        "priority": "Critica",
+        "source_ids": [
+          "PANOS-CVE-2026-0300",
+          "NVD-CVE-2026-0300"
+        ]
+      },
+      {
+        "cve": "CVE-2026-20182",
+        "product": "Cisco Catalyst SD-WAN Controller / Manager",
+        "cvss": "10.0 (Cisco)",
+        "severity": "Critica",
+        "exploitation": "Limitada, confirmada",
+        "patch": "Disponible via versiones corregidas de Cisco",
+        "priority": "Critica",
+        "source_ids": [
+          "CISCO-SDWAN-2026-20182",
+          "NVD-CVE-2026-20182"
+        ]
+      },
+      {
+        "cve": "CVE-2026-44277",
+        "product": "FortiAuthenticator API",
+        "cvss": "9.1 (Fortinet)",
+        "severity": "Critica",
+        "exploitation": "No confirmada",
+        "patch": "Actualizar a 8.0.3+, 6.6.9+ o 6.5.7+; deshabilitar API en interfaces expuestas",
+        "priority": "Alta",
+        "source_ids": [
+          "FORTI-2026-44277"
+        ]
+      },
+      {
+        "cve": "CVE-2026-8043",
+        "product": "Ivanti Xtraction",
+        "cvss": "Critica en fuente resumida",
+        "severity": "Critica",
+        "exploitation": "No confirmada",
+        "patch": "Actualizar a 2026.2",
+        "priority": "Alta",
+        "source_ids": [
+          "IVANTI-MAY-2026"
+        ]
+      },
+      {
+        "cve": "CVE-2026-0073",
+        "product": "Android / adbd",
+        "cvss": "Critica en boletin",
+        "severity": "Critica",
+        "exploitation": "No confirmada",
+        "patch": "Aplicar parche de seguridad 2026-05-01 o posterior del fabricante",
+        "priority": "Alta",
+        "source_ids": [
+          "ANDROID-MAY-2026"
+        ]
+      },
+      {
+        "cve": "CVE-2026-8072",
+        "product": "Ingeteam Ingecon Sun EMS Board",
+        "cvss": "9.2 (CVSS v4.0)",
+        "severity": "Critica",
+        "exploitation": "No confirmada",
+        "patch": "Parche disponible desde diciembre de 2025; actualizar firmware afectado",
+        "priority": "Alta",
+        "source_ids": [
+          "INCIBE-INGETEAM-2026-8072"
+        ]
+      }
+    ],
+    "malware_and_campaigns": [
+      {
+        "name": "FIRESTARTER",
+        "status": "Activo en targeting reportado",
+        "targets": [
+          "Cisco Firepower",
+          "Perimetro de red"
+        ],
+        "techniques": [
+          "Explotacion de n-days",
+          "Backdoor en edge device"
+        ],
+        "trend": "Persistente",
+        "source_ids": [
+          "TALOS-FIREPOWER-2026"
+        ]
+      },
+      {
+        "name": "Mini Shai-Hulud",
+        "status": "Campana activa en ecosistema npm/SAP CAP",
+        "targets": [
+          "Desarrolladores",
+          "CI/CD",
+          "Secretos cloud"
+        ],
+        "techniques": [
+          "Compromiso de paquetes",
+          "Robo de tokens",
+          "Propagacion automatizada"
+        ],
+        "trend": "Ascendente",
+        "source_ids": [
+          "UNIT42-NPM-MAY-2026"
+        ]
+      },
+      {
+        "name": "LucidRook",
+        "status": "Campana dirigida reciente",
+        "targets": [
+          "ONGs y universidades en Taiwan"
+        ],
+        "techniques": [
+          "Spear phishing",
+          "Carga por LNK/EXE",
+          "Stager Lua/Rust"
+        ],
+        "trend": "Activa reciente",
+        "source_ids": [
+          "TALOS-LUCIDROOK-2026"
+        ]
+      }
+    ],
+    "news_relevant": [
+      {
+        "headline": "Microsoft publica 137 vulnerabilidades en su ciclo de mayo, con 14 criticas",
+        "impact": "Aumenta la presion de parcheo sobre Windows, Azure, Office y servicios de identidad.",
+        "source_ids": [
+          "INCIBE-MS-2026-05"
+        ]
+      },
+      {
+        "headline": "Siemens publica 22 vulnerabilidades criticas en su comunicado mensual",
+        "impact": "Refuerza el riesgo para energia, industria y entornos OT conectados.",
+        "source_ids": [
+          "INCIBE-SIEMENS-MAY-2026"
+        ]
+      },
+      {
+        "headline": "Fortinet e Ivanti publican vulnerabilidades criticas en componentes de alto uso",
+        "impact": "Perimetro, gestion remota y trafico privilegiado requieren respuesta rapida.",
+        "source_ids": [
+          "FORTI-2026-44277",
+          "IVANTI-MAY-2026"
+        ]
+      }
+    ],
+    "recommendations": {
+      "critica": [
+        "Restringir inmediatamente PAN-OS User-ID Authentication Portal a zonas de confianza o deshabilitarlo si no es necesario.",
+        "Aplicar sin demora las versiones corregidas de Cisco SD-WAN y revisar signos de acceso administrativo no autorizado.",
+        "Ejecutar hunting en dispositivos de borde y firewalls expuestos, con especial foco en Cisco Firepower, PAN-OS y Fortinet.",
+        "Rotar secretos de npm, GitHub, cloud y CI/CD si existe exposicion reciente a paquetes o runners potencialmente comprometidos."
+      ],
+      "alta": [
+        "Actualizar FortiAuthenticator, Ivanti y Android gestionado a las versiones o parches publicados.",
+        "Priorizar OT energetico y accesos SAT/remotos, incluyendo Ingeteam y dispositivos Siemens expuestos o integrados.",
+        "Verificar exposiciones externas de portales, APIs y management interfaces con inventario y cierre de superficies innecesarias."
+      ],
+      "media": [
+        "Aumentar monitoreo de phishing, MFA resistente y controles sobre OWA, Exchange y federacion de identidad.",
+        "Reforzar controles de dependencias y caches internos para detectar paquetes maliciosos y robo de tokens."
+      ],
+      "baja": [
+        "Actualizar playbooks de crisis, comunicacion ejecutiva y continuidad con escenarios de edge compromise y supply chain."
+      ]
+    },
+    "ai_section": {
+      "classification": "Analisis predictivo o estimativo",
+      "estimated_global_risk": "Alto con sesgo ascendente",
+      "expected_threats": [
+        "Mas explotacion sobre edge appliances y portales de identidad expuestos",
+        "Mayor abuso de IA para phishing y suplantacion operativa",
+        "Nuevas iteraciones de supply chain sobre npm, GitHub Actions y secretos cloud"
+      ],
+      "most_exposed_sectors": [
+        "Servicios TIC",
+        "Pymes con gestion externa",
+        "Energia e industria",
+        "Administracion publica y salud"
+      ],
+      "priority_vulnerabilities": [
+        "CVE-2026-0300",
+        "CVE-2026-20182",
+        "CVE-2026-44277",
+        "CVE-2026-8043",
+        "CVE-2026-8072"
+      ],
+      "probability_attack_increase": "Media-alta en las proximas 24-72 horas",
+      "automatic_recommendation": "Mantener ventana extraordinaria de parcheo y comprobacion de exposiciones externas durante hoy, con validacion de tokens y de accesos remotos privilegiados."
+    },
+    "delivery_status": {
+      "report_generated": true,
+      "github_history": "Pendiente en el momento de generar artefactos locales",
+      "gmail_html": "Pendiente de envio",
+      "pdf": "No disponible",
+      "page_images": "No disponibles",
+      "google_drive": "Omitido",
+      "limitations": [
+        "No se genera PDF en esta edicion para evitar declarar como entregado un artefacto sin persistencia externa verificable.",
+        "No se reportan DDoS ni ransomware como KPI principal por falta de evidencia reciente y prioritaria suficientemente verificada en la ventana de esta edicion.",
+        "LucidRook se mantiene como contexto de campaña reciente, no como incidente prioritario en Espana."
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "INCIBE-MS-2026-05",
+      "title": "Actualizaciones de seguridad de Microsoft de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+      "type": "official",
+      "published": "2026-05-13"
+    },
+    {
+      "id": "PANOS-CVE-2026-0300",
+      "title": "Palo Alto Networks PAN-OS CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300",
+      "type": "vendor",
+      "published": "2026-05-05"
+    },
+    {
+      "id": "NVD-CVE-2026-0300",
+      "title": "NVD CVE-2026-0300",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+      "type": "official",
+      "published": "2026-05-06"
+    },
+    {
+      "id": "CISCO-SDWAN-2026-20182",
+      "title": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
+      "type": "vendor",
+      "published": "2026-05-14"
+    },
+    {
+      "id": "NVD-CVE-2026-20182",
+      "title": "NVD CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+      "type": "official",
+      "published": "2026-05-14"
+    },
+    {
+      "id": "FORTI-2026-44277",
+      "title": "Fortinet FG-IR-26-128",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-128",
+      "type": "vendor",
+      "published": "2026-05-12"
+    },
+    {
+      "id": "IVANTI-MAY-2026",
+      "title": "Multiples vulnerabilidades en productos de Ivanti",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-2",
+      "type": "official",
+      "published": "2026-05-13"
+    },
+    {
+      "id": "ANDROID-MAY-2026",
+      "title": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "type": "official",
+      "published": "2026-05-04"
+    },
+    {
+      "id": "INCIBE-INGETEAM-2026-8072",
+      "title": "Generacion insegura de credenciales de acceso SAT en Ingecon EMS Board",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos-sci/generacion-insegura-de-credenciales-de-acceso-sat-en-ingecon-ems-board",
+      "type": "official",
+      "published": "2026-05-12"
+    },
+    {
+      "id": "INCIBE-SIEMENS-MAY-2026",
+      "title": "Avisos de seguridad de Siemens de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026",
+      "type": "official",
+      "published": "2026-05-12"
+    },
+    {
+      "id": "TALOS-IR-Q1-2026",
+      "title": "IR Trends Q1 2026",
+      "url": "https://blog.talosintelligence.com/ir-trends-q1-2026/",
+      "type": "vendor",
+      "published": "2026-04-22"
+    },
+    {
+      "id": "TALOS-FIREPOWER-2026",
+      "title": "UAT-4356's Targeting of Cisco Firepower Devices",
+      "url": "https://blog.talosintelligence.com/uat-4356-firestarter/",
+      "type": "vendor",
+      "published": "2026-04-23"
+    },
+    {
+      "id": "UNIT42-NPM-MAY-2026",
+      "title": "The npm Threat Landscape: Attack Surface and Mitigations",
+      "url": "https://unit42.paloaltonetworks.com/monitoring-npm-supply-chain-attacks/",
+      "type": "vendor",
+      "published": "2026-05-01"
+    },
+    {
+      "id": "TALOS-LUCIDROOK-2026",
+      "title": "New Lua-based malware LucidRook observed in targeted attacks",
+      "url": "https://blog.talosintelligence.com/new-lua-based-malware-lucidrook/",
+      "type": "vendor",
+      "published": "2026-04-08"
+    }
+  ]
+}
