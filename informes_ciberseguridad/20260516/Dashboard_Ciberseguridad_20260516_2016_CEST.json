@@ -1,0 +1,367 @@
+{
+  "brand": "MMarco Seguridad",
+  "edition": "20:00 CEST",
+  "generated_at": "2026-05-16 20:16:43 CEST",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "trend_24h": "ALZA MODERADA",
+  "next_update": "2026-05-17 00:00 CEST",
+  "ai_risk_state": "Estimacion IA activa",
+  "methodology_note": "Los KPIs de esta edicion miden señales priorizadas y verificadas manualmente a partir de boletines oficiales y proveedores de referencia; no representan un censo global del ecosistema.",
+  "kpis": [
+    {
+      "label": "Incidentes activos monitorizados",
+      "value": 4,
+      "note": "2 vulnerabilidades en explotacion, 1 KEV persistente y 1 incidente publico confirmado"
+    },
+    {
+      "label": "Incidentes criticos",
+      "value": 2,
+      "note": "PAN-OS expuesto y Cisco SD-WAN en KEV"
+    },
+    {
+      "label": "CVEs priorizadas",
+      "value": 7,
+      "note": "Tabla de mitigacion ejecutiva"
+    },
+    {
+      "label": "KEV prioritarias",
+      "value": 3,
+      "note": "Cisco SD-WAN, Palo Alto PAN-OS, Ivanti EPMM"
+    },
+    {
+      "label": "Boletines criticos revisados",
+      "value": 6,
+      "note": "Microsoft, SAP, Siemens, Android, Palo Alto, Cisco"
+    },
+    {
+      "label": "Phishing/campanas",
+      "value": 1,
+      "note": "Riesgo derivado del incidente France Titres"
+    },
+    {
+      "label": "Paises con señal prioritaria",
+      "value": "Espana / Francia / EE.UU.",
+      "note": "Muestra de esta edicion"
+    },
+    {
+      "label": "Riesgo global",
+      "value": "ALTO",
+      "note": "ALZA MODERADA"
+    }
+  ],
+  "executive_summary": {
+    "state": "La ciberamenaza se mantiene en nivel ALTO con foco claro en appliances y planos de control expuestos a Internet. La prioridad inmediata para direccion es reducir superficie publica, acelerar parcheo de edge y reforzar deteccion de abuso de credenciales administrativas.",
+    "main_risks": [
+      "RCE/root en PAN-OS cuando User-ID Authentication Portal esta expuesto a Internet.",
+      "Bypass de autenticacion en Cisco Catalyst SD-WAN con capacidad de manipulacion del fabric y entrada reciente en KEV.",
+      "Presion de parcheo en entornos Microsoft con 137 vulnerabilidades publicadas en el lote de mayo, 14 de ellas criticas.",
+      "Riesgo de fraude y phishing secundario tras la exposicion de datos personales en la agencia francesa France Titres."
+    ],
+    "most_affected_sectors": [
+      "Telecomunicaciones y redes gestionadas",
+      "Administracion publica y servicios al ciudadano",
+      "Industria y OT con tecnologia Siemens",
+      "Entornos enterprise con Microsoft, SAP e Ivanti"
+    ],
+    "most_used_techniques": [
+      "Explotacion de servicios de gestion expuestos",
+      "Abuso de credenciales o bypass de autenticacion",
+      "Movimiento hacia configuracion de plano de control",
+      "Phishing oportunista y fraude posterior a fugas de datos"
+    ],
+    "estimated_exposure": "Media-alta para organizaciones con edge publico, MDM, SAP, Windows/Azure y parque Android corporativo.",
+    "main_recommendation": "Ejecutar hoy una ventana extraordinaria de inventario, parcheo y hardening sobre PAN-OS, Cisco SD-WAN, Ivanti EPMM y activos Microsoft expuestos o con privilegios elevados.",
+    "quick_conclusion": [
+      "El riesgo operacional mas urgente esta en el edge y en los portales de autenticacion expuestos.",
+      "Cisco SD-WAN pasa a prioridad inmediata por su entrada en KEV el 14 de mayo.",
+      "Microsoft mayo 2026 exige capacidad de parcheo acelerado en infraestructura hibrida.",
+      "El incidente France Titres aumenta la probabilidad de fraude y phishing dirigido en el entorno europeo.",
+      "La amenaza IA mas visible en esta edicion es el aumento de intentos de prompt injection indirecto en la web abierta."
+    ]
+  },
+  "alerts": [
+    {
+      "title": "Palo Alto PAN-OS CVE-2026-0300",
+      "status": "Hecho confirmado",
+      "urgency": "Critica",
+      "detail": "Palo Alto confirma explotacion limitada de CVE-2026-0300 contra User-ID Authentication Portal expuesto; permite ejecucion de codigo con privilegios root y ya hay versiones corregidas parciales publicadas.",
+      "action": "Restringir el portal a zonas de confianza o deshabilitarlo y aplicar los hotfix disponibles hoy mismo.",
+      "source_id": "PAN-OS"
+    },
+    {
+      "title": "Cisco Catalyst SD-WAN CVE-2026-20182",
+      "status": "Hecho confirmado",
+      "urgency": "Critica",
+      "detail": "Cisco publico el 14 de mayo una vulnerabilidad de bypass de autenticacion en SD-WAN Controller/Manager; NVD ya la refleja en KEV y el impacto operativo incluye manipulacion de configuracion del fabric via NETCONF.",
+      "action": "Identificar versiones afectadas, aplicar remediacion de Cisco y revisar accesos al plano de control.",
+      "source_id": "CISCO-SDWAN"
+    },
+    {
+      "title": "Ivanti EPMM CVE-2026-6973",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "detail": "La vulnerabilidad permanece en KEV desde el 7 de mayo. Requiere acceso administrativo previo, pero habilita RCE en una pieza sensible del stack de movilidad empresarial.",
+      "action": "Validar versiones EPMM, aplicar parche y revisar cuentas administrativas del MDM.",
+      "source_id": "NVD-IVANTI-6973"
+    },
+    {
+      "title": "France Titres y riesgo de phishing derivado",
+      "status": "Hecho confirmado / Indicio de campaña secundaria",
+      "urgency": "Alta",
+      "detail": "La intrusion confirmada en la agencia francesa de identidad digital expuso datos personales y eleva el riesgo de fraude y phishing tematico sobre ciudadanos y organizaciones con relacion transfronteriza.",
+      "action": "Reforzar alertado interno, controles anti-phishing y mensajes de concienciacion a usuarios finales.",
+      "source_id": "INCIBE-FRANCE"
+    }
+  ],
+  "news": [
+    {
+      "title": "Microsoft publica el lote de mayo de 2026",
+      "impact": "137 vulnerabilidades, 14 criticas; presion clara de parcheo en Windows y Azure.",
+      "source_id": "INCIBE-MICROSOFT"
+    },
+    {
+      "title": "SAP mantiene dos CVEs criticas en su actualizacion de mayo",
+      "impact": "CVE-2026-34260 y CVE-2026-34263 obligan a priorizar ERP y componentes expuestos o integrados.",
+      "source_id": "INCIBE-SAP"
+    },
+    {
+      "title": "Siemens publica avisos criticos de mayo para entornos industriales",
+      "impact": "La señal relevante para OT se mantiene alta, con vulnerabilidades de acceso a ficheros y componentes de terceros.",
+      "source_id": "INCIBE-SIEMENS"
+    },
+    {
+      "title": "Google detecta aumento en intentos de prompt injection indirecto",
+      "impact": "La actividad observada en la web abierta sigue siendo poco sofisticada, pero Google reporta un aumento relativo del 32% en la categoria maliciosa entre noviembre de 2025 y febrero de 2026.",
+      "source_id": "GOOGLE-IPI"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "9.8 (NVD) / 9.3 (vendor)",
+      "severity": "Critica",
+      "exploitation": "Explotacion limitada observada",
+      "patch": "Si, hotfix parciales disponibles; mas versiones anunciadas para 2026-05-28",
+      "priority": "Critica inmediata",
+      "source_id": "PAN-OS"
+    },
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0 (Cisco advisory)",
+      "severity": "Critica",
+      "exploitation": "Incluida en KEV el 2026-05-14",
+      "patch": "Si, remediacion y guia de Cisco publicadas",
+      "priority": "Critica inmediata",
+      "source_id": "CISCO-SDWAN"
+    },
+    {
+      "cve": "CVE-2026-6973",
+      "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+      "cvss": "N/D en la fuente revisada",
+      "severity": "Alta",
+      "exploitation": "Incluida en KEV el 2026-05-07",
+      "patch": "Si, versiones 12.6.1.1 / 12.7.0.1 / 12.8.0.1 o posteriores",
+      "priority": "Alta",
+      "source_id": "NVD-IVANTI-6973"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android AOSP / Google Play adbd",
+      "cvss": "N/D en la fuente revisada",
+      "severity": "Critica",
+      "exploitation": "No confirmada en el boletin revisado",
+      "patch": "Si, via boletin de seguridad de mayo y parches del fabricante",
+      "priority": "Alta",
+      "source_id": "INCIBE-ANDROID"
+    },
+    {
+      "cve": "CVE-2026-34260",
+      "product": "SAP (actualizacion mensual de mayo)",
+      "cvss": "N/D en la fuente revisada",
+      "severity": "Critica",
+      "exploitation": "No confirmada en la fuente revisada",
+      "patch": "Si, SAP recomienda aplicar parches de forma prioritaria",
+      "priority": "Alta",
+      "source_id": "INCIBE-SAP"
+    },
+    {
+      "cve": "CVE-2026-34263",
+      "product": "SAP (actualizacion mensual de mayo)",
+      "cvss": "N/D en la fuente revisada",
+      "severity": "Critica",
+      "exploitation": "No confirmada en la fuente revisada",
+      "patch": "Si, SAP recomienda aplicar parches de forma prioritaria",
+      "priority": "Alta",
+      "source_id": "INCIBE-SAP"
+    },
+    {
+      "cve": "Microsoft mayo 2026",
+      "product": "Windows / Azure / Dynamics / Netlogon / DNS Client",
+      "cvss": "14 vulnerabilidades criticas en el lote",
+      "severity": "Critica",
+      "exploitation": "No confirmada en el boletin de INCIBE revisado",
+      "patch": "Si, lote de actualizaciones disponible",
+      "priority": "Alta",
+      "source_id": "INCIBE-MICROSOFT"
+    }
+  ],
+  "malware_and_ransomware": {
+    "confidence": "Moderada",
+    "summary": "En esta ventana no ha entrado una nueva alerta oficial prioritaria comparable a un paquete IOC/TTP fresco de ransomware en las fuentes revisadas. El riesgo mas tangible para las proximas horas sigue siendo el exploitation-to-phishing: compromiso inicial por appliance expuesto y fraude posterior aprovechando datos personales o credenciales administrativas.",
+    "target_sectors": [
+      "MSP y equipos de red",
+      "Administracion publica",
+      "Industria y OT",
+      "Empresas con MDM o ERP expuestos indirectamente"
+    ],
+    "techniques": [
+      "Explotacion remota de edge appliances",
+      "Persistencia mediante cuentas privilegiadas",
+      "Phishing tematico tras incidentes con datos personales"
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Cerrar hoy la exposicion innecesaria de User-ID Authentication Portal en PAN-OS y aplicar hotfix en ramas afectadas."
+    },
+    {
+      "priority": "Critica",
+      "text": "Parchear o mitigar de inmediato Cisco SD-WAN Controller/Manager y revisar telemetria de control connections y NETCONF."
+    },
+    {
+      "priority": "Alta",
+      "text": "Validar versiones de Ivanti EPMM y reducir el numero de cuentas administrativas con acceso al MDM."
+    },
+    {
+      "priority": "Alta",
+      "text": "Ejecutar parcheo acelerado del lote Microsoft de mayo sobre activos Internet-facing, sistemas privilegiados y entornos hibridos Azure/Windows."
+    },
+    {
+      "priority": "Alta",
+      "text": "Priorizar SAP y Siemens en entornos industriales o de negocio critico, con ventana dedicada de validacion post-parche."
+    },
+    {
+      "priority": "Media",
+      "text": "Actualizar dispositivos Android corporativos y revisar la fecha real del parche de seguridad por fabricante."
+    },
+    {
+      "priority": "Media",
+      "text": "Emitir aviso interno anti-phishing ligado a filtraciones de datos europeas y reforzar deteccion de suplantacion tematica."
+    },
+    {
+      "priority": "Baja",
+      "text": "Introducir controles de higiene para aplicaciones con IA agente: desinfeccion de entradas, aislamiento de herramientas y politicas anti-prompt injection."
+    }
+  ],
+  "ai_section": {
+    "label": "Analisis predictivo y estimativo generado por IA",
+    "estimated_global_risk": "Alto-estable con sesgo alcista a 72 horas",
+    "next_threats": [
+      "Mayor explotacion de appliances y planos de control expuestos",
+      "Incremento de phishing oportunista apoyado en incidentes publicos de datos",
+      "Crecimiento gradual de intentos de prompt injection indirecto en flujos con agentes IA"
+    ],
+    "most_exposed_sectors": [
+      "Administracion publica",
+      "Telecom y networking",
+      "Industria y OT",
+      "Empresas con identidad hibrida y SaaS critico"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-0300",
+      "CVE-2026-20182",
+      "CVE-2026-6973",
+      "Lote Microsoft mayo 2026"
+    ],
+    "attack_increase_probability": "Media-alta",
+    "automatic_recommendation": "Mantener una ventana de hardening continuo sobre edge, revisiones diarias de KEV y un playbook rapido de comunicacion anti-phishing cuando aparezcan incidentes con datos personales."
+  },
+  "delivery": {
+    "github_directory_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260516",
+    "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_2016_CEST.html",
+    "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260516/Dashboard_Ciberseguridad_20260516_2016_CEST.json",
+    "pdf_url": null,
+    "pdf_status": "No generado para no declarar un artefacto no persistido externamente.",
+    "images_status": "No generadas en esta edicion.",
+    "google_drive_status": "Omitido en esta edicion."
+  },
+  "sources": [
+    {
+      "id": "PAN-OS",
+      "title": "Palo Alto Networks CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300",
+      "type": "vendor",
+      "published": "2026-05-05",
+      "updated": "2026-05-16"
+    },
+    {
+      "id": "CISCO-SDWAN",
+      "title": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
+      "type": "vendor",
+      "published": "2026-05-14"
+    },
+    {
+      "id": "NVD-CISCO-20182",
+      "title": "NVD CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+      "type": "nvd",
+      "published": "2026-05-14",
+      "updated": "2026-05-15"
+    },
+    {
+      "id": "NVD-IVANTI-6973",
+      "title": "NVD CVE-2026-6973",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6973",
+      "type": "nvd",
+      "published": "2026-05-07"
+    },
+    {
+      "id": "INCIBE-MICROSOFT",
+      "title": "Actualizaciones de seguridad de Microsoft de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+      "type": "official",
+      "published": "2026-05-13"
+    },
+    {
+      "id": "INCIBE-SAP",
+      "title": "Actualizacion de seguridad de SAP de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizacion-de-seguridad-de-sap-de-mayo-de-2026",
+      "type": "official",
+      "published": "2026-05-12"
+    },
+    {
+      "id": "INCIBE-SIEMENS",
+      "title": "Avisos de seguridad de Siemens de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026",
+      "type": "official",
+      "published": "2026-05-12"
+    },
+    {
+      "id": "INCIBE-ANDROID",
+      "title": "Boletin de seguridad de Android: mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026",
+      "type": "official",
+      "published": "2026-05-05"
+    },
+    {
+      "id": "INCIBE-FRANCE",
+      "title": "Incidente de seguridad en la agencia nacional de identidad digital de Francia",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-en-la-agencia-nacional-de-identidad-digital-de",
+      "type": "official-context",
+      "published": "2026-05-14"
+    },
+    {
+      "id": "GOOGLE-IPI",
+      "title": "AI threats in the wild: The current state of prompt injections on the web",
+      "url": "https://security.googleblog.com/2026/04/",
+      "type": "vendor-research",
+      "published": "2026-04-23"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
