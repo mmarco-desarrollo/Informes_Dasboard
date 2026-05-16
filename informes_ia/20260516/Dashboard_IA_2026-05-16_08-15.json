@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo de Inteligencia Artificial - Corte 08:00",
+    "generated_at": "2026-05-16 08:11:52 CEST",
+    "timezone": "Europe/Madrid",
+    "next_update": "2026-05-16 20:00 CEST",
+    "ecosystem_status": "Alta actividad y riesgo contenido con focos claros de supply chain y hardening agentic",
+    "impact_level": "MUY ALTO",
+    "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+    "window": "Ventana reciente: senales relevantes confirmadas en los ultimos 7 dias, con foco en cambios de las ultimas 48-72 horas."
+  },
+  "cards": {
+    "news": [
+      {
+        "title": "OpenAI refuerza voz operativa en API",
+        "source": "OpenAI",
+        "when": "2026-05-07",
+        "category": "Lanzamiento",
+        "impact": "Alto",
+        "summary": "GPT-Realtime-2 aporta razonamiento de clase GPT-5, traduccion en tiempo real y transcripcion streaming para apps de voz que ya no solo responden, sino que actuan.",
+        "action": "Priorizar pilotos de atencion, ventas y soporte multilingue con voz-to-action.",
+        "status": "Hecho confirmado",
+        "link": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+      }
+    ]
+  }
+}
