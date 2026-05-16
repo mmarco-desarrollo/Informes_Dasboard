@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | MMarco Seguridad | 2026-05-17 00:14 CEST</title>
+  <style>
+    :root {
+      --bg: #07101a;
+      --panel: #0e1a2a;
+      --panel-2: #102034;
+      --line: rgba(122,183,255,.18);
+      --text: #f4f8fc;
+      --muted: #a8bfd6;
+      --cyan: #56d8ff;
+      --red: #ff7180;
+      --amber: #ffca6b;
+      --green: #79e2b7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(86,216,255,.12), transparent 28%),
+        linear-gradient(180deg, #07101a 0%, #091525 45%, #07101a 100%);
+    }
+    .wrap { max-width: 1320px; margin: 0 auto; padding: 24px 18px 40px; }
+    .hero, .panel, .kpi, .alert, .rec { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; }
+    .hero { padding: 28px; background: linear-gradient(135deg, #12233a, #0b1420); }
+    .brand { color: var(--cyan); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: 13px; }
+    h1 { margin: 10px 0 12px; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.05; }
+    h2 { margin: 0 0 14px; font-size: 1.25rem; }
+    h3 { margin: 0 0 10px; font-size: 1rem; }
+    p, li, td, th { line-height: 1.6; }
+    p, li { color: var(--muted); }
+    .meta { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .meta div { background: rgba(7,15,24,.55); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+    .meta span { display:block; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:6px; }
+    .kpis { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+    .kpi { padding: 18px; min-height: 132px; }
+    .kpi strong { display:block; font-size: 2rem; color: white; margin: 10px 0; }
+    .grid-2, .grid-3, .alerts, .recs { display: grid; gap: 16px; margin-top: 18px; }
+    .grid-2 { grid-template-columns: 1.2fr .8fr; }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .panel { padding: 22px; }
+    .alerts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .alert { padding: 18px; background: linear-gradient(180deg, #13233a, #0d1828); }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; text-transform:uppercase; letter-spacing:.05em; }
+    .critical { background: rgba(255,113,128,.15); color:#ffd9dd; border: 1px solid rgba(255,113,128,.28); }
+    .high { background: rgba(255,202,107,.14); color:#ffe9b8; border: 1px solid rgba(255,202,107,.26); }
+    table { width:100%; border-collapse:collapse; min-width:820px; }
+    th, td { text-align:left; padding: 11px 10px; border-bottom: 1px solid rgba(122,183,255,.12); vertical-align:top; }
+    th { color:white; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+    .table-wrap { overflow-x:auto; }
+    .recs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .rec { padding:18px; background: var(--panel-2); }
+    a { color: var(--cyan); }
+    .footer { margin-top: 18px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 16px; color: var(--muted); }
+    @media (max-width: 1160px) {
+      .meta, .kpis, .grid-2, .grid-3, .alerts, .recs { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 760px) {
+      .wrap { padding: 16px 14px 30px; }
+      .hero, .panel, .kpi, .alert, .rec { border-radius: 14px; }
+      .meta, .kpis, .grid-2, .grid-3, .alerts, .recs { grid-template-columns: 1fr; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="brand">MMarco Seguridad</div>
+      <h1>Informe Ejecutivo de Ciberseguridad</h1>
+      <p>Resumen nocturno del 17 de mayo de 2026. El nivel global de amenaza se mantiene <strong style="color:#fff;">ALTO</strong> y empeora tácticamente por la combinación de nuevas vulnerabilidades críticas, entrada de fallos en KEV y presión sobre tecnologías muy extendidas en empresa.</p>
+      <div class="meta">
+        <div><span>Fecha y hora</span><strong>2026-05-17 00:14:01 CEST</strong></div>
+        <div><span>Zona horaria</span><strong>Europe/Madrid</strong></div>
+        <div><span>Nivel global</span><strong style="color:var(--red);">ALTO</strong></div>
+        <div><span>Próxima actualización</span><strong>2026-05-17 08:00 CEST</strong></div>
+        <div><span>Estado IA de riesgo</span><strong>Elevado sobre perímetro, correo y plano de control</strong></div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <article class="kpi"><span>Alertas críticas priorizadas</span><strong>8</strong><p>Selección validada en esta edición.</p></article>
+      <article class="kpi"><span>Microsoft mayo 2026</span><strong>137</strong><p>Vulnerabilidades publicadas; 14 críticas.</p></article>
+      <article class="kpi"><span>Explotación activa priorizada</span><strong>3</strong><p>Cisco SD-WAN, Exchange y PAN-OS.</p></article>
+      <article class="kpi"><span>Industrial crítico</span><strong>22</strong><p>Vulnerabilidades críticas en el lote mensual de Siemens.</p></article>
+      <article class="kpi"><span>Tendencia 24h</span><strong>Al alza</strong><p>Nuevas entradas KEV y presión sobre edge/correo.</p></article>
+      <article class="kpi"><span>Exposición pyme España</span><strong>Alta</strong><p>Mayor riesgo si hay correo on-prem, SD-WAN o portales expuestos.</p></article>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel">
+        <h2>Resumen ejecutivo</h2>
+        <p><strong style="color:#fff;">Principales riesgos:</strong></p>
+        <ul>
+          <li>Explotación activa de Cisco Catalyst SD-WAN Controller (CVE-2026-20182) con potencial de acceso administrativo remoto.</li>
+          <li>Explotación activa de Microsoft Exchange Server (CVE-2026-42897) mediante correos especialmente diseñados y apertura en OWA.</li>
+          <li>Persistencia del riesgo en PAN-OS User-ID Authentication Portal (CVE-2026-0300) cuando sigue expuesto a Internet.</li>
+          <li>Superficie de ataque ampliada por el ciclo de parches de Microsoft y por la acumulación de fallos críticos en entornos OT/ICS Siemens.</li>
+        </ul>
+        <p><strong style="color:#fff;">Exposición estimada:</strong> alta para organizaciones españolas con Cisco SD-WAN, Exchange on-prem, PAN-OS expuesto, productos Microsoft empresariales o activos OT Siemens.</p>
+        <p><strong style="color:#fff;">Recomendación principal:</strong> durante la madrugada y primeras horas del día, priorizar verificación de exposición externa, aplicación de parches o mitigaciones temporales y búsqueda de indicios de compromiso en SD-WAN, Exchange y firewalls PAN-OS.</p>
+      </article>
+      <article class="panel">
+        <h2>Conclusión rápida</h2>
+        <ul>
+          <li>La prioridad operativa inmediata pasa por perímetro, correo y plano de control de red.</li>
+          <li>Hay evidencia oficial de explotación activa en al menos tres tecnologías empresariales relevantes.</li>
+          <li>El riesgo para España es especialmente alto en pymes y medianas empresas con administración remota expuesta.</li>
+          <li>OT/ICS no muestra explotación confirmada en esta muestra, pero sí concentración de criticidad que aconseja ventana urgente de revisión.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid-3">
+      <article class="panel">
+        <h2>Sectores más afectados</h2>
+        <ul>
+          <li>Administración y sector público</li>
+          <li>Industria y OT</li>
+          <li>Servicios digitales</li>
+          <li>Pymes con correo on-prem y perímetro expuesto</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>Técnicas más usadas</h2>
+        <ul>
+          <li>Bypass de autenticación</li>
+          <li>RCE en perímetro</li>
+          <li>Suplantación y XSS en correo</li>
+          <li>Abuso de credenciales y administración remota</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>Riesgos prioritarios para España</h2>
+        <ul>
+          <li>Empresas con multisede y SD-WAN Cisco deben asumir exposición inmediata si no han revisado versiones afectadas.</li>
+          <li>Organizaciones con Exchange on-prem siguen en zona de riesgo por explotación reciente y dependencia de OWA.</li>
+          <li>Pymes con firewalls PAN-OS expuestos mantienen una superficie muy sensible.</li>
+          <li>Industria y operadores con Siemens OT/ICS deben tratar mayo como una ventana de revisión prioritaria.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Alertas activas prioritarias</h2>
+      <div class="alerts">
+        <article class="alert">
+          <span class="pill critical">Crítica</span>
+          <h3>Cisco Catalyst SD-WAN Controller</h3>
+          <p><strong style="color:#fff;">CVE-2026-20182</strong> · explotación activa confirmada.</p>
+          <p>Bypass de autenticación y privilegios administrativos remotos. Muy alta relevancia para empresas con SD-WAN multisede o gestión centralizada.</p>
+          <p><strong style="color:#fff;">Acción:</strong> actualizar de urgencia y revisar el guidance de caza/endurecimiento de Cisco y CISA.</p>
+        </article>
+        <article class="alert">
+          <span class="pill critical">Crítica</span>
+          <h3>Microsoft Exchange Server</h3>
+          <p><strong style="color:#fff;">CVE-2026-42897</strong> · explotación activa confirmada; añadida a KEV el 15/05/2026.</p>
+          <p>Suplantación mediante XSS al abrir correos en OWA. Muy alta relevancia en organizaciones que aún mantienen Exchange on-prem.</p>
+          <p><strong style="color:#fff;">Acción:</strong> confirmar mitigación automática EM, revisar telemetría OWA y acelerar parcheo.</p>
+        </article>
+        <article class="alert">
+          <span class="pill critical">Crítica</span>
+          <h3>Palo Alto PAN-OS Authentication Portal</h3>
+          <p><strong style="color:#fff;">CVE-2026-0300</strong> · explotación activa confirmada.</p>
+          <p>RCE no autenticado con privilegios root en PA-Series y VM-Series cuando el portal está expuesto a Internet.</p>
+          <p><strong style="color:#fff;">Acción:</strong> aplicar parche y, si sigue pendiente, restringir a zonas de confianza o deshabilitar el portal.</p>
+        </article>
+        <article class="alert">
+          <span class="pill critical">Crítica</span>
+          <h3>Microsoft Patch Tuesday mayo 2026</h3>
+          <p><strong style="color:#fff;">137 vulnerabilidades / 14 críticas</strong>.</p>
+          <p>Impacto amplio sobre identidad, red, Office, Azure y Windows. Relevancia muy alta por la base instalada en empresa y administración.</p>
+          <p><strong style="color:#fff;">Acción:</strong> priorizar inventario, exposición y despliegue de parches por criticidad.</p>
+        </article>
+        <article class="alert">
+          <span class="pill high">Alta</span>
+          <h3>Siemens OT/ICS mayo 2026</h3>
+          <p><strong style="color:#fff;">Múltiples</strong> · 22 vulnerabilidades críticas en el comunicado mensual.</p>
+          <p>Sin explotación confirmada en esta muestra, pero con alta relevancia para industria, energía, agua y manufactura.</p>
+          <p><strong style="color:#fff;">Acción:</strong> aislar exposición, programar actualización y revisar mitigaciones del fabricante.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Vulnerabilidades críticas priorizadas</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto afectado</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Explotación</th>
+              <th>Parche</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CVE-2026-20182</td><td>Cisco Catalyst SD-WAN Controller / Manager</td><td>10.0 (CNA Cisco)</td><td>Crítica</td><td>Sí</td><td>Sí</td><td>Crítica inmediata</td></tr>
+            <tr><td>CVE-2026-42897</td><td>Microsoft Exchange Server</td><td>8.1 (CNA) / 6.1 (NVD)</td><td>Explotada</td><td>Sí</td><td>Mitigación EM</td><td>Crítica inmediata</td></tr>
+            <tr><td>CVE-2026-0300</td><td>Palo Alto PAN-OS Authentication Portal</td><td>9.8 (NVD)</td><td>Crítica</td><td>Sí</td><td>Sí</td><td>Crítica inmediata</td></tr>
+            <tr><td>CVE-2026-33117</td><td>Azure SDK for Java</td><td>9.1 (CNA Microsoft)</td><td>Crítica</td><td>No confirmada</td><td>Sí</td><td>Alta</td></tr>
+            <tr><td>CVE-2026-8043</td><td>Ivanti Xtraction</td><td>Crítica</td><td>Crítica</td><td>No confirmada</td><td>Sí</td><td>Alta</td></tr>
+            <tr><td>CVE-2026-45185</td><td>Exim 4.97 a 4.99.2</td><td>Crítica</td><td>Crítica</td><td>No confirmada</td><td>Sí</td><td>Alta</td></tr>
+            <tr><td>Múltiples</td><td>Siemens OT/ICS</td><td>Múltiples críticas</td><td>Crítica</td><td>No confirmada</td><td>Sí</td><td>Alta en industria</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel">
+        <h2>Actividad relevante e incidentes</h2>
+        <p>La presión inmediata se concentra en perímetro, correo y control de red. No se observa en esta muestra una campaña única dominante de ransomware respaldada por fuente oficial reciente, pero sí un aumento de explotación oportunista y fraude derivado de brechas recientes.</p>
+        <p><strong style="color:#fff;">Noticia prioritaria:</strong> Booking confirmó acceso no autorizado a datos de usuarios de reservas, con riesgo de uso posterior en campañas de phishing dirigidas.</p>
+      </article>
+      <article class="panel">
+        <h2>Malware, ransomware y fraude</h2>
+        <p>Sin nueva campaña oficial dominante confirmada en esta muestra nocturna.</p>
+        <p>Se mantiene el riesgo de campañas de phishing y fraude derivadas de incidentes de datos recientes, con especial atención a Booking y a vectores de correo y colaboración.</p>
+        <p>No se incluyen IOCs en esta edición por no contar con un conjunto oficial reciente y verificable suficientemente estable.</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Recomendaciones ejecutivas</h2>
+      <div class="recs">
+        <article class="rec"><h3>Crítica</h3><ul><li>Validar antes de las 08:00 CEST si existen instancias Cisco SD-WAN, Exchange on-prem o PAN-OS Authentication Portal expuestas y sin mitigación.</li><li>Aplicar parches o mitigaciones temporales de Cisco, Microsoft y Palo Alto con prioridad de emergencia.</li><li>Revisar autenticaciones anómalas, cambios de configuración y actividad OWA/NETCONF en las últimas 72 horas.</li></ul></article>
+        <article class="rec"><h3>Alta</h3><ul><li>Priorizar el lote de mayo de Microsoft por exposición externa y criticidad de negocio.</li><li>Planificar actualización acelerada de Exim e Ivanti en sistemas accesibles o con datos sensibles.</li><li>Elevar monitorización de phishing dirigido y fraude relacionado con incidentes de terceros como Booking.</li></ul></article>
+        <article class="rec"><h3>Media</h3><ul><li>Revisar segmentación de acceso administrativo y cerrar portales de autenticación no imprescindibles.</li><li>Asegurar MFA fuerte en correo, VPN y consolas de administración.</li></ul></article>
+        <article class="rec"><h3>Baja</h3><ul><li>Actualizar playbooks de crisis para campañas de suplantación de correo y compromiso de perímetro.</li><li>Preparar revisión específica de exposición OT/ICS en la próxima ventana de mantenimiento.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel">
+        <h2>Sección IA</h2>
+        <p><strong style="color:#fff;">Clasificación:</strong> análisis predictivo o estimativo.</p>
+        <p><strong style="color:#fff;">Riesgo estimado:</strong> alto con probabilidad de continuidad durante las próximas 48 horas.</p>
+        <ul>
+          <li>Incremento de escaneo y explotación oportunista sobre Cisco SD-WAN y Exchange expuestos.</li>
+          <li>Mayor uso de campañas de phishing apoyadas en incidentes de terceros y suplantación de comunicaciones.</li>
+          <li>Aumento de intentos contra planos de gestión y portales de autenticación accesibles desde Internet.</li>
+        </ul>
+        <p>Esta sección es estimativa y no sustituye inteligencia de incidente confirmada.</p>
+      </article>
+      <article class="panel">
+        <h2>Fuentes principales</h2>
+        <ul>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026">INCIBE - Actualizaciones de seguridad de Microsoft de mayo de 2026</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33117">NVD - CVE-2026-33117</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autenticacion-incorrecta-en-cisco-catalyst-sd-wan-controller">INCIBE - Cisco Catalyst SD-WAN Controller</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20182">NVD - CVE-2026-20182</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft">INCIBE - Exchange Server</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42897">NVD - CVE-2026-42897</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto">INCIBE - PAN-OS Authentication Portal</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">NVD - CVE-2026-0300</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026">INCIBE SCI - Siemens mayo 2026</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-2">INCIBE - Ivanti</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim">INCIBE - Exim</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking">INCIBE Bitácora - Booking</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="footer"><strong>Aviso legal.</strong> Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.</div>
+  </div>
+</body>
+</html>
