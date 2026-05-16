@@ -8,22 +8,80 @@
     "next_update": "2026-05-16 20:00 CEST",
     "ecosystem_status": "Alta actividad y riesgo contenido con focos claros de supply chain y hardening agentic",
     "impact_level": "MUY ALTO",
-    "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
-    "window": "Ventana reciente: senales relevantes confirmadas en los ultimos 7 dias, con foco en cambios de las ultimas 48-72 horas."
+    "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones"
   },
-  "cards": {
+  "executive_summary": [
+    "La prioridad competitiva se desplaza desde el modelo aislado hacia sistemas agentic completos con foco en permisos, identidad, sandboxing y observabilidad.",
+    "OpenAI acelera en voz operativa y ciberdefensa controlada; Google empuja IA proactiva en Android; xAI presiona en coding agents; Anthropic valida adopcion enterprise a escala con PwC.",
+    "El riesgo principal sigue en supply chain y ejecucion agentic, con especial atencion al incidente TanStack/OpenAI, el advisory de Mistral y la RCE critica de Flowise."
+  ],
+  "highlights": {
     "news": [
       {
         "title": "OpenAI refuerza voz operativa en API",
         "source": "OpenAI",
         "when": "2026-05-07",
-        "category": "Lanzamiento",
         "impact": "Alto",
-        "summary": "GPT-Realtime-2 aporta razonamiento de clase GPT-5, traduccion en tiempo real y transcripcion streaming para apps de voz que ya no solo responden, sino que actuan.",
-        "action": "Priorizar pilotos de atencion, ventas y soporte multilingue con voz-to-action.",
         "status": "Hecho confirmado",
         "link": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+      },
+      {
+        "title": "Google activa Gemini Intelligence en Android",
+        "source": "Google",
+        "when": "2026-05-12",
+        "impact": "Alto",
+        "status": "Hecho confirmado",
+        "link": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/"
+      },
+      {
+        "title": "Anthropic amplia su alianza con PwC",
+        "source": "Anthropic",
+        "when": "2026-05-14",
+        "impact": "Alto",
+        "status": "Hecho confirmado",
+        "link": "https://www.anthropic.com/news/pwc-expanded-partnership"
       }
+    ],
+    "incidents": [
+      {
+        "title": "OpenAI publica respuesta al ataque supply chain de TanStack",
+        "source": "OpenAI",
+        "when": "2026-05-13",
+        "impact": "Alto",
+        "status": "Hecho confirmado",
+        "link": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+      },
+      {
+        "title": "CVE-2026-41264 en Flowise",
+        "source": "GitHub Advisory",
+        "when": "2026-04-27",
+        "impact": "Critica",
+        "status": "Hecho confirmado",
+        "link": "https://github.com/advisories/GHSA-3hjv-c53m-58jj"
+      }
+    ],
+    "opportunities": [
+      "Paquete de hardening para agentes autonomos.",
+      "Linea de servicios AppSec con IA asistida.",
+      "Automatizacion movil y de escritorio sobre Android proactivo y agentes de escritorio."
     ]
-  }
+  },
+  "delivery": {
+    "email_sent_to": "mmarco.seguridad@gmail.com",
+    "slack_sent_to": "Mmarco Seguridad",
+    "github_archive_html": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ia/20260516/Dashboard_IA_2026-05-16_08-15.html",
+    "github_archive_json": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ia/20260516/Dashboard_IA_2026-05-16_08-15.json"
+  },
+  "limitations": [
+    "Google Drive solicito autorizacion interactiva para subir la copia persistente y el intento caduco sin respuesta.",
+    "No se materializo en esta ejecucion un enlace PDF persistido y verificado fuera del workspace; el PDF se entrego adjunto por correo."
+  ],
+  "sources": [
+    "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+    "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+    "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
+    "https://www.anthropic.com/news/pwc-expanded-partnership",
+    "https://github.com/advisories/GHSA-3hjv-c53m-58jj",
+    "https://docs.mistral.ai/resources/security-advisories"
+  ]
 }
