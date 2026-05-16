@@ -182,7 +182,7 @@
       "recommendation": "Mantenerlo en radar para clientes con volumen, GPU propia o despliegues intensivos de inferencia.",
       "date_label": "16 Mar 2026",
       "source_name": "NVIDIA",
-      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Enters-Production-With-Dynamo-the-Broadly-Adopted-Inference-Operating-System-for-AI-Factories/default.aspx"
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Enters-Production-With-Dynamo-the-Broadly-Adopted-Inference-Operating-System-for-AI-FactORIES/default.aspx"
     },
     {
       "title": "Perplexity Finance Search",
@@ -278,6 +278,24 @@
       "date_label": "14 May 2026",
       "source_name": "Microsoft",
       "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    }
+  ],
+  "active_alerts": [
+    {
+      "priority": "Critica",
+      "text": "Buscar ya `mistralai==2.4.6` y paquetes npm afectados en lockfiles, caches e imagenes; si hubo exposicion, rotar secretos."
+    },
+    {
+      "priority": "Critica",
+      "text": "Revisar Flowise expuesto a internet y actualizar cualquier instancia <= 3.0.13 a 3.1.x con validacion posterior."
+    },
+    {
+      "priority": "Alta",
+      "text": "Auditar servidores MCP, charts de Mage AI y agentes con ejecucion en contexto del servidor antes de ampliar automatizaciones."
+    },
+    {
+      "priority": "Alta",
+      "text": "Preparar inventario de instalaciones macOS de OpenAI para completar la actualizacion antes del 12 de junio de 2026."
     }
   ],
   "repositories": [
