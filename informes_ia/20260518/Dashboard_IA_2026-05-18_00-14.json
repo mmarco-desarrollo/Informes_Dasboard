@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo Nocturno de Inteligencia Artificial",
+    "generated_at": "2026-05-18T00:14:00+02:00",
+    "timezone": "Europe/Madrid",
+    "impact_level": "Alto",
+    "expected_next_update": "18 de mayo de 2026 · 08:00 CEST",
+    "ecosystem_status": "Actividad alta, sin disrupcion operativa mayor nueva",
+    "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+    "mode": "Resumen nocturno compacto"
+  },
+  "kpis": [
+    {
+      "label": "Senales confirmadas",
+      "value": "6",
+      "note": "proveedores y regulacion con trazabilidad"
+    },
+    {
+      "label": "Alertas activas",
+      "value": "2",
+      "note": "memoria persistente y agentes con herramientas"
+    },
+    {
+      "label": "Incidentes criticos nuevos",
+      "value": "sin señal fiable",
+      "note": "sin caida mayor nueva confirmada"
+    },
+    {
+      "label": "Cambios regulatorios",
+      "value": "1",
+      "note": "consulta GPAI del AI Act abierta"
+    },
+    {
+      "label": "Oportunidades",
+      "value": "3",
+      "note": "servicios, gobierno y automatizacion"
+    }
+  ],
+  "executive_summary": [
+    "El corte nocturno no trae una ruptura nueva de modelos, pero si confirma una aceleracion clara en dos frentes: agentes con mas contexto y mas superficie de riesgo.",
+    "OpenAI y Google estan empujando capacidades de memoria, contexto y accion que mejoran la utilidad real del usuario, pero elevan la urgencia de gobernanza, consentimiento y separacion de permisos.",
+    "La señal mas accionable para MMarco Seguridad sigue estando en seguridad agentic, privacidad operativa y preparacion consultiva ante AI Act, mas que en perseguir benchmarks."
+  ],
+  "activity_evolution": [
+    {
+      "category": "Seguridad y riesgos",
+      "value": 88
+    },
+    {
+      "category": "Producto y despliegue",
+      "value": 74
+    },
+    {
+      "category": "Regulacion",
+      "value": 63
+    },
+    {
+      "category": "Repos y tooling",
+      "value": 31
+    }
+  ],
+  "global_view": [
+    {
+      "region": "EE. UU.",
+      "signal": "OpenAI, Anthropic y GTIG concentran la señal de impacto inmediato."
+    },
+    {
+      "region": "Europa",
+      "signal": "La ventana regulatoria del AI Act mantiene prioridad ejecutiva."
+    },
+    {
+      "region": "Movil y edge",
+      "signal": "Google empuja IA en dispositivo con patron de accion confirmada."
+    }
+  ],
+  "trends": [
+    "La competencia se desplaza de chatbot a agente ejecutable con memoria, navegador y permisos reales.",
+    "Las barreras de seguridad ya no son accesorias: identidad, aprobacion y trazabilidad pasan a ser la propuesta de valor.",
+    "La regulacion europea se vuelve un argumento comercial para consultoria y paquetes de cumplimiento ligero."
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "title": "Oferta express de hardening para copilots y agentes internos",
+      "why": "Las novedades de memoria y accion elevan la demanda de controles, segregacion y auditoria."
+    },
+    {
+      "priority": "Alta",
+      "title": "Paquete AI Act GPAI readiness para pymes tecnicas",
+      "why": "La consulta europea abre una ventana util para posicionarse como socio de preparacion."
+    },
+    {
+      "priority": "Media",
+      "title": "Pilotos de automatizacion movil y web con confirmacion humana",
+      "why": "Google marca un patron reusable para asistentes empresariales con menor riesgo operativo."
+    }
+  ],
+  "alerts": [
+    {
+      "level": "Critica",
+      "title": "No desplegar agentes con memoria y herramientas sin politica de retencion y aprobacion"
+    },
+    {
+      "level": "Alta",
+      "title": "Mantener vigilancia activa sobre abuso ofensivo de IA en phishing y soporte a intrusiones"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Inventariar donde existen memoria persistente, historico de chat y conectores con permisos reales antes de ampliar uso interno."
+    },
+    {
+      "priority": "Alta",
+      "text": "Definir patron minimo de agente seguro: identidad separada, confirmacion de acciones sensibles, logging y rollback operativo."
+    },
+    {
+      "priority": "Alta",
+      "text": "Preparar briefing comercial AI Act para clientes pyme con enfoque en transparencia, terceros y datos."
+    },
+    {
+      "priority": "Media",
+      "text": "Probar flujos de asistencia movil o web solo en escenarios cerrados con supervision humana y datasets no sensibles."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "1 junio 2026",
+      "item": "OpenAI activa Advanced Account Security para TAC."
+    },
+    {
+      "date": "3 junio 2026",
+      "item": "Cierre de consulta publica de la Comision Europea sobre GPAI y AI Act."
+    },
+    {
+      "date": "Junio 2026",
+      "item": "Despliegue progresivo de Chrome AI en Android segun Google."
+    }
+  ],
+  "cards": {
+    "featured_news": [
+      {
+        "name": "OpenAI endurece memoria y contexto sensible en ChatGPT",
+        "source": "OpenAI",
+        "date": "14-16 mayo 2026",
+        "category": "Seguridad de producto",
+        "impact": "Alta",
+        "utility_or_risk": "Mejora UX y continuidad, pero eleva la exigencia de gobierno de datos, retencion y consentimiento.",
+        "quick_reco": "Revisar politicas internas antes de habilitar memoria persistente en equipos con datos sensibles.",
+        "status": "Hecho confirmado",
+        "url": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/"
+      },
+      {
+        "name": "Google lleva Gemini Intelligence y Chrome AI a Android",
+        "source": "Google",
+        "date": "12-13 mayo 2026",
+        "category": "Plataforma / agente en dispositivo",
+        "impact": "Alta",
+        "utility_or_risk": "Sube el liston de IA proactiva local con ejecucion web y acciones sensibles confirmadas.",
+        "quick_reco": "Vigilar el patron de consentimiento activo como referencia para agentes corporativos.",
+        "status": "Hecho confirmado",
+        "url": "https://blog.google/products/android/gemini-intelligence-android/"
+      },
+      {
+        "name": "PwC amplia su colaboracion con Anthropic",
+        "source": "Anthropic",
+        "date": "14 mayo 2026",
+        "category": "Enterprise AI",
+        "impact": "Media-Alta",
+        "utility_or_risk": "Confirma que el valor inmediato sigue moviendose hacia despliegue sectorial y servicios gestionados.",
+        "quick_reco": "Acelerar ofertas consultivas empaquetadas para pymes reguladas.",
+        "status": "Hecho confirmado",
+        "url": "https://www.anthropic.com/news/pwc-expands-collaboration-with-anthropic"
+      },
+      {
+        "name": "La Comision Europea abre consulta del AI Act para modelos GPAI",
+        "source": "Comision Europea",
+        "date": "8 mayo 2026",
+        "category": "Regulacion",
+        "impact": "Alta",
+        "utility_or_risk": "Abre una ventana tactica para adaptar documentacion, transparencia y posicionamiento comercial.",
+        "quick_reco": "Preparar checklist comercial y tecnico alineado con transparencia, evaluacion y cadena de valor.",
+        "status": "Hecho confirmado",
+        "url": "https://digital-strategy.ec.europa.eu/en/news/commission-launches-consultation-rules-general-purpose-ai-models-under-ai-act"
+      }
+    ],
+    "incidents": [
+      {
+        "name": "Sin caida critica nueva confirmada en los proveedores revisados durante este corte",
+        "source": "OpenAI Status y vigilancia oficial",
+        "date": "Corte hasta 18 mayo 2026 00:14 CEST",
+        "severity": "Baja",
+        "impact": "No aparece una interrupcion mayor nueva que cambie la lectura ejecutiva nocturna.",
+        "mitigation": "Mantener watch sobre status pages y dependencias aguas abajo.",
+        "priority": "Media",
+        "status": "Hecho confirmado",
+        "url": "https://status.openai.com/"
+      },
+      {
+        "name": "Uso ofensivo de IA generativa por actores maliciosos sigue en aumento",
+        "source": "Google Threat Intelligence Group",
+        "date": "7 mayo 2026",
+        "severity": "Alta",
+        "impact": "El uso principal sigue concentrado en phishing, apoyo a intrusiones, ingenieria social y productividad del atacante.",
+        "mitigation": "Endurecer verificaciones humanas, identidad fuerte y filtros de contenido en flujos automatizados.",
+        "priority": "Alta",
+        "status": "Hecho confirmado",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai"
+      }
+    ],
+    "vulnerabilities": [
+      {
+        "name": "Riesgo persistente en agentes con memoria, navegacion y herramientas conectadas",
+        "product": "Ecosistema agentic multimodelo",
+        "severity": "Alta",
+        "exploitation": "Riesgo estructural, no CVE nuevo consolidado en este corte",
+        "impact": "Prompt injection, leakage y ejecucion no deseada siguen siendo la superficie dominante.",
+        "mitigation": "Separar permisos, confirmar acciones sensibles y registrar cada salto de contexto.",
+        "priority": "Critica",
+        "status": "Interpretacion ejecutiva sobre hechos confirmados"
+      },
+      {
+        "name": "Memoria persistente y contexto acumulado aumentan la sensibilidad de gobernanza",
+        "product": "Chatbots y copilots empresariales",
+        "severity": "Media-Alta",
+        "exploitation": "Sin explotacion puntual confirmada en este corte",
+        "impact": "Mayor riesgo de mezcla de datos, retencion opaca y exposicion accidental.",
+        "mitigation": "Politica de retencion, opt-in claro, segmentacion por perfil y auditoria.",
+        "priority": "Alta",
+        "status": "Recomendacion derivada de cambios confirmados"
+      }
+    ],
+    "models": [
+      {
+        "name": "Gemini Intelligence",
+        "company": "Google",
+        "type": "IA multimodal en dispositivo",
+        "capabilities": "Contexto personal, acciones proactivas, asistencia multimodal",
+        "multimodal": "Si",
+        "context": "No detallado en la fuente abierta revisada",
+        "license": "Propietaria",
+        "use_cases": "Asistencia personal, continuidad multiapp, automatizacion contextual",
+        "estimated_impact": "Alta en experiencia de usuario y en patrones de agente local"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Chrome AI en Android",
+        "source": "Google",
+        "language": "No aplica",
+        "description": "Capacidades de IA en navegador con confirmacion para acciones sensibles.",
+        "use_cases": "Asistencia web, resumen, navegacion asistida",
+        "utility": "Alta",
+        "risks": "Governance de acciones y trazabilidad",
+        "url": "https://blog.google/products-and-platforms/products/chrome/bringing-chrome-ai-to-android/"
+      }
+    ],
+    "repositories": [
+      {
+        "name": "Sin repositorio dominante nuevo confirmado en este corte nocturno",
+        "source": "Datos limitados",
+        "language": "No disponible",
+        "description": "No aparecio una novedad de repositorio con suficiente señal y trazabilidad para destacarla esta noche.",
+        "use_cases": "Seguimiento en siguiente corte",
+        "utility": "Media",
+        "risks": "Evitar sobre-reaccion a tendencias sin confirmar"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "label": "OpenAI - ChatGPT can now recognize and adapt to context from your life",
+      "url": "https://openai.com/index/chatgpt-can-now-recognize-and-adapt-to-context-from-your-life/",
+      "type": "official"
+    },
+    {
+      "label": "OpenAI - ChatGPT can now remember and reference all your past chats",
+      "url": "https://openai.com/index/introducing-chatgpt-memory/",
+      "type": "official"
+    },
+    {
+      "label": "OpenAI - Recognize context in sensitive conversations",
+      "url": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/",
+      "type": "official"
+    },
+    {
+      "label": "OpenAI - Safety and Security Committee update",
+      "url": "https://openai.com/index/safety-security-committee-update/",
+      "type": "official"
+    },
+    {
+      "label": "Google - Gemini Intelligence comes to Android",
+      "url": "https://blog.google/products/android/gemini-intelligence-android/",
+      "type": "official"
+    },
+    {
+      "label": "Google - Bringing Chrome AI to Android",
+      "url": "https://blog.google/products-and-platforms/products/chrome/bringing-chrome-ai-to-android/",
+      "type": "official"
+    },
+    {
+      "label": "Anthropic - PwC expands collaboration with Anthropic",
+      "url": "https://www.anthropic.com/news/pwc-expands-collaboration-with-anthropic",
+      "type": "official"
+    },
+    {
+      "label": "European Commission - AI Act consultation on GPAI guidelines",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-launches-consultation-rules-general-purpose-ai-models-under-ai-act",
+      "type": "official"
+    },
+    {
+      "label": "Google Threat Intelligence Group - Adversarial misuse of generative AI",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai",
+      "type": "official"
+    },
+    {
+      "label": "OpenAI Status",
+      "url": "https://status.openai.com/",
+      "type": "official"
+    }
+  ],
+  "limitations": [
+    "No se confirma en este corte nocturno un incidente critico nuevo de servicio en los proveedores oficiales revisados.",
+    "No aparece un repositorio nuevo con trazabilidad suficiente para destacarlo sin ruido."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
