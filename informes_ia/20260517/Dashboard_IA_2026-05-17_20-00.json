@@ -1,0 +1,461 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "generated_at": "2026-05-17 20:06:40 CEST",
+    "timezone": "Europe/Madrid",
+    "impact_level": "ALTO",
+    "ecosystem_status": "Activo, con presion en seguridad agentic, despliegue enterprise y transparencia regulatoria",
+    "next_update": "2026-05-18 08:00 CEST",
+    "focus": "Alertas activas, movimientos estrategicos, regulacion y recomendaciones ejecutivas"
+  },
+  "kpis": [
+    {
+      "label": "Alertas activas",
+      "value": "4",
+      "caption": "riesgos o cambios con accion inmediata"
+    },
+    {
+      "label": "Movimientos estrategicos",
+      "value": "7",
+      "caption": "anuncios con impacto competitivo o comercial"
+    },
+    {
+      "label": "Frentes regulatorios",
+      "value": "2",
+      "caption": "hitos UE con efecto de cumplimiento"
+    },
+    {
+      "label": "Acciones ejecutivas",
+      "value": "5",
+      "caption": "prioridades recomendadas para esta semana"
+    }
+  ],
+  "executive_summary": [
+    "El cierre de las 20:00 del 17 de mayo de 2026 confirma que la ventaja competitiva se esta desplazando desde el modelo aislado hacia la capacidad de desplegar agentes con control, auditoria y permisos bien gobernados.",
+    "La senal de riesgo mas accionable sigue en seguridad de frameworks, SDKs y toolchains: Mistral mantiene un advisory por supply chain, Microsoft documenta vulnerabilidades que convierten prompt injection en RCE dentro de agentes Semantic Kernel y OpenAI sigue empujando endurecimiento de identidad, sandbox y telemetria para coding agents.",
+    "En paralelo, los movimientos estrategicos mas relevantes del bloque llegan por OpenAI Deployment Company, Claude for Small Business, la expansion enterprise de Anthropic con PwC y la aceleracion del stack agentic de Google y xAI. La lectura ejecutiva es clara: el mercado ya compite por integracion, gobernanza y adopcion operativa, no solo por benchmark.",
+    "En regulacion, Europa sigue siendo el frente que mas puede cambiar prioridades de producto y compliance a corto plazo. La consulta de directrices del Articulo 50 del AI Act sigue abierta hasta el 3 de junio de 2026 y el acuerdo provisional Consejo-Parlamento del 7 de mayo mueve plazos y reglas de transparencia que conviene seguir de cerca."
+  ],
+  "activity_evolution": [
+    {
+      "date": "2026-05-04",
+      "title": "Google",
+      "detail": "Gemini API Webhooks reduce polling y facilitan jobs agentic largos."
+    },
+    {
+      "date": "2026-05-05",
+      "title": "Google",
+      "detail": "File Search multimodal anade metadata y citas por pagina para RAG verificable."
+    },
+    {
+      "date": "2026-05-07",
+      "title": "Microsoft / OpenAI / UE",
+      "detail": "Microsoft publica RCE en Semantic Kernel; OpenAI amplia Trusted Access for Cyber; Consejo y Parlamento pactan simplificacion del AI Act."
+    },
+    {
+      "date": "2026-05-08",
+      "title": "OpenAI / UE",
+      "detail": "OpenAI detalla controles y telemetria de Codex; la Comision abre consulta sobre Articulo 50."
+    },
+    {
+      "date": "2026-05-11/15",
+      "title": "OpenAI / Mistral / xAI",
+      "detail": "OpenAI lanza Deployment Company; Mistral confirma advisory MAI-2026-002; xAI ejecuta retirement con redireccion a grok-4.3."
+    },
+    {
+      "date": "2026-05-13/14",
+      "title": "Anthropic / xAI",
+      "detail": "Claude for Small Business, expansion con PwC y alianza de 200M con Gates; xAI abre beta temprana de Grok Build."
+    }
+  ],
+  "global_view": [
+    {
+      "zone": "EE. UU. frontier labs",
+      "status": "Muy activa",
+      "signal": "OpenAI, Anthropic y xAI se mueven en despliegue enterprise, coding agents y seguridad aplicada."
+    },
+    {
+      "zone": "Europa regulatoria",
+      "status": "En aceleracion",
+      "signal": "La consulta del Articulo 50 y el acuerdo provisional sobre simplificacion del AI Act elevan presion de compliance antes de agosto y diciembre."
+    },
+    {
+      "zone": "Infraestructura y developer stack",
+      "status": "Alta intensidad",
+      "signal": "Google prioriza RAG verificable y webhooks; Microsoft enfatiza hardening de agentes; Mistral y OpenAI ponen el foco en supply chain y control operativo."
+    }
+  ],
+  "featured_news": [
+    {
+      "name": "OpenAI Deployment Company",
+      "source": "OpenAI",
+      "date": "2026-05-11",
+      "category": "Movimiento estrategico",
+      "impact": "Alto",
+      "type": "Hecho confirmado",
+      "summary": "OpenAI formaliza un modelo de despliegue con Forward Deployed Engineers para conectar modelos, datos, controles y procesos de clientes en produccion.",
+      "quick_take": "Sube la competencia desde el chat hacia servicios de transformacion y delivery enterprise.",
+      "url": "https://openai.com/index/openai-launches-the-deployment-company/"
+    },
+    {
+      "name": "Claude for Small Business",
+      "source": "Anthropic",
+      "date": "2026-05-13",
+      "category": "Producto / SMB",
+      "impact": "Alto",
+      "type": "Hecho confirmado",
+      "summary": "Anthropic empaqueta conectores y 15 workflows listos sobre QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace y Microsoft 365.",
+      "quick_take": "Muy relevante para pymes y consultoria de automatizacion con aprobacion humana antes de enviar, publicar o pagar.",
+      "url": "https://www.anthropic.com/news/claude-for-small-business?hsLang=en"
+    },
+    {
+      "name": "Grok Build Early Beta",
+      "source": "xAI",
+      "date": "2026-05-14",
+      "category": "Coding agent",
+      "impact": "Medio-Alto",
+      "type": "Hecho confirmado",
+      "summary": "xAI lanza un coding agent CLI para suscriptores SuperGrok Heavy con plan, aprobacion y diffs visibles.",
+      "quick_take": "La guerra de agentes de terminal se acelera y la presion competitiva sobre equipos de desarrollo sube.",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "name": "PwC expande despliegue de Claude",
+      "source": "Anthropic",
+      "date": "2026-05-14",
+      "category": "Enterprise",
+      "impact": "Alto",
+      "type": "Hecho confirmado",
+      "summary": "Anthropic y PwC extienden el uso de Claude para construir tecnologia, operaciones financieras y workflows en sectores regulados.",
+      "quick_take": "Confirma que el mercado se mueve de pilotos a reinvencion de funciones con foco en auditabilidad y escala.",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership?via=toools"
+    }
+  ],
+  "recent_models": [
+    {
+      "name": "GPT-5.5-Cyber",
+      "company": "OpenAI",
+      "type": "Modelo especializado",
+      "capabilities": "Defensa, analisis de malware, reversing, patch validation, deteccion",
+      "multimodal": "No detallado en la pieza",
+      "context": "sin senal fiable",
+      "license": "Acceso limitado por Trusted Access for Cyber",
+      "use_cases": "SOC, AppSec, validacion de parches, triage tecnico",
+      "estimated_impact": "Muy alto para ciberdefensa con controles de identidad reforzados",
+      "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "name": "grok-4.3",
+      "company": "xAI",
+      "type": "Modelo general / replacement target",
+      "capabilities": "Razonamiento y coding con diferentes reasoning efforts",
+      "multimodal": "sin senal fiable",
+      "context": "sin senal fiable",
+      "license": "Propietario",
+      "use_cases": "Migracion de workloads retirados y reemplazo de grok-code-fast-1",
+      "estimated_impact": "Alto por el efecto combinado de migracion y pricing",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    }
+  ],
+  "standout_tools": [
+    {
+      "name": "Gemini API File Search",
+      "source": "Google DeepMind",
+      "date": "2026-05-05",
+      "category": "RAG / grounding",
+      "impact": "Alto",
+      "utility": "Permite RAG multimodal con metadata personalizada y citas por pagina.",
+      "risk": "Reduce riesgo de respuestas no trazables, pero exige gobernanza de contenidos y permisos.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/"
+    },
+    {
+      "name": "Gemini API Webhooks",
+      "source": "Google",
+      "date": "2026-05-04",
+      "category": "Agentic infrastructure",
+      "impact": "Medio-Alto",
+      "utility": "Evita polling ineficiente en trabajos largos y mejora orquestacion event-driven.",
+      "risk": "Requiere validacion de callbacks y diseno cuidadoso del plano de eventos.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/"
+    },
+    {
+      "name": "Claude for Small Business workflows",
+      "source": "Anthropic",
+      "date": "2026-05-13",
+      "category": "Automatizacion pyme",
+      "impact": "Alto",
+      "utility": "Workflows listos para payroll, cierres, cobros, ventas y marketing con aprobacion humana.",
+      "risk": "El valor depende del gobierno de conectores y permisos de cada herramienta.",
+      "url": "https://www.anthropic.com/news/claude-for-small-business?hsLang=en"
+    },
+    {
+      "name": "Grok Build",
+      "source": "xAI",
+      "date": "2026-05-14",
+      "category": "Developer tool",
+      "impact": "Medio-Alto",
+      "utility": "Agente de terminal con plan, review y aprobacion visible para trabajo complejo.",
+      "risk": "Aun en beta temprana; conviene evaluarlo solo en entornos controlados.",
+      "url": "https://x.ai/news/grok-build-cli"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Semantic Kernel",
+      "source": "Microsoft",
+      "stars": "27k+",
+      "language": "Multi-language",
+      "description": "Framework open source para construir agentes e integrar modelos con plugins y workflows.",
+      "use_cases": "Orquestacion de agentes, tool use, enterprise workflows",
+      "utility": "Alta, pero exige parcheo y hardening inmediato si se usa en produccion.",
+      "warning": "La pieza de Microsoft lo usa como caso de estudio de dos vulnerabilidades criticas en mayo de 2026.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "MAI-2026-002 - TanStack supply chain attack affecting Mistral SDK packages",
+      "product": "Mistral SDKs npm y PyPI",
+      "severity": "Alta",
+      "exploitation": "Compromiso confirmado en ventana limitada; estado mitigado",
+      "impact": "Riesgo de ejecucion de codigo en Linux al importar `mistralai==2.4.6`; paquetes npm y PyPI afectados",
+      "mitigation": "Buscar versiones afectadas en lockfiles, caches y artefactos; revisar IoCs y conexiones a 83.142.209.194; rotar secretos si hubo exposicion",
+      "priority": "Critica",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "name": "Axios developer tool compromise response",
+      "product": "OpenAI macOS app signing chain",
+      "severity": "Alta",
+      "exploitation": "Riesgo residual condicionado a apps antiguas; OpenAI revoco certificados",
+      "impact": "Posible firma aparente de software malicioso si un actor hubiese comprometido el material de firma",
+      "mitigation": "Verificar que no queden instalaciones antiguas de ChatGPT Desktop, Codex, codex-cli o Atlas firmadas con el certificado previo",
+      "priority": "Alta",
+      "url": "https://openai.com/index/axios-developer-tool-compromise/"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "identifier": "CVE-2026-26030",
+      "product": "Microsoft Semantic Kernel",
+      "severity": "Critica",
+      "state": "Parcheada; explotacion posible si confluyen plugin y vector de prompt injection",
+      "impact": "Convierte input controlado por atacante en RCE sobre el host cuando se usa In-Memory Vector Store con configuracion por defecto",
+      "mitigation": "Actualizar a versiones corregidas, revisar agentes con Search Plugin y tratar parametros influenciables por el modelo como input hostil",
+      "priority": "Critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "identifier": "CVE-2026-25592",
+      "product": "Microsoft Semantic Kernel .NET",
+      "severity": "Critica",
+      "state": "Parcheada",
+      "impact": "Arbitrary file write desde SessionsPythonPlugin, con potencial de escape de sandbox y RCE",
+      "mitigation": "Actualizar versiones .NET afectadas, limitar rutas y revisar telemetria de ejecucion",
+      "priority": "Critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    }
+  ],
+  "trends_and_radar": [
+    {
+      "label": "Gobierno del agente por encima del benchmark",
+      "status": "Confirmado",
+      "detail": "OpenAI, Microsoft y Anthropic estan priorizando sandboxing, identidad resistente a phishing, aprobaciones y telemetria nativa."
+    },
+    {
+      "label": "Agentic AI entra en SMB y funciones core",
+      "status": "Confirmado",
+      "detail": "Claude for Small Business y la expansion de PwC muestran que el mercado quiere IA embebida en payroll, cierre financiero, marketing y operaciones."
+    },
+    {
+      "label": "RAG verificable pasa a primera linea",
+      "status": "Confirmado",
+      "detail": "Google refuerza grounding con citas por pagina, metadata y multimodalidad para reducir respuestas opacas."
+    },
+    {
+      "label": "Riesgo economico por migraciones silenciosas",
+      "status": "Confirmado",
+      "detail": "La redireccion automatica de slugs retirados en xAI evita rotura operativa, pero puede introducir deriva de coste y comportamiento."
+    }
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "title": "Pack de auditoria para agentes y conectores",
+      "detail": "Convertir las alertas de Semantic Kernel, Codex y Mistral en una oferta de revision express de permisos, secretos, sandboxes, tool policies y logs."
+    },
+    {
+      "priority": "Alta",
+      "title": "Vertical de automatizacion segura para pymes",
+      "detail": "Aprovechar el marco de Claude for Small Business para vender implantaciones con aprobacion humana, cierre financiero, cobro y marketing sobre stacks ya existentes."
+    },
+    {
+      "priority": "Media-Alta",
+      "title": "Servicios de RAG trazable y compliance-friendly",
+      "detail": "File Search multimodal con citas por pagina abre una oferta mas defensable para knowledge bases, dossiers tecnicos y entornos regulados."
+    },
+    {
+      "priority": "Media",
+      "title": "Monitor de coste y drift por retirement de modelos",
+      "detail": "El caso xAI justifica un servicio de observabilidad para detectar slugs obsoletos, redirecciones y cambios de pricing en proveedores frontier."
+    }
+  ],
+  "active_alerts": [
+    {
+      "level": "Critica",
+      "title": "Supply chain en SDKs Mistral",
+      "status": "Mitigado por el proveedor; pendiente validacion interna",
+      "action": "Comprobar `mistralai==2.4.6`, paquetes npm afectados, caches y artefactos Linux; revisar IoCs y rotar credenciales si hubo importacion."
+    },
+    {
+      "level": "Critica",
+      "title": "Prompt-to-RCE en Semantic Kernel",
+      "status": "Exposicion depende de version y plugins",
+      "action": "Actualizar inmediatamente y revisar agentes con Search Plugin o SessionsPythonPlugin; buscar child processes y conexiones sospechosas."
+    },
+    {
+      "level": "Alta",
+      "title": "OpenAI macOS certificate rollover",
+      "status": "Plazo oficial ya superado; riesgo residual por equipos no actualizados",
+      "action": "Inventariar equipos con ChatGPT Desktop, Codex, codex-cli y Atlas; forzar actualizacion a versiones firmadas con certificado nuevo."
+    },
+    {
+      "level": "Alta",
+      "title": "xAI model retirement con impacto en coste",
+      "status": "Activo desde el 15 de mayo de 2026 a las 12:00 PM PT",
+      "action": "Revisar integraciones que sigan en slugs retirados y fijar replacements explicitos para evitar drift funcional o de precio."
+    }
+  ],
+  "executive_recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Lanzar un barrido de exposicion agentic esta semana",
+      "detail": "Inventariar frameworks, SDKs, MCPs, plugins, secretos y sandboxes en todos los proyectos IA activos o de cliente."
+    },
+    {
+      "priority": "Alta",
+      "title": "Normalizar aprobacion humana y permisos minimos",
+      "detail": "Tomar como baseline operativo las piezas de OpenAI y Anthropic: aprobacion explicita para acciones de riesgo, identidad fuerte y telemetria trazable."
+    },
+    {
+      "priority": "Alta",
+      "title": "Abrir una linea comercial de IA segura para pyme",
+      "detail": "Posicionar a MMarco Seguridad con implantaciones de workflows aprobados y trazables sobre QuickBooks, HubSpot, Google Workspace y Microsoft 365."
+    },
+    {
+      "priority": "Media",
+      "title": "Preparar respuesta de compliance sobre Articulo 50",
+      "detail": "Traducir la consulta UE en checklist de synthetic content, disclosure y trazabilidad para clientes antes del 3 de junio de 2026."
+    },
+    {
+      "priority": "Media",
+      "title": "Vigilar Google I/O y Anthropic Security",
+      "detail": "Reservar seguimiento reforzado para Google I/O del 19-20 de mayo y para la sesion Claude Security del 19 de mayo por posible arrastre de novedades agentic y AppSec."
+    }
+  ],
+  "events_calendar": [
+    {
+      "date": "2026-05-19 10:00 PT",
+      "event": "Google I/O 2026 arranca",
+      "relevance": "Muy alta",
+      "note": "Esperables anuncios en AI, Gemini, Chrome, Cloud y agentic coding.",
+      "url": "https://developers.googleblog.com/get-ready-for-google-io-2026/"
+    },
+    {
+      "date": "2026-05-19 10:00 PT",
+      "event": "Anthropic webinar - Claude Security: Putting Claude to Work for Defenders",
+      "relevance": "Alta",
+      "note": "Interesante para AppSec y pipeline scan-to-fix.",
+      "url": "https://www.anthropic.com/webinars/claude-security-putting-claude-to-work-for-defenders"
+    },
+    {
+      "date": "2026-05-22 10:00 PT",
+      "event": "Anthropic webinar - Claude Code and Public Service",
+      "relevance": "Media-Alta",
+      "note": "Se centra en legacy modernization y uso de coding agents en sector publico.",
+      "url": "https://www.anthropic.com/webinars/claude-code-and-public-service-modernizing-how-state-and-local-governments-build-software"
+    },
+    {
+      "date": "2026-06-01",
+      "event": "OpenAI exige Advanced Account Security a miembros individuales con Trusted Access for Cyber",
+      "relevance": "Alta",
+      "note": "Hito de identidad y seguridad para acceso a capacidades cyber mas permisivas.",
+      "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "date": "2026-06-03",
+      "event": "Cierre de la consulta UE sobre directrices del Articulo 50",
+      "relevance": "Alta",
+      "note": "Punto clave para proveedores y deployers de contenido sintetico y sistemas que interactuan con personas.",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI Deployment Company",
+      "url": "https://openai.com/index/openai-launches-the-deployment-company/"
+    },
+    {
+      "label": "OpenAI Trusted Access for Cyber",
+      "url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "label": "OpenAI Axios compromise response",
+      "url": "https://openai.com/index/axios-developer-tool-compromise/"
+    },
+    {
+      "label": "Running Codex safely at OpenAI",
+      "url": "https://openai.com/index/running-codex-safely/"
+    },
+    {
+      "label": "Gemini API File Search multimodal",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/"
+    },
+    {
+      "label": "Gemini API Webhooks",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/"
+    },
+    {
+      "label": "Google I/O 2026",
+      "url": "https://developers.googleblog.com/get-ready-for-google-io-2026/"
+    },
+    {
+      "label": "Claude for Small Business",
+      "url": "https://www.anthropic.com/news/claude-for-small-business?hsLang=en"
+    },
+    {
+      "label": "Anthropic x Gates Foundation",
+      "url": "https://www.anthropic.com/news/gates-foundation-partnership?_bhlid=aae806232c8b6eae617a8584d8d9033ec2bc8f78"
+    },
+    {
+      "label": "PwC expands with Claude",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership?via=toools"
+    },
+    {
+      "label": "Grok Build",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "label": "xAI model retirement",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "label": "Mistral security advisories",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "label": "Microsoft Security Blog - Semantic Kernel RCE",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "label": "EU AI Act Article 50 consultation",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "label": "Council and Parliament simplify AI rules",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/pdf/"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
