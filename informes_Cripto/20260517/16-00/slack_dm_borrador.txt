@@ -1,7 +1,0 @@
-MMarco Seguridad,
-
-Informe cripto 2026-05-17 16:27 CEST listo.
-PDF: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260517/16-00/dashboard.pdf
-HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260517/16-00/dashboard.html
-
-Estado: Consolidacion constructiva bajo liderazgo de BTC
