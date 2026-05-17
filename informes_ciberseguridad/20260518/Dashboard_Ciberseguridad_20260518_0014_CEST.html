@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | MMarco Seguridad | 2026-05-18 00:14 CEST</title>
+  <style>
+    :root {
+      --bg: #071018;
+      --bg-soft: #0c1824;
+      --panel: #102131;
+      --panel-2: #13283b;
+      --line: rgba(177, 211, 236, 0.18);
+      --text: #edf6ff;
+      --muted: #9ab3c7;
+      --accent: #4fd1c5;
+      --accent-2: #7dd3fc;
+      --danger: #ff6b6b;
+      --warn: #f7b955;
+      --ok: #49d17d;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(79, 209, 197, 0.16), transparent 24%),
+        radial-gradient(circle at top left, rgba(125, 211, 252, 0.12), transparent 20%),
+        linear-gradient(180deg, #050b11 0%, #071018 38%, #08111a 100%);
+    }
+
+    .shell {
+      width: min(1280px, calc(100% - 32px));
+      margin: 24px auto 48px;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(79, 209, 197, 0.16), rgba(125, 211, 252, 0.08)),
+        linear-gradient(180deg, rgba(16, 33, 49, 0.96), rgba(8, 17, 26, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .hero-top {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 20px;
+      padding: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(79, 209, 197, 0.24), rgba(125, 211, 252, 0.18));
+      border: 1px solid rgba(125, 211, 252, 0.28);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .signal-stack {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .signal {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(7, 16, 24, 0.52);
+      padding: 16px;
+    }
+
+    .signal-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .signal-value {
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .threat-high { color: var(--danger); }
+    .trend-up { color: var(--warn); }
+    .risk-high { color: var(--accent); }
+
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+      background: rgba(6, 14, 21, 0.55);
+    }
+
+    .strip-item {
+      padding: 16px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .strip-item:last-child { border-right: 0; }
+
+    .strip-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .strip-value {
+      font-size: 0.98rem;
+      line-height: 1.45;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(16, 33, 49, 0.98), rgba(10, 21, 31, 0.98));
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-8 { grid-column: span 8; }
+    .span-7 { grid-column: span 7; }
+    .span-6 { grid-column: span 6; }
+    .span-5 { grid-column: span 5; }
+    .span-4 { grid-column: span 4; }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+    }
+
+    .section-note {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .kpi {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(6, 14, 21, 0.52);
+    }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 8px;
+    }
+
+    .kpi .value {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .kpi .note {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .list li {
+      margin: 0 0 10px;
+      line-height: 1.55;
+    }
+
+    .alert {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      background: rgba(6, 14, 21, 0.52);
+      margin-bottom: 12px;
+    }
+
+    .alert:last-child { margin-bottom: 0; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .critica { color: #ffd2d2; background: rgba(255, 107, 107, 0.12); border-color: rgba(255, 107, 107, 0.24); }
+    .alta { color: #ffe3b5; background: rgba(247, 185, 85, 0.12); border-color: rgba(247, 185, 85, 0.24); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .risk-radar {
+      display: grid;
+      gap: 12px;
+    }
+
+    .risk-row {
+      display: grid;
+      grid-template-columns: 1.1fr 2fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .risk-label {
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .bar {
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    .delivery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .delivery-item {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: rgba(6, 14, 21, 0.52);
+    }
+
+    .status-ok { color: var(--ok); }
+    .status-pending { color: var(--warn); }
+    .status-no { color: var(--muted); }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      text-align: center;
+      padding: 22px 18px 6px;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-top,
+      .hero-strip,
+      .kpi-grid,
+      .delivery,
+      .risk-row {
+        grid-template-columns: 1fr;
+      }
+
+      .span-8, .span-7, .span-6, .span-5, .span-4 {
+        grid-column: span 12;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 20px, 1280px);
+        margin-top: 10px;
+      }
+
+      .hero-top,
+      .card {
+        padding: 18px;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead { display: none; }
+
+      tr {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      td {
+        padding: 6px 0;
+        border: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="brand">
+            <div class="brand-mark">MM</div>
+            <div>
+              <div class="eyebrow">MMarco Seguridad</div>
+              <div style="font-size:0.95rem;color:var(--muted);">Ciberseguridad, Blockchain, IA y Telecomunicaciones</div>
+            </div>
+          </div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p>
+            Edicion nocturna generada el 18/05/2026 a las 00:16 CEST. El riesgo sigue en nivel alto por la convergencia
+            de vulnerabilidades explotadas en Cisco, Exchange y Fortinet, junto con incidentes recientes que elevan el
+            riesgo de fraude y phishing para empresas espanolas.
+          </p>
+        </div>
+        <div class="signal-stack">
+          <div class="signal">
+            <div class="signal-label">Nivel Global de Amenaza</div>
+            <div class="signal-value threat-high">ALTA</div>
+          </div>
+          <div class="signal">
+            <div class="signal-label">Tendencia 24 horas</div>
+            <div class="signal-value trend-up">Presion sostenida</div>
+          </div>
+          <div class="signal">
+            <div class="signal-label">Estado IA de Riesgo</div>
+            <div class="signal-value risk-high">Elevado</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-strip">
+        <div class="strip-item">
+          <div class="strip-label">Fecha y hora</div>
+          <div class="strip-value">18/05/2026 00:14 CEST</div>
+        </div>
+        <div class="strip-item">
+          <div class="strip-label">Zona horaria</div>
+          <div class="strip-value">Europe/Madrid</div>
+        </div>
+        <div class="strip-item">
+          <div class="strip-label">Proxima actualizacion</div>
+          <div class="strip-value">18/05/2026 08:00 CEST</div>
+        </div>
+        <div class="strip-item">
+          <div class="strip-label">Foco operativo</div>
+          <div class="strip-value">Plano de gestion, correo y appliances expuestos</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card span-12">
+        <h2>KPIs principales</h2>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <div class="label">Alertas activas priorizadas</div>
+            <div class="value">4</div>
+            <div class="note">3 con explotacion confirmada o alerta oficial activa</div>
+          </div>
+          <div class="kpi">
+            <div class="label">CVEs prioritarias</div>
+            <div class="value">5</div>
+            <div class="note">Muestra ejecutiva de esta edicion</div>
+          </div>
+          <div class="kpi">
+            <div class="label">CVEs en KEV o explotacion oficial</div>
+            <div class="value">3</div>
+            <div class="note">Cisco, Exchange, Fortinet SSO</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Incidentes relevantes revisados</div>
+            <div class="value">4</div>
+            <div class="note">France Titres, Booking, Rituals y campana Teams</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Microsoft mayo 2026</div>
+            <div class="value">137</div>
+            <div class="note">14 criticas segun INCIBE</div>
+          </div>
+          <div class="kpi">
+            <div class="label">Paises mas afectados</div>
+            <div class="value">N/D</div>
+            <div class="note">Sin base global cerrada en la muestra oficial revisada</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-7">
+        <h2>Resumen ejecutivo</h2>
+        <p class="section-note">
+          El nivel global de amenaza se mantiene en <strong>ALTA</strong>. La lectura ejecutiva de esta noche es clara:
+          el riesgo inmediato se concentra en superficies de administracion, correo y seguridad perimetral, mientras que
+          los incidentes recientes en servicios digitales elevan la probabilidad de fraude y phishing contextualizado.
+        </p>
+        <ul class="list">
+          <li>Cisco SD-WAN <strong>CVE-2026-20182</strong> sigue siendo la prioridad tecnica numero uno por su impacto administrativo total y explotacion confirmada.</li>
+          <li>Microsoft Exchange <strong>CVE-2026-42897</strong> merece tratamiento urgente en entornos con OWA o correo hibrido accesible desde Internet.</li>
+          <li>Fortinet mantiene una exposicion delicada para pymes espanolas por <strong>CVE-2026-24858</strong> y por nuevas CVEs criticas en autenticacion.</li>
+          <li>Booking, Rituals y el incidente en identidad digital francesa aumentan la base de datos util para suplantacion, fraude y phishing de alta credibilidad.</li>
+          <li>La recomendacion principal es combinar parcheo acelerado con reduccion de exposicion, hunting en logs y aviso preventivo a usuarios.</li>
+        </ul>
+      </article>
+
+      <article class="card span-5">
+        <h2>Radar de riesgo</h2>
+        <div class="risk-radar">
+          <div class="risk-row">
+            <div class="risk-label">Cisco SD-WAN expuesto</div>
+            <div class="bar"><div class="fill" style="width:96%"></div></div>
+          </div>
+          <div class="risk-row">
+            <div class="risk-label">Exchange / OWA expuesto</div>
+            <div class="bar"><div class="fill" style="width:88%"></div></div>
+          </div>
+          <div class="risk-row">
+            <div class="risk-label">Fortinet con SSO habilitado</div>
+            <div class="bar"><div class="fill" style="width:90%"></div></div>
+          </div>
+          <div class="risk-row">
+            <div class="risk-label">Phishing contextualizado</div>
+            <div class="bar"><div class="fill" style="width:82%"></div></div>
+          </div>
+          <div class="risk-row">
+            <div class="risk-label">Soporte remoto y Teams</div>
+            <div class="bar"><div class="fill" style="width:76%"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <h2>Alertas activas</h2>
+        <div class="alert">
+          <div class="badge critica">Critica | Hecho confirmado</div>
+          <strong>Cisco Catalyst SD-WAN Controller / Manager</strong>
+          <p class="section-note">CVE-2026-20182 con CVSS 10.0, explotacion confirmada y referencia en CISA KEV. Riesgo de control del plano de gestion.</p>
+        </div>
+        <div class="alert">
+          <div class="badge critica">Critica | Hecho confirmado</div>
+          <strong>Microsoft Exchange Server</strong>
+          <p class="section-note">CVE-2026-42897 con presencia en CISA KEV desde el 15/05/2026. Prioridad alta para OWA y correo corporativo expuesto.</p>
+        </div>
+        <div class="alert">
+          <div class="badge critica">Critica | Hecho confirmado</div>
+          <strong>Fortinet FortiCloud SSO</strong>
+          <p class="section-note">CCN-CERT mantiene alerta por explotacion activa de CVE-2026-24858 con impacto directo sobre appliances de terceros.</p>
+        </div>
+        <div class="alert">
+          <div class="badge alta">Alta | Hecho confirmado</div>
+          <strong>Campana de suplantacion con Microsoft Teams</strong>
+          <p class="section-note">INCIBE describe un patron que combina email bombing, Teams y Quick Assist para acceso remoto inicial en empresas.</p>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <h2>Riesgos prioritarios para empresas espanolas</h2>
+        <ul class="list">
+          <li>Pymes con appliances Fortinet accesibles desde Internet o con FortiCloud SSO habilitado sin validacion reciente.</li>
+          <li>Empresas con OWA o Exchange expuesto y telemetria insuficiente para detectar abuso web o suplantacion.</li>
+          <li>Redes distribuidas con Cisco SD-WAN cuyo plano de gestion no esta separado del acceso operativo ordinario.</li>
+          <li>Turismo, retail y atencion al cliente con mayor riesgo de phishing aprovechando incidentes de Booking y Rituals.</li>
+          <li>Equipos de soporte interno que aceptan accesos urgentes por Teams o asistencia remota sin doble validacion.</li>
+        </ul>
+      </article>
+
+      <article class="card span-12">
+        <h2>Vulnerabilidades criticas priorizadas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th>
+              <th>Producto</th>
+              <th>CVSS</th>
+              <th>Severidad</th>
+              <th>Explotacion</th>
+              <th>Parche</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>CVE-2026-20182</strong></td>
+              <td>Cisco Catalyst SD-WAN Controller / Manager</td>
+              <td>10.0</td>
+              <td>Critica</td>
+              <td>Confirmada, CISA KEV</td>
+              <td>Si</td>
+              <td>Inmediata</td>
+            </tr>
+            <tr>
+              <td><strong>CVE-2026-42897</strong></td>
+              <td>Microsoft Exchange Server</td>
+              <td>8.1 CNA / 6.1 NVD</td>
+              <td>Alta con explotacion</td>
+              <td>Confirmada, CISA KEV</td>
+              <td>Si</td>
+              <td>Inmediata</td>
+            </tr>
+            <tr>
+              <td><strong>CVE-2026-24858</strong></td>
+              <td>Fortinet varios productos con FortiCloud SSO</td>
+              <td>9.8</td>
+              <td>Critica</td>
+              <td>Confirmada por CCN-CERT</td>
+              <td>Si</td>
+              <td>Inmediata</td>
+            </tr>
+            <tr>
+              <td><strong>CVE-2026-44277</strong></td>
+              <td>FortiAuthenticator</td>
+              <td>9.8</td>
+              <td>Critica</td>
+              <td>No confirmada</td>
+              <td>Si</td>
+              <td>Alta</td>
+            </tr>
+            <tr>
+              <td><strong>CVE-2026-8043</strong></td>
+              <td>Ivanti Xtraction</td>
+              <td>9.6</td>
+              <td>Critica</td>
+              <td>No confirmada</td>
+              <td>Si</td>
+              <td>Alta</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card span-6">
+        <h2>Incidentes y actividad relevante</h2>
+        <ul class="list">
+          <li><strong>France Titres</strong>: hecho confirmado. Riesgo principal en fraude, usurpacion de identidad y campanas de phishing apoyadas en datos reales.</li>
+          <li><strong>Booking.com</strong>: hecho confirmado. Alto valor para estafas sobre reservas, pagos y comunicaciones de viaje.</li>
+          <li><strong>Rituals</strong>: hecho confirmado. Exposicion de datos personales con impacto reputacional y de suplantacion posterior.</li>
+          <li><strong>Campana Teams + Quick Assist</strong>: hecho confirmado por INCIBE. Relevante por su potencial de acceso inicial sin explotar vulnerabilidades tecnicas complejas.</li>
+        </ul>
+      </article>
+
+      <article class="card span-6">
+        <h2>Recomendaciones ejecutivas</h2>
+        <div class="alert">
+          <div class="badge critica">Critica</div>
+          <p class="section-note">Parchear y contener Cisco SD-WAN, Exchange y Fortinet antes de la apertura operativa. Revisar logs de autenticacion, cambios de configuracion y accesos administrativos.</p>
+        </div>
+        <div class="alert">
+          <div class="badge alta">Alta</div>
+          <p class="section-note">Inventariar versiones y exposicion real de activos criticos. Emitir aviso interno contra phishing contextualizado sobre reservas, identidad digital y falso soporte.</p>
+        </div>
+        <div class="alert">
+          <div class="badge alta">Media</div>
+          <p class="section-note">Ajustar SIEM y EDR para Quick Assist, email bombing, DNS tunneling y patrones de abuso de interfaces web administrativas.</p>
+        </div>
+      </article>
+
+      <article class="card span-8">
+        <h2>Seccion IA</h2>
+        <p class="section-note">
+          <strong>Analisis predictivo o estimativo.</strong> La probabilidad de aumento de ataques en las proximas 24 horas se considera
+          <strong>alta</strong>, especialmente sobre activos ya conocidos por CISA KEV, consolas expuestas y usuarios susceptibles a
+          mensajes de soporte falsos o fraudes derivados de incidentes recientes.
+        </p>
+        <ul class="list">
+          <li>Mayor uso oportunista de KEV recientes antes de que termine el ciclo de parcheo de fin de semana.</li>
+          <li>Incremento de phishing dirigido que reutilice contexto de Booking, Rituals o identidad digital.</li>
+          <li>Mas intentos de acceso sobre consolas de gestion y servicios administrativos web.</li>
+          <li>Sectores mas expuestos: redes distribuidas, correo hibrido, turismo, retail y sector publico.</li>
+        </ul>
+      </article>
+
+      <article class="card span-4">
+        <h2>Estado de entrega</h2>
+        <div class="delivery">
+          <div class="delivery-item">
+            <div class="strip-label">Informe generado</div>
+            <div class="strip-value status-ok">Completado</div>
+          </div>
+          <div class="delivery-item">
+            <div class="strip-label">Historico en GitHub</div>
+            <div class="strip-value status-pending">Pendiente de publicacion</div>
+          </div>
+          <div class="delivery-item">
+            <div class="strip-label">Correo HTML por Gmail</div>
+            <div class="strip-value status-pending">Pendiente de envio</div>
+          </div>
+          <div class="delivery-item">
+            <div class="strip-label">PDF</div>
+            <div class="strip-value status-no">No disponible</div>
+          </div>
+          <div class="delivery-item">
+            <div class="strip-label">Imagenes por pagina</div>
+            <div class="strip-value status-no">No disponibles</div>
+          </div>
+          <div class="delivery-item">
+            <div class="strip-label">Google Drive</div>
+            <div class="strip-value status-no">Omitido</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-12">
+        <h2>Fuentes clave</h2>
+        <ul class="list">
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20182">NVD - CVE-2026-20182</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42897">NVD - CVE-2026-42897</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24858">NVD - CVE-2026-24858</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-44277">NVD - CVE-2026-44277</a></li>
+          <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8043">NVD - CVE-2026-8043</a></li>
+          <li><a href="https://www.ccn-cert.cni.es/es/seguridad-al-dia/alertas-ccn-cert/13129-ccn-cert-al-01-26-explotacion-activa-de-vulnerabilidad-critica-en-forticloud-sso.html">CCN-CERT - explotacion activa en FortiCloud SSO</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026">INCIBE - actualizaciones de seguridad de Microsoft de mayo de 2026</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-ivanti-2">INCIBE - multiples vulnerabilidades en productos de Ivanti</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-en-la-agencia-nacional-de-identidad-digital-de">INCIBE - incidente en identidad digital francesa</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking">INCIBE - incidente de Booking</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/rituals-detecta-un-incidente-de-seguridad-que-afecta-la-base-de-datos-de">INCIBE - incidente en Rituals</a></li>
+          <li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/refuerzo-de-la-ciberseguridad-empresarial-frente-nuevas-campanas-de">INCIBE - campana de suplantacion en plataformas colaborativas</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="footer">
+      Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos.
+      Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.
+    </div>
+  </div>
+</body>
+</html>
