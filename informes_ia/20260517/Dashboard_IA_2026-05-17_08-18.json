@@ -1,0 +1,163 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "title": "Informe Ejecutivo Premium de Inteligencia Artificial",
+  "generated_at": "2026-05-17 08:18:59 CEST",
+  "timezone": "Europe/Madrid",
+  "analysis_window": {
+    "from": "16 May 2026 08:18 CEST",
+    "to": "17 May 2026 08:18 CEST"
+  },
+  "impact_level": "Alto",
+  "ecosystem_state": "Activo, competitivo y con riesgo operativo contenido pero exigente",
+  "next_update": "2026-05-17 12:00 CEST",
+  "kpis": {
+    "confirmed_signals": 10,
+    "active_alerts": 4,
+    "launches_and_changes": 6,
+    "service_outages": "sin senal fiable"
+  },
+  "executive_summary": [
+    "La prioridad real sigue en seguridad agentic, MCP, permisos y supply chain.",
+    "La oportunidad inmediata se mueve hacia voz operativa, RAG verificable, retrieval financiero con citas y agentes CLI.",
+    "Para MMarco Seguridad, la mejor lectura comercial es auditar agentes y conectores, empaquetar vigilancia de IA para clientes y probar automatizaciones con ROI claro."
+  ],
+  "featured_news": [
+    {
+      "title": "OpenAI endurece su respuesta tras el ataque a TanStack",
+      "date": "2026-05-13",
+      "category": "incidente / supply chain",
+      "impact": "alto",
+      "status": "hecho confirmado",
+      "source": "OpenAI",
+      "recommendation": "Comprobar versiones de ChatGPT, Codex y herramientas de escritorio en flotas Apple.",
+      "link": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+    },
+    {
+      "title": "Anthropic compromete 200 millones con la Gates Foundation",
+      "date": "2026-05-14",
+      "category": "inversion / despliegue social",
+      "impact": "media-alta",
+      "status": "hecho confirmado",
+      "source": "Anthropic",
+      "recommendation": "Seguir oportunidades de consultoria en sectores regulados.",
+      "link": "https://www.anthropic.com/news/gates-foundation-partnership"
+    },
+    {
+      "title": "xAI lanza Grok Build en beta temprana",
+      "date": "2026-05-14",
+      "category": "herramienta / agente de codigo",
+      "impact": "alta",
+      "status": "hecho confirmado",
+      "source": "xAI",
+      "recommendation": "Usarlo solo como benchmark inicial hasta comprobar madurez.",
+      "link": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "title": "Google empuja Gemini Intelligence hacia Android proactivo",
+      "date": "2026-05-12",
+      "category": "plataforma / IA embebida",
+      "impact": "alta",
+      "status": "hecho confirmado",
+      "source": "Google",
+      "recommendation": "Seguir implicaciones de privacidad y casos de automatizacion movil.",
+      "link": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/"
+    }
+  ],
+  "models_and_tools": [
+    {
+      "name": "GPT-Realtime-2",
+      "company": "OpenAI",
+      "type": "modelo de voz en tiempo real",
+      "impact": "alta utilidad inmediata",
+      "link": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "name": "Grok 4.3",
+      "company": "xAI",
+      "type": "LLM general con tool calling",
+      "impact": "alta por consolidacion de stack",
+      "link": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "name": "Gemini API File Search multimodal",
+      "company": "Google DeepMind",
+      "type": "RAG / retrieval",
+      "impact": "alta",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/"
+    },
+    {
+      "name": "Finance Search en Agent API",
+      "company": "Perplexity",
+      "type": "vertical IA / finanzas",
+      "impact": "media-alta",
+      "link": "https://www.perplexity.ai/es/hub/blog/introducing-finance-search-in-the-agent-api"
+    }
+  ],
+  "incidents_and_vulnerabilities": [
+    {
+      "name": "MAI-2026-002",
+      "product": "SDKs de Mistral AI",
+      "severity": "alta",
+      "status": "mitigado tras distribucion confirmada de paquetes comprometidos",
+      "priority": "critica",
+      "link": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "name": "Exposicion de MCP y AutoGen Studio sin autenticacion",
+      "product": "despliegues agentic / MCP",
+      "severity": "alta",
+      "status": "multiples instancias expuestas reportadas por Microsoft",
+      "priority": "critica",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "name": "Rotacion urgente de certificados en apps macOS de OpenAI",
+      "product": "ChatGPT Desktop, Codex App, Codex CLI, Atlas",
+      "severity": "media-alta",
+      "status": "medida preventiva tras incidente de supply chain",
+      "priority": "alta",
+      "link": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+    }
+  ],
+  "trends": [
+    "La capa decisiva ya no es solo el modelo: identidad, permisos, observabilidad y arquitectura del agente pesan mas que la simple calidad del LLM.",
+    "MCP y conectores pasan de ventaja funcional a superficie critica de riesgo.",
+    "La verticalizacion en finanzas, salud y productividad movil concentra el valor inmediato."
+  ],
+  "opportunities": [
+    "Auditoria express de agentes, MCP y conectores para pymes y consultoria.",
+    "Pilotos de asistentes de voz operativa con control humano.",
+    "Ofertas sectoriales de RAG verificable con citas por pagina.",
+    "Monitores financieros y de competencia con IA y citas verificables."
+  ],
+  "active_alerts": [
+    "MCP expuesto sin autenticacion.",
+    "Dependencias comprometidas ligadas a TanStack / Mistral.",
+    "Migraciones xAI pendientes tras retiradas del 15 May 2026.",
+    "Actualizacion de apps macOS de OpenAI antes del 12 Jun 2026."
+  ],
+  "recommendations": {
+    "critica": "Lanzar revisiones de configuracion sobre MCP, AutoGen Studio y agentes con herramientas.",
+    "alta_1": "Abrir una campana de higiene de dependencias y certificados.",
+    "alta_2": "Comparar Grok Build, Codex y alternativas open source en un banco de pruebas comun.",
+    "media": "Diseñar un dashboard sectorial de inteligencia IA para clientes."
+  },
+  "calendar": [
+    {
+      "date": "2026-06-03",
+      "title": "Cierre de consulta UE sobre obligaciones de transparencia del AI Act",
+      "link": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "Fin de soporte / posible no funcionamiento para versiones antiguas de apps macOS de OpenAI",
+      "link": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+    }
+  ],
+  "limitations": [
+    "No aparece en la ventana una caida generalizada de servicios frontier con confirmacion oficial comparable a un incidente de disponibilidad mayor.",
+    "Las metricas del dashboard se limitan a la muestra curada y no representan por si solas todo el ecosistema global de IA."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
