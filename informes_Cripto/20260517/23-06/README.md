@@ -21,7 +21,7 @@ BTC conserva una dominancia del 60.2% y el Altcoin Season Index sigue en 35/100,
 - PDF: dashboard.pdf
 - Datos auxiliares: market_snapshot.json
 - Enlace HTML GitHub: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260517/23-06/dashboard.html
-- Enlace PDF GitHub: https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_Cripto/20260517/23-06/dashboard.pdf
+- Enlace PDF GitHub: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260517/23-06/dashboard.pdf
 
 ## Nota operativa
 
