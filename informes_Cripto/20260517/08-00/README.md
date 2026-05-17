@@ -13,8 +13,12 @@ Escenario base de consolidacion constructiva: hay rebote suficiente para evitar 
 ## Accesos
 
 - Dashboard HTML: https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_Cripto/20260517/08-00/dashboard.html
-- Dashboard PDF: https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_Cripto/20260517/08-00/dashboard.pdf
+- Dashboard PDF: pendiente de publicacion externa por incidencia operativa del conector
 - Ruta historica: informes_Cripto/20260517/08-00/
+
+## Incidencia operativa
+
+El PDF premium ha sido generado localmente y verificado, pero su persistencia externa sigue pendiente por un fallo de subida en los conectores disponibles durante esta ejecucion.
 
 ## Aviso
 
