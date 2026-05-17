@@ -1,9 +1,0 @@
-Informe IA 2026-05-14 08:23 CEST
-
-Artefactos archivados en GitHub:
-- informes_ia/20260514/Dashboard_IA_2026-05-14_08-23.html
-- informes_ia/20260514/Dashboard_IA_2026-05-14_08-23.json
-
-Limitacion verificada:
-- El PDF se ha generado y validado localmente, pero no se ha podido persistir como binario compartible en GitHub con el conector disponible en esta sesion.
-- El PDF queda preparado para adjunto de correo y entrega local en workspace.
