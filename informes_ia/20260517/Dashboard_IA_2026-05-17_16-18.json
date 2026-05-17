@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "timezone": "Europe/Madrid",
+    "generated_at": "2026-05-17 16:18:05 CEST",
+    "report_title": "Informe Ejecutivo Premium de Inteligencia Artificial | Ventana 16:00",
+    "global_status": "Ecosistema activo con presion alta en seguridad, agentes y despliegue enterprise",
+    "ai_impact_level": "Alto",
+    "next_update": "Ventana programada no confirmada en esta ejecucion",
+    "corporate_profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones"
+  },
+  "highlights": [
+    {
+      "name": "Respuesta formal de OpenAI al ataque de supply chain sobre TanStack",
+      "category": "Incidente",
+      "date": "2026-05-13",
+      "impact": "Critico",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Dos equipos corporativos de OpenAI fueron impactados; se rotaron credenciales y certificados de firma.",
+      "executive_takeaway": "Prioridad inmediata para cualquier equipo con dependencias TanStack o flujos OIDC en GitHub Actions.",
+      "source": {
+        "title": "Our response to the TanStack npm supply chain attack",
+        "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+        "publisher": "OpenAI",
+        "date": "2026-05-13"
+      },
+      "extra": null
+    },
+    {
+      "name": "Microsoft MDASH detecta 16 vulnerabilidades, 4 criticas RCE",
+      "category": "Seguridad defensiva",
+      "date": "2026-05-12",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Senal fuerte de madurez de agentes defensivos para discovery ofensivo-controlado en software real.",
+      "executive_takeaway": "Ventana clara para servicios de auditoria apoyados por agentes y fuzzing asistido por IA.",
+      "source": {
+        "title": "Defense at AI speed",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
+        "publisher": "Microsoft Security Blog",
+        "date": "2026-05-12"
+      },
+      "extra": null
+    },
+    {
+      "name": "Gemini Intelligence aterriza en Android con automatizacion multiapp",
+      "category": "Lanzamiento",
+      "date": "2026-05-12",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Google lleva IA proactiva y ejecucion de tareas a movil, Chrome y proximamente wearables, coche y gafas.",
+      "executive_takeaway": "El frente B2C acelera expectativas de UX agentica y eleva el liston para asistentes empresariales.",
+      "source": {
+        "title": "A smarter, more proactive Android with Gemini Intelligence",
+        "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
+        "publisher": "Google",
+        "date": "2026-05-12"
+      },
+      "extra": null
+    },
+    {
+      "name": "Claude entra mas hondo en enterprise via PwC",
+      "category": "Adopcion",
+      "date": "2026-05-14",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "PwC desplegara Claude Code y Cowork y formara a 30.000 profesionales.",
+      "executive_takeaway": "La batalla ya no es solo por modelo; es por despliegue, integracion y certificacion operativa.",
+      "source": {
+        "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+        "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+        "publisher": "Anthropic",
+        "date": "2026-05-14"
+      },
+      "extra": null
+    }
+  ],
+  "models": [
+    {
+      "name": "Mistral 3",
+      "category": "Modelo",
+      "date": "2025-12-02",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Familia abierta multimodal y multilingue bajo Apache 2.0 con Large 3 y variantes 14B, 8B y 3B.",
+      "executive_takeaway": "Muy relevante para despliegue europeo, on-prem y personalizacion con menor dependencia de proveedor cerrado.",
+      "source": {
+        "title": "Introducing Mistral 3",
+        "url": "https://mistral.ai/news/mistral-3",
+        "publisher": "Mistral AI",
+        "date": "2025-12-02"
+      },
+      "extra": {
+        "company": "Mistral AI",
+        "type": "Multimodal / multilingual / MoE",
+        "context_window": "No detallado en la nota abierta",
+        "license": "Apache 2.0",
+        "capabilities": "Texto, imagen, razonamiento y soporte 40+ idiomas"
+      }
+    },
+    {
+      "name": "Grok 4.3",
+      "category": "Modelo",
+      "date": "2026-05-15",
+      "impact": "Medio-Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "1M tokens y enfoque en tool calling agentico; sustituye slugs previos retirados el 15 de mayo.",
+      "executive_takeaway": "xAI acelera consolidacion de SKU y reduce dispersion de versiones en produccion.",
+      "source": {
+        "title": "xAI models documentation",
+        "url": "https://docs.x.ai/developers/models",
+        "publisher": "xAI",
+        "date": "2026-05-15"
+      },
+      "extra": {
+        "company": "xAI",
+        "type": "LLM con tool calling",
+        "context_window": "1M tokens",
+        "license": "Propietaria",
+        "capabilities": "Tool use, search, voz e imagen en APIs separadas"
+      }
+    },
+    {
+      "name": "GPT-Realtime-2 / Translate / Whisper",
+      "category": "Modelo",
+      "date": "2026-05-07",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Nueva capa de voz en tiempo real con razonamiento, traduccion y transcripcion de baja latencia.",
+      "executive_takeaway": "Utilidad inmediata para soporte, eventos, formacion y asistentes multilingues.",
+      "source": {
+        "title": "Advancing voice intelligence with new models in the API",
+        "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+        "publisher": "OpenAI",
+        "date": "2026-05-07"
+      },
+      "extra": {
+        "company": "OpenAI",
+        "type": "Audio / realtime",
+        "context_window": "No especificado en la nota",
+        "license": "API comercial",
+        "capabilities": "Razonamiento por voz, traduccion en vivo, STT continuo"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "name": "Grok Build Early Beta",
+      "category": "Herramienta",
+      "date": "2026-05-14",
+      "impact": "Medio-Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Agente de programacion por terminal con plan, diff y subagentes paralelos.",
+      "executive_takeaway": "Competencia directa en tooling de agentes para desarrollo; conviene vigilar madurez y controles.",
+      "source": {
+        "title": "Introducing Grok Build Early Beta",
+        "url": "https://x.ai/news/grok-build-cli",
+        "publisher": "xAI",
+        "date": "2026-05-14"
+      },
+      "extra": null
+    },
+    {
+      "name": "NVIDIA Dynamo 1.0",
+      "category": "Infraestructura",
+      "date": "2026-03-16",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Framework open source para inferencia distribuida a escala con adopcion en cloud e IA nativa.",
+      "executive_takeaway": "Relevante para servicios propios de inferencia y arquitectura de coste/token en agentes.",
+      "source": {
+        "title": "NVIDIA Enters Production With Dynamo",
+        "url": "https://nvidianews.nvidia.com/news/dynamo-1-0",
+        "publisher": "NVIDIA",
+        "date": "2026-03-16"
+      },
+      "extra": null
+    },
+    {
+      "name": "Perplexity Finance Search en Agent API",
+      "category": "Herramienta",
+      "date": "2026-05-06",
+      "impact": "Medio",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Amplia el valor de agentes orientados a analisis financiero y busqueda especializada.",
+      "executive_takeaway": "Interesante para casos de due diligence, research comercial y vigilancia sectorial.",
+      "source": {
+        "title": "Perplexity Hub",
+        "url": "https://www.perplexity.ai/hub",
+        "publisher": "Perplexity",
+        "date": "2026-05-06"
+      },
+      "extra": null
+    }
+  ],
+  "repositories": [
+    {
+      "name": "FlowiseAI/Flowise",
+      "category": "Repositorio",
+      "date": "2026-04-14",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Repositorio muy adoptado para agentes visuales, pero con exposicion repetida en superficie MCP y ejecucion remota.",
+      "executive_takeaway": "Utilidad alta para prototipado; riesgo alto si se autoexpone sin hardening ni actualizacion.",
+      "source": {
+        "title": "FlowiseAI/Flowise",
+        "url": "https://github.com/FlowiseAI/Flowise",
+        "publisher": "GitHub",
+        "date": "2026-05-17"
+      },
+      "extra": {
+        "stars": "52.9k",
+        "language": "TypeScript",
+        "release": "flowise@3.1.2"
+      }
+    },
+    {
+      "name": "ai-dynamo/dynamo",
+      "category": "Repositorio",
+      "date": "2026-05-09",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Base de inferencia distribuida con releases activas y mezcla de Rust, Python y Go.",
+      "executive_takeaway": "Repositorio a vigilar para despliegues de inferencia propia y optimizacion de agentes.",
+      "source": {
+        "title": "ai-dynamo/dynamo",
+        "url": "https://github.com/ai-dynamo/dynamo",
+        "publisher": "GitHub",
+        "date": "2026-05-09"
+      },
+      "extra": {
+        "release": "v1.1.1",
+        "language": "Rust / Python / Go",
+        "forks": "1.1k"
+      }
+    },
+    {
+      "name": "openai/privacy-filter",
+      "category": "Repositorio",
+      "date": "2026-04-22",
+      "impact": "Medio-Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Modelo y CLI para deteccion/redaccion de PII con ejecucion local.",
+      "executive_takeaway": "Muy util para ofertas de privacidad, sanitizacion documental y pipelines RAG empresariales.",
+      "source": {
+        "title": "openai/privacy-filter",
+        "url": "https://github.com/openai/privacy-filter",
+        "publisher": "GitHub",
+        "date": "2026-04-22"
+      },
+      "extra": {
+        "language": "Python",
+        "license": "Apache 2.0",
+        "model_size": "1.5B total / 50M activos"
+      }
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Ataque npm a paquetes @tanstack/*",
+      "category": "Incidente",
+      "date": "2026-05-11",
+      "impact": "Critico",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "84 versiones maliciosas en 42 paquetes; exfiltracion de credenciales cloud, tokens GitHub y claves SSH.",
+      "executive_takeaway": "Auditar cadena CI/CD, rotar secretos y revisar workflows pull_request_target con cache poisoning y OIDC.",
+      "source": {
+        "title": "GHSA-g7cv-rxg3-hmpx",
+        "url": "https://github.com/advisories/GHSA-g7cv-rxg3-hmpx",
+        "publisher": "GitHub Advisory Database",
+        "date": "2026-05-11"
+      },
+      "extra": null
+    },
+    {
+      "name": "Flowise CVE-2026-40933",
+      "category": "Vulnerabilidad",
+      "date": "2026-04-16",
+      "impact": "Critico",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "RCE autenticado via adaptadores MCP por serializacion insegura de comandos stdio.",
+      "executive_takeaway": "Actualizar a 3.1.0 o superior y eliminar exposicion innecesaria de entornos de administracion.",
+      "source": {
+        "title": "GHSA-c9gw-hvqq-f33r",
+        "url": "https://github.com/advisories/GHSA-c9gw-hvqq-f33r",
+        "publisher": "GitHub Advisory Database",
+        "date": "2026-04-16"
+      },
+      "extra": null
+    },
+    {
+      "name": "Flowise CVE-2026-41264",
+      "category": "Vulnerabilidad",
+      "date": "2026-04-27",
+      "impact": "Critico",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "RCE no autenticado en CSV Agent por falta de sandboxing al ejecutar script Python generado por LLM.",
+      "executive_takeaway": "Prioridad de parcheo maxima para instancias expuestas o integradas con datos sensibles.",
+      "source": {
+        "title": "GHSA-3hjv-c53m-58jj",
+        "url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj",
+        "publisher": "GitHub Advisory Database",
+        "date": "2026-04-27"
+      },
+      "extra": null
+    }
+  ],
+  "regulation": [
+    {
+      "name": "Consulta UE sobre obligaciones de transparencia del AI Act",
+      "category": "Regulacion",
+      "date": "2026-05-08",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Consulta abierta hasta el 3 de junio de 2026 sobre guias de Articulo 50.",
+      "executive_takeaway": "Conviene preparar disclosures para contenido sintetico e interaccion con IA antes del 2 de agosto de 2026.",
+      "source": {
+        "title": "Consultation on the draft guidelines on transparency obligations under the AI Act",
+        "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+        "publisher": "European Commission",
+        "date": "2026-05-08"
+      },
+      "extra": null
+    },
+    {
+      "name": "Acuerdo provisional para simplificar reglas del AI Act",
+      "category": "Regulacion",
+      "date": "2026-05-07",
+      "impact": "Medio-Alto",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "La UE agiliza partes operativas sin retirar exigencias clave de transparencia y alto riesgo.",
+      "executive_takeaway": "Menos friccion administrativa, pero sigue siendo necesario gobierno documental y tecnico.",
+      "source": {
+        "title": "Artificial Intelligence: Council and Parliament agree to simplify and streamline rules",
+        "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+        "publisher": "Council of the EU",
+        "date": "2026-05-07"
+      },
+      "extra": null
+    }
+  ],
+  "signals": [
+    {
+      "label": "Hecho confirmado",
+      "description": "Lanzamientos, incidentes y fechas soportados por fuente primaria u oficial."
+    },
+    {
+      "label": "Interpretacion",
+      "description": "Lectura ejecutiva sobre impacto competitivo, operativo y de servicio."
+    },
+    {
+      "label": "Recomendacion ejecutiva",
+      "description": "Accion concreta priorizada para MMarco Seguridad y clientes pyme/enterprise."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Revisar dependencias TanStack y flujos GitHub Actions",
+      "detail": "Identificar uso directo o transitivo, rotar secretos desde equipo limpio y endurecer OIDC, cache y pull_request_target."
+    },
+    {
+      "priority": "Critica",
+      "title": "Parchar Flowise a >= 3.1.0",
+      "detail": "Despublicar paneles expuestos, restringir MCP custom y revisar ejecucion de nodos con Python o shell."
+    },
+    {
+      "priority": "Alta",
+      "title": "Preparar paquete de cumplimiento AI Act Art. 50",
+      "detail": "Inventario de contenidos sinteticos, avisos al usuario y trazabilidad de interacciones con IA antes del 2 de agosto de 2026."
+    },
+    {
+      "priority": "Alta",
+      "title": "Evaluar servicio de voz IA multilingue",
+      "detail": "Pilotar casos de soporte, formacion y atencion comercial con GPT-Realtime-Translate y Whisper."
+    },
+    {
+      "priority": "Alta",
+      "title": "Abrir linea comercial de seguridad para agentes",
+      "detail": "Ofrecer assessment de permisos, MCP, RAG y supply chain con enfoque defense in depth."
+    },
+    {
+      "priority": "Media",
+      "title": "Vigilar Mistral 3 y Dynamo para oferta soberana",
+      "detail": "Especial interes para despliegues europeos, on-prem y optimizacion de coste por token."
+    }
+  ],
+  "opportunities": [
+    "Assessment rapido de seguridad agentica para pymes que exploran agentes internos.",
+    "Servicio de saneado documental y redaccion PII para RAG y cumplimiento usando Privacy Filter.",
+    "Laboratorio de asistentes de voz multilingues para soporte y telecomunicaciones.",
+    "Oferta de despliegue privado de modelos abiertos europeos para sectores sensibles."
+  ],
+  "calendar": [
+    {
+      "date": "2026-06-03",
+      "event": "Cierre de consulta UE sobre directrices de transparencia del AI Act."
+    },
+    {
+      "date": "2026-06-12",
+      "event": "Fin de ventana para actualizar apps macOS de OpenAI afectadas por rotacion de certificados."
+    },
+    {
+      "date": "2026-08-02",
+      "event": "Entrada en vigor de reglas de transparencia del AI Act segun la Comision Europea."
+    }
+  ],
+  "kpis": [
+    {
+      "label": "Senales criticas",
+      "value": "3",
+      "note": "TanStack + 2 CVE criticos en Flowise"
+    },
+    {
+      "label": "Lanzamientos y cambios",
+      "value": "9",
+      "note": "Producto, modelo o seguridad con impacto alto"
+    },
+    {
+      "label": "Utilidad inmediata",
+      "value": "6",
+      "note": "Voz, despliegue, privacidad, seguridad, open source"
+    },
+    {
+      "label": "Estado ecosistema",
+      "value": "Presion alta",
+      "note": "Innovacion acelerada con riesgo real de supply chain"
+    }
+  ],
+  "summary": {
+    "headline": "La IA de mediados de mayo entra en una fase de despliegue agresivo con una presion de seguridad ya materializada.",
+    "bullets": [
+      "La semana confirma que el valor se desplaza desde el modelo aislado hacia la ejecucion productiva, la seguridad de agentes y la gobernanza operativa.",
+      "El incidente de TanStack y las RCE de Flowise convierten la cadena de suministro agentica en riesgo inmediato, no teorico.",
+      "OpenAI, Google, Microsoft, Anthropic, xAI y NVIDIA empujan producto utilizable ya, especialmente en voz, agentes, inferencia y automatizacion.",
+      "La UE entra en fase practica de transparencia AI Act, por lo que cumplimiento y experiencia de usuario deben avanzar a la vez."
+    ]
+  }
+}
