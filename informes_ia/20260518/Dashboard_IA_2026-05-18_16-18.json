@@ -1,0 +1,415 @@
+{
+  "report": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo Premium de Inteligencia Artificial - Corte de las 16:00",
+    "generated_at": "2026-05-18T16:18:25+02:00",
+    "timezone": "Europe/Madrid",
+    "impact_level": "alto",
+    "ecosystem_status": "activo, util y mas condicionado por seguridad operativa que por benchmark puro",
+    "next_update_expected": "2026-05-18T20:00:00+02:00",
+    "next_update_note": "estimada por cadencia intradia observada"
+  },
+  "kpis": {
+    "prioritized_confirmed_signals": 10,
+    "active_high_followup_incidents": 2,
+    "immediate_value_tools": 4,
+    "near_term_watch_dates": 3
+  },
+  "executive_summary": [
+    {
+      "type": "confirmed_fact",
+      "text": "OpenAI vincula el acceso mas permisivo para defensores a autenticacion resistente a phishing y amplia Trusted Access for Cyber con GPT-5.5 y GPT-5.5-Cyber."
+    },
+    {
+      "type": "confirmed_fact",
+      "text": "Mistral mantiene una alerta real de supply chain con MAI-2026-002, incluyendo riesgo especifico para mistralai==2.4.6 en Linux al importarse."
+    },
+    {
+      "type": "confirmed_fact",
+      "text": "Microsoft demuestra madurez operativa en defensa autonoma al reportar 16 nuevas vulnerabilidades encontradas por su sistema agentic MDASH, incluidas 4 RCE criticas."
+    },
+    {
+      "type": "interpretation",
+      "text": "La ventaja competitiva actual esta en agentes con permisos gobernados, trazabilidad y conectores utiles, no solo en un nuevo benchmark."
+    },
+    {
+      "type": "recommendation",
+      "text": "Priorizar hardening de agentes, auditoria de dependencias y ofertas de automatizacion pyme con conectores financieros y administrativos."
+    }
+  ],
+  "featured_news": [
+    {
+      "title": "Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber",
+      "company": "OpenAI",
+      "date": "2026-05-07",
+      "category": "security, model access",
+      "impact": "alto",
+      "utility_or_risk": "fortalece ciberdefensa pero eleva exigencia de identidad fuerte",
+      "quick_recommendation": "alinear cuentas sensibles con passkeys o llaves fisicas",
+      "source_url": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/"
+    },
+    {
+      "title": "PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+      "company": "Anthropic",
+      "date": "2026-05-14",
+      "category": "enterprise deployment",
+      "impact": "alto",
+      "utility_or_risk": "confirma demanda consultiva y despliegue enterprise gobernado",
+      "quick_recommendation": "explorar oferta equivalente de implantacion segura para clientes",
+      "source_url": "https://www.anthropic.com/news/pwc-expanded-partnership"
+    },
+    {
+      "title": "Android's Agentic Future: Building Gemini Intelligence on a Foundation of Security & Privacy",
+      "company": "Google",
+      "date": "2026-05-12",
+      "category": "agentic consumer platform",
+      "impact": "medio-alto",
+      "utility_or_risk": "refuerza control explicito, proteccion de datos y transparencia",
+      "quick_recommendation": "vigilar traslacion de estos principios a empresa y movilidad",
+      "source_url": "https://blog.google/security/android-gemini-intelligence-security-privacy/"
+    },
+    {
+      "title": "Presentamos Finance Search en la Agent API",
+      "company": "Perplexity",
+      "date": "2026-05-06",
+      "category": "tooling finance",
+      "impact": "alto",
+      "utility_or_risk": "permite retrieval financiero vivo con citas",
+      "quick_recommendation": "probar para dashboards sectoriales y research memos",
+      "source_url": "https://www.perplexity.ai/es/hub/blog/introducing-finance-search-in-the-agent-api"
+    },
+    {
+      "title": "Grok 4.3 and model retirement guidance",
+      "company": "xAI",
+      "date": "2026-05-15",
+      "category": "model migration",
+      "impact": "medio-alto",
+      "utility_or_risk": "requiere migracion de slugs retirados a grok-4.3",
+      "quick_recommendation": "inventariar integraciones y validar pricing",
+      "source_url": "https://docs.x.ai/developers/models"
+    }
+  ],
+  "models": [
+    {
+      "name": "grok-4.3",
+      "company": "xAI",
+      "type": "multimodal",
+      "capabilities": [
+        "function calling",
+        "structured outputs",
+        "configurable reasoning"
+      ],
+      "context_window": "1000000",
+      "license": "no disponible en la fuente abierta consultada",
+      "use_cases": [
+        "contexto largo",
+        "agentes con herramientas",
+        "migracion desde slugs previos"
+      ],
+      "estimated_impact": "alto",
+      "source_url": "https://docs.x.ai/developers/models/grok-4.3"
+    },
+    {
+      "name": "Mistral Large 3",
+      "company": "Mistral AI",
+      "type": "open weight frontier model",
+      "capabilities": [
+        "multimodal",
+        "multilingual",
+        "customizable"
+      ],
+      "context_window": "no verificado en la fuente consultada",
+      "license": "Apache 2.0",
+      "use_cases": [
+        "despliegue soberano",
+        "fine-tuning",
+        "consultoria sobre infraestructura propia"
+      ],
+      "estimated_impact": "alto",
+      "source_url": "https://mistral.ai/news/mistral-3"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "company": "Anthropic",
+      "type": "frontier general purpose",
+      "capabilities": [
+        "advanced software engineering",
+        "vision mejorada",
+        "tareas largas con verificacion propia"
+      ],
+      "context_window": "no verificado en la fuente consultada",
+      "license": "propietario",
+      "use_cases": [
+        "coding",
+        "agentic work",
+        "visual work"
+      ],
+      "estimated_impact": "medio-alto",
+      "source_url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "name": "Gemini Robotics-ER 1.6",
+      "company": "Google DeepMind",
+      "type": "embodied reasoning model",
+      "capabilities": [
+        "spatial reasoning",
+        "multi-view understanding",
+        "native tool use"
+      ],
+      "context_window": "no disponible",
+      "license": "no disponible",
+      "use_cases": [
+        "robotica",
+        "physical agents",
+        "industrial experimentation"
+      ],
+      "estimated_impact": "radar",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-er-1-6/"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude for Small Business",
+      "source": "Anthropic",
+      "date": "2026-05-13",
+      "description": "Conectores y 15 workflows para pymes en herramientas de negocio comunes.",
+      "use_cases": [
+        "back office",
+        "finanzas",
+        "ventas",
+        "marketing"
+      ],
+      "utility_level": "alto",
+      "warning": "requiere gobierno de datos y permisos por conector",
+      "source_url": "https://www.anthropic.com/news/claude-for-small-business"
+    },
+    {
+      "name": "Finance Search",
+      "source": "Perplexity",
+      "date": "2026-05-06",
+      "description": "Herramienta de Agent API para datos financieros vivos con citas.",
+      "use_cases": [
+        "research",
+        "tearsheets",
+        "monitores de mercado",
+        "memos de inversion"
+      ],
+      "utility_level": "alto",
+      "warning": "orientado a finanzas; no sustituye validacion humana",
+      "source_url": "https://www.perplexity.ai/es/hub/blog/introducing-finance-search-in-the-agent-api"
+    },
+    {
+      "name": "n8n",
+      "source": "GitHub",
+      "date": "2026-05-07",
+      "description": "Workflow automation platform con AI nativa y 400+ integraciones.",
+      "use_cases": [
+        "automatizacion",
+        "integraciones",
+        "agentes conectados"
+      ],
+      "utility_level": "alto",
+      "warning": "requiere gobierno de credenciales y control de nodos",
+      "source_url": "https://github.com/n8n-io/n8n"
+    },
+    {
+      "name": "Flowise",
+      "source": "GitHub",
+      "date": "2026-04-01",
+      "description": "Constructor visual de agentes con despliegue self-hosted.",
+      "use_cases": [
+        "prototipos",
+        "RAG",
+        "builders visuales"
+      ],
+      "utility_level": "medio-alto",
+      "warning": "vigilar seguridad de despliegue y dependencias",
+      "source_url": "https://github.com/FlowiseAI/Flowise"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "modelcontextprotocol/servers",
+      "source": "GitHub",
+      "stars": "85.2k",
+      "primary_language": "TypeScript / Python",
+      "description": "Servidores de referencia MCP y recursos para conectar modelos con herramientas.",
+      "use_cases": [
+        "MCP",
+        "memoria",
+        "filesystem",
+        "git",
+        "fetch"
+      ],
+      "utility_level": "alto",
+      "risk_or_warning": "la propia fuente indica que son implementaciones de referencia y no soluciones productivas por defecto",
+      "source_url": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+      "name": "langchain-ai/langgraph",
+      "source": "GitHub",
+      "stars": "31.4k",
+      "primary_language": "Python",
+      "description": "Framework de orquestacion low-level para agentes stateful y largos.",
+      "use_cases": [
+        "ejecucion duradera",
+        "human-in-the-loop",
+        "memoria"
+      ],
+      "utility_level": "alto",
+      "risk_or_warning": "mayor complejidad de arquitectura que builders visuales",
+      "source_url": "https://github.com/langchain-ai/langgraph"
+    },
+    {
+      "name": "n8n-io/n8n",
+      "source": "GitHub",
+      "stars": "187k",
+      "primary_language": "TypeScript",
+      "description": "Automatizacion tecnica con AI nativa y fuerte ecosistema de integraciones.",
+      "use_cases": [
+        "automatizacion pyme",
+        "integraciones",
+        "workflows AI"
+      ],
+      "utility_level": "alto",
+      "risk_or_warning": "controlar secretos, nodos externos y alcance de permisos",
+      "source_url": "https://github.com/n8n-io/n8n"
+    },
+    {
+      "name": "FlowiseAI/Flowise",
+      "source": "GitHub",
+      "stars": "52.7k",
+      "primary_language": "TypeScript",
+      "description": "Builder visual para agentes y RAG con opcion self-hosted.",
+      "use_cases": [
+        "prototipado rapido",
+        "PoCs",
+        "productos internos"
+      ],
+      "utility_level": "medio-alto",
+      "risk_or_warning": "evitar despliegues sin hardening y revision de dependencias",
+      "source_url": "https://github.com/FlowiseAI/Flowise"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "MAI-2026-002",
+      "name": "TanStack supply chain attack affecting Mistral AI SDK packages",
+      "affected_product": "Mistral SDKs npm y PyPI",
+      "severity": "critica",
+      "exploitation_status": "confirmado en cadena de suministro; estado mitigado por Mistral",
+      "impact": "riesgo para entornos que instalaron versiones afectadas",
+      "mitigation": "retirar versiones, limpiar sistemas impactados, revisar IOC y rotar secretos",
+      "priority": "critica",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "id": "OAI-TANSTACK-2026-05",
+      "name": "OpenAI response to TanStack npm supply chain attack",
+      "affected_product": "Apps macOS de OpenAI",
+      "severity": "alta",
+      "exploitation_status": "sin evidencia reportada de acceso a datos de usuarios o produccion comprometida",
+      "impact": "necesidad de actualizar aplicaciones y certificados",
+      "mitigation": "actualizar apps antes del 12 de junio de 2026",
+      "priority": "alta",
+      "source_url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "name": "Microsoft MDASH findings",
+      "affected_product": "Windows networking and authentication stack",
+      "severity": "critica",
+      "exploitation_status": "nuevas vulnerabilidades descubiertas defensivamente",
+      "impact": "16 vulnerabilidades reportadas, incluidas 4 RCE criticas",
+      "mitigation": "seguimiento de parches y lecciones para programas de code security asistida por IA",
+      "priority": "alta",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/"
+    },
+    {
+      "name": "Autonomous agent risk classes",
+      "affected_product": "AI agents in enterprise applications",
+      "severity": "alta",
+      "exploitation_status": "riesgos descritos por Microsoft",
+      "impact": "agent hijacking, intent breaking, sensitive data leakage, supply chain compromise, inappropriate reliance",
+      "mitigation": "defense in depth, permisos minimos, proteccion de datos y controles humanos",
+      "priority": "alta",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    }
+  ],
+  "trends": [
+    "los agentes con identidad fuerte y telemetria pasan a ser prioridad de despliegue",
+    "el valor inmediato se concentra en tooling conectado a trabajo real y no en chat generico",
+    "el open source util gira alrededor de MCP, orchestration stateful, builders visuales y serving eficiente",
+    "la regulacion de transparencia entra en ventana operativa corta en la UE"
+  ],
+  "opportunities": [
+    {
+      "priority": "alta",
+      "title": "Oferta de hardening de agentes",
+      "description": "revisar permisos, conectores, memoria, trazabilidad y supply chain como servicio premium"
+    },
+    {
+      "priority": "alta",
+      "title": "Automatizacion pyme con conectores listos",
+      "description": "combinar Claude for Small Business, n8n y gobierno de datos para back office y ventas"
+    },
+    {
+      "priority": "media",
+      "title": "Dashboards financieros con citas",
+      "description": "apoyarse en Finance Search para informes sectoriales o de inteligencia comercial"
+    },
+    {
+      "priority": "media",
+      "title": "Readiness AI Act",
+      "description": "preparar assessment sobre labeling, transparencia y contenido sintetico"
+    }
+  ],
+  "active_alerts": [
+    {
+      "date": "2026-06-01",
+      "title": "Advanced Account Security required for certain Trusted Access for Cyber users",
+      "source_url": "https://openai.com/index/advanced-account-security/"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "Cierre de consulta de transparencia del AI Act",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "Deadline de actualizacion para apps macOS de OpenAI",
+      "source_url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+    },
+    {
+      "date": "2026-08-02",
+      "title": "Aplicabilidad de obligaciones de transparencia del AI Act",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    }
+  ],
+  "sources": [
+    "https://openai.com/index/advanced-account-security/",
+    "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/",
+    "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/",
+    "https://blog.google/security/android-gemini-intelligence-security-privacy/",
+    "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+    "https://docs.mistral.ai/resources/security-advisories",
+    "https://mistral.ai/news/mistral-3",
+    "https://www.perplexity.ai/es/hub/blog/introducing-finance-search-in-the-agent-api",
+    "https://docs.x.ai/developers/models/grok-4.3",
+    "https://docs.x.ai/developers/models",
+    "https://www.anthropic.com/news/pwc-expanded-partnership",
+    "https://www.anthropic.com/news/claude-for-small-business",
+    "https://www.anthropic.com/news/claude-opus-4-7",
+    "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+    "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Ising-the-Worlds-First-Open-AI-Models-to-Accelerate-the-Path-to-Useful-Quantum-Computers/default.aspx",
+    "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Nemotron-Coalition-of-Leading-Global-AI-Labs-to-Advance-Open-Frontier-Models/default.aspx",
+    "https://github.com/modelcontextprotocol/servers",
+    "https://github.com/langchain-ai/langgraph",
+    "https://github.com/n8n-io/n8n",
+    "https://github.com/FlowiseAI/Flowise"
+  ]
+}
