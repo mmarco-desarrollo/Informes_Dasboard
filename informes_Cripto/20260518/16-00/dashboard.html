@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crypto Insights Executive | 2026-05-18 16:20 CEST</title>
+  <style>
+    :root {
+      --bg: #07101a;
+      --bg-2: #0b1421;
+      --panel: rgba(15, 28, 46, 0.88);
+      --panel-2: rgba(11, 21, 34, 0.92);
+      --line: rgba(255,255,255,0.08);
+      --text: #edf3f9;
+      --muted: #98a9bd;
+      --blue: #39a8ff;
+      --cyan: #54e0d3;
+      --green: #2fd483;
+      --red: #ff6f7d;
+      --amber: #f2c14e;
+      --white-soft: #dce6f2;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background:
+      radial-gradient(circle at 15% 10%, rgba(57,168,255,0.14), transparent 28%),
+      radial-gradient(circle at 82% 12%, rgba(84,224,211,0.10), transparent 24%),
+      linear-gradient(180deg, #060d16 0%, #09111c 100%); color: var(--text); font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+    body { padding: 22px; }
+    .report { max-width: 1480px; margin: 0 auto; }
+    .page {
+      position: relative;
+      margin: 0 0 22px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(18,32,51,0.96), rgba(8,18,29,0.98));
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.38);
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 34px 34px;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .page > * { position: relative; z-index: 1; }
+    h1, h2, h3, h4, p { margin: 0; }
+    .masthead {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 22px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+    .brand-tag {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--cyan);
+      background: rgba(84,224,211,0.08);
+      border: 1px solid rgba(84,224,211,0.32);
+      margin-bottom: 14px;
+    }
+    .brand h1 {
+      font-size: 40px;
+      line-height: 1.04;
+      max-width: 900px;
+    }
+    .brand p {
+      margin-top: 14px;
+      max-width: 780px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .status-chip, .panel, .summary-box, .kpi-card, .news-card, .scenario-card, .heat-card, .alert-card, table, .list-card {
+      background: rgba(10, 21, 35, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      backdrop-filter: blur(14px);
+    }
+    .status-chip {
+      padding: 14px 16px;
+      min-height: 94px;
+    }
+    .status-chip label, .eyebrow {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .status-chip strong {
+      display: block;
+      margin-top: 9px;
+      font-size: 19px;
+    }
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.95fr;
+      gap: 20px;
+    }
+    .summary-box, .panel, .list-card {
+      padding: 18px;
+    }
+    .summary-box p {
+      margin-top: 12px;
+      color: var(--white-soft);
+      line-height: 1.62;
+      font-size: 15px;
+    }
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .panel-head h2, .panel-head h3 {
+      font-size: 18px;
+    }
+    .panel-head span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .kpi-card {
+      padding: 16px;
+      min-height: 132px;
+    }
+    .kpi-label {
+      color: var(--muted);
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .kpi-value {
+      margin-top: 14px;
+      font-size: 28px;
+      line-height: 1.02;
+      font-weight: 700;
+    }
+    .kpi-delta {
+      margin-top: 8px;
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .kpi-note {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 13px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      vertical-align: top;
+      text-align: left;
+      font-size: 13px;
+    }
+    th {
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      background: rgba(255,255,255,0.02);
+    }
+    tr:last-child td { border-bottom: none; }
+    .asset-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .asset-cell span { color: var(--muted); font-size: 12px; }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+    .flat { color: var(--amber); }
+    .perf-row {
+      display: grid;
+      grid-template-columns: 56px 1fr 60px;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .perf-track {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      overflow: hidden;
+    }
+    .perf-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+    .perf-fill.up { background: linear-gradient(90deg, rgba(47,212,131,0.3), rgba(47,212,131,0.95)); }
+    .perf-fill.down { background: linear-gradient(90deg, rgba(255,111,125,0.3), rgba(255,111,125,0.95)); }
+    .perf-fill.flat { background: linear-gradient(90deg, rgba(242,193,78,0.3), rgba(242,193,78,0.95)); }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .metric-tile {
+      padding: 15px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+    .metric-tile strong {
+      display: block;
+      margin-top: 10px;
+      font-size: 22px;
+    }
+    .metric-tile p {
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+    .dominance {
+      margin-top: 14px;
+      border-radius: 999px;
+      overflow: hidden;
+      height: 18px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+    }
+    .dominance div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #07101a;
+    }
+    .dom-btc { width: 60.2%; background: #39a8ff; }
+    .dom-eth { width: 10%; background: #54e0d3; }
+    .dom-rest { width: 29.8%; background: #f2c14e; }
+    .gauge-wrap {
+      display: grid;
+      place-items: center;
+      padding-top: 8px;
+    }
+    .gauge {
+      width: 220px;
+      height: 130px;
+      position: relative;
+    }
+    .gauge svg { width: 100%; height: 100%; }
+    .gauge-center {
+      position: absolute;
+      inset: 52px 0 0;
+      text-align: center;
+    }
+    .gauge-center strong {
+      display: block;
+      font-size: 30px;
+    }
+    .gauge-center span {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .heatmap {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .heat-card {
+      padding: 15px;
+      min-height: 172px;
+    }
+    .heat-card.up {
+      background: linear-gradient(180deg, rgba(28,72,53,0.72), rgba(10,24,19,0.9));
+    }
+    .heat-card.down {
+      background: linear-gradient(180deg, rgba(85,26,37,0.76), rgba(18,12,15,0.92));
+    }
+    .heat-card.flat {
+      background: linear-gradient(180deg, rgba(86,68,22,0.76), rgba(21,16,8,0.92));
+    }
+    .heat-top {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .heat-top span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .heat-price {
+      margin-top: 14px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .heat-moves {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .heat-card p {
+      margin-top: 12px;
+      color: var(--white-soft);
+      font-size: 13px;
+      line-height: 1.48;
+    }
+    .scenario-grid, .news-grid, .alert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .alert-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .scenario-card, .news-card, .alert-card {
+      padding: 16px;
+    }
+    .scenario-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .scenario-card p, .news-card p, .alert-card p, .list-card p {
+      color: var(--white-soft);
+      font-size: 14px;
+      line-height: 1.55;
+      margin-top: 10px;
+    }
+    .scenario-card ul, .list-card ul {
+      margin: 12px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+    .scenario-card li, .list-card li {
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+    .news-meta {
+      color: var(--cyan);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .alert-card span {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+    .alert-red span {
+      background: rgba(255,111,125,0.14);
+      color: var(--red);
+      border: 1px solid rgba(255,111,125,0.26);
+    }
+    .alert-amber span {
+      background: rgba(242,193,78,0.14);
+      color: var(--amber);
+      border: 1px solid rgba(242,193,78,0.26);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+    .legal {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .links a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    @media (max-width: 1100px) {
+      .masthead, .section-grid, .split, .footer-grid, .scenario-grid, .news-grid, .alert-grid {
+        grid-template-columns: 1fr;
+      }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .heatmap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .mini-grid { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { padding: 0; background: #07101a; }
+      .report { max-width: none; }
+      .page {
+        margin: 0 0 14px;
+        page-break-after: always;
+        break-after: page;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .page:last-child {
+        page-break-after: auto;
+        break-after: auto;
+      }
+      a { color: #9dd2ff; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="report">
+    <section class="page">
+      <div class="masthead">
+        <div class="brand">
+          <div class="brand-tag">MMarco Seguridad · Crypto Insights Executive</div>
+          <h1>Informe Ejecutivo Premium del Mercado Cripto</h1>
+          <p>Dashboard institucional para la franja de las 16:00 con foco en estructura de mercado, riesgo, contexto macro y lectura ejecutiva accionable. La prioridad del desk es distinguir hechos, inferencias y escenarios sin forzar senales donde la evidencia no alcanza.</p>
+        </div>
+        <div class="status-grid">
+          <div class="status-chip"><label>Fecha y hora</label><strong>2026-05-18 16:20 CEST</strong></div>
+          <div class="status-chip"><label>Estado general</label><strong>Defensivo con liderazgo de BTC</strong></div>
+          <div class="status-chip"><label>Estado IA</label><strong>Cautela activa</strong></div>
+          <div class="status-chip"><label>Fear & Greed</label><strong>39 / 100 · Fear</strong></div>
+          <div class="status-chip"><label>Proxima revision</label><strong>Revision sugerida en +4h</strong></div>
+          <div class="status-chip"><label>Ventana operativa</label><strong>Corte institucional 16:00</strong></div>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="summary-box">
+          <div class="panel-head">
+            <h2>Resumen Ejecutivo</h2>
+            <span>Lectura rapida institucional</span>
+          </div>
+          <p><strong>Tendencia:</strong> Sesion de ajuste con compresion del riesgo y sesgo claro hacia calidad y liquidez.</p>
+          <p><strong>Lectura IA:</strong> La foto de mercado sigue siendo utilizable, pero no expansiva: sube la dominancia de BTC, cae el apetito por beta y las salidas de ETF vuelven a pesar en el corto plazo.</p>
+          <p><strong>Macro:</strong> El dolar vuelve a endurecer condiciones financieras y la semana queda dominada por FOMC minutes, PMIs y Nvidia como catalizadores para Nasdaq y activos de riesgo.</p>
+          <p><strong>Riesgo:</strong> Medio-alto · <strong>Momentum:</strong> Debil en BTC y ETH; relativo mejor en SOL y DOGE; rotacion alt limitada.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Lectura de Regimen</h2>
+            <span>Mercado, sentimiento y concentracion</span>
+          </div>
+          <div class="mini-grid">
+            <div class="metric-tile">
+              <span class="eyebrow">Dominancia</span>
+              <strong>BTC 60.2%</strong>
+              <p>La liquidez sigue concentrandose en BTC. Esto reduce la probabilidad de una altseason limpia en el muy corto plazo.</p>
+            </div>
+            <div class="metric-tile">
+              <span class="eyebrow">Sentimiento</span>
+              <strong>Fear 39</strong>
+              <p>El mercado sale del extremo, pero no recupera una posicion de confianza operativa alta.</p>
+            </div>
+            <div class="metric-tile">
+              <span class="eyebrow">Flujo</span>
+              <strong>ETF outflows</strong>
+              <p>El factor dominante del dia es la reduccion de riesgo institucional y el barrido de apalancamiento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Capitalizacion Total</span>
+          <div class="kpi-value">$2.56T</div>
+          <div class="kpi-delta">+1.71%</div>
+          <div class="kpi-note">Fuente CMC market overview</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Volumen 24h</span>
+          <div class="kpi-value">$82.54B</div>
+          <div class="kpi-delta">+67.84%</div>
+          <div class="kpi-note">Repunte tactico del volumen</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">BTC Dominance</span>
+          <div class="kpi-value">60.2%</div>
+          <div class="kpi-delta">maximos de regimen</div>
+          <div class="kpi-note">Capital concentrado en BTC</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">ETH Dominance</span>
+          <div class="kpi-value">10.0%</div>
+          <div class="kpi-delta">presion relativa</div>
+          <div class="kpi-note">ETH sigue perdiendo traccion</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Altseason Index</span>
+          <div class="kpi-value">N/D</div>
+          <div class="kpi-delta">Bitcoin Season</div>
+          <div class="kpi-note">Tile en vivo no renderizado con fiabilidad</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Fear & Greed</span>
+          <div class="kpi-value">39 / 100</div>
+          <div class="kpi-delta">Fear</div>
+          <div class="kpi-note">Sentimiento aun fragil</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Liquidaciones 24h</span>
+          <div class="kpi-value">~$563M</div>
+          <div class="kpi-delta">mayoria longs</div>
+          <div class="kpi-note">ETH y BTC lideran el barrido</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Open Interest</span>
+          <div class="kpi-value">N/D</div>
+          <div class="kpi-delta">fallback</div>
+          <div class="kpi-note">No extraible con confianza en la fuente soportada</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Funding Rates</span>
+          <div class="kpi-value">N/D</div>
+          <div class="kpi-delta">fallback</div>
+          <div class="kpi-note">Lectura no consolidada en extraccion</div>
+        </div>
+        
+        <div class="kpi-card">
+          <span class="kpi-label">Volatilidad</span>
+          <div class="kpi-value">Elevada</div>
+          <div class="kpi-delta">macro + derivados</div>
+          <div class="kpi-note">Riesgo de squeezes y flushes</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="split">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Principales Criptomonedas</h2>
+            <span>BTC, ETH, SOL, BNB, XRP, ADA y DOGE</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Activo</th>
+                <th>Precio</th>
+                <th>24h</th>
+                <th>7d</th>
+                <th>Tendencia</th>
+                <th>Momentum</th>
+                <th>RSI</th>
+                <th>Volumen</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+        <tr>
+          <td>
+            <div class="asset-cell">
+              <strong>BTC</strong>
+              <span>Bitcoin</span>
+            </div>
+          </td>
+          <td>$77,831.66</td>
+          <td class="down">-1.6%</td>
+          <td class="down">-3.5%</td>
+          <td>Bajista tactico</td>
+          <td>Debil</td>
+          <td>N/D</td>
+          <td>$26.24B</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="asset-cell">
+              <strong>ETH</strong>
+              <span>Ethereum</span>
+            </div>
+          </td>
+          <td>$2,185.36</td>
+          <td class="down">-0.4%</td>
+          <td class="down">-6.1%</td>
+          <td>Debilidad relativa</td>
+          <td>Negativo</td>
+          <td>N/D</td>
+          <td>$9.48B</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="asset-cell">
+              <strong>SOL</strong>
+              <span>Solana</span>
+            </div>
+          </td>
+          <td>$87.39</td>
+          <td class="down">-1.5%</td>
+          <td class="up">+3.6%</td>
+          <td>Constructivo en 7d</td>
+          <td>Mixto</td>
+          <td>N/D</td>
+          <td>$5.25B</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="asset-cell">
+              <strong>BNB</strong>
+              <span>BNB</span>
+            </div>
+          </td>
+          <td>$650.61</td>
+          <td class="down">-2.9%</td>
+          <td class="up">+0.6%</td>
+          <td>Lateral-bajista</td>
+          <td>Neutral</td>
+          <td>N/D</td>
+          <td>$877.96M</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="asset-cell">
+              <strong>XRP</strong>
+              <span>XRP</span>
+            </div>
+          </td>
+          <td>$1.40</td>
+          <td class="down">-2.3%</td>
+          <td class="down">-0.8%</td>
+          <td>Lateral con sesgo bajista</td>
+          <td>Fragil</td>
+          <td>N/D</td>
+          <td>$2.93B</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="asset-cell">
+              <strong>ADA</strong>
+              <span>Cardano</span>
+            </div>
+          </td>
+          <td>$0.2560</td>
+          <td class="up">+0.2%</td>
+          <td class="down">-5.1%</td>
+          <td>Bajista tactico</td>
+          <td>Debil</td>
+          <td>N/D</td>
+          <td>$238.54M</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <div class="asset-cell">
+              <strong>DOGE</strong>
+              <span>Dogecoin</span>
+            </div>
+          </td>
+          <td>$0.1087</td>
+          <td class="down">-3.4%</td>
+          <td class="up">+0.5%</td>
+          <td>Alta beta</td>
+          <td>Volatil</td>
+          <td>N/D</td>
+          <td>$927.77M</td>
+        </tr>
+        
+            </tbody>
+          </table>
+          <div class="legal">RSI: la pagina soportada de CoinMarketCap confirma el panel de RSI en vivo, pero no devolvio la tabla con valores individuales durante la extraccion automatizada. Se muestra fallback explicito para evitar inventar lecturas.</div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Heatmap Ejecutivo</h2>
+            <span>Desempeno relativo y lectura de desk</span>
+          </div>
+          <div class="heatmap">
+            
+        <div class="heat-card down">
+          <div class="heat-top">
+            <strong>BTC</strong>
+            <span>Bitcoin</span>
+          </div>
+          <div class="heat-price">$77,831.66</div>
+          <div class="heat-moves">
+            <span class="down">24h -1.6%</span>
+            <span class="down">7d -3.5%</span>
+          </div>
+          <p>Activo refugio relativo; soporte tactico de escritorio en $75K.</p>
+        </div>
+        
+        <div class="heat-card down">
+          <div class="heat-top">
+            <strong>ETH</strong>
+            <span>Ethereum</span>
+          </div>
+          <div class="heat-price">$2,185.36</div>
+          <div class="heat-moves">
+            <span class="down">24h -0.4%</span>
+            <span class="down">7d -6.1%</span>
+          </div>
+          <p>Subperformer de large caps; soporte tactico de escritorio en $2.10K.</p>
+        </div>
+        
+        <div class="heat-card up">
+          <div class="heat-top">
+            <strong>SOL</strong>
+            <span>Solana</span>
+          </div>
+          <div class="heat-price">$87.39</div>
+          <div class="heat-moves">
+            <span class="down">24h -1.5%</span>
+            <span class="up">7d +3.6%</span>
+          </div>
+          <p>Sigue siendo la alt large-cap con mejor elasticidad relativa.</p>
+        </div>
+        
+        <div class="heat-card up">
+          <div class="heat-top">
+            <strong>BNB</strong>
+            <span>BNB</span>
+          </div>
+          <div class="heat-price">$650.61</div>
+          <div class="heat-moves">
+            <span class="down">24h -2.9%</span>
+            <span class="up">7d +0.6%</span>
+          </div>
+          <p>Sostiene estructura mejor que ETH pero sin confirmacion de ruptura.</p>
+        </div>
+        
+        <div class="heat-card down">
+          <div class="heat-top">
+            <strong>XRP</strong>
+            <span>XRP</span>
+          </div>
+          <div class="heat-price">$1.40</div>
+          <div class="heat-moves">
+            <span class="down">24h -2.3%</span>
+            <span class="down">7d -0.8%</span>
+          </div>
+          <p>Mantiene relevancia institucional, pero la velocidad de tramo se enfria.</p>
+        </div>
+        
+        <div class="heat-card down">
+          <div class="heat-top">
+            <strong>ADA</strong>
+            <span>Cardano</span>
+          </div>
+          <div class="heat-price">$0.2560</div>
+          <div class="heat-moves">
+            <span class="up">24h +0.2%</span>
+            <span class="down">7d -5.1%</span>
+          </div>
+          <p>Recupera poco en intradia, pero el tramo semanal sigue deteriorado.</p>
+        </div>
+        
+        <div class="heat-card up">
+          <div class="heat-top">
+            <strong>DOGE</strong>
+            <span>Dogecoin</span>
+          </div>
+          <div class="heat-price">$0.1087</div>
+          <div class="heat-moves">
+            <span class="down">24h -3.4%</span>
+            <span class="up">7d +0.5%</span>
+          </div>
+          <p>Sensible a titulares y flujo especulativo; no apto para conviccion institucional alta.</p>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Momentum 7d</h2>
+            <span>Comparativa del universo seguido</span>
+          </div>
+          
+        <div class="perf-row">
+          <div class="perf-label">BTC</div>
+          <div class="perf-track">
+            <div class="perf-fill down" style="width:49.0%"></div>
+          </div>
+          <div class="perf-value down">-3.5%</div>
+        </div>
+        
+        <div class="perf-row">
+          <div class="perf-label">ETH</div>
+          <div class="perf-track">
+            <div class="perf-fill down" style="width:85.39999999999999%"></div>
+          </div>
+          <div class="perf-value down">-6.1%</div>
+        </div>
+        
+        <div class="perf-row">
+          <div class="perf-label">SOL</div>
+          <div class="perf-track">
+            <div class="perf-fill up" style="width:50.4%"></div>
+          </div>
+          <div class="perf-value up">+3.6%</div>
+        </div>
+        
+        <div class="perf-row">
+          <div class="perf-label">BNB</div>
+          <div class="perf-track">
+            <div class="perf-fill up" style="width:8.4%"></div>
+          </div>
+          <div class="perf-value up">+0.6%</div>
+        </div>
+        
+        <div class="perf-row">
+          <div class="perf-label">XRP</div>
+          <div class="perf-track">
+            <div class="perf-fill down" style="width:11.200000000000001%"></div>
+          </div>
+          <div class="perf-value down">-0.8%</div>
+        </div>
+        
+        <div class="perf-row">
+          <div class="perf-label">ADA</div>
+          <div class="perf-track">
+            <div class="perf-fill down" style="width:71.39999999999999%"></div>
+          </div>
+          <div class="perf-value down">-5.1%</div>
+        </div>
+        
+        <div class="perf-row">
+          <div class="perf-label">DOGE</div>
+          <div class="perf-track">
+            <div class="perf-fill up" style="width:7.0%"></div>
+          </div>
+          <div class="perf-value up">+0.5%</div>
+        </div>
+        
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Dominancia y Sentimiento</h2>
+            <span>Indicadores de estructura</span>
+          </div>
+          <div class="dominance">
+            <div class="dom-btc">BTC 60.2%</div>
+            <div class="dom-eth">ETH 10.0%</div>
+            <div class="dom-rest">Resto 29.8%</div>
+          </div>
+          <div class="gauge-wrap">
+            <div class="gauge">
+              <svg viewBox="0 0 220 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 110 A90 90 0 0 1 200 110" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="18" stroke-linecap="round"/>
+                <path d="M20 110 A90 90 0 0 1 200 110" fill="none" stroke="url(#grad)" stroke-width="18" stroke-linecap="round" pathLength="100" stroke-dasharray="39 100"/>
+                <defs>
+                  <linearGradient id="grad" x1="0%" x2="100%" y1="0%" y2="0%">
+                    <stop offset="0%" stop-color="#ff6f7d"/>
+                    <stop offset="55%" stop-color="#f2c14e"/>
+                    <stop offset="100%" stop-color="#2fd483"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="gauge-center">
+                <strong>39</strong>
+                <span>Fear</span>
+              </div>
+            </div>
+          </div>
+          <p class="legal">La combinacion de Fear 39 y dominancia BTC en 60.2% no sugiere euforia de ciclo, sino una fase de proteccion de capital con beta selectiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="panel-head">
+        <h2>Predicciones IA</h2>
+        <span>Escenarios probabilisticos, no certezas</span>
+      </div>
+      <div class="scenario-grid">
+        
+        <div class="scenario-card">
+          <div class="scenario-head">
+            <h3>Escenario Alcista</h3>
+            <span>25%</span>
+          </div>
+          <p>Requiere alivio en ETF flows, estabilidad del dolar y absorcion rapida del flush de largos.</p>
+          <ul>
+            <li><strong>Targets:</strong> BTC > 79K-80K · ETH > 2.25K · SOL > 90</li>
+            <li><strong>Riesgo:</strong> Elevado</li>
+            <li><strong>Confianza IA:</strong> Media-baja</li>
+            <li><strong>Niveles:</strong> Trigger: recuperacion sostenida de 79K en BTC y mejora de breadth en large caps.</li>
+          </ul>
+        </div>
+        
+        <div class="scenario-card">
+          <div class="scenario-head">
+            <h3>Escenario Neutral</h3>
+            <span>45%</span>
+          </div>
+          <p>Es el caso base: mercado en rango, dominancia alta de BTC y selectividad extrema en altcoins.</p>
+          <ul>
+            <li><strong>Targets:</strong> BTC 75K-79K · ETH 2.10K-2.25K · SOL 84-90</li>
+            <li><strong>Riesgo:</strong> Medio</li>
+            <li><strong>Confianza IA:</strong> Media</li>
+            <li><strong>Niveles:</strong> Zona critica: BTC 75K y ETH 2.10K; mientras aguanten, prevalece compresion.</li>
+          </ul>
+        </div>
+        
+        <div class="scenario-card">
+          <div class="scenario-head">
+            <h3>Escenario Bajista</h3>
+            <span>30%</span>
+          </div>
+          <p>Se activaria con mas salidas de ETF, FOMC minutes hawkish y continuidad del rebote del DXY.</p>
+          <ul>
+            <li><strong>Targets:</strong> BTC < 75K · ETH < 2.10K · SOL < 84</li>
+            <li><strong>Riesgo:</strong> Muy alto</li>
+            <li><strong>Confianza IA:</strong> Media</li>
+            <li><strong>Niveles:</strong> Riesgo principal: nueva cascada de liquidaciones en longs y ampliacion del risk-off.</li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <div class="split">
+        <div class="list-card">
+          <div class="panel-head">
+            <h3>Senales de Trading IA</h3>
+            <span>Disciplina antes que frecuencia</span>
+          </div>
+          <p><strong>Sin senales IA de alta conviccion para ejecucion inmediata.</strong></p>
+          <p>La combinacion de ETF outflows, dominancia de BTC en 60.2% y Fear & Greed en 39 desaconseja forzar entradas direccionales. El marco mas disciplinado es esperar recuperacion confirmada de BTC sobre 79K o ruptura limpia de 75K para plantear estructura de continuacion o cobertura.</p>
+          <ul><li>BTC: vigilar respuesta en 75K-79K antes de definir sesgo operativo.</li><li>ETH: evitar agresividad mientras no recupere 2.25K con volumen.</li><li>SOL: mejor perfil relativo entre alts grandes, pero sigue expuesta al risk-off general.</li></ul>
+        </div>
+
+        <div class="list-card">
+          <div class="panel-head">
+            <h3>Ballenas y Flujo de Capital</h3>
+            <span>Solo evidencia con confianza suficiente</span>
+          </div>
+          <p><strong>Flujo de capital defensivo; el evento dominante es ETF + deleveraging.</strong></p>
+          <p>No aparece una senal on-chain de ballenas suficientemente limpia para publicarla como conviccion premium. La evidencia mas robusta del dia es el deterioro del apetito institucional regulado via ETF y el barrido de apalancamiento en derivados.</p>
+          <ul><li>Spot Bitcoin ETFs: semana con alrededor de $1B de salidas netas tras romper una racha de seis semanas de entradas.</li><li>Liquidaciones: alrededor de $563M en 24h, mayormente largos; ETH concentra la mayor presion.</li><li>Institucional: el ajuste parece reequilibrio y reduccion de riesgo, no capitulacion estructural.</li></ul>
+        </div>
+      </div>
+
+      <div class="panel-head" style="margin-top:20px;">
+        <h2>Noticias Importantes</h2>
+        <span>Titulares con mayor capacidad de mover riesgo</span>
+      </div>
+      <div class="news-grid">
+        
+        <div class="news-card">
+          <div class="news-meta">Blockchain.News · ultimos 2 dias · Impacto Alto</div>
+          <h3>Spot Bitcoin ETFs cierran la semana con cerca de $1B en salidas</h3>
+          <p>Rompe una racha de seis semanas de entradas y enfria la demanda institucional de corto plazo.</p>
+        </div>
+        
+        <div class="news-card">
+          <div class="news-meta">CoinDesk via SpendNode / CoinInsider · hoy · Impacto Muy alto</div>
+          <h3>Las liquidaciones de largos escalan a alrededor de $563M en 24h</h3>
+          <p>ETH y BTC lideran el wipeout; la sesion queda dominada por desapalancamiento y fragilidad de momentum.</p>
+        </div>
+        
+        <div class="news-card">
+          <div class="news-meta">KuCoin markets flash · hoy · Impacto Alto</div>
+          <h3>El DXY recupera 99.18 y marca maximo de seis semanas</h3>
+          <p>El rebote del dolar endurece las condiciones para cripto, Nasdaq y resto de activos de riesgo.</p>
+        </div>
+        
+        <div class="news-card">
+          <div class="news-meta">The Block citado en CoinGecko · ayer · Impacto Medio</div>
+          <h3>Nueva carrera por ETF altcoin: BNB reentra en foco con enmiendas</h3>
+          <p>Es positivo para narrativa sectorial, pero todavia no compensa el sesgo risk-off del mercado.</p>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="split">
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Calendario Economico</h2>
+            <span>Semana del 18 al 22 de mayo</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Momento</th>
+                <th>Evento</th>
+                <th>Impacto</th>
+                <th>Lectura para cripto</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+        <tr>
+          <td>Mie 20 May · 20:00 CEST</td>
+          <td>FOMC Minutes</td>
+          <td>Muy alto</td>
+          <td>Clave para expectativas de tipos y sensibilidad de Nasdaq/crypto.</td>
+        </tr>
+        
+        <tr>
+          <td>Jue 21 May · 14:30 CEST</td>
+          <td>Initial Jobless Claims + Housing Starts + Philly Fed</td>
+          <td>Alto</td>
+          <td>Lectura de crecimiento y empleo para validar o no el risk-off.</td>
+        </tr>
+        
+        <tr>
+          <td>Jue 21 May · 15:45 CEST</td>
+          <td>US Flash PMIs</td>
+          <td>Alto</td>
+          <td>Puede mover USD, yields y beta global.</td>
+        </tr>
+        
+        <tr>
+          <td>Mie 20 May · after close US</td>
+          <td>Nvidia earnings</td>
+          <td>Muy alto</td>
+          <td>Catalizador cruzado para IA, Nasdaq y apetito por riesgo.</td>
+        </tr>
+        
+        <tr>
+          <td>Semana 18-22 May</td>
+          <td>Inflacion europea preliminar + revision de crecimiento</td>
+          <td>Medio</td>
+          <td>Aporta contexto al euro, BCE y correlaciones macro.</td>
+        </tr>
+        
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Alertas Prioritarias</h2>
+            <span>Monitorizacion inmediata</span>
+          </div>
+          <div class="alert-grid">
+            
+        <div class="alert-card alert-red">
+          <span>Roja</span>
+          <h4>Dominancia BTC 60.2%</h4>
+          <p>Confirma regimen defensivo y limita la probabilidad de rotacion alt sostenible a muy corto plazo.</p>
+        </div>
+        
+        <div class="alert-card alert-red">
+          <span>Roja</span>
+          <h4>ETF outflows + deleveraging</h4>
+          <p>La combinacion de salidas en ETF y liquidaciones amplifica la vulnerabilidad de los rebotes.</p>
+        </div>
+        
+        <div class="alert-card alert-amber">
+          <span>Amarilla</span>
+          <h4>Fear & Greed en 39</h4>
+          <p>Sentimiento debil; una mejora tactica todavia no equivale a cambio estructural de tendencia.</p>
+        </div>
+        
+        <div class="alert-card alert-amber">
+          <span>Amarilla</span>
+          <h4>Dolar fuerte</h4>
+          <p>Con DXY en maximos de seis semanas, el viento macro para cripto sigue siendo incomodo.</p>
+        </div>
+        
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-grid" style="margin-top:20px;">
+        <div class="list-card">
+          <div class="panel-head">
+            <h3>Distribucion y Archivo</h3>
+            <span>Enlaces operativos</span>
+          </div>
+          <p class="links"><strong>Dashboard HTML:</strong> <a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260518/16-00/dashboard.html">https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260518/16-00/dashboard.html</a></p>
+          <p class="links"><strong>Carpeta historica:</strong> <a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_Cripto/20260518/16-00">https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_Cripto/20260518/16-00</a></p>
+          <p class="links"><strong>PDF:</strong> <a href="[[PDF_LINK_PENDING]]">[[PDF_LINK_PENDING]]</a></p>
+          <div class="legal">Si el PDF no queda expuesto con una URL fiable en GitHub, se publicara via destino alternativo accesible antes del envio final.</div>
+        </div>
+        <div class="list-card">
+          <div class="panel-head">
+            <h3>Fuentes Operativas</h3>
+            <span>Base de datos y contexto</span>
+          </div>
+          <ul><li>CoinMarketCap dashboards: market overview, RSI/fear-greed, liquidations, funding pages</li><li>CoinGecko asset pages: BTC, ETH, SOL, BNB, XRP, ADA, DOGE</li><li>Kiplinger y Benzinga economic calendar week of May 18-22, 2026</li><li>Blockchain.News, KuCoin flash, FXStreet, The Block via CoinGecko</li></ul>
+          <div class="legal">
+            <strong>MMarco Seguridad</strong><br/>
+            https://mmarcoseguridad.com<br/>
+            mmarco.seguridad@gmail.com<br/>
+            +34 656 33 93 55<br/><br/>
+            Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. No constituye asesoramiento financiero.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
