@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | MMarco Seguridad</title>
+  <style>
+    :root {
+      --bg: #09111b;
+      --bg-alt: #101a28;
+      --panel: rgba(18, 28, 42, 0.92);
+      --panel-soft: rgba(16, 26, 40, 0.74);
+      --line: rgba(124, 148, 179, 0.22);
+      --text: #ecf3ff;
+      --muted: #9db0c7;
+      --accent: #4bc7b6;
+      --accent-alt: #7bc8ff;
+      --warn: #ffb84d;
+      --critical: #ff6b73;
+      --high: #ff9262;
+      --shadow: 0 22px 48px rgba(2, 8, 16, 0.45);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(75, 199, 182, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(123, 200, 255, 0.14), transparent 32%),
+        linear-gradient(180deg, #08111a 0%, #0a1220 52%, #0c1521 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: #9bdcff; }
+    .page {
+      width: min(1380px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(75, 199, 182, 0.12), rgba(123, 200, 255, 0.08)),
+        rgba(13, 22, 34, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -45% auto;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(255, 107, 115, 0.14), transparent 68%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 24px;
+      padding: 28px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(123, 200, 255, 0.22);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--accent-alt);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      background: rgba(7, 17, 28, 0.45);
+    }
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.06;
+      max-width: 13ch;
+    }
+    .hero-copy {
+      font-size: 16px;
+      color: #c8d7e8;
+      max-width: 62ch;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .meta-card {
+      background: rgba(12, 19, 31, 0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .meta-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+    }
+    .meta-value {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .threat-chip {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(255, 107, 115, 0.14);
+      border: 1px solid rgba(255, 107, 115, 0.35);
+      color: #ffd7da;
+    }
+    .hero-side {
+      background: rgba(7, 13, 22, 0.66);
+      border-left: 1px solid var(--line);
+      padding-left: 24px;
+    }
+    .hero-side p {
+      margin: 0;
+      color: #d8e2ee;
+    }
+    .grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .kpi-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .kpi-card, .panel, .news-card, .alert-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .kpi-card {
+      padding: 18px;
+      min-height: 146px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .kpi-label {
+      color: var(--muted);
+      font-size: 13px;
+      min-height: 40px;
+    }
+    .kpi-value {
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.05;
+      font-weight: 800;
+    }
+    .kpi-trend {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .panel {
+      padding: 22px;
+    }
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+    .panel h3, .news-card h3, .alert-card h3 {
+      margin: 6px 0 10px;
+      font-size: 18px;
+    }
+    .eyebrow {
+      color: var(--accent-alt);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    li + li {
+      margin-top: 10px;
+    }
+    .alert-grid, .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .alert-card {
+      padding: 20px;
+      background: linear-gradient(180deg, rgba(15, 23, 36, 0.98), rgba(13, 20, 31, 0.92));
+    }
+    .alert-card.severity-critica {
+      box-shadow: inset 0 1px 0 rgba(255, 107, 115, 0.14), var(--shadow);
+    }
+    .alert-card.severity-alta {
+      box-shadow: inset 0 1px 0 rgba(255, 184, 77, 0.14), var(--shadow);
+    }
+    .impact {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: #dce6f2;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 18px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+      background: rgba(10, 16, 26, 0.72);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      padding: 14px 12px;
+      border-bottom: 1px solid rgba(124, 148, 179, 0.14);
+      vertical-align: top;
+      font-size: 14px;
+    }
+    th {
+      color: #cfe0f2;
+      background: rgba(123, 200, 255, 0.06);
+      position: sticky;
+      top: 0;
+    }
+    .sector-row + .sector-row {
+      margin-top: 14px;
+    }
+    .sector-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      color: #d6e5f4;
+      font-size: 14px;
+    }
+    .sector-bar {
+      height: 10px;
+      background: rgba(124, 148, 179, 0.14);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .sector-bar span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-alt));
+    }
+    .reco-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .muted {
+      color: var(--muted);
+    }
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .delivery-item {
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .delivery-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: #d8e6f5;
+    }
+    footer {
+      margin-top: 22px;
+      padding: 18px 22px;
+      color: var(--muted);
+      background: rgba(7, 12, 19, 0.86);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    @media (max-width: 1120px) {
+      .hero-inner,
+      .two-col,
+      .kpi-grid,
+      .alert-grid,
+      .news-grid,
+      .reco-grid,
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-side {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 22px;
+      }
+    }
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, 100%);
+        padding-top: 16px;
+      }
+      .hero-inner,
+      .panel,
+      .alert-card,
+      .news-card {
+        padding: 18px;
+      }
+      h1 {
+        max-width: none;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="brand">MMarco Seguridad · SOC Executive Intelligence</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class="hero-copy">
+            Corte operativo de las 12:00 para direccion, con foco en explotacion activa,
+            presion de parcheo, campanas de identidad y recomendaciones priorizadas.
+          </p>
+          <div class="hero-grid">
+            <div class="meta-card">
+              <div class="meta-label">Fecha y hora</div>
+              <div class="meta-value">2026-05-18 12:03:40 CEST</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Zona horaria</div>
+              <div class="meta-value">Europe/Madrid</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Nivel global de amenaza</div>
+              <div class="meta-value"><span class="threat-chip">ALTO</span></div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Estado IA de riesgo</div>
+              <div class="meta-value">Presion alcista sobre identidad, correo y borde perimetral</div>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-side">
+          <div class="eyebrow">Lectura ejecutiva</div>
+          <p>
+            La situacion se mantiene en <strong>alto riesgo</strong> por la coincidencia de vulnerabilidades
+            criticas explotadas o con fuerte senal de explotacion, un volumen elevado de parcheo en Microsoft
+            y dos campanas recientes centradas en robo de identidad y tokens.
+          </p>
+          <div class="grid" style="margin-top:18px;">
+            <div class="meta-card">
+              <div class="meta-label">Proxima actualizacion</div>
+              <div class="meta-value">Siguiente ejecucion programada del agente</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Cobertura KPI</div>
+              <div class="meta-value">KPIs y prioridades calculados sobre el corte de fuentes oficiales y proveedores monitorizados hasta las 12:03 CEST.</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Historico GitHub</div>
+              <div class="meta-value"><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260518" target="_blank" rel="noreferrer">Carpeta diaria</a></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="grid kpi-grid">
+      
+        <article class="kpi-card">
+          <div class="kpi-label">Incidentes activos priorizados</div>
+          <div class="kpi-value">5</div>
+          <div class="kpi-trend">Alza</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Incidentes criticos</div>
+          <div class="kpi-value">3</div>
+          <div class="kpi-trend">Alza</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Vulnerabilidades nuevas monitorizadas</div>
+          <div class="kpi-value">4</div>
+          <div class="kpi-trend">Alza</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">CVEs criticas prioritarias</div>
+          <div class="kpi-value">3</div>
+          <div class="kpi-trend">Alta</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Campanas de phishing destacadas</div>
+          <div class="kpi-value">2</div>
+          <div class="kpi-trend">Activas</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Riesgo global</div>
+          <div class="kpi-value">ALTO</div>
+          <div class="kpi-trend">Sostenido</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Tendencia 24h</div>
+          <div class="kpi-value">Alcista</div>
+          <div class="kpi-trend">Identidad y edge</div>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-label">Geografia con mayor senal</div>
+          <div class="kpi-value">26 paises; EE. UU. domina la campana AiTM</div>
+          <div class="kpi-trend">92% del foco</div>
+        </article>
+        
+    </section>
+
+    <section class="two-col">
+      <article class="panel">
+        <div class="eyebrow">Resumen ejecutivo</div>
+        <h2>Situacion actual</h2>
+        <ul><li>La prioridad inmediata pasa por tres superficies ya tensionadas por explotacion o riesgo operativo alto: Cisco Catalyst SD-WAN, Microsoft Exchange OWA y FortiClient EMS.</li><li>La senal de amenaza se desplaza hacia identidad y correo: Microsoft ha descrito una campana AiTM que impacto a mas de 35.000 usuarios en 26 paises, y otra campana de device code phishing industrializada con automatizacion y generacion dinamica.</li><li>El parcheo de mayo en Microsoft exige capacidad operativa reforzada: INCIBE resume 137 vulnerabilidades corregidas, 14 criticas, en un mes que MSRC ya describe como grande incluso para un hotpatch month.</li><li>Para empresas espanolas y pymes con servicios hibridos o gestionados, el mayor riesgo no esta solo en el exploit inicial, sino en la combinacion de acceso remoto, robo de tokens y escalada local posterior.</li></ul>
+      </article>
+      <article class="panel">
+        <div class="eyebrow">Conclusiones rapidas</div>
+        <h2>Decision para direccion</h2>
+        <ul><li>Parchar Cisco SD-WAN expuesto y preservar admin-tech antes de actualizar.</li><li>Verificar mitigacion automatica de Exchange EM y revisar OWA/OWA logs.</li><li>Aplicar hotfix o salto a 7.4.7+ en FortiClient EMS sin demora.</li><li>Aumentar hunting sobre AiTM, device code, OAuth anomalo y abuso de Quick Assist o Teams.</li><li>Tratar Linux Fragnesia como riesgo post-compromiso, incluso donde la explotacion in-the-wild no este confirmada de forma consistente.</li></ul>
+      </article>
+    </section>
+
+    <section class="alert-grid">
+      
+        <article class="alert-card severity-critica">
+          <div class="eyebrow">Critica · Explotacion limitada confirmada por Cisco</div>
+          <h3>Cisco Catalyst SD-WAN Controller y Manager</h3>
+          <p>CVE-2026-20182 permite a un atacante remoto no autenticado omitir autenticacion y obtener privilegios administrativos. No hay workaround. Cisco recomienda capturar admin-tech antes de actualizar y validar peering/auth.log si el entorno esta expuesto a Internet.</p>
+          <div class="impact"><strong>Impacto:</strong> Compromiso del plano de control SD-WAN y manipulacion de configuracion.</div>
+        </article>
+        
+        <article class="alert-card severity-critica">
+          <div class="eyebrow">Critica · Explotacion posible y probable en curso</div>
+          <h3>Microsoft Exchange OWA</h3>
+          <p>CVE-2026-42897 permite suplantacion/XSS a traves de correo especialmente disenado si el usuario abre el mensaje en Outlook Web Access. INCIBE indica que podria estar siendo explotada; Microsoft ya publico mitigacion automatica para entornos con Exchange EM habilitado.</p>
+          <div class="impact"><strong>Impacto:</strong> Riesgo sobre correo, sesiones web y confianza interna del usuario.</div>
+        </article>
+        
+        <article class="alert-card severity-critica">
+          <div class="eyebrow">Critica · Explotacion in the wild observada por Fortinet</div>
+          <h3>FortiClient EMS</h3>
+          <p>CVE-2026-35616 afecta a FortiClient EMS 7.4.5 y 7.4.6. Fortinet urge instalar el hotfix correspondiente o actualizar a 7.4.7 o superior. FortiClient Cloud y FortiSASE ya fueron remediados por el fabricante.</p>
+          <div class="impact"><strong>Impacto:</strong> Riesgo de ejecucion de codigo/comandos no autorizados sobre gestion endpoint.</div>
+        </article>
+        
