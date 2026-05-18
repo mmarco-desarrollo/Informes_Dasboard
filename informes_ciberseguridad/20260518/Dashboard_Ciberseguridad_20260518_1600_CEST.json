@@ -1,0 +1,319 @@
+{
+  "brand": {
+    "name": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "website": "https://mmarcoseguridad.com",
+    "specialization": [
+      "Ciberseguridad",
+      "Blockchain",
+      "IA",
+      "Telecomunicaciones"
+    ]
+  },
+  "report": {
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "generated_at": "2026-05-18 16:13:28 CEST",
+    "timezone": "Europe/Madrid",
+    "report_slot": "16:00 CEST",
+    "global_threat_level": "ALTO",
+    "next_update": "2026-05-18 20:00:00 CEST",
+    "ai_risk_state": "Elevado (analisis predictivo con supervision humana)",
+    "scope_note": "KPIs y alertas basados en una muestra priorizada de fuentes oficiales y proveedoras fiables consultadas entre el 14 y el 18 de mayo de 2026."
+  },
+  "kpis": [
+    {
+      "label": "Alertas activas priorizadas",
+      "value": "5",
+      "note": "Muestra ejecutiva validada"
+    },
+    {
+      "label": "KEV prioritarias",
+      "value": "3",
+      "note": "Cisco, Fortinet, Exchange"
+    },
+    {
+      "label": "CVEs criticas",
+      "value": "2",
+      "note": "CVSS 10.0 y 9.8"
+    },
+    {
+      "label": "Campanas phishing",
+      "value": "2",
+      "note": "Confirmadas por Microsoft"
+    },
+    {
+      "label": "Operacion ransomware",
+      "value": "1",
+      "note": "Medusa / Storm-1175"
+    },
+    {
+      "label": "DDoS priorizados",
+      "value": "0",
+      "note": "Sin senal confirmada en esta corrida"
+    },
+    {
+      "label": "Paises destacados",
+      "value": "26+",
+      "note": "Campana AiTM multiorganizacion"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Al alza",
+      "note": "Identidad y exposicion perimetral"
+    }
+  ],
+  "executive_summary": {
+    "state": "El panorama de las 16:00 CEST combina explotacion activa o priorizacion KEV de vulnerabilidades en infraestructura expuesta con una presion creciente sobre identidad corporativa mediante AiTM, device code phishing y QR phishing.",
+    "top_risks": [
+      "Cisco SD-WAN CVE-2026-20182: criticidad maxima, sin workaround y con explotacion limitada confirmada por Cisco.",
+      "FortiClient EMS CVE-2026-35616: explotacion observada por Fortinet y entrada directa a gestion de endpoints.",
+      "Microsoft Exchange CVE-2026-42897: publicada el 14 de mayo y ya incluida en KEV el 15 de mayo.",
+      "Campanas de phishing a escala industrial contra identidad y tokens, con fuerte uso de CAPTCHA, QR y cadenas AiTM.",
+      "Riesgo de ransomware oportunista sobre activos perimetrales con ventanas de explotacion de 24 horas a pocos dias."
+    ],
+    "sectors_most_affected": [
+      "Healthcare y life sciences",
+      "Servicios financieros",
+      "Servicios profesionales",
+      "Tecnologia y software",
+      "Educacion y organizaciones con perimetro expuesto"
+    ],
+    "techniques": [
+      "Bypass de autenticacion en controladores y plataformas de gestion",
+      "AiTM y robo de tokens",
+      "Device code phishing automatizado",
+      "QR phishing y CAPTCHA-gated phishing",
+      "Explotacion rapida de N-days en activos web-facing"
+    ],
+    "estimated_exposure": "Alta para organizaciones con Exchange on-prem, SD-WAN expuesto, FortiClient EMS 7.4.5-7.4.6 o MFA no resistente al phishing.",
+    "main_recommendation": "Ejecutar una ventana de remediacion urgente hoy mismo sobre los tres frentes P1: SD-WAN Cisco, FortiClient EMS y Exchange; en paralelo, reducir superficie expuesta y endurecer identidad con MFA resistente al phishing y revision de sesiones/tokens.",
+    "quick_conclusion": [
+      "La prioridad operativa inmediata es parchear o mitigar KEV de perimetro e identidad.",
+      "El riesgo mas probable para las proximas 24-72 horas es compromiso inicial por phishing de identidad y pivot sobre activos expuestos.",
+      "Pymes y entornos con administracion remota publicada mantienen una exposicion superior a la media.",
+      "La velocidad de explotacion observada exige SLA de parcheo en horas, no en dias, para activos expuestos."
+    ]
+  },
+  "alerts": [
+    {
+      "title": "Cisco SD-WAN: CVE-2026-20182",
+      "priority": "Critica",
+      "detail": "Cisco publico el 14 de mayo un bypass de autenticacion con CVSS 10.0, sin workarounds, y comunico explotacion limitada. Impacta controladores y managers SD-WAN en despliegues on-prem y cloud-managed.",
+      "action": "Identificar exposicion internet, revisar auth.log y aplicar fixed releases de inmediato.",
+      "source": "Cisco / NVD"
+    },
+    {
+      "title": "FortiClient EMS: CVE-2026-35616",
+      "priority": "Critica",
+      "detail": "Fortinet confirmo explotacion in the wild de un bypass de autenticacion/autorizacion que afecta a FortiClient EMS 7.4.5 y 7.4.6.",
+      "action": "Aplicar hotfix o actualizar a 7.4.7+, revisar accesos no autorizados y telemetria de administracion.",
+      "source": "Fortinet / NVD"
+    },
+    {
+      "title": "Exchange Server: CVE-2026-42897",
+      "priority": "Alta",
+      "detail": "La vulnerabilidad en Exchange se publico el 14 de mayo y NVD ya refleja alta severidad segun Microsoft y alta prioridad por inclusion en KEV.",
+      "action": "Aplicar mitigaciones del proveedor, revisar EEMS/Emergency Mitigation y reducir exposicion OWA/ECP donde proceda.",
+      "source": "Microsoft / NVD / INCIBE"
+    },
+    {
+      "title": "Phishing AiTM a gran escala",
+      "priority": "Alta",
+      "detail": "Microsoft observo entre el 14 y el 16 de abril una campana de varias oleadas contra mas de 35.000 usuarios en mas de 13.000 organizaciones de 26 paises.",
+      "action": "Refuerzo inmediato de protecciones anti-phishing, control de sesiones y deteccion de robo de tokens.",
+      "source": "Microsoft"
+    },
+    {
+      "title": "Medusa / Storm-1175",
+      "priority": "Alta",
+      "detail": "Microsoft describe operaciones de alto ritmo sobre activos web-facing vulnerables, con paso de acceso inicial a exfiltracion y ransomware en 24 horas en algunos casos.",
+      "action": "Acelerar patching perimetral, revisar accesos remotos y validar controles EDR/segmentacion.",
+      "source": "Microsoft"
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation": "Explotacion limitada confirmada por Cisco; reflejada en KEV",
+      "patch": "Si, fixed releases del proveedor",
+      "priority": "P1 inmediata",
+      "source": "Cisco advisory + NVD"
+    },
+    {
+      "cve": "CVE-2026-35616",
+      "product": "FortiClient EMS 7.4.5-7.4.6",
+      "cvss": "9.8",
+      "severity": "Critica",
+      "exploitation": "Explotada in the wild; en KEV",
+      "patch": "Si, hotfix y 7.4.7+",
+      "priority": "P1 inmediata",
+      "source": "Fortinet PSIRT + NVD"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server",
+      "cvss": "8.1 (CNA Microsoft) / 6.1 (NVD)",
+      "severity": "Alta",
+      "exploitation": "Priorizada por inclusion en KEV",
+      "patch": "Mitigacion y guidance del proveedor",
+      "priority": "P1 hoy",
+      "source": "MSRC/NVD/INCIBE"
+    },
+    {
+      "cve": "CVE-2026-39809",
+      "product": "FortiClient EMS 7.0 / 7.2 / 7.4",
+      "cvss": "6.7",
+      "severity": "Media",
+      "exploitation": "No confirmada en esta corrida",
+      "patch": "Si, upgrade a versiones fijas",
+      "priority": "P2",
+      "source": "Fortinet PSIRT + NVD"
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      "Medusa ransomware"
+    ],
+    "target_sectors": [
+      "Healthcare",
+      "Educacion",
+      "Servicios profesionales",
+      "Finanzas"
+    ],
+    "techniques": [
+      "Explotacion de vulnerabilidades recien divulgadas en activos web-facing",
+      "Creacion de cuentas y persistencia rapida",
+      "RMM, robo de credenciales y desactivacion de controles",
+      "Exfiltracion seguida de cifrado en muy poco tiempo"
+    ],
+    "iocs_sample": [
+      "SHA256 0cefeb6210b7103fd32b996beff518c9b6e1691a97bb1cda7f5fb57905c4be96 (Gaze.exe / Medusa)",
+      "IP 185.135.86.149 (SimpleHelp C2)"
+    ],
+    "trend": "Alta velocidad operativa y enfasis en N-days perimetrales.",
+    "spread_level": "Alto en organizaciones con perimetro expuesto y retraso de parcheo."
+  },
+  "news": [
+    {
+      "headline": "Microsoft: el QR phishing crecio un 146% entre enero y marzo de 2026",
+      "why_it_matters": "Senala que la presion sobre identidad se esta moviendo hacia formatos que eluden mejor el filtrado tradicional y desbordan al usuario movil.",
+      "source": "Microsoft Security Blog"
+    },
+    {
+      "headline": "ENISA amplia su papel como CVE Root europeo",
+      "why_it_matters": "Refuerza la coordinacion y la velocidad de gestion de vulnerabilidades en Europa, relevante para seguimiento regulatorio y de disclosure.",
+      "source": "ENISA"
+    },
+    {
+      "headline": "INCIBE mantiene avisos criticos recientes para sectores estrategicos",
+      "why_it_matters": "Aporta contexto util para empresas espanolas y pymes sobre vulnerabilidades de proveedores con amplio despliegue.",
+      "source": "INCIBE-CERT"
+    }
+  ],
+  "recommendations": {
+    "critica": [
+      "Parchar o mitigar hoy Cisco SD-WAN CVE-2026-20182, FortiClient EMS CVE-2026-35616 y Exchange CVE-2026-42897.",
+      "Cerrar o filtrar exposicion directa a internet de consolas de gestion, OWA/ECP y plataformas de administracion de endpoints."
+    ],
+    "alta": [
+      "Revisar logs de autenticacion, cuentas admin nuevas, tokens activos y sesiones inusuales en Entra ID, Exchange y plataformas de gestion.",
+      "Forzar MFA resistente al phishing para perfiles privilegiados y accesos remotos.",
+      "Lanzar hunting orientado a AiTM, device code abuse y robo de sesion."
+    ],
+    "media": [
+      "Ejecutar inventario rapido de activos expuestos y comprobar SLA reales de parcheo para perimetro.",
+      "Actualizar concienciacion con ejemplos de QR phishing, CAPTCHA falso y lures de compliance interno."
+    ],
+    "baja": [
+      "Revisar dependencias de gobierno de vulnerabilidades y tableros de excepciones para NIS2 y reporting ejecutivo."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo",
+    "global_estimated_risk": "Alto",
+    "next_threats_prediction": [
+      "Mayor presion sobre identidad corporativa mediante QR phishing, CAPTCHA y AiTM.",
+      "Explotacion oportunista de nuevos fallos de gestion remota y appliances con ventana de adopcion lenta.",
+      "Mas uso de automatizacion en phishing y de brokers de acceso inicial para ransomware."
+    ],
+    "most_exposed_sectors": [
+      "Sanidad",
+      "Finanzas",
+      "Servicios profesionales",
+      "Tecnologia",
+      "Pymes con administracion remota publicada"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-35616",
+      "CVE-2026-42897"
+    ],
+    "probability_of_attack_increase": "Alta para phishing y compromisos iniciales; media-alta para ransomware post-compromiso.",
+    "automatic_recommendation": "Reducir superficie expuesta, endurecer identidad, validar backups y fijar ventana P1 de remediacion antes del cierre de jornada."
+  },
+  "sources": [
+    {
+      "name": "Cisco Advisory CVE-2026-20182",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW"
+    },
+    {
+      "name": "NVD CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182"
+    },
+    {
+      "name": "Fortinet PSIRT FG-IR-26-099 / CVE-2026-35616",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099"
+    },
+    {
+      "name": "NVD CVE-2026-35616",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35616"
+    },
+    {
+      "name": "NVD CVE-2026-42897",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897"
+    },
+    {
+      "name": "INCIBE CVE-2026-42897",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/CVE-2026-42897"
+    },
+    {
+      "name": "Microsoft - Code of conduct AiTM campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+    },
+    {
+      "name": "Microsoft - Device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/"
+    },
+    {
+      "name": "Microsoft - Medusa / Storm-1175",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/storm-1175-focuses-gaze-on-vulnerable-web-facing-assets-in-high-tempo-medusa-ransomware-operations/"
+    },
+    {
+      "name": "Microsoft - Email threat landscape Q1 2026",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/"
+    },
+    {
+      "name": "ENISA - New CVE Numbering Authorities Under ENISA Root",
+      "url": "https://www.enisa.europa.eu/news/new-cve-numbering-authorities-under-enisa-root"
+    },
+    {
+      "name": "INCIBE - Avisos sectores estrategicos",
+      "url": "https://www.incibe.es/incibe-cert/sectores-estrategicos/proveedores-de-servicios-digitales/avisos"
+    }
+  ],
+  "delivery_status": {
+    "report_generated": "Completado",
+    "github_history": "Pendiente de publicacion",
+    "gmail_html": "Pendiente de envio",
+    "pdf": "No disponible",
+    "page_images": "No disponibles",
+    "google_drive": "Omitido",
+    "limitations": [
+      "No se genera PDF en esta corrida porque no hay persistencia externa binaria verificada dentro del flujo actual.",
+      "Los KPIs representan una muestra priorizada y ejecutiva, no un censo global de incidentes."
+    ]
+  }
+}
