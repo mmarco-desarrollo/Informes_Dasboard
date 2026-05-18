@@ -1,0 +1,304 @@
+{
+  "report": {
+    "title": "Crypto Insights Executive",
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "generated_at_local": "2026-05-18 12:05 CEST",
+    "generated_at_utc": "2026-05-18 10:05 UTC",
+    "slot": "12:00",
+    "timezone": "Europe/Madrid",
+    "next_update_label": "16:00 CEST",
+    "status": "Rebote tactico prudente",
+    "ai_state": "Rebote vigilado",
+    "fear_greed_state": "Fear",
+    "fear_greed_value": 28,
+    "risk_level": "Medio",
+    "macro_state": "El rebote convive con una agenda macro exigente: PIB de EE. UU. el 28 de mayo, empleo el 5 de junio, CPI el 10 de junio y FOMC el 16-17 de junio."
+  },
+  "market": {
+    "total_market_cap_usd": 2642000000000.0,
+    "total_market_cap_display": "$2.642T",
+    "total_volume_24h_usd": 74383000000.0,
+    "total_volume_24h_display": "$74.38B",
+    "market_cap_change_24h_pct": 1.8,
+    "btc_dominance_pct": 58.3,
+    "eth_dominance_pct": 9.67,
+    "altseason_index": 24,
+    "open_interest_display": "N/D - validacion multi-exchange pendiente",
+    "funding_display": "N/D - feed premium no consolidado",
+    "liquidations_display": "N/D - sin lectura consolidada verificable",
+    "volatility_title": "Rebote activo",
+    "volatility_proxy_display": "BTC +4.9% | ETH +9.3% | SOL +11.2% (7d)",
+    "trend_summary": "La sesion deja un rebote tactico amplio. BTC mantiene liderazgo y las principales altcoins recuperan terreno.",
+    "ai_summary": "Sesgo base: continuidad moderadamente alcista si BTC respeta 76.7K. Falta confirmacion en derivados y sentimiento.",
+    "signals_summary": "No se valida una senal IA premium con perfil entrada-stop-take profit de alta confianza en esta franja; se prioriza gestion de riesgo sobre activacion agresiva."
+  },
+  "assets": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": 76795.49,
+      "price_display": "$76,795.49",
+      "change_24h_pct": 2.1,
+      "change_7d_pct": 4.9,
+      "market_cap_display": "$1.538T",
+      "volume_24h_display": "$29.37B",
+      "range_24h_display": "$76,696 - $78,506",
+      "trend": "Lider del rebote",
+      "momentum": "Constructivo",
+      "rsi_display": "N/D",
+      "support": "$76.7K",
+      "resistance": "$78.5K"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": 2113.36,
+      "price_display": "$2,113.36",
+      "change_24h_pct": 3.7,
+      "change_7d_pct": 9.3,
+      "market_cap_display": "$254.98B",
+      "volume_24h_display": "$12.58B",
+      "range_24h_display": "$2,109 - $2,196",
+      "trend": "Recuperacion con beta",
+      "momentum": "Alcista tactico",
+      "rsi_display": "N/D",
+      "support": "$2.11K",
+      "resistance": "$2.20K"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": 84.27,
+      "price_display": "$84.27",
+      "change_24h_pct": 3.2,
+      "change_7d_pct": 11.2,
+      "market_cap_display": "$48.74B",
+      "volume_24h_display": "$2.52B",
+      "range_24h_display": "$84.23 - $87.12",
+      "trend": "Rebote de alta beta",
+      "momentum": "Fuerte",
+      "rsi_display": "N/D",
+      "support": "$84.2",
+      "resistance": "$87.1"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": 637.72,
+      "price_display": "$637.72",
+      "change_24h_pct": 2.6,
+      "change_7d_pct": 2.0,
+      "market_cap_display": "$85.94B",
+      "volume_24h_display": "$0.74B",
+      "range_24h_display": "$637.63 - $656.93",
+      "trend": "Fortaleza estable",
+      "momentum": "Mixto positivo",
+      "rsi_display": "N/D",
+      "support": "$637.6",
+      "resistance": "$656.9"
+    },
+    {
+      "symbol": "XRP",
+      "name": "XRP",
+      "price": 1.38,
+      "price_display": "$1.38",
+      "change_24h_pct": 2.6,
+      "change_7d_pct": 4.6,
+      "market_cap_display": "$85.47B",
+      "volume_24h_display": "$1.78B",
+      "range_24h_display": "$1.38 - $1.43",
+      "trend": "Continuidad positiva",
+      "momentum": "Moderado alcista",
+      "rsi_display": "N/D",
+      "support": "$1.38",
+      "resistance": "$1.43"
+    },
+    {
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.2484,
+      "price_display": "$0.2484",
+      "change_24h_pct": 3.5,
+      "change_7d_pct": 10.4,
+      "market_cap_display": "$9.21B",
+      "volume_24h_display": "$0.36B",
+      "range_24h_display": "$0.2480 - $0.2577",
+      "trend": "Recuperacion agresiva",
+      "momentum": "Alcista tactico",
+      "rsi_display": "N/D",
+      "support": "$0.2480",
+      "resistance": "$0.2577"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.104,
+      "price_display": "$0.1040",
+      "change_24h_pct": 6.6,
+      "change_7d_pct": 5.2,
+      "market_cap_display": "$16.05B",
+      "volume_24h_display": "$1.26B",
+      "range_24h_display": "$0.1038 - $0.1126",
+      "trend": "Momentum especulativo",
+      "momentum": "Alto beta",
+      "rsi_display": "N/D",
+      "support": "$0.1038",
+      "resistance": "$0.1126"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Alcista",
+      "probability": 35,
+      "color": "#27D17F",
+      "summary": "BTC sobre $78.5K y ETH sobre $2.20K mantendrian el rebote.",
+      "targets": "BTC $78.5K-$80.2K | ETH $2.20K-$2.28K",
+      "risk": "Riesgo medio",
+      "confidence": "Confianza media"
+    },
+    {
+      "name": "Neutral",
+      "probability": 45,
+      "color": "#F2C14E",
+      "summary": "Rango con BTC dominante a la espera de payrolls, CPI y FOMC.",
+      "targets": "BTC $76.7K-$78.5K | ETH $2.11K-$2.20K",
+      "risk": "Riesgo medio",
+      "confidence": "Confianza alta"
+    },
+    {
+      "name": "Bajista",
+      "probability": 20,
+      "color": "#FF6B6B",
+      "summary": "Si la macro decepciona, el rebote puede perder soporte.",
+      "targets": "BTC < $76.7K | ETH < $2.11K",
+      "risk": "Riesgo alto",
+      "confidence": "Confianza media"
+    }
+  ],
+  "signals": {
+    "title": "Senales de trading IA",
+    "signal": "Sin senal premium activa",
+    "confidence": "Baja",
+    "entry": "No forzar entrada en esta franja",
+    "stop": "Esperar validacion de estructura",
+    "take_profit": "N/D",
+    "horizon": "Intradia a 24h",
+    "technical_confirmation": "Falta confirmacion en precio, dominancia y flujos."
+  },
+  "capital_flow": {
+    "headline": "Flujo de capital y ballenas",
+    "summary": "Sin feed premium consolidado para ballenas u open interest. La lectura institucional sigue favoreciendo BTC como refugio relativo.",
+    "bullets": [
+      "Dominancia BTC en 58.3%: el mercado sigue premiando calidad relativa incluso en una sesion de rebote.",
+      "Altseason Index en 24: la estructura sigue catalogada como Bitcoin Season."
+    ]
+  },
+  "news": [
+    {
+      "date": "2026-05-18",
+      "source": "Cointelegraph / Blockaid",
+      "title": "El puente Verus-Ethereum sufre un exploit de aproximadamente $11.6M.",
+      "impact": "Alto",
+      "summary": "Refuerza la cautela sobre puentes y liquidez cross-chain."
+    },
+    {
+      "date": "2026-05-14",
+      "source": "Reuters via Investing.com",
+      "title": "El comite bancario del Senado de EE. UU. estudia una ley historica para cripto.",
+      "impact": "Alto",
+      "summary": "Mejora la visibilidad regulatoria para estructura de mercado y stablecoins."
+    },
+    {
+      "date": "2026-05-12",
+      "source": "BLS",
+      "title": "El CPI de abril en EE. UU. sube 0.6% mensual y 3.8% interanual.",
+      "impact": "Medio-alto",
+      "summary": "Mantiene viva la sensibilidad de tipos, dolar y Nasdaq."
+    },
+    {
+      "date": "2026-03-17",
+      "source": "SEC",
+      "title": "La SEC aclara la aplicacion de las leyes federales a ciertos criptoactivos.",
+      "impact": "Alto",
+      "summary": "Reduce friccion regulatoria."
+    }
+  ],
+  "macro_calendar": [
+    {
+      "date": "2026-05-28",
+      "event": "BEA GDP 2nd estimate Q1 2026",
+      "time": "14:30 CEST",
+      "impact": "Medio-alto",
+      "summary": "La revision del crecimiento puede mover dolar, Nasdaq y apetito por riesgo global."
+    },
+    {
+      "date": "2026-06-05",
+      "event": "BLS Employment Situation",
+      "time": "14:30 CEST",
+      "impact": "Alto",
+      "summary": "Nominas y desempleo son clave para expectativas de tipos y correlacion cripto-riesgo."
+    },
+    {
+      "date": "2026-06-10",
+      "event": "BLS CPI",
+      "time": "14:30 CEST",
+      "impact": "Muy alto",
+      "summary": "Dato central para la sensibilidad de bonos, dolar y multiples de activos beta."
+    },
+    {
+      "date": "2026-06-10/11",
+      "event": "ECB monetary policy meeting",
+      "time": "11 Jun · 14:45 CET",
+      "impact": "Medio",
+      "summary": "Puede alterar el tono de liquidez europea y reforzar la lectura cross-asset."
+    },
+    {
+      "date": "2026-06-16/17",
+      "event": "FOMC",
+      "time": "Decision 20:00 CEST aprox. el dia 17",
+      "impact": "Muy alto",
+      "summary": "Catalizador macro principal para BTC, ETH y activos de beta elevada."
+    }
+  ],
+  "alerts": [
+    {
+      "title": "Dominancia BTC elevada",
+      "level": "Media",
+      "color": "#F2C14E",
+      "summary": "La rotacion sigue premiando calidad relativa."
+    },
+    {
+      "title": "Sentimiento aun fragil",
+      "level": "Alta",
+      "color": "#FF6B6B",
+      "summary": "Fear & Greed en 28: el sentimiento aun no confirma expansion de riesgo."
+    },
+    {
+      "title": "Ventana macro cargada",
+      "level": "Alta",
+      "color": "#FF6B6B",
+      "summary": "PIB, empleo, CPI y FOMC concentran el riesgo direccional cercano."
+    }
+  ],
+  "footer": {
+    "brand": "MMarco Seguridad",
+    "web": "https://mmarcoseguridad.com",
+    "email": "mmarco.seguridad@gmail.com",
+    "phone": "+34 656 33 93 55",
+    "legal": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. No constituye asesoramiento financiero."
+  },
+  "sources": [
+    "CoinGecko market pages and asset dashboards",
+    "Alternative.me Fear & Greed Index",
+    "BlockchainCenter Altcoin Season Index",
+    "BLS CPI and Employment Situation calendars",
+    "BLS CPI April 2026 release",
+    "BEA GDP release calendar",
+    "Federal Reserve June 2026 calendar",
+    "ECB Governing Council meeting calendar",
+    "SEC crypto-assets interpretive guidance",
+    "Reuters coverage distributed via Investing.com",
+    "Cointelegraph / Blockaid exploit coverage"
+  ]
+}
