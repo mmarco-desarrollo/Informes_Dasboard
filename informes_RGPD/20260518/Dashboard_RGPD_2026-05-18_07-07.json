@@ -1,0 +1,579 @@
+{
+  "meta": {
+    "title": "Informe Ejecutivo RGPD",
+    "subtitle": "Apertura de jornada | Radar regulatorio y de riesgo externo para empresas espanolas con foco en hechos confirmados, interpretacion, riesgo estimado y accion ejecutiva.",
+    "generated_at": "2026-05-18 07:07:02 CEST",
+    "timezone": "Europe/Madrid",
+    "report_mode": "morning-opening",
+    "next_update": "2026-05-18 22:05 CEST",
+    "time_to_next_update": "14 h 57 min",
+    "repository": {
+      "repo": "mmarco-desarrollo/Informes_Dasboard",
+      "branch": "main",
+      "target_folder": "informes_RGPD/20260518",
+      "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260518/Dashboard_RGPD_2026-05-18_07-07.html",
+      "pdf_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260518/Dashboard_RGPD_2026-05-18_07-07.pdf",
+      "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260518/Dashboard_RGPD_2026-05-18_07-07.json"
+    },
+    "corporate": {
+      "brand": "MMarco Seguridad",
+      "owner": "Manuel Marco Sanchez",
+      "web": "https://mmarcoseguridad.com",
+      "email": "mmarco.seguridad@gmail.com",
+      "whatsapp": "+34 656 33 93 55",
+      "specialization": [
+        "Ciberseguridad",
+        "Blockchain",
+        "IA",
+        "Telecomunicaciones",
+        "RGPD",
+        "Proteccion de Datos"
+      ]
+    }
+  },
+  "kpis": [
+    [
+      "Nivel global de cumplimiento",
+      "69%",
+      "Estimacion IA prudente",
+      "good"
+    ],
+    [
+      "Riesgo global RGPD",
+      "Medio-Alto",
+      "62/100",
+      "warn"
+    ],
+    [
+      "Incidentes RGPD detectados",
+      "4",
+      "Radar externo reciente",
+      "warn"
+    ],
+    [
+      "Brechas de datos relevantes",
+      "3",
+      "Hechos confirmados o institucionales",
+      "risk"
+    ],
+    [
+      "Reclamaciones AEPD",
+      "30.931",
+      "Dato 2025 confirmado",
+      "muted"
+    ],
+    [
+      "Sanciones publicadas",
+      "Actividad sostenida",
+      "Sin nueva nota oficial hoy",
+      "risk"
+    ],
+    [
+      "Novedades legales",
+      "7",
+      "AEPD, EDPB, CE e INCIBE",
+      "good"
+    ],
+    [
+      "Consultas AEPD o EDPB",
+      "2 abiertas",
+      "DPIA y Guidelines 1/2026",
+      "good"
+    ],
+    [
+      "Evaluaciones DPIA pendientes",
+      "Alta atencion",
+      "Estimacion sectorial",
+      "warn"
+    ],
+    [
+      "Derechos de interesados",
+      "Foco en transparencia",
+      "Accion coordinada europea 2026",
+      "warn"
+    ],
+    [
+      "Formacion y concienciacion",
+      "Prioridad alta",
+      "Phishing, IA y error humano",
+      "warn"
+    ],
+    [
+      "Transferencias internacionales",
+      "Revisar",
+      "SaaS, IA y proveedores USA",
+      "warn"
+    ],
+    [
+      "Contratos de encargados",
+      "Punto critico",
+      "Sin dato interno verificado",
+      "risk"
+    ]
+  ],
+  "summary": {
+    "status": "Escenario de cumplimiento medio con presion creciente sobre transparencia, brechas y gobierno de proveedores.",
+    "recommendation": "Abrir la jornada revisando tres frentes: deber de informar, protocolos de brecha y mapa de encargados con acceso real a datos.",
+    "risks": [
+      "La AEPD y el EDPB ponen foco operativo en transparencia e informacion al interesado durante 2026.",
+      "Las brechas siguen siendo una fuente central de riesgo: la AEPD notifico 2.765 brechas en 2025 y mantiene un cuadro de mando mensual actualizado a 30 de abril de 2026.",
+      "La exposicion de encargados y subencargados aumenta el impacto potencial en pymes espanolas con stack SaaS fragmentado.",
+      "La agenda europea de IA y DPIA eleva el liston de documentacion, trazabilidad y explicabilidad."
+    ],
+    "quick_points": [
+      "Revisar hoy clausulas informativas, formularios y capas de privacidad.",
+      "Actualizar inventario de proveedores con acceso a datos personales.",
+      "Revalidar DPIA si existe IA, biometria, salud, geolocalizacion o scoring.",
+      "Comprobar cookies, terceros y transferencias fuera del EEE."
+    ]
+  },
+  "compliance": {
+    "percent": 69,
+    "label": "Cumplimiento medio",
+    "trend": "Ligero deterioro del riesgo externo en los ultimos 30 dias por refuerzo supervisor y exposicion de terceros.",
+    "direction": "Riesgo al alza",
+    "areas": [
+      "Transparencia e informacion",
+      "Encargados de tratamiento",
+      "Gestion de brechas",
+      "DPIA",
+      "Transferencias internacionales"
+    ],
+    "note": "No se trata de una auditoria interna confirmada. La metrica es una valoracion analitica externa basada en novedades publicas verificadas y obligaciones vigentes."
+  },
+  "risk_by_area": [
+    [
+      "Gestion de datos personales",
+      "Medio",
+      "Se mantiene presion en minimizacion, base juridica y privacidad desde el diseno."
+    ],
+    [
+      "Derechos de los interesados",
+      "Alto",
+      "La accion coordinada europea 2026 prioriza transparencia e informacion."
+    ],
+    [
+      "Seguridad de la informacion",
+      "Alto",
+      "Brechas y sanciones recientes siguen concentrando impacto economico y reputacional."
+    ],
+    [
+      "Encargados de tratamiento",
+      "Alto",
+      "Una sola brecha en un proveedor puede escalar a multiples responsables."
+    ],
+    [
+      "Transferencias internacionales",
+      "Medio-Alto",
+      "Nube, soporte, CRM e IA de terceros requieren revisiones documentadas."
+    ],
+    [
+      "Documentacion y politicas",
+      "Medio",
+      "Conviene actualizar brechas, IA, retencion y respuesta a derechos."
+    ],
+    [
+      "Registro de actividades",
+      "Medio",
+      "Debe reflejar finalidades, terceros, ubicaciones y tratamientos previos a la recogida efectiva."
+    ],
+    [
+      "Evaluaciones DPIA",
+      "Alto",
+      "La plantilla EDPB refuerza la expectativa de evidencia estructurada."
+    ],
+    [
+      "Consentimiento",
+      "Medio",
+      "Foco especial en cookies y marketing."
+    ],
+    [
+      "Cookies",
+      "Medio-Alto",
+      "Riesgo alto si hay terceros, analitica avanzada o consent mode incompleto."
+    ],
+    [
+      "Formacion y concienciacion",
+      "Medio-Alto",
+      "Phishing y errores operativos siguen muy presentes."
+    ],
+    [
+      "Notificacion de brechas",
+      "Alto",
+      "La rapidez y calidad de la respuesta siguen bajo escrutinio."
+    ]
+  ],
+  "incidents": [
+    {
+      "date": "2026-05-14",
+      "type": "Acceso no autorizado",
+      "severity": "Alta",
+      "description": "INCIBE-CERT resume el incidente de seguridad en la agencia nacional de identidad digital de Francia, con afectacion a millones de ciudadanos.",
+      "data_affected": "Identidad digital y datos asociados, segun informacion institucional disponible",
+      "sector": "Administracion digital",
+      "status": "Hecho institucional confirmado",
+      "recommended_action": "Tomar nota para planes de continuidad, segregacion de datos y protocolos de identidad digital."
+    },
+    {
+      "date": "2026-05-11",
+      "type": "Brecha de datos + sancion",
+      "severity": "Alta",
+      "description": "La ICO multa a South Staffordshire tras un ciberataque con datos publicados en la dark web.",
+      "data_affected": "633.887 personas comprometidas; la organizacion retenia informacion de hasta 1,85 millones de clientes y empleados",
+      "sector": "Utilities",
+      "status": "Hecho oficial confirmado",
+      "recommended_action": "Reforzar deteccion, logging, segmentacion y gobierno de terceros."
+    },
+    {
+      "date": "2026-05-07",
+      "type": "Brecha de datos",
+      "severity": "Media-Alta",
+      "description": "INCIBE-CERT recoge el incidente comunicado por Rituals que afecta a parte de la base de clientes de su programa de fidelizacion.",
+      "data_affected": "Datos de clientes del programa My Rituals",
+      "sector": "Retail",
+      "status": "Hecho institucional confirmado",
+      "recommended_action": "Revisar programas de fidelizacion, retencion, MFA y acceso de terceros."
+    },
+    {
+      "date": "2026-01-14",
+      "type": "Brecha de seguridad + sancion",
+      "severity": "Critica",
+      "description": "La CNIL sanciona a FREE MOBILE y FREE por seguridad insuficiente y obligaciones posteriores a la brecha.",
+      "data_affected": "24 millones de contratos; IBAN en parte de los afectados",
+      "sector": "Telecomunicaciones",
+      "status": "Hecho oficial confirmado",
+      "recommended_action": "Endurecer MFA, deteccion de anomalias, retencion y notificacion a interesados."
+    }
+  ],
+  "legal_updates": [
+    {
+      "date": "2026-05-08",
+      "headline": "La Comision Europea abre consulta sobre directrices de transparencia del AI Act",
+      "source": "Comision Europea",
+      "jurisdiction": "UE",
+      "impact": "Alto",
+      "type": "Hecho confirmado",
+      "recommendation": "Preparar criterios internos para informar sobre interaccion con IA, deepfakes y etiquetado de contenido sintetico antes del 2 de agosto de 2026."
+    },
+    {
+      "date": "2026-05-06",
+      "headline": "La AEPD publica su Memoria 2025: 30.931 reclamaciones y 2.765 brechas notificadas",
+      "source": "AEPD",
+      "jurisdiction": "Espana",
+      "impact": "Alto",
+      "type": "Hecho confirmado",
+      "recommendation": "Usar estas cifras como benchmark de presion regulatoria y revisar priorizacion interna de seguridad y respuesta a reclamaciones."
+    },
+    {
+      "date": "2026-04-30",
+      "headline": "La AEPD mantiene un cuadro de mando dinamico de brechas y publica informes mensuales",
+      "source": "AEPD",
+      "jurisdiction": "Espana",
+      "impact": "Medio-Alto",
+      "type": "Hecho confirmado",
+      "recommendation": "Comparar patrones sectoriales y ajustar tipologias de brecha y playbooks internos."
+    },
+    {
+      "date": "2026-04-16",
+      "headline": "El EDPB adopta Guidelines 1/2026 para investigacion cientifica y acelera la anonimizzazione",
+      "source": "EDPB",
+      "jurisdiction": "UE",
+      "impact": "Medio-Alto",
+      "type": "Hecho confirmado",
+      "recommendation": "Revisar bases juridicas, compatibilidad de finalidades y test de anonimización o seudonimizacion en I+D y analitica."
+    },
+    {
+      "date": "2026-04-14",
+      "headline": "El EDPB adopta una plantilla DPIA y la somete a consulta publica hasta el 9 de junio",
+      "source": "EDPB",
+      "jurisdiction": "UE",
+      "impact": "Medio-Alto",
+      "type": "Hecho confirmado",
+      "recommendation": "Alinear la estructura de las DPIA internas con la plantilla europea para reducir huecos documentales."
+    },
+    {
+      "date": "2026-03-25",
+      "headline": "La AEPD publica su Plan de Actuacion 2026 con 32 objetivos operativos y 115 acciones",
+      "source": "AEPD",
+      "jurisdiction": "Espana",
+      "impact": "Medio-Alto",
+      "type": "Hecho confirmado",
+      "recommendation": "Alinear el roadmap de cumplimiento con los ejes de prevencion, innovacion y refuerzo de DPD."
+    },
+    {
+      "date": "2026-03-19",
+      "headline": "La AEPD participa en la accion europea coordinada sobre transparencia e informacion",
+      "source": "AEPD / EDPB",
+      "jurisdiction": "UE / Espana",
+      "impact": "Critico",
+      "type": "Hecho confirmado",
+      "recommendation": "Revisar de inmediato articulos 12, 13 y 14 RGPD y el lenguaje de las capas informativas."
+    }
+  ],
+  "sanctions": [
+    {
+      "entity": "South Staffordshire Plc y South Staffordshire Water Plc",
+      "authority": "ICO",
+      "date": "2026-05-11",
+      "sector": "Utilities",
+      "reason": "Deficiencias de seguridad y brecha con publicacion de datos en la dark web",
+      "amount": "GBP 963.900",
+      "lesson": "La permanencia del atacante y la deteccion tardia multiplican la exposicion regulatoria.",
+      "action": "Reforzar deteccion, logging y respuesta temprana."
+    },
+    {
+      "entity": "FREE MOBILE y FREE",
+      "authority": "CNIL",
+      "date": "2026-01-14",
+      "sector": "Telecomunicaciones",
+      "reason": "Seguridad insuficiente, retencion excesiva y obligaciones ligadas a la brecha",
+      "amount": "EUR 42.000.000",
+      "lesson": "La debilidad en VPN, deteccion de anomalias y ciclo de vida del dato eleva el importe sancionador.",
+      "action": "Aplicar MFA robusta, deteccion de comportamiento anomalo y limpieza de datos."
+    },
+    {
+      "entity": "Panorama AEPD 2025",
+      "authority": "AEPD",
+      "date": "2026-05-06",
+      "sector": "Multisector",
+      "reason": "La Memoria 2025 confirma fuerte presion sobre seguridad y brechas",
+      "amount": "EUR 48.108.765 en sanciones totales; EUR 19.836.603 ligados a seguridad y brechas",
+      "lesson": "La seguridad de la informacion sigue siendo uno de los principales vectores economicos de incumplimiento.",
+      "action": "Revisar evidencias de diligencia en arts. 32, 33 y 34 RGPD."
+    }
+  ],
+  "rights": {
+    "items": [
+      [
+        "Acceso",
+        "Riesgo medio"
+      ],
+      [
+        "Rectificacion",
+        "Riesgo bajo-medio"
+      ],
+      [
+        "Supresion",
+        "Riesgo medio"
+      ],
+      [
+        "Oposicion",
+        "Riesgo medio"
+      ],
+      [
+        "Limitacion",
+        "Riesgo bajo-medio"
+      ],
+      [
+        "Portabilidad",
+        "Riesgo bajo-medio"
+      ],
+      [
+        "Decisiones automatizadas",
+        "Riesgo alto si existe IA o scoring"
+      ],
+      [
+        "Plazos de respuesta",
+        "Necesitan control reforzado"
+      ],
+      [
+        "Solicitudes pendientes",
+        "Sin dato corporativo interno verificado"
+      ],
+      [
+        "Solicitudes vencidas",
+        "Sin dato corporativo interno verificado"
+      ]
+    ],
+    "note": "La principal exposicion visible para hoy sigue siendo la transparencia previa y la capacidad de explicar el tratamiento de forma comprensible."
+  },
+  "dpia_transfer_cookies": {
+    "dpia_list": [
+      "IA generativa y agentica",
+      "Datos de salud",
+      "Videovigilancia avanzada",
+      "Localizacion y movilidad",
+      "Plataformas cloud con multiples subencargados"
+    ],
+    "transfer_actions": [
+      "Inventario de proveedores con acceso real a datos",
+      "Revision de subencargados y ubicaciones",
+      "Comprobacion de logs de acceso y soporte"
+    ],
+    "cookies_note": "Auditar scripts, CMP, etiquetado y cargas previas al consentimiento. Riesgo alto cuando intervienen terceros, marketing o analitica avanzada."
+  },
+  "training": {
+    "items": [
+      [
+        "Formacion completada",
+        "Sin dato interno verificado"
+      ],
+      [
+        "Formacion pendiente",
+        "Alta prioridad operativa"
+      ],
+      [
+        "Proxima formacion",
+        "Recomendado en 7-10 dias"
+      ],
+      [
+        "Riesgo",
+        "Medio-Alto por error humano y suplantacion"
+      ]
+    ],
+    "areas": [
+      "Phishing",
+      "Envio indebido",
+      "Uso de IA con datos personales",
+      "Respuesta a brechas"
+    ]
+  },
+  "recommendations": [
+    [
+      "Critica",
+      "Revisar capas informativas y textos de privacidad",
+      "Alinear articulos 12, 13 y 14 RGPD en web, formularios, onboarding y RRHH."
+    ],
+    [
+      "Critica",
+      "Asegurar protocolos de brecha con encargados",
+      "Definir SLA, escalado, notificacion delegada y responsables de decision."
+    ],
+    [
+      "Alta",
+      "Actualizar inventario de proveedores con acceso a datos",
+      "Confirmar subencargados, ubicaciones, accesos y transferencias."
+    ],
+    [
+      "Alta",
+      "Lanzar o revalidar DPIA en IA y analitica avanzada",
+      "Especialmente si hay autonomia, perfilado, biometria o datos sensibles."
+    ],
+    [
+      "Alta",
+      "Revisar configuraciones por defecto",
+      "Minimizacion, retencion, accesos y visibilidad por roles."
+    ],
+    [
+      "Media",
+      "Auditar cookies y terceros",
+      "Bloqueo previo real, rechazo equivalente y trazabilidad del consentimiento."
+    ],
+    [
+      "Media",
+      "Ejecutar microformacion antifraude",
+      "Phishing, BCC, suplantacion y uso seguro de herramientas de IA."
+    ],
+    [
+      "Baja",
+      "Seguir las consultas europeas abiertas",
+      "Valorar impacto interno de la plantilla DPIA y de las directrices AI Act."
+    ]
+  ],
+  "alerts": [
+    "La accion coordinada europea de 2026 sobre transparencia mantiene prioridad maxima para informativas y deber de informar.",
+    "La AEPD consolida la necesidad de gestionar brechas con enfoque de cadena de proveedores.",
+    "Las sanciones recientes confirman presion alta sobre seguridad, deteccion y notificacion.",
+    "IA y proveedores cloud siguen elevando el riesgo para empresas espanolas y pymes.",
+    "No se ha localizado una nueva sancion singular de la AEPD publicada hoy con verificacion suficiente."
+  ],
+  "ai_section": {
+    "risk": "62/100",
+    "priority": "Alta",
+    "urgency": "Alta",
+    "areas": [
+      "Transparencia deficiente",
+      "Dependencia de encargados",
+      "IA sin DPIA suficiente",
+      "Brechas con datos financieros o de salud"
+    ],
+    "trends": [
+      "Mayor exigencia sobre informar al interesado desde el primer punto de contacto.",
+      "Mas supervision sobre IA aplicada, deepfakes y cadenas de subencargados.",
+      "Persistencia de sanciones ligadas a seguridad insuficiente y deteccion tardia."
+    ],
+    "recommendation": "Abrir el dia con una revision combinada de transparencia, proveedores y protocolos de brecha.",
+    "impact": "Riesgo reputacional, reclamaciones, costes de respuesta y tension contractual."
+  },
+  "sources": [
+    [
+      "AEPD - Memoria 2025",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-recibio-mas-de-30.000-reclamaciones-en-2025-un-64-mas",
+      "2026-05-06",
+      "Oficial"
+    ],
+    [
+      "AEPD - Plan de Actuacion 2026",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/agencia-publica-su-plan-actuacion-2026-y-el-informe-cumplimiento-iniciaitivas-2025",
+      "2026-03-25",
+      "Oficial"
+    ],
+    [
+      "AEPD - Notificaciones de brechas",
+      "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion/notificaciones-de-brechas-de-datos-personales",
+      "2026-04-30",
+      "Oficial"
+    ],
+    [
+      "AEPD - 2.765 brechas notificadas en 2025",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-en-2025-mas-2.700-notificaciones-brechas",
+      "2026-01-23",
+      "Oficial"
+    ],
+    [
+      "AEPD - Accion europea sobre transparencia",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-participa-en-accion-europea-analizar-transparencia",
+      "2026-03-19",
+      "Oficial"
+    ],
+    [
+      "EDPB - DPIA template",
+      "https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_en",
+      "2026-04-14",
+      "Oficial"
+    ],
+    [
+      "EDPB - Guidelines 1/2026 investigacion cientifica",
+      "https://www.edpb.europa.eu/news/news/2026/edpb-brings-clarity-data-processing-scientific-research-speeds-finalisation_es",
+      "2026-04-16",
+      "Oficial"
+    ],
+    [
+      "Comision Europea - Consulta AI transparency obligations",
+      "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+      "2026-05-08",
+      "Oficial"
+    ],
+    [
+      "Comision Europea - Transferencias fuera de la UE",
+      "https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/obligations/what-rules-apply-if-my-organisation-transfers-data-outside-eu_en",
+      "revisado 2026-05-18",
+      "Oficial"
+    ],
+    [
+      "ICO - South Staffordshire",
+      "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/",
+      "2026-05-11",
+      "Oficial"
+    ],
+    [
+      "CNIL - FREE MOBILE y FREE",
+      "https://www.cnil.fr/en/node/168013",
+      "2026-01-14",
+      "Oficial"
+    ],
+    [
+      "INCIBE-CERT - Identidad digital Francia",
+      "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-en-la-agencia-nacional-de-identidad-digital-de",
+      "2026-05-14",
+      "Institucional"
+    ],
+    [
+      "INCIBE-CERT - Rituals",
+      "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/rituals-has-detected-security-incident-affecting-its-customer-database",
+      "2026-05-07",
+      "Institucional"
+    ]
+  ],
+  "notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos, tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional."
+}
