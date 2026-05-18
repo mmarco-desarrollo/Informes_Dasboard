@@ -1,0 +1,832 @@
+%PDF-1.4
+%PDFASCII ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 20 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 19 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/Contents 21 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 19 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/)
+>> /Border [ 0 0 0 ] /Rect [ 132.1555 416.0047 239.876 426.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+7 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://openai.com/index/advanced-account-security/)
+>> /Border [ 0 0 0 ] /Rect [ 132.1555 398.0047 267.28 408.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+8 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://blog.google/security/android-gemini-intelligence-security-privacy/)
+>> /Border [ 0 0 0 ] /Rect [ 130.736 380.0047 220.4875 390.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+9 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/)
+>> /Border [ 0 0 0 ] /Rect [ 170.873 362.0047 284.2375 372.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+10 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://docs.x.ai/developers/models)
+>> /Border [ 0 0 0 ] /Rect [ 115.6145 344.0047 157.6555 354.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+11 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://mistral.ai/news/mistral-3)
+>> /Border [ 0 0 0 ] /Rect [ 138.7515 326.0047 170.8645 336.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+12 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://docs.mistral.ai/resources/security-advisories)
+>> /Border [ 0 0 0 ] /Rect [ 150.082 308.0047 243.123 318.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+13 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.perplexity.ai/es/hub/blog/introducing-finance-search-in-the-agent-api)
+>> /Border [ 0 0 0 ] /Rect [ 140.647 290.0047 239.8505 300.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+14 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://www.anthropic.com/news/pwc-expanded-partnership)
+>> /Border [ 0 0 0 ] /Rect [ 139.236 272.0047 227.568 282.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+15 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act)
+>> /Border [ 0 0 0 ] /Rect [ 189.301 254.0047 275.7545 264.2047 ] /Subtype /Link /Type /Annot
+>>
+endobj
+16 0 obj
+<<
+/Annots [ 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R ] /Contents 22 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 19 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+17 0 obj
+<<
+/PageMode /UseNone /Pages 19 0 R /Type /Catalog
+>>
+endobj
+18 0 obj
+<<
+/Author (Radar Ejecutivo IA) /CreationDate (D:20260518062343+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260518062343+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Dashboard IA 08:00) /Trapped /False
+>>
+endobj
+19 0 obj
+<<
+/Count 3 /Kids [ 4 0 R 5 0 R 16 0 R ] /Type /Pages
+>>
+endobj
+20 0 obj
+<<
+/Length 6605
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.105882 .211765 .372549 RG
+.8 w
+n 22.67717 22.67717 549.9213 796.5354 re S
+Q
+q
+1 0 0 1 45.68504 778.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (MMarco Seguridad) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 714.2047 cm
+q
+.929412 .952941 1 rg
+BT 1 0 0 1 0 32 Tm /F2 24 Tf 28 TL (Informe Ejecutivo Premium de Inteligencia) Tj T* (Artificial | Corte 08:00) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 680.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (Generado: 2026-05-18 08:17 CEST \267 Zona horaria: Europe/Madrid \267 Estado global: Actividad alta con foco en seguridad) Tj T* (agentic, supply chain y adopcion enterprise) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 648.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (Nivel de impacto IA: Alto \267 Proxima actualizacion esperada: 2026-05-18 12:00 CEST \267 Perfil: Ciberseguridad, Blockchain, IA) Tj T* (y Telecomunicaciones) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 636.2047 cm
+Q
+q
+1 0 0 1 48.18898 580.2047 cm
+q
+.062745 .129412 .235294 rg
+n 0 56 498.8976 -28 re f*
+.039216 .090196 .168627 rg
+n 0 28 498.8976 -28 re f*
+.929412 .952941 1 rg
+BT /F2 8.5 Tf 12 TL ET
+BT 1 0 0 1 17.01056 39.5 Tm (Senales confirmadas) Tj T* ET
+BT 1 0 0 1 148.5819 39.5 Tm (Alertas activas) Tj T* ET
+BT 1 0 0 1 259.6169 39.5 Tm (Lanzamientos / modelos) Tj T* ET
+BT 1 0 0 1 398.2768 39.5 Tm (Frentes regulatorios) Tj T* ET
+BT /F2 16 Tf 12 TL ET
+BT 1 0 0 1 55.07956 4 Tm (9) Tj T* ET
+BT 1 0 0 1 174.1347 4 Tm (3) Tj T* ET
+BT 1 0 0 1 304.5284 4 Tm (5) Tj T* ET
+BT 1 0 0 1 434.9221 4 Tm (1) Tj T* ET
+q
+1 J
+1 j
+.192157 .337255 .537255 RG
+.6 w
+n 0 56 m 498.8976 56 l S
+n 0 0 m 498.8976 0 l S
+n 0 0 m 0 56 l S
+n 498.8976 0 m 498.8976 56 l S
+n 0 28 m 498.8976 28 l S
+n 119.0551 0 m 119.0551 56 l S
+n 238.1102 0 m 238.1102 56 l S
+n 379.8425 0 m 379.8425 56 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 572.2047 cm
+Q
+q
+1 0 0 1 45.68504 544.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Resumen ejecutivo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 510.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (La ventana reciente confirma que el valor ejecutivo del mercado no se concentra solo en nuevos modelos. La prioridad real) Tj T* (se desplaza hacia seguridad agentic, gobierno de dependencias y despliegue enterprise con trazabilidad.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 465.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 29.8 Tm /F1 9.2 Tf 13 TL (El riesgo mas tangible sigue viniendo de supply chain y configuraciones explotables: OpenAI confirma impacto limitado por) Tj T* -0.079731 Tw (TanStack, Mistral mantiene su advisory de paquetes comprometidos y Microsoft documenta abuso activo sobre apps IA mal) Tj T* 0 Tw (configuradas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 433.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (En oportunidad, Mistral 3, Finance Search y la expansion Anthropic-PwC muestran una fase mas madura del mercado:) Tj T* (modelos abiertos mas competitivos, retrieval vertical con citas y servicios de implantacion a escala real.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 405.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Alertas activas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 371.2047 cm
+q
+BT 1 0 0 1 0 16.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Critica \267 TanStack / Mini Shai-Hulud) Tj /F1 9.2 Tf ( \227 Revisar paquetes TanStack y actualizar apps macOS OpenAI antes del 12 de) Tj T* (junio de 2026.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 339.2047 cm
+q
+BT 1 0 0 1 0 16.8 Tm -0.012264 Tw 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Alta \267 mistralai==2.4.6 y paquetes npm afectados) Tj /F1 9.2 Tf ( \227 Limpiar hosts, rotar secretos y comprobar lockfiles, caches y mirrors) Tj T* 0 Tw (privados.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 307.2047 cm
+q
+BT 1 0 0 1 0 16.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Alta \267 Misconfiguraciones en apps IA y MCP) Tj /F1 9.2 Tf ( \227 Cerrar exposiciones con autenticacion fuerte, contexto de usuario y) Tj T* (aislamiento de herramientas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 279.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Noticias, lanzamientos e incidentes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 258.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (OpenAI confirma impacto limitado del ataque supply chain sobre TanStack) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 240.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Incidente / Supply chain \267 Hecho confirmado \267 Impacto Alto \267 Urgencia Alta) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 208.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (OpenAI confirm\363 actividad maliciosa en dos dispositivos corporativos, exfiltraci\363n limitada de credenciales en un) Tj T* (subconjunto de repositorios internos y rotaci\363n de certificados de firma.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 178.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Riesgo operativo alto para entornos con dependencias JavaScript o cadenas CI/CD amplias; no hay evidencia de) Tj T* (exposici\363n de datos de clientes.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 148.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.5 Tf 12 TL -0.036499 Tw (Recomendacion: Verificar inventario npm y macOS, revisar versiones afectadas y acelerar pol\355ticas de procedencia y edad m\355nima de) Tj T* 0 Tw (paquetes.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 129.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (OpenAI activa Advanced Account Security para cuentas de mayor riesgo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 111.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Seguridad de plataforma \267 Hecho confirmado \267 Impacto Medio-Alto \267 Urgencia Media) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 79.20472 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (OpenAI lanz\363 una capa opt-in de protecci\363n reforzada para ChatGPT y Codex; los usuarios de Trusted Access for Cyber) Tj T* (deber\341n activarla antes del 1 de junio de 2026.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 61.20472 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Mejora inmediata de protecci\363n de cuentas con contexto sensible y conectores operativos.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 43.20472 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Adoptar la funci\363n en cuentas de administraci\363n, investigaci\363n y operadores con acceso a flujos cr\355ticos.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+21 0 obj
+<<
+/Length 8052
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.105882 .211765 .372549 RG
+.8 w
+n 22.67717 22.67717 549.9213 796.5354 re S
+Q
+q
+1 0 0 1 45.68504 783.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (Google sit\372a privacidad y control expl\355cito como base de Gemini Intelligence en Android) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 765.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Lanzamiento / Seguridad \267 Hecho confirmado \267 Impacto Medio \267 Urgencia Media) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 733.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (Google presenta Gemini Intelligence como capa agentic en Android con tres principios: control expl\355cito, protecci\363n integral) Tj T* (de datos y transparencia operativa.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 703.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Se\361al estrat\351gica de que el valor agentic m\363vil vendr\341 acompa\361ado de requisitos fuertes de privacidad y) Tj T* (trazabilidad.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 685.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Seguir esta l\355nea como referencia para propuestas de IA en dispositivo y automatizaci\363n asistida.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 666.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (Microsoft alerta de configuraciones explotables en apps IA desplegadas con prisa) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 648.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Vulnerabilidad / Hardening \267 Hecho confirmado \267 Impacto Alto \267 Urgencia Alta) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 616.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (Microsoft documenta servicios IA expuestos con autenticaci\363n d\351bil o ausente y casos de abuso activo que permitieron) Tj T* (RCE, robo de credenciales y acceso a herramientas internas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 598.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Riesgo muy pr\341ctico para despliegues con Kubernetes, MCP y agentes con herramientas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 568.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Auditar autenticaci\363n, contexto de ejecuci\363n de herramientas y segmentaci\363n de secretos antes de ampliar) Tj T* (autonom\355a agentic.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 549.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (xAI consolida Grok 4.3, Voice API y retira varios modelos anteriores) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 531.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Modelos / API \267 Hecho confirmado \267 Impacto Medio \267 Urgencia Media) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 499.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (La documentaci\363n actualizada prioriza Grok 4.3 para usos generales, expone Voice API en tiempo real y confirma la) Tj T* (retirada de varios modelos antiguos desde el 15 de mayo de 2026.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 481.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Impacto directo en integraciones que no hayan migrado nombres de modelo o flujos de audio.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 463.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Revisar integraciones xAI y congelar inventario de slugs antiguos para evitar fallos silenciosos.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 444.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (Mistral 3 impulsa la ola open multimodal con licencia Apache 2.0) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 426.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Modelo / Open source \267 Hecho confirmado \267 Impacto Alto \267 Urgencia Media) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 394.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (Mistral lanza la familia Mistral 3 con modelos 14B, 8B y 3B m\341s Mistral Large 3, todos bajo Apache 2.0 y con foco en) Tj T* (despliegue abierto multimodal y multiling\374e.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 376.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Aumenta la presi\363n competitiva sobre despliegues privados y casos con requisitos de control de infraestructura.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 358.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Evaluar Large 3 y Ministral 3 para POCs de soberan\355a, soporte t\351cnico y copilotos internos.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 339.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (Perplexity lleva Finance Search a la Agent API) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 321.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Herramienta / Retrieval \267 Hecho confirmado \267 Impacto Medio \267 Urgencia Media) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 289.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (Finance Search combina datos financieros con licencia, mercado en tiempo real y web con citas en una sola llamada de) Tj T* (herramienta.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 271.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Utilidad inmediata para agentes de an\341lisis, due diligence y reporting econ\363mico con trazabilidad.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 253.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Probarlo como patr\363n de retrieval vertical para anal\355tica sectorial y servicios de monitorizaci\363n.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 234.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (Anthropic y PwC profundizan su alianza para pasar de pilotos a producci\363n) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 216.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Empresa / Alianza \267 Hecho confirmado \267 Impacto Alto \267 Urgencia Media) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 184.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (PwC ampliar\341 Claude Code y Cowork, montar\341 un Center of Excellence y formar\341 a 30.000 profesionales, con foco visible) Tj T* (en finanzas, salud y ciberseguridad.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 166.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Se\361al fuerte de madurez enterprise y de demanda por servicios de implantaci\363n y gobierno de agentes.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 148.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Posicionar ofertas de consultor\355a en automatizaci\363n segura, redise\361o de procesos y cumplimiento.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 129.2047 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 3.8 Tm /F2 9.2 Tf 13 TL (La Comisi\363n Europea abre consulta sobre transparencia del AI Act hasta el 3 de junio) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 111.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Regulaci\363n \267 Hecho confirmado \267 Impacto Medio-Alto \267 Urgencia Alta) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 79.20472 cm
+q
+.909804 .941176 1 rg
+BT 1 0 0 1 0 16.8 Tm /F1 9.2 Tf 13 TL (La Comisi\363n pide feedback sobre directrices de obligaciones de transparencia del art\355culo 50 para sistemas de IA y) Tj T* (contenido generado o manipulado.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 61.20472 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Utilidad / Riesgo: Frente regulatorio muy \372til para servicios de readiness, etiquetado y gobierno de contenido sint\351tico.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 43.20472 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (Recomendacion: Preparar gu\355a ejecutiva y checklist comercial para clientes que publiquen contenido generado por IA.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+22 0 obj
+<<
+/Length 5872
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.105882 .211765 .372549 RG
+.8 w
+n 22.67717 22.67717 549.9213 796.5354 re S
+Q
+q
+1 0 0 1 45.68504 778.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Tendencias y oportunidades) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 757.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Alta) Tj /F1 9.2 Tf ( \227 Dise\361ar una oferta de hardening agentic para pymes: identidad, secretos, MCP y controles de tool execution.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 738.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Alta) Tj /F1 9.2 Tf ( \227 Montar demostradores con modelos abiertos Mistral 3 para clientes que pidan control de datos e infraestructura.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 719.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Media) Tj /F1 9.2 Tf ( \227 Crear servicio de vigilancia regulatoria AI Act centrado en etiquetado, transparencia y contenido sint\351tico.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 700.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Media) Tj /F1 9.2 Tf ( \227 Probar retrieval vertical con Finance Search como referencia para radares sectoriales y reporting automatizado.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 672.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Recomendaciones ejecutivas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 638.2047 cm
+q
+BT 1 0 0 1 0 16.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Critica) Tj /F1 9.2 Tf ( \227 Auditar hoy dependencias npm/PyPI relacionadas con TanStack y `mistralai==2.4.6`; rotar secretos si hubo) Tj T* (exposici\363n.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 606.2047 cm
+q
+BT 1 0 0 1 0 16.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Alta) Tj /F1 9.2 Tf ( \227 Exigir autenticaci\363n fuerte, m\355nimo privilegio y contexto de usuario real en cualquier agente con herramientas o) Tj T* (MCP.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 587.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Alta) Tj /F1 9.2 Tf ( \227 Planificar actualizaci\363n de apps macOS de OpenAI antes del 12 de junio de 2026 en todos los equipos afectados.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 568.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Media) Tj /F1 9.2 Tf ( \227 Seleccionar dos POCs: un copiloto con Mistral 3 en entorno privado y un radar financiero con retrieval citado.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 549.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (Baja) Tj /F1 9.2 Tf ( \227 Preparar contenido comercial sobre AI Act y gobierno de IA aplicado a pymes y clientes regulados.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 521.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Calendario) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 500.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (2026-06-01) Tj /F1 9.2 Tf ( \227 OpenAI: Advanced Account Security pasa a ser obligatoria para usuarios de Trusted Access for Cyber.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 481.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (2026-06-03) Tj /F1 9.2 Tf ( \227 UE: cierre de la consulta sobre transparencia del AI Act.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 462.2047 cm
+q
+BT 1 0 0 1 0 3.8 Tm 13 TL /F2 9.2 Tf .909804 .941176 1 rg (2026-06-12) Tj /F1 9.2 Tf ( \227 OpenAI: revocaci\363n efectiva del certificado antiguo; macOS debe estar actualizado.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 434.2047 cm
+q
+.54902 .788235 1 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Fuentes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 414.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (OpenAI \267 2026-05-13 \267 ) Tj .309804 .878431 1 rg (OpenAI TanStack Response) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 396.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (OpenAI \267 2026-04-30 \267 ) Tj .309804 .878431 1 rg (OpenAI Advanced Account Security) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 378.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (Google \267 2026-05-12 \267 ) Tj .309804 .878431 1 rg (Google Gemini Security) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 360.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (Microsoft Security \267 2026-05-14 \267 ) Tj .309804 .878431 1 rg (Microsoft AI Misconfigurations) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 342.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (xAI \267 2026-05-09 \267 ) Tj .309804 .878431 1 rg (xAI Models) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 324.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (Mistral AI \267 2026-05-13 \267 ) Tj .309804 .878431 1 rg (Mistral 3) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 306.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (Mistral Docs \267 2026-05-12 \267 ) Tj .309804 .878431 1 rg (Mistral Security Advisory) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 288.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (Perplexity \267 2026-05-06 \267 ) Tj .309804 .878431 1 rg (Perplexity Finance Search) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 270.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (Anthropic \267 2026-05-14 \267 ) Tj .309804 .878431 1 rg (Anthropic PwC Alliance) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 252.2047 cm
+q
+BT 1 0 0 1 0 3.5 Tm 12 TL /F1 8.5 Tf .65098 .737255 .878431 rg (European Commission \267 2026-05-08 \267 ) Tj .309804 .878431 1 rg (EU AI Act Consultation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 238.2047 cm
+Q
+q
+1 0 0 1 45.68504 208.2047 cm
+q
+.65098 .737255 .878431 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.5 Tf 12 TL (Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene) Tj T* (finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000000073 00000 n 
+0000000114 00000 n 
+0000000221 00000 n 
+0000000333 00000 n 
+0000000538 00000 n 
+0000000743 00000 n 
+0000000972 00000 n 
+0000001173 00000 n 
+0000001398 00000 n 
+0000001680 00000 n 
+0000001868 00000 n 
+0000002054 00000 n 
+0000002258 00000 n 
+0000002491 00000 n 
+0000002697 00000 n 
+0000002971 00000 n 
+0000003255 00000 n 
+0000003325 00000 n 
+0000003619 00000 n 
+0000003692 00000 n 
+0000010349 00000 n 
+0000018453 00000 n 
+trailer
+<<
+/ID 
+[<1ee9ba795d8239e30e2bc2fc81060533><1ee9ba795d8239e30e2bc2fc81060533>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 18 0 R
+/Root 17 0 R
+/Size 23
+>>
+startxref
+24377
+%%EOF
