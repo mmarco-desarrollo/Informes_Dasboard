@@ -1,0 +1,323 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "title": "Informe Ejecutivo Premium de Inteligencia Artificial | Corte 08:00",
+  "generated_at": "2026-05-18 08:17 CEST",
+  "timezone": "Europe/Madrid",
+  "impact_level": "Alto",
+  "ecosystem_state": "Actividad alta con foco en seguridad agentic, supply chain y adopcion enterprise",
+  "next_update": "2026-05-18 12:00 CEST",
+  "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+  "kpis": {
+    "senales_confirmadas": 9,
+    "alertas_activas": 3,
+    "lanzamientos_y_modelos_clave": 5,
+    "frentes_regulatorios": 1
+  },
+  "executive_summary": [
+    "La ventana reciente confirma que el valor ejecutivo del mercado no se concentra solo en nuevos modelos. La prioridad real se desplaza hacia seguridad agentic, gobierno de dependencias y despliegue enterprise con trazabilidad.",
+    "El riesgo mas tangible sigue viniendo de supply chain y configuraciones explotables: OpenAI confirma impacto limitado por TanStack, Mistral mantiene su advisory de paquetes comprometidos y Microsoft documenta abuso activo sobre apps IA mal configuradas.",
+    "En oportunidad, Mistral 3, Finance Search y la expansion Anthropic-PwC muestran una fase mas madura del mercado: modelos abiertos mas competitivos, retrieval vertical con citas y servicios de implantacion a escala real."
+  ],
+  "timeline": [
+    [
+      "2026-05-12",
+      "Google fija narrativa de privacidad agentic en Android; Mistral publica advisory de supply chain."
+    ],
+    [
+      "2026-05-13",
+      "OpenAI comunica respuesta al incidente TanStack y mantiene fecha limite del 12 de junio para macOS."
+    ],
+    [
+      "2026-05-14",
+      "Microsoft publica guia de misconfiguraciones explotables; Anthropic y PwC escalan despliegue enterprise."
+    ],
+    [
+      "2026-05-15",
+      "xAI retira modelos antiguos y deja Grok 4.3 como referencia principal en docs."
+    ],
+    [
+      "2026-05-18",
+      "La prioridad ejecutiva sigue en seguridad agentic, migraciones limpias y trazabilidad regulatoria."
+    ]
+  ],
+  "news_items": [
+    {
+      "title": "OpenAI confirma impacto limitado del ataque supply chain sobre TanStack",
+      "category": "Incidente / Supply chain",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "urgency": "Alta",
+      "summary": "OpenAI confirmó actividad maliciosa en dos dispositivos corporativos, exfiltración limitada de credenciales en un subconjunto de repositorios internos y rotación de certificados de firma.",
+      "utility_or_risk": "Riesgo operativo alto para entornos con dependencias JavaScript o cadenas CI/CD amplias; no hay evidencia de exposición de datos de clientes.",
+      "recommendation": "Verificar inventario npm y macOS, revisar versiones afectadas y acelerar políticas de procedencia y edad mínima de paquetes.",
+      "source_label": "OpenAI TanStack Response",
+      "source_url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+      "published_at": "2026-05-13"
+    },
+    {
+      "title": "OpenAI activa Advanced Account Security para cuentas de mayor riesgo",
+      "category": "Seguridad de plataforma",
+      "status": "Hecho confirmado",
+      "impact": "Medio-Alto",
+      "urgency": "Media",
+      "summary": "OpenAI lanzó una capa opt-in de protección reforzada para ChatGPT y Codex; los usuarios de Trusted Access for Cyber deberán activarla antes del 1 de junio de 2026.",
+      "utility_or_risk": "Mejora inmediata de protección de cuentas con contexto sensible y conectores operativos.",
+      "recommendation": "Adoptar la función en cuentas de administración, investigación y operadores con acceso a flujos críticos.",
+      "source_label": "OpenAI Advanced Account Security",
+      "source_url": "https://openai.com/index/advanced-account-security/",
+      "published_at": "2026-04-30"
+    },
+    {
+      "title": "Google sitúa privacidad y control explícito como base de Gemini Intelligence en Android",
+      "category": "Lanzamiento / Seguridad",
+      "status": "Hecho confirmado",
+      "impact": "Medio",
+      "urgency": "Media",
+      "summary": "Google presenta Gemini Intelligence como capa agentic en Android con tres principios: control explícito, protección integral de datos y transparencia operativa.",
+      "utility_or_risk": "Señal estratégica de que el valor agentic móvil vendrá acompañado de requisitos fuertes de privacidad y trazabilidad.",
+      "recommendation": "Seguir esta línea como referencia para propuestas de IA en dispositivo y automatización asistida.",
+      "source_label": "Google Gemini Security",
+      "source_url": "https://blog.google/security/android-gemini-intelligence-security-privacy/",
+      "published_at": "2026-05-12"
+    },
+    {
+      "title": "Microsoft alerta de configuraciones explotables en apps IA desplegadas con prisa",
+      "category": "Vulnerabilidad / Hardening",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "urgency": "Alta",
+      "summary": "Microsoft documenta servicios IA expuestos con autenticación débil o ausente y casos de abuso activo que permitieron RCE, robo de credenciales y acceso a herramientas internas.",
+      "utility_or_risk": "Riesgo muy práctico para despliegues con Kubernetes, MCP y agentes con herramientas.",
+      "recommendation": "Auditar autenticación, contexto de ejecución de herramientas y segmentación de secretos antes de ampliar autonomía agentic.",
+      "source_label": "Microsoft AI Misconfigurations",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+      "published_at": "2026-05-14"
+    },
+    {
+      "title": "xAI consolida Grok 4.3, Voice API y retira varios modelos anteriores",
+      "category": "Modelos / API",
+      "status": "Hecho confirmado",
+      "impact": "Medio",
+      "urgency": "Media",
+      "summary": "La documentación actualizada prioriza Grok 4.3 para usos generales, expone Voice API en tiempo real y confirma la retirada de varios modelos antiguos desde el 15 de mayo de 2026.",
+      "utility_or_risk": "Impacto directo en integraciones que no hayan migrado nombres de modelo o flujos de audio.",
+      "recommendation": "Revisar integraciones xAI y congelar inventario de slugs antiguos para evitar fallos silenciosos.",
+      "source_label": "xAI Models",
+      "source_url": "https://docs.x.ai/developers/models",
+      "published_at": "2026-05-09"
+    },
+    {
+      "title": "Mistral 3 impulsa la ola open multimodal con licencia Apache 2.0",
+      "category": "Modelo / Open source",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "urgency": "Media",
+      "summary": "Mistral lanza la familia Mistral 3 con modelos 14B, 8B y 3B más Mistral Large 3, todos bajo Apache 2.0 y con foco en despliegue abierto multimodal y multilingüe.",
+      "utility_or_risk": "Aumenta la presión competitiva sobre despliegues privados y casos con requisitos de control de infraestructura.",
+      "recommendation": "Evaluar Large 3 y Ministral 3 para POCs de soberanía, soporte técnico y copilotos internos.",
+      "source_label": "Mistral 3",
+      "source_url": "https://mistral.ai/news/mistral-3",
+      "published_at": "2026-05-13"
+    },
+    {
+      "title": "Perplexity lleva Finance Search a la Agent API",
+      "category": "Herramienta / Retrieval",
+      "status": "Hecho confirmado",
+      "impact": "Medio",
+      "urgency": "Media",
+      "summary": "Finance Search combina datos financieros con licencia, mercado en tiempo real y web con citas en una sola llamada de herramienta.",
+      "utility_or_risk": "Utilidad inmediata para agentes de análisis, due diligence y reporting económico con trazabilidad.",
+      "recommendation": "Probarlo como patrón de retrieval vertical para analítica sectorial y servicios de monitorización.",
+      "source_label": "Perplexity Finance Search",
+      "source_url": "https://www.perplexity.ai/es/hub/blog/introducing-finance-search-in-the-agent-api",
+      "published_at": "2026-05-06"
+    },
+    {
+      "title": "Anthropic y PwC profundizan su alianza para pasar de pilotos a producción",
+      "category": "Empresa / Alianza",
+      "status": "Hecho confirmado",
+      "impact": "Alto",
+      "urgency": "Media",
+      "summary": "PwC ampliará Claude Code y Cowork, montará un Center of Excellence y formará a 30.000 profesionales, con foco visible en finanzas, salud y ciberseguridad.",
+      "utility_or_risk": "Señal fuerte de madurez enterprise y de demanda por servicios de implantación y gobierno de agentes.",
+      "recommendation": "Posicionar ofertas de consultoría en automatización segura, rediseño de procesos y cumplimiento.",
+      "source_label": "Anthropic PwC Alliance",
+      "source_url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+      "published_at": "2026-05-14"
+    },
+    {
+      "title": "La Comisión Europea abre consulta sobre transparencia del AI Act hasta el 3 de junio",
+      "category": "Regulación",
+      "status": "Hecho confirmado",
+      "impact": "Medio-Alto",
+      "urgency": "Alta",
+      "summary": "La Comisión pide feedback sobre directrices de obligaciones de transparencia del artículo 50 para sistemas de IA y contenido generado o manipulado.",
+      "utility_or_risk": "Frente regulatorio muy útil para servicios de readiness, etiquetado y gobierno de contenido sintético.",
+      "recommendation": "Preparar guía ejecutiva y checklist comercial para clientes que publiquen contenido generado por IA.",
+      "source_label": "EU AI Act Consultation",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+      "published_at": "2026-05-08"
+    }
+  ],
+  "active_alerts": [
+    {
+      "title": "TanStack / Mini Shai-Hulud",
+      "severity": "Critica",
+      "status": "Activa con remediacion en curso",
+      "note": "Revisar paquetes TanStack y actualizar apps macOS OpenAI antes del 12 de junio de 2026."
+    },
+    {
+      "title": "mistralai==2.4.6 y paquetes npm afectados",
+      "severity": "Alta",
+      "status": "Bajo investigacion",
+      "note": "Limpiar hosts, rotar secretos y comprobar lockfiles, caches y mirrors privados."
+    },
+    {
+      "title": "Misconfiguraciones en apps IA y MCP",
+      "severity": "Alta",
+      "status": "Explotacion observada",
+      "note": "Cerrar exposiciones con autenticacion fuerte, contexto de usuario y aislamiento de herramientas."
+    }
+  ],
+  "repositories": [
+    {
+      "name": "llm-compressor",
+      "url": "https://github.com/vllm-project/llm-compressor",
+      "language": "Python",
+      "utility": "Compresion y checkpoints optimizados citados por Mistral 3 para despliegues eficientes.",
+      "risk": "Validar compatibilidad y cadena de suministro antes de promoverlo a produccion."
+    },
+    {
+      "name": "vLLM",
+      "url": "https://github.com/vllm-project/vllm",
+      "language": "Python/CUDA",
+      "utility": "Serving de alto rendimiento citado como ruta principal para Mistral Large 3.",
+      "risk": "Controlar versionado de kernels y superficies GPU compartidas."
+    },
+    {
+      "name": "TensorRT-LLM",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM",
+      "language": "C++/Python",
+      "utility": "Stack NVIDIA destacado para inferencia eficiente de la familia Mistral 3.",
+      "risk": "Requiere perfiles claros de hardware y hardening del runtime."
+    }
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "text": "Diseñar una oferta de hardening agentic para pymes: identidad, secretos, MCP y controles de tool execution."
+    },
+    {
+      "priority": "Alta",
+      "text": "Montar demostradores con modelos abiertos Mistral 3 para clientes que pidan control de datos e infraestructura."
+    },
+    {
+      "priority": "Media",
+      "text": "Crear servicio de vigilancia regulatoria AI Act centrado en etiquetado, transparencia y contenido sintético."
+    },
+    {
+      "priority": "Media",
+      "text": "Probar retrieval vertical con Finance Search como referencia para radares sectoriales y reporting automatizado."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Auditar hoy dependencias npm/PyPI relacionadas con TanStack y `mistralai==2.4.6`; rotar secretos si hubo exposición."
+    },
+    {
+      "priority": "Alta",
+      "text": "Exigir autenticación fuerte, mínimo privilegio y contexto de usuario real en cualquier agente con herramientas o MCP."
+    },
+    {
+      "priority": "Alta",
+      "text": "Planificar actualización de apps macOS de OpenAI antes del 12 de junio de 2026 en todos los equipos afectados."
+    },
+    {
+      "priority": "Media",
+      "text": "Seleccionar dos POCs: un copiloto con Mistral 3 en entorno privado y un radar financiero con retrieval citado."
+    },
+    {
+      "priority": "Baja",
+      "text": "Preparar contenido comercial sobre AI Act y gobierno de IA aplicado a pymes y clientes regulados."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-06-01",
+      "event": "OpenAI: Advanced Account Security pasa a ser obligatoria para usuarios de Trusted Access for Cyber."
+    },
+    {
+      "date": "2026-06-03",
+      "event": "UE: cierre de la consulta sobre transparencia del AI Act."
+    },
+    {
+      "date": "2026-06-12",
+      "event": "OpenAI: revocación efectiva del certificado antiguo; macOS debe estar actualizado."
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI TanStack Response",
+      "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/",
+      "publisher": "OpenAI",
+      "published_at": "2026-05-13"
+    },
+    {
+      "label": "OpenAI Advanced Account Security",
+      "url": "https://openai.com/index/advanced-account-security/",
+      "publisher": "OpenAI",
+      "published_at": "2026-04-30"
+    },
+    {
+      "label": "Google Gemini Security",
+      "url": "https://blog.google/security/android-gemini-intelligence-security-privacy/",
+      "publisher": "Google",
+      "published_at": "2026-05-12"
+    },
+    {
+      "label": "Microsoft AI Misconfigurations",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+      "publisher": "Microsoft Security",
+      "published_at": "2026-05-14"
+    },
+    {
+      "label": "xAI Models",
+      "url": "https://docs.x.ai/developers/models",
+      "publisher": "xAI",
+      "published_at": "2026-05-09"
+    },
+    {
+      "label": "Mistral 3",
+      "url": "https://mistral.ai/news/mistral-3",
+      "publisher": "Mistral AI",
+      "published_at": "2026-05-13"
+    },
+    {
+      "label": "Mistral Security Advisory",
+      "url": "https://docs.mistral.ai/resources/security-advisories",
+      "publisher": "Mistral Docs",
+      "published_at": "2026-05-12"
+    },
+    {
+      "label": "Perplexity Finance Search",
+      "url": "https://www.perplexity.ai/es/hub/blog/introducing-finance-search-in-the-agent-api",
+      "publisher": "Perplexity",
+      "published_at": "2026-05-06"
+    },
+    {
+      "label": "Anthropic PwC Alliance",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+      "publisher": "Anthropic",
+      "published_at": "2026-05-14"
+    },
+    {
+      "label": "EU AI Act Consultation",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+      "publisher": "European Commission",
+      "published_at": "2026-05-08"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
