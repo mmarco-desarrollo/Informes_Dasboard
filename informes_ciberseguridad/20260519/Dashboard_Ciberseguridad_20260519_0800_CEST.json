@@ -1,0 +1,452 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "edition_label": "19/05/2026 08:00 CEST",
+  "generated_at": "19/05/2026 08:23 CEST",
+  "timezone": "Europe/Madrid",
+  "global_threat_level": "ALTO",
+  "next_update": "19/05/2026 12:00 CEST",
+  "ai_risk_state": "Elevado: crece la presión sobre identidad, correo y consolas de gestión expuestas",
+  "github": {
+    "repository": "mmarco-desarrollo/Informes_Dasboard",
+    "folder_path": "informes_ciberseguridad/20260519",
+    "folder_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260519",
+    "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.html",
+    "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.json",
+    "pdf_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.pdf"
+  },
+  "methodology_note": "Los KPIs agregan hechos confirmados incluidos en este informe, con foco principal en alertas y campañas activas o publicadas entre el 12/05/2026 y el 19/05/2026, más contexto operativo reciente cuando sigue siendo relevante para la exposición actual.",
+  "executive_summary": {
+    "global_state": "La situación se mantiene en nivel ALTO. La combinación de vulnerabilidades críticas recientes, varias con explotación confirmada, y campañas de phishing avanzadas orientadas al robo de sesión sigue elevando el riesgo operativo para empresas con correo on-premise, dispositivos edge expuestos y MFA no resistente a phishing.",
+    "top_risks": [
+      "Cisco Catalyst SD-WAN CVE-2026-20182 es la prioridad máxima: CVSS 10.0, explotación confirmada y presencia en KEV desde el 14/05/2026.",
+      "Microsoft Exchange CVE-2026-42897 figura como vulnerabilidad explotada y afecta un servicio especialmente sensible para continuidad y fraude.",
+      "Fortinet concentra dos fallos críticos recientes en FortiAuthenticator y FortiSandbox, ambos con potencial de ejecución remota no autorizada.",
+      "Las campañas de AiTM y device code phishing demuestran que la identidad sigue siendo el vector dominante incluso cuando existe MFA tradicional."
+    ],
+    "affected_sectors": [
+      "Salud y life sciences",
+      "Servicios financieros",
+      "Servicios profesionales",
+      "Tecnología y software",
+      "Pymes con infraestructura híbrida y TI externalizada"
+    ],
+    "common_techniques": [
+      "Bypass de autenticación",
+      "Phishing AiTM",
+      "Abuso de device code OAuth",
+      "Adjuntos SVG/HTML y CAPTCHA intermedio",
+      "Explotación de consolas de gestión expuestas",
+      "Uso masivo de credenciales débiles con apoyo de IA"
+    ],
+    "estimated_exposure": "Alta para organizaciones con OWA o gestión remota accesible desde Internet, segmentación débil, credenciales reutilizadas y ausencia de MFA resistente a phishing.",
+    "main_recommendation": "Priorizar en el mismo bloque de trabajo el cierre de exposición externa, el parcheo de CVEs explotadas y la revisión de compromiso sobre sistemas perimetrales y correo.",
+    "quick_conclusions": [
+      "El vector identidad sigue siendo el principal multiplicador del riesgo.",
+      "Cisco SD-WAN y Exchange requieren tratamiento de emergencia, no solo ciclo normal de parcheo.",
+      "Fortinet y Exim amplían la presión sobre infraestructuras de autenticación y correo.",
+      "Las empresas españolas con appliances expuestos y MFA débil siguen en zona de mayor riesgo.",
+      "La respuesta eficaz exige parchear y, a la vez, revisar trazas de compromiso previo."
+    ]
+  },
+  "kpis": [
+    {
+      "label": "Incidentes activos destacados",
+      "value": 4
+    },
+    {
+      "label": "Incidentes críticos",
+      "value": 2
+    },
+    {
+      "label": "Vulnerabilidades nuevas priorizadas",
+      "value": 6
+    },
+    {
+      "label": "CVEs críticas",
+      "value": 5
+    },
+    {
+      "label": "CVEs con explotación confirmada",
+      "value": 4
+    },
+    {
+      "label": "Campañas de phishing activas o muy recientes",
+      "value": 3
+    },
+    {
+      "label": "Ransomware activo destacado",
+      "value": 1
+    },
+    {
+      "label": "Países impactados en campaña AiTM",
+      "value": 26
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Alcista"
+    },
+    {
+      "label": "Nivel de riesgo global",
+      "value": "ALTO"
+    }
+  ],
+  "active_alerts": [
+    {
+      "title": "Cisco Catalyst SD-WAN Controller - CVE-2026-20182",
+      "severity": "Crítica",
+      "status": "Explotación confirmada / KEV",
+      "why_it_matters": "Permite omitir autenticación y obtener privilegios administrativos en la malla SD-WAN.",
+      "action": "Actualizar de inmediato a release corregida y revisar autenticaciones, control connections y cambios NETCONF."
+    },
+    {
+      "title": "Microsoft Exchange Server - CVE-2026-42897",
+      "severity": "Crítica",
+      "status": "Explotación observada / KEV",
+      "why_it_matters": "Afecta Exchange Server y puede facilitar suplantación si el usuario interactúa con un correo especialmente diseñado.",
+      "action": "Aplicar mitigaciones y parches de Microsoft y revisar OWA expuesto, reglas de buzón e indicadores de abuso."
+    },
+    {
+      "title": "FortiAuthenticator / FortiSandbox",
+      "severity": "Crítica",
+      "status": "Publicación reciente con impacto remoto",
+      "why_it_matters": "Afecta componentes de autenticación y sandbox con potencial de ejecución no autorizada.",
+      "action": "Aplicar advisories FG-IR-26-128 y FG-IR-26-127, validar versiones y retirar exposición innecesaria."
+    },
+    {
+      "title": "Exim sobre GnuTLS - CVE-2026-45185",
+      "severity": "Crítica",
+      "status": "RCE remota publicada",
+      "why_it_matters": "Impacta un servicio de correo ampliamente desplegado y expuesto en Internet.",
+      "action": "Actualizar a Exim 4.99.3 o superior y revisar configuraciones con CHUNKING/TLS."
+    }
+  ],
+  "incidents_and_activity": [
+    {
+      "headline": "Campaña AiTM multi-etapa observada por Microsoft",
+      "fact": "Microsoft observó entre el 14 y el 16 de abril de 2026 una campaña contra más de 35.000 usuarios en más de 13.000 organizaciones de 26 países.",
+      "impact": "Riesgo elevado de secuestro de sesión, fraude y BEC incluso con MFA no resistente a phishing."
+    },
+    {
+      "headline": "Device code phishing con infraestructura asistida por IA",
+      "fact": "Microsoft describió el 06/04/2026 una campaña a escala que automatiza códigos dinámicos y selección de víctimas de alto valor.",
+      "impact": "Aumenta el riesgo de abuso de OAuth y exfiltración de correo sin robo directo de contraseña."
+    },
+    {
+      "headline": "Interlock activo contra Cisco FMC",
+      "fact": "AWS confirmó una campaña Interlock que explotaba CVE-2026-20131 36 días antes de su divulgación pública.",
+      "impact": "Obliga a revisar compromiso histórico incluso en sistemas ya parcheados."
+    },
+    {
+      "headline": "Acceso masivo a FortiGate con apoyo de IA",
+      "fact": "AWS documentó más de 600 FortiGate comprometidos en más de 55 países mediante puertos de gestión expuestos y credenciales débiles, sin zero-day.",
+      "impact": "Riesgo directo para pymes y entornos con administración remota expuesta."
+    }
+  ],
+  "critical_cves": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation": "Sí, confirmada; KEV 14/05/2026",
+      "patch": "Sí",
+      "priority": "P1 inmediata",
+      "source": "Cisco / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server",
+      "cvss": "8.1 CNA Microsoft / 6.1 NVD",
+      "severity": "Crítica operativa",
+      "exploitation": "Sí, observada; KEV 15/05/2026",
+      "patch": "Sí",
+      "priority": "P1 inmediata",
+      "source": "INCIBE / NVD / Microsoft"
+    },
+    {
+      "cve": "CVE-2026-44277",
+      "product": "Fortinet FortiAuthenticator",
+      "cvss": "9.8",
+      "severity": "Crítica",
+      "exploitation": "INCIBE la marca explotable; NVD publica advisory reciente",
+      "patch": "Sí",
+      "priority": "P1 alta",
+      "source": "INCIBE / NVD / Fortinet"
+    },
+    {
+      "cve": "CVE-2026-26083",
+      "product": "FortiSandbox / Cloud / PaaS",
+      "cvss": "Crítica según INCIBE",
+      "severity": "Crítica",
+      "exploitation": "No confirmada en las fuentes abiertas revisadas",
+      "patch": "Sí",
+      "priority": "P1 alta",
+      "source": "INCIBE / Fortinet"
+    },
+    {
+      "cve": "CVE-2026-46300",
+      "product": "Linux Kernel",
+      "cvss": "Alta",
+      "severity": "Alta",
+      "exploitation": "Sí, según INCIBE",
+      "patch": "Sí",
+      "priority": "P2 alta",
+      "source": "INCIBE"
+    },
+    {
+      "cve": "CVE-2026-45185",
+      "product": "Exim < 4.99.3",
+      "cvss": "9.8 CNA MITRE",
+      "severity": "Crítica",
+      "exploitation": "No confirmada",
+      "patch": "Sí",
+      "priority": "P2 alta",
+      "source": "INCIBE / NVD / Exim"
+    }
+  ],
+  "malware_and_ransomware": {
+    "families": [
+      "Interlock ransomware",
+      "Tycoon2FA como ecosistema de soporte al robo de sesión",
+      "EvilTokens como facilitador de device code phishing"
+    ],
+    "target_sectors": [
+      "Infraestructura crítica y servicios empresariales",
+      "Salud",
+      "Finanzas",
+      "Tecnología",
+      "Pymes con exposición externa relevante"
+    ],
+    "techniques": [
+      "RCE sobre appliances o consolas de gestión",
+      "AiTM y robo de tokens",
+      "Persistencia mediante reglas de buzón",
+      "Reconocimiento con Graph y directorios corporativos",
+      "Búsqueda de backups y credenciales administrativas"
+    ],
+    "main_iocs_note": "Los IOCs extensos se mantienen fuera del resumen ejecutivo; conviene revisarlos en los avisos técnicos de Cisco, Microsoft, AWS y Fortinet si se activa caza interna.",
+    "trend": "Ascendente en identidad, edge devices y abuso de credenciales",
+    "propagation_level": "Alto cuando existe exposición a Internet y mala higiene de acceso remoto"
+  },
+  "important_news": [
+    "Cisco publicó el 14/05/2026 CVE-2026-20182 con CVSS 10.0 y explotación confirmada.",
+    "INCIBE publicó el 15/05/2026 avisos críticos sobre Exchange, Cisco SD-WAN y Linux Kernel con foco claro en explotación y actualización urgente.",
+    "Fortinet publicó en la semana del 12/05/2026 varios avisos críticos que afectan autenticación y sandboxing empresarial.",
+    "Microsoft confirmó el 04/05/2026 una campaña AiTM de gran escala y el 30/04/2026 un repunte fuerte del phishing con CAPTCHA y SVG.",
+    "Unit 42 situó en su Threat Bulletin de mayo de 2026 el supply chain software path como una de las rutas de intrusión más efectivas del momento."
+  ],
+  "recommendations": {
+    "critical": [
+      "Aplicar de inmediato parches y mitigaciones de Cisco SD-WAN, Exchange, Fortinet y Exim.",
+      "Retirar de Internet las consolas de gestión innecesarias o colocarlas detrás de VPN bastion con control de IP.",
+      "Revisar trazas de compromiso previo en sistemas ya parcheados: autenticaciones anómalas, cuentas nuevas, reglas de buzón, cambios de configuración y accesos de gestión."
+    ],
+    "high": [
+      "Forzar MFA resistente a phishing en correo, VPN, administración y SaaS crítico.",
+      "Rotar credenciales administrativas y revisar reutilización de credenciales en equipos perimetrales.",
+      "Segmentar backups y comprobar que no compartan accesos con el perímetro ni con cuentas operativas generales."
+    ],
+    "medium": [
+      "Endurecer el filtrado de adjuntos SVG/HTML y contenidos con CAPTCHA intermedio.",
+      "Activar detecciones específicas para AiTM, abuso de device code y reglas de correo maliciosas.",
+      "Reducir OWA y servicios heredados expuestos cuando no sean imprescindibles."
+    ],
+    "low": [
+      "Actualizar playbooks de respuesta para compromiso de identidad y edge devices.",
+      "Revisar inventario de exposición externa y capacidad real de parcheo rápido por producto."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo / estimativo generado por IA",
+    "global_risk_estimate": "Alto con sesgo alcista para las próximas 24-72 horas",
+    "predicted_threats": [
+      "Mayor presión sobre correo corporativo con lures más personalizados y uso de plataformas legítimas.",
+      "Incremento de explotación oportunista de consolas de gestión y appliances edge ya divulgados.",
+      "Expansión de actores de baja sofisticación capaces de operar a escala gracias a servicios de IA y automatización."
+    ],
+    "most_exposed_sectors": [
+      "Pymes con TI externalizada",
+      "Servicios profesionales",
+      "Sanidad privada",
+      "Industria con appliances heredados"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-42897",
+      "CVE-2026-44277",
+      "CVE-2026-45185"
+    ],
+    "probability_of_attack_growth": "Alta",
+    "automatic_recommendation": "Concentrar el esfuerzo inmediato en identidad, exposición externa y revisión de compromiso antes de dedicar tiempo a mejoras menos urgentes."
+  },
+  "sources": [
+    {
+      "title": "NVD - CVE-2026-20182",
+      "publisher": "NVD / CISA KEV reference",
+      "date": "2026-05-14",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+      "facts_used": [
+        "KEV 14/05/2026",
+        "publicación 14/05/2026",
+        "referencias Cisco"
+      ]
+    },
+    {
+      "title": "Autenticación incorrecta en Cisco Catalyst SD-WAN Controller",
+      "publisher": "INCIBE-CERT",
+      "date": "2026-05-15",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autenticacion-incorrecta-en-cisco-catalyst-sd-wan-controller",
+      "facts_used": [
+        "explotación confirmada",
+        "criticidad",
+        "urgencia de actualización"
+      ]
+    },
+    {
+      "title": "NVD - CVE-2026-42897",
+      "publisher": "NVD / CISA KEV reference",
+      "date": "2026-05-15",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897",
+      "facts_used": [
+        "KEV 15/05/2026",
+        "descripción y métricas",
+        "referencia Microsoft"
+      ]
+    },
+    {
+      "title": "Cross-site Scripting en Exchange Server de Microsoft",
+      "publisher": "INCIBE-CERT",
+      "date": "2026-05-15",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft",
+      "facts_used": [
+        "criticidad",
+        "explotación",
+        "contexto operativo"
+      ]
+    },
+    {
+      "title": "NVD - CVE-2026-44277",
+      "publisher": "NVD",
+      "date": "2026-05-12",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44277",
+      "facts_used": [
+        "CVSS 9.8",
+        "productos afectados",
+        "advisory Fortinet"
+      ]
+    },
+    {
+      "title": "Múltiples vulnerabilidades en productos de Fortinet",
+      "publisher": "INCIBE-CERT",
+      "date": "2026-05-13",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-fortinet-1",
+      "facts_used": [
+        "CVE-2026-44277",
+        "CVE-2026-26083",
+        "criticidad"
+      ]
+    },
+    {
+      "title": "Escalada de privilegios a nivel local en el kernel de Linux",
+      "publisher": "INCIBE-CERT",
+      "date": "2026-05-15",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/escalada-de-privilegios-nivel-local-en-el-kernel-de-linux",
+      "facts_used": [
+        "CVE-2026-46300",
+        "explotación",
+        "descripción Fragnesia"
+      ]
+    },
+    {
+      "title": "NVD - CVE-2026-45185",
+      "publisher": "NVD",
+      "date": "2026-05-12",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45185",
+      "facts_used": [
+        "RCE remota",
+        "CVSS 9.8 CNA",
+        "versiones afectadas"
+      ]
+    },
+    {
+      "title": "Uso remoto después de su liberación en configuraciones de GnuTLS de Exim",
+      "publisher": "INCIBE-CERT",
+      "date": "2026-05-13",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim",
+      "facts_used": [
+        "criticidad",
+        "Exim",
+        "sin explotación confirmada"
+      ]
+    },
+    {
+      "title": "Breaking the code: Multi-stage code of conduct phishing campaign leads to AiTM token compromise",
+      "publisher": "Microsoft Security Blog",
+      "date": "2026-05-04",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "facts_used": [
+        ">35.000 usuarios",
+        ">13.000 organizaciones",
+        "26 países",
+        "sectores afectados"
+      ]
+    },
+    {
+      "title": "Inside an AI-enabled device code phishing campaign",
+      "publisher": "Microsoft Security Blog",
+      "date": "2026-04-06",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/",
+      "facts_used": [
+        "automatización",
+        "EvilTokens",
+        "selección de víctimas de alto valor"
+      ]
+    },
+    {
+      "title": "Email threat landscape: Q1 2026 trends and insights",
+      "publisher": "Microsoft Security Blog",
+      "date": "2026-04-30",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/",
+      "facts_used": [
+        ">1,2 millones de mensajes",
+        ">53.000 organizaciones",
+        "auge de CAPTCHA-gated phishing"
+      ]
+    },
+    {
+      "title": "Amazon threat intelligence teams identify Interlock ransomware campaign targeting enterprise firewalls",
+      "publisher": "AWS Security Blog",
+      "date": "2026-03-18",
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/",
+      "facts_used": [
+        "Interlock activo",
+        "CVE-2026-20131",
+        "36 días antes del disclosure"
+      ]
+    },
+    {
+      "title": "AI-augmented threat actor accesses FortiGate devices at scale",
+      "publisher": "AWS Security Blog",
+      "date": "2026-02-20",
+      "url": "https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/",
+      "facts_used": [
+        ">600 dispositivos",
+        ">55 países",
+        "sin zero-day, sí mala higiene de acceso"
+      ]
+    },
+    {
+      "title": "Unit 42 Threat Bulletin - May 2026",
+      "publisher": "Unit 42",
+      "date": "2026-05-13",
+      "url": "https://unit42.paloaltonetworks.com/threat-bulletin/may-2026/",
+      "facts_used": [
+        "supply chain software path",
+        "26 CVEs revisadas",
+        "ninguna explotada en la naturaleza en esa publicación"
+      ]
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
+}
