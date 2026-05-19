@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang='es'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Informe Ejecutivo de Ciberseguridad | 2026-05-20 00:17:50 CEST</title>
+<style>
+:root {
+  --bg:#07111a;
+  --bg2:#0d1b28;
+  --card:#0f2231;
+  --card2:#12293a;
+  --line:#1f3b4d;
+  --text:#e8f1f7;
+  --muted:#94acbb;
+  --accent:#4fd1c5;
+  --warn:#f6c85f;
+  --danger:#ff6b6b;
+  --ok:#7bd389;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at top right,#11304a 0,var(--bg) 35%),linear-gradient(180deg,#08131d 0,#07111a 100%);color:var(--text)}
+.container{max-width:1240px;margin:0 auto;padding:24px}
+.hero{padding:28px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(135deg,rgba(79,209,197,.13),rgba(255,107,107,.08)),var(--card);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.brand{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.kicker{letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-size:12px;font-weight:700}
+h1{margin:.35rem 0 0;font-size:clamp(30px,4vw,48px);line-height:1.05}
+.sub{color:var(--muted);max-width:70ch}
+.pill{display:inline-block;padding:8px 12px;border-radius:999px;border:1px solid var(--line);font-size:13px;margin:4px 8px 0 0;background:rgba(255,255,255,.03)}
+.grid{display:grid;gap:16px}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-top:18px}
+.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{margin:0 0 8px;font-size:16px}
+.metric{font-size:34px;font-weight:800}
+.label{color:var(--muted);font-size:13px}
+.section{margin-top:18px}
+.two{grid-template-columns:1.35fr .95fr}
+.alerts{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.alert{border-left:4px solid var(--danger)}
+.meta,.small{color:var(--muted)}
+.tablewrap{overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{color:#b7cad7;font-weight:700;background:rgba(255,255,255,.02)}
+ul{margin:0;padding-left:18px}
+.footer{margin-top:18px;color:var(--muted);font-size:13px}
+.notice{padding:14px;border-radius:14px;border:1px dashed var(--line);background:rgba(255,255,255,.02)}
+@media (max-width: 900px){.two{grid-template-columns:1fr} .container{padding:16px} .hero{padding:20px}}
+</style>
+</head>
+<body>
+  <div class='container'>
+    <section class='hero'>
+      <div class='brand'>
+        <div>
+          <div class='kicker'>MMarco Seguridad</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class='sub'>La amenaza nocturna se mantiene en nivel alto por la coincidencia de varias vulnerabilidades críticas con explotación confirmada o muy probable en infraestructuras empresariales expuestas a Internet.</p>
+        </div>
+        <div>
+          <span class='pill'>Nivel global de amenaza: <strong>ALTO</strong></span>
+          <span class='pill'>Fecha: <strong>2026-05-20 00:17:50 CEST</strong></span>
+          <span class='pill'>Próxima actualización: <strong>2026-05-20 08:00 CEST</strong></span>
+          <span class='pill'>Estado IA: <strong>Estimativo con revisión humana</strong></span>
+        </div>
+      </div>
+      <div class='grid kpis'>
+        <div class='card'><div class='metric'>4</div><div class='label'>Alertas activas priorizadas</div></div>
+        <div class='card'><div class='metric'>3</div><div class='label'>Alertas críticas</div></div>
+        <div class='card'><div class='metric'>6</div><div class='label'>CVEs críticas destacadas</div></div>
+        <div class='card'><div class='metric'>3</div><div class='label'>Prioridades con explotación o KEV</div></div>
+        <div class='card'><div class='metric'>Alta</div><div class='label'>Presión de phishing</div></div>
+        <div class='card'><div class='metric'>ALTO</div><div class='label'>Riesgo global</div></div>
+      </div>
+    </section>
+
+    <section class='section grid two'>
+      <article class='card'>
+        <h3>Resumen ejecutivo</h3>
+        <p><strong>Riesgos principales:</strong> Cisco SD-WAN CVE-2026-20182, crítica, sin mitigación alternativa y con explotación limitada confirmada por Cisco. Microsoft Exchange Server CVE-2026-42897, clasificada como crítica y marcada por INCIBE como potencialmente explotada. Ivanti EPMM CVE-2026-6973, con explotación muy limitada reconocida por el fabricante e inclusión en CISA KEV. Fortinet FortiAuthenticator y FortiSandbox concentran dos CVEs críticas nuevas que exigen revisión de exposición y parcheo rápido.</p>
+        <p><strong>Sectores más afectados:</strong> Pymes con correo expuesto, Infraestructura TIC, Administración y operadores con SD-WAN, Industria y OT con despliegues Siemens.</p>
+        <p><strong>Técnicas más usadas:</strong> Omisión de autenticación, RCE remoto, Suplantación/XSS en OWA, Escalada de privilegios, Exposición de plano de control.</p>
+        <p><strong>Exposición estimada:</strong> Alta en organizaciones con servicios de gestión o correo publicados y media en redes OT con ventanas de parcheo lentas.</p>
+        <p><strong>Recomendación principal:</strong> Priorizar en las próximas horas el cierre de exposición externa, parcheo urgente de Cisco SD-WAN, Exchange e Ivanti EPMM, y verificación dirigida en Fortinet y Siemens según inventario.</p>
+      </article>
+      <article class='card'>
+        <h3>Conclusión rápida</h3>
+        <ul><li>Cisco SD-WAN CVE-2026-20182 entra en KEV el 14/05/2026 con vencimiento 17/05/2026 y mantiene la mayor prioridad operativa.</li><li>INCIBE publica el 15/05/2026 una alerta crítica sobre Microsoft Exchange Server CVE-2026-42897 y advierte posible explotación activa.</li><li>Ivanti confirma explotación muy limitada de CVE-2026-6973 en EPMM on-prem y CISA la prioriza en KEV desde el 07/05/2026.</li><li>Fortinet publica el 12/05/2026 dos fallos críticos sin autenticación: CVE-2026-44277 en FortiAuthenticator y CVE-2026-26083 en FortiSandbox.</li><li>INCIBE SCI resume 22 vulnerabilidades críticas en el boletín mensual de Siemens de mayo de 2026, elevando el riesgo OT para entornos industriales españoles.</li></ul>
+      </article>
+    </section>
+
+    <section class='section'>
+      <h2>Alertas activas</h2>
+      <div class='grid alerts'><article class='card alert'><h3>Cisco SD-WAN authentication bypass</h3><p class='meta'>CVE-2026-20182 · Crítica</p><p>Explotación limitada confirmada y KEV</p><p class='small'>Muy alta para operadores y sedes con gestión WAN centralizada</p></article><article class='card alert'><h3>Microsoft Exchange Server spoofing/XSS</h3><p class='meta'>CVE-2026-42897 · Crítica</p><p>INCIBE indica posible explotación</p><p class='small'>Muy alta para pymes y organizaciones con OWA</p></article><article class='card alert'><h3>Ivanti EPMM RCE autenticado</h3><p class='meta'>CVE-2026-6973 · Alta</p><p>Explotación muy limitada confirmada y KEV</p><p class='small'>Alta para movilidad corporativa on-prem</p></article><article class='card alert'><h3>FortiAuthenticator improper access control</h3><p class='meta'>CVE-2026-44277 · Alta</p><p>Sin explotación confirmada, riesgo crítico por exposición</p><p class='small'>Alta en autenticación corporativa y entornos híbridos</p></article><article class='card alert'><h3>FortiSandbox incorrect authorization</h3><p class='meta'>CVE-2026-26083 · Alta</p><p>Sin explotación confirmada, crítica y no autenticada</p><p class='small'>Alta en perímetros con sandboxing</p></article></div>
+    </section>
+
+    <section class='section card'>
+      <h2>Vulnerabilidades críticas priorizadas</h2>
+      <div class='tablewrap'>
+        <table>
+          <thead><tr><th>CVE</th><th>Producto afectado</th><th>CVSS</th><th>Severidad</th><th>Estado de explotación</th><th>Parche</th><th>Prioridad</th><th>Fuente</th></tr></thead>
+          <tbody><tr><td>CVE-2026-20182</td><td>Cisco Catalyst SD-WAN Controller / Manager</td><td>10.0</td><td>Crítica</td><td>Confirmada de forma limitada; en CISA KEV</td><td>Sí</td><td>Inmediata</td><td>Cisco / NVD / CISA KEV</td></tr><tr><td>CVE-2026-42897</td><td>Microsoft Exchange Server 2016/2019/SE</td><td>Crítica</td><td>Crítica</td><td>INCIBE: podría estar siendo explotada</td><td>Mitigación automática EM para Exchange habilitado</td><td>Inmediata</td><td>INCIBE / Microsoft</td></tr><tr><td>CVE-2026-6973</td><td>Ivanti Endpoint Manager Mobile</td><td>7.2</td><td>Alta</td><td>Muy limitada; en CISA KEV</td><td>Sí, 12.6.1.1 / 12.7.0.1 / 12.8.0.1</td><td>Muy alta</td><td>Ivanti / NVD / CISA KEV</td></tr><tr><td>CVE-2026-44277</td><td>FortiAuthenticator</td><td>9.8 CNA / 9.1 vendor advisory context</td><td>Crítica</td><td>No confirmada</td><td>Sí</td><td>Muy alta</td><td>Fortinet / NVD</td></tr><tr><td>CVE-2026-26083</td><td>FortiSandbox</td><td>9.1</td><td>Crítica</td><td>No confirmada</td><td>Sí</td><td>Muy alta</td><td>Fortinet</td></tr><tr><td>CVE-2026-45185</td><td>Exim 4.97 a 4.99.2</td><td>Crítica</td><td>Crítica</td><td>No confirmada</td><td>Sí, 4.99.3</td><td>Alta</td><td>INCIBE / Exim</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class='section grid two'>
+      <article class='card'>
+        <h3>Noticias y contexto relevante</h3>
+        <ul><li>Cisco Talos resume el Patch Tuesday de Microsoft de mayo de 2026 con 137 vulnerabilidades y 31 críticas, sin explotación activa observada por Microsoft en ese lote mensual.</li><li>Google publicó el 13/05/2026 un resumen de sus defensas contra fraudes y estafas, reforzando la tesis de que el phishing y la suplantación siguen siendo vectores dominantes.</li><li>INCIBE concentra varias publicaciones críticas el 13-15/05/2026 sobre Cisco, Exchange, Fortinet, Ivanti y Exim, señal clara de presión sostenida sobre servicios corporativos comunes.</li></ul>
+      </article>
+      <article class='card'>
+        <h3>Malware y ransomware</h3>
+        <p>La presión de ransomware sigue siendo media-alta por la explotación rápida de appliances perimetrales y servicios de correo, aunque esta edición está dominada por riesgo de acceso inicial y toma de control.</p>
+        <ul><li>No se ha identificado en esta ventana una nueva campaña de ransomware con confirmación oficial más reciente que altere la prioridad nocturna frente al bloque de vulnerabilidades críticas.</li></ul>
+      </article>
+    </section>
+
+    <section class='section card'>
+      <h2>Recomendaciones ejecutivas</h2>
+      <ul><li><strong>Critical:</strong> Aplicar parche urgente o aislamiento inmediato en Cisco SD-WAN afectado por CVE-2026-20182.; Verificar mitigación automática o parcheo de Exchange frente a CVE-2026-42897 y revisar telemetría de OWA.; Actualizar Ivanti EPMM on-prem a versiones corregidas y revisar accesos administrativos recientes.</li><li><strong>High:</strong> Actualizar FortiAuthenticator y FortiSandbox según advisories del 12/05/2026.; Revisar si existen interfaces de gestión expuestas a Internet en appliances de red, identidad y sandbox.; Actualizar Exim a 4.99.3 donde exista uso corporativo o de proveedor de servicios.</li><li><strong>Medium:</strong> Inventariar activos Siemens impactados y coordinar ventana OT segura de actualización o mitigación.; Refrescar reglas de detección sobre suplantación, OWA, NETCONF anómalo y autenticación administrativa fuera de patrón.</li><li><strong>Low:</strong> Revisar plan de endurecimiento CCN-STIC para Exchange y servicios Microsoft en organizaciones sujetas a ENS.; Preparar comunicación interna de riesgo de phishing contextualizado y apertura de enlaces en OWA.</li></ul>
+    </section>
+
+    <section class='section grid two'>
+      <article class='card'>
+        <h3>Sección IA</h3>
+        <div class='notice'>
+          <p><strong>Analisis predictivo o estimativo generado con revision humana</strong></p>
+          <p><strong>Riesgo estimado:</strong> ALTO con probabilidad de continuidad durante las proximas 24-72 horas.</p>
+          <p><strong>Próximas amenazas probables:</strong> Mayor abuso de correo y paneles de gestion expuestos, Intentos de explotacion de Cisco SD-WAN y appliances Fortinet tras divulgacion, Phishing de oportunidad ligado a correo corporativo y acceso remoto.</p>
+          <p><strong>Sectores más expuestos:</strong> Pymes, servicios gestionados, infraestructura critica con OT, sanidad y educacion con Exchange o movilidad corporativa.</p>
+          <p><strong>Vulnerabilidades prioritarias:</strong> CVE-2026-20182, CVE-2026-42897, CVE-2026-6973, CVE-2026-44277, CVE-2026-26083.</p>
+          <p><strong>Probabilidad de aumento:</strong> Alta</p>
+          <p><strong>Recomendación automática:</strong> Asumir explotacion acelerada de fallos perimetrales y reducir exposicion externa antes del inicio de jornada.</p>
+        </div>
+      </article>
+      <article class='card'>
+        <h3>Fuentes principales</h3>
+        <ul><li><a href='https://www.ivanti.com/en-gb/blog/may-2026-epmm-security-update' target='_blank' rel='noreferrer'>Ivanti May 2026 EPMM Security Update</a></li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-6973' target='_blank' rel='noreferrer'>NVD CVE-2026-6973</a></li><li><a href='https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW' target='_blank' rel='noreferrer'>Cisco Advisory CVE-2026-20182</a></li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-20182' target='_blank' rel='noreferrer'>NVD CVE-2026-20182</a></li><li><a href='https://fortiguard.fortinet.com/psirt/FG-IR-26-128' target='_blank' rel='noreferrer'>Fortinet PSIRT FG-IR-26-128</a></li><li><a href='https://fortiguard.fortinet.com/psirt/FG-IR-26-136' target='_blank' rel='noreferrer'>Fortinet PSIRT FG-IR-26-136</a></li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft' target='_blank' rel='noreferrer'>INCIBE Exchange Server XSS</a></li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autenticacion-incorrecta-en-cisco-catalyst-sd-wan-controller' target='_blank' rel='noreferrer'>INCIBE Cisco SD-WAN</a></li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim' target='_blank' rel='noreferrer'>INCIBE Exim GnuTLS</a></li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026' target='_blank' rel='noreferrer'>INCIBE Siemens mayo 2026</a></li><li><a href='https://blog.talosintelligence.com/microsoft-patch-tuesday-may-2026/' target='_blank' rel='noreferrer'>Cisco Talos Patch Tuesday mayo 2026</a></li><li><a href='https://blog.google/innovation-and-ai/technology/safety-security/scams-fraud-protection/' target='_blank' rel='noreferrer'>Google scams and fraud protections</a></li></ul>
+      </article>
+    </section>
+
+    <footer class='footer'>
+      <p>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</p>
+    </footer>
+  </div>
+</body>
+</html>
