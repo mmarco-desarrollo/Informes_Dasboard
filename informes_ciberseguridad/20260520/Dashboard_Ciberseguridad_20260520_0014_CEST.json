@@ -1,0 +1,257 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sánchez",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "generated_at_madrid": "2026-05-20 00:17:50 CEST",
+  "timezone": "Europe/Madrid",
+  "next_update": "2026-05-20 08:00 CEST",
+  "global_threat_level": "ALTO",
+  "risk_trend_24h": "Al alza en exposición perimetral y correo",
+  "ai_risk_status": "Estimativo con revisión humana",
+  "kpis": {
+    "incidents_active": 4,
+    "incidents_critical": 3,
+    "new_critical_cves": 6,
+    "known_exploited_priority": 3,
+    "phishing_pressure": "Alta",
+    "ransomware_pressure": "Media-Alta",
+    "ddos_signal": "Sin señal dominante verificable",
+    "global_risk": "ALTO"
+  },
+  "executive_summary": {
+    "global_state": "La amenaza nocturna se mantiene en nivel alto por la coincidencia de varias vulnerabilidades críticas con explotación confirmada o muy probable en infraestructuras empresariales expuestas a Internet.",
+    "main_risks": [
+      "Cisco SD-WAN CVE-2026-20182, crítica, sin mitigación alternativa y con explotación limitada confirmada por Cisco.",
+      "Microsoft Exchange Server CVE-2026-42897, clasificada como crítica y marcada por INCIBE como potencialmente explotada.",
+      "Ivanti EPMM CVE-2026-6973, con explotación muy limitada reconocida por el fabricante e inclusión en CISA KEV.",
+      "Fortinet FortiAuthenticator y FortiSandbox concentran dos CVEs críticas nuevas que exigen revisión de exposición y parcheo rápido."
+    ],
+    "sectors": [
+      "Pymes con correo expuesto",
+      "Infraestructura TIC",
+      "Administración y operadores con SD-WAN",
+      "Industria y OT con despliegues Siemens"
+    ],
+    "techniques": [
+      "Omisión de autenticación",
+      "RCE remoto",
+      "Suplantación/XSS en OWA",
+      "Escalada de privilegios",
+      "Exposición de plano de control"
+    ],
+    "estimated_exposure": "Alta en organizaciones con servicios de gestión o correo publicados y media en redes OT con ventanas de parcheo lentas.",
+    "main_recommendation": "Priorizar en las próximas horas el cierre de exposición externa, parcheo urgente de Cisco SD-WAN, Exchange e Ivanti EPMM, y verificación dirigida en Fortinet y Siemens según inventario."
+  },
+  "key_findings": [
+    "Cisco SD-WAN CVE-2026-20182 entra en KEV el 14/05/2026 con vencimiento 17/05/2026 y mantiene la mayor prioridad operativa.",
+    "INCIBE publica el 15/05/2026 una alerta crítica sobre Microsoft Exchange Server CVE-2026-42897 y advierte posible explotación activa.",
+    "Ivanti confirma explotación muy limitada de CVE-2026-6973 en EPMM on-prem y CISA la prioriza en KEV desde el 07/05/2026.",
+    "Fortinet publica el 12/05/2026 dos fallos críticos sin autenticación: CVE-2026-44277 en FortiAuthenticator y CVE-2026-26083 en FortiSandbox.",
+    "INCIBE SCI resume 22 vulnerabilidades críticas en el boletín mensual de Siemens de mayo de 2026, elevando el riesgo OT para entornos industriales españoles."
+  ],
+  "alerts_active": [
+    {
+      "title": "Cisco SD-WAN authentication bypass",
+      "cve": "CVE-2026-20182",
+      "priority": "Crítica",
+      "status": "Explotación limitada confirmada y KEV",
+      "spain_relevance": "Muy alta para operadores y sedes con gestión WAN centralizada"
+    },
+    {
+      "title": "Microsoft Exchange Server spoofing/XSS",
+      "cve": "CVE-2026-42897",
+      "priority": "Crítica",
+      "status": "INCIBE indica posible explotación",
+      "spain_relevance": "Muy alta para pymes y organizaciones con OWA"
+    },
+    {
+      "title": "Ivanti EPMM RCE autenticado",
+      "cve": "CVE-2026-6973",
+      "priority": "Alta",
+      "status": "Explotación muy limitada confirmada y KEV",
+      "spain_relevance": "Alta para movilidad corporativa on-prem"
+    },
+    {
+      "title": "FortiAuthenticator improper access control",
+      "cve": "CVE-2026-44277",
+      "priority": "Alta",
+      "status": "Sin explotación confirmada, riesgo crítico por exposición",
+      "spain_relevance": "Alta en autenticación corporativa y entornos híbridos"
+    },
+    {
+      "title": "FortiSandbox incorrect authorization",
+      "cve": "CVE-2026-26083",
+      "priority": "Alta",
+      "status": "Sin explotación confirmada, crítica y no autenticada",
+      "spain_relevance": "Alta en perímetros con sandboxing"
+    }
+  ],
+  "critical_cves": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation": "Confirmada de forma limitada; en CISA KEV",
+      "patch": "Sí",
+      "priority": "Inmediata",
+      "source": "Cisco / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server 2016/2019/SE",
+      "cvss": "Crítica",
+      "severity": "Crítica",
+      "exploitation": "INCIBE: podría estar siendo explotada",
+      "patch": "Mitigación automática EM para Exchange habilitado",
+      "priority": "Inmediata",
+      "source": "INCIBE / Microsoft"
+    },
+    {
+      "cve": "CVE-2026-6973",
+      "product": "Ivanti Endpoint Manager Mobile",
+      "cvss": "7.2",
+      "severity": "Alta",
+      "exploitation": "Muy limitada; en CISA KEV",
+      "patch": "Sí, 12.6.1.1 / 12.7.0.1 / 12.8.0.1",
+      "priority": "Muy alta",
+      "source": "Ivanti / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-44277",
+      "product": "FortiAuthenticator",
+      "cvss": "9.8 CNA / 9.1 vendor advisory context",
+      "severity": "Crítica",
+      "exploitation": "No confirmada",
+      "patch": "Sí",
+      "priority": "Muy alta",
+      "source": "Fortinet / NVD"
+    },
+    {
+      "cve": "CVE-2026-26083",
+      "product": "FortiSandbox",
+      "cvss": "9.1",
+      "severity": "Crítica",
+      "exploitation": "No confirmada",
+      "patch": "Sí",
+      "priority": "Muy alta",
+      "source": "Fortinet"
+    },
+    {
+      "cve": "CVE-2026-45185",
+      "product": "Exim 4.97 a 4.99.2",
+      "cvss": "Crítica",
+      "severity": "Crítica",
+      "exploitation": "No confirmada",
+      "patch": "Sí, 4.99.3",
+      "priority": "Alta",
+      "source": "INCIBE / Exim"
+    }
+  ],
+  "malware_ransomware": {
+    "confirmed": [
+      "No se ha identificado en esta ventana una nueva campaña de ransomware con confirmación oficial más reciente que altere la prioridad nocturna frente al bloque de vulnerabilidades críticas."
+    ],
+    "assessment": "La presión de ransomware sigue siendo media-alta por la explotación rápida de appliances perimetrales y servicios de correo, aunque esta edición está dominada por riesgo de acceso inicial y toma de control."
+  },
+  "important_news": [
+    "Cisco Talos resume el Patch Tuesday de Microsoft de mayo de 2026 con 137 vulnerabilidades y 31 críticas, sin explotación activa observada por Microsoft en ese lote mensual.",
+    "Google publicó el 13/05/2026 un resumen de sus defensas contra fraudes y estafas, reforzando la tesis de que el phishing y la suplantación siguen siendo vectores dominantes.",
+    "INCIBE concentra varias publicaciones críticas el 13-15/05/2026 sobre Cisco, Exchange, Fortinet, Ivanti y Exim, señal clara de presión sostenida sobre servicios corporativos comunes."
+  ],
+  "recommendations": {
+    "critical": [
+      "Aplicar parche urgente o aislamiento inmediato en Cisco SD-WAN afectado por CVE-2026-20182.",
+      "Verificar mitigación automática o parcheo de Exchange frente a CVE-2026-42897 y revisar telemetría de OWA.",
+      "Actualizar Ivanti EPMM on-prem a versiones corregidas y revisar accesos administrativos recientes."
+    ],
+    "high": [
+      "Actualizar FortiAuthenticator y FortiSandbox según advisories del 12/05/2026.",
+      "Revisar si existen interfaces de gestión expuestas a Internet en appliances de red, identidad y sandbox.",
+      "Actualizar Exim a 4.99.3 donde exista uso corporativo o de proveedor de servicios."
+    ],
+    "medium": [
+      "Inventariar activos Siemens impactados y coordinar ventana OT segura de actualización o mitigación.",
+      "Refrescar reglas de detección sobre suplantación, OWA, NETCONF anómalo y autenticación administrativa fuera de patrón."
+    ],
+    "low": [
+      "Revisar plan de endurecimiento CCN-STIC para Exchange y servicios Microsoft en organizaciones sujetas a ENS.",
+      "Preparar comunicación interna de riesgo de phishing contextualizado y apertura de enlaces en OWA."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo generado con revision humana",
+    "global_risk_estimate": "ALTO con probabilidad de continuidad durante las proximas 24-72 horas.",
+    "next_threats": [
+      "Mayor abuso de correo y paneles de gestion expuestos",
+      "Intentos de explotacion de Cisco SD-WAN y appliances Fortinet tras divulgacion",
+      "Phishing de oportunidad ligado a correo corporativo y acceso remoto"
+    ],
+    "most_exposed_sectors": [
+      "Pymes",
+      "servicios gestionados",
+      "infraestructura critica con OT",
+      "sanidad y educacion con Exchange o movilidad corporativa"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-42897",
+      "CVE-2026-6973",
+      "CVE-2026-44277",
+      "CVE-2026-26083"
+    ],
+    "attack_increase_probability": "Alta",
+    "auto_recommendation": "Asumir explotacion acelerada de fallos perimetrales y reducir exposicion externa antes del inicio de jornada."
+  },
+  "sources": [
+    {
+      "name": "Ivanti May 2026 EPMM Security Update",
+      "url": "https://www.ivanti.com/en-gb/blog/may-2026-epmm-security-update"
+    },
+    {
+      "name": "NVD CVE-2026-6973",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6973"
+    },
+    {
+      "name": "Cisco Advisory CVE-2026-20182",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW"
+    },
+    {
+      "name": "NVD CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182"
+    },
+    {
+      "name": "Fortinet PSIRT FG-IR-26-128",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-128"
+    },
+    {
+      "name": "Fortinet PSIRT FG-IR-26-136",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-136"
+    },
+    {
+      "name": "INCIBE Exchange Server XSS",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft"
+    },
+    {
+      "name": "INCIBE Cisco SD-WAN",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autenticacion-incorrecta-en-cisco-catalyst-sd-wan-controller"
+    },
+    {
+      "name": "INCIBE Exim GnuTLS",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim"
+    },
+    {
+      "name": "INCIBE Siemens mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026"
+    },
+    {
+      "name": "Cisco Talos Patch Tuesday mayo 2026",
+      "url": "https://blog.talosintelligence.com/microsoft-patch-tuesday-may-2026/"
+    },
+    {
+      "name": "Google scams and fraud protections",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/scams-fraud-protection/"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
