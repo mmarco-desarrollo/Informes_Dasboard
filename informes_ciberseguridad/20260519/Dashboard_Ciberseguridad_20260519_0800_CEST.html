@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad · 19/05/2026 08:00 CEST</title>
+  <style>
+    :root {
+      --bg: #07111d;
+      --bg2: #0d1b2c;
+      --panel: rgba(15, 27, 42, 0.82);
+      --panel-strong: rgba(10, 19, 31, 0.94);
+      --line: rgba(135, 179, 214, 0.18);
+      --text: #ecf3f9;
+      --muted: #98adc2;
+      --accent: #54d2ff;
+      --accent-2: #79f0d5;
+      --danger: #ff6b6b;
+      --warn: #ffb454;
+      --shadow: 0 18px 48px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(84,210,255,0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(121,240,213,0.12), transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, #040a12 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 44px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(12,28,46,0.98), rgba(6,13,22,0.96));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% 45%;
+      height: 280px;
+      background: linear-gradient(90deg, rgba(84,210,255,0.0), rgba(84,210,255,0.18));
+      filter: blur(20px);
+      transform: rotate(-8deg);
+    }
+    .brand { color: var(--accent-2); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; }
+    h1 { margin: 8px 0 14px; font-size: clamp(32px, 5vw, 56px); line-height: 1.05; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 2.1fr 1fr;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .meta-card, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      backdrop-filter: blur(8px);
+    }
+    .meta-card .label, .eyebrow {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .meta-card .value {
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .status-pill {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,107,107,0.35);
+      color: #ffd4d4;
+      background: rgba(255,107,107,0.12);
+      font-weight: 700;
+    }
+    .section {
+      margin-top: 22px;
+      display: grid;
+      gap: 16px;
+    }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .section-title h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .note { color: var(--muted); font-size: 14px; }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .kpi {
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      min-height: 118px;
+    }
+    .kpi-label { color: var(--muted); font-size: 13px; }
+    .kpi-value { margin-top: 14px; font-size: 30px; font-weight: 800; }
+    .cols-2 {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+    }
+    .cols-4 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    h3 { margin: 8px 0 10px; font-size: 18px; }
+    p { margin: 8px 0; }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin: 8px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+      background: var(--panel-strong);
+    }
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+    th {
+      color: var(--accent-2);
+      background: rgba(84,210,255,0.08);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .delivery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .delivery a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .footer {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    a { color: var(--accent); }
+    @media (max-width: 980px) {
+      .hero-grid, .cols-2, .kpis, .grid-cards, .delivery {
+        grid-template-columns: 1fr;
+      }
+      .meta {
+        grid-template-columns: 1fr;
+      }
+      h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="brand">MMarco Seguridad</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p>La situación se mantiene en nivel ALTO. La combinación de vulnerabilidades críticas recientes, varias con explotación confirmada, y campañas de phishing avanzadas orientadas al robo de sesión sigue elevando el riesgo operativo para empresas con correo on-premise, dispositivos edge expuestos y MFA no resistente a phishing.</p>
+          <p><span class="status-pill">Nivel Global de Amenaza: ALTO</span></p>
+        </div>
+        <div class="meta">
+          <div class="meta-card"><div class="label">Edición</div><div class="value">19/05/2026 08:00 CEST</div></div>
+          <div class="meta-card"><div class="label">Generado</div><div class="value">19/05/2026 08:23 CEST</div></div>
+          <div class="meta-card"><div class="label">Próxima actualización</div><div class="value">19/05/2026 12:00 CEST</div></div>
+          <div class="meta-card"><div class="label">Estado IA de riesgo</div><div class="value" style="font-size:16px">Elevado: crece la presión sobre identidad, correo y consolas de gestión expuestas</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>KPIs Principales</h2>
+        <div class="note">Los KPIs agregan hechos confirmados incluidos en este informe, con foco principal en alertas y campañas activas o publicadas entre el 12/05/2026 y el 19/05/2026, más contexto operativo reciente cuando sigue siendo relevante para la exposición actual.</div>
+      </div>
+      <div class="kpis"><div class='kpi'><div class='kpi-label'>Incidentes activos destacados</div><div class='kpi-value'>4</div></div><div class='kpi'><div class='kpi-label'>Incidentes críticos</div><div class='kpi-value'>2</div></div><div class='kpi'><div class='kpi-label'>Vulnerabilidades nuevas priorizadas</div><div class='kpi-value'>6</div></div><div class='kpi'><div class='kpi-label'>CVEs críticas</div><div class='kpi-value'>5</div></div><div class='kpi'><div class='kpi-label'>CVEs con explotación confirmada</div><div class='kpi-value'>4</div></div><div class='kpi'><div class='kpi-label'>Campañas de phishing activas o muy recientes</div><div class='kpi-value'>3</div></div><div class='kpi'><div class='kpi-label'>Ransomware activo destacado</div><div class='kpi-value'>1</div></div><div class='kpi'><div class='kpi-label'>Países impactados en campaña AiTM</div><div class='kpi-value'>26</div></div><div class='kpi'><div class='kpi-label'>Tendencia 24h</div><div class='kpi-value'>Alcista</div></div><div class='kpi'><div class='kpi-label'>Nivel de riesgo global</div><div class='kpi-value'>ALTO</div></div></div>
+    </section>
+
+    <section class="section cols-2">
+      <div class="panel">
+        <div class="eyebrow">Resumen ejecutivo</div>
+        <h2>Principales riesgos del momento</h2>
+        <ul><li>Cisco Catalyst SD-WAN CVE-2026-20182 es la prioridad máxima: CVSS 10.0, explotación confirmada y presencia en KEV desde el 14/05/2026.</li><li>Microsoft Exchange CVE-2026-42897 figura como vulnerabilidad explotada y afecta un servicio especialmente sensible para continuidad y fraude.</li><li>Fortinet concentra dos fallos críticos recientes en FortiAuthenticator y FortiSandbox, ambos con potencial de ejecución remota no autorizada.</li><li>Las campañas de AiTM y device code phishing demuestran que la identidad sigue siendo el vector dominante incluso cuando existe MFA tradicional.</li></ul>
+        <h3>Sectores más afectados</h3>
+        <ul><li>Salud y life sciences</li><li>Servicios financieros</li><li>Servicios profesionales</li><li>Tecnología y software</li><li>Pymes con infraestructura híbrida y TI externalizada</li></ul>
+        <h3>Técnicas más usadas</h3>
+        <ul><li>Bypass de autenticación</li><li>Phishing AiTM</li><li>Abuso de device code OAuth</li><li>Adjuntos SVG/HTML y CAPTCHA intermedio</li><li>Explotación de consolas de gestión expuestas</li><li>Uso masivo de credenciales débiles con apoyo de IA</li></ul>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Exposición y decisión</div>
+        <h2>Lectura para dirección</h2>
+        <p><strong>Nivel de exposición estimado:</strong> Alta para organizaciones con OWA o gestión remota accesible desde Internet, segmentación débil, credenciales reutilizadas y ausencia de MFA resistente a phishing.</p>
+        <p><strong>Recomendación ejecutiva principal:</strong> Priorizar en el mismo bloque de trabajo el cierre de exposición externa, el parcheo de CVEs explotadas y la revisión de compromiso sobre sistemas perimetrales y correo.</p>
+        <h3>Conclusión rápida</h3>
+        <ul><li>El vector identidad sigue siendo el principal multiplicador del riesgo.</li><li>Cisco SD-WAN y Exchange requieren tratamiento de emergencia, no solo ciclo normal de parcheo.</li><li>Fortinet y Exim amplían la presión sobre infraestructuras de autenticación y correo.</li><li>Las empresas españolas con appliances expuestos y MFA débil siguen en zona de mayor riesgo.</li><li>La respuesta eficaz exige parchear y, a la vez, revisar trazas de compromiso previo.</li></ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Alertas Activas</h2></div>
+      <div class="grid-cards"><article class='panel alert'><div class='eyebrow'>Crítica · Explotación confirmada / KEV</div><h3>Cisco Catalyst SD-WAN Controller - CVE-2026-20182</h3><p><strong>Impacto:</strong> Permite omitir autenticación y obtener privilegios administrativos en la malla SD-WAN.</p><p><strong>Acción:</strong> Actualizar de inmediato a release corregida y revisar autenticaciones, control connections y cambios NETCONF.</p></article><article class='panel alert'><div class='eyebrow'>Crítica · Explotación observada / KEV</div><h3>Microsoft Exchange Server - CVE-2026-42897</h3><p><strong>Impacto:</strong> Afecta Exchange Server y puede facilitar suplantación si el usuario interactúa con un correo especialmente diseñado.</p><p><strong>Acción:</strong> Aplicar mitigaciones y parches de Microsoft y revisar OWA expuesto, reglas de buzón e indicadores de abuso.</p></article><article class='panel alert'><div class='eyebrow'>Crítica · Publicación reciente con impacto remoto</div><h3>FortiAuthenticator / FortiSandbox</h3><p><strong>Impacto:</strong> Afecta componentes de autenticación y sandbox con potencial de ejecución no autorizada.</p><p><strong>Acción:</strong> Aplicar advisories FG-IR-26-128 y FG-IR-26-127, validar versiones y retirar exposición innecesaria.</p></article><article class='panel alert'><div class='eyebrow'>Crítica · RCE remota publicada</div><h3>Exim sobre GnuTLS - CVE-2026-45185</h3><p><strong>Impacto:</strong> Impacta un servicio de correo ampliamente desplegado y expuesto en Internet.</p><p><strong>Acción:</strong> Actualizar a Exim 4.99.3 o superior y revisar configuraciones con CHUNKING/TLS.</p></article></div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Incidentes y Actividad Relevante</h2></div>
+      <div class="grid-cards"><article class='panel item'><h3>Campaña AiTM multi-etapa observada por Microsoft</h3><p><strong>Hecho confirmado:</strong> Microsoft observó entre el 14 y el 16 de abril de 2026 una campaña contra más de 35.000 usuarios en más de 13.000 organizaciones de 26 países.</p><p><strong>Impacto:</strong> Riesgo elevado de secuestro de sesión, fraude y BEC incluso con MFA no resistente a phishing.</p></article><article class='panel item'><h3>Device code phishing con infraestructura asistida por IA</h3><p><strong>Hecho confirmado:</strong> Microsoft describió el 06/04/2026 una campaña a escala que automatiza códigos dinámicos y selección de víctimas de alto valor.</p><p><strong>Impacto:</strong> Aumenta el riesgo de abuso de OAuth y exfiltración de correo sin robo directo de contraseña.</p></article><article class='panel item'><h3>Interlock activo contra Cisco FMC</h3><p><strong>Hecho confirmado:</strong> AWS confirmó una campaña Interlock que explotaba CVE-2026-20131 36 días antes de su divulgación pública.</p><p><strong>Impacto:</strong> Obliga a revisar compromiso histórico incluso en sistemas ya parcheados.</p></article><article class='panel item'><h3>Acceso masivo a FortiGate con apoyo de IA</h3><p><strong>Hecho confirmado:</strong> AWS documentó más de 600 FortiGate comprometidos en más de 55 países mediante puertos de gestión expuestos y credenciales débiles, sin zero-day.</p><p><strong>Impacto:</strong> Riesgo directo para pymes y entornos con administración remota expuesta.</p></article></div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Vulnerabilidades Críticas Priorizadas</h2></div>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>CVE</th><th>Producto</th><th>CVSS</th><th>Severidad</th>
+              <th>Explotación</th><th>Parche</th><th>Prioridad</th><th>Fuente</th>
+            </tr>
+          </thead>
+          <tbody><tr><td>CVE-2026-20182</td><td>Cisco Catalyst SD-WAN Controller / Manager</td><td>10.0</td><td>Crítica</td><td>Sí, confirmada; KEV 14/05/2026</td><td>Sí</td><td>P1 inmediata</td><td>Cisco / NVD / CISA KEV</td></tr><tr><td>CVE-2026-42897</td><td>Microsoft Exchange Server</td><td>8.1 CNA Microsoft / 6.1 NVD</td><td>Crítica operativa</td><td>Sí, observada; KEV 15/05/2026</td><td>Sí</td><td>P1 inmediata</td><td>INCIBE / NVD / Microsoft</td></tr><tr><td>CVE-2026-44277</td><td>Fortinet FortiAuthenticator</td><td>9.8</td><td>Crítica</td><td>INCIBE la marca explotable; NVD publica advisory reciente</td><td>Sí</td><td>P1 alta</td><td>INCIBE / NVD / Fortinet</td></tr><tr><td>CVE-2026-26083</td><td>FortiSandbox / Cloud / PaaS</td><td>Crítica según INCIBE</td><td>Crítica</td><td>No confirmada en las fuentes abiertas revisadas</td><td>Sí</td><td>P1 alta</td><td>INCIBE / Fortinet</td></tr><tr><td>CVE-2026-46300</td><td>Linux Kernel</td><td>Alta</td><td>Alta</td><td>Sí, según INCIBE</td><td>Sí</td><td>P2 alta</td><td>INCIBE</td></tr><tr><td>CVE-2026-45185</td><td>Exim < 4.99.3</td><td>9.8 CNA MITRE</td><td>Crítica</td><td>No confirmada</td><td>Sí</td><td>P2 alta</td><td>INCIBE / NVD / Exim</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section cols-2">
+      <div class="panel">
+        <div class="eyebrow">Malware y ransomware</div>
+        <h2>Panorama operativo</h2>
+        <h3>Familias o ecosistemas</h3>
+        <ul><li>Interlock ransomware</li><li>Tycoon2FA como ecosistema de soporte al robo de sesión</li><li>EvilTokens como facilitador de device code phishing</li></ul>
+        <h3>Sectores objetivo</h3>
+        <ul><li>Infraestructura crítica y servicios empresariales</li><li>Salud</li><li>Finanzas</li><li>Tecnología</li><li>Pymes con exposición externa relevante</li></ul>
+        <h3>Técnicas</h3>
+        <ul><li>RCE sobre appliances o consolas de gestión</li><li>AiTM y robo de tokens</li><li>Persistencia mediante reglas de buzón</li><li>Reconocimiento con Graph y directorios corporativos</li><li>Búsqueda de backups y credenciales administrativas</li></ul>
+        <p><strong>Tendencia:</strong> Ascendente en identidad, edge devices y abuso de credenciales</p>
+        <p><strong>Nivel de propagación:</strong> Alto cuando existe exposición a Internet y mala higiene de acceso remoto</p>
+        <p><strong>Nota IOC:</strong> Los IOCs extensos se mantienen fuera del resumen ejecutivo; conviene revisarlos en los avisos técnicos de Cisco, Microsoft, AWS y Fortinet si se activa caza interna.</p>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Noticias importantes</div>
+        <h2>Hechos recientes a vigilar</h2>
+        <ul><li>Cisco publicó el 14/05/2026 CVE-2026-20182 con CVSS 10.0 y explotación confirmada.</li><li>INCIBE publicó el 15/05/2026 avisos críticos sobre Exchange, Cisco SD-WAN y Linux Kernel con foco claro en explotación y actualización urgente.</li><li>Fortinet publicó en la semana del 12/05/2026 varios avisos críticos que afectan autenticación y sandboxing empresarial.</li><li>Microsoft confirmó el 04/05/2026 una campaña AiTM de gran escala y el 30/04/2026 un repunte fuerte del phishing con CAPTCHA y SVG.</li><li>Unit 42 situó en su Threat Bulletin de mayo de 2026 el supply chain software path como una de las rutas de intrusión más efectivas del momento.</li></ul>
+      </div>
+    </section>
+
+    <section class="section cols-2">
+      <div class="panel">
+        <div class="eyebrow">Recomendaciones</div>
+        <h2>Priorización ejecutiva</h2>
+        <h3>Crítica</h3>
+        <ul><li>Aplicar de inmediato parches y mitigaciones de Cisco SD-WAN, Exchange, Fortinet y Exim.</li><li>Retirar de Internet las consolas de gestión innecesarias o colocarlas detrás de VPN bastion con control de IP.</li><li>Revisar trazas de compromiso previo en sistemas ya parcheados: autenticaciones anómalas, cuentas nuevas, reglas de buzón, cambios de configuración y accesos de gestión.</li></ul>
+        <h3>Alta</h3>
+        <ul><li>Forzar MFA resistente a phishing en correo, VPN, administración y SaaS crítico.</li><li>Rotar credenciales administrativas y revisar reutilización de credenciales en equipos perimetrales.</li><li>Segmentar backups y comprobar que no compartan accesos con el perímetro ni con cuentas operativas generales.</li></ul>
+        <h3>Media</h3>
+        <ul><li>Endurecer el filtrado de adjuntos SVG/HTML y contenidos con CAPTCHA intermedio.</li><li>Activar detecciones específicas para AiTM, abuso de device code y reglas de correo maliciosas.</li><li>Reducir OWA y servicios heredados expuestos cuando no sean imprescindibles.</li></ul>
+        <h3>Baja</h3>
+        <ul><li>Actualizar playbooks de respuesta para compromiso de identidad y edge devices.</li><li>Revisar inventario de exposición externa y capacidad real de parcheo rápido por producto.</li></ul>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Análisis predictivo / estimativo generado por IA</div>
+        <h2>Sección IA</h2>
+        <p><strong>Riesgo global estimado:</strong> Alto con sesgo alcista para las próximas 24-72 horas</p>
+        <p><strong>Probabilidad de aumento de ataques:</strong> Alta</p>
+        <h3>Amenazas probables</h3>
+        <ul><li>Mayor presión sobre correo corporativo con lures más personalizados y uso de plataformas legítimas.</li><li>Incremento de explotación oportunista de consolas de gestión y appliances edge ya divulgados.</li><li>Expansión de actores de baja sofisticación capaces de operar a escala gracias a servicios de IA y automatización.</li></ul>
+        <h3>Sectores más expuestos</h3>
+        <ul><li>Pymes con TI externalizada</li><li>Servicios profesionales</li><li>Sanidad privada</li><li>Industria con appliances heredados</li></ul>
+        <h3>Vulnerabilidades prioritarias</h3>
+        <ul><li>CVE-2026-20182</li><li>CVE-2026-42897</li><li>CVE-2026-44277</li><li>CVE-2026-45185</li></ul>
+        <p><strong>Recomendación automática:</strong> Concentrar el esfuerzo inmediato en identidad, exposición externa y revisión de compromiso antes de dedicar tiempo a mejoras menos urgentes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Entrega y Fuentes</h2></div>
+      <div class="delivery">
+        <div class="panel"><div class="eyebrow">Histórico</div><p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260519">https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260519</a></p></div>
+        <div class="panel"><div class="eyebrow">HTML</div><p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.html">https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.html</a></p></div>
+        <div class="panel"><div class="eyebrow">JSON</div><p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.json">https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.json</a></p></div>
+        <div class="panel"><div class="eyebrow">PDF</div><p><a href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.pdf">https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_0800_CEST.pdf</a></p></div>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Fuentes principales</div>
+        <ul><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-20182'>NVD - CVE-2026-20182</a> · NVD / CISA KEV reference · 2026-05-14</li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autenticacion-incorrecta-en-cisco-catalyst-sd-wan-controller'>Autenticación incorrecta en Cisco Catalyst SD-WAN Controller</a> · INCIBE-CERT · 2026-05-15</li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-42897'>NVD - CVE-2026-42897</a> · NVD / CISA KEV reference · 2026-05-15</li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft'>Cross-site Scripting en Exchange Server de Microsoft</a> · INCIBE-CERT · 2026-05-15</li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-44277'>NVD - CVE-2026-44277</a> · NVD · 2026-05-12</li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-fortinet-1'>Múltiples vulnerabilidades en productos de Fortinet</a> · INCIBE-CERT · 2026-05-13</li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/escalada-de-privilegios-nivel-local-en-el-kernel-de-linux'>Escalada de privilegios a nivel local en el kernel de Linux</a> · INCIBE-CERT · 2026-05-15</li><li><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-45185'>NVD - CVE-2026-45185</a> · NVD · 2026-05-12</li><li><a href='https://www.incibe.es/incibe-cert/alerta-temprana/avisos/uso-remoto-despues-de-su-liberacion-en-configuraciones-de-gnutls-de-exim'>Uso remoto después de su liberación en configuraciones de GnuTLS de Exim</a> · INCIBE-CERT · 2026-05-13</li><li><a href='https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/'>Breaking the code: Multi-stage code of conduct phishing campaign leads to AiTM token compromise</a> · Microsoft Security Blog · 2026-05-04</li><li><a href='https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/'>Inside an AI-enabled device code phishing campaign</a> · Microsoft Security Blog · 2026-04-06</li><li><a href='https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/'>Email threat landscape: Q1 2026 trends and insights</a> · Microsoft Security Blog · 2026-04-30</li><li><a href='https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/'>Amazon threat intelligence teams identify Interlock ransomware campaign targeting enterprise firewalls</a> · AWS Security Blog · 2026-03-18</li><li><a href='https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/'>AI-augmented threat actor accesses FortiGate devices at scale</a> · AWS Security Blog · 2026-02-20</li><li><a href='https://unit42.paloaltonetworks.com/threat-bulletin/may-2026/'>Unit 42 Threat Bulletin - May 2026</a> · Unit 42 · 2026-05-13</li></ul>
+        <p class="footer">Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
