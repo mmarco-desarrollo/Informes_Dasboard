@@ -1,0 +1,305 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "edition": "16:00 CEST",
+  "generated_at": "2026-05-19 16:12 CEST",
+  "generated_at_iso": "2026-05-19T16:12:05+02:00",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "threat_trend": "Alta sostenida",
+  "next_update": "19/05/2026 20:00 CEST",
+  "ai_risk_state": "Estimativo conservador",
+  "artifact_links": {
+    "github_day": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260519",
+    "github_html": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_1600_CEST.html",
+    "github_json": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260519/Dashboard_Ciberseguridad_20260519_1600_CEST.json",
+    "pdf": null
+  },
+  "kpis": [
+    {
+      "label": "Alertas críticas priorizadas",
+      "value": "5",
+      "context": "Cisco, Exchange, Fortinet e Ivanti en la ventana activa"
+    },
+    {
+      "label": "CVEs en KEV destacadas",
+      "value": "3",
+      "context": "Cisco SD-WAN, Exchange OWA e Ivanti EPMM"
+    },
+    {
+      "label": "Campañas y patrones activos",
+      "value": "4",
+      "context": "AiTM, vishing+SSO, supply chain e identidad"
+    },
+    {
+      "label": "Sectores más expuestos",
+      "value": "4",
+      "context": "Tecnología, sanidad, finanzas y servicios profesionales"
+    },
+    {
+      "label": "Presión sobre edge e identidad",
+      "value": "Muy alta",
+      "context": "Infraestructura expuesta y acceso legítimo abusado"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Estable alta",
+      "context": "Sin señales de relajación frente a la edición de las 12:00"
+    }
+  ],
+  "executive_summary": {
+    "global_state": "La ciberamenaza se mantiene en nivel ALTO a las 16:00 CEST del 19 de mayo de 2026. El mayor riesgo inmediato sigue concentrado en infraestructura expuesta, correo on-prem y abuso de identidad, con Cisco SD-WAN y Microsoft Exchange todavía como prioridades ejecutivas por explotación conocida o presión operativa directa.",
+    "main_risks": [
+      "Compromiso de controladores SD-WAN con impacto potencial sobre la configuración de red.",
+      "Ataques de phishing con AiTM y captura de sesión contra identidades corporativas.",
+      "Exposición de Exchange on-prem a spoofing/XSS en OWA con explotación conocida.",
+      "Superficie crítica en appliances de autenticación y sandboxing con fallos sin autenticación."
+    ],
+    "affected_sectors": "Tecnología y software, sanidad, servicios financieros y servicios profesionales; además de cualquier organización con Exchange on-prem, Cisco SD-WAN o dispositivos Fortinet accesibles.",
+    "techniques": "Authentication bypass, cross-site scripting orientado a spoofing, abuso de OAuth device code, adversary-in-the-middle, vishing con acceso SSO y ejecución a través de rutas de software de confianza.",
+    "estimated_exposure": "Alta para empresas con edge expuesto, autenticación débilmente segmentada y activos administrativos accesibles desde Internet o redes amplias.",
+    "main_recommendation": "Tratar edge, correo on-prem e identidad como un único frente de contención durante las próximas 24 horas: parchear o mitigar, validar exposición externa, reforzar MFA resistente a phishing y revisar actividad administrativa y de autenticación.",
+    "quick_conclusion": [
+      "Cisco SD-WAN sigue siendo la prioridad técnica número uno por criticidad y KEV.",
+      "Exchange on-prem continúa como riesgo directivo por explotación conocida en OWA.",
+      "La presión del atacante se desplaza hacia identidad y confianza heredada más que hacia malware ruidoso.",
+      "Fortinet e Ivanti amplían la superficie de urgencia en appliances y movilidad."
+    ]
+  },
+  "alerts": [
+    {
+      "title": "Cisco SD-WAN con explotación conocida en KEV",
+      "severity": "CRITICA",
+      "detail": "CVE-2026-20182 mantiene prioridad P1. Permite bypass de autenticación y acceso administrativo de alto privilegio en Cisco Catalyst SD-WAN Controller y Manager.",
+      "action": "Validar exposición, aplicar correcciones de Cisco y ejecutar la guía de hunt & hardening de CISA."
+    },
+    {
+      "title": "Exchange on-prem sigue bajo presión",
+      "severity": "CRITICA",
+      "detail": "CVE-2026-42897 en OWA figura en KEV desde el 15/05/2026. El vector combina spoofing/XSS y exposición a campañas que buscan sesión e identidad.",
+      "action": "Aplicar mitigaciones del proveedor, revisar acceso OWA y monitorizar eventos de autenticación anómalos."
+    },
+    {
+      "title": "FortiAuthenticator y FortiSandbox amplían el frente de appliances",
+      "severity": "ALTA",
+      "detail": "Fortinet publicó el 12/05/2026 fallos críticos sin autenticación en FortiAuthenticator (CVE-2026-44277) y FortiSandbox (CVE-2026-26083).",
+      "action": "Actualizar de forma prioritaria y reducir exposición administrativa externa."
+    },
+    {
+      "title": "Ivanti EPMM sigue siendo una deuda urgente",
+      "severity": "ALTA",
+      "detail": "Ivanti reconoce explotación limitada de CVE-2026-6973 en EPMM on-prem; la explotación requiere autenticación administrativa.",
+      "action": "Aislar paneles expuestos, aplicar versiones corregidas y revisar cuentas administrativas."
+    },
+    {
+      "title": "La intrusión moderna se apoya más en identidad y confianza que en malware visible",
+      "severity": "ALTA",
+      "detail": "Microsoft y Unit 42 coinciden en que AiTM, vishing y abuso de SSO/credenciales válidas están ganando peso como vía principal de entrada.",
+      "action": "Elevar MFA resistente a phishing, reducir privilegios persistentes y revisar accesos por contexto."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation": "KEV / explotacion conocida",
+      "patch": "Si",
+      "priority": "P1 inmediata",
+      "source": "Cisco / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server OWA",
+      "cvss": "8.1 (CNA Microsoft)",
+      "severity": "Alta",
+      "exploitation": "KEV / explotacion conocida",
+      "patch": "Mitigacion oficial disponible",
+      "priority": "P1 inmediata",
+      "source": "Microsoft / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-44277",
+      "product": "Fortinet FortiAuthenticator",
+      "cvss": "9.8",
+      "severity": "Critica",
+      "exploitation": "No confirmada en fuente revisada",
+      "patch": "Si",
+      "priority": "P1 alta",
+      "source": "Fortinet / NVD"
+    },
+    {
+      "cve": "CVE-2026-26083",
+      "product": "Fortinet FortiSandbox / Cloud / PaaS",
+      "cvss": "9.8",
+      "severity": "Critica",
+      "exploitation": "No confirmada en fuente revisada",
+      "patch": "Si",
+      "priority": "P1 alta",
+      "source": "Fortinet / NVD"
+    },
+    {
+      "cve": "CVE-2026-6973",
+      "product": "Ivanti Endpoint Manager Mobile (on-prem)",
+      "cvss": "7.2",
+      "severity": "Alta",
+      "exploitation": "Explotacion limitada reconocida por proveedor / KEV",
+      "patch": "Si",
+      "priority": "P1 alta",
+      "source": "Ivanti / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android System / adbd",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation": "No confirmada en fuente revisada",
+      "patch": "Si, parche 2026-05-01+",
+      "priority": "P2 movilidad",
+      "source": "Android Security Bulletin"
+    }
+  ],
+  "incidents_activity": [
+    {
+      "title": "Campana AiTM a gran escala analizada por Microsoft",
+      "detail": "Microsoft observó entre el 14 y el 16 de abril una campaña con más de 35.000 usuarios objetivo, más de 13.000 organizaciones y 26 países, orientada a robo de sesión mediante AiTM."
+    },
+    {
+      "title": "La cadena de suministro pasa a ser canal de ejecución",
+      "detail": "Unit 42 destaca que actualizaciones, dependencias y pipelines se están convirtiendo en rutas de ejecución confiadas, lo que complica la detección temprana."
+    },
+    {
+      "title": "Acceso válido y SSO sustituyen a malware ostensible",
+      "detail": "Unit 42 señala que el abuso de identidad es una de las vías más frecuentes de entrada y que la extorsión sin cifrado gana terreno frente al ransomware clásico."
+    }
+  ],
+  "malware_ransomware": {
+    "status": "No se confirma en las fuentes oficiales monitorizadas un pico singular de nueva familia de malware a esta hora. El desplazamiento operativo más visible sigue siendo hacia robo de sesión, extorsión sin cifrado y abuso de confianza heredada.",
+    "families_or_clusters": [
+      "AiTM token theft",
+      "BlackFile (actividad de extorsion y robo de datos sin cifrado, segun Unit 42)"
+    ],
+    "trend": "Elevada presion sobre identidad y acceso, por encima del malware ruidoso tradicional."
+  },
+  "news": [
+    {
+      "title": "Microsoft detalla una campaña de phishing tipo \"code of conduct\" con AiTM",
+      "date": "2026-05-04",
+      "relevance": "Refuerza que la identidad y la sesión siguen siendo el objetivo prioritario."
+    },
+    {
+      "title": "Fortinet publica lote critico en FortiAuthenticator y FortiSandbox",
+      "date": "2026-05-12",
+      "relevance": "Aumenta el riesgo sobre appliances y planos de autenticación/analisis."
+    },
+    {
+      "title": "Unit 42 publica su boletin de mayo con foco en supply chain e identidad",
+      "date": "2026-05-18",
+      "relevance": "Describe una mutación operativa: acceso por confianza y software legitimo."
+    },
+    {
+      "title": "Android corrige una vulnerabilidad critica de RCE en el boletin de mayo",
+      "date": "2026-05-04",
+      "relevance": "Importante para flotas moviles corporativas y BYOD."
+    }
+  ],
+  "recommendations": {
+    "critica": [
+      "Priorizar hoy mismo Cisco SD-WAN, Exchange on-prem, FortiAuthenticator, FortiSandbox e Ivanti EPMM en el tablero de remediacion.",
+      "Bloquear o restringir exposicion de paneles administrativos y OWA cuando no sea imprescindible su publicacion directa."
+    ],
+    "alta": [
+      "Forzar MFA resistente a phishing para cuentas privilegiadas y accesos administrativos.",
+      "Revisar logs de autenticacion, SSO, OWA y cambios de configuracion en edge durante los ultimos 7 dias.",
+      "Reducir privilegios persistentes y validar accesos por contexto, dispositivo y localizacion."
+    ],
+    "media": [
+      "Ejecutar simulaciones focalizadas de phishing y revisar capacidad de purga retroactiva de correo malicioso.",
+      "Actualizar politicas de deteccion sobre AiTM, device code phishing y uso atipico de tokens o cookies de sesion."
+    ],
+    "baja": [
+      "Revisar posture de cadena de suministro: dependencias, pipelines y accesos de terceros con privilegios heredados."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo generado por IA",
+    "global_risk": "ALTO",
+    "next_threats": [
+      "Persistencia del foco en identidad, OWA, SSO y paneles de administracion expuestos.",
+      "Mayor abuso de confianza en pipelines, dependencias y accesos SaaS ya autorizados."
+    ],
+    "exposed_sectors": [
+      "Empresas con edge expuesto y entornos hibridos",
+      "Sanidad y finanzas por alto valor de identidad y continuidad",
+      "Pymes con escasa segmentacion y MFA no resistente a phishing"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-42897",
+      "CVE-2026-44277",
+      "CVE-2026-26083",
+      "CVE-2026-6973"
+    ],
+    "attack_increase_probability": "Alta en las proximas 24-72 horas para intentos de phishing y abuso de infraestructura expuesta.",
+    "automatic_recommendation": "Asumir que la primera ola buscara identidad o control de gestion antes que despliegue de malware visible; endurecer acceso y vigilar confianza heredada."
+  },
+  "sources": [
+    {
+      "title": "Microsoft Security Blog - Breaking the code",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "published": "2026-05-04"
+    },
+    {
+      "title": "Cisco Security Advisory - CVE-2026-20182",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
+      "published": "2026-05-14"
+    },
+    {
+      "title": "NVD - CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+      "published": "2026-05-14"
+    },
+    {
+      "title": "NVD - CVE-2026-42897",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897",
+      "published": "2026-05-14"
+    },
+    {
+      "title": "Ivanti - May 2026 EPMM Security Update",
+      "url": "https://www.ivanti.com/en-gb/blog/may-2026-epmm-security-update",
+      "published": "2026-05-07"
+    },
+    {
+      "title": "NVD - CVE-2026-6973",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6973",
+      "published": "2026-05-07"
+    },
+    {
+      "title": "NVD - CVE-2026-44277",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44277",
+      "published": "2026-05-12"
+    },
+    {
+      "title": "NVD - CVE-2026-26083",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26083",
+      "published": "2026-05-12"
+    },
+    {
+      "title": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "published": "2026-05-04"
+    },
+    {
+      "title": "Unit 42 Threat Bulletin - May 2026",
+      "url": "https://unit42.paloaltonetworks.com/threat-bulletin/may-2026/",
+      "published": "2026-05-18"
+    },
+    {
+      "title": "INCIBE - Cross-site Scripting en Exchange Server de Microsoft",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos",
+      "published": "2026-05-15"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
