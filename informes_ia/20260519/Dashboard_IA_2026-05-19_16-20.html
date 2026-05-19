@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo Premium de Inteligencia Artificial | Corte 16:00</title>
+  <style>
+    :root {
+      --bg: #060816;
+      --panel: rgba(15, 20, 42, 0.86);
+      --panel-2: rgba(10, 14, 30, 0.94);
+      --text: #eef3ff;
+      --muted: #9eabc8;
+      --blue: #55b6ff;
+      --electric: #3b82f6;
+      --violet: #8b5cf6;
+      --green: #27d7a1;
+      --orange: #ff9b3d;
+      --red: #ff5f6d;
+      --line: rgba(132, 156, 210, 0.18);
+      --glow: 0 18px 50px rgba(7, 12, 28, 0.45);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(59,130,246,0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(139,92,246,0.18), transparent 30%),
+        linear-gradient(180deg, #060816 0%, #090d1d 48%, #05070f 100%);
+    }
+    a { color: var(--blue); text-decoration: none; }
+    .shell { max-width: 1440px; margin: 0 auto; padding: 28px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(10,18,38,0.96), rgba(18,24,55,0.84));
+      box-shadow: var(--glow);
+      padding: 28px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -35% auto;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(39,215,161,0.18), transparent 62%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    h1 {
+      margin: 14px 0 8px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.05;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .mini-panel, .panel, .card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--glow);
+    }
+    .mini-panel {
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .meta-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .meta-value { margin-top: 6px; font-size: 15px; font-weight: 600; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .high { background: rgba(255, 95, 109, 0.12); color: #ffb2bb; }
+    .medium { background: rgba(255, 155, 61, 0.14); color: #ffc78e; }
+    .good { background: rgba(39, 215, 161, 0.14); color: #8ff0ce; }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .kpi {
+      border-radius: 18px;
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(11, 17, 37, 0.95), rgba(13, 19, 44, 0.82));
+    }
+    .kpi .n {
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 800;
+      margin-top: 8px;
+    }
+    .kpi .t { color: var(--muted); font-size: 13px; }
+    .layout {
+      display: grid;
+      grid-template-columns: 1.45fr 0.95fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .stack { display: grid; gap: 18px; }
+    .panel {
+      border-radius: 22px;
+      padding: 22px;
+    }
+    .panel h2 {
+      margin: 0 0 16px;
+      font-size: 21px;
+    }
+    .summary-list {
+      display: grid;
+      gap: 12px;
+    }
+    .summary-item {
+      border-left: 3px solid rgba(85,182,255,0.7);
+      padding-left: 14px;
+    }
+    .summary-item p { margin: 6px 0 0; color: #dbe6ff; }
+    .summary-type {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .activity {
+      display: grid;
+      gap: 10px;
+    }
+    .bar-row { display: grid; gap: 6px; }
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .bar {
+      height: 11px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar > span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--electric), var(--violet));
+    }
+    .world {
+      display: grid;
+      gap: 10px;
+    }
+    .world-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .card {
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .impact {
+      white-space: nowrap;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 95, 109, 0.12);
+      color: #ffb2bb;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .meta {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .card p { color: #dbe6ff; line-height: 1.5; }
+    .hint {
+      color: #b9c9ea;
+      font-size: 14px;
+    }
+    .source {
+      display: inline-flex;
+      margin-top: 8px;
+      font-weight: 700;
+    }
+    ul.clean {
+      margin: 0;
+      padding-left: 18px;
+      color: #dbe6ff;
+      display: grid;
+      gap: 10px;
+    }
+    .prio {
+      display: inline-flex;
+      min-width: 68px;
+      font-weight: 700;
+      color: var(--orange);
+      margin-right: 8px;
+    }
+    .footer {
+      margin-top: 18px;
+      padding: 18px 22px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    @media (max-width: 1080px) {
+      .hero-grid, .layout, .cards, .kpis { grid-template-columns: 1fr; }
+      .meta-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="eyebrow">
+        <span>MMarco Seguridad</span>
+        <span>Informe Ejecutivo IA</span>
+        <span>Europe/Madrid</span>
+      </div>
+      <h1>Informe Ejecutivo Premium de Inteligencia Artificial | Corte 16:00</h1>
+      <p style="max-width: 900px; color: #d7e4ff; font-size: 17px; line-height: 1.6;">
+        Corte de las 16:00 con foco en novedades verificadas, incidentes, vulnerabilidades y herramientas con impacto alto o utilidad inmediata para ciberseguridad, automatizacion y servicios tecnologicos.
+      </p>
+      <div class="hero-grid">
+        <div class="mini-panel">
+          <div class="meta-grid">
+            <div><div class="meta-label">Generado</div><div class="meta-value">19/05/2026 16:20:55 CEST</div></div>
+            <div><div class="meta-label">Impacto IA</div><div class="meta-value"><span class="badge high">Alto</span></div></div>
+            <div><div class="meta-label">Estado global</div><div class="meta-value">Actividad alta con aceleracion agentic y tension creciente en seguridad de integraciones</div></div>
+            <div><div class="meta-label">Proxima actualizacion</div><div class="meta-value">19/05/2026 20:00 CEST (corte sugerido)</div></div>
+            <div><div class="meta-label">Perfil corporativo</div><div class="meta-value">Ciberseguridad, Blockchain, IA y Telecomunicaciones</div></div>
+            <div><div class="meta-label">Destinatario principal</div><div class="meta-value">mmarco.seguridad@gmail.com</div></div>
+          </div>
+        </div>
+        <div class="mini-panel">
+          <div class="meta-label">Lectura rapida</div>
+          <p style="margin: 10px 0 0; line-height: 1.6; color: #dbe6ff;">
+            El frente mas activo hoy es agentic: Anthropic compra Stainless, xAI lanza Skills y NVIDIA ya entrega infraestructura para agentes. El frente mas urgente sigue siendo seguridad operacional: MCP, Flowise y Semantic Kernel mantienen riesgo critico real.
+          </p>
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi mini-panel"><div class="t">Novedades de alto impacto</div><div class="n">8</div></div>
+        <div class="kpi mini-panel"><div class="t">Vulnerabilidades criticas vigiladas</div><div class="n">3</div></div>
+        <div class="kpi mini-panel"><div class="t">Herramientas o repos con utilidad inmediata</div><div class="n">4</div></div>
+        <div class="kpi mini-panel"><div class="t">Hitos regulatorios activos</div><div class="n">1</div></div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <div class="stack">
+        <section class="panel">
+          <h2>Resumen ejecutivo</h2>
+          <div class="summary-list"><div class="summary-item"><div class="summary-type">confirmed</div><p>Anthropic y xAI movieron la carrera agentic desde el modelo hacia la capa operativa: conexiones, skills persistentes, SDKs y MCP son ya la zona de ventaja competitiva inmediata.</p></div><div class="summary-item"><div class="summary-type">confirmed</div><p>NVIDIA confirmo entregas reales de Vera a Anthropic, OpenAI, OCI y SpaceXAI el 18 de mayo de 2026, senal de que la infraestructura para agentes entra en fase de produccion.</p></div><div class="summary-item"><div class="summary-type">confirmed</div><p>El riesgo mas urgente sigue en la superficie de herramientas y agentes: Semantic Kernel y dos fallos criticos de Flowise siguen siendo referencias claras de RCE y abuso via MCP o prompt injection.</p></div><div class="summary-item"><div class="summary-type">interpretation</div><p>La ventaja competitiva a corto plazo ya no depende solo del mejor LLM: depende de identidad, permisos, conectores, evaluacion de agentes y gobernanza operativa.</p></div></div>
+        </section>
+
+        <section class="panel">
+          <h2>Noticias destacadas</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>Anthropic adquiere Stainless</h3>
+                <div class="impact">alto</div>
+              </div>
+              <p class="meta">2026-05-18 · plataforma / tooling</p>
+              <p>Refuerza SDKs, CLIs y servidores MCP como capa clave para agentes empresariales.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Vigilar el ecosistema MCP y la estandarizacion de conectores como palanca de lock-in y productividad.</p>
+              <a class="source" href="https://www.anthropic.com/news/anthropic-acquires-stainless?s=09">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>KPMG integra Claude en su operativa global</h3>
+                <div class="impact">alto</div>
+              </div>
+              <p class="meta">2026-05-19 · enterprise deployment</p>
+              <p>Valida el paso de copilotos a despliegues core en consultoria, fiscal, legal y modernizacion TI.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Monitorizar casos replicables para servicios de automatizacion y seguridad gestionada.</p>
+              <a class="source" href="https://www.anthropic.com/news/anthropic-kpmg">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>OpenAI endurece proteccion de cuentas</h3>
+                <div class="impact">alto</div>
+              </div>
+              <p class="meta">2026-04-30 · security</p>
+              <p>Aumenta el liston para cuentas con contexto sensible y afecta tambien a Codex.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Aplicar MFA resistente a phishing y revisar recuperacion de cuentas en herramientas IA corporativas.</p>
+              <a class="source" href="https://openai.com/index/advanced-account-security/">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>OpenAI mejora deteccion contextual en conversaciones sensibles</h3>
+                <div class="impact">medio-alto</div>
+              </div>
+              <p class="meta">2026-05-14 · safety</p>
+              <p>Marca tendencia en safety longitudinal y en evaluacion de riesgo por contexto, no por prompts aislados.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Incorporar trazas conversacionales y contexto acumulado en evaluaciones internas de asistentes.</p>
+              <a class="source" href="https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Gemini Intelligence llega a Android</h3>
+                <div class="impact">alto</div>
+              </div>
+              <p class="meta">2026-05-12 · consumer / platform</p>
+              <p>Empuja IA proactiva, widgets generativos y automatizacion ligera desde sistema operativo.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Seguir la adopcion BYOD y el riesgo de fuga de datos cuando la IA del dispositivo se conecte a apps personales.</p>
+              <a class="source" href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>NVIDIA empieza entregas fisicas de Vera para agentes</h3>
+                <div class="impact">alto</div>
+              </div>
+              <p class="meta">2026-05-18 · infraestructura</p>
+              <p>Senal tangible de capacidad orientada a tool calling, sandboxing y orquestacion a gran escala.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Seguir a OCI como indicador temprano de coste e infraestructura para despliegues agentic empresariales.</p>
+              <a class="source" href="https://blogs.nvidia.com/blog/vera-cpu-delivery/">Fuente</a>
+            </article>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h2>Modelos y LLMs recientes</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>Grok 4.3</h3>
+                <div class="impact">alto</div>
+              </div>
+              <p class="meta">xAI</p>
+              
+              <p class="hint"><strong>Lectura ejecutiva:</strong> agentes con herramientas, salidas estructuradas, largos contextos</p>
+              <a class="source" href="https://docs.x.ai/developers/models/grok-4.3">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>GPT-Realtime-2</h3>
+                <div class="impact">alto</div>
+              </div>
+              <p class="meta">OpenAI</p>
+              
+              <p class="hint"><strong>Lectura ejecutiva:</strong> asistentes de voz, atencion en directo, agentes telefonicos</p>
+              <a class="source" href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Voxtral TTS</h3>
+                <div class="impact">medio-alto</div>
+              </div>
+              <p class="meta">Mistral AI</p>
+              
+              <p class="hint"><strong>Lectura ejecutiva:</strong> voz sintetica empresarial, interfaces vocales, automatizacion de contenidos</p>
+              <a class="source" href="https://docs.mistral.ai/models/voxtral-tts-26-03">Fuente</a>
+            </article>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h2>Herramientas emergentes</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>xAI Skills</h3>
+                
+              </div>
+              
+              <p>Memoria operativa persistente y creacion de documentos, hojas, presentaciones y PDFs con skills integradas.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Necesita gobernanza de skills y permisos si salta al entorno corporativo.</p>
+              <a class="source" href="https://x.ai/news/grok-skills">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Microsoft Agent 365</h3>
+                
+              </div>
+              
+              <p>Plano de control para observar, gobernar y asegurar agentes en la organizacion.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Su aparicion confirma que la proliferacion de agentes ya es problema de gestion real.</p>
+              <a class="source" href="https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>OpenAI Privacy Filter</h3>
+                
+              </div>
+              
+              <p>Modelo open-weight para detectar y redaccionar PII localmente en texto no estructurado.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Requiere validacion por dominio antes de ponerlo en flujos regulatorios criticos.</p>
+              <a class="source" href="https://openai.com/ms-BN/index/introducing-openai-privacy-filter/">Fuente</a>
+            </article>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h2>Repositorios y frameworks</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>microsoft/mcp</h3>
+                
+              </div>
+              
+              <p>Catalogo de implementaciones oficiales MCP de Microsoft para acceso a datos y herramientas.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> La misma capa MCP que habilita valor operativo amplifica superficie de permisos y exposicion.</p>
+              <a class="source" href="https://github.com/microsoft/mcp">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Exgentic / Open Agent Leaderboard</h3>
+                
+              </div>
+              
+              <p>Benchmark abierto para comparar sistemas de agentes completos por calidad y coste.</p>
+              <p class="hint"><strong>Lectura ejecutiva:</strong> Todavia es temprano; conviene usarlo como senal comparativa, no como verdad unica.</p>
+              <a class="source" href="https://huggingface.co/blog/ibm-research/open-agent-leaderboard">Fuente</a>
+            </article>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h2>Incidentes IA</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>Misconfiguraciones explotables en apps IA y servidores MCP</h3>
+                <div class="impact">acceso no autenticado a herramientas internas, datos sensibles y capacidades operativas</div>
+              </div>
+              <p class="meta">aplicaciones IA con MCP expuesto</p>
+              <p>acceso no autenticado a herramientas internas, datos sensibles y capacidades operativas</p>
+              
+              <a class="source" href="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/">Fuente</a>
+            </article>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h2>Vulnerabilidades IA</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>RCE en Microsoft Semantic Kernel InMemoryVectorStore</h3>
+                <div class="impact">ejecucion remota de codigo en SDK Python</div>
+              </div>
+              <p class="meta">semantic-kernel (pip)</p>
+              <p>ejecucion remota de codigo en SDK Python</p>
+              
+              <a class="source" href="https://github.com/advisories/GHSA-xjw9-4gw8-4rqx">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>RCE autenticado via adaptadores MCP en Flowise</h3>
+                <div class="impact">ejecucion arbitraria de comandos via configuracion Custom MCP</div>
+              </div>
+              <p class="meta">flowise y flowise-components</p>
+              <p>ejecucion arbitraria de comandos via configuracion Custom MCP</p>
+              
+              <a class="source" href="https://github.com/advisories/GHSA-c9gw-hvqq-f33r">Fuente</a>
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Prompt injection a RCE en CSV Agent de Flowise</h3>
+                <div class="impact">codigo Python malicioso ejecutado en el servidor</div>
+              </div>
+              <p class="meta">flowise y flowise-components</p>
+              <p>codigo Python malicioso ejecutado en el servidor</p>
+              
+              <a class="source" href="https://github.com/advisories/GHSA-3hjv-c53m-58jj">Fuente</a>
+            </article>
+            </div>
+        </section>
+      </div>
+
+      <div class="stack">
+        <section class="panel">
+          <h2>Evolucion de actividad IA</h2>
+          <div class="activity">
+            <div class="bar-row"><div class="bar-label"><span>Seguridad e incidentes</span><span>Muy alta</span></div><div class="bar"><span style="width: 92%"></span></div></div>
+            <div class="bar-row"><div class="bar-label"><span>Tooling agentic</span><span>Muy alta</span></div><div class="bar"><span style="width: 89%"></span></div></div>
+            <div class="bar-row"><div class="bar-label"><span>Infraestructura</span><span>Alta</span></div><div class="bar"><span style="width: 76%"></span></div></div>
+            <div class="bar-row"><div class="bar-label"><span>Modelos</span><span>Alta</span></div><div class="bar"><span style="width: 74%"></span></div></div>
+            <div class="bar-row"><div class="bar-label"><span>Regulacion</span><span>Media</span></div><div class="bar"><span style="width: 52%"></span></div></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Vista global IA</h2>
+          <div class="world">
+            <div class="world-item"><span>EE. UU.</span><strong>OpenAI, Anthropic, NVIDIA, Microsoft, xAI</strong></div>
+            <div class="world-item"><span>UE</span><strong>Consulta AI Act hasta 03/06/2026</strong></div>
+            <div class="world-item"><span>Android / consumo</span><strong>Gemini Intelligence escala a dispositivo</strong></div>
+            <div class="world-item"><span>Open ecosystem</span><strong>Leaderboard abierto para agentes completos</strong></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Tendencias y radar</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>Del modelo al sistema</h3>
+                
+              </div>
+              
+              <p>El valor se desplaza a skills, conectores, evaluacion, SDKs y control-plane de agentes.</p>
+              
+              
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Seguridad de identidad y permisos</h3>
+                
+              </div>
+              
+              <p>MCP y herramientas remotas convierten autenticacion, alcance y contexto de ejecucion en primer vector de riesgo.</p>
+              
+              
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Infraestructura agentic</h3>
+                
+              </div>
+              
+              <p>CPU + GPU + sandboxing + tool calling pasan a ser parte del mensaje comercial y tecnico de primer nivel.</p>
+              
+              
+            </article>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h2>Oportunidades</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <h3>Auditoria de MCP y agentes para pymes y consultoria</h3>
+                <div class="impact">alta</div>
+              </div>
+              
+              <p>Oferta inmediata para revisar permisos, autenticacion, exposicion remota y trazabilidad de herramientas IA.</p>
+              
+              
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Paquetes de privacidad con redaccion local de PII</h3>
+                <div class="impact">alta</div>
+              </div>
+              
+              <p>Integrar OpenAI Privacy Filter en flujos de RAG, soporte y documentos sensibles.</p>
+              
+              
+            </article>
+            
+
+            <article class="card">
+              <div class="card-top">
+                <h3>Benchmarking de agentes con Open Agent Leaderboard</h3>
+                <div class="impact">media</div>
+              </div>
+              
+              <p>Usar evaluacion coste-calidad para elegir stacks antes de invertir en despliegues largos.</p>
+              
+              
+            </article>
+            </div>
+        </section>
+
+        <section class="panel">
+          <h2>Alertas activas</h2>
+          <ul class="clean"><li>MCP expuesto sin autenticacion o con contexto de servidor compartido</li><li>Flowise <= 3.0.13 en entornos accesibles</li><li>Semantic Kernel Python < 1.39.4 en integraciones productivas</li><li>Cuentas de asistentes IA sin proteccion resistente a phishing</li></ul>
+        </section>
+
+        <section class="panel">
+          <h2>Recomendaciones ejecutivas</h2>
+          <ul class="clean"><li><span class="prio">Critica</span>Inventariar agentes, MCP servers y permisos efectivos antes de ampliar automatizaciones con terceros.</li><li><span class="prio">Alta</span>Revisar y parchear Semantic Kernel y Flowise donde exista uso directo o dependencia transitiva.</li><li><span class="prio">Alta</span>Probar OpenAI Privacy Filter o equivalente local para redaccion de PII en flujos internos.</li><li><span class="prio">Media</span>Seguir xAI Skills, Open Agent Leaderboard y microsoft/mcp como senales de madurez del stack agentic.</li></ul>
+        </section>
+
+        <section class="panel">
+          <h2>Calendario IA</h2>
+          <ul class="clean"><li><strong>2026-06-03</strong> · Cierre de la consulta europea sobre obligaciones de transparencia del AI Act · <a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act">European Commission / Shaping Europe’s digital future</a></li></ul>
+        </section>
+      </div>
+    </div>
+
+    <section class="panel" style="margin-top: 18px;">
+      <h2>Fuentes clave</h2>
+      <ul class="clean"><li><a href="https://www.anthropic.com/news/anthropic-acquires-stainless?s=09">Anthropic acquires Stainless</a> · Anthropic · 2026-05-18</li><li><a href="https://www.anthropic.com/news/anthropic-kpmg">KPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance</a> · Anthropic · 2026-05-19</li><li><a href="https://blogs.nvidia.com/blog/vera-cpu-delivery/">Vera Arrives: NVIDIA’s First CPU Built for Agents Lands at Top AI Labs</a> · NVIDIA · 2026-05-18</li><li><a href="https://x.ai/news/grok-skills">Skills in web, iOS, and Android</a> · xAI · 2026-05-18</li><li><a href="https://docs.x.ai/developers/models">Models | xAI Docs</a> · xAI Docs · 2026-05-09</li><li><a href="https://docs.x.ai/developers/models/grok-4.3">Grok 4.3 | xAI Docs</a> · xAI Docs · 2026-05-09</li><li><a href="https://openai.com/index/advanced-account-security/">Introducing Advanced Account Security</a> · OpenAI · 2026-04-30</li><li><a href="https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/">Helping ChatGPT better recognize context in sensitive conversations</a> · OpenAI · 2026-05-14</li><li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">Advancing voice intelligence with new models in the API</a> · OpenAI · 2026-05-07</li><li><a href="https://openai.com/ms-BN/index/introducing-openai-privacy-filter/">Introducing OpenAI Privacy Filter</a> · OpenAI · 2026-04-22</li><li><a href="https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/">A smarter, more proactive Android with Gemini Intelligence</a> · Google · 2026-05-12</li><li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/">When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps</a> · Microsoft Security Blog · 2026-05-14</li><li><a href="https://github.com/advisories/GHSA-xjw9-4gw8-4rqx">Microsoft Semantic Kernel InMemoryVectorStore filter functionality vulnerable to remote code execution</a> · GitHub Advisory Database · 2026-02-19</li><li><a href="https://github.com/advisories/GHSA-c9gw-hvqq-f33r">Flowise: Authenticated RCE Via MCP Adapters</a> · GitHub Advisory Database · 2026-04-15</li><li><a href="https://github.com/advisories/GHSA-3hjv-c53m-58jj">Flowise: CSV Agent Prompt Injection Remote Code Execution Vulnerability</a> · GitHub Advisory Database · 2026-04-15</li><li><a href="https://huggingface.co/blog/ibm-research/open-agent-leaderboard">The Open Agent Leaderboard</a> · Hugging Face / IBM Research · 2026-05-18</li><li><a href="https://github.com/microsoft/mcp">microsoft/mcp</a> · GitHub · consultado 2026-05-19</li><li><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act">Consultation on the draft guidelines on transparency obligations under the AI Act</a> · European Commission · 2026-05-08</li></ul>
+    </section>
+
+    <footer class="footer">
+      <strong>MMarco Seguridad</strong><br>
+      Manuel Marco Sanchez · https://mmarcoseguridad.com · mmarco.seguridad@gmail.com · WhatsApp +34 656 33 93 55<br><br>
+      Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.
+    </footer>
+  </div>
+</body>
+</html>
