@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "title": "Informe Ejecutivo RGPD",
+    "mode": "Cierre del dia",
+    "generated_at": "2026-05-19 22:03 CEST",
+    "timezone": "Europe/Madrid",
+    "next_update": "2026-05-20 07:07 CEST",
+    "brand": "MMarco Seguridad",
+    "repository": "mmarco-desarrollo/Informes_Dasboard",
+    "historical_path": "informes_RGPD/20260519",
+    "global_compliance": "72% (estimacion IA prudente)",
+    "global_risk": "Medio-Alto",
+    "scope_note": "Radar ejecutivo de contexto regulatorio y riesgo externo; no es auditoria interna confirmada."
+  },
+  "kpis": {
+    "incidents_today": 0,
+    "active_relevant_breaches": 1,
+    "aepd_claims_2025": 30931,
+    "sanctions_published_today": "sin dato verificado",
+    "legal_updates_status": "2 vigentes",
+    "dpia_priority_focuses": 3
+  },
+  "executive_summary": {
+    "global_status": "Sin nueva sancion ni incidente RGPD oficial confirmado hoy en AEPD, EDPB, EDPS, BOE o INCIBE hasta las 22:03 CEST.",
+    "main_risks": [
+      "Seguridad de la informacion y terceros con acceso a datos personales",
+      "Transparencia informativa y minimizacion en la captacion de datos",
+      "Dependencia de proveedores, CRM y servicios con transferencias internacionales"
+    ],
+    "priority_obligations": [
+      "Revisar articulos 12, 13 y 14 RGPD en todos los puntos de recogida",
+      "Asegurar planes de respuesta a brechas y trazabilidad documental",
+      "Priorizar controles sobre encargados y accesos remotos"
+    ],
+    "quick_conclusion": [
+      "No se confirma novedad regulatoria disruptiva hoy",
+      "La presion supervisora sigue alta en transparencia y brechas",
+      "El vector proveedor/CRM sigue siendo el principal riesgo practico",
+      "Conviene usar la apertura de manana para revisar transparencia y brechas"
+    ]
+  },
+  "risk_areas": [
+    {"area": "Gestion de datos personales", "level": "Medio"},
+    {"area": "Derechos de los interesados", "level": "Medio-Alto"},
+    {"area": "Seguridad de la informacion", "level": "Alto"},
+    {"area": "Encargados de tratamiento", "level": "Alto"},
+    {"area": "Transferencias internacionales", "level": "Medio"},
+    {"area": "Evaluaciones DPIA", "level": "Medio-Alto"},
+    {"area": "Cookies", "level": "Medio-Alto"},
+    {"area": "Formacion y concienciacion", "level": "Alto"}
+  ],
+  "incidents": [
+    {
+      "date": "2026-05-19",
+      "type": "Vigilancia oficial",
+      "severity": "Baja",
+      "status": "Sin novedad confirmada",
+      "description": "No se ha verificado una nueva brecha o incidente RGPD publicada hoy en las fuentes oficiales revisadas hasta las 22:03 CEST.",
+      "classification": "hecho_confirmado"
+    },
+    {
+      "date": "2026-05-14",
+      "type": "Brecha de datos",
+      "severity": "Alta",
+      "status": "Investigacion abierta",
+      "description": "INCIBE-CERT resume el incidente de France Titres con posible exposicion de datos identificativos y de contacto.",
+      "classification": "hecho_confirmado"
+    }
+  ],
+  "legal_updates": [
+    {
+      "title": "Sin nueva publicacion regulatoria de alto impacto confirmada hoy",
+      "date": "2026-05-19 22:03 CEST",
+      "jurisdiction": "ES/UE",
+      "impact": "Medio",
+      "classification": "hecho_confirmado"
+    },
+    {
+      "title": "La accion coordinada europea 2026 mantiene foco en transparencia e informacion",
+      "date": "2026-03-19",
+      "jurisdiction": "UE",
+      "impact": "Alto",
+      "classification": "hecho_confirmado"
+    },
+    {
+      "title": "La doctrina del Tribunal Supremo anticipa el control RGPD al diseno de la solicitud de datos",
+      "date": "2026-04-28",
+      "jurisdiction": "ES",
+      "impact": "Alto",
+      "classification": "hecho_confirmado"
+    },
+    {
+      "title": "EDPB 2026-2027 acelera guias sobre GenAI, anonimizacion y AI Act",
+      "date": "2026-02-12",
+      "jurisdiction": "UE",
+      "impact": "Medio-Alto",
+      "classification": "hecho_confirmado"
+    }
+  ],
+  "sanctions": {
+    "today_status": "Sin nueva sancion o resolucion AEPD verificada hoy 19/05/2026 en el muestreo oficial revisado hasta las 22:03 CEST.",
+    "recent_pressure": "La AEPD informo el 06/05/2026 de 19.836.603 EUR en sanciones ligadas a brechas en 2025 y 48.108.765 EUR en sanciones totales.",
+    "classification": "hecho_confirmado"
+  },
+  "recommendations": [
+    {"priority": "Critica", "action": "Revisar capas informativas, formularios y flujos de recogida de datos para validar minimizacion y transparencia desde el diseno."},
+    {"priority": "Alta", "action": "Comprobar MFA, accesos VPN, credenciales privilegiadas y accesos de proveedores con datos personales."},
+    {"priority": "Alta", "action": "Actualizar procedimiento de brechas para asegurar notificacion en 72 horas y criterio de comunicacion a afectados."},
+    {"priority": "Media", "action": "Revisar contratos de encargados criticos, en especial CRM, marketing y analitica con transferencias fuera del EEE."},
+    {"priority": "Media", "action": "Priorizar DPIA en tratamientos con IA, biometria, scoring o perfilado relevante."}
+  ],
+  "ai_section": {
+    "estimated_risk": "58/100",
+    "top_exposures": [
+      "Terceros con acceso masivo a datos",
+      "Capas informativas desalineadas",
+      "IA sin matriz clara de base juridica y DPIA"
+    ],
+    "trend_prediction": "Es razonable esperar mas actividad supervisora en transparencia, IA aplicada y grandes brechas vinculadas a terceros durante 2026.",
+    "classification": "riesgo_estimado"
+  },
+  "sources": [
+    {
+      "title": "AEPD - La Agencia recibio mas de 30.000 reclamaciones en 2025, un 64% mas",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-recibio-mas-de-30.000-reclamaciones-en-2025-un-64-mas",
+      "date": "2026-05-06"
+    },
+    {
+      "title": "AEPD - La AEPD recibio en 2025 mas de 2.700 notificaciones de brechas",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-en-2025-mas-2.700-notificaciones-brechas",
+      "date": "2026-01-23"
+    },
+    {
+      "title": "AEPD - Plan de actuacion 2026",
+      "url": "https://www.aepd.es/documento/plan-de-actuacion-2026.pdf",
+      "date": "2026-03-25"
+    },
+    {
+      "title": "AEPD - En que momento comienza legalmente un tratamiento de datos personales",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales",
+      "date": "2026-04-28"
+    },
+    {
+      "title": "EDPB - CEF 2026 sobre transparencia e informacion",
+      "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en",
+      "date": "2026-03-19"
+    },
+    {
+      "title": "EDPB - Work programme 2026-2027",
+      "url": "https://www.edpb.europa.eu/news/news/2026/edpb-work-programme-2026-2027-easing-compliance-and-strengthening-cooperation-across_en",
+      "date": "2026-02-12"
+    },
+    {
+      "title": "EDPB y EDPS - Opinion conjunta sobre ciberseguridad y brechas",
+      "url": "https://www.edpb.europa.eu/news/news/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while_en",
+      "date": "2026-03-19"
+    },
+    {
+      "title": "INCIBE-CERT - Incidente de seguridad en France Titres",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-en-la-agencia-nacional-de-identidad-digital-de",
+      "date": "2026-05-14"
+    }
+  ],
+  "legal_note": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional."
+}
