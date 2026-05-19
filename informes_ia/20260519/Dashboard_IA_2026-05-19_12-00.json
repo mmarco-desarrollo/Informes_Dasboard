@@ -1,0 +1,384 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "title": "Informe Ejecutivo Premium de Inteligencia Artificial | Corte 12:00",
+  "generated_at": "2026-05-19 12:07:52 CEST",
+  "timezone": "Europe/Madrid",
+  "impact_level": "Alto",
+  "ecosystem_status": "Aceleracion productiva con presion elevada en seguridad y gobierno",
+  "next_update": "2026-05-19 20:00 CEST (estimado)",
+  "delta_summary": [
+    "Anthropic mueve el frente agentic desde el modelo hacia la conectividad al adquirir Stainless, pieza clave de SDKs y MCP.",
+    "xAI amplia la guerra de productividad con Skills y convierte preferencias y flujos persistentes en producto transversal.",
+    "NVIDIA materializa la capa de infraestructura para agentes con las primeras entregas de Vera a OpenAI, Anthropic, OCI y SpaceXAI.",
+    "No se han confirmado incidentes criticos nuevos del ecosistema IA desde la ultima ejecucion; el riesgo operativo sigue concentrado en agentes, MCP, supply chain y despliegues mal configurados."
+  ],
+  "kpis": [
+    {
+      "label": "Cambios confirmados",
+      "value": "3",
+      "note": "senales nuevas con impacto real desde la ultima ejecucion"
+    },
+    {
+      "label": "Alertas activas",
+      "value": "4",
+      "note": "riesgos vigentes en agentes, supply chain y configuracion"
+    },
+    {
+      "label": "Ventanas regulatorias",
+      "value": "1",
+      "note": "consulta AI Act abierta hasta el 3 de junio"
+    },
+    {
+      "label": "Oportunidades inmediatas",
+      "value": "3",
+      "note": "tooling agentic, infra y automatizacion documental"
+    }
+  ],
+  "featured_news": [
+    {
+      "name": "Anthropic acquires Stainless",
+      "date": "2026-05-18",
+      "source": "Anthropic",
+      "category": "M&A / Developer Platform",
+      "impact": "Alta",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Refuerza SDKs, CLIs y servidores MCP como capa estrategica para agentes conectados.",
+      "quick_take": "Lectura clara: la guerra competitiva pasa del modelo a la superficie de integracion.",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless"
+    },
+    {
+      "name": "Skills in web, iOS, and Android",
+      "date": "2026-05-18",
+      "source": "xAI",
+      "category": "Productividad / Platform",
+      "impact": "Alta",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Introduce memoria operativa persistente y generacion de documentos, hojas y PDF dentro de Grok.",
+      "quick_take": "Sube la presion competitiva en asistentes con workflows repetibles y document-centric AI.",
+      "url": "https://x.ai/news/grok-skills"
+    },
+    {
+      "name": "Vera CPU delivery to top AI labs",
+      "date": "2026-05-18",
+      "source": "NVIDIA",
+      "category": "Infraestructura IA",
+      "impact": "Alta",
+      "status": "Hecho confirmado",
+      "utility_or_risk": "Convierte la narrativa agentic en despliegue fisico: CPU especializada para tool-calling, orquestacion y sandboxes.",
+      "quick_take": "La carrera ya no es solo modelo; tambien es stack de ejecucion con hardware dedicado.",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/"
+    }
+  ],
+  "recent_models": [
+    {
+      "name": "GPT-5.5 Thinking in Finances",
+      "company": "OpenAI",
+      "type": "Reasoning / personal finance workflow",
+      "capabilities": "Analisis financiero contextual con cuentas conectadas, memoria financiera y preguntas complejas.",
+      "multimodal": "No destacado en esta release",
+      "context_window": "No detallado en la nota",
+      "license": "Propietario",
+      "impact": "Alta",
+      "use_cases": "Asistentes financieros, planificacion personal, escenarios y explicabilidad contextual.",
+      "status": "Continuidad relevante",
+      "url": "https://openai.com/index/personal-finance-chatgpt/"
+    },
+    {
+      "name": "Gemini Intelligence",
+      "company": "Google",
+      "type": "AI layer for Android",
+      "capabilities": "Funciones proactivas dentro del sistema y experiencia Android mas contextual.",
+      "multimodal": "Si, segun posicionamiento Gemini",
+      "context_window": "No disponible",
+      "license": "Propietario",
+      "impact": "Alta",
+      "use_cases": "Automatizacion contextual en dispositivo y asistencia multiapp.",
+      "status": "Continuidad relevante",
+      "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/"
+    },
+    {
+      "name": "Grok Build Early Beta",
+      "company": "xAI",
+      "type": "Coding agent CLI",
+      "capabilities": "Planificacion, diffs revisables y respeto de convenciones del repositorio.",
+      "multimodal": "No indicado",
+      "context_window": "No disponible",
+      "license": "Propietario",
+      "impact": "Alta",
+      "use_cases": "Ingenieria de software, automatizacion de cambios y flujos agentic en terminal.",
+      "status": "Continuidad relevante",
+      "url": "https://x.ai/news/grok-build-cli"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Finance Search",
+      "source": "Perplexity",
+      "language": "API",
+      "description": "Llamada de herramienta para datos financieros estructurados, cotizaciones y contexto web con citas.",
+      "use_cases": "Research financiero, due diligence, agentes de analisis de empresas y reporting.",
+      "utility": "Alta",
+      "risk": "Depende de gobierno de datos y validacion de datos sensibles al tiempo.",
+      "url": "https://www.perplexity.ai/hub/blog/introducing-finance-search-in-the-agent-api"
+    },
+    {
+      "name": "OpenShell in SAP Business AI",
+      "source": "NVIDIA + SAP",
+      "language": "Open source runtime",
+      "description": "Runtime con aislamiento de ejecucion y enforcement de politicas para agentes especializados.",
+      "use_cases": "Agentes de finanzas, procurement, supply chain y operaciones con controles de seguridad.",
+      "utility": "Alta",
+      "risk": "Requiere arquitectura madura; mal configurado no sustituye gobierno de permisos.",
+      "url": "https://blogs.nvidia.com/blog/sap-specialized-agents/"
+    },
+    {
+      "name": "Stainless + Anthropic stack",
+      "source": "Anthropic",
+      "language": "SDK / CLI / MCP tooling",
+      "description": "Convergencia entre API specs, SDKs y conectividad para agentes.",
+      "use_cases": "Integracion rapida de APIs en agentes empresariales y conectores custom.",
+      "utility": "Alta",
+      "risk": "Aumenta superficie operativa y exige buen control de permisos y auditoria.",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Semantic Kernel",
+      "source": "Microsoft / GitHub",
+      "stars": "27k+",
+      "language": "C# / Python / Java",
+      "description": "Framework open source para construir agentes y plugins.",
+      "use_cases": "Orquestacion agentic, tool use, memoria y workflows empresariales.",
+      "utility": "Alta",
+      "warnings": "Mantener parcheo y hardening por historial reciente de CVEs en el ecosistema agentic.",
+      "url": "https://github.com/microsoft/semantic-kernel"
+    },
+    {
+      "name": "Hermes Agent",
+      "source": "Nous Research / ecosistema abierto",
+      "stars": "140k+",
+      "language": "Python",
+      "description": "Framework de agentes autocontenidos y habilidades autocuradas con foco local.",
+      "use_cases": "Automatizacion continua, agentes locales y aprendizaje operativo.",
+      "utility": "Alta",
+      "warnings": "Exige control fuerte de plugins y observabilidad en produccion.",
+      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-hermes-agent-dgx-spark/"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Sin incidente nuevo critico confirmado en las ultimas ~48h",
+      "product": "Ecosistema IA general",
+      "severity": "Media",
+      "exploitation": "Sin nueva explotacion confirmada en el corte actual",
+      "impact": "Reduce ruido, pero no la necesidad de hardening continuo.",
+      "mitigation": "Mantener revisiones de identidad, conectores, MCP, registros y exposicion publica.",
+      "priority": "Media",
+      "status": "Interpretacion basada en ausencia de nuevas confirmaciones oficiales relevantes.",
+      "url": ""
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "name": "CVE-2026-25592",
+      "product": "Microsoft Semantic Kernel",
+      "severity": "Alta",
+      "exploitation": "Riesgo de ejecucion no autorizada en agentes vulnerables",
+      "impact": "Convierte prompt injection en primitive de sistema si la arquitectura es insegura.",
+      "mitigation": "Parchear, revisar plugins y endurecer validacion y permisos.",
+      "priority": "Alta",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "name": "CVE-2026-26030",
+      "product": "Microsoft Semantic Kernel",
+      "severity": "Alta",
+      "exploitation": "Requiere vector de prompt injection y ruta vulnerable",
+      "impact": "Puede derivar en host-level RCE en agentes mal ensamblados.",
+      "mitigation": "Actualizar, validar cadenas de herramientas y revisar superficies de ejecucion.",
+      "priority": "Alta",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "name": "CVE-2026-41264",
+      "product": "Flowise CSV Agent",
+      "severity": "Critica",
+      "exploitation": "RCE por prompt injection",
+      "impact": "Riesgo elevado en despliegues agentic con datos cargados por usuarios.",
+      "mitigation": "Parchear y limitar ejecucion, ingestion y tool access.",
+      "priority": "Critica",
+      "url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj"
+    },
+    {
+      "name": "mistralai==2.4.6 advisory",
+      "product": "Paquete Python mistralai 2.4.6",
+      "severity": "Alta",
+      "exploitation": "Script malicioso observado en Linux segun advisory previo",
+      "impact": "Supply chain risk para entornos de desarrollo y automatizacion.",
+      "mitigation": "Verificar versionado, limpiar caches, rotar secretos si procede y revisar IOC.",
+      "priority": "Alta",
+      "url": "https://pypi.org/project/mistralai/"
+    }
+  ],
+  "trends": [
+    "Los agentes pasan de ser capa de UX a capa de infraestructura, con foco en SDKs, MCP, runtimes y hardware dedicado.",
+    "La diferenciacion competitiva se desplaza desde el modelo aislado hacia workflows persistentes, memoria de preferencias y tool orchestration.",
+    "La seguridad deja de ser un add-on: misconfiguraciones, identidad y permisos ya son superficie de explotacion real."
+  ],
+  "opportunities": [
+    {
+      "title": "Oferta de auditoria de agentes y MCP para PyME",
+      "priority": "Alta",
+      "value": "Servicio consultivo de revision de identidades, permisos, conectores, sandboxes y logging."
+    },
+    {
+      "title": "Piloto de automatizacion documental y reporting financiero",
+      "priority": "Alta",
+      "value": "Casos claros con ChatGPT Finances, Grok Skills, Claude tooling o agentes internos con gobierno."
+    },
+    {
+      "title": "Vigilancia de infraestructura agentic",
+      "priority": "Media",
+      "value": "Seguir Vera, OpenShell, Dynamo y runtimes seguros para empaquetar recomendaciones enterprise."
+    }
+  ],
+  "alerts": [
+    {
+      "title": "AI Act transparencia",
+      "level": "Alta",
+      "note": "Consulta oficial abierta del 8 de mayo al 3 de junio; obligaciones del articulo 50 aplican el 2 de agosto de 2026.",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "title": "Misconfiguraciones en apps IA",
+      "level": "Alta",
+      "note": "Microsoft observa exposiciones reales por autenticacion debil y servidores MCP inseguros.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "title": "Seguridad sensible en conversaciones",
+      "level": "Media",
+      "note": "OpenAI endurece reconocimiento contextual de riesgo para conversaciones delicadas.",
+      "url": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Inventariar agentes, MCP y conectores expuestos; revisar autenticacion, permisos y telemetria antes de ampliar automatizacion en produccion."
+    },
+    {
+      "priority": "Alta",
+      "text": "Poner en el radar comercial una linea de servicios sobre hardening de agentes, auditoria MCP y despliegue seguro de copilotos verticales."
+    },
+    {
+      "priority": "Alta",
+      "text": "Probar un caso interno de reporting automatizado con control humano final, usando fuentes verificables y memorias restringidas por dominio."
+    },
+    {
+      "priority": "Media",
+      "text": "Preparar observaciones o checklist de cumplimiento para transparencia AI Act antes del 3 de junio de 2026."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-06-03",
+      "event": "Cierre de consulta UE sobre obligaciones de transparencia del AI Act",
+      "type": "Regulacion"
+    },
+    {
+      "date": "2026-08-02",
+      "event": "Aplicacion de obligaciones de transparencia del articulo 50 del AI Act",
+      "type": "Cumplimiento"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAI - A new personal finance experience in ChatGPT",
+      "url": "https://openai.com/index/personal-finance-chatgpt/",
+      "date": "2026-05-15",
+      "type": "official"
+    },
+    {
+      "title": "OpenAI - Helping ChatGPT better recognize context in sensitive conversations",
+      "url": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/",
+      "date": "2026-05-14",
+      "type": "official"
+    },
+    {
+      "title": "Anthropic - Anthropic acquires Stainless",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "date": "2026-05-18",
+      "type": "official"
+    },
+    {
+      "title": "xAI - Skills in web, iOS, and Android",
+      "url": "https://x.ai/news/grok-skills",
+      "date": "2026-05-18",
+      "type": "official"
+    },
+    {
+      "title": "xAI - Introducing Grok Build Early Beta",
+      "url": "https://x.ai/news/grok-build-cli",
+      "date": "2026-05-14",
+      "type": "official"
+    },
+    {
+      "title": "Microsoft Security Blog - Defense at AI speed",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
+      "date": "2026-05-12",
+      "type": "official"
+    },
+    {
+      "title": "Microsoft Security Blog - When prompts become shells",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+      "date": "2026-05-07",
+      "type": "official"
+    },
+    {
+      "title": "Microsoft Security Blog - When configuration becomes a vulnerability",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+      "date": "2026-05-14",
+      "type": "official"
+    },
+    {
+      "title": "Google - Gemini Intelligence brings proactive AI to Android",
+      "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence/",
+      "date": "2026-05-12",
+      "type": "official"
+    },
+    {
+      "title": "Perplexity - Introducing Finance Search in the Agent API",
+      "url": "https://www.perplexity.ai/hub/blog/introducing-finance-search-in-the-agent-api",
+      "date": "2026-05-06",
+      "type": "official"
+    },
+    {
+      "title": "European Commission - Consultation on the draft guidelines on transparency obligations under the AI Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+      "date": "2026-05-08",
+      "type": "official"
+    },
+    {
+      "title": "NVIDIA Blog - Vera Arrives: NVIDIA's First CPU Built for Agents Lands at Top AI Labs",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
+      "date": "2026-05-18",
+      "type": "official"
+    },
+    {
+      "title": "NVIDIA Blog - NVIDIA and SAP Bring Trust to Specialized Agents",
+      "url": "https://blogs.nvidia.com/blog/sap-specialized-agents/",
+      "date": "2026-05-12",
+      "type": "official"
+    },
+    {
+      "title": "NVIDIA Blog - Hermes Unlocks Self-Improving AI Agents, Powered by NVIDIA RTX PCs and DGX Spark",
+      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-hermes-agent-dgx-spark/",
+      "date": "2026-05-13",
+      "type": "official"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
