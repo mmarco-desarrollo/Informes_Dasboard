@@ -1,0 +1,310 @@
+{
+  "report_type": "informe_resumido_nocturno_ia",
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "generated_at": "2026-05-20T00:15:00+02:00",
+  "timezone": "Europe/Madrid",
+  "window_note": "Resumen nocturno compacto centrado en cambios acumulados, incidentes, vulnerabilidades, riesgos, conclusiones y recomendaciones ejecutivas.",
+  "global_status": {
+    "ecosystem_state": "aceleracion_alta",
+    "impact_level": "alto",
+    "new_critical_incidents_confirmed": 0,
+    "active_priority_risks": 3,
+    "regulatory_deadline": "2026-06-03"
+  },
+  "executive_summary": [
+    "No se confirma una ruptura critica nueva en las ultimas horas, pero el mercado acelera con fuerza hacia sistemas agentic, conectividad persistente y automatizacion de tareas reales.",
+    "Google lidera la novedad del periodo con Search agentic, Gemini 3.5 Flash y nuevas capacidades de Gemini app y deteccion de contenido IA.",
+    "Anthropic refuerza su posicion enterprise y consultiva con KPMG y mantiene ventaja en tooling y conectividad tras la adquisicion de Stainless.",
+    "Microsoft mantiene la lectura defensiva mas accionable: el riesgo inmediato esta en agentes, MCP y apps IA mal configuradas ya expuestas en entornos reales."
+  ],
+  "kpis": [
+    {
+      "label": "Incidentes criticos nuevos confirmados",
+      "value": "0",
+      "note": "Sin senal fiable de caida masiva o fuga nueva en la ventana nocturna."
+    },
+    {
+      "label": "Senales de alto impacto confirmadas",
+      "value": "4",
+      "note": "Google I/O, Gemini 3.5 Flash, alianza KPMG-Anthropic, entrega inicial de Vera."
+    },
+    {
+      "label": "Riesgos activos prioritarios",
+      "value": "3",
+      "note": "MCP expuesto, Flowise CSV Agent RCE, misconfiguraciones de apps IA."
+    },
+    {
+      "label": "Hito regulatorio cercano",
+      "value": "2026-06-03",
+      "note": "Cierre de la consulta de la Comision Europea sobre transparencia del AI Act."
+    }
+  ],
+  "activity_evolution": [
+    {
+      "date": "2026-05-18",
+      "title": "xAI Skills",
+      "category": "herramientas",
+      "impact": "alto",
+      "status": "hecho_confirmado",
+      "summary": "xAI lanzo Skills con memoria operativa persistente y generacion documental."
+    },
+    {
+      "date": "2026-05-18",
+      "title": "NVIDIA Vera",
+      "category": "infraestructura",
+      "impact": "alto",
+      "status": "hecho_confirmado",
+      "summary": "Primeras entregas de Vera a Anthropic, OpenAI, Oracle Cloud Infrastructure y SpaceXAI."
+    },
+    {
+      "date": "2026-05-19",
+      "title": "Anthropic-KPMG",
+      "category": "enterprise",
+      "impact": "alto",
+      "status": "hecho_confirmado",
+      "summary": "Claude se integra en Digital Gateway y se extiende a mas de 276000 empleados."
+    },
+    {
+      "date": "2026-05-19",
+      "title": "Google I/O 2026",
+      "category": "producto",
+      "impact": "alto",
+      "status": "hecho_confirmado",
+      "summary": "Search agentic, Gemini 3.5 Flash, Gemini app mas proactiva y nueva deteccion de contenido IA."
+    }
+  ],
+  "featured_news": [
+    {
+      "name": "Google Search entra en modo agente",
+      "source": "Google Blog",
+      "date": "2026-05-19",
+      "category": "producto",
+      "impact": "alto",
+      "utility": "automatizacion de seguimiento, booking y dashboards generados",
+      "risk": "mas superficie de permisos y accion automatizada",
+      "quick_recommendation": "vigilar el modelo de permisos y la respuesta competitiva del mercado",
+      "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+    },
+    {
+      "name": "Gemini 3.5 Flash y Gemini app mas agentic",
+      "source": "Google Blog",
+      "date": "2026-05-19",
+      "category": "modelos_y_producto",
+      "impact": "alto",
+      "utility": "productividad y automatizacion personal y empresarial",
+      "risk": "persistencia de contexto y ampliacion de superficie operativa",
+      "quick_recommendation": "evaluar memoria, trazabilidad y permisos antes de adopcion",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
+    },
+    {
+      "name": "KPMG integra Claude a escala global",
+      "source": "Anthropic",
+      "date": "2026-05-19",
+      "category": "enterprise",
+      "impact": "muy_alto",
+      "utility": "consultoria, fiscal, legal y ciberseguridad",
+      "risk": "dependencia de gobierno y despliegue responsable",
+      "quick_recommendation": "activar seguimiento de casos de uso y narrativa de servicios",
+      "url": "https://www.anthropic.com/news/anthropic-kpmg"
+    },
+    {
+      "name": "Anthropic adquiere Stainless",
+      "source": "Anthropic",
+      "date": "2026-05-18",
+      "category": "tooling",
+      "impact": "alto",
+      "utility": "SDKs, CLIs y servidores MCP",
+      "risk": "incremento de presion competitiva en conectividad agentic",
+      "quick_recommendation": "vigilar el frente de conectores y skill libraries",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless?s=09"
+    }
+  ],
+  "incidents_and_vulnerabilities": [
+    {
+      "name": "MCP expuesto y apps IA mal configuradas",
+      "source": "Microsoft Security Blog",
+      "date": "2026-05-14",
+      "category": "misconfiguracion_explotable",
+      "severity": "critica",
+      "exploitation_status": "casos observados en entornos reales segun Microsoft",
+      "impact": "acceso no autorizado, exfiltracion, RCE y abuso de herramientas internas",
+      "mitigation": "autenticacion obligatoria, minimo privilegio, inventario y cierre de exposiciones publicas",
+      "priority": "critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "identifier": "CVE-2026-41264",
+      "name": "Flowise CSV Agent Prompt Injection Remote Code Execution",
+      "source": "GitHub Advisory Database",
+      "category": "vulnerabilidad",
+      "severity": "alta",
+      "exploitation_status": "riesgo operativo activo",
+      "impact": "ejecucion remota via entrada CSV maliciosa",
+      "mitigation": "verificar versiones, limitar exposicion y revisar flujos CSV",
+      "priority": "alta",
+      "url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj"
+    }
+  ],
+  "models_tools_radar": [
+    {
+      "name": "NVIDIA Vera",
+      "company": "NVIDIA",
+      "type": "infraestructura",
+      "capabilities": "CPU orientada a cargas agentic, tool calling y orquestacion",
+      "estimated_impact": "alto",
+      "use_cases": [
+        "sandboxes de agentes",
+        "tool calling",
+        "retrieval y orquestacion"
+      ],
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/"
+    },
+    {
+      "name": "Advanced Account Security",
+      "company": "OpenAI",
+      "type": "seguridad",
+      "capabilities": "proteccion reforzada para ChatGPT y Codex con passkeys o llaves fisicas",
+      "estimated_impact": "medio_alto",
+      "use_cases": [
+        "cuentas de alto riesgo",
+        "equipos con acceso a modelos cyber"
+      ],
+      "url": "https://openai.com/index/advanced-account-security/"
+    },
+    {
+      "name": "Skills",
+      "company": "xAI",
+      "type": "tooling",
+      "capabilities": "memoria persistente, generacion de documentos y automatizacion reutilizable",
+      "estimated_impact": "alto",
+      "use_cases": [
+        "estandarizacion de flujos",
+        "produccion documental",
+        "operativa repetible"
+      ],
+      "url": "https://x.ai/news/grok-skills"
+    }
+  ],
+  "opportunities": [
+    {
+      "priority": "alta",
+      "title": "Oferta de hardening de agentes y copilotos",
+      "summary": "Servicios para revisar permisos, conectores, inventario, exposiciones MCP y trazabilidad."
+    },
+    {
+      "priority": "media",
+      "title": "Posicionamiento sobre seguridad de memoria persistente y skills",
+      "summary": "Nueva linea consultiva sobre memoria, contexto y operaciones recurrentes en asistentes corporativos."
+    },
+    {
+      "priority": "media",
+      "title": "Seguimiento comercial de Google I/O",
+      "summary": "Convertir la ola de Search y Gemini agentic en vigilancia competitiva y demos comparativas."
+    }
+  ],
+  "executive_recommendations": [
+    {
+      "priority": "critica",
+      "action": "Revisar de inmediato cualquier MCP remoto, Flowise expuesto o panel agentic accesible desde internet."
+    },
+    {
+      "priority": "alta",
+      "action": "Diseñar un paquete comercial de seguridad y gobierno para agentes corporativos con enfoque pyme y consultoria."
+    },
+    {
+      "priority": "media",
+      "action": "Preparar respuesta operativa al AI Act en materia de transparencia, documentacion y trazabilidad."
+    },
+    {
+      "priority": "media",
+      "action": "Monitorizar las siguientes 24 a 48 horas por posibles replicas competitivas o anuncios de seguridad tras Google I/O."
+    }
+  ],
+  "delivery_notes": {
+    "artifacts_prepared": [
+      "html_dashboard",
+      "json_backup"
+    ],
+    "pdf_status": "no_publicado_por_falta_de_fidelidad_visual",
+    "email_status": "por_preparar_en_borrador_html",
+    "github_archive_status": "publicado_en_github",
+    "limitations": [
+      "La conversion local a PDF no mantuvo la identidad visual premium del dashboard HTML, por lo que no se tomo como entregable de esta ejecucion."
+    ]
+  },
+  "sources": [
+    {
+      "title": "A new era for AI Search",
+      "publisher": "Google Blog",
+      "date": "2026-05-19",
+      "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/"
+    },
+    {
+      "title": "The Gemini app becomes more agentic",
+      "publisher": "Google Blog",
+      "date": "2026-05-19",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
+    },
+    {
+      "title": "Making it easier to understand how content was created and edited",
+      "publisher": "Google Blog",
+      "date": "2026-05-19",
+      "url": "https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/"
+    },
+    {
+      "title": "KPMG integrates Claude across its core business",
+      "publisher": "Anthropic",
+      "date": "2026-05-19",
+      "url": "https://www.anthropic.com/news/anthropic-kpmg"
+    },
+    {
+      "title": "Anthropic acquires Stainless",
+      "publisher": "Anthropic",
+      "date": "2026-05-18",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless?s=09"
+    },
+    {
+      "title": "When configuration becomes a vulnerability",
+      "publisher": "Microsoft Security Blog",
+      "date": "2026-05-14",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "title": "Defense in depth for autonomous AI agents",
+      "publisher": "Microsoft Security Blog",
+      "date": "2026-05-14",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    },
+    {
+      "title": "Flowise CSV Agent Prompt Injection Remote Code Execution Vulnerability",
+      "publisher": "GitHub Advisory Database",
+      "date": "2026-04-24",
+      "url": "https://github.com/advisories/GHSA-3hjv-c53m-58jj"
+    },
+    {
+      "title": "Introducing Advanced Account Security",
+      "publisher": "OpenAI",
+      "date": "2026-04-30",
+      "url": "https://openai.com/index/advanced-account-security/"
+    },
+    {
+      "title": "Consultation on the draft guidelines on transparency obligations under the AI Act",
+      "publisher": "European Commission",
+      "date": "2026-05-08",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "title": "Vera Arrives: NVIDIA's First CPU Built for Agents Lands at Top AI Labs",
+      "publisher": "NVIDIA Blog",
+      "date": "2026-05-18",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/"
+    },
+    {
+      "title": "Skills in web, iOS, and Android",
+      "publisher": "xAI",
+      "date": "2026-05-18",
+      "url": "https://x.ai/news/grok-skills"
+    }
+  ]
+}
