@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-05-19 08:15:07 CEST",
+  "timezone": "Europe/Madrid",
+  "title": "Informe Ejecutivo Premium de Inteligencia Artificial | Corte 08:00",
+  "overall_status": {
+    "level": "Impacto alto",
+    "ecosystem_state": "Actividad alta y sesgo claro hacia seguridad de agentes, tooling enterprise y despliegue gobernado.",
+    "next_update": "2026-05-19 12:00 CEST"
+  },
+  "executive_summary": [
+    "La prioridad ejecutiva del corte de las 08:00 no esta en un nuevo frontier model aislado, sino en la seguridad de agentes y en la industrializacion del trabajo autonomo conectado.",
+    "OpenAI y Mistral siguen marcando la conversacion de riesgo por la onda expansiva del ataque de cadena de suministro sobre TanStack; no hay evidencia publica de compromiso de produccion, pero si urgencia de actualizacion y revisiones de dependencias.",
+    "Anthropic, OpenAI, Google, xAI y Perplexity aceleran el frente de herramientas que ejecutan trabajo real: SDKs y conectores, voz operativa, webhooks, RAG multimodal, coding agents y runtimes de agentes.",
+    "La Comision Europea mantiene abierta hasta el 3 de junio la consulta sobre las directrices del Articulo 50 del AI Act."
+  ],
+  "kpis": [
+    {"label": "Alertas activas", "value": "4"},
+    {"label": "Lanzamientos de alto impacto", "value": "9"},
+    {"label": "Incidentes criticos confirmados", "value": "2"},
+    {"label": "Plazos inmediatos", "value": "2"}
+  ],
+  "featured_news": [
+    {
+      "name": "Anthropic compra Stainless",
+      "date": "2026-05-18",
+      "impact": "Alta",
+      "category": "M&A / developer platform",
+      "source": "Anthropic",
+      "status": "hecho confirmado",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless"
+    },
+    {
+      "name": "OpenAI y Dell exploran despliegue de Codex en entornos hybrid/on-prem",
+      "date": "2026-05-18",
+      "impact": "Alta",
+      "category": "enterprise AI",
+      "source": "OpenAI",
+      "status": "hecho confirmado",
+      "url": "https://openai.com/index/dell-codex-enterprise-partnership/"
+    },
+    {
+      "name": "PwC amplia despliegue de Claude con Claude Code y Cowork",
+      "date": "2026-05-14",
+      "impact": "Alta",
+      "category": "enterprise adoption",
+      "source": "Anthropic",
+      "status": "hecho confirmado",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership"
+    }
+  ],
+  "models": [
+    {
+      "name": "Mistral Small 4",
+      "company": "Mistral AI",
+      "multimodal": "texto e imagen",
+      "context_window": "256k",
+      "license": "Apache 2.0",
+      "impact_estimate": "Alta",
+      "url": "https://mistral.ai/news/mistral-small-4"
+    },
+    {
+      "name": "GPT-Realtime-2 / Translate / Whisper",
+      "company": "OpenAI",
+      "multimodal": "voz y texto",
+      "impact_estimate": "Alta",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "name": "Nemotron 3 Nano Omni",
+      "company": "NVIDIA",
+      "multimodal": "texto, imagen, video y audio",
+      "impact_estimate": "Media-Alta",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Gemini API File Search multimodal",
+      "source": "Google DeepMind",
+      "utility_level": "Alta",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/"
+    },
+    {
+      "name": "Gemini API Webhooks",
+      "source": "Google DeepMind",
+      "utility_level": "Alta",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/"
+    },
+    {
+      "name": "Grok Build",
+      "source": "xAI",
+      "utility_level": "Media-Alta",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "name": "Finance Search en Agent API",
+      "source": "Perplexity",
+      "utility_level": "Alta",
+      "url": "https://www.perplexity.ai/es-es/hub"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "TanStack / Mini Shai-Hulud con impacto operativo en OpenAI",
+      "severity": "Alta",
+      "priority": "Critica",
+      "impact": "rotacion de certificados y ventana de actualizacion obligatoria para apps macOS antes del 12 de junio de 2026",
+      "mitigation": "actualizar apps oficiales, endurecer provenance y minimumReleaseAge, evitar instaladores de terceros",
+      "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/"
+    },
+    {
+      "name": "TanStack supply chain attack affecting Mistral SDK packages",
+      "severity": "Alta",
+      "priority": "Alta",
+      "impact": "riesgo para sistemas que instalaron versiones comprometidas en una ventana corta",
+      "mitigation": "inventario de dependencias, bloqueo de versiones afectadas y rotacion de credenciales expuestas",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "name": "Misconfiguraciones explotables en apps de IA",
+      "severity": "Alta",
+      "priority": "Critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    }
+  ],
+  "active_alerts": [
+    "1 junio 2026: miembros individuales de Trusted Access for Cyber en OpenAI requeriran Advanced Account Security o equivalente SSO atestado.",
+    "3 junio 2026: cierre de la consulta europea sobre borrador de directrices del Articulo 50 del AI Act.",
+    "12 junio 2026: fin de soporte/funcionalidad para versiones macOS antiguas de apps OpenAI firmadas con el certificado sustituido.",
+    "Efectivo desde 15 mayo 2026: modelos antiguos de xAI retirados; revisar inventario y migraciones a Grok 4.3."
+  ],
+  "executive_recommendations": [
+    {"priority": "Critica", "title": "Lanzar inventario inmediato de dependencias y agentes conectados"},
+    {"priority": "Alta", "title": "Definir patron corporativo de identidad para agentes"},
+    {"priority": "Alta", "title": "Pilotar una oferta comercial de auditoria AI + automatizacion segura"},
+    {"priority": "Media", "title": "Preparar checklist AI Act articulo 50"}
+  ],
+  "events_calendar": [
+    {"date": "2026-06-03", "event": "Cierre de consulta sobre directrices del Articulo 50 del AI Act"},
+    {"date": "2026-06-12", "event": "Fecha limite de actualizacion para apps macOS afectadas de OpenAI"},
+    {"date": "2026-08-02", "event": "Aplicacion de reglas de transparencia de contenido IA del Articulo 50"}
+  ],
+  "limits": [
+    "No se genera PDF en este corte porque el entorno no dispone de una via verificable para convertir el dashboard HTML con fidelidad visual suficiente.",
+    "No se simula enlace al PDF. El historico externo confirmado se resuelve en GitHub para HTML y JSON."
+  ]
+}
