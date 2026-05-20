@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Informe Ejecutivo Premium de Inteligencia Artificial | Corte 16:00</title>
+<style>
+:root {
+  --bg: #06111f;
+  --bg2: #0c1a2e;
+  --panel: rgba(14, 25, 46, 0.78);
+  --panel-2: rgba(10, 19, 35, 0.86);
+  --line: rgba(123, 162, 255, 0.18);
+  --text: #eef4ff;
+  --muted: #98accd;
+  --blue: #3f8cff;
+  --electric: #44d1ff;
+  --green: #25d38a;
+  --orange: #ff9f43;
+  --red: #ff5d73;
+  --violet: #8d6bff;
+  --soft: #d6e0f5;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: radial-gradient(circle at top right, rgba(68,209,255,0.12), transparent 32%), radial-gradient(circle at top left, rgba(141,107,255,0.14), transparent 28%), linear-gradient(180deg, #04101d 0%, #09172a 38%, #06111f 100%); color: var(--text); font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+a { color: #8bc7ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1480px; margin: 0 auto; padding: 28px; }
+.hero { position: relative; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(135deg, rgba(15,27,49,0.9), rgba(7,15,28,0.95)); border-radius: 24px; padding: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+.hero:before { content: ""; position: absolute; inset: -10% auto auto 58%; width: 420px; height: 420px; background: radial-gradient(circle, rgba(68,209,255,0.22), transparent 58%); pointer-events: none; }
+.eyebrow { display: inline-flex; gap: 10px; align-items: center; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--electric); }
+.title { display: grid; grid-template-columns: 1.7fr 1fr; gap: 24px; margin-top: 16px; }
+.title h1 { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.02; }
+.subtitle { color: var(--soft); font-size: 16px; line-height: 1.6; max-width: 860px; }
+.hero-meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.hero-stat { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 18px; padding: 14px 16px; }
+.hero-stat b { display:block; font-size: 12px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.hero-stat span { font-size: 15px; color: var(--text); }
+.kpis { display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0 0; }
+.kpi { padding: 18px; border-radius: 20px; background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02)); border: 1px solid var(--line); }
+.kpi strong { display:block; font-size: 34px; margin-bottom: 8px; }
+.kpi span { display:block; color: var(--soft); font-size: 14px; }
+.kpi small { color: var(--muted); display:block; margin-top: 8px; }
+.grid { display:grid; grid-template-columns: 1.15fr .85fr; gap: 18px; margin-top: 18px; }
+.panel { background: var(--panel); backdrop-filter: blur(12px); border: 1px solid var(--line); border-radius: 22px; padding: 22px; box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
+.panel h2 { margin: 0 0 14px; font-size: 20px; }
+.panel h3 { margin: 0 0 8px; font-size: 16px; }
+.muted { color: var(--muted); }
+.summary-list { display:grid; gap: 10px; }
+.summary-item { padding: 14px 16px; border-radius: 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); color: var(--soft); line-height: 1.55; }
+.badge-row, .tag-row { display:flex; flex-wrap: wrap; gap: 10px; }
+.badge { padding: 8px 12px; border-radius: 999px; font-size: 12px; background: rgba(63,140,255,.16); color: #cfe4ff; border:1px solid rgba(63,140,255,.24); }
+.badge.red { background: rgba(255,93,115,.15); color: #ffd6dc; border-color: rgba(255,93,115,.22); }
+.badge.green { background: rgba(37,211,138,.14); color: #d6fff0; border-color: rgba(37,211,138,.22); }
+.badge.orange { background: rgba(255,159,67,.14); color: #ffe3c4; border-color: rgba(255,159,67,.22); }
+.activity { display:grid; gap: 12px; }
+.bar { background: rgba(255,255,255,0.05); border-radius: 999px; overflow: hidden; height: 12px; }
+.bar > i { display:block; height:100%; border-radius:999px; }
+.card-list { display:grid; gap: 14px; }
+.card { padding: 18px; border-radius: 18px; background: var(--panel-2); border: 1px solid rgba(255,255,255,0.06); }
+.card header { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom: 10px; }
+.card p { margin: 6px 0; color: var(--soft); line-height: 1.55; }
+.two-col { display:grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 18px; }
+.three-col { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+.mini-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.mini { padding: 14px; border-radius: 16px; background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.05); }
+.mini b { display:block; margin-bottom: 8px; }
+.table { width:100%; border-collapse: collapse; }
+.table th, .table td { text-align:left; padding: 12px 10px; border-bottom: 1px solid rgba(255,255,255,0.07); vertical-align: top; }
+.table th { color: var(--muted); font-weight: 600; font-size: 13px; }
+.foot { margin-top: 18px; padding: 20px 24px; border-radius: 20px; background: rgba(5,13,24,0.86); border: 1px solid rgba(255,255,255,0.06); color: var(--muted); line-height: 1.6; }
+.source-list { columns: 2; column-gap: 24px; }
+.source-list li { break-inside: avoid; margin: 0 0 10px; }
+@media (max-width: 1180px) {
+  .title, .grid, .two-col, .three-col, .mini-grid, .kpis { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .wrap { padding: 16px; }
+  .title, .grid, .two-col, .three-col, .mini-grid, .kpis, .hero-meta { grid-template-columns: 1fr; }
+  .source-list { columns: 1; }
+  .hero { padding: 20px; }
+  .title h1 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">MMarco Seguridad <span class="badge red">Impacto IA: Alto</span> <span class="badge">Europe/Madrid</span></div>
+    <div class="title">
+      <div>
+        <h1>Informe Ejecutivo Premium de Inteligencia Artificial | Corte 16:00</h1>
+        <p class="subtitle">Corte ejecutivo centrado en seguridad de agentes, conectividad MCP, modelos multimodales y ventanas regulatorias con impacto directo en consultoría, automatización y ciberseguridad.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-stat"><b>Generado</b><span>2026-05-20 16:22:37 CEST</span></div>
+        <div class="hero-stat"><b>Próxima actualización</b><span>2026-05-20 20:00 CEST</span></div>
+        <div class="hero-stat"><b>Estado global</b><span>Aceleración operativa con foco en seguridad de agentes y conectividad</span></div>
+        <div class="hero-stat"><b>Perfil corporativo</b><span>Ciberseguridad, Blockchain, IA y Telecomunicaciones</span></div>
+      </div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><strong>11</strong><span>Señales confirmadas de alto impacto</span><small>selección curada del corte 16:00</small></div><div class="kpi"><strong>5</strong><span>Alertas de seguridad y cumplimiento</span><small>4 técnicas + 1 regulatoria</small></div><div class="kpi"><strong>6</strong><span>Herramientas/modelos con utilidad inmediata</span><small>agentes, hardening y automatización</small></div><div class="kpi"><strong>0</strong><span>Incidentes operativos activos confirmados</span><small>1 incidente OpenAI resuelto hoy</small></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="panel">
+      <h2>Resumen ejecutivo</h2>
+      <div class="summary-list">
+        <div class="summary-item">Hecho confirmado: el bloque más fuerte del corte no es un salto aislado de modelo, sino la convergencia entre agentes más ejecutores, mejor conectados y más expuestos a riesgo operativo si no se gobiernan bien.</div><div class="summary-item">Hecho confirmado: Google empuja un asistente más proactivo con Gemini 3.5 Flash, Daily Briefs, Gemini Omni y Gemini Spark; Anthropic refuerza la capa de conectividad con la compra de Stainless; xAI entra en CLI agentic con Grok Build y extiende Skills a documentos y automatización.</div><div class="summary-item">Hecho confirmado: Microsoft eleva la prioridad defensiva con MDASH, que reporta 16 vulnerabilidades nuevas y liderazgo en CyberGym, mientras documenta RCE en Semantic Kernel y misconfiguraciones explotables en despliegues AI y MCP remotos.</div><div class="summary-item">Hecho confirmado: el frente de cumplimiento sigue muy vivo. La consulta de la Comisión sobre las obligaciones de transparencia del Artículo 50 cierra el 3 de junio de 2026 y la capacidad sancionadora para GPAI entra el 2 de agosto de 2026.</div><div class="summary-item">Recomendación ejecutiva: priorizar revisión de agentes con herramientas, identidad separada, mínimos privilegios, inventario de dependencias Mistral/TanStack y una oferta comercial de readiness AI Act + hardening de agentes para pymes y clientes regulados.</div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Evolución de actividad IA</h2>
+      <div class="activity">
+        <div><div class="badge-row"><span class="badge">Seguridad de agentes</span><span class="muted">máxima prioridad</span></div><div class="bar"><i style="width:92%;background:linear-gradient(90deg,var(--red),#ff8a6d)"></i></div></div>
+        <div><div class="badge-row"><span class="badge">Conectividad y MCP</span><span class="muted">aceleración clara</span></div><div class="bar"><i style="width:86%;background:linear-gradient(90deg,var(--violet),var(--electric))"></i></div></div>
+        <div><div class="badge-row"><span class="badge">Producto multimodal</span><span class="muted">sube por Google y Meta</span></div><div class="bar"><i style="width:78%;background:linear-gradient(90deg,var(--blue),var(--electric))"></i></div></div>
+        <div><div class="badge-row"><span class="badge">Cumplimiento UE</span><span class="muted">deadline cercano</span></div><div class="bar"><i style="width:72%;background:linear-gradient(90deg,var(--orange),#ffc048)"></i></div></div>
+      </div>
+      <h2 style="margin-top:18px;">Vista global de actividad IA</h2>
+      <div class="mini-grid">
+        <div class="mini"><b>EE. UU.</b><span class="muted">Google, OpenAI, Anthropic, Microsoft, xAI y NVIDIA concentran la novedad con foco en agentes y seguridad.</span></div>
+        <div class="mini"><b>UE</b><span class="muted">El AI Act pasa de abstracción a agenda accionable: transparencia, GPAI y futuras sanciones.</span></div>
+        <div class="mini"><b>Open source</b><span class="muted">Más valor, pero también más superficie: runtimes, frameworks y supply chain ya son frente crítico.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-top:18px;">
+    <h2>Noticias destacadas</h2>
+    <div class="card-list">
+      
+        <article class="card">
+          <header>
+            <div>
+              <h3>Gemini se vuelve más agentic y proactivo</h3>
+              <div class="tag-row"><span class="badge">Google</span><span class="badge">Lanzamiento / Producto</span><span class="badge red">Impacto Alto</span><span class="badge green">Hecho confirmado</span></div>
+            </div>
+            <div class="muted">2026-05-19</div>
+          </header>
+          <p>Google anunció una evolución del Gemini app con Gemini 3.5 Flash, Daily Briefs, Gemini Omni y Gemini Spark. El servicio supera 900 millones de usuarios mensuales y Spark arranca con testers y beta en EE. UU. para AI Ultra.</p>
+          <p><strong>Utilidad o riesgo:</strong> Sube el listón competitivo en asistentes proactivos, multimodales y con workflows sobre apps.</p>
+          <p><strong>Recomendación rápida:</strong> Vigilar impacto en productividad personal, briefing ejecutivo y automatización asistida.</p>
+          <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Fuente</a></p>
+        </article>
+        <article class="card">
+          <header>
+            <div>
+              <h3>Anthropic compra Stainless</h3>
+              <div class="tag-row"><span class="badge">Anthropic</span><span class="badge">M&A / Plataforma</span><span class="badge red">Impacto Alto</span><span class="badge green">Hecho confirmado</span></div>
+            </div>
+            <div class="muted">2026-05-18</div>
+          </header>
+          <p>Anthropic adquiere Stainless para reforzar SDKs y tooling MCP, consolidando la tesis de que el valor de los agentes depende de su conectividad real a APIs y sistemas.</p>
+          <p><strong>Utilidad o riesgo:</strong> Mayor presión competitiva en DX, MCP y conectores empresariales.</p>
+          <p><strong>Recomendación rápida:</strong> Subir prioridad a ofertas y proyectos con conectividad gobernada y observabilidad de tools.</p>
+          <p><a href="https://www.anthropic.com/news/anthropic-acquires-stainless">Fuente</a></p>
+        </article>
+        <article class="card">
+          <header>
+            <div>
+              <h3>OpenAI endurece seguridad de cuenta y mantiene presión operativa</h3>
+              <div class="tag-row"><span class="badge">OpenAI</span><span class="badge">Seguridad / Operación</span><span class="badge red">Impacto Alto</span><span class="badge green">Hecho confirmado</span></div>
+            </div>
+            <div class="muted">2026-04-30 / 2026-05-20</div>
+          </header>
+          <p>Advanced Account Security ya es oficial y será obligatoria desde el 1 de junio para miembros de Trusted Access for Cyber. Además, hoy 20 de mayo el historial de estado muestra un incidente resuelto de errores elevados en GPT-5.4 y GPT-5.5.</p>
+          <p><strong>Utilidad o riesgo:</strong> Identidad y continuidad operativa pasan a ser requisitos reales en entornos con modelos más capaces.</p>
+          <p><strong>Recomendación rápida:</strong> Adoptar MFA resistente al phishing y playbooks de degradación para operaciones que dependan de frontier APIs.</p>
+          <p><a href="https://openai.com/index/advanced-account-security/">Fuente</a></p>
+        </article>
+        <article class="card">
+          <header>
+            <div>
+              <h3>xAI lleva Grok al terminal y a Skills persistentes</h3>
+              <div class="tag-row"><span class="badge">xAI</span><span class="badge">Herramientas / Agentes</span><span class="badge red">Impacto Medio-Alto</span><span class="badge green">Hecho confirmado</span></div>
+            </div>
+            <div class="muted">2026-05-14 / 2026-05-18</div>
+          </header>
+          <p>Grok Build entra en early beta para SuperGrok Heavy y Skills añade memoria operativa y generación de documentos lista para compartir en web, iOS y Android.</p>
+          <p><strong>Utilidad o riesgo:</strong> Más competencia en agentes de desarrollo y automatización orientados a usuario final.</p>
+          <p><strong>Recomendación rápida:</strong> Seguirlo como señal competitiva, no como estándar corporativo aún.</p>
+          <p><a href="https://x.ai/news/grok-build-cli">Fuente</a></p>
+        </article>
+    </div>
+  </section>
+
+  <section class="two-col">
+    <div class="panel">
+      <h2>Modelos y LLMs recientes</h2>
+      <div class="card-list">
+        
+          <div class="card">
+            <h3>Gemini 3.5 Flash</h3>
+            <p><strong>Empresa:</strong> Google · <strong>Tipo:</strong> Modelo frontier de acción rápida</p>
+            <p><strong>Capacidades:</strong> razonamiento + velocidad operativa</p>
+            <p><strong>Multimodalidad:</strong> sí · <strong>Ventana:</strong> no detallado en la fuente abierta revisada</p>
+            <p><strong>Licencia:</strong> propietaria</p>
+            <p><strong>Casos de uso:</strong> asistente proactivo, automatización ligera, experiencia app</p>
+            <p><strong>Impacto estimado:</strong> Alto</p>
+            <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Fuente</a></p>
+          </div>
+          <div class="card">
+            <h3>Gemini Omni</h3>
+            <p><strong>Empresa:</strong> Google · <strong>Tipo:</strong> modelo multimodal generativo</p>
+            <p><strong>Capacidades:</strong> transforma prompts de texto, imagen y video en video</p>
+            <p><strong>Multimodalidad:</strong> sí · <strong>Ventana:</strong> no disponible</p>
+            <p><strong>Licencia:</strong> propietaria</p>
+            <p><strong>Casos de uso:</strong> creación audiovisual multimodal</p>
+            <p><strong>Impacto estimado:</strong> Medio-Alto</p>
+            <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Fuente</a></p>
+          </div>
+          <div class="card">
+            <h3>Muse Spark</h3>
+            <p><strong>Empresa:</strong> Meta · <strong>Tipo:</strong> LLM multimodal para productos</p>
+            <p><strong>Capacidades:</strong> razonamiento, voz, visión y experiencias embebidas en Meta AI</p>
+            <p><strong>Multimodalidad:</strong> sí · <strong>Ventana:</strong> no disponible</p>
+            <p><strong>Licencia:</strong> privado / preview API selectiva</p>
+            <p><strong>Casos de uso:</strong> Meta AI, gafas, compras y búsqueda contextual</p>
+            <p><strong>Impacto estimado:</strong> Medio-Alto</p>
+            <p><a href="https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs-first-model-built-to-prioritize-people/amp/">Fuente</a></p>
+          </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Herramientas nuevas destacadas</h2>
+      <div class="card-list">
+        
+          <div class="card">
+            <h3>Gemini Spark</h3>
+            <p>agente proactivo de Gemini con control del usuario y verificación previa para acciones de alto riesgo</p>
+            <p><strong>Casos de uso:</strong> briefings, acciones guiadas, automatización personal</p>
+            <p><strong>Utilidad:</strong> Alta</p>
+            <p><strong>Advertencias:</strong> beta limitada; gobernanza y privacidad deben revisarse</p>
+            <p><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Fuente</a></p>
+          </div>
+          <div class="card">
+            <h3>Grok Build</h3>
+            <p>agente de programación en terminal con modo plan, diff y revisión</p>
+            <p><strong>Casos de uso:</strong> desarrollo asistido, automatización técnica</p>
+            <p><strong>Utilidad:</strong> Media-Alta</p>
+            <p><strong>Advertencias:</strong> early beta; madurez y seguridad por validar</p>
+            <p><a href="https://x.ai/news/grok-build-cli">Fuente</a></p>
+          </div>
+          <div class="card">
+            <h3>xAI Skills</h3>
+            <p>skills persistentes y generación de documentos listos para compartir</p>
+            <p><strong>Casos de uso:</strong> estandarización de workflows y entregables</p>
+            <p><strong>Utilidad:</strong> Media</p>
+            <p><strong>Advertencias:</strong> ecosistema en rápida evolución</p>
+            <p><a href="https://x.ai/news/grok-skills">Fuente</a></p>
+          </div>
+          <div class="card">
+            <h3>OpenAI Advanced Account Security</h3>
+            <p>paquete de endurecimiento de cuenta para ChatGPT y Codex</p>
+            <p><strong>Casos de uso:</strong> protección de accesos, continuidad segura</p>
+            <p><strong>Utilidad:</strong> Alta</p>
+            <p><strong>Advertencias:</strong> requiere adopción organizativa y soporte de autenticación robusta</p>
+            <p><a href="https://openai.com/index/advanced-account-security/">Fuente</a></p>
+          </div>
+          <div class="card">
+            <h3>NVIDIA OpenShell</h3>
+            <p>runtime open source con aislamiento, policy enforcement y contención para agentes</p>
+            <p><strong>Casos de uso:</strong> ejecución más segura de agentes autónomos</p>
+            <p><strong>Utilidad:</strong> Alta</p>
+            <p><strong>Advertencias:</strong> requiere integración y gobierno de infraestructura</p>
+            <p><a href="https://blogs.nvidia.com/blog/sap-specialized-agents/">Fuente</a></p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-top:18px;">
+    <h2>Scripts y repositorios destacados</h2>
+    <table class="table">
+      <thead><tr><th>Repositorio</th><th>Descripción</th><th>Utilidad</th><th>Riesgo / advertencia</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/microsoft/semantic-kernel">microsoft/semantic-kernel</a><div class="muted">alta adopción; la fuente técnica revisada lo describe con más de 27k estrellas</div></td><td>framework para agentes y orquestación de herramientas<div class="muted">copilots, plugins, flujos AI empresariales</div></td><td>Alta</td><td>riesgo elevado si se exponen herramientas sin validación de parámetros ni sandbox fuerte</td></tr><tr><td><a href="https://github.com/openclaw/openclaw">openclaw/openclaw</a><div class="muted">muy alta tracción comunitaria según el contexto revisado por NVIDIA</div></td><td>asistente self-hosted persistente con alta autonomía<div class="muted">laboratorios internos, automatización local</div></td><td>Media-Alta</td><td>superficie de riesgo alta si no hay aislamiento, identidad separada y control de red</td></tr><tr><td><a href="https://github.com/NVIDIA/NemoClaw">NVIDIA/NemoClaw</a><div class="muted">emergente</div></td><td>stack y ejemplos de agentes sobre el enfoque OpenShell/Nemo<div class="muted">pruebas de agentes más contenidos y observables</div></td><td>Media</td><td>requiere madurez operativa y hardening real</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="two-col">
+    <div class="panel">
+      <h2>Incidentes IA</h2>
+      <div class="card-list">
+        <div class="card"><h3>TanStack / Mini Shai-Hulud impacto en OpenAI</h3><p><strong>Producto afectado:</strong> entorno corporativo y cadena de certificación de apps macOS</p><p><strong>Severidad:</strong> Alta · <strong>Estado:</strong> compromiso confirmado de dos dispositivos corporativos; sin evidencia de acceso a datos de usuario o producción</p><p><strong>Impacto:</strong> presión en supply chain y distribución de apps</p><p><strong>Mitigación:</strong> actualizar apps macOS antes del 12 de junio de 2026 y extremar validación de instaladores</p><p><strong>Prioridad:</strong> Alta</p><p><a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/">Fuente</a></p></div><div class="card"><h3>Incidente operativo GPT-5.4 / GPT-5.5</h3><p><strong>Producto afectado:</strong> API / servicios OpenAI</p><p><strong>Severidad:</strong> Media · <strong>Estado:</strong> incidente de disponibilidad resuelto el 20 de mayo</p><p><strong>Impacto:</strong> riesgo de continuidad para integraciones críticas</p><p><strong>Mitigación:</strong> fallback de modelos y control de SLA internos</p><p><strong>Prioridad:</strong> Media</p><p><a href="https://status.openai.com/history">Fuente</a></p></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Vulnerabilidades IA</h2>
+      <div class="card-list">
+        <div class="card"><h3>CVE-2026-26030</h3><p><strong>Producto:</strong> Microsoft Semantic Kernel</p><p><strong>Severidad:</strong> Crítica · <strong>Explotación:</strong> vector descrito públicamente; requiere prompt injection y exposición de herramientas</p><p><strong>Impacto:</strong> RCE a nivel host desde un flujo agentic</p><p><strong>Mitigación:</strong> parchear y revisar tool exposure; endurecer validación de parámetros</p><p><strong>Prioridad:</strong> Crítica</p><p><a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">Fuente</a></p></div><div class="card"><h3>CVE-2026-25592</h3><p><strong>Producto:</strong> Microsoft Semantic Kernel .NET SDK</p><p><strong>Severidad:</strong> Crítica · <strong>Explotación:</strong> vulnerable si se usa una versión anterior a 1.71.0</p><p><strong>Impacto:</strong> escritura arbitraria de archivos y posible escape de sandbox</p><p><strong>Mitigación:</strong> actualizar a 1.71.0 o superior y limitar rutas/funciones</p><p><strong>Prioridad:</strong> Crítica</p><p><a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">Fuente</a></p></div><div class="card"><h3>Exposición remota de MCP servers sin autenticación</h3><p><strong>Producto:</strong> despliegues AI con MCP</p><p><strong>Severidad:</strong> Alta · <strong>Explotación:</strong> observado por Microsoft en entornos reales</p><p><strong>Impacto:</strong> acceso no autenticado a herramientas internas, datos y operaciones</p><p><strong>Mitigación:</strong> OAuth/autenticación fuerte, contexto por identidad y segmentación de red</p><p><strong>Prioridad:</strong> Crítica</p><p><a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/">Fuente</a></p></div><div class="card"><h3>Paquete PyPI mistralai==2.4.6 comprometido</h3><p><strong>Producto:</strong> SDK de Mistral en Python</p><p><strong>Severidad:</strong> Crítica · <strong>Explotación:</strong> bajo investigación; malware se ejecuta al importar en Linux</p><p><strong>Impacto:</strong> descarga y ejecución de payload externo</p><p><strong>Mitigación:</strong> buscar versión 2.4.6 en lockfiles, imágenes y cachés; rotar credenciales si hubo ejecución</p><p><strong>Prioridad:</strong> Crítica</p><p><a href="https://docs.mistral.ai/resources/security-advisories">Fuente</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="three-col">
+    <div class="panel">
+      <h2>Tendencias y radar IA</h2>
+      <div class="summary-list"><div class="summary-item">De chat a ejecución: los agentes ya compiten menos por “mejor respuesta” y más por acceso a herramientas, contexto y permisos.</div><div class="summary-item">Seguridad de aplicación > seguridad de modelo: Microsoft insiste en identidad separada, mínimos privilegios, HITL determinista y containment a nivel runtime.</div><div class="summary-item">Proactividad asistida: Google y Meta empujan IA multimodal persistente y contextual en apps, dispositivos y briefing personal.</div><div class="summary-item">Conectividad como moat: Anthropic + Stainless confirma que SDKs, MCP y conectores son infraestructura estratégica, no detalle de plataforma.</div><div class="summary-item">Cumplimiento usable: el AI Act se vuelve terreno comercial para servicios de readiness, documentación, transparencia y reporting.</div></div>
+    </div>
+    <div class="panel">
+      <h2>Oportunidades</h2>
+      <div class="card-list"><div class="card"><h3>Oferta de hardening de agentes para pymes y mid-market</h3><p><strong>Prioridad:</strong> Alta</p><p>hay dolor real en identidad, permisos, MCP, logs y sandboxing</p></div><div class="card"><h3>Auditoría express de supply chain AI</h3><p><strong>Prioridad:</strong> Alta</p><p>TanStack y Mistral muestran que el riesgo ya es operativo y vendible como servicio</p></div><div class="card"><h3>Paquetes de preparación AI Act Art. 50 + GPAI</h3><p><strong>Prioridad:</strong> Media-Alta</p><p>hay fechas absolutas y necesidad de evidencias, plantillas y trazabilidad</p></div><div class="card"><h3>Briefings ejecutivos automatizados tipo Daily Brief</h3><p><strong>Prioridad:</strong> Media</p><p>la competencia valida demanda en resumen, agenda y vigilancia proactiva</p></div><div class="card"><h3>Laboratorio controlado de agentes con OpenShell/NemoClaw</h3><p><strong>Prioridad:</strong> Media</p><p>permite demostrar seguridad por diseño sin tocar producción al inicio</p></div></div>
+    </div>
+    <div class="panel">
+      <h2>Alertas activas</h2>
+      <div class="summary-list"><div class="summary-item">Crítica: revisar inmediatamente dependencias y artefactos por `mistralai==2.4.6` y otros paquetes afectados por la cadena TanStack/Mini Shai-Hulud.</div><div class="summary-item">Crítica: localizar agentes basados en Semantic Kernel .NET por debajo de 1.71.0 y desactivar herramientas peligrosas hasta parchear.</div><div class="summary-item">Alta: inventariar MCP remotos expuestos a internet y exigir autenticación fuerte por identidad, no por contexto implícito del servidor.</div><div class="summary-item">Alta: preparar respuesta a la consulta europea sobre Artículo 50 antes del 3 de junio de 2026 si se desea posicionamiento o influencia regulatoria.</div><div class="summary-item">Media: definir fallback para incidencias de frontier APIs en flujos críticos de negocio.</div></div>
+    </div>
+  </section>
+
+  <section class="two-col">
+    <div class="panel">
+      <h2>Recomendaciones ejecutivas</h2>
+      <div class="card-list"><div class="card"><h3>Auditar agentes con tools en 7 días</h3><p><strong>Prioridad:</strong> Crítica</p><p>verificar identidad separada, mínimos privilegios, rutas permitidas, red y aprobación humana en acciones sensibles.</p></div><div class="card"><h3>Buscar IOCs de Mistral y supply chain</h3><p><strong>Prioridad:</strong> Crítica</p><p>revisar lockfiles, caches, containers y hosts Linux por la versión comprometida y por descarga de payloads externos.</p></div><div class="card"><h3>Activar autenticación resistente al phishing</h3><p><strong>Prioridad:</strong> Alta</p><p>alineado con el movimiento de OpenAI y con el aumento de cuentas con contexto sensible y conectores reales.</p></div><div class="card"><h3>Convertir cumplimiento AI Act en oferta comercial</h3><p><strong>Prioridad:</strong> Alta</p><p>plantillas de transparencia, inventario de modelos, resumen de training content, reporting e incident handling.</p></div><div class="card"><h3>Probar asistentes proactivos en entorno controlado</h3><p><strong>Prioridad:</strong> Media</p><p>Daily Brief, Spark y workflows similares son útiles, pero deben entrar con gobernanza y métricas claras.</p></div></div>
+    </div>
+    <div class="panel">
+      <h2>Calendario de eventos IA</h2>
+      <table class="table">
+        <thead><tr><th>Fecha</th><th>Evento</th><th>Relevancia</th></tr></thead>
+        <tbody><tr><td>2026-05-20</td><td>Corte de inteligencia IA 16:00</td><td>Seguimiento operativo del ecosistema</td></tr><tr><td>2026-06-01</td><td>OpenAI Trusted Access for Cyber exige Advanced Account Security</td><td>Impacta identidades de acceso a modelos más sensibles</td></tr><tr><td>2026-06-03</td><td>Cierre de la consulta UE sobre Artículo 50</td><td>Ventana de influencia y readiness regulatorio</td></tr><tr><td>2026-08-02</td><td>Entra la capacidad de enforcement de la Comisión para GPAI</td><td>sube el riesgo de cumplimiento y documentación</td></tr></tbody>
+      </table>
+      <h2 style="margin-top:18px;">Limitaciones verificadas</h2>
+      <div class="summary-list"><div class="summary-item">No se genera PDF en este corte porque el entorno no dispone de una conversión HTML→PDF con fidelidad visual verificada.</div><div class="summary-item">Se archivan únicamente los artefactos materializados con enlace real en GitHub: HTML, JSON y README de contexto.</div></div>
+    </div>
+  </section>
+
+  <section class="panel" style="margin-top:18px;">
+    <h2>Fuentes principales</h2>
+    <ol class="source-list"><li><a href="https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/">Google Gemini app: more agentic, 24/7 help</a></li><li><a href="https://www.anthropic.com/news/anthropic-acquires-stainless">Anthropic acquires Stainless</a></li><li><a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/">OpenAI response to TanStack npm supply chain attack</a></li><li><a href="https://openai.com/index/advanced-account-security/">OpenAI Advanced Account Security</a></li><li><a href="https://status.openai.com/history">OpenAI Status history</a></li><li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/">Microsoft MDASH vulnerability discovery</a></li><li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">Microsoft RCE vulnerabilities in AI agent frameworks</a></li><li><a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/">Microsoft exploitable misconfigurations in AI apps</a></li><li><a href="https://docs.mistral.ai/resources/security-advisories">Mistral security advisories</a></li><li><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act">EU consultation on Article 50 transparency guidelines</a></li><li><a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers">EU guidelines for GPAI providers</a></li><li><a href="https://x.ai/news/grok-build-cli">xAI Grok Build early beta</a></li><li><a href="https://x.ai/news/grok-skills">xAI Skills</a></li><li><a href="https://blogs.nvidia.com/blog/sap-specialized-agents/">NVIDIA + SAP OpenShell</a></li><li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/">EU AI Act simplification agreement</a></li></ol>
+  </section>
+
+  <footer class="foot">
+    <strong>MMarco Seguridad</strong><br/>
+    Manuel Marco Sánchez · Ciberseguridad, Blockchain, IA y Telecomunicaciones · https://mmarcoseguridad.com · mmarco.seguridad@gmail.com · +34 656 33 93 55<br/><br/>
+    Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, técnico, financiero ni profesional específico.
+  </footer>
+</div>
+</body>
+</html>
