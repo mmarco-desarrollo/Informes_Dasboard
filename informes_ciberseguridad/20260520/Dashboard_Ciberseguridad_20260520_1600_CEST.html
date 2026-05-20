@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informe Ejecutivo de Ciberseguridad | 20/05/2026 16:00 CEST</title>
+<style>
+:root{--bg:#07111f;--panel:#0f1d31;--panel2:#12243d;--line:rgba(160,190,220,.18);--text:#e8f0fb;--muted:#9fb1c9;--accent:#27d3a2;--alert:#ff6b57;--shadow:0 18px 50px rgba(0,0,0,.28)}*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top right,rgba(39,211,162,.12),transparent 24%),radial-gradient(circle at left 15%,rgba(120,183,255,.12),transparent 20%),linear-gradient(180deg,#07111f 0%,#091524 100%)}.wrap{width:min(1180px,calc(100vw - 32px));margin:0 auto;padding:28px 0 48px}.hero,.section,.metric,.alert,.news,.rec{background:linear-gradient(180deg,rgba(18,36,61,.9),rgba(12,25,43,.96));border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}.hero{padding:28px}.brand{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase;background:rgba(255,255,255,.03)}h1{font-size:clamp(30px,5vw,48px);line-height:1.05;margin:18px 0 12px;max-width:900px}h2{margin:10px 0 14px;font-size:24px}h3{margin:0 0 10px;font-size:18px}.sub,.small,.metric .label,.metric .note,.meta{color:var(--muted)}.sub{font-size:16px;line-height:1.6;max-width:920px}.hero-grid,.kpi-grid,.two-col,.news-grid,.rec-grid{display:grid;gap:16px}.hero-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:24px}.kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:24px}.two-col{grid-template-columns:1.2fr .95fr;margin-top:24px}.news-grid,.rec-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:20px}.metric,.section,.news,.rec,.alert{padding:18px}.metric .value{font-size:32px;font-weight:700;margin:10px 0 8px}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.06em;font-size:12px}p{margin:0 0 12px;line-height:1.65}ul{margin:0;padding-left:18px}li{margin-bottom:8px;line-height:1.5}.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;font-size:13px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);margin-right:10px;margin-bottom:10px}.threat{color:#fff;background:rgba(255,107,87,.14);border-color:rgba(255,107,87,.28)}.ai{color:#fff;background:rgba(39,211,162,.14);border-color:rgba(39,211,162,.24)}.alert{border-left:4px solid var(--alert)}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em}.sources a{color:#9bd6ff;text-decoration:none;display:inline-block;margin-bottom:8px;word-break:break-word}.footer{margin-top:24px;color:var(--muted);font-size:12px;line-height:1.6;text-align:center}@media (max-width:1024px){.hero-grid,.kpi-grid,.two-col,.news-grid,.rec-grid{grid-template-columns:1fr 1fr}}@media (max-width:720px){.wrap{width:min(100vw - 20px,100%);padding-top:18px}.hero-grid,.kpi-grid,.two-col,.news-grid,.rec-grid{grid-template-columns:1fr}table,thead,tbody,th,td,tr{display:block}thead{display:none}td{padding:8px 0 10px;border-bottom:0}tr{padding:12px 0;border-bottom:1px solid var(--line)}td:before{content:attr(data-label);display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}}</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<div class="brand">MMarco Seguridad · SOC / Threat Intelligence</div>
+<h1>Informe Ejecutivo de Ciberseguridad</h1>
+<p class="sub">La postura de amenaza sigue en nivel ALTO. El riesgo mas inmediato se concentra en Cisco SD-WAN, Microsoft Exchange, Ivanti EPMM y kernels Linux con explotacion reconocida, mientras el phishing AiTM y el malware firmado mantienen presion sobre credenciales e identidad.</p>
+<div class="hero-grid">
+<div class="section"><div class="eyebrow">Fecha y hora</div><h3>2026-05-20 16:12:57 CEST</h3><div class="small">Europe/Madrid</div></div>
+<div class="section"><div class="eyebrow">Nivel global</div><h3>ALTO</h3><div class="small">Riesgo alto sostenido</div></div>
+<div class="section"><div class="eyebrow">Proxima actualizacion</div><h3>2026-05-20 20:00:00 CEST</h3><div class="small">Edicion programada</div></div>
+<div class="section"><div class="eyebrow">Estado IA de riesgo</div><h3>Elevado</h3><div class="small">Analisis predictivo separado del hecho confirmado</div></div>
+</div>
+</section>
+<section class="kpi-grid">
+<div class="metric"><div class="label">Alertas criticas priorizadas</div><div class="value">5</div><div class="note">Hallazgos confirmados del corte</div></div>
+<div class="metric"><div class="label">CVEs con explotacion conocida o reconocida</div><div class="value">4</div><div class="note">Cisco, Exchange, Ivanti y Linux</div></div>
+<div class="metric"><div class="label">Campanas o clusters activos destacados</div><div class="value">3</div><div class="note">Code of Conduct, Fox Tempest, Dirty Frag/Fragnesia</div></div>
+<div class="metric"><div class="label">Riesgo OT/ICS</div><div class="value">ALTO</div><div class="note">Siemens mayo 2026 segun INCIBE SCI</div></div>
+<div class="metric"><div class="label">Tendencia 24h</div><div class="value">Presion alta sostenida</div><div class="note">Sin evidencia de relajacion</div></div>
+<div class="metric"><div class="label">Estado global</div><div class="value">ALTO</div><div class="note">Edge, identidad y correo expuesto</div></div>
+</section>
+<section class="two-col">
+<div class="section">
+<div class="eyebrow">Resumen ejecutivo</div>
+<h2>Panorama del corte de las 16:00</h2>
+<p>La postura de amenaza sigue en nivel ALTO. El riesgo mas inmediato se concentra en superficies expuestas a Internet y en identidad. Cisco SD-WAN CVE-2026-20182 mantiene la prioridad maxima por CVSS 10.0, explotacion limitada confirmada y presencia en KEV. Exchange CVE-2026-42897 e Ivanti EPMM CVE-2026-6973 siguen exigiendo respuesta prioritaria, mientras Linux CVE-2026-31431 se mantiene bajo seguimiento por explotacion reconocida.</p>
+<div class="pill threat">Nivel de amenaza: ALTO</div><div class="pill ai">Analisis predictivo etiquetado</div>
+<h3>Hallazgos clave</h3>
+<ul>
+<li>Cisco SD-WAN CVE-2026-20182: prioridad maxima por criticidad 10.0 y explotacion limitada confirmada.</li>
+<li>Microsoft Exchange CVE-2026-42897: riesgo ejecutivo por explotacion conocida y presencia en KEV.</li>
+<li>Ivanti EPMM CVE-2026-6973: explotacion muy limitada reconocida por el fabricante.</li>
+<li>Drupal anuncia para hoy una release de seguridad altamente critica y requiere preparacion de cambio.</li>
+<li>INCIBE SCI alerta de 22 vulnerabilidades criticas en el boletin Siemens de mayo de 2026.</li>
+</ul>
+</div>
+<div class="section">
+<div class="eyebrow">Exposicion y tecnicas</div>
+<h2>Donde esta el riesgo</h2>
+<p><strong>Sectores mas afectados:</strong> servicios gestionados y TI corporativa, sector publico con Exchange expuesto, empresas con SD-WAN, entornos Linux de servidor e industria con huella Siemens.</p>
+<p><strong>Tecnicas observadas:</strong> explotacion de software expuesto, adversary-in-the-middle, device code phishing, uso de binarios firmados y acceso remoto sobre paneles o servicios perimetrales.</p>
+<p><strong>Recomendacion ejecutiva principal:</strong> activar hoy una ventana de remediacion prioritaria para Cisco SD-WAN, Exchange, Ivanti EPMM y Linux expuesto, reforzando al mismo tiempo controles anti-phishing resistentes a AiTM.</p>
+</div>
+</section>
+<section class="section" style="margin-top:24px;">
+<div class="eyebrow">Alertas activas</div>
+<h2>Lo urgente y accionable ahora mismo</h2>
+<div class="alert"><div class="meta">Critica · Hecho confirmado</div><h3>Cisco SD-WAN CVE-2026-20182</h3><p>Cisco confirma CVSS 10.0, explotacion limitada y software corregido.</p></div>
+<div class="alert"><div class="meta">Critica · Hecho confirmado</div><h3>Microsoft Exchange CVE-2026-42897</h3><p>INCIBE alerta de posible explotacion activa y la vulnerabilidad figura en KEV.</p></div>
+<div class="alert"><div class="meta">Alta · Hecho confirmado</div><h3>Ivanti EPMM CVE-2026-6973</h3><p>Ivanti reconoce explotacion muy limitada en entornos on-prem.</p></div>
+<div class="alert"><div class="meta">Alta · Hecho confirmado</div><h3>Drupal pre-release altamente critica</h3><p>Conviene dejar preparado validacion y despliegue acelerado hoy.</p></div>
+</section>
+<section class="section" style="margin-top:24px;">
+<div class="eyebrow">Vulnerabilidades criticas</div>
+<h2>Tabla priorizada</h2>
+<table>
+<thead><tr><th>CVE</th><th>Producto</th><th>CVSS</th><th>Severidad</th><th>Estado</th><th>Parche</th><th>Prioridad</th></tr></thead>
+<tbody>
+<tr><td data-label="CVE">CVE-2026-20182</td><td data-label="Producto">Cisco SD-WAN Manager</td><td data-label="CVSS">10.0</td><td data-label="Severidad">Critica</td><td data-label="Estado">Explotacion limitada confirmada; KEV</td><td data-label="Parche">Si</td><td data-label="Prioridad">Inmediata</td></tr>
+<tr><td data-label="CVE">CVE-2026-42897</td><td data-label="Producto">Microsoft Exchange Server</td><td data-label="CVSS">8.8</td><td data-label="Severidad">Alta</td><td data-label="Estado">Explotacion conocida; KEV</td><td data-label="Parche">Si</td><td data-label="Prioridad">Inmediata</td></tr>
+<tr><td data-label="CVE">CVE-2026-6973</td><td data-label="Producto">Ivanti Endpoint Manager Mobile</td><td data-label="CVSS">9.8</td><td data-label="Severidad">Critica</td><td data-label="Estado">Explotacion muy limitada; KEV</td><td data-label="Parche">Si</td><td data-label="Prioridad">Inmediata</td></tr>
+<tr><td data-label="CVE">CVE-2026-44277</td><td data-label="Producto">FortiAuthenticator</td><td data-label="CVSS">9.8</td><td data-label="Severidad">Critica</td><td data-label="Estado">Sin explotacion publica confirmada en las fuentes revisadas</td><td data-label="Parche">Si</td><td data-label="Prioridad">Alta</td></tr>
+<tr><td data-label="CVE">CVE-2026-31431</td><td data-label="Producto">Linux Kernel</td><td data-label="CVSS">7.0</td><td data-label="Severidad">Alta</td><td data-label="Estado">Explotacion reconocida; KEV</td><td data-label="Parche">Si</td><td data-label="Prioridad">Alta</td></tr>
+</tbody>
+</table>
+</section>
+<section class="section" style="margin-top:24px;">
+<div class="eyebrow">Noticias importantes</div>
+<h2>Hechos recientes con impacto ejecutivo</h2>
+<div class="news-grid">
+<div class="news"><div class="meta">Hecho confirmado</div><h3>Microsoft y Fox Tempest</h3><p>El analisis sobre servicios de firmado de malware refuerza que una firma valida no basta como indicador de legitimidad.</p></div>
+<div class="news"><div class="meta">Hecho confirmado</div><h3>Cisco Talos y Code of Conduct</h3><p>La campaña muestra crecimiento de AiTM, credibilidad operativa y abuso de identidades.</p></div>
+<div class="news"><div class="meta">Hecho confirmado</div><h3>Drupal y release critica del 20/05/2026</h3><p>Se recomienda validacion inmediata del parche en cuanto se publique.</p></div>
+</div>
+</section>
+<section class="section sources" style="margin-top:24px;">
+<div class="eyebrow">Fuentes</div>
+<h2>Trazabilidad</h2>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20182">NVD CVE-2026-20182</a><br>
+<a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW">Cisco Security Advisory: CVE-2026-20182</a><br>
+<a href="https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2026-42897-vulnerabilidad-critica-microsoft-exchange-server-posible-explotacion-activa">INCIBE: Exchange CVE-2026-42897</a><br>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6973">NVD CVE-2026-6973</a><br>
+<a href="https://www.ivanti.com/blog/security-update-epmm-cve-2026-6973">Ivanti advisory: CVE-2026-6973</a><br>
+<a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-128">Fortinet PSIRT FG-IR-26-128</a><br>
+<a href="https://www.microsoft.com/en-us/security/blog/2026/05/19/fox-tempests-malware-code-signing-service/">Microsoft: Fox Tempest</a><br>
+<a href="https://blog.talosintelligence.com/the-code-of-conduct-campaign/">Cisco Talos: Code of Conduct</a><br>
+<a href="https://www.drupal.org/sa-2026-001">Drupal security announcement</a><br>
+<a href="https://www.incibe.es/incibe-cert/alerta-temprana/boletin-siemens-mayo-2026">INCIBE SCI Siemens mayo 2026</a>
+</section>
+<div class="footer">Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.</div>
+</div>
+</body>
+</html>
