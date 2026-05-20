@@ -1,9 +1,0 @@
-Generated: 2026-05-20 08:15 CEST
-Status: Recuperacion tactica con sesgo defensivo
-Fear & Greed: 27 (Fear)
-Market Cap: $2.57T
-Volume 24h: $70.66B
-BTC Dominance: 60.24%
-ETH Dominance: 9.98%
-Assets: BTC $77,141.56 (+0.32% / +4.77%), ETH $2,125.40 (+0.37% / +7.59%), SOL $84.70 (+0.47% / +11.04%), BNB $641.99 (+0.21% / +5.28%), XRP $1.36 (+1.13% / +5.97%), ADA $0.2500 (+0.58% / +8.40%), DOGE $0.1034 (+0.94% / +7.65%)
-Note: Altseason Index, open interest, funding, liquidaciones y RSI permanecen en fallback explicito por falta de confirmacion sincronizada.
