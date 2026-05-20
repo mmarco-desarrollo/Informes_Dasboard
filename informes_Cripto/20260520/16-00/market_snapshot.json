@@ -1,1 +1,36 @@
-PLACEHOLDER_JSON
+{
+  "report_label": "crypto_20260520_16-00",
+  "generated_at_cest": "2026-05-20 16:11:00 CEST",
+  "market_overview": {
+    "total_market_cap_usd": 2659311951853,
+    "total_volume_24h_usd": 70898618393,
+    "btc_dominance_pct": 58.3,
+    "eth_dominance_pct": 9.67,
+    "fear_greed_value": 27,
+    "fear_greed_label": "Fear",
+    "altseason_index": 22,
+    "open_interest_btc_usd": 62454423342
+  },
+  "assets": [
+    {"symbol": "BTC", "price_usd": 77527.08, "change_24h_pct": 0.8, "change_7d_pct": 4.0, "volume_24h_usd": 27010368328, "trend": "Alcista tactica", "momentum": "Recuperacion limpia", "rsi": null},
+    {"symbol": "ETH", "price_usd": 2133.04, "change_24h_pct": 0.8, "change_7d_pct": 7.3, "volume_24h_usd": 10748204531, "trend": "Rebote con rezago estructural", "momentum": "Mejora relativa", "rsi": null},
+    {"symbol": "SOL", "price_usd": 84.98, "change_24h_pct": 0.4, "change_7d_pct": 10.3, "volume_24h_usd": 1848027302, "trend": "Beta lider", "momentum": "Fuerte", "rsi": null},
+    {"symbol": "BNB", "price_usd": 644.58, "change_24h_pct": 0.6, "change_7d_pct": 5.3, "volume_24h_usd": 557979730, "trend": "Ascenso ordenado", "momentum": "Positivo", "rsi": null},
+    {"symbol": "XRP", "price_usd": 1.37, "change_24h_pct": 0.4, "change_7d_pct": 5.3, "volume_24h_usd": 1724424546, "trend": "Rotacion selectiva", "momentum": "Positivo", "rsi": null},
+    {"symbol": "ADA", "price_usd": 0.2496, "change_24h_pct": 0.1, "change_7d_pct": 7.8, "volume_24h_usd": 260447462, "trend": "Rebote moderado", "momentum": "Positivo", "rsi": null},
+    {"symbol": "DOGE", "price_usd": 0.1041, "change_24h_pct": 0.0, "change_7d_pct": 8.5, "volume_24h_usd": 591677879, "trend": "Lateral con sesgo alcista", "momentum": "Mixto", "rsi": null}
+  ],
+  "macro": {
+    "us_cpi_april_2026_mom_pct": 0.6,
+    "us_cpi_april_2026_yoy_pct": 3.8,
+    "us_gdp_q1_2026_advance_pct": 2.0,
+    "next_fomc_minutes_date": "2026-05-20",
+    "next_bea_gdp_second_estimate": "2026-05-28",
+    "next_bls_cpi_release": "2026-06-10",
+    "next_ecb_accounts_release": "2026-05-28"
+  },
+  "notes": {
+    "funding_rates": "Fallback elegante: la pagina publica visible al corte no muestra una lectura numerica fiable.",
+    "liquidations": "Se usa la ultima lectura publica fiable citada el 2026-05-19: 657M USD, 89% en largos."
+  }
+}
