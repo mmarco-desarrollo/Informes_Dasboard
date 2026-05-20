@@ -1,0 +1,415 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "website": "https://mmarcoseguridad.com",
+  "primaryEmail": "mmarco.seguridad@gmail.com",
+  "generatedAt": "2026-05-20 08:17:31 CEST",
+  "timezone": "Europe/Madrid",
+  "reportSlot": "08:00",
+  "nextUpdate": "2026-05-20 12:00 CEST",
+  "fileStamp": "2026-05-20_08-17",
+  "dayStamp": "20260520",
+  "windowLabel": "Ventana analizada: 2026-05-19 20:10 CEST a 2026-05-20 08:17 CEST",
+  "ecosystemStatus": "Aceleracion agentic con foco creciente en seguridad, tool-use y cumplimiento.",
+  "impactLevel": "Alto",
+  "confidence": "Alta",
+  "executiveSummary": [
+    "Google I/O 2026 movio la agenda desde prompts hacia ejecucion real: Gemini 3.5 Flash, Managed Agents en la Gemini API, Antigravity 2.0 y Daily Brief consolidan el paso a asistentes persistentes y operativos.",
+    "Anthropic refuerza la capa de conectividad para agentes con la compra de Stainless, mientras OpenAI endurece seguridad y amplifica voz en tiempo real con nuevos modelos orientados a acciones, traduccion y transcripcion.",
+    "En riesgo, Microsoft confirma 16 vulnerabilidades nuevas descubiertas con su harness MDASH y Mistral mantiene una alerta de supply chain ya mitigada pero aun relevante para inventario, limpieza y rotacion de secretos.",
+    "En cumplimiento, la Comision Europea mantiene abierta la consulta del Articulo 50 hasta el 3 de junio y abrio el 19 de mayo otra consulta sobre clasificacion de sistemas de alto riesgo, lo que genera una ventana inmediata para servicios de readiness y auditoria."
+  ],
+  "kpis": [
+    {
+      "label": "Senales confirmadas",
+      "value": "10",
+      "note": "lanzamientos, seguridad y regulacion con fuente primaria"
+    },
+    {
+      "label": "Alertas activas",
+      "value": "4",
+      "note": "supply chain, migraciones, vulnerabilidades y cumplimiento"
+    },
+    {
+      "label": "Ventanas regulatorias",
+      "value": "2",
+      "note": "Articulo 50 y clasificacion high-risk de la UE"
+    },
+    {
+      "label": "Utilidad inmediata",
+      "value": "6",
+      "note": "modelos, agentes y herramientas con adopcion empresarial"
+    }
+  ],
+  "activity": [
+    {
+      "label": "Lanzamientos y producto",
+      "value": 9,
+      "color": "#4cc9f0"
+    },
+    {
+      "label": "Seguridad e incidentes",
+      "value": 6,
+      "color": "#ff6b6b"
+    },
+    {
+      "label": "Modelos y tooling",
+      "value": 8,
+      "color": "#9d4edd"
+    },
+    {
+      "label": "Regulacion y compliance",
+      "value": 5,
+      "color": "#80ed99"
+    }
+  ],
+  "globalView": [
+    {
+      "region": "EE. UU.",
+      "headline": "Google, OpenAI, Microsoft, Anthropic y Apple concentran el mayor impacto inmediato.",
+      "signal": "Muy alta"
+    },
+    {
+      "region": "UE",
+      "headline": "Nueva presion regulatoria practica con consultas activas sobre transparencia y high-risk.",
+      "signal": "Alta"
+    },
+    {
+      "region": "Open source / infra",
+      "headline": "NVIDIA y xAI mantienen presion en modelos abiertos, multimodalidad y migraciones de API.",
+      "signal": "Media-Alta"
+    }
+  ],
+  "featuredNews": [
+    {
+      "title": "Google lleva Gemini del chat al trabajo persistente",
+      "source": "Google Blog",
+      "date": "2026-05-19",
+      "category": "Lanzamiento",
+      "impact": "Muy alto",
+      "status": "Hecho confirmado",
+      "utility": "Gemini Omni, Daily Brief y una interfaz mas agentic elevan el liston de asistentes proactivos.",
+      "quickTake": "Seguir implicaciones para automatizacion personal, resumentes de correo y agentes de productividad conectados.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
+    },
+    {
+      "title": "Google I/O 2026 abre Managed Agents en la Gemini API",
+      "source": "Google Blog",
+      "date": "2026-05-19",
+      "category": "Developer Platform",
+      "impact": "Muy alto",
+      "status": "Hecho confirmado",
+      "utility": "Un solo API call puede levantar un agente con herramientas y ejecucion en Linux aislado.",
+      "quickTake": "Competencia directa para stacks de agentes gestionados; alto valor para demos, PoC y automatizacion segura.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+    },
+    {
+      "title": "Anthropic compra Stainless para reforzar SDKs y MCP",
+      "source": "Anthropic",
+      "date": "2026-05-18",
+      "category": "M&A / Plataforma",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility": "Fortalece la tesis de que el valor de los agentes depende de conectividad y tooling estandarizado.",
+      "quickTake": "Buena senal para consultoria en integraciones, conectores y experiencia de desarrollador agentic.",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless?pubDate=20250818"
+    },
+    {
+      "title": "OpenAI empuja voz en tiempo real orientada a accion",
+      "source": "OpenAI",
+      "date": "2026-05-07",
+      "category": "Modelos / API",
+      "impact": "Alto",
+      "status": "Hecho confirmado",
+      "utility": "GPT-Realtime-2, Translate y Whisper amplian casos de soporte, ventas, eventos y operaciones multilingues.",
+      "quickTake": "Relevante para servicios conversacionales empresariales y automatizacion de voz con tool calling.",
+      "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "title": "Apple refuerza Apple Intelligence con privacidad en accesibilidad",
+      "source": "Apple Newsroom",
+      "date": "2026-05-19",
+      "category": "Producto",
+      "impact": "Medio-Alto",
+      "status": "Hecho confirmado",
+      "utility": "Subtitulos on-device y navegacion en lenguaje natural refuerzan la narrativa de IA util y privada en dispositivo.",
+      "quickTake": "No cambia el mapa enterprise hoy, pero consolida el avance de IA local y privacidad por diseno.",
+      "url": "https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/"
+    }
+  ],
+  "recentModels": [
+    {
+      "name": "Gemini 3.5 Flash",
+      "company": "Google DeepMind",
+      "type": "Modelo generalista para agentes",
+      "capabilities": "razonamiento frontier con alta velocidad, API para agentes gestionados",
+      "multimodality": "Si",
+      "contextWindow": "No detallado en la nota abierta",
+      "license": "Propietaria",
+      "useCases": "agentes de produccion, workflows con herramientas, AI Studio",
+      "impact": "Muy alto",
+      "source": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+    },
+    {
+      "name": "Gemini Omni",
+      "company": "Google",
+      "type": "Modelo de generacion multimodal",
+      "capabilities": "convierte texto, imagen y video en video de alta calidad",
+      "multimodality": "Si",
+      "contextWindow": "No disponible",
+      "license": "Propietaria",
+      "useCases": "contenido, marketing, edicion conversacional",
+      "impact": "Alto",
+      "source": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
+    },
+    {
+      "name": "GPT-Realtime-2",
+      "company": "OpenAI",
+      "type": "Modelo de voz en tiempo real",
+      "capabilities": "razona, usa herramientas, traduce y transcribe en directo",
+      "multimodality": "Audio + texto",
+      "contextWindow": "128K",
+      "license": "API propietaria",
+      "useCases": "contact center, soporte, voz multilingue, operaciones en campo",
+      "impact": "Alto",
+      "source": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/"
+    },
+    {
+      "name": "Grok 4.3",
+      "company": "xAI",
+      "type": "LLM agentic",
+      "capabilities": "tool calling fuerte y razonamiento configurable",
+      "multimodality": "Texto; ecosistema con voz e imagen",
+      "contextWindow": "1M tokens",
+      "license": "API propietaria",
+      "useCases": "migracion desde slugs antiguos, coding y tool-use",
+      "impact": "Medio-Alto",
+      "source": "https://docs.x.ai/developers/models"
+    },
+    {
+      "name": "NVIDIA Nemotron 3 Nano Omni",
+      "company": "NVIDIA",
+      "type": "Modelo abierto omnimodal eficiente",
+      "capabilities": "razonamiento sobre texto, imagen, audio y video en un unico loop",
+      "multimodality": "Si",
+      "contextWindow": "No especificado en la pieza abierta",
+      "license": "NVIDIA Nemotron Open Model License",
+      "useCases": "subagentes multimodales, analisis documental, video y audio a escala",
+      "impact": "Medio-Alto",
+      "source": "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Managed Agents en Gemini API",
+      "source": "Google",
+      "category": "Agentes gestionados",
+      "impact": "Muy alto",
+      "utility": "Despliegue rapido de agentes con herramientas y entorno aislado.",
+      "warning": "Riesgo de lock-in y necesidad de gobierno de prompts, permisos y costes.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+    },
+    {
+      "name": "Antigravity 2.0",
+      "source": "Google",
+      "category": "Plataforma agentic",
+      "impact": "Alto",
+      "utility": "Subagentes paralelos, tareas programadas e integracion con Studio, Android y Firebase.",
+      "warning": "Conviene seguir madurez real, observabilidad y control de entornos.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+    },
+    {
+      "name": "OpenAI Advanced Account Security",
+      "source": "OpenAI",
+      "category": "Seguridad",
+      "impact": "Alto",
+      "utility": "Passkeys, llaves fisicas, sesiones mas cortas y exclusiones automaticas de entrenamiento.",
+      "warning": "La recuperacion de cuenta se vuelve mas exigente; requiere cambio operativo.",
+      "url": "https://openai.com/index/advanced-account-security/"
+    },
+    {
+      "name": "OpenAI Codex telemetry posture",
+      "source": "OpenAI",
+      "category": "Gobierno de agentes",
+      "impact": "Alto",
+      "utility": "OpenTelemetry, logs de aprobacion, MCP y red para SIEM y compliance.",
+      "warning": "Aporta referencia tecnica, pero obliga a definir politicas de aprobacion y retencion.",
+      "url": "https://openai.com/index/running-codex-safely/"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "Stainless / MCP server tooling",
+      "source": "Anthropic announcement",
+      "popularity": "Cientos de empresas usuarias segun Anthropic",
+      "language": "Multi lenguaje",
+      "description": "Generacion de SDKs, CLIs y servidores MCP desde especificaciones API.",
+      "useCases": "integraciones agentic, developer experience, conectividad empresarial",
+      "utility": "Alta",
+      "risks": "Dependencia de specs correctas y control de versionado",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless?pubDate=20250818"
+    },
+    {
+      "name": "NVIDIA Nemotron 3 Nano Omni",
+      "source": "NVIDIA + Hugging Face",
+      "popularity": "Modelo abierto distribuido en Hugging Face y NIM",
+      "language": "Modelo / inferencia",
+      "description": "Subagente multimodal abierto para razonamiento sobre documentos, audio y video.",
+      "useCases": "document intelligence, multimedia QA, automatizacion multimodal",
+      "utility": "Alta",
+      "risks": "Coste de despliegue GPU y necesidad de evaluacion por caso de uso",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "MAI-2026-002",
+      "name": "TanStack supply chain attack affecting Mistral SDK packages",
+      "product": "Mistral SDKs npm / PyPI",
+      "severity": "Alta",
+      "exploitation": "Publicado y mitigado; impacto depende de instalacion en la ventana afectada",
+      "impact": "Riesgo de robo de credenciales y ejecucion de payload en Linux por importacion del paquete PyPI afectado.",
+      "mitigation": "Inventario de lockfiles, limpieza de hosts, rotacion de secretos y monitorizacion de IOC.",
+      "priority": "Critica",
+      "status": "Hecho confirmado",
+      "source": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "id": "OpenAI Safety Context",
+      "name": "ChatGPT amplia deteccion contextual de conversaciones sensibles",
+      "product": "ChatGPT",
+      "severity": "Media",
+      "exploitation": "No es incidente; es refuerzo preventivo de seguridad",
+      "impact": "Sube la capacidad de detectar riesgo emergente a lo largo del tiempo con safety summaries acotados.",
+      "mitigation": "Monitorizar implicaciones de privacidad, retencion limitada y casos de uso sensibles.",
+      "priority": "Media",
+      "status": "Hecho confirmado",
+      "source": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2026-33827 / CVE-2026-33824",
+      "product": "Windows networking and IKEv2 stack",
+      "severity": "Critica",
+      "exploitation": "Descubiertas por Microsoft Security con MDASH; sin afirmar explotacion activa en la nota abierta",
+      "impact": "Forman parte de un bloque de 16 vulnerabilidades nuevas, incluidas 4 RCE criticas.",
+      "mitigation": "Acelerar parcheo, exposure management y revisar adopcion de scanning asistido por agentes.",
+      "priority": "Critica",
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/"
+    },
+    {
+      "id": "Flowise CVE-2026-41137",
+      "product": "Flowise CSVAgent",
+      "severity": "Critica",
+      "exploitation": "Vector autenticado de RCE documentado en advisory",
+      "impact": "Sigue siendo alerta relevante para despliegues de agentes low-code expuestos o mal segmentados.",
+      "mitigation": "Actualizar, aislar instancias, limitar plugins y revisar acceso autenticado.",
+      "priority": "Alta",
+      "source": "https://advisories.gitlab.com/npm/flowise/CVE-2026-41137/"
+    }
+  ],
+  "radar": [
+    "La ventaja competitiva se desplaza del modelo base hacia harnesses, conectores, observabilidad y seguridad operacional.",
+    "La orquestacion de subagentes y la ejecucion en entornos aislados se esta convirtiendo en funcionalidad estandar de plataforma.",
+    "El frente regulatorio europeo pasa de teoria a guias operativas y consultas concretas con deadlines cercanos.",
+    "La voz vuelve a ganar traccion como interfaz de trabajo real cuando se combina con razonamiento y tool calling."
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "title": "Servicio de AI Agent Readiness para pymes",
+      "description": "Auditoria de permisos, conectores, identidad resistente a phishing y trazabilidad para agentes en ChatGPT, Gemini y flujos internos."
+    },
+    {
+      "priority": "Alta",
+      "title": "Oferta de cumplimiento AI Act express",
+      "description": "Paquetes rapidos para transparencia, catalogacion de sistemas y preparacion de evidencias para Article 50 y high-risk."
+    },
+    {
+      "priority": "Media",
+      "title": "Pilotos de voz operativa multilingue",
+      "description": "PoC con GPT-Realtime-2 para soporte tecnico, recepcion, citas, field service o preventa multilingue."
+    },
+    {
+      "priority": "Media",
+      "title": "Laboratorio interno de subagentes multimodales",
+      "description": "Explorar Nemotron 3 Nano Omni y Gemini Managed Agents para analisis documental, video y audio de clientes."
+    }
+  ],
+  "activeAlerts": [
+    "Inventariar si algun entorno instalo `mistralai==2.4.6` o los paquetes npm afectados el 12 de mayo.",
+    "Revisar integraciones xAI que sigan usando slugs retirados el 15 de mayo de 2026; la migracion ya es inmediata.",
+    "Alinear ofertas y mensajes comerciales con las dos consultas abiertas de la UE antes del 3 y 23 de junio de 2026.",
+    "Tratar agentic scanning y telemetry de seguridad como tema comercial y de hardening, no solo como novedad tecnica."
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Lanzar un chequeo interno de supply chain IA",
+      "description": "Buscar dependencias, caches y artefactos con `mistralai==2.4.6` y rotar secretos si hubo exposicion."
+    },
+    {
+      "priority": "Alta",
+      "title": "Preparar una oferta comercial de AI Act readiness",
+      "description": "Aprovechar las consultas activas de la Comision para entrar con workshops, gap analysis y hoja de ruta."
+    },
+    {
+      "priority": "Alta",
+      "title": "Evaluar Gemini Managed Agents frente a stacks abiertos",
+      "description": "Comparar velocidad de puesta en marcha, observabilidad, costes y control de datos frente a opciones self-hosted."
+    },
+    {
+      "priority": "Media",
+      "title": "Probar voz y agentes seguros en un caso real",
+      "description": "Montar un piloto de soporte o ventas con GPT-Realtime-2 y politicas estrictas de autenticacion y registros."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-05-20",
+      "title": "Seguimiento post Google I/O 2026",
+      "note": "vigilar disponibilidad real y pricing de Managed Agents y Gemini 3.5 Flash"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "Cierre consulta Articulo 50 AI Act",
+      "note": "fecha limite para feedback sobre transparencia"
+    },
+    {
+      "date": "2026-06-23",
+      "title": "Cierre consulta UE high-risk classification",
+      "note": "nueva ventana sobre clasificacion de sistemas de alto riesgo"
+    },
+    {
+      "date": "2026-06-01",
+      "title": "OpenAI Trusted Access for Cyber",
+      "note": "Advanced Account Security pasa a ser obligatoria para miembros individuales"
+    }
+  ],
+  "sources": [
+    "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+    "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
+    "https://www.anthropic.com/news/anthropic-acquires-stainless?pubDate=20250818",
+    "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/",
+    "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+    "https://openai.com/index/running-codex-safely/",
+    "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/",
+    "https://openai.com/index/advanced-account-security/",
+    "https://docs.mistral.ai/resources/security-advisories",
+    "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+    "https://digital-strategy.ec.europa.eu/en/consultations/targeted-consultation-draft-guidelines-classification-high-risk-artificial-intelligence-systems",
+    "https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/",
+    "https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model",
+    "https://docs.x.ai/developers/migration/may-15-retirement",
+    "https://advisories.gitlab.com/npm/flowise/CVE-2026-41137/"
+  ],
+  "pdfGenerated": false,
+  "pdfError": "browserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium_headless_shell-1217/chrome-headless-shell-linux64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+  "artifacts": {
+    "htmlPath": "/workspace/output/Dashboard_IA_2026-05-20_08-17.html",
+    "jsonPath": "/workspace/output/Dashboard_IA_2026-05-20_08-17.json",
+    "pdfPath": "/workspace/output/Dashboard_IA_2026-05-20_08-17.pdf",
+    "readmePath": "/workspace/output/Dashboard_IA_2026-05-20_08-17_README.md"
+  }
+}
