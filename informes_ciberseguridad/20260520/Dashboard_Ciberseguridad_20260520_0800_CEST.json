@@ -1,0 +1,383 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "edition": "Edicion 08:00",
+  "generated_at": "2026-05-20 08:20:51 CEST",
+  "generated_at_iso": "2026-05-20T08:20:51+02:00",
+  "timezone": "Europe/Madrid",
+  "threat_level": "ALTO",
+  "next_update": "2026-05-20 12:00:00 CEST",
+  "ai_risk_status": "Estimacion IA: presion alta con sesgo al alza en phishing y edge exposure",
+  "methodology_note": "Los KPIs agregan solo hallazgos verificados y priorizados en esta edicion, no el universo total de incidentes globales.",
+  "kpis": [
+    {
+      "label": "Alertas activas priorizadas",
+      "value": "6",
+      "note": "Con evidencia reciente y accionable"
+    },
+    {
+      "label": "Incidentes criticos",
+      "value": "3",
+      "note": "Explotacion activa o abuso operativo confirmado"
+    },
+    {
+      "label": "Vulnerabilidades nuevas priorizadas",
+      "value": "7",
+      "note": "Publicadas o actualizadas en mayo de 2026"
+    },
+    {
+      "label": "CVEs criticas",
+      "value": "5",
+      "note": "CVSS critico o riesgo operativo equivalente"
+    },
+    {
+      "label": "Campanas de phishing destacadas",
+      "value": "3",
+      "note": "AiTM, QR phishing y CAPTCHA-gated"
+    },
+    {
+      "label": "DDoS",
+      "value": "N/D",
+      "note": "Sin evidencia priorizada suficiente en las fuentes consultadas"
+    },
+    {
+      "label": "Riesgo global",
+      "value": "ALTO",
+      "note": "Predominio de edge exposure y robo de credenciales"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Estable-al alza",
+      "note": "Inferencia analitica basada en nuevas publicaciones oficiales"
+    }
+  ],
+  "executive_summary": {
+    "state": "La postura global se mantiene en ALTO por la combinacion de explotacion activa sobre infraestructura perimetral, nuevas debilidades criticas en controladores SD-WAN y Linux, y un entorno de phishing empresarial con volumen creciente.",
+    "top_risks": [
+      "Exposicion de infraestructura Cisco SD-WAN e ISE con impacto directo en acceso administrativo, visibilidad de informacion sensible y control de la red.",
+      "Escalada local en Linux tras compromiso inicial, especialmente en servidores con acceso SSH, aplicaciones expuestas o workloads en contenedores.",
+      "Incremento sostenido de phishing de robo de credenciales, incluyendo AiTM multi-etapa, QR phishing y CAPTCHA falsos para evadir deteccion.",
+      "Riesgo operativo adicional para sitios Drupal ante una ventana oficial de actualizacion altamente critica el 20 de mayo de 2026."
+    ],
+    "sectors": [
+      "Sanidad y ciencias de la vida",
+      "Servicios financieros",
+      "Servicios profesionales",
+      "Tecnologia y software",
+      "Administracion y entornos con Linux expuesto o paneles cPanel"
+    ],
+    "techniques": [
+      "Authentication bypass",
+      "Escalada de privilegios local",
+      "Adversary-in-the-middle (AiTM)",
+      "Abuso de certificados firmados",
+      "Phishing con QR y CAPTCHA"
+    ],
+    "estimated_exposure": "Alta para organizaciones con SD-WAN expuesto, servidores Linux administrables desde internet, paneles cPanel/WHM y usuarios de Microsoft 365 sin endurecimiento anti-phishing.",
+    "primary_recommendation": "Priorizar en las proximas horas el parcheo y hardening de edge devices, kernels Linux y paneles de gestion, seguido de un refuerzo tactico de protecciones anti-phishing y revisiones de logs de autenticacion.",
+    "quick_conclusions": [
+      "Cisco SD-WAN sigue siendo la prioridad tecnica numero uno por criticidad, explotacion limitada confirmada y presencia en KEV.",
+      "Linux entra en la franja de maximo seguimiento por Dirty Frag y Fragnesia como multiplicadores post-compromiso.",
+      "El correo sigue siendo el vector de entrada mas dinamico, con crecimiento muy fuerte de QR phishing y campanas AiTM.",
+      "Drupal merece preparacion inmediata, aunque el detalle tecnico completo aun no es publico; hoy el riesgo es un indicio oficial, no un hecho explotado confirmado."
+    ]
+  },
+  "active_alerts": [
+    {
+      "title": "Cisco Catalyst SD-WAN Controller Authentication Bypass",
+      "status": "Hecho confirmado",
+      "priority": "Critica",
+      "detail": "Cisco actualizo el 14/05/2026 el advisory de CVE-2026-20182 con CVSS 10.0, sin workarounds y con conocimiento de explotacion limitada en mayo.",
+      "action": "Revisar IoCs, preservar admin-tech antes de actualizar y migrar a releases corregidas."
+    },
+    {
+      "title": "Dirty Frag / Fragnesia en Linux",
+      "status": "Hecho confirmado",
+      "priority": "Alta",
+      "detail": "Microsoft mantiene investigacion activa por abuso post-compromiso; hay parches para CVE-2026-43284 y se recomienda aplicar mitigaciones equivalentes tambien a Fragnesia (CVE-2026-46300).",
+      "action": "Parchar kernel, deshabilitar modulos no usados y aumentar vigilancia de elevaciones a root."
+    },
+    {
+      "title": "Phishing multi-etapa con token compromise",
+      "status": "Hecho confirmado",
+      "priority": "Alta",
+      "detail": "Microsoft observo entre el 14 y el 16 de abril una campana contra mas de 35.000 usuarios en mas de 13.000 organizaciones y 26 paises.",
+      "action": "Reforzar MFA resistente a phishing, SmartScreen, network protection y deteccion AiTM."
+    },
+    {
+      "title": "Fox Tempest malware-signing-as-a-service",
+      "status": "Hecho confirmado",
+      "priority": "Alta",
+      "detail": "Microsoft vincula la operacion con afiliados de ransomware y abuso de certificados de vida corta para disfrazar malware como software legitimo.",
+      "action": "Bloquear software no autorizado, revisar reputacion de binarios firmados y endurecer allowlisting."
+    },
+    {
+      "title": "cPanel/WHM authentication bypass",
+      "status": "Hecho confirmado",
+      "priority": "Alta",
+      "detail": "CVE-2026-41940 sigue en KEV con severidad critica y afecta especialmente a hosting y paneles compartidos.",
+      "action": "Actualizar versiones afectadas y revisar accesos de panel administrativo."
+    },
+    {
+      "title": "Preaviso Drupal altamente critico",
+      "status": "Indicio oficial todavia no explotacion confirmada",
+      "priority": "Alta",
+      "detail": "Drupal publico PSA-2026-05-18 para una ventana de release altamente critica el 20/05/2026 entre 17:00 y 21:00 UTC.",
+      "action": "Reservar ventana de actualizacion hoy, validar ramas soportadas y preparar rollout acelerado."
+    }
+  ],
+  "incidents_activity": [
+    {
+      "name": "Code of Conduct AiTM phishing",
+      "type": "Phishing / robo de credenciales",
+      "impact": "Mas de 35.000 usuarios, 13.000 organizaciones, 26 paises; EEUU concentro el 92% de objetivos.",
+      "vector": "Email con lures internos y adjuntos personalizados",
+      "trend": "Alta sofisticacion, sin vertical unico, con fuerte peso en sanidad y finanzas"
+    },
+    {
+      "name": "Fox Tempest",
+      "type": "Malware-signing-as-a-service",
+      "impact": "Apoyo a ransomware y distribucion de binarios firmados en sectores como sanidad, educacion, gobierno y finanzas",
+      "vector": "Certificados legitimos de vida corta y VMs preconfiguradas",
+      "trend": "Operativa sostenida desde al menos mayo de 2025 con evolucion en febrero de 2026"
+    },
+    {
+      "name": "Dirty Frag / Fragnesia",
+      "type": "Post-compromise LPE",
+      "impact": "Aumenta el valor de credenciales o shells ya obtenidos y facilita persistencia y pivoting",
+      "vector": "SSH comprometido, web shell, escape de contenedor o cuentas de bajo privilegio",
+      "trend": "Microsoft reporta actividad limitada en curso y nuevas variantes"
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation": "Limitada confirmada por Cisco; tambien en CISA KEV",
+      "patch": "Si",
+      "priority": "P1 inmediata",
+      "source": "Cisco + NVD/CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-31431",
+      "product": "Linux Kernel",
+      "cvss": "No uniforme; KEV",
+      "severity": "Alta prioridad operativa",
+      "exploitation": "En CISA KEV desde 01/05/2026; exploit publico referenciado",
+      "patch": "Si",
+      "priority": "P1 inmediata en servidores expuestos o con shell local",
+      "source": "NVD + CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-41940",
+      "product": "cPanel, WHM y WP2",
+      "cvss": "9.8",
+      "severity": "Critica",
+      "exploitation": "En CISA KEV desde 30/04/2026",
+      "patch": "Si",
+      "priority": "P1 inmediata",
+      "source": "NVD + CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-20186",
+      "product": "Cisco Identity Services Engine (ISE)",
+      "cvss": "9.9",
+      "severity": "Critica",
+      "exploitation": "No confirmada en la fuente citada",
+      "patch": "Segun advisory del fabricante",
+      "priority": "P1 alta",
+      "source": "NVD + Cisco"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android System / adbd",
+      "cvss": "Critica",
+      "severity": "Critica",
+      "exploitation": "No confirmada en la fuente citada",
+      "patch": "Si, nivel 2026-05-01 o posterior",
+      "priority": "P2 alta en flotas moviles",
+      "source": "Android Security Bulletin"
+    },
+    {
+      "cve": "CVE-2026-20133",
+      "product": "Cisco Catalyst SD-WAN Manager",
+      "cvss": "Alta",
+      "severity": "Alta",
+      "exploitation": "En CISA KEV desde 20/04/2026",
+      "patch": "Si",
+      "priority": "P1 inmediata si hay exposicion API",
+      "source": "NVD + CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-46300",
+      "product": "Linux esp/xfrm module (Fragnesia)",
+      "cvss": "Pendiente",
+      "severity": "Alta prioridad operativa",
+      "exploitation": "Sin explotacion in-the-wild confirmada por Microsoft a 14/05/2026",
+      "patch": "Si",
+      "priority": "P2 alta",
+      "source": "Microsoft Security Blog"
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      "Fox Tempest MSaaS",
+      "Ransomware affiliates vinculados: INC, Qilin, Akira",
+      "Artefactos DirtyFrag/Fragnesia para escalada local"
+    ],
+    "target_sectors": [
+      "Sanidad",
+      "Educacion",
+      "Gobierno",
+      "Finanzas"
+    ],
+    "techniques": [
+      "Firmado fraudulento de malware",
+      "Distribucion de binarios disfrazados de software legitimo",
+      "Elevacion de privilegios local en Linux"
+    ],
+    "iocs_note": "No se incluyen IOCs completos en esta edicion ejecutiva para evitar ruido; revisar los advisories enlazados para hunting tecnico.",
+    "trend": "Presion alta y diversificada",
+    "propagation": "Global, con impacto multiplataforma y apoyo a intrusion inicial y post-explotacion"
+  },
+  "important_news": [
+    {
+      "headline": "Microsoft expone Fox Tempest como servicio de firmado de malware",
+      "type": "Ransomware / supply chain trust abuse",
+      "why_it_matters": "Reduce friccion para entrega de malware firmado y aumenta la tasa de ejecucion en entornos corporativos."
+    },
+    {
+      "headline": "Microsoft confirma campana multi-etapa de phishing con compromiso de token",
+      "type": "Phishing / identidad",
+      "why_it_matters": "Muestra madurez operativa en AiTM y abuso de correos aparentemente internos."
+    },
+    {
+      "headline": "QR phishing sube a 18,7 millones en marzo segun Microsoft",
+      "type": "Tendencia de amenazas",
+      "why_it_matters": "Aumenta la exposicion de usuarios moviles y reduce eficacia de defensas centradas en texto."
+    },
+    {
+      "headline": "Drupal avisa de release altamente critica para hoy",
+      "type": "Preaviso oficial",
+      "why_it_matters": "Las ventanas de seguridad altamente criticas suelen generar weaponization muy rapido."
+    }
+  ],
+  "recommendations": {
+    "critica": [
+      "Parchar inmediatamente Cisco SD-WAN CVE-2026-20182, cPanel CVE-2026-41940 y Linux CVE-2026-31431 donde aplique.",
+      "Preservar logs, auth.log, salidas show control connections y artefactos admin-tech antes de cambios sobre Cisco SD-WAN comprometible.",
+      "Restringir acceso administrativo expuesto a internet en paneles, SD-WAN, SSH y consolas de gestion."
+    ],
+    "alta": [
+      "Aumentar deteccion de AiTM, QR phishing y CAPTCHA falsos en correo, proxy y EDR.",
+      "Revisar entornos Linux por elevaciones sospechosas a root, shells interactivas y cargas ELF no autorizadas.",
+      "Preparar la actualizacion de Drupal durante la ventana oficial del 20/05/2026 si existe exposicion en negocio."
+    ],
+    "media": [
+      "Reforzar allowlisting de software y validacion de binarios firmados procedentes de fuentes no corporativas.",
+      "Auditar MFA y priorizar factores resistentes a phishing para perfiles privilegiados y usuarios de alto riesgo."
+    ],
+    "baja": [
+      "Actualizar playbooks de respuesta para edge devices y robo de tokens.",
+      "Revisar cobertura de telemetria y retencion de logs de red y autenticacion."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo generado por IA",
+    "global_risk_estimate": "ALTO",
+    "next_threats": [
+      "Aceleracion de abuso sobre paneles de gestion y edge devices con PoC disponible",
+      "Incremento de phishing sin adjunto o con QR embebido en cuerpo del mensaje",
+      "Uso creciente de malware firmado y herramientas de acceso remoto para persistencia rapida"
+    ],
+    "most_exposed_sectors": [
+      "Sanidad",
+      "Servicios financieros",
+      "Servicios profesionales",
+      "Empresas con hosting compartido o cPanel"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-31431",
+      "CVE-2026-41940",
+      "CVE-2026-20186"
+    ],
+    "attack_increase_probability": "Alta en las proximas 24-72 horas",
+    "automatic_recommendation": "Mantener ventana acelerada de parcheo y caza de IoCs en edge, correo e identidades privilegiadas."
+  },
+  "sources": [
+    {
+      "name": "Cisco Security Advisory - CVE-2026-20182",
+      "url": "https://www.cisco.com/c/en/us/support/docs/csa/cisco-sa-sdwan-rpa2-v69WY2SW.html",
+      "published": "2026-05-14"
+    },
+    {
+      "name": "NVD - CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+      "published": "2026-05-15"
+    },
+    {
+      "name": "NVD - CVE-2026-31431",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
+      "published": "2026-05-01"
+    },
+    {
+      "name": "NVD - CVE-2026-41940",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41940",
+      "published": "2026-04-29"
+    },
+    {
+      "name": "NVD - CVE-2026-20186",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20186",
+      "published": "2026-04-15"
+    },
+    {
+      "name": "NVD - CVE-2026-20133",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20133",
+      "published": "2026-02-25 / KEV 2026-04-20"
+    },
+    {
+      "name": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "published": "2026-05-04"
+    },
+    {
+      "name": "Microsoft Security Blog - Dirty Frag",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/",
+      "published": "2026-05-08"
+    },
+    {
+      "name": "Microsoft Security Blog - Code of Conduct phishing",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "published": "2026-05-04"
+    },
+    {
+      "name": "Microsoft Security Blog - Fox Tempest",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/",
+      "published": "2026-05-19"
+    },
+    {
+      "name": "Microsoft Security Blog - Email threat landscape Q1 2026",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/30/email-threat-landscape-q1-2026-trends-and-insights/",
+      "published": "2026-04-30"
+    },
+    {
+      "name": "Drupal PSA-2026-05-18",
+      "url": "https://www.drupal.org/psa-2026-05-18",
+      "published": "2026-05-18"
+    },
+    {
+      "name": "INCIBE avisos",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos",
+      "published": "Consultado 2026-05-20"
+    },
+    {
+      "name": "CCN-CERT avisos",
+      "url": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/avisos-ccn-cert.html",
+      "published": "Consultado 2026-05-20"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
