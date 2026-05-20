@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | 2026-05-21 00:19:57 CEST</title>
+  <style>
+:root{
+  --bg:#09111b;
+  --panel:#101c2b;
+  --panel-2:#132235;
+  --ink:#eaf1f8;
+  --muted:#94a6bb;
+  --line:#213548;
+  --good:#2ec27e;
+  --warn:#f5c451;
+  --high:#ff7a59;
+  --critical:#ff4d6d;
+  --accent:#4ecdc4;
+  --accent-2:#67b7ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(78,205,196,.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(103,183,255,.18), transparent 25%),
+    linear-gradient(180deg,#071019,#09111b 35%,#0b1420 100%);
+  color:var(--ink);
+}
+.wrap{max-width:1240px;margin:0 auto;padding:28px 20px 56px}
+.hero{
+  border:1px solid var(--line);
+  background:linear-gradient(135deg,rgba(19,34,53,.95),rgba(9,17,27,.92));
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 20px 50px rgba(0,0,0,.28);
+}
+.brand{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+h1{margin:8px 0 8px;font-size:34px;line-height:1.1}
+.sub{color:var(--muted);font-size:14px}
+.hero-grid,.kpi-grid,.cards,.sources{display:grid;gap:16px}
+.hero-grid{grid-template-columns:2fr 1fr;margin-top:18px}
+.panel{
+  background:rgba(16,28,43,.84);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+}
+.threat{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 14px;border-radius:14px;
+  background:linear-gradient(90deg,rgba(255,77,109,.18),rgba(245,196,81,.12));
+  border:1px solid rgba(255,122,89,.32)
+}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;border-radius:999px;padding:8px 12px;
+  background:rgba(255,77,109,.16);color:#ffd7df;border:1px solid rgba(255,77,109,.35);
+}
+.pill::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--critical);box-shadow:0 0 12px var(--critical)}
+.kpi-grid{grid-template-columns:repeat(5,minmax(0,1fr));margin:20px 0}
+.kpi{
+  background:linear-gradient(180deg,rgba(16,28,43,.95),rgba(11,20,32,.95));
+  border:1px solid var(--line);
+  border-radius:14px;padding:16px;min-height:112px
+}
+.kpi .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.kpi .value{font-size:30px;font-weight:800;margin:10px 0 6px}
+.section-title{margin:28px 0 14px;font-size:20px}
+.cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.alert{position:relative;overflow:hidden}
+.alert::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:3px;
+  background:linear-gradient(90deg,var(--critical),var(--high),var(--accent))
+}
+.status{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.priority-critical{color:#ffd4da}
+.priority-high{color:#ffd9c9}
+table{
+  width:100%;border-collapse:collapse;font-size:14px;overflow:hidden;
+  border:1px solid var(--line);border-radius:14px;background:rgba(16,28,43,.86)
+}
+th,td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;background:rgba(19,34,53,.98)}
+tr:last-child td{border-bottom:none}
+ul{margin:10px 0 0 18px;padding:0}
+li{margin:0 0 8px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700}
+.b-critical{background:rgba(255,77,109,.18);color:#ffd4da}
+.b-high{background:rgba(255,122,89,.15);color:#ffd9c9}
+.b-medium{background:rgba(245,196,81,.16);color:#ffeab4}
+.foot{
+  margin-top:24px;color:var(--muted);font-size:12px;line-height:1.5;
+  border-top:1px solid var(--line);padding-top:16px
+}
+a{color:#8fdcff}
+.sources{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:980px){
+  .hero-grid,.cards,.sources{grid-template-columns:1fr}
+  .kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  h1{font-size:28px}
+  .kpi-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="brand">MMarco Seguridad</div>
+      <h1>Informe Ejecutivo de Ciberseguridad</h1>
+      <div class="sub">Edición nocturna · 2026-05-21 00:19:57 CEST · Zona horaria Europe/Madrid</div>
+      <div class="hero-grid">
+        <div class="panel">
+          <div class="threat">
+            <div>
+              <div class="status">Nivel global de amenaza</div>
+              <div class="pill">ALTO</div>
+            </div>
+            <div>
+              <div class="status">Estado IA de riesgo</div>
+              <strong>Elevado en superficie expuesta a Internet</strong>
+            </div>
+          </div>
+          <p style="margin-top:16px">La ventana nocturna deja un nivel global de amenaza ALTO por la coincidencia de varias vulnerabilidades críticas o activamente explotadas en perímetro, correo y CMS.</p>
+          <ul><li>Exposición inmediata de portales Drupal con PostgreSQL por la publicación del aviso SA-CORE-2026-004 (CVE-2026-9082).</li><li>Riesgo sostenido en appliances y plano de control expuestos a Internet: Cisco SD-WAN, PAN-OS e Ivanti EPMM.</li><li>Persistencia del riesgo en correo corporativo on-prem por Microsoft Exchange CVE-2026-42897 ya incorporada a KEV.</li></ul>
+        </div>
+        <div class="panel">
+          <div class="status">Próxima actualización</div>
+          <p><strong>2026-05-21 08:00 CEST</strong></p>
+          <div class="status">Exposición estimada</div>
+          <p>Alta para organizaciones con servicios de perímetro, correo on-prem o CMS expuestos sin revisión urgente de parches y segmentación.</p>
+          <div class="status">Recomendación ejecutiva principal</div>
+          <p>Priorizar en las próximas horas un barrido de exposición externa, aplicar los parches críticos ya disponibles y restringir inmediatamente cualquier interfaz administrativa o portal de autenticación accesible desde Internet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi"><div class="label">Incidentes activos</div><div class="value">2</div><div class="sub">visibilidad reciente consolidada</div></div>
+      <div class="kpi"><div class="label">Incidentes críticos</div><div class="value">1</div><div class="sub">impacto elevado o sistémico</div></div>
+      <div class="kpi"><div class="label">Vulns priorizadas</div><div class="value">6</div><div class="sub">foco de esta edición</div></div>
+      <div class="kpi"><div class="label">CVEs críticas o KEV</div><div class="value">5</div><div class="sub">prioridad de mitigación inmediata</div></div>
+      <div class="kpi"><div class="label">Tendencia 24h</div><div class="value" style="font-size:22px">AL ALZA</div><div class="sub">Empeoramiento puntual por nuevo Drupal core altamente crítico y continuidad de KEV recientes</div></div>
+    </section>
+
+    <h2 class="section-title">Resumen ejecutivo</h2>
+    <div class="cards">
+      <div class="panel">
+        <div class="status">Sectores más afectados</div>
+        <ul><li>Administración y servicios digitales</li><li>Industria y entornos OT/ICS</li><li>Educación y plataformas SaaS</li><li>Empresas con infraestructura perimetral propia</li></ul>
+      </div>
+      <div class="panel">
+        <div class="status">Técnicas más observadas</div>
+        <ul><li>Omisión de autenticación</li><li>Inyección SQL</li><li>RCE en servicios expuestos</li><li>Explotación de vulnerabilidades conocidas</li></ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">Alertas activas</h2>
+    <div class="cards">
+      
+            <article class="panel alert">
+              <div class="status">Hecho confirmado · Crítica</div>
+              <h3>Drupal core SA-CORE-2026-004 / CVE-2026-9082</h3>
+              <p class="priority-critical">Drupal publicó el 20/05/2026 una vulnerabilidad de inyección SQL altamente crítica explotable por usuarios anónimos en sitios con PostgreSQL. Puede derivar en divulgación de información y, en algunos casos, escalada, RCE u otros ataques.</p>
+              <p><strong>Impacto para España:</strong> Riesgo directo para portales corporativos, institucionales y de servicios con Drupal expuestos a Internet en España.</p>
+              <p><a href="https://www.drupal.org/security/core">Fuente</a></p>
+            </article>
+            
+            <article class="panel alert">
+              <div class="status">Hecho confirmado · Crítica</div>
+              <h3>Cisco SD-WAN CVE-2026-20182</h3>
+              <p class="priority-critical">Cisco confirmó una vulnerabilidad de autenticación en Catalyst SD-WAN Controller/Manager que permite a un atacante remoto no autenticado obtener privilegios administrativos. NVD la refleja como publicada el 14/05/2026 y Cisco la calificó con CVSS 10.0.</p>
+              <p><strong>Impacto para España:</strong> Impacta a organizaciones con backbone WAN propio, filiales y sedes distribuidas.</p>
+              <p><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW">Fuente</a></p>
+            </article>
+            
+            <article class="panel alert">
+              <div class="status">Hecho confirmado · Crítica</div>
+              <h3>PAN-OS CVE-2026-0300</h3>
+              <p class="priority-critical">Palo Alto Networks reporta explotación en curso de una vulnerabilidad de desbordamiento en User-ID Authentication Portal que puede permitir ejecución de código como root si el portal está expuesto. CISA la incluyó en KEV.</p>
+              <p><strong>Impacto para España:</strong> Muy relevante para empresas medianas y grandes que exponen portales de autenticación o cortafuegos de acceso remoto.</p>
+              <p><a href="https://security.paloaltonetworks.com/CVE-2026-0300">Fuente</a></p>
+            </article>
+            
+            <article class="panel alert">
+              <div class="status">Hecho confirmado · Alta</div>
+              <h3>Microsoft Exchange CVE-2026-42897</h3>
+              <p class="priority-high">NVD muestra que CVE-2026-42897 fue publicada el 14/05/2026 y añadida a KEV el 15/05/2026. Afecta a Exchange Server on-prem y mantiene prioridad ejecutiva por tratarse de infraestructura de correo corporativo.</p>
+              <p><strong>Impacto para España:</strong> Las organizaciones españolas que aún dependen de Exchange on-prem siguen en zona de riesgo elevado por exposición externa y phishing oportunista asociado.</p>
+              <p><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42897">Fuente</a></p>
+            </article>
+            
+            <article class="panel alert">
+              <div class="status">Hecho confirmado · Alta</div>
+              <h3>Ivanti EPMM CVE-2026-6973</h3>
+              <p class="priority-high">NVD y INCIBE reflejan que CVE-2026-6973 está siendo explotada. Requiere autenticación administrativa, pero el riesgo aumenta si no se rotaron credenciales tras vulnerabilidades previas de enero.</p>
+              <p><strong>Impacto para España:</strong> Relevante para movilidad corporativa, BYOD y gestión de terminales en organizaciones reguladas.</p>
+              <p><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-ivanti-endpoint-manager-mobile-epmm">Fuente</a></p>
+            </article>
+            
+    </div>
+
+    <h2 class="section-title">Vulnerabilidades críticas priorizadas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>CVE</th>
+          <th>Producto afectado</th>
+          <th>CVSS</th>
+          <th>Severidad</th>
+          <th>Estado de explotación</th>
+          <th>Parche</th>
+          <th>Prioridad</th>
+          <th>Fuente</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+            <tr>
+              <td><strong>CVE-2026-9082</strong></td>
+              <td>Drupal core con PostgreSQL</td>
+              <td>Riesgo Drupal: Highly critical 20/25</td>
+              <td><span class="badge b-critical">Muy crítica</span></td>
+              <td>Sin explotación pública confirmada en la fuente, pero ventana de desarrollo de exploit muy probable</td>
+              <td>Sí, versiones de seguridad publicadas el 20/05/2026</td>
+              <td>Inmediata</td>
+              <td><a href="https://www.drupal.org/security/core">Referencia</a></td>
+            </tr>
+            
+            <tr>
+              <td><strong>CVE-2026-20182</strong></td>
+              <td>Cisco Catalyst SD-WAN Controller / Manager</td>
+              <td>10.0</td>
+              <td><span class="badge b-critical">Crítica</span></td>
+              <td>Exposición altamente prioritaria; Cisco incluye guías de comprobación e IoC</td>
+              <td>Sí</td>
+              <td>Inmediata</td>
+              <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20182">Referencia</a></td>
+            </tr>
+            
+            <tr>
+              <td><strong>CVE-2026-0300</strong></td>
+              <td>Palo Alto PAN-OS User-ID Authentication Portal</td>
+              <td>9.3</td>
+              <td><span class="badge b-critical">Crítica</span></td>
+              <td>Atacada / incluida en KEV</td>
+              <td>Parches disponibles o anunciados por rama; workaround claro</td>
+              <td>Inmediata</td>
+              <td><a href="https://security.paloaltonetworks.com/CVE-2026-0300">Referencia</a></td>
+            </tr>
+            
+            <tr>
+              <td><strong>CVE-2026-42897</strong></td>
+              <td>Microsoft Exchange Server</td>
+              <td>8.1 CNA Microsoft; 6.1 NVD</td>
+              <td><span class="badge b-high">Alta</span></td>
+              <td>Incluida en KEV el 15/05/2026</td>
+              <td>Mitigaciones del fabricante</td>
+              <td>Muy alta</td>
+              <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42897">Referencia</a></td>
+            </tr>
+            
+            <tr>
+              <td><strong>CVE-2026-6973</strong></td>
+              <td>Ivanti Endpoint Manager Mobile</td>
+              <td>7.2</td>
+              <td><span class="badge b-high">Alta</span></td>
+              <td>Explotación confirmada; requiere acceso admin</td>
+              <td>Sí, actualizar a 12.6.1.1 / 12.7.0.1 / 12.8.0.1 o superior</td>
+              <td>Muy alta</td>
+              <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6973">Referencia</a></td>
+            </tr>
+            
+            <tr>
+              <td><strong>CVE-2026-27654</strong></td>
+              <td>NGINX Open Source / NGINX Plus</td>
+              <td>NVD: impacto en disponibilidad e integridad</td>
+              <td><span class="badge b-high">Media-alta</span></td>
+              <td>No confirmada en la fuente consultada</td>
+              <td>Sí, corregido en 1.29.7+ y 1.28.3+</td>
+              <td>Alta si se usa DAV/MOVE/COPY/alias</td>
+              <td><a href="https://nginx.org/en/security_advisories.html">Referencia</a></td>
+            </tr>
+            
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Riesgos prioritarios para empresas españolas</h2>
+    <div class="panel">
+      <ul><li>Perímetro expuesto con PAN-OS, Cisco SD-WAN o portales de autenticación accesibles desde Internet.</li><li>Correo corporativo on-prem basado en Exchange con exposición externa o acceso OWA heredado.</li><li>Portales públicos y sedes electrónicas que utilicen Drupal con PostgreSQL.</li><li>Entornos industriales, utilities y fabricantes con presencia Siemens o activos OT difíciles de parchear.</li><li>Pymes que dependen de MSPs o integradores y no aplican revisiones de exposición nocturna.</li></ul>
+    </div>
+
+    <h2 class="section-title">Noticias relevantes</h2>
+    <div class="cards">
+      <div class="panel"><div class="status">2026-05-19 · Hecho confirmado</div><h3>Incidente de ciberseguridad en Instructure con impacto en la plataforma Canvas</h3><p>INCIBE-CERT destacó el incidente como referencia reciente para el sector educativo y SaaS.</p><p><a href="https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights">Fuente</a></p></div><div class="panel"><div class="status">2026-05-12 · Hecho confirmado</div><h3>Avisos de seguridad de Siemens de mayo de 2026</h3><p>INCIBE-CERT y Siemens publicaron múltiples avisos críticos para productos OT/ICS, con impacto potencial en industria y energía.</p><p><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci">Fuente</a></p></div>
+    </div>
+
+    <h2 class="section-title">Recomendaciones ejecutivas</h2>
+    <div class="cards">
+      <div class="panel"><span class="badge b-critical">Crítica</span><ul><li>Revisar esta misma noche exposición externa de Drupal, PAN-OS, Cisco SD-WAN, Exchange e Ivanti EPMM.</li><li>Aplicar o programar de urgencia los parches ya disponibles y activar mitigaciones de fabricante donde no exista parche inmediato.</li><li>Restringir por ACL/VPN/segmentación cualquier portal administrativo o de autenticación aún accesible desde Internet.</li></ul></div>
+      <div class="panel"><span class="badge b-high">Alta</span><ul><li>Correlacionar logs de autenticación, administración y cambios de configuración en firewalls, controladores WAN y plataformas MDM.</li><li>Buscar indicios de acceso anómalo en Exchange, PAN-OS, Cisco SD-WAN y EPMM desde el 7 al 20 de mayo de 2026.</li></ul></div>
+      <div class="panel"><span class="badge b-medium">Media</span><ul><li>Verificar inventario de CMS y bases de datos asociados para detectar instalaciones Drupal con PostgreSQL no identificadas.</li><li>Actualizar playbooks de crisis para explotación de perímetro y compromiso de correo corporativo.</li></ul></div>
+      <div class="panel"><span class="badge b-medium">Baja</span><ul><li>Preparar comunicación preventiva a negocio y TI sobre ventana de riesgo elevada en servicios expuestos.</li></ul></div>
+    </div>
+
+    <h2 class="section-title">Sección IA</h2>
+    <div class="panel">
+      <div class="status">Análisis predictivo o estimativo</div>
+      <p><strong>Riesgo global estimado:</strong> Alto</p>
+      <p><strong>Probabilidad de aumento de ataques:</strong> Alta en las próximas 24-72 horas</p>
+      <p><strong>Sectores más expuestos:</strong> Administración digital, Industria, Educación, Servicios profesionales con infraestructura propia</p>
+      <p><strong>Vulnerabilidades prioritarias:</strong> CVE-2026-9082, CVE-2026-20182, CVE-2026-0300, CVE-2026-42897</p>
+      <ul><li>Aparición rápida de PoC o intentos de explotación automatizada sobre Drupal SA-CORE-2026-004.</li><li>Aumento de barridos sobre portales de autenticación y servicios de administración expuestos.</li></ul>
+      <p><strong>Recomendación automática:</strong> Elevar temporalmente el nivel de vigilancia SOC, reforzar monitorización de accesos administrativos y validar capacidad de rollback y parcheo urgente.</p>
+    </div>
+
+    <h2 class="section-title">Fuentes</h2>
+    <div class="sources"><div class="panel"><strong>Drupal security advisories for Drupal core</strong><br><a href="https://www.drupal.org/security/core">https://www.drupal.org/security/core</a></div><div class="panel"><strong>Cisco Security Advisory CVE-2026-20182</strong><br><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW</a></div><div class="panel"><strong>NVD CVE-2026-20182</strong><br><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20182">https://nvd.nist.gov/vuln/detail/CVE-2026-20182</a></div><div class="panel"><strong>Palo Alto Networks CVE-2026-0300</strong><br><a href="https://security.paloaltonetworks.com/CVE-2026-0300">https://security.paloaltonetworks.com/CVE-2026-0300</a></div><div class="panel"><strong>NVD CVE-2026-0300</strong><br><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0300">https://nvd.nist.gov/vuln/detail/CVE-2026-0300</a></div><div class="panel"><strong>NVD CVE-2026-42897</strong><br><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42897">https://nvd.nist.gov/vuln/detail/CVE-2026-42897</a></div><div class="panel"><strong>NVD CVE-2026-6973</strong><br><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-6973">https://nvd.nist.gov/vuln/detail/CVE-2026-6973</a></div><div class="panel"><strong>INCIBE Ivanti EPMM</strong><br><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-ivanti-endpoint-manager-mobile-epmm">https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-ivanti-endpoint-manager-mobile-epmm</a></div><div class="panel"><strong>INCIBE avisos</strong><br><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos">https://www.incibe.es/incibe-cert/alerta-temprana/avisos</a></div><div class="panel"><strong>INCIBE avisos SCI</strong><br><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci">https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci</a></div><div class="panel"><strong>INCIBE Cybersecurity Highlights</strong><br><a href="https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights">https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights</a></div><div class="panel"><strong>NGINX security advisories</strong><br><a href="https://nginx.org/en/security_advisories.html">https://nginx.org/en/security_advisories.html</a></div></div>
+
+    <div class="foot">
+      <p><strong>Limitaciones:</strong></p>
+      <ul><li>No se ha consolidado en esta edición una cifra fiable de campañas de phishing, DDoS o ransomware específicamente de las últimas horas con fuente oficial homogénea.</li><li>La sección IA contiene estimaciones y no debe interpretarse como hecho confirmado.</li><li>El PDF y las imágenes por página se omiten para no declarar artefactos externos no verificados.</li></ul>
+      <p>Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.</p>
+    </div>
+  </div>
+</body>
+</html>
