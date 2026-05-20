@@ -1,0 +1,143 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "generated_at": "20/05/2026 20:13 CEST",
+  "timezone": "Europe/Madrid",
+  "next_update": "21/05/2026 00:00 CEST",
+  "global_threat_level": "ALTO",
+  "ai_risk_state": {
+    "label": "Elevado",
+    "type": "estimacion_ia",
+    "note": "Se estima continuidad de explotacion oportunista sobre perimetro, correo corporativo y plataformas de administracion."
+  },
+  "scope_note": "KPIs calculados sobre la muestra oficial priorizada de esta edicion y la ventana reciente analizada; no representan el total global de incidentes de Internet.",
+  "kpis": [
+    {"label": "Incidentes activos", "value": "4", "note": "Alertas con explotacion activa o muy limitada confirmada"},
+    {"label": "Incidentes criticos", "value": "3", "note": "Cisco SD-WAN, Microsoft Exchange y PAN-OS"},
+    {"label": "Vulnerabilidades nuevas", "value": "7", "note": "Alertas prioritarias incorporadas a esta edicion"},
+    {"label": "CVEs criticas", "value": "4", "note": "CVSS 9.0 o superior en la muestra"},
+    {"label": "Malware detectado", "value": "4", "note": "Rhysida, Qilin, INC y Akira en inteligencia reciente"},
+    {"label": "Campanas de phishing", "value": "2", "note": "QR phishing y abuso de buscadores/anuncios"},
+    {"label": "Ataques DDoS", "value": "N/D", "note": "Sin evidencia prioritaria nueva en fuentes oficiales revisadas"},
+    {"label": "Ransomware reportado", "value": "4", "note": "Familias observadas en inteligencia reciente"},
+    {"label": "Paises mas afectados", "value": "EE. UU., Francia, India, China", "note": "Referencias explicitas en campanas recientes"},
+    {"label": "Nivel de riesgo global", "value": "ALTO", "note": "Especialmente en edge, correo y gestion MDM"},
+    {"label": "Tendencia 24h", "value": "Ascendente", "note": "Mas boletines criticos y explotacion activa sostenida"}
+  ],
+  "executive_summary": {
+    "global_state": "La ciberamenaza permanece en nivel alto por la combinacion de vulnerabilidades criticas explotadas o explotables en servicios de perimetro, correo corporativo, administracion de dispositivos y plataformas web expuestas.",
+    "main_risks": [
+      "Compromiso remoto o evasiones de autenticacion en infraestructura de borde y administracion.",
+      "Explotacion oportunista de Microsoft Exchange y plataformas PAN-OS e Ivanti expuestas a Internet.",
+      "Campanas de phishing apoyadas en QR phishing, abuso de resultados de busqueda y automatizacion con IA."
+    ],
+    "affected_sectors": [
+      "Servicios gestionados y pymes con perimetro expuesto",
+      "Finanzas, retail, legal y energia",
+      "Industria y entornos OT con equipamiento Siemens"
+    ],
+    "techniques": [
+      "Bypass de autenticacion",
+      "Ejecucion remota de codigo",
+      "Spoofing y XSS",
+      "QR phishing",
+      "Robo de credenciales y despliegue de ransomware"
+    ],
+    "estimated_exposure": "Alta para organizaciones con Cisco SD-WAN, Exchange on-prem, PAN-OS, Ivanti EPMM, Drupal expuesto y activos OT sin gestion rapida de parches.",
+    "primary_recommendation": "Activar un ciclo de mitigacion urgente de 24 horas sobre activos expuestos, priorizando actualizaciones, verificaciones de exposicion externa y endurecimiento de autenticacion administrativa.",
+    "quick_conclusions": [
+      "La prioridad operativa sigue en edge y correo corporativo.",
+      "Las ventanas de parcheo deben medirse en horas, no en dias, para los activos expuestos.",
+      "La combinacion de phishing y ransomware mantiene riesgo alto de impacto operativo y reputacional.",
+      "Entornos OT/ICS requieren validacion especifica por el boletin de Siemens."
+    ]
+  },
+  "incidents": [
+    {"name": "Cisco SD-WAN vManage", "status": "Hecho confirmado", "summary": "Cisco confirmo explotacion limitada de CVE-2026-20182 con CVSS 10.0 y actualizaciones disponibles.", "impact": "Compromiso de la plataforma de gestion SD-WAN y riesgo elevado para perimetro administrado.", "vector": "Bypass de autenticacion / RPA"},
+    {"name": "Microsoft Exchange Server", "status": "Hecho confirmado", "summary": "Microsoft indico explotacion activa de CVE-2026-42897 y recomendo aplicar el SU de mayo de 2026 y mitigaciones.", "impact": "Riesgo directo para correo corporativo, acceso a credenciales y continuidad del servicio.", "vector": "Spoofing / XSS en Exchange"},
+    {"name": "Ivanti EPMM", "status": "Hecho confirmado", "summary": "Ivanti comunico explotacion muy limitada de CVE-2026-6973 en despliegues on-prem.", "impact": "Exposicion de plataformas de gestion de dispositivos y acceso administrativo.", "vector": "RCE / autenticacion y administracion"},
+    {"name": "Fox Tempest", "status": "Hecho confirmado", "summary": "Unit 42 relaciono QR phishing con robo de credenciales y despliegue posterior de ransomware.", "impact": "Riesgo alto para finanzas, retail, energia y servicios profesionales.", "vector": "QR phishing -> robo de credenciales -> ransomware"}
+  ],
+  "critical_vulnerabilities": [
+    {"cve": "CVE-2026-20182", "product": "Cisco SD-WAN vManage", "cvss": "10.0", "severity": "Critica", "exploitation": "Explotacion limitada confirmada; KEV", "patch": "Si", "priority": "Critica - inmediata", "source": "Cisco / NVD"},
+    {"cve": "CVE-2026-42897", "product": "Microsoft Exchange Server", "cvss": "9.0", "severity": "Critica", "exploitation": "Explotacion activa confirmada por Microsoft", "patch": "Si", "priority": "Critica - inmediata", "source": "Microsoft / NVD"},
+    {"cve": "CVE-2026-6973", "product": "Ivanti EPMM", "cvss": "9.8", "severity": "Critica", "exploitation": "Explotacion muy limitada confirmada", "patch": "Si", "priority": "Alta - 24h", "source": "Ivanti"},
+    {"cve": "CVE-2026-0300", "product": "Palo Alto PAN-OS", "cvss": "9.8", "severity": "Critica", "exploitation": "Explotacion activa confirmada", "patch": "Si", "priority": "Critica - inmediata", "source": "Palo Alto Networks"},
+    {"cve": "SA-CORE-2026-002", "product": "Drupal Core", "cvss": "N/D publico", "severity": "Alta / critica", "exploitation": "Sin confirmacion publica de explotacion", "patch": "Si", "priority": "Alta - 24h", "source": "Drupal"}
+  ],
+  "malware_ransomware": {
+    "families": ["Rhysida", "Qilin", "INC", "Akira"],
+    "target_sectors": ["Finanzas", "Retail", "Legal", "Energia", "MSPs y pymes"],
+    "techniques": ["QR phishing", "Robo de credenciales", "Acceso inicial con credenciales validas", "Cifrado y extorsion"],
+    "iocs_note": "No se incluyen IOCs en esta edicion por no disponer de indicadores oficiales suficientemente estabilizados en las fuentes revisadas.",
+    "trend": "Sostenida al alza",
+    "propagation": "Media-alta"
+  },
+  "important_news": [
+    {"headline": "Drupal publico una release de seguridad altamente critica el 20 de mayo de 2026", "classification": "Hecho confirmado", "relevance": "Riesgo para portales expuestos y servicios publicos con Drupal no actualizado."},
+    {"headline": "Google reforzo defensas frente a estafas y reporto mas de 15.000 millones de correos no deseados detectados al dia", "classification": "Hecho confirmado", "relevance": "Confirma escala industrial del fraude y del phishing asistido por automatizacion."},
+    {"headline": "INCIBE SCI destaco 22 vulnerabilidades en productos Siemens durante mayo de 2026", "classification": "Hecho confirmado", "relevance": "Eleva prioridad de revision en entornos industriales y de infraestructura critica."}
+  ],
+  "active_alerts": [
+    "Aplicar de inmediato actualizaciones o mitigaciones para Cisco SD-WAN vManage, Exchange, PAN-OS e Ivanti EPMM expuestos.",
+    "Revisar portales Drupal publicados a Internet y confirmar actualizacion del paquete de seguridad del 20/05/2026.",
+    "Reforzar filtros y concienciacion frente a QR phishing y fraude en buscadores; elevar vigilancia sobre MFA fatigue y robo de credenciales.",
+    "Validar activos OT/ICS Siemens y coordinar con operaciones industriales la revision del boletin resumido por INCIBE."
+  ],
+  "recommendations": {
+    "critica": [
+      "Inventariar activos expuestos y cerrar en menos de 24 horas la brecha de parcheo de Cisco SD-WAN, Exchange, PAN-OS e Ivanti EPMM.",
+      "Correlacionar logs de autenticacion administrativa, VPN, correo y MDM para identificar accesos anomalos de las ultimas 72 horas."
+    ],
+    "alta": [
+      "Comprobar la publicacion del parche de Drupal en todos los entornos Internet-facing y ejecutar escaneo de integridad post-parcheo.",
+      "Aumentar monitorizacion de campanas QR phishing y endurecer controles de correo, web proxy y MFA."
+    ],
+    "media": [
+      "Revisar dependencias OT/ICS afectadas por Siemens y planificar mitigaciones coordinadas con negocio.",
+      "Actualizar playbooks de respuesta a ransomware con foco en robo de credenciales y accesos validos."
+    ],
+    "baja": [
+      "Refrescar reporting semanal ejecutivo con indicadores de cobertura de parcheo y telemetria de phishing."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo",
+    "global_risk_estimate": "Alto",
+    "threat_prediction": "Probable continuidad de intentos de explotacion contra perimetro y servicios corporativos expuestos durante las proximas 24-72 horas.",
+    "most_exposed_sectors": ["Pymes digitalizadas", "MSPs", "Finanzas", "Retail", "Industria"],
+    "priority_vulnerabilities": ["CVE-2026-20182", "CVE-2026-42897", "CVE-2026-6973", "CVE-2026-0300"],
+    "attack_increase_probability": "Alta",
+    "automatic_recommendation": "Mantener vigilancia reforzada en edge, correo, MDM y autenticacion; acelerar cierre de exposicion externa y caza de actividad anomala."
+  },
+  "delivery_status": {
+    "report_generated": "Completado",
+    "github_history": "Completado",
+    "gmail_html": "Pendiente de envio en el momento de publicacion",
+    "pdf": "No disponible",
+    "page_images": "No disponibles",
+    "google_drive": "Omitido",
+    "limitations": [
+      "No se genera PDF en esta edicion para no declarar un artefacto sin persistencia externa verificable.",
+      "Los KPIs globales se limitan a la muestra verificada de fuentes oficiales priorizadas."
+    ]
+  },
+  "historical_urls": {
+    "repo_tree": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260520",
+    "html": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260520/Dashboard_Ciberseguridad_20260520_2000_CEST.html",
+    "json": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260520/Dashboard_Ciberseguridad_20260520_2000_CEST.json"
+  },
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico.",
+  "sources": [
+    {"title": "Cisco Security Advisory: SD-WAN vManage RPA bypass", "url": "https://www.cisco.com/c/en/us/support/docs/csa/cisco-sa-sdwan-rpa2-v69WY2SW.html", "type": "vendor", "key_point": "Cisco confirmo CVSS 10.0, explotacion limitada observada y disponibilidad de actualizaciones."},
+    {"title": "NVD: CVE-2026-20182", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182", "type": "nvd", "key_point": "NVD refleja CVSS 10.0 y pertenencia al catalogo KEV de CISA."},
+    {"title": "Microsoft Exchange Server vulnerability CVE-2026-42897", "url": "https://techcommunity.microsoft.com/blog/exchange/addressing-exchange-server-may-2026-vulnerability-cve-2026-42897/4518498/replies/4519822", "type": "vendor", "key_point": "Microsoft comunico explotacion activa de CVE-2026-42897 y pidio aplicar mitigaciones y el SU de mayo de 2026."},
+    {"title": "NVD: CVE-2026-42897", "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897", "type": "nvd", "key_point": "NVD clasifica la vulnerabilidad de Exchange con CVSS critico y explotacion conocida."},
+    {"title": "Ivanti EPMM CVE-2026-6973 advisory", "url": "https://www.ivanti.com/blog/security-update-cve-2026-6973", "type": "vendor", "key_point": "Ivanti confirmo explotacion muy limitada en entornos on-prem y publico actualizacion."},
+    {"title": "Palo Alto Networks: PAN-OS CVE-2026-0300", "url": "https://security.paloaltonetworks.com/CVE-2026-0300", "type": "vendor", "key_point": "Palo Alto confirmo explotacion activa y disponibilidad de hotfixes para PAN-OS."},
+    {"title": "Drupal security release 20 May 2026", "url": "https://www.drupal.org/sa-core-2026-002", "type": "vendor", "key_point": "Drupal publico una version de seguridad altamente critica con ventana de exposicion inmediata para instalaciones no actualizadas."},
+    {"title": "INCIBE: 22 vulnerabilidades criticas en Siemens", "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/22-vulnerabilidades-en-productos-siemens", "type": "official", "key_point": "INCIBE SCI resumio 22 vulnerabilidades en productos Siemens, varias criticas y relevantes para entornos OT/ICS."},
+    {"title": "Google: New ways we're using AI to fight scams", "url": "https://blog.google/innovation-and-ai/technology/safety-security/scams-fraud-protection/", "type": "vendor", "key_point": "Google reporto bloqueo de cientos de millones de resultados fraudulentos y deteccion diaria de mas de 15.000 millones de correos no deseados."},
+    {"title": "Palo Alto Unit 42: Fox Tempest drives QR phishing and ransomware", "url": "https://unit42.paloaltonetworks.com/fox-tempest-ransomware-qr-phishing/", "type": "vendor", "key_point": "Unit 42 vinculo a Fox Tempest con QR phishing y ransomware sobre sectores de finanzas, retail, legal y energia."}
+  ]
+}
