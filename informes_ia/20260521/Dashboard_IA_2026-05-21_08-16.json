@@ -1,0 +1,346 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo Premium de Inteligencia Artificial · Corte 08:00",
+    "generated_at_iso": "2026-05-21T08:16:14+02:00",
+    "generated_at_text": "21 mayo 2026 · 08:16:14 CEST",
+    "timezone": "Europe/Madrid",
+    "impact_level": "Alto",
+    "ecosystem_status": "Aceleracion agentic con tension creciente en seguridad y cumplimiento",
+    "next_update": "Proxima ejecucion programada del radar (hora no expuesta en esta ejecucion)",
+    "corporate_profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+    "window_label": "Ventana reciente priorizada hasta las 08:16 CEST del 21 de mayo de 2026"
+  },
+  "kpis": [
+    {
+      "label": "Senales confirmadas",
+      "value": "14",
+      "note": "hechos contrastados con fuente primaria"
+    },
+    {
+      "label": "Alertas criticas",
+      "value": "3",
+      "note": "prompt injection, RCE y exposicion MCP"
+    },
+    {
+      "label": "Lanzamientos / modelos",
+      "value": "4",
+      "note": "presion competitiva y nuevas capacidades"
+    },
+    {
+      "label": "Hitos regulatorios",
+      "value": "1",
+      "note": "AI Act rumbo a agosto 2026"
+    }
+  ],
+  "executive_summary": [
+    "El ecosistema de IA amanece en fase de aceleracion agentic. Google con I/O 2026 y OpenAI con Deployment Company refuerzan que la ventaja competitiva ya no se juega solo en el modelo, sino en agentes capaces de actuar con tooling, sandbox y despliegue operativo real.",
+    "El mayor riesgo inmediato sigue en seguridad de agentes. Microsoft documenta un salto muy serio desde prompt injection hasta RCE en Semantic Kernel y observa MCP expuestos sin autenticacion, lo que convierte la gobernanza de herramientas y permisos en prioridad critica.",
+    "Para MMarco Seguridad, la mejor lectura ejecutiva es clara: hay oportunidad comercial fuerte en hardening de agentes, compliance AI Act y despliegues soberanos/open con Mistral 3, pero cualquier propuesta debe nacer con identidad reforzada, aprobaciones y trazabilidad."
+  ],
+  "activity_series": [
+    {
+      "date": "2026-04-30",
+      "count": 1
+    },
+    {
+      "date": "2026-05-06",
+      "count": 1
+    },
+    {
+      "date": "2026-05-07",
+      "count": 2
+    },
+    {
+      "date": "2026-05-08",
+      "count": 1
+    },
+    {
+      "date": "2026-05-11",
+      "count": 1
+    },
+    {
+      "date": "2026-05-14",
+      "count": 2
+    },
+    {
+      "date": "2026-05-15",
+      "count": 1
+    },
+    {
+      "date": "2026-05-18",
+      "count": 1
+    },
+    {
+      "date": "2026-05-19",
+      "count": 2
+    },
+    {
+      "date": "2026-05-20",
+      "count": 2
+    }
+  ],
+  "global_map": [
+    {
+      "region": "EE. UU.",
+      "focus": "Google, OpenAI, Anthropic, Microsoft, xAI, Perplexity",
+      "signal": "Maxima actividad en agentes, despliegue y seguridad"
+    },
+    {
+      "region": "Europa",
+      "focus": "Mistral + AI Act",
+      "signal": "Ventana abierta para propuestas soberanas y cumplimiento"
+    },
+    {
+      "region": "Enterprise global",
+      "focus": "KPMG, despliegues agentic, MCP",
+      "signal": "La adopcion sube, pero con deuda de gobernanza"
+    }
+  ],
+  "items": [
+    {
+      "title": "Google entra en modo ofensiva agentic en I/O 2026",
+      "category": "Lanzamiento",
+      "date": "2026-05-20",
+      "impact": "Critica",
+      "status": "Confirmado",
+      "source": "Google Blog",
+      "source_url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+      "summary": "Google anuncio Gemini 3.5 Flash, Gemini Omni y Managed Agents sobre Antigravity, consolidando una oferta de agentes con sandbox remoto, web fetch y ejecucion de codigo.",
+      "executive_note": "Impacto directo sobre consultoria, automatizacion y comparativas de plataforma para clientes enterprise.",
+      "kind": "launch"
+    },
+    {
+      "title": "Search pasa a la era de agentes con AI Mode como canal masivo",
+      "category": "Producto",
+      "date": "2026-05-19",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "Google Blog",
+      "source_url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+      "summary": "Google afirma que AI Mode supera 1.000 millones de usuarios mensuales y activa Search agents con monitorizacion continua, generative UI y busqueda multimodal.",
+      "executive_note": "Conviene vigilar el impacto en SEO, discovery y captura de demanda para negocios y medios.",
+      "kind": "launch"
+    },
+    {
+      "title": "Anthropic compra Stainless para reforzar SDKs y MCP",
+      "category": "M&A",
+      "date": "2026-05-18",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "summary": "Anthropic integra al proveedor clave de sus SDKs y tooling MCP para ampliar la conectividad de Claude con datos, APIs y herramientas.",
+      "executive_note": "Movimiento estrategico relevante para la capa de orquestacion y estandarizacion de conectores.",
+      "kind": "news"
+    },
+    {
+      "title": "KPMG escala Claude a 276.000+ empleados e incluye ciberseguridad",
+      "category": "Adopcion empresarial",
+      "date": "2026-05-19",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "Anthropic",
+      "source_url": "https://www.anthropic.com/news/anthropic-kpmg",
+      "summary": "La alianza global KPMG-Anthropic incorpora Claude en tax, legal, private equity y deteccion/correccion de vulnerabilidades en sistemas criticos.",
+      "executive_note": "Prueba de traccion real en firma regulada y de legitimacion del uso de IA en ciberseguridad corporativa.",
+      "kind": "news"
+    },
+    {
+      "title": "OpenAI crea Deployment Company con 150 FDEs desde el dia uno",
+      "category": "Estrategia",
+      "date": "2026-05-11",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/openai-launches-the-deployment-company/",
+      "summary": "OpenAI lanza una unidad para desplegar IA en operaciones reales y adquiere Tomoro para incorporar ingenieros de despliegue y especialistas.",
+      "executive_note": "Senal clara de que la guerra competitiva se mueve desde el modelo hacia el despliegue operativo y el rediseño de flujos.",
+      "kind": "news"
+    },
+    {
+      "title": "Mistral 3 refuerza la via open con Large 3 y familia Ministral 3",
+      "category": "Modelo",
+      "date": "2026-05-20",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "Mistral AI",
+      "source_url": "https://mistral.ai/news/mistral-3",
+      "summary": "Mistral presenta modelos abiertos multimodales y multilingues bajo Apache 2.0, con Large 3 y variantes 3B, 8B y 14B orientadas a edge y empresa.",
+      "executive_note": "Opcion muy relevante para entornos soberanos, on-prem y propuestas con control de datos.",
+      "kind": "model"
+    },
+    {
+      "title": "xAI publica Grok 4.3 y acelera retiro de modelos previos",
+      "category": "Modelo",
+      "date": "2026-05-15",
+      "impact": "Media",
+      "status": "Confirmado",
+      "source": "xAI Docs",
+      "source_url": "https://docs.x.ai/developers/models",
+      "summary": "La documentacion de xAI muestra Grok 4.3 con 1M de contexto y fuerte tool calling, mientras jubila varias familias anteriores desde el 15 de mayo.",
+      "executive_note": "Senal de consolidacion de lineup y de presion competitiva en agentes con contexto largo.",
+      "kind": "model"
+    },
+    {
+      "title": "Microsoft documenta prompt injection a RCE en Semantic Kernel",
+      "category": "Vulnerabilidad",
+      "date": "2026-05-07",
+      "impact": "Critica",
+      "status": "Alerta",
+      "source": "Microsoft Security Blog",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+      "summary": "Microsoft detalla CVE-2026-25592 y CVE-2026-26030: un camino vulnerable que permite convertir prompt injection en ejecucion remota de codigo a nivel host en agentes construidos con Semantic Kernel.",
+      "executive_note": "Prioridad inmediata para revisar agentes, dependencias y exposicion de tool execution.",
+      "kind": "incident"
+    },
+    {
+      "title": "Microsoft alerta sobre MCP expuestos sin autenticacion",
+      "category": "Configuracion insegura",
+      "date": "2026-05-14",
+      "impact": "Critica",
+      "status": "Alerta",
+      "source": "Microsoft Security Blog",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+      "summary": "Defender detecto servicios IA y servidores MCP expuestos con autenticacion debil o inexistente, permitiendo acceso remoto a herramientas internas sensibles.",
+      "executive_note": "Riesgo directo para consultoria, integraciones internas y despliegues rapidos de agentes.",
+      "kind": "incident"
+    },
+    {
+      "title": "Microsoft insiste en no delegar a la IA la decision de escalar",
+      "category": "Riesgo de arquitectura",
+      "date": "2026-05-14",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "Microsoft Security Blog",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/",
+      "summary": "La guia de defense in depth advierte que dejar al modelo decidir si requiere revision humana es un error de diseño critico en agentes autonomos.",
+      "executive_note": "Muy relevante para cualquier servicio con aprobaciones, pagos, tickets o acciones destructivas.",
+      "kind": "incident"
+    },
+    {
+      "title": "OpenAI endurece el acceso con Advanced Account Security",
+      "category": "Seguridad",
+      "date": "2026-04-30",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/advanced-account-security/",
+      "summary": "OpenAI activa un modo de seguridad reforzada con passkeys o llaves FIDO, recovery endurecido y exclusion automatica de entrenamiento; sera obligatorio para usuarios individuales de Trusted Access for Cyber desde el 1 de junio de 2026.",
+      "executive_note": "Implica elevar el liston minimo de higiene de identidad para cuentas con acceso a modelos y herramientas sensibles.",
+      "kind": "alert"
+    },
+    {
+      "title": "OpenAI publica su postura operativa para gobernar Codex",
+      "category": "Seguridad operacional",
+      "date": "2026-05-08",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "OpenAI",
+      "source_url": "https://openai.com/index/running-codex-safely/",
+      "summary": "OpenAI describe controles de sandbox, red, aprobaciones y telemetria de agente nativa para uso seguro de Codex en entornos reales.",
+      "executive_note": "Referencia util para diseñar servicios de agentes bajo controles verificables y trazabilidad.",
+      "kind": "alert"
+    },
+    {
+      "title": "La UE fija el siguiente tramo practico del AI Act",
+      "category": "Regulacion",
+      "date": "2026-05-07",
+      "impact": "Alta",
+      "status": "Confirmado",
+      "source": "European Commission",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "summary": "Tras el acuerdo politico del 7 de mayo de 2026 sobre simplificacion, la plena aplicabilidad general sigue marcada para el 2 de agosto de 2026, con reglas high-risk desplazadas a 2027 y 2028 y nuevo veto a apps de nudification.",
+      "executive_note": "Ventana critica para adaptar transparencia, gobernanza GPAI y evidencias de cumplimiento antes del verano.",
+      "kind": "regulation"
+    },
+    {
+      "title": "Perplexity empuja Agent API hacia casos financieros y desktop agentic",
+      "category": "Herramienta",
+      "date": "2026-05-06",
+      "impact": "Media",
+      "status": "Confirmado",
+      "source": "Perplexity Docs / Hub",
+      "source_url": "https://docs.perplexity.ai/docs/agent-api/finance-search",
+      "summary": "Perplexity suma `finance_search` al Agent API y mantiene una cadencia intensa de Computer, seguridad y automatizacion sobre equipos y finanzas durante mayo.",
+      "executive_note": "Interesante para verticales financieros, analitica operativa y asistentes con datos vivos.",
+      "kind": "tool"
+    }
+  ],
+  "section_order": [
+    "news",
+    "launch",
+    "model",
+    "tool",
+    "incident",
+    "alert",
+    "regulation"
+  ],
+  "section_titles": {
+    "news": "Noticias destacadas",
+    "launch": "Lanzamientos recientes",
+    "model": "Modelos y LLMs recientes",
+    "tool": "Herramientas nuevas destacadas",
+    "incident": "Incidentes y vulnerabilidades IA",
+    "alert": "Alertas activas",
+    "regulation": "Regulacion y cumplimiento"
+  },
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "text": "Auditar de inmediato cualquier agente o MCP expuesto a internet, verificar autenticacion y revisar si la accion del tool se ejecuta con contexto del usuario o del servidor."
+    },
+    {
+      "priority": "Alta",
+      "text": "Definir un patron corporativo de agentes con sandbox, aprobacion humana fuera de acciones de bajo riesgo, telemetria nativa y segregacion de secretos."
+    },
+    {
+      "priority": "Alta",
+      "text": "Preparar paquete de cumplimiento AI Act para agosto de 2026: transparencia, inventario de sistemas, roles de proveedor/deployer y trazabilidad de contenido generado."
+    },
+    {
+      "priority": "Media",
+      "text": "Valorar pilotos con Mistral 3 para propuestas soberanas o entornos on-prem donde el control de datos y la licencia abierta aporten ventaja comercial."
+    },
+    {
+      "priority": "Media",
+      "text": "Seguir de cerca Google Antigravity y Search agents por su potencial para redefinir automatizacion, discovery y experiencias de asistencia continua."
+    }
+  ],
+  "opportunities": [
+    "Servicio de hardening de agentes y MCP para pymes y mid-market.",
+    "Oferta de evaluacion de riesgo AI Act + privacidad + trazabilidad para despliegues GPT/Claude/Gemini.",
+    "Prototipos soberanos con Mistral 3 para automatizacion documental, RAG interno y copilotos sectoriales.",
+    "Monitorizacion continua de cuentas privilegiadas de IA con passkeys/FIDO y politicas de acceso reforzado."
+  ],
+  "events": [
+    {
+      "date": "2026-06-01",
+      "event": "OpenAI exige Advanced Account Security a usuarios individuales de Trusted Access for Cyber."
+    },
+    {
+      "date": "2026-06",
+      "event": "Google anticipa lanzamiento de Search agents, generative UI en Search y Gemini 3.5 Pro durante el verano / proximo mes segun anuncio oficial."
+    },
+    {
+      "date": "2026-08-02",
+      "event": "Fecha clave de aplicabilidad general del AI Act con excepciones ya definidas."
+    },
+    {
+      "date": "2027-12-02",
+      "event": "Entrada prevista para parte de reglas high-risk en biometria, infra critica, educacion, empleo y fronteras."
+    },
+    {
+      "date": "2028-08-02",
+      "event": "Entrada prevista para sistemas IA integrados en productos regulados como lifts o juguetes."
+    }
+  ],
+  "active_alerts": [
+    "Prompt injection con impacto en ejecucion de codigo y abuso de tools.",
+    "Servidores MCP desplegados sin autenticacion o con privilegios del servidor.",
+    "Gobernanza insuficiente de cuentas con acceso a modelos y workflows sensibles.",
+    "Cuenta atras regulatoria hacia AI Act con obligaciones practicas ya en la mesa."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
