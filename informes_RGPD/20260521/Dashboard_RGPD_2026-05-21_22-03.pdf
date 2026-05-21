@@ -1,0 +1,1309 @@
+%PDF-1.4
+%ASCI ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 12 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 11 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/Contents 13 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 11 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/Contents 14 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 11 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/Contents 15 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 11 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/Contents 16 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 11 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+9 0 obj
+<<
+/PageMode /UseNone /Pages 11 0 R /Type /Catalog
+>>
+endobj
+10 0 obj
+<<
+/Author (MMarco Seguridad) /CreationDate (D:20260521221336+02'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260521221336+02'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (Informe Ejecutivo RGPD) /Trapped /False
+>>
+endobj
+11 0 obj
+<<
+/Count 5 /Kids [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R ] /Type /Pages
+>>
+endobj
+12 0 obj
+<<
+/Length 9100
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.062745 .141176 .254902 rg
+n
+547.0866 742.6772 m
+547.0866 786.512 511.5514 822.0472 467.7165 822.0472 c
+423.8817 822.0472 388.3465 786.512 388.3465 742.6772 c
+388.3465 698.8423 423.8817 663.3071 467.7165 663.3071 c
+511.5514 663.3071 547.0866 698.8423 547.0866 742.6772 c
+f*
+.043137 .090196 .188235 rg
+n
+141.7323 785.1969 m
+141.7323 816.5075 116.35 841.8898 85.03937 841.8898 c
+53.72874 841.8898 28.34646 816.5075 28.34646 785.1969 c
+28.34646 753.8862 53.72874 728.5039 85.03937 728.5039 c
+116.35 728.5039 141.7323 753.8862 141.7323 785.1969 c
+f*
+.160784 .254902 .372549 RG
+.6 w
+n 42.51969 39.68504 m 552.7559 39.68504 l S
+BT /F1 8 Tf 9.6 TL ET
+.615686 .698039 .811765 rg
+BT 1 0 0 1 42.51969 22.67717 Tm (MMarco Seguridad | Informe Ejecutivo RGPD | 21/05/2026 22:03 CEST) Tj T* ET
+BT 1 0 0 1 521.1799 22.67717 Tm (Pagina 1) Tj T* ET
+Q
+q
+1 0 0 1 45.68504 773.3661 cm
+q
+.615686 .698039 .811765 rg
+BT 1 0 0 1 0 3 Tm /F1 8.5 Tf 11.5 TL (MMarco Seguridad | Privacy Intelligence RGPD) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 741.3661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 4 Tm /F2 24 Tf 28 TL (Informe Ejecutivo RGPD de cierre del dia) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 706.9661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 17.1 Tm /F1 9.3 Tf 13.2 TL (Radar ejecutivo para empresas espanolas. El informe separa hechos confirmados, interpretacion analitica, riesgo) Tj T* (estimado y recomendacion automatica.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 695.9661 cm
+Q
+q
+1 0 0 1 70.86614 507.2661 cm
+q
+.058824 .098039 .164706 rg
+n 0 188.7 453.5433 -188.7 re f*
+.933333 .956863 1 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 8 172.4 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Generado) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 172.4 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (2026-05-21 22:03:00 CEST) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 150.1 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Zona horaria) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 150.1 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Europe/Madrid) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 127.8 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Cumplimiento estimado) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 127.8 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (68% \(medio\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 105.5 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Riesgo global) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 105.5 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (63/100 \(medio-alto\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 83.2 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Estado IA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 83.2 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Vigilancia reforzada) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 60.9 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Proxima actualizacion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 60.9 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (2026-05-22 07:07:00 CEST | en 09h 04m) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 38.6 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Repositorio) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 38.6 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (mmarco-desarrollo/informes_Dasboard/informes_RGPD/20260521) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 16.3 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Metodo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 6 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 12.8 Tm /F1 7.8 Tf 10.3 TL (Estimacion IA y valoracion analitica externa; no equivale a auditoria interna ni a inventario) Tj T* (corporativo confirmado.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.45 w
+n 0 188.7 m 453.5433 188.7 l S
+n 0 0 m 453.5433 0 l S
+n 0 0 m 0 188.7 l S
+n 453.5433 0 m 453.5433 188.7 l S
+.35 w
+n 0 166.4 m 453.5433 166.4 l S
+n 0 144.1 m 453.5433 144.1 l S
+n 0 121.8 m 453.5433 121.8 l S
+n 0 99.5 m 453.5433 99.5 l S
+n 0 77.2 m 453.5433 77.2 l S
+n 0 54.9 m 453.5433 54.9 l S
+n 0 32.6 m 453.5433 32.6 l S
+n 119.0551 0 m 119.0551 188.7 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 499.2661 cm
+Q
+q
+1 0 0 1 45.68504 473.2661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (KPI Cards) Tj T* ET
+Q
+Q
+q
+1 0 0 1 59.52756 196.4661 cm
+q
+.062745 .105882 .184314 rg
+n 0 268.8 476.2205 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 249.6 476.2205 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 230.4 476.2205 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 211.2 476.2205 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 192 476.2205 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 172.8 476.2205 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 153.6 476.2205 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 134.4 476.2205 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 115.2 476.2205 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 96 476.2205 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 76.8 476.2205 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 57.6 476.2205 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 38.4 476.2205 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 19.2 476.2205 -19.2 re f*
+.933333 .956863 1 rg
+BT /F2 7.8 Tf 9.2 TL ET
+BT 1 0 0 1 6 256 Tm (KPI) Tj T* ET
+BT 1 0 0 1 193.0866 256 Tm (Valor) Tj T* ET
+BT 1 0 0 1 278.126 256 Tm (Estado) Tj T* ET
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 237.3 Tm (Nivel global de cumplimiento) Tj T* ET
+BT 1 0 0 1 193.0866 237.3 Tm (68%) Tj T* ET
+BT 1 0 0 1 278.126 237.3 Tm (estimacion IA) Tj T* ET
+BT 1 0 0 1 6 218.1 Tm (Riesgo global RGPD) Tj T* ET
+BT 1 0 0 1 193.0866 218.1 Tm (63/100) Tj T* ET
+BT 1 0 0 1 278.126 218.1 Tm (medio-alto) Tj T* ET
+BT 1 0 0 1 6 198.9 Tm (Incidentes RGPD detectados) Tj T* ET
+BT 1 0 0 1 193.0866 198.9 Tm (1) Tj T* ET
+BT 1 0 0 1 278.126 198.9 Tm (confirmado) Tj T* ET
+BT 1 0 0 1 6 179.7 Tm (Brechas relevantes) Tj T* ET
+BT 1 0 0 1 193.0866 179.7 Tm (1) Tj T* ET
+BT 1 0 0 1 278.126 179.7 Tm (confirmado) Tj T* ET
+BT 1 0 0 1 6 160.5 Tm (Reclamaciones AEPD) Tj T* ET
+BT 1 0 0 1 193.0866 160.5 Tm (30.931) Tj T* ET
+BT 1 0 0 1 278.126 160.5 Tm (dato oficial 2025) Tj T* ET
+BT 1 0 0 1 6 141.3 Tm (Sanciones publicadas hoy) Tj T* ET
+BT 1 0 0 1 193.0866 141.3 Tm (0) Tj T* ET
+BT 1 0 0 1 278.126 141.3 Tm (sin dato verificado) Tj T* ET
+BT 1 0 0 1 6 122.1 Tm (Novedades legales activas) Tj T* ET
+BT 1 0 0 1 193.0866 122.1 Tm (3) Tj T* ET
+BT 1 0 0 1 278.126 122.1 Tm (confirmado) Tj T* ET
+BT 1 0 0 1 6 102.9 Tm (Consultas AEPD o EDPB) Tj T* ET
+BT 1 0 0 1 193.0866 102.9 Tm (1) Tj T* ET
+BT 1 0 0 1 278.126 102.9 Tm (consulta abierta) Tj T* ET
+BT 1 0 0 1 6 83.7 Tm (Evaluaciones DPIA pendientes) Tj T* ET
+BT 1 0 0 1 193.0866 83.7 Tm (sin dato) Tj T* ET
+BT 1 0 0 1 278.126 83.7 Tm (sin dato verificado) Tj T* ET
+BT 1 0 0 1 6 64.5 Tm (Derechos de interesados) Tj T* ET
+BT 1 0 0 1 193.0866 64.5 Tm (vigilancia) Tj T* ET
+BT 1 0 0 1 278.126 64.5 Tm (sin dato interno) Tj T* ET
+BT 1 0 0 1 6 45.3 Tm (Formacion y concienciacion) Tj T* ET
+BT 1 0 0 1 193.0866 45.3 Tm (media) Tj T* ET
+BT 1 0 0 1 278.126 45.3 Tm (estimacion IA) Tj T* ET
+BT 1 0 0 1 6 26.1 Tm (Transferencias internacionales) Tj T* ET
+BT 1 0 0 1 193.0866 26.1 Tm (bajo vigilancia) Tj T* ET
+BT 1 0 0 1 278.126 26.1 Tm (estimacion IA) Tj T* ET
+BT 1 0 0 1 6 6.9 Tm (Contratos de encargados) Tj T* ET
+BT 1 0 0 1 193.0866 6.9 Tm (sin dato) Tj T* ET
+BT 1 0 0 1 278.126 6.9 Tm (sin dato verificado) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 268.8 m 476.2205 268.8 l S
+n 0 0 m 476.2205 0 l S
+n 0 0 m 0 268.8 l S
+n 476.2205 0 m 476.2205 268.8 l S
+n 0 249.6 m 476.2205 249.6 l S
+n 0 230.4 m 476.2205 230.4 l S
+n 0 211.2 m 476.2205 211.2 l S
+n 0 192 m 476.2205 192 l S
+n 0 172.8 m 476.2205 172.8 l S
+n 0 153.6 m 476.2205 153.6 l S
+n 0 134.4 m 476.2205 134.4 l S
+n 0 115.2 m 476.2205 115.2 l S
+n 0 96 m 476.2205 96 l S
+n 0 76.8 m 476.2205 76.8 l S
+n 0 57.6 m 476.2205 57.6 l S
+n 0 38.4 m 476.2205 38.4 l S
+n 0 19.2 m 476.2205 19.2 l S
+n 187.0866 0 m 187.0866 268.8 l S
+n 272.126 0 m 272.126 268.8 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 188.4661 cm
+Q
+q
+1 0 0 1 45.68504 162.4661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Resumen Ejecutivo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 128.0661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 17.1 Tm /F1 9.3 Tf 13.2 TL (Cierre de jornada sin nueva sancion AEPD confirmada hoy, pero con un contexto regulatorio y sancionador que sigue) Tj T* (endureciendo el liston en seguridad, biometria, brechas y gobierno del dato.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 95.66614 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 17.1 Tm /F1 9.3 Tf 13.2 TL (- Seguridad de la informacion y notificacion de brechas siguen siendo la zona de mayor exposicion observable para) Tj T* (empresas espanolas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 76.46614 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3.9 Tm /F1 9.3 Tf 13.2 TL (- Biometria, monitorizacion intensiva y tratamientos de alto impacto siguen concentrando sanciones y escrutinio.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 57.26614 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3.9 Tm /F1 9.3 Tf 13.2 TL (- La falta de evidencia interna sobre DPIA, contratos de encargados y transferencias obliga a mantener cautela ejecutiva.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+13 0 obj
+<<
+/Length 5711
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.062745 .141176 .254902 rg
+n
+547.0866 742.6772 m
+547.0866 786.512 511.5514 822.0472 467.7165 822.0472 c
+423.8817 822.0472 388.3465 786.512 388.3465 742.6772 c
+388.3465 698.8423 423.8817 663.3071 467.7165 663.3071 c
+511.5514 663.3071 547.0866 698.8423 547.0866 742.6772 c
+f*
+.043137 .090196 .188235 rg
+n
+141.7323 785.1969 m
+141.7323 816.5075 116.35 841.8898 85.03937 841.8898 c
+53.72874 841.8898 28.34646 816.5075 28.34646 785.1969 c
+28.34646 753.8862 53.72874 728.5039 85.03937 728.5039 c
+116.35 728.5039 141.7323 753.8862 141.7323 785.1969 c
+f*
+.160784 .254902 .372549 RG
+.6 w
+n 42.51969 39.68504 m 552.7559 39.68504 l S
+BT /F1 8 Tf 9.6 TL ET
+.615686 .698039 .811765 rg
+BT 1 0 0 1 42.51969 22.67717 Tm (MMarco Seguridad | Informe Ejecutivo RGPD | 21/05/2026 22:03 CEST) Tj T* ET
+BT 1 0 0 1 521.1799 22.67717 Tm (Pagina 2) Tj T* ET
+Q
+q
+1 0 0 1 45.68504 758.4661 cm
+q
+BT 1 0 0 1 0 17.1 Tm 13.2 TL /F2 9.3 Tf .933333 .956863 1 rg (Riesgo para empresas espanolas:) Tj /F1 9.3 Tf ( Medio-alto. La combinacion de incremento de reclamaciones, foco en brechas y) Tj T* (exigencia sobre tratamientos intrusivos eleva el riesgo reputacional y sancionador.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 726.0661 cm
+q
+BT 1 0 0 1 0 17.1 Tm 13.2 TL /F2 9.3 Tf .933333 .956863 1 rg (Recomendacion ejecutiva:) Tj /F1 9.3 Tf ( Cerrar la jornada con una revision rapida de incidentes, proveedores criticos y tratamientos) Tj T* (de alto impacto; abrir el siguiente dia con foco en brechas, biometria y documentacion defensiva.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 715.0661 cm
+Q
+q
+1 0 0 1 45.68504 689.0661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Riesgo por Area) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.35433 431.4661 cm
+q
+.062745 .105882 .184314 rg
+n 0 249.6 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 230.4 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 211.2 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 192 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 172.8 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 153.6 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 134.4 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 115.2 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 96 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 76.8 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 57.6 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 38.4 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 19.2 504.5669 -19.2 re f*
+.933333 .956863 1 rg
+BT /F2 7.8 Tf 9.2 TL ET
+BT 1 0 0 1 6 236.8 Tm (Area) Tj T* ET
+BT 1 0 0 1 139.2283 236.8 Tm (Nivel) Tj T* ET
+BT 1 0 0 1 212.9291 236.8 Tm (Comentario) Tj T* ET
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 218.1 Tm (Gestion de datos personales) Tj T* ET
+BT 1 0 0 1 139.2283 218.1 Tm (medio-alto) Tj T* ET
+BT 1 0 0 1 212.9291 218.1 Tm (Riesgo de minimizacion y base juridica si no hay inventario vivo.) Tj T* ET
+BT 1 0 0 1 6 198.9 Tm (Derechos de los interesados) Tj T* ET
+BT 1 0 0 1 139.2283 198.9 Tm (medio) Tj T* ET
+BT 1 0 0 1 212.9291 198.9 Tm (Sin dato interno; conviene revisar plazos y trazabilidad.) Tj T* ET
+BT 1 0 0 1 6 179.7 Tm (Seguridad de la informacion) Tj T* ET
+BT 1 0 0 1 139.2283 179.7 Tm (alto) Tj T* ET
+BT 1 0 0 1 212.9291 179.7 Tm (Brechas y phishing siguen marcando la agenda sancionadora.) Tj T* ET
+BT 1 0 0 1 6 160.5 Tm (Encargados de tratamiento) Tj T* ET
+BT 1 0 0 1 139.2283 160.5 Tm (medio-alto) Tj T* ET
+BT 1 0 0 1 212.9291 160.5 Tm (Sin dato verificado sobre contratos y subencargados.) Tj T* ET
+BT 1 0 0 1 6 141.3 Tm (Transferencias internacionales) Tj T* ET
+BT 1 0 0 1 139.2283 141.3 Tm (medio) Tj T* ET
+BT 1 0 0 1 212.9291 141.3 Tm (BCR y salvaguardas siguen bajo escrutinio europeo.) Tj T* ET
+BT 1 0 0 1 6 122.1 Tm (Documentacion y politicas) Tj T* ET
+BT 1 0 0 1 139.2283 122.1 Tm (medio-alto) Tj T* ET
+BT 1 0 0 1 212.9291 122.1 Tm (Riesgo defensivo si falta evidencia actualizada.) Tj T* ET
+BT 1 0 0 1 6 102.9 Tm (Registro de actividades) Tj T* ET
+BT 1 0 0 1 139.2283 102.9 Tm (medio) Tj T* ET
+BT 1 0 0 1 212.9291 102.9 Tm (Sensible ante simplificacion normativa y auditoria.) Tj T* ET
+BT 1 0 0 1 6 83.7 Tm (Evaluaciones DPIA) Tj T* ET
+BT 1 0 0 1 139.2283 83.7 Tm (medio-alto) Tj T* ET
+BT 1 0 0 1 212.9291 83.7 Tm (Especialmente critico si hay biometria o IA de alto impacto.) Tj T* ET
+BT 1 0 0 1 6 64.5 Tm (Consentimiento) Tj T* ET
+BT 1 0 0 1 139.2283 64.5 Tm (medio) Tj T* ET
+BT 1 0 0 1 212.9291 64.5 Tm (Vigilar granularidad y prueba del consentimiento.) Tj T* ET
+BT 1 0 0 1 6 45.3 Tm (Cookies) Tj T* ET
+BT 1 0 0 1 139.2283 45.3 Tm (medio) Tj T* ET
+BT 1 0 0 1 212.9291 45.3 Tm (Mantener banner, rechazo equivalente y proveedores bajo control.) Tj T* ET
+BT 1 0 0 1 6 26.1 Tm (Formacion y concienciacion) Tj T* ET
+BT 1 0 0 1 139.2283 26.1 Tm (medio) Tj T* ET
+BT 1 0 0 1 212.9291 26.1 Tm (Phishing y error humano justifican refuerzo periodico.) Tj T* ET
+BT 1 0 0 1 6 6.9 Tm (Notificacion de brechas) Tj T* ET
+BT 1 0 0 1 139.2283 6.9 Tm (alto) Tj T* ET
+BT 1 0 0 1 212.9291 6.9 Tm (Necesidad de deteccion temprana y decision en 72 horas.) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 249.6 m 504.5669 249.6 l S
+n 0 0 m 504.5669 0 l S
+n 0 0 m 0 249.6 l S
+n 504.5669 0 m 504.5669 249.6 l S
+n 0 230.4 m 504.5669 230.4 l S
+n 0 211.2 m 504.5669 211.2 l S
+n 0 192 m 504.5669 192 l S
+n 0 172.8 m 504.5669 172.8 l S
+n 0 153.6 m 504.5669 153.6 l S
+n 0 134.4 m 504.5669 134.4 l S
+n 0 115.2 m 504.5669 115.2 l S
+n 0 96 m 504.5669 96 l S
+n 0 76.8 m 504.5669 76.8 l S
+n 0 57.6 m 504.5669 57.6 l S
+n 0 38.4 m 504.5669 38.4 l S
+n 0 19.2 m 504.5669 19.2 l S
+n 133.2283 0 m 133.2283 249.6 l S
+n 206.9291 0 m 206.9291 249.6 l S
+Q
+Q
+Q
+ 
+endstream
+endobj
+14 0 obj
+<<
+/Length 7072
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.062745 .141176 .254902 rg
+n
+547.0866 742.6772 m
+547.0866 786.512 511.5514 822.0472 467.7165 822.0472 c
+423.8817 822.0472 388.3465 786.512 388.3465 742.6772 c
+388.3465 698.8423 423.8817 663.3071 467.7165 663.3071 c
+511.5514 663.3071 547.0866 698.8423 547.0866 742.6772 c
+f*
+.043137 .090196 .188235 rg
+n
+141.7323 785.1969 m
+141.7323 816.5075 116.35 841.8898 85.03937 841.8898 c
+53.72874 841.8898 28.34646 816.5075 28.34646 785.1969 c
+28.34646 753.8862 53.72874 728.5039 85.03937 728.5039 c
+116.35 728.5039 141.7323 753.8862 141.7323 785.1969 c
+f*
+.160784 .254902 .372549 RG
+.6 w
+n 42.51969 39.68504 m 552.7559 39.68504 l S
+BT /F1 8 Tf 9.6 TL ET
+.615686 .698039 .811765 rg
+BT 1 0 0 1 42.51969 22.67717 Tm (MMarco Seguridad | Informe Ejecutivo RGPD | 21/05/2026 22:03 CEST) Tj T* ET
+BT 1 0 0 1 521.1799 22.67717 Tm (Pagina 3) Tj T* ET
+Q
+q
+1 0 0 1 45.68504 766.8661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Incidentes y Brechas Recientes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 -31.1811 720.4661 cm
+q
+.062745 .105882 .184314 rg
+n 0 38.4 657.6378 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 19.2 657.6378 -19.2 re f*
+.933333 .956863 1 rg
+BT /F2 7.8 Tf 9.2 TL ET
+BT 1 0 0 1 6 25.6 Tm (Fecha) Tj T* ET
+BT 1 0 0 1 54.18898 25.6 Tm (Tipo) Tj T* ET
+BT 1 0 0 1 139.2283 25.6 Tm (Severidad) Tj T* ET
+BT 1 0 0 1 190.252 25.6 Tm (Descripcion) Tj T* ET
+BT 1 0 0 1 312.1417 25.6 Tm (Datos) Tj T* ET
+BT 1 0 0 1 419.8583 25.6 Tm (Sector) Tj T* ET
+BT 1 0 0 1 490.7244 25.6 Tm (Estado) Tj T* ET
+BT 1 0 0 1 561.5906 25.6 Tm (Accion) Tj T* ET
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 6.9 Tm (2026-05-11) Tj T* ET
+BT 1 0 0 1 54.18898 6.9 Tm (phishing con datos personales) Tj T* ET
+BT 1 0 0 1 139.2283 6.9 Tm (alta) Tj T* ET
+BT 1 0 0 1 190.252 6.9 Tm (La ICO sanciono a South Staffordshire tras un ataque iniciado por phishing y exfiltracion posterior de datos al dark web.) Tj T* ET
+BT 1 0 0 1 312.1417 6.9 Tm (Datos personales de 633.887 clientes y empleados) Tj T* ET
+BT 1 0 0 1 419.8583 6.9 Tm (agua y servicios esenciales) Tj T* ET
+BT 1 0 0 1 490.7244 6.9 Tm (confirmado por autoridad) Tj T* ET
+BT 1 0 0 1 561.5906 6.9 Tm (Reforzar MFA, telemetria, segmentacion, deteccion temprana y simulacros de brechas.) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 38.4 m 657.6378 38.4 l S
+n 0 0 m 657.6378 0 l S
+n 0 0 m 0 38.4 l S
+n 657.6378 0 m 657.6378 38.4 l S
+n 0 19.2 m 657.6378 19.2 l S
+n 48.18898 0 m 48.18898 38.4 l S
+n 133.2283 0 m 133.2283 38.4 l S
+n 184.252 0 m 184.252 38.4 l S
+n 306.1417 0 m 306.1417 38.4 l S
+n 413.8583 0 m 413.8583 38.4 l S
+n 484.7244 0 m 484.7244 38.4 l S
+n 555.5906 0 m 555.5906 38.4 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 712.4661 cm
+Q
+q
+1 0 0 1 45.68504 686.4661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Novedades Legales y Regulatorias) Tj T* ET
+Q
+Q
+q
+1 0 0 1 42.51969 601.6661 cm
+q
+.062745 .105882 .184314 rg
+n 0 76.8 510.2362 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 57.6 510.2362 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 38.4 510.2362 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 19.2 510.2362 -19.2 re f*
+.933333 .956863 1 rg
+BT /F2 7.8 Tf 9.2 TL ET
+BT 1 0 0 1 6 64 Tm (Titular) Tj T* ET
+BT 1 0 0 1 193.0866 64 Tm (Fuente) Tj T* ET
+BT 1 0 0 1 241.2756 64 Tm (Fecha) Tj T* ET
+BT 1 0 0 1 303.6378 64 Tm (Impacto) Tj T* ET
+BT 1 0 0 1 357.4961 64 Tm (Recomendacion) Tj T* ET
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 45.3 Tm (Sin nueva publicacion sancionadora AEPD confirmada hoy en portada institucional) Tj T* ET
+BT 1 0 0 1 193.0866 45.3 Tm (AEPD) Tj T* ET
+BT 1 0 0 1 241.2756 45.3 Tm (2026-05-21) Tj T* ET
+BT 1 0 0 1 303.6378 45.3 Tm (medio) Tj T* ET
+BT 1 0 0 1 357.4961 45.3 Tm (Mantener vigilancia nocturna y consolidar seguimiento de novedades del mes.) Tj T* ET
+BT 1 0 0 1 6 26.1 Tm (Consulta publica EDPB sobre investigacion cientifica sigue abierta hasta el 25 de junio) Tj T* ET
+BT 1 0 0 1 193.0866 26.1 Tm (EDPB) Tj T* ET
+BT 1 0 0 1 241.2756 26.1 Tm (2026-04-16) Tj T* ET
+BT 1 0 0 1 303.6378 26.1 Tm (alto) Tj T* ET
+BT 1 0 0 1 357.4961 26.1 Tm (Revisar bases juridicas, reutilizacion y derechos en proyectos de investigacion y salud.) Tj T* ET
+BT 1 0 0 1 6 6.9 Tm (Opinion 13/2026 del EDPB refuerza consistencia para organismos de certificacion) Tj T* ET
+BT 1 0 0 1 193.0866 6.9 Tm (EDPB) Tj T* ET
+BT 1 0 0 1 241.2756 6.9 Tm (2026-05-12) Tj T* ET
+BT 1 0 0 1 303.6378 6.9 Tm (medio) Tj T* ET
+BT 1 0 0 1 357.4961 6.9 Tm (Anticipar mayor rigor documental si se usan esquemas de certificacion o sellos de privacidad.) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 76.8 m 510.2362 76.8 l S
+n 0 0 m 510.2362 0 l S
+n 0 0 m 0 76.8 l S
+n 510.2362 0 m 510.2362 76.8 l S
+n 0 57.6 m 510.2362 57.6 l S
+n 0 38.4 m 510.2362 38.4 l S
+n 0 19.2 m 510.2362 19.2 l S
+n 187.0866 0 m 187.0866 76.8 l S
+n 235.2756 0 m 235.2756 76.8 l S
+n 297.6378 0 m 297.6378 76.8 l S
+n 351.4961 0 m 351.4961 76.8 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 593.6661 cm
+Q
+q
+1 0 0 1 45.68504 567.6661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Sanciones y Resoluciones) Tj T* ET
+Q
+Q
+q
+1 0 0 1 21.25984 502.0661 cm
+q
+.062745 .105882 .184314 rg
+n 0 57.6 552.7559 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 38.4 552.7559 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 19.2 552.7559 -19.2 re f*
+.933333 .956863 1 rg
+BT /F2 7.8 Tf 9.2 TL ET
+BT 1 0 0 1 6 44.8 Tm (Autoridad) Tj T* ET
+BT 1 0 0 1 57.02362 44.8 Tm (Entidad) Tj T* ET
+BT 1 0 0 1 142.063 44.8 Tm (Motivo) Tj T* ET
+BT 1 0 0 1 275.2913 44.8 Tm (Importe) Tj T* ET
+BT 1 0 0 1 337.6535 44.8 Tm (Leccion) Tj T* ET
+BT 1 0 0 1 439.7008 44.8 Tm (Accion preventiva) Tj T* ET
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 26.1 Tm (ICO) Tj T* ET
+BT 1 0 0 1 57.02362 26.1 Tm (South Staffordshire Plc and South Staffordshire Water Plc) Tj T* ET
+BT 1 0 0 1 142.063 26.1 Tm (Controles de seguridad insuficientes ante phishing y movimiento lateral prolongado) Tj T* ET
+BT 1 0 0 1 275.2913 26.1 Tm (GBP 963,900) Tj T* ET
+BT 1 0 0 1 337.6535 26.1 Tm (La ventana de deteccion es tan critica como la prevencion inicial.) Tj T* ET
+BT 1 0 0 1 439.7008 26.1 Tm (Auditar correo, privilegios, segmentacion y capacidad de contencion.) Tj T* ET
+BT 1 0 0 1 6 6.9 Tm (AEPD) Tj T* ET
+BT 1 0 0 1 57.02362 6.9 Tm (AENA \(destacada en Memoria 2025\)) Tj T* ET
+BT 1 0 0 1 142.063 6.9 Tm (Tratamiento biometrico y exigencia de EIPD en sistema de acceso por reconocimiento facial) Tj T* ET
+BT 1 0 0 1 275.2913 6.9 Tm (EUR 10,043,002) Tj T* ET
+BT 1 0 0 1 337.6535 6.9 Tm (La biometria sin proporcionalidad y sin EIPD suficiente mantiene riesgo sancionador maximo.) Tj T* ET
+BT 1 0 0 1 439.7008 6.9 Tm (Evitar biometria salvo necesidad demostrable y base juridica robusta.) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 57.6 m 552.7559 57.6 l S
+n 0 0 m 552.7559 0 l S
+n 0 0 m 0 57.6 l S
+n 552.7559 0 m 552.7559 57.6 l S
+n 0 38.4 m 552.7559 38.4 l S
+n 0 19.2 m 552.7559 19.2 l S
+n 51.02362 0 m 51.02362 57.6 l S
+n 136.063 0 m 136.063 57.6 l S
+n 269.2913 0 m 269.2913 57.6 l S
+n 331.6535 0 m 331.6535 57.6 l S
+n 433.7008 0 m 433.7008 57.6 l S
+Q
+Q
+Q
+ 
+endstream
+endobj
+15 0 obj
+<<
+/Length 8997
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.062745 .141176 .254902 rg
+n
+547.0866 742.6772 m
+547.0866 786.512 511.5514 822.0472 467.7165 822.0472 c
+423.8817 822.0472 388.3465 786.512 388.3465 742.6772 c
+388.3465 698.8423 423.8817 663.3071 467.7165 663.3071 c
+511.5514 663.3071 547.0866 698.8423 547.0866 742.6772 c
+f*
+.043137 .090196 .188235 rg
+n
+141.7323 785.1969 m
+141.7323 816.5075 116.35 841.8898 85.03937 841.8898 c
+53.72874 841.8898 28.34646 816.5075 28.34646 785.1969 c
+28.34646 753.8862 53.72874 728.5039 85.03937 728.5039 c
+116.35 728.5039 141.7323 753.8862 141.7323 785.1969 c
+f*
+.160784 .254902 .372549 RG
+.6 w
+n 42.51969 39.68504 m 552.7559 39.68504 l S
+BT /F1 8 Tf 9.6 TL ET
+.615686 .698039 .811765 rg
+BT 1 0 0 1 42.51969 22.67717 Tm (MMarco Seguridad | Informe Ejecutivo RGPD | 21/05/2026 22:03 CEST) Tj T* ET
+BT 1 0 0 1 521.1799 22.67717 Tm (Pagina 4) Tj T* ET
+Q
+q
+1 0 0 1 45.68504 766.8661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Panel Operativo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.86614 614.7661 cm
+q
+.058824 .098039 .164706 rg
+n 0 144.1 453.5433 -144.1 re f*
+.933333 .956863 1 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 8 127.8 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Derechos de interesados) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 127.8 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Sin dato verificado. Revisar plazos, trazabilidad y canal de respuesta.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 105.5 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (DPIA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 105.5 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Sin dato cuantitativo verificado. Prioridad alta si existe biometria, IA o vigilancia avanzada.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 72.9 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 12.8 Tm /F2 7.8 Tf 10.3 TL (Transferencias) Tj T* (internacionales) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 83.2 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Bajo vigilancia. Revisar mapa de proveedores, SCC, BCR y medidas suplementarias.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 50.6 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Cookies) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 50.6 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Revisar banner, rechazo equivalente, bloqueo previo y prueba de consentimiento.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 28.3 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Encargados) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 28.3 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Riesgo medio-alto si contratos y subencargados no estan completamente auditados.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 8 6 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F2 7.8 Tf 10.3 TL (Formacion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 127.0551 6 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 2.5 Tm /F1 7.8 Tf 10.3 TL (Reforzar phishing, brechas y uso responsable de IA.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.45 w
+n 0 144.1 m 453.5433 144.1 l S
+n 0 0 m 453.5433 0 l S
+n 0 0 m 0 144.1 l S
+n 453.5433 0 m 453.5433 144.1 l S
+.35 w
+n 0 121.8 m 453.5433 121.8 l S
+n 0 99.5 m 453.5433 99.5 l S
+n 0 66.9 m 453.5433 66.9 l S
+n 0 44.6 m 453.5433 44.6 l S
+n 0 22.3 m 453.5433 22.3 l S
+n 119.0551 0 m 119.0551 144.1 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 606.7661 cm
+Q
+q
+1 0 0 1 45.68504 580.7661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Recomendaciones Clave) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.35433 438.3661 cm
+q
+.062745 .105882 .184314 rg
+n 0 134.4 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 115.2 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 96 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 76.8 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 57.6 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 38.4 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 19.2 504.5669 -19.2 re f*
+.933333 .956863 1 rg
+BT /F2 7.8 Tf 9.2 TL ET
+BT 1 0 0 1 6 121.6 Tm (Prioridad) Tj T* ET
+BT 1 0 0 1 76.86614 121.6 Tm (Recomendacion) Tj T* ET
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 102.9 Tm (critica) Tj T* ET
+BT 1 0 0 1 76.86614 102.9 Tm (Validar plan de respuesta a brechas, responsables y criterio de escalado en 72 horas.) Tj T* ET
+BT 1 0 0 1 6 83.7 Tm (alta) Tj T* ET
+BT 1 0 0 1 76.86614 83.7 Tm (Revisar tratamientos con biometria, reconocimiento facial o analitica avanzada y confirmar si requieren EIPD.) Tj T* ET
+BT 1 0 0 1 6 64.5 Tm (alta) Tj T* ET
+BT 1 0 0 1 76.86614 64.5 Tm (Auditar proveedores con posible transferencia internacional y revisar SCC, BCR o adhesiones aplicables.) Tj T* ET
+BT 1 0 0 1 6 45.3 Tm (media) Tj T* ET
+BT 1 0 0 1 76.86614 45.3 Tm (Actualizar registro de actividades y evidencias de base juridica en tratamientos con IA.) Tj T* ET
+BT 1 0 0 1 6 26.1 Tm (media) Tj T* ET
+BT 1 0 0 1 76.86614 26.1 Tm (Comprobar banner de cookies, bloqueo previo y trazabilidad de consentimiento.) Tj T* ET
+BT 1 0 0 1 6 6.9 Tm (media) Tj T* ET
+BT 1 0 0 1 76.86614 6.9 Tm (Programar concienciacion express sobre phishing y reporte interno de incidentes.) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 134.4 m 504.5669 134.4 l S
+n 0 0 m 504.5669 0 l S
+n 0 0 m 0 134.4 l S
+n 504.5669 0 m 504.5669 134.4 l S
+n 0 115.2 m 504.5669 115.2 l S
+n 0 96 m 504.5669 96 l S
+n 0 76.8 m 504.5669 76.8 l S
+n 0 57.6 m 504.5669 57.6 l S
+n 0 38.4 m 504.5669 38.4 l S
+n 0 19.2 m 504.5669 19.2 l S
+n 70.86614 0 m 70.86614 134.4 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 430.3661 cm
+Q
+q
+1 0 0 1 45.68504 404.3661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Alertas Activas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 383.1661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3.9 Tm /F1 9.3 Tf 13.2 TL (- Incremento estructural de reclamaciones y presion inspectora AEPD.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 363.9661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3.9 Tm /F1 9.3 Tf 13.2 TL (- Brechas y phishing como riesgo operativo dominante.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 344.7661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3.9 Tm /F1 9.3 Tf 13.2 TL (- Biometria y EIPD insuficiente como foco sancionador persistente.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 325.5661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3.9 Tm /F1 9.3 Tf 13.2 TL (- Consulta EDPB abierta que puede afectar investigacion, salud e innovacion basada en datos.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 306.3661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3.9 Tm /F1 9.3 Tf 13.2 TL (- Riesgo especial para pymes si no existe evidencia documental y contractual suficiente.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 293.3661 cm
+Q
+q
+1 0 0 1 45.68504 267.3661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Seccion IA) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 246.1661 cm
+q
+BT 1 0 0 1 0 3.9 Tm 13.2 TL /F2 9.3 Tf .933333 .956863 1 rg (Riesgo RGPD estimado:) Tj /F1 9.3 Tf ( 63/100) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 226.9661 cm
+q
+BT 1 0 0 1 0 3.9 Tm 13.2 TL /F2 9.3 Tf .933333 .956863 1 rg (Areas de exposicion:) Tj /F1 9.3 Tf ( seguridad, brechas, biometria, proveedores, IA con datos personales) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 194.5661 cm
+q
+BT 1 0 0 1 0 17.1 Tm 13.2 TL /F2 9.3 Tf .933333 .956863 1 rg (Prediccion:) Tj /F1 9.3 Tf ( Es razonable prever mas exigencia sobre trazabilidad, DPIA, certificacion y controles sobre IA y) Tj T* (transferencias.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 175.3661 cm
+q
+BT 1 0 0 1 0 3.9 Tm 13.2 TL /F2 9.3 Tf .933333 .956863 1 rg (Etiqueta:) Tj /F1 9.3 Tf ( interpretacion y prediccion IA, no hecho confirmado) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 162.3661 cm
+Q
+q
+1 0 0 1 45.68504 136.3661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Fuentes Principales) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.35433 70.76614 cm
+q
+.062745 .105882 .184314 rg
+n 0 57.6 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 38.4 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 19.2 504.5669 -19.2 re f*
+.933333 .956863 1 rg
+BT /F2 7.8 Tf 9.2 TL ET
+BT 1 0 0 1 6 44.8 Tm (Fecha) Tj T* ET
+BT 1 0 0 1 57.02362 44.8 Tm (Fuente) Tj T* ET
+BT 1 0 0 1 193.0866 44.8 Tm (Tipo) Tj T* ET
+BT 1 0 0 1 272.4567 44.8 Tm (Uso en el informe) Tj T* ET
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 26.1 Tm (2026-05-21) Tj T* ET
+BT 1 0 0 1 57.02362 26.1 Tm (AEPD agenda institucional) Tj T* ET
+BT 1 0 0 1 193.0866 26.1 Tm (agenda) Tj T* ET
+BT 1 0 0 1 272.4567 26.1 Tm (Eventos institucionales de la AEPD del 21 de mayo de 2026, sin nueva resoluci\363n sancionadora publicada en portada durante la jornada.) Tj T* ET
+BT 1 0 0 1 6 6.9 Tm (2026-05-06) Tj T* ET
+BT 1 0 0 1 57.02362 6.9 Tm (AEPD Memoria 2025) Tj T* ET
+BT 1 0 0 1 193.0866 6.9 Tm (official_release) Tj T* ET
+BT 1 0 0 1 272.4567 6.9 Tm (30.931 reclamaciones en 2025, 48.108.765 euros en sanciones y fuerte incremento del foco en brechas.) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 57.6 m 504.5669 57.6 l S
+n 0 0 m 0 57.6 l S
+n 504.5669 0 m 504.5669 57.6 l S
+n 0 0 m 504.5669 0 l S
+n 0 38.4 m 504.5669 38.4 l S
+n 0 19.2 m 504.5669 19.2 l S
+n 51.02362 0 m 51.02362 57.6 l S
+n 187.0866 0 m 187.0866 57.6 l S
+n 266.4567 0 m 266.4567 57.6 l S
+Q
+Q
+Q
+ 
+endstream
+endobj
+16 0 obj
+<<
+/Length 4647
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+.027451 .066667 .121569 rg
+n 0 0 595.2756 841.8898 re f*
+.062745 .141176 .254902 rg
+n
+547.0866 742.6772 m
+547.0866 786.512 511.5514 822.0472 467.7165 822.0472 c
+423.8817 822.0472 388.3465 786.512 388.3465 742.6772 c
+388.3465 698.8423 423.8817 663.3071 467.7165 663.3071 c
+511.5514 663.3071 547.0866 698.8423 547.0866 742.6772 c
+f*
+.043137 .090196 .188235 rg
+n
+141.7323 785.1969 m
+141.7323 816.5075 116.35 841.8898 85.03937 841.8898 c
+53.72874 841.8898 28.34646 816.5075 28.34646 785.1969 c
+28.34646 753.8862 53.72874 728.5039 85.03937 728.5039 c
+116.35 728.5039 141.7323 753.8862 141.7323 785.1969 c
+f*
+.160784 .254902 .372549 RG
+.6 w
+n 42.51969 39.68504 m 552.7559 39.68504 l S
+BT /F1 8 Tf 9.6 TL ET
+.615686 .698039 .811765 rg
+BT 1 0 0 1 42.51969 22.67717 Tm (MMarco Seguridad | Informe Ejecutivo RGPD | 21/05/2026 22:03 CEST) Tj T* ET
+BT 1 0 0 1 521.1799 22.67717 Tm (Pagina 5) Tj T* ET
+Q
+q
+1 0 0 1 45.35433 650.4661 cm
+q
+.058824 .098039 .164706 rg
+n 0 134.4 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 115.2 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 96 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 76.8 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 57.6 504.5669 -19.2 re f*
+.062745 .105882 .184314 rg
+n 0 38.4 504.5669 -19.2 re f*
+.058824 .098039 .164706 rg
+n 0 19.2 504.5669 -19.2 re f*
+.933333 .956863 1 rg
+BT /F1 7.3 Tf 9.2 TL ET
+BT 1 0 0 1 6 122.1 Tm (2026-04-30) Tj T* ET
+BT 1 0 0 1 57.02362 122.1 Tm (AEPD herramienta interactiva de brechas) Tj T* ET
+BT 1 0 0 1 193.0866 122.1 Tm (official_release) Tj T* ET
+BT 1 0 0 1 272.4567 122.1 Tm (Nuevo acceso din\341mico a notificaciones de brechas para seguimiento sectorial y tipol\363gico.) Tj T* ET
+BT 1 0 0 1 6 102.9 Tm (2026-03-25) Tj T* ET
+BT 1 0 0 1 57.02362 102.9 Tm (AEPD Plan de actuaci\363n 2026) Tj T* ET
+BT 1 0 0 1 193.0866 102.9 Tm (official_release) Tj T* ET
+BT 1 0 0 1 272.4567 102.9 Tm (32 objetivos operativos y 115 acciones; ejecuci\363n 2025 por ejes superior al 99%.) Tj T* ET
+BT 1 0 0 1 6 83.7 Tm (2026-04-16) Tj T* ET
+BT 1 0 0 1 57.02362 83.7 Tm (EDPB Guidelines 1/2026) Tj T* ET
+BT 1 0 0 1 193.0866 83.7 Tm (public_consultation) Tj T* ET
+BT 1 0 0 1 272.4567 83.7 Tm (Consulta p\372blica abierta hasta el 25 de junio de 2026 sobre investigaci\363n cient\355fica.) Tj T* ET
+BT 1 0 0 1 6 64.5 Tm (2026-05-12) Tj T* ET
+BT 1 0 0 1 57.02362 64.5 Tm (EDPB Opinion 13/2026) Tj T* ET
+BT 1 0 0 1 193.0866 64.5 Tm (opinion) Tj T* ET
+BT 1 0 0 1 272.4567 64.5 Tm (Refuerza consistencia para acreditaci\363n de organismos de certificaci\363n y supervisi\363n armonizada.) Tj T* ET
+BT 1 0 0 1 6 45.3 Tm (2026-05-07) Tj T* ET
+BT 1 0 0 1 57.02362 45.3 Tm (EDPS Annual Report 2025) Tj T* ET
+BT 1 0 0 1 193.0866 45.3 Tm (official_release) Tj T* ET
+BT 1 0 0 1 272.4567 45.3 Tm (Destaca transici\363n supervisora sobre IA y actividad legislativa r\351cord.) Tj T* ET
+BT 1 0 0 1 6 26.1 Tm (2026-05-11) Tj T* ET
+BT 1 0 0 1 57.02362 26.1 Tm (ICO fine to South Staffordshire) Tj T* ET
+BT 1 0 0 1 193.0866 26.1 Tm (sanction) Tj T* ET
+BT 1 0 0 1 272.4567 26.1 Tm (Multa de 963.900 libras tras ciberataque y publicaci\363n de datos de 633.887 personas.) Tj T* ET
+BT 1 0 0 1 6 6.9 Tm (2026-05-21) Tj T* ET
+BT 1 0 0 1 57.02362 6.9 Tm (BOE sumario del 21/05/2026) Tj T* ET
+BT 1 0 0 1 193.0866 6.9 Tm (official_gazette) Tj T* ET
+BT 1 0 0 1 272.4567 6.9 Tm (Revisi\363n del sumario sin novedad central RGPD de alcance general detectada hoy.) Tj T* ET
+q
+1 J
+1 j
+.160784 .254902 .372549 RG
+.35 w
+n 0 0 m 0 134.4 l S
+n 504.5669 0 m 504.5669 134.4 l S
+n 0 0 m 504.5669 0 l S
+n 0 134.4 m 504.5669 134.4 l S
+n 0 115.2 m 504.5669 115.2 l S
+n 0 96 m 504.5669 96 l S
+n 0 76.8 m 504.5669 76.8 l S
+n 0 57.6 m 504.5669 57.6 l S
+n 0 38.4 m 504.5669 38.4 l S
+n 0 19.2 m 504.5669 19.2 l S
+n 51.02362 0 m 51.02362 134.4 l S
+n 187.0866 0 m 187.0866 134.4 l S
+n 266.4567 0 m 266.4567 134.4 l S
+Q
+Q
+Q
+q
+1 0 0 1 45.68504 642.4661 cm
+Q
+q
+1 0 0 1 45.68504 616.4661 cm
+q
+.933333 .956863 1 rg
+BT 1 0 0 1 0 3 Tm /F2 15 Tf 18 TL (Nota legal) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 585.4661 cm
+q
+.615686 .698039 .811765 rg
+BT 1 0 0 1 0 14.5 Tm /F1 8.5 Tf 11.5 TL (Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos, tiene) Tj T* (finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 45.68504 575.4661 cm
+Q
+q
+1 0 0 1 45.68504 557.9661 cm
+q
+.615686 .698039 .811765 rg
+BT 1 0 0 1 0 3 Tm /F1 8.5 Tf 11.5 TL (MMarco Seguridad | https://mmarcoseguridad.com | mmarco.seguridad@gmail.com | +34 656 33 93 55) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000073 00000 n 
+0000000114 00000 n 
+0000000221 00000 n 
+0000000333 00000 n 
+0000000538 00000 n 
+0000000743 00000 n 
+0000000948 00000 n 
+0000001153 00000 n 
+0000001358 00000 n 
+0000001427 00000 n 
+0000001723 00000 n 
+0000001807 00000 n 
+0000010959 00000 n 
+0000016722 00000 n 
+0000023846 00000 n 
+0000032895 00000 n 
+trailer
+<<
+/ID 
+[<84fb6c5b1f582c0ed2ae63227c79eaae><84fb6c5b1f582c0ed2ae63227c79eaae>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 10 0 R
+/Root 9 0 R
+/Size 17
+>>
+startxref
+37594
+%%EOF
