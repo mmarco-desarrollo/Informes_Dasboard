@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "report_title": "Informe Ejecutivo RGPD",
+    "report_type": "Daily Closing Report",
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sánchez",
+    "generated_at": "2026-05-21 22:03:00 CEST",
+    "timezone": "Europe/Madrid",
+    "next_update": "2026-05-22 07:07:00 CEST",
+    "time_to_next_update": "09h 04m",
+    "corporate_profile": "Ciberseguridad, Blockchain, IA, Telecomunicaciones, RGPD y Protección de Datos",
+    "repository": "mmarco-desarrollo/informes_Dasboard",
+    "repository_base_path": "informes_RGPD/20260521",
+    "delivery_email": "mmarco.seguridad@gmail.com"
+  },
+  "status": {
+    "global_compliance_estimate_percent": 68,
+    "global_compliance_level": "medio",
+    "global_risk_level": "medio-alto",
+    "global_risk_score_100": 63,
+    "privacy_ai_status": "Vigilancia reforzada",
+    "methodology_note": "Estimacion IA y valoracion analitica externa; no equivale a auditoria interna ni a inventario corporativo confirmado."
+  },
+  "kpis": [
+    {
+      "label": "Nivel global de cumplimiento",
+      "value": "68%",
+      "status": "estimacion IA"
+    },
+    {
+      "label": "Riesgo global RGPD",
+      "value": "63/100",
+      "status": "medio-alto"
+    },
+    {
+      "label": "Incidentes RGPD detectados",
+      "value": "1",
+      "status": "confirmado"
+    },
+    {
+      "label": "Brechas relevantes",
+      "value": "1",
+      "status": "confirmado"
+    },
+    {
+      "label": "Reclamaciones AEPD",
+      "value": "30.931",
+      "status": "dato oficial 2025"
+    },
+    {
+      "label": "Sanciones publicadas hoy",
+      "value": "0",
+      "status": "sin dato verificado"
+    },
+    {
+      "label": "Novedades legales activas",
+      "value": "3",
+      "status": "confirmado"
+    },
+    {
+      "label": "Consultas AEPD o EDPB",
+      "value": "1",
+      "status": "consulta abierta"
+    },
+    {
+      "label": "Evaluaciones DPIA pendientes",
+      "value": "sin dato",
+      "status": "sin dato verificado"
+    },
+    {
+      "label": "Derechos de interesados",
+      "value": "vigilancia",
+      "status": "sin dato interno"
+    },
+    {
+      "label": "Formacion y concienciacion",
+      "value": "media",
+      "status": "estimacion IA"
+    },
+    {
+      "label": "Transferencias internacionales",
+      "value": "bajo vigilancia",
+      "status": "estimacion IA"
+    },
+    {
+      "label": "Contratos de encargados",
+      "value": "sin dato",
+      "status": "sin dato verificado"
+    }
+  ],
+  "executive_summary": {
+    "global_state": "Cierre de jornada sin nueva sancion AEPD confirmada hoy, pero con un contexto regulatorio y sancionador que sigue endureciendo el liston en seguridad, biometria, brechas y gobierno del dato.",
+    "main_risks": [
+      "Seguridad de la informacion y notificacion de brechas siguen siendo la zona de mayor exposicion observable para empresas espanolas.",
+      "Biometria, monitorizacion intensiva y tratamientos de alto impacto siguen concentrando sanciones y escrutinio.",
+      "La falta de evidencia interna sobre DPIA, contratos de encargados y transferencias obliga a mantener cautela ejecutiva."
+    ],
+    "regulatory_updates": [
+      "Sigue abierta la consulta EDPB sobre investigacion cientifica hasta el 25 de junio de 2026.",
+      "La Opinion 13/2026 del EDPB refuerza criterios de certificacion y consistencia supervisora.",
+      "La AEPD mantiene en primer plano transparencia sobre brechas y acompanamiento operativo en su Plan 2026."
+    ],
+    "important_breaches_or_sanctions": [
+      "La ICO sanciono con 963.900 libras a South Staffordshire por un ataque con phishing y exfiltracion de datos de 633.887 personas.",
+      "La Memoria 2025 de la AEPD confirma presion sancionadora creciente: 48.108.765 euros en sanciones y casi 20 millones vinculados a brechas."
+    ],
+    "priority_obligations": [
+      "Revisar madurez de brechas, phishing y deteccion temprana.",
+      "Verificar si existen tratamientos que requieran EIPD actualizada.",
+      "Cerrar trazabilidad documental en encargados, transferencias y bases juridicas."
+    ],
+    "risk_for_spanish_companies": "Medio-alto. La combinacion de incremento de reclamaciones, foco en brechas y exigencia sobre tratamientos intrusivos eleva el riesgo reputacional y sancionador.",
+    "executive_recommendation": "Cerrar la jornada con una revision rapida de incidentes, proveedores criticos y tratamientos de alto impacto; abrir el siguiente dia con foco en brechas, biometria y documentacion defensiva.",
+    "quick_conclusion": [
+      "Hoy no se confirma una nueva sancion AEPD de impacto publicada en portada.",
+      "El entorno regulatorio sigue moviendose hacia mayor trazabilidad, certificacion y supervison de IA.",
+      "La senal mas fuerte del mes sigue siendo el aumento de reclamaciones y sanciones ligadas a brechas.",
+      "Para pymes espanolas, el riesgo mas inmediato sigue estando en seguridad, contratos y evidencias de cumplimiento."
+    ]
+  },
+  "risk_by_area": [
+    {
+      "area": "Gestion de datos personales",
+      "level": "medio-alto",
+      "comment": "Riesgo de minimizacion y base juridica si no hay inventario vivo."
+    },
+    {
+      "area": "Derechos de los interesados",
+      "level": "medio",
+      "comment": "Sin dato interno; conviene revisar plazos y trazabilidad."
+    },
+    {
+      "area": "Seguridad de la informacion",
+      "level": "alto",
+      "comment": "Brechas y phishing siguen marcando la agenda sancionadora."
+    },
+    {
+      "area": "Encargados de tratamiento",
+      "level": "medio-alto",
+      "comment": "Sin dato verificado sobre contratos y subencargados."
+    },
+    {
+      "area": "Transferencias internacionales",
+      "level": "medio",
+      "comment": "BCR y salvaguardas siguen bajo escrutinio europeo."
+    },
+    {
+      "area": "Documentacion y politicas",
+      "level": "medio-alto",
+      "comment": "Riesgo defensivo si falta evidencia actualizada."
+    },
+    {
+      "area": "Registro de actividades",
+      "level": "medio",
+      "comment": "Sensible ante simplificacion normativa y auditoria."
+    },
+    {
+      "area": "Evaluaciones DPIA",
+      "level": "medio-alto",
+      "comment": "Especialmente critico si hay biometria o IA de alto impacto."
+    },
+    {
+      "area": "Consentimiento",
+      "level": "medio",
+      "comment": "Vigilar granularidad y prueba del consentimiento."
+    },
+    {
+      "area": "Cookies",
+      "level": "medio",
+      "comment": "Mantener banner, rechazo equivalente y proveedores bajo control."
+    },
+    {
+      "area": "Formacion y concienciacion",
+      "level": "medio",
+      "comment": "Phishing y error humano justifican refuerzo periodico."
+    },
+    {
+      "area": "Notificacion de brechas",
+      "level": "alto",
+      "comment": "Necesidad de deteccion temprana y decision en 72 horas."
+    }
+  ],
+  "incidents_and_breaches": [
+    {
+      "date": "2026-05-11",
+      "type": "phishing con datos personales",
+      "severity": "alta",
+      "description": "La ICO sanciono a South Staffordshire tras un ataque iniciado por phishing y exfiltracion posterior de datos al dark web.",
+      "affected_data": "Datos personales de 633.887 clientes y empleados",
+      "sector": "agua y servicios esenciales",
+      "status": "confirmado por autoridad",
+      "recommended_action": "Reforzar MFA, telemetria, segmentacion, deteccion temprana y simulacros de brechas.",
+      "source": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/"
+    }
+  ],
+  "regulatory_updates": [
+    {
+      "headline": "Sin nueva publicacion sancionadora AEPD confirmada hoy en portada institucional",
+      "source": "AEPD",
+      "date_time": "2026-05-21",
+      "jurisdiction": "Espana",
+      "impact": "medio",
+      "recommendation": "Mantener vigilancia nocturna y consolidar seguimiento de novedades del mes.",
+      "certainty": "hecho confirmado",
+      "link": "https://www.aepd.es/"
+    },
+    {
+      "headline": "Consulta publica EDPB sobre investigacion cientifica sigue abierta hasta el 25 de junio",
+      "source": "EDPB",
+      "date_time": "2026-04-16",
+      "jurisdiction": "UE",
+      "impact": "alto",
+      "recommendation": "Revisar bases juridicas, reutilizacion y derechos en proyectos de investigacion y salud.",
+      "certainty": "hecho confirmado",
+      "link": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/guidelines-12026-processing-personal-data_it"
+    },
+    {
+      "headline": "Opinion 13/2026 del EDPB refuerza consistencia para organismos de certificacion",
+      "source": "EDPB",
+      "date_time": "2026-05-12",
+      "jurisdiction": "UE",
+      "impact": "medio",
+      "recommendation": "Anticipar mayor rigor documental si se usan esquemas de certificacion o sellos de privacidad.",
+      "certainty": "hecho confirmado",
+      "link": "https://www.edpb.europa.eu/system/files/2026-05/edpb_opinion_202613_accreditationrequirement_fi-sa_en.pdf"
+    }
+  ],
+  "sanctions_and_resolutions": [
+    {
+      "authority": "ICO",
+      "entity": "South Staffordshire Plc and South Staffordshire Water Plc",
+      "sector": "servicios esenciales",
+      "reason": "Controles de seguridad insuficientes ante phishing y movimiento lateral prolongado",
+      "amount": "GBP 963,900",
+      "lesson": "La ventana de deteccion es tan critica como la prevencion inicial.",
+      "preventive_action": "Auditar correo, privilegios, segmentacion y capacidad de contencion.",
+      "source": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/"
+    },
+    {
+      "authority": "AEPD",
+      "entity": "AENA (destacada en Memoria 2025)",
+      "sector": "transporte",
+      "reason": "Tratamiento biometrico y exigencia de EIPD en sistema de acceso por reconocimiento facial",
+      "amount": "EUR 10,043,002",
+      "lesson": "La biometria sin proporcionalidad y sin EIPD suficiente mantiene riesgo sancionador maximo.",
+      "preventive_action": "Evitar biometria salvo necesidad demostrable y base juridica robusta.",
+      "source": "https://www.aepd.es/memorias/memoria-aepd-2025.pdf"
+    }
+  ],
+  "data_subject_rights": {
+    "access": "sin dato verificado",
+    "rectification": "sin dato verificado",
+    "erasure": "vigilancia reforzada",
+    "objection": "sin dato verificado",
+    "restriction": "sin dato verificado",
+    "portability": "sin dato verificado",
+    "automated_decisions": "vigilancia reforzada por auge de IA",
+    "response_deadlines": "revisar plazos de 30 dias y trazabilidad",
+    "pending_requests": "sin dato verificado",
+    "overdue_requests": "sin dato verificado"
+  },
+  "dpia": {
+    "completed": "sin dato verificado",
+    "in_progress": "sin dato verificado",
+    "pending": "sin dato verificado",
+    "high_risk": "posible si existen biometria, vigilancia avanzada o IA de alto impacto",
+    "last_completed": "sin dato verificado",
+    "next_reviews": "recomendable revisar en el proximo ciclo tratamientos intrusivos y proveedores cloud",
+    "priority_processing": [
+      "biometria",
+      "monitorizacion intensiva",
+      "IA con perfilado o decisiones significativas"
+    ]
+  },
+  "international_transfers": {
+    "outside_eea": "bajo vigilancia",
+    "scc": "verificar existencia y version",
+    "adequacy_decisions": "revisar segun proveedor",
+    "us_transfers": "validar marco aplicable y medidas suplementarias cuando proceda",
+    "eu_us_dpf": "comprobar adhesiones reales de proveedores",
+    "supplier_risk": "medio",
+    "guarantee_review": "recomendada",
+    "pending_actions": [
+      "mapear proveedores fuera del EEE",
+      "revisar BCR o SCC si existen",
+      "alinear contratos y transfer impact assessments"
+    ]
+  },
+  "cookies_and_consent": {
+    "banner_status": "sin dato verificado",
+    "valid_consents": "sin dato verificado",
+    "expired_consents": "sin dato verificado",
+    "rejections": "sin dato verificado",
+    "granular_config": "recomendada",
+    "aepd_guidance_compliance": "revisar",
+    "analytics_marketing_third_party_risk": "medio",
+    "recommendations": [
+      "rechazo tan visible como aceptar",
+      "bloqueo previo de cookies no necesarias",
+      "registro auditable de preferencias"
+    ]
+  },
+  "processors": {
+    "pending_contracts": "sin dato verificado",
+    "updated_contracts": "sin dato verificado",
+    "critical_suppliers": "sin dato verificado",
+    "supplier_risk": "medio-alto",
+    "subprocessors": "sin dato verificado",
+    "associated_transfers": "posibles",
+    "pending_reviews": "recomendada revision contractual trimestral"
+  },
+  "training": {
+    "completed": "sin dato verificado",
+    "pending": "sin dato verificado",
+    "next_training": "recomendable en proximo ciclo mensual",
+    "lower_compliance_areas": [
+      "phishing",
+      "brechas",
+      "uso de IA",
+      "minimizacion"
+    ],
+    "risk_due_to_lack_of_training": "medio-alto",
+    "awareness_recommendations": [
+      "microformacion anti-phishing",
+      "recordatorio sobre canales de notificacion de brechas",
+      "pautas de uso responsable de IA y datos personales"
+    ]
+  },
+  "key_recommendations": [
+    {
+      "priority": "critica",
+      "action": "Validar plan de respuesta a brechas, responsables y criterio de escalado en 72 horas."
+    },
+    {
+      "priority": "alta",
+      "action": "Revisar tratamientos con biometria, reconocimiento facial o analitica avanzada y confirmar si requieren EIPD."
+    },
+    {
+      "priority": "alta",
+      "action": "Auditar proveedores con posible transferencia internacional y revisar SCC, BCR o adhesiones aplicables."
+    },
+    {
+      "priority": "media",
+      "action": "Actualizar registro de actividades y evidencias de base juridica en tratamientos con IA."
+    },
+    {
+      "priority": "media",
+      "action": "Comprobar banner de cookies, bloqueo previo y trazabilidad de consentimiento."
+    },
+    {
+      "priority": "media",
+      "action": "Programar concienciacion express sobre phishing y reporte interno de incidentes."
+    }
+  ],
+  "active_alerts": [
+    "Incremento estructural de reclamaciones y presion inspectora AEPD.",
+    "Brechas y phishing como riesgo operativo dominante.",
+    "Biometria y EIPD insuficiente como foco sancionador persistente.",
+    "Consulta EDPB abierta que puede afectar investigacion, salud e innovacion basada en datos.",
+    "Riesgo especial para pymes si no existe evidencia documental y contractual suficiente."
+  ],
+  "ai_section": {
+    "estimated_gdpr_risk": "63/100",
+    "areas_of_exposure": [
+      "seguridad",
+      "brechas",
+      "biometria",
+      "proveedores",
+      "IA con datos personales"
+    ],
+    "trend_prediction": "Es razonable prever mas exigencia sobre trazabilidad, DPIA, certificacion y controles sobre IA y transferencias.",
+    "automatic_recommendation": "Fortalecer primero evidencias defensivas y tiempo de deteccion antes de ampliar tratamientos intensivos en datos.",
+    "action_priority": "alta",
+    "business_impact": "riesgo de sancion, dano reputacional y friccion comercial con clientes regulados",
+    "urgency_level": "alta",
+    "certainty_label": "interpretacion y prediccion IA, no hecho confirmado"
+  },
+  "legal_note": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos, tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional.",
+  "sources": [
+    {
+      "title": "AEPD agenda institucional",
+      "url": "https://www.aepd.es/",
+      "date": "2026-05-21",
+      "type": "agenda",
+      "note": "Eventos institucionales de la AEPD del 21 de mayo de 2026, sin nueva resolución sancionadora publicada en portada durante la jornada."
+    },
+    {
+      "title": "AEPD Memoria 2025",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-recibio-mas-de-30.000-reclamaciones-en-2025-un-64-mas",
+      "date": "2026-05-06",
+      "type": "official_release",
+      "note": "30.931 reclamaciones en 2025, 48.108.765 euros en sanciones y fuerte incremento del foco en brechas."
+    },
+    {
+      "title": "AEPD herramienta interactiva de brechas",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/nueva-herramienta-interactiva-consultar-notificaciones-brechas-datos-personales",
+      "date": "2026-04-30",
+      "type": "official_release",
+      "note": "Nuevo acceso dinámico a notificaciones de brechas para seguimiento sectorial y tipológico."
+    },
+    {
+      "title": "AEPD Plan de actuación 2026",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/agencia-publica-su-plan-actuacion-2026-y-el-informe-cumplimiento-iniciaitivas-2025",
+      "date": "2026-03-25",
+      "type": "official_release",
+      "note": "32 objetivos operativos y 115 acciones; ejecución 2025 por ejes superior al 99%."
+    },
+    {
+      "title": "EDPB Guidelines 1/2026",
+      "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/guidelines-12026-processing-personal-data_it",
+      "date": "2026-04-16",
+      "type": "public_consultation",
+      "note": "Consulta pública abierta hasta el 25 de junio de 2026 sobre investigación científica."
+    },
+    {
+      "title": "EDPB Opinion 13/2026",
+      "url": "https://www.edpb.europa.eu/system/files/2026-05/edpb_opinion_202613_accreditationrequirement_fi-sa_en.pdf",
+      "date": "2026-05-12",
+      "type": "opinion",
+      "note": "Refuerza consistencia para acreditación de organismos de certificación y supervisión armonizada."
+    },
+    {
+      "title": "EDPS Annual Report 2025",
+      "url": "https://www.edps.europa.eu/press-publications/press-news/press-releases/2026/edpss-annual-report-2025-highlights-record-legislative-consultations-and-ai-transition-within-european-institutions_en",
+      "date": "2026-05-07",
+      "type": "official_release",
+      "note": "Destaca transición supervisora sobre IA y actividad legislativa récord."
+    },
+    {
+      "title": "ICO fine to South Staffordshire",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/",
+      "date": "2026-05-11",
+      "type": "sanction",
+      "note": "Multa de 963.900 libras tras ciberataque y publicación de datos de 633.887 personas."
+    },
+    {
+      "title": "BOE sumario del 21/05/2026",
+      "url": "https://www.boe.es/boe/dias/2026/05/21/",
+      "date": "2026-05-21",
+      "type": "official_gazette",
+      "note": "Revisión del sumario sin novedad central RGPD de alcance general detectada hoy."
+    }
+  ]
+}
