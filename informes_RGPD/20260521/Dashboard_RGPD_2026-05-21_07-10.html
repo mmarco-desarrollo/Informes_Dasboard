@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo RGPD - 2026-05-21 07:10:12 CEST</title>
+  <style>
+    :root {
+      --bg: #09111f;
+      --panel: rgba(17, 28, 47, 0.86);
+      --panel-strong: #0d1728;
+      --line: rgba(145, 178, 220, 0.18);
+      --text: #eef3fb;
+      --muted: #9bb0ce;
+      --blue: #4ea4ff;
+      --green: #42d392;
+      --yellow: #f0bf4c;
+      --orange: #f3924a;
+      --red: #ff6b6b;
+      --soft: #24344f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(78,164,255,0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(66,211,146,0.08), transparent 25%),
+        linear-gradient(180deg, #060c16 0%, #0b1220 52%, #09111f 100%);
+    }
+    .shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+    .hero {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(20,31,53,0.92), rgba(10,18,31,0.92));
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.28);
+      backdrop-filter: blur(10px);
+    }
+    .eyebrow { color: var(--blue); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; }
+    h1 { margin: 8px 0 12px; font-size: 34px; line-height: 1.08; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .hero p { color: var(--muted); line-height: 1.55; }
+    .meta-grid, .action-grid, .kpi-grid, .two-col {
+      display: grid;
+      gap: 14px;
+    }
+    .meta-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 18px;
+    }
+    .meta-card, .kpi-card, .panel, .story-card, .sanction-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+    .meta-card { padding: 14px; }
+    .meta-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .meta-value { font-size: 18px; margin-top: 6px; font-weight: 700; }
+    .action-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 18px;
+    }
+    .action-chip {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.03);
+      font-size: 14px;
+    }
+    .disabled { opacity: 0.65; pointer-events: none; }
+    section { margin-top: 24px; }
+    h2 { font-size: 20px; margin: 0 0 14px; }
+    .kpi-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .kpi-card { padding: 16px; min-height: 146px; }
+    .kpi-title { font-size: 13px; color: var(--muted); }
+    .kpi-value { font-size: 28px; font-weight: 800; margin-top: 8px; }
+    .kpi-state { margin-top: 6px; font-size: 13px; color: #cfe1ff; }
+    .kpi-card p { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .two-col { grid-template-columns: 1.2fr 0.8fr; }
+    .panel { padding: 18px; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin: 0 0 10px; color: var(--text); }
+    .story-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .story-card, .sanction-card { padding: 18px; }
+    .story-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .story-top h3 { margin: 0; font-size: 17px; line-height: 1.25; }
+    .meta { color: var(--muted); font-size: 12px; margin: 8px 0 10px; }
+    .story-card p, .sanction-card p { margin: 8px 0; color: #dce7f9; line-height: 1.5; font-size: 14px; }
+    .story-card a, .sanction-card a, .sources a { color: #8ec8ff; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .badge-critical { background: rgba(255,107,107,0.16); color: #ffb9b9; border-color: rgba(255,107,107,0.34); }
+    .badge-high { background: rgba(243,146,74,0.16); color: #ffd0b0; border-color: rgba(243,146,74,0.34); }
+    .badge-medium { background: rgba(240,191,76,0.16); color: #ffe5a9; border-color: rgba(240,191,76,0.34); }
+    .badge-low { background: rgba(66,211,146,0.16); color: #bff2d8; border-color: rgba(66,211,146,0.34); }
+    .badge-soft { background: rgba(78,164,255,0.14); color: #b9d8ff; border-color: rgba(78,164,255,0.3); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    th, td {
+      padding: 12px 12px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(145,178,220,0.12);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    th { color: #d7e5fb; background: rgba(255,255,255,0.04); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .amount { color: var(--blue); font-weight: 800; }
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .mini-panel {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: rgba(255,255,255,0.025);
+    }
+    .mini-panel h3 { margin: 0 0 10px; font-size: 16px; }
+    .mini-panel dl { margin: 0; display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .mini-panel dt { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+    .mini-panel dd { margin: 3px 0 0; color: var(--text); }
+    .rec-list { list-style: none; padding: 0; margin: 0; }
+    .rec-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(145,178,220,0.12);
+    }
+    .sources li { margin-bottom: 10px; color: var(--muted); }
+    footer {
+      margin-top: 28px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    @media (max-width: 980px) {
+      .hero-grid, .two-col, .story-list, .panel-grid { grid-template-columns: 1fr; }
+      .meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .shell { padding: 16px 12px 42px; }
+      .hero { padding: 18px; border-radius: 20px; }
+      h1 { font-size: 28px; }
+      .meta-grid, .kpi-grid, .action-grid { grid-template-columns: 1fr; }
+      th, td { padding: 10px 8px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">MMarco Seguridad | Apertura ejecutiva de jornada</div>
+          <h1>Informe Ejecutivo RGPD</h1>
+          <p>El entorno de apertura del 21 de mayo de 2026 arranca con presion supervisora sostenida en transparencia, investigacion cientifica, ciberresiliencia y control de brechas.</p>
+          <div class="meta-grid">
+            <div class="meta-card"><div class="meta-label">Fecha y hora</div><div class="meta-value">2026-05-21 07:10:12 CEST</div></div>
+            <div class="meta-card"><div class="meta-label">Nivel global de cumplimiento</div><div class="meta-value">72% estimado</div></div>
+            <div class="meta-card"><div class="meta-label">Riesgo global</div><div class="meta-value">61/100</div></div>
+            <div class="meta-card"><div class="meta-label">Proxima actualizacion</div><div class="meta-value">21/05/2026 22:07 CEST</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="meta-card">
+            <div class="meta-label">Perfil corporativo</div>
+            <div class="meta-value">MMarco Seguridad</div>
+            <p>Ciberseguridad, Blockchain, IA, Telecomunicaciones, RGPD y Proteccion de Datos.</p>
+          </div>
+          <div class="action-grid">
+            <a class="action-chip" href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260521/Dashboard_RGPD_2026-05-21_07-10.html">Abrir dashboard HTML</a>
+            <a class="action-chip" href="https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260521/Dashboard_RGPD_2026-05-21_07-10.pdf">Descargar PDF</a>
+            <a class="action-chip" href="https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_RGPD/20260521">Abrir carpeta diaria en GitHub</a>
+            <a class="action-chip disabled" href="#">Compartir por WhatsApp / Telegram</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>KPI de Vigilancia</h2>
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <div class="kpi-title">Nivel global de cumplimiento</div>
+          <div class="kpi-value">72%</div>
+          <div class="kpi-state">Estimacion IA</div>
+          <p>Tendencia estable con mayor presion en transparencia</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Riesgo global RGPD</div>
+          <div class="kpi-value">61/100</div>
+          <div class="kpi-state">Moderado-Alto</div>
+          <p>Sube por brechas y foco supervisor 2026</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Incidentes RGPD detectados</div>
+          <div class="kpi-value">3</div>
+          <div class="kpi-state">Confirmados en radar</div>
+          <p>Endesa, France Titres, Canvas</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Brechas de datos relevantes</div>
+          <div class="kpi-value">3</div>
+          <div class="kpi-state">Alta visibilidad</div>
+          <p>Afectacion de credenciales, contacto e identificadores</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Reclamaciones AEPD</div>
+          <div class="kpi-value">Sin dato diario</div>
+          <div class="kpi-state">Sin dato verificado</div>
+          <p>Se usa radar institucional externo</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Sanciones publicadas</div>
+          <div class="kpi-value">Sin novedad 7d</div>
+          <div class="kpi-state">Sin dato verificado</div>
+          <p>Se incorporan precedentes oficiales</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Novedades legales</div>
+          <div class="kpi-value">6</div>
+          <div class="kpi-state">Confirmadas</div>
+          <p>AEPD, EDPB, EDPS, BOE, INCIBE</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Consultas AEPD o EDPB</div>
+          <div class="kpi-value">1</div>
+          <div class="kpi-state">Consulta publica</div>
+          <p>Guidelines 1/2026 investigacion cientifica</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">DPIA pendientes</div>
+          <div class="kpi-value">Sin dato interno</div>
+          <div class="kpi-state">Panel estimativo</div>
+          <p>Mantener revisiones en IA y biometria</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Derechos de interesados</div>
+          <div class="kpi-value">Foco alto</div>
+          <div class="kpi-state">Plazos sensibles</div>
+          <p>Transparencia y acceso siguen en foco</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Formacion y concienciacion</div>
+          <div class="kpi-value">Prioridad alta</div>
+          <div class="kpi-state">Reforzar</div>
+          <p>Brechas recientes elevan riesgo humano</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Transferencias internacionales</div>
+          <div class="kpi-value">Atencion activa</div>
+          <div class="kpi-state">Revisar</div>
+          <p>Brasil adecuacion y EE. UU. siguen en radar</p>
+        </article>
+        
+        <article class="kpi-card">
+          <div class="kpi-title">Contratos de encargados</div>
+          <div class="kpi-value">Prioridad alta</div>
+          <div class="kpi-state">Revisar</div>
+          <p>Subencargados y SCC deben auditarse</p>
+        </article>
+        </div>
+    </section>
+
+    <section class="two-col">
+      <div class="panel">
+        <h2>Resumen Ejecutivo</h2>
+        <p><strong>Riesgos principales:</strong></p>
+        <ul><li>insuficiente transparencia e informacion al interesado</li><li>debilidades de seguridad y notificacion de brechas</li><li>encargados y subencargados sin control contractual reforzado</li><li>tratamientos sensibles con IA, biometria o menores sin DPIA robusta</li></ul>
+        <p><strong>Recomendacion ejecutiva:</strong> Priorizar hoy una revision corta de transparencia, brechas, contratos de encargo y tratamientos con datos sensibles o de menores.</p>
+      </div>
+      <div class="panel">
+        <h2>Conclusion Rapida</h2>
+        <ul><li>La AEPD y el EDPB mantienen foco claro en articulos 12, 13 y 14 RGPD.</li><li>Las brechas con alto volumen de datos personales siguen dominando el radar operativo.</li><li>La nueva adecuacion de Brasil reduce friccion juridica, pero no elimina el deber de due diligence.</li><li>Las organizaciones espanolas deben revisar hoy sus clausulas informativas, flujos de brechas y cadena de encargados.</li></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Novedades Legales y Regulatorias</h2>
+      <div class="story-list">
+        <article class="story-card">
+          <div class="story-top">
+            <h3>STS 1590/2026 refuerza que el tratamiento empieza antes de recopilar el dato</h3>
+            <span class="badge badge-high">Alto</span>
+          </div>
+          <div class="meta">AEPD blog | 2026-04-28 | Espana</div>
+          <p><strong>Hecho confirmado:</strong> La AEPD resume que la solicitud de datos personales forma parte del tratamiento y que el cumplimiento debe comenzar en el diseno previo del tratamiento.</p>
+          <p><strong>Interpretacion:</strong> Eleva el riesgo de formularios, procesos de onboarding y peticiones documentales mal justificadas desde su fase de diseno.</p>
+          <p><strong>Riesgo estimado:</strong> Mayor exposicion en RR. HH., compliance, salud laboral y sector publico.</p>
+          <p><strong>Recomendacion automatica:</strong> Revisar minimizacion, proporcionalidad y base juridica antes de pedir nuevos datos.</p>
+          <a href="https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales">Fuente oficial</a>
+        </article>
+        
+        <article class="story-card">
+          <div class="story-top">
+            <h3>AEPD activa participacion espanola en la accion europea 2026 sobre transparencia</h3>
+            <span class="badge badge-high">Alto</span>
+          </div>
+          <div class="meta">AEPD | 2026-03-19 | UE/Espana</div>
+          <p><strong>Hecho confirmado:</strong> La AEPD analizara practicas de responsables publicos y privados sobre articulos 12, 13 y 14 RGPD.</p>
+          <p><strong>Interpretacion:</strong> Es una senal directa de que avisos de privacidad, capas informativas y trazabilidad del deber de informacion pueden ser objeto de contraste supervisor.</p>
+          <p><strong>Riesgo estimado:</strong> Alto para ecosistemas multiweb, apps y proveedores con datos de terceros.</p>
+          <p><strong>Recomendacion automatica:</strong> Auditar hoy clausulas informativas, logica de capas y evidencia de entrega.</p>
+          <a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-participa-en-accion-europea-analizar-transparencia">Fuente oficial</a>
+        </article>
+        
+        <article class="story-card">
+          <div class="story-top">
+            <h3>EDPB abre CEF 2026 sobre transparencia e informacion</h3>
+            <span class="badge badge-high">Alto</span>
+          </div>
+          <div class="meta">EDPB | 2026-03-19 | UE</div>
+          <p><strong>Hecho confirmado:</strong> 25 autoridades europeas participaran en acciones de enforcement o fact-finding sobre obligaciones de transparencia.</p>
+          <p><strong>Interpretacion:</strong> El riesgo ya no es teorico: la transparencia pasa a ser tema de supervision coordinada paneuropea.</p>
+          <p><strong>Riesgo estimado:</strong> Especialmente relevante para empleo, marketing, proveedores cloud y datos obtenidos indirectamente.</p>
+          <p><strong>Recomendacion automatica:</strong> Alinear avisos, registros de actividades y fuentes de datos de terceros.</p>
+          <a href="https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en">Fuente oficial</a>
+        </article>
+        
+        <article class="story-card">
+          <div class="story-top">
+            <h3>Guidelines 1/2026 sobre investigacion cientifica en consulta publica</h3>
+            <span class="badge badge-medium">Medio-Alto</span>
+          </div>
+          <div class="meta">AEPD/EDPB | 2026-04-17 | UE</div>
+          <p><strong>Hecho confirmado:</strong> El EDPB sometio a consulta sus directrices sobre investigacion cientifica hasta el 25 de junio de 2026.</p>
+          <p><strong>Interpretacion:</strong> Afecta a reutilizacion secundaria de datos, consentimiento amplio y gobernanza de proyectos con IA.</p>
+          <p><strong>Riesgo estimado:</strong> Medio-Alto para salud, biotech, analytics y entornos universitarios.</p>
+          <p><strong>Recomendacion automatica:</strong> Revisar gobernanza de reutilizacion de datos y compatibilidad de fines.</p>
+          <a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/comite-europeo-somete-a-consulta-publica-sus-directrices-sobre-tratamiento-con-fines-investigacion-cientifica">Fuente oficial</a>
+        </article>
+        
+        <article class="story-card">
+          <div class="story-top">
+            <h3>EDPB y EDPS piden equilibrio entre ciberseguridad y privacidad en CSA2/NIS2</h3>
+            <span class="badge badge-medium">Medio-Alto</span>
+          </div>
+          <div class="meta">EDPB/EDPS | 2026-03-19 | UE</div>
+          <p><strong>Hecho confirmado:</strong> Respaldan un punto unico de entrada para notificar brechas y piden que los controles de ciberseguridad no desborden el principio de necesidad.</p>
+          <p><strong>Interpretacion:</strong> Las empresas tendran mas presion para coordinar compliance NIS2 y RGPD sin duplicar ni sobreactuar los tratamientos.</p>
+          <p><strong>Riesgo estimado:</strong> Relevante para operadores esenciales e importantes y su cadena TIC.</p>
+          <p><strong>Recomendacion automatica:</strong> Unificar hoy la matriz de incidentes, brechas y escalado legal.</p>
+          <a href="https://www.edpb.europa.eu/news/news/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while_en">Fuente oficial</a>
+        </article>
+        
+        <article class="story-card">
+          <div class="story-top">
+            <h3>Brasil obtiene decision de adecuacion UE</h3>
+            <span class="badge badge-soft">Medio</span>
+          </div>
+          <div class="meta">DOUE/BOE | 2026-01-28 | UE</div>
+          <p><strong>Hecho confirmado:</strong> La Comision declaro adecuado el nivel de proteccion de Brasil conforme al articulo 45 RGPD.</p>
+          <p><strong>Interpretacion:</strong> Reduce friccion en determinadas transferencias, pero no sustituye la evaluacion de proveedores y contratos.</p>
+          <p><strong>Riesgo estimado:</strong> Medio para empresas con servicios regionales, BPO o soporte LATAM.</p>
+          <p><strong>Recomendacion automatica:</strong> Actualizar mapa de transferencias y distinguir adecuacion, SCC y DPF.</p>
+          <a href="https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-80106">Fuente oficial</a>
+        </article>
+        </div>
+    </section>
+
+    <section>
+      <h2>Incidentes y Brechas Recientes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th><th>Tipo</th><th>Severidad</th><th>Descripcion</th><th>Datos afectados</th><th>Sector</th><th>Estado</th><th>Accion recomendada</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>2026-05-14</td>
+          <td>brecha de datos</td>
+          <td>alta</td>
+          <td>INCIBE-CERT publica incidente en la agencia francesa France Titres con millones de ciudadanos potencialmente afectados; investigacion abierta.</td>
+          <td>nombre, email, fecha de nacimiento, telefono, direccion postal</td>
+          <td>identidad digital / administracion publica</td>
+          <td>hecho confirmado; alcance exacto aun bajo investigacion</td>
+          <td>Refuerzo de segmentacion, trazabilidad y notificacion temprana; revisar procedimientos de exposicion masiva.</td>
+        </tr>
+        
+        <tr>
+          <td>2026-05-19</td>
+          <td>encargado de tratamiento comprometido</td>
+          <td>alta</td>
+          <td>INCIBE-CERT recoge el incidente de Instructure/Canvas con exposicion de datos academicos y mensajes privados.</td>
+          <td>nombres, emails, identificadores academicos, mensajes privados</td>
+          <td>educacion / SaaS</td>
+          <td>hecho confirmado</td>
+          <td>Revisar contratos de encargo, subencargados, logs y notificacion en servicios educativos cloud.</td>
+        </tr>
+        
+        <tr>
+          <td>2026-01-13</td>
+          <td>acceso no autorizado</td>
+          <td>alta</td>
+          <td>INCIBE informa de filtracion comunicada por Endesa a clientes con posible afectacion de identificativos, contacto, DNI y eventualmente IBAN.</td>
+          <td>datos identificativos, contacto, DNI, datos contractuales, posible IBAN</td>
+          <td>energia</td>
+          <td>hecho confirmado comunicado por la compania</td>
+          <td>Mantener vigilancia reforzada en utilities, autenticacion, atencion al cliente y fraude derivado.</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Sanciones y Resoluciones de Referencia</h2>
+      <div class="story-list">
+        <article class="sanction-card">
+          <div class="story-top">
+            <h3>Xfera Moviles S.A.</h3>
+            <span class="amount">4.000.000 EUR</span>
+          </div>
+          <div class="meta">Memoria AEPD 2025</div>
+          <p><strong>Motivo:</strong> brecha de confidencialidad por ciberataque</p>
+          <p><strong>Leccion aprendida:</strong> Seguridad insuficiente y deber de integridad incumplido disparan multas multimillonarias.</p>
+          <p><strong>Accion preventiva:</strong> Revisar controles art. 32, hardening y pruebas de deteccion.</p>
+          <a href="https://www.aepd.es/memorias/memoria-aepd-2025.pdf">Referencia oficial</a>
+        </article>
+        
+        <article class="sanction-card">
+          <div class="story-top">
+            <h3>Centros Comerciales Carrefour, S.A.</h3>
+            <span class="amount">3.200.000 EUR</span>
+          </div>
+          <div class="meta">Memoria AEPD 2025</div>
+          <p><strong>Motivo:</strong> brecha de datos con incumplimientos de arts. 5.1.f, 32 y 34 RGPD</p>
+          <p><strong>Leccion aprendida:</strong> No basta con contener la brecha: tambien se sanciona la comunicacion deficiente a afectados.</p>
+          <p><strong>Accion preventiva:</strong> Ensayar playbooks de notificacion a autoridad y afectados.</p>
+          <a href="https://www.aepd.es/memorias/memoria-aepd-2025.pdf">Referencia oficial</a>
+        </article>
+        
+        <article class="sanction-card">
+          <div class="story-top">
+            <h3>Universitat Internacional Valenciana</h3>
+            <span class="amount">650.000 EUR</span>
+          </div>
+          <div class="meta">Memoria AEPD 2025</div>
+          <p><strong>Motivo:</strong> uso de biometria e IA en examenes online sin excepcion valida y sin minimizacion</p>
+          <p><strong>Leccion aprendida:</strong> Biometria + IA + ausencia de alternativa menos invasiva = alto riesgo sancionador.</p>
+          <p><strong>Accion preventiva:</strong> No desplegar biometria sin base juridica solida, DPIA y analisis de necesidad.</p>
+          <a href="https://www.aepd.es/memorias/memoria-aepd-2025.pdf">Referencia oficial</a>
+        </article>
+        
+        <article class="sanction-card">
+          <div class="story-top">
+            <h3>Ayuntamiento no identificado en criterio AEPD</h3>
+            <span class="amount">Resolucion interpretativa publicada</span>
+          </div>
+          <div class="meta">Criterios juridicos AEPD</div>
+          <p><strong>Motivo:</strong> sobres de notificacion revelaban informacion de embargo y apremio</p>
+          <p><strong>Leccion aprendida:</strong> La confidencialidad tambien falla en soportes fisicos y comunicaciones aparentemente rutinarias.</p>
+          <p><strong>Accion preventiva:</strong> Eliminar datos sensibles visibles en sobres, etiquetas y mensajeria.</p>
+          <a href="https://www.aepd.es/informes-y-resoluciones/criterios-juridicos-aepd/sobres-de-notificacion-no-deben-revelar-informacion-sobre-su-contenido">Referencia oficial</a>
+        </article>
+        </div>
+    </section>
+
+    <section class="two-col">
+      <div class="panel">
+        <h2>Riesgo por Area</h2>
+        <table>
+          <thead><tr><th>Area</th><th>Nivel</th><th>Lectura ejecutiva</th></tr></thead>
+          <tbody><tr><td>Gestion de datos personales</td><td><span class="badge badge-medium">Medio-Alto</span></td><td>Presion sobre minimizacion y base juridica desde el diseno</td></tr><tr><td>Derechos de los interesados</td><td><span class="badge badge-high">Alto</span></td><td>Transparencia, acceso y supresion siguen en foco europeo</td></tr><tr><td>Seguridad de la informacion</td><td><span class="badge badge-high">Alto</span></td><td>Brechas recientes y sanciones de referencia elevadas</td></tr><tr><td>Encargados de tratamiento</td><td><span class="badge badge-high">Alto</span></td><td>Riesgo de subencargados y SaaS criticos</td></tr><tr><td>Transferencias internacionales</td><td><span class="badge badge-soft">Medio</span></td><td>Brasil mejora contexto, EE. UU. y terceros paises siguen vigilados</td></tr><tr><td>Documentacion y politicas</td><td><span class="badge badge-medium">Medio-Alto</span></td><td>Se necesita prueba de cumplimiento operativo</td></tr><tr><td>Registro de actividades</td><td><span class="badge badge-soft">Medio</span></td><td>Debe alinearse con transparencia y fines reales</td></tr><tr><td>Evaluaciones DPIA</td><td><span class="badge badge-high">Alto</span></td><td>Prioridad en IA, biometria, menores y observacion sistematica</td></tr><tr><td>Consentimiento</td><td><span class="badge badge-medium">Medio-Alto</span></td><td>Cookies y reutilizacion secundaria siguen sensibles</td></tr><tr><td>Cookies</td><td><span class="badge badge-medium">Medio-Alto</span></td><td>Digital Omnibus y fatiga de banners mantienen presion</td></tr><tr><td>Formacion y concienciacion</td><td><span class="badge badge-high">Alto</span></td><td>Fraude, phishing y error humano siguen activos</td></tr><tr><td>Notificacion de brechas</td><td><span class="badge badge-high">Alto</span></td><td>Riesgo juridico fuerte si falla la evaluacion o la comunicacion</td></tr></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h2>Alertas Activas</h2>
+        <ul>
+          <li>Foco supervisor europeo 2026 en transparencia e informacion al interesado.</li>
+          <li>Brechas con alto impacto reputacional en identidad digital, energia y plataformas educativas.</li>
+          <li>IA, biometria y tratamientos de menores mantienen prioridad alta de DPIA.</li>
+          <li>Riesgo de transferencias y subencargados opacos en cadenas SaaS.</li>
+          <li>Cookies y consentimiento siguen expuestos a revisiones de evidencia real.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Derechos, DPIA, Transferencias, Cookies y Encargados</h2>
+      <div class="panel-grid">
+        <div class="mini-panel">
+          <h3>Derechos de los interesados</h3>
+          <dl>
+            <dt>Acceso</dt><dd>riesgo medio-alto</dd>
+            <dt>Supresion</dt><dd>foco supervisor europeo reciente</dd>
+            <dt>Decisiones automatizadas</dt><dd>vigilar IA y scoring</dd>
+            <dt>Plazo de respuesta</dt><dd>mantener respuesta dentro de 30 dias</dd>
+          </dl>
+        </div>
+        <div class="mini-panel">
+          <h3>DPIA</h3>
+          <dl>
+            <dt>Pendientes</dt><dd>recomendado revisar cartera de IA, biometria, menores y tracking intensivo</dd>
+            <dt>Riesgo alto</dt><dd>IA agentica, biometria, videovigilancia avanzada, perfiles sensibles</dd>
+            <dt>Proximas revisiones</dt><dd>recomendacion operativa trimestral</dd>
+          </dl>
+        </div>
+        <div class="mini-panel">
+          <h3>Transferencias internacionales</h3>
+          <dl>
+            <dt>Fuera del EEE</dt><dd>mapa a revisar</dd>
+            <dt>Adecuacion</dt><dd>Brasil confirmado; revisar proveedores aplicables</dd>
+            <dt>EE. UU.</dt><dd>seguir monitorizando DPF y contratos</dd>
+          </dl>
+        </div>
+        <div class="mini-panel">
+          <h3>Cookies y consentimiento</h3>
+          <dl>
+            <dt>Banner</dt><dd>revisar configuracion granular</dd>
+            <dt>Guia AEPD</dt><dd>alineacion recomendada hoy</dd>
+            <dt>Riesgo terceros</dt><dd>alto si no hay inventario y bloqueo previo</dd>
+          </dl>
+        </div>
+        <div class="mini-panel">
+          <h3>Encargados de tratamiento</h3>
+          <dl>
+            <dt>Proveedores criticos</dt><dd>educacion cloud, CRM, marketing, soporte TI</dd>
+            <dt>Subencargados</dt><dd>revisar transparencia y autorizacion</dd>
+            <dt>Transferencias asociadas</dt><dd>auditar fuera del EEE</dd>
+          </dl>
+        </div>
+        <div class="mini-panel">
+          <h3>Formacion y concienciacion</h3>
+          <dl>
+            <dt>Riesgo</dt><dd>alto si no hay reciclaje reciente</dd>
+            <dt>Areas debiles</dt><dd>phishing, deber de secreto, brechas, minimizacion</dd>
+            <dt>Proxima formacion</dt><dd>sugerida en 15 dias</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div class="panel">
+        <h2>Recomendaciones Clave</h2>
+        <ul class="rec-list">
+        <li>
+          <span class="badge badge-critical">Critica</span>
+          <span>Auditar hoy los avisos de privacidad, capas informativas y evidencia de entrega en web, formularios y HR.</span>
+        </li>
+        
+        <li>
+          <span class="badge badge-critical">Critica</span>
+          <span>Verificar el playbook de brechas: deteccion, evaluacion 72h, decision de comunicar y plantilla para afectados.</span>
+        </li>
+        
+        <li>
+          <span class="badge badge-high">Alta</span>
+          <span>Revisar contratos de encargo y subencargados de SaaS criticos, especialmente educacion, marketing, soporte y analitica.</span>
+        </li>
+        
+        <li>
+          <span class="badge badge-high">Alta</span>
+          <span>Confirmar si existen tratamientos con biometria, IA o menores sin DPIA vigente y con alternativas menos invasivas.</span>
+        </li>
+        
+        <li>
+          <span class="badge badge-high">Alta</span>
+          <span>Actualizar el mapa de transferencias internacionales distinguiendo adecuacion, SCC, DPF y excepciones.</span>
+        </li>
+        
+        <li>
+          <span class="badge badge-medium">Media</span>
+          <span>Revisar cookies de terceros y granularidad real del banner conforme a la guia AEPD.</span>
+        </li>
+        
+        <li>
+          <span class="badge badge-medium">Media</span>
+          <span>Lanzar microformacion interna sobre phishing con datos personales y canales de escalado.</span>
+        </li>
+        
+        <li>
+          <span class="badge badge-low">Baja</span>
+          <span>Preparar posicion interna para futuras simplificaciones regulatorias sin rebajar controles esenciales.</span>
+        </li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Seccion IA</h2>
+        <p><strong>Riesgo RGPD estimado:</strong> 61/100 - moderado alto</p>
+        <p><strong>Areas de mayor exposicion:</strong> transparencia, brechas, encargados, IA y biometria, transferencias</p>
+        <p><strong>Tendencias previstas:</strong></p>
+        <ul><li>mas supervision europea sobre transparencia y fuentes indirectas de datos</li><li>continuidad sancionadora en seguridad, notificacion y contratos de encargo</li><li>mayor escrutinio de reutilizacion de datos con fines de investigacion e IA</li></ul>
+        <p><strong>Impacto empresarial:</strong> posible incremento de exposicion en ventas, HR, atencion al cliente, marketing y proveedores cloud</p>
+        <p><strong>Prioridad:</strong> alta | <strong>Urgencia:</strong> alta</p>
+        <p><strong>Aviso:</strong> Prediccion analitica generada por IA; no constituye hecho confirmado.</p>
+      </div>
+    </section>
+
+    <section class="panel sources">
+      <h2>Fuentes Principales</h2>
+      <ul><li><a href="https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales">AEPD blog - momento de inicio del tratamiento</a> <span>2026-04-28</span></li><li><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-participa-en-accion-europea-analizar-transparencia">AEPD - accion europea sobre transparencia</a> <span>2026-03-19</span></li><li><a href="https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en">EDPB - CEF 2026 transparencia</a> <span>2026-03-19</span></li><li><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/comite-europeo-somete-a-consulta-publica-sus-directrices-sobre-tratamiento-con-fines-investigacion-cientifica">AEPD - directrices investigacion cientifica</a> <span>2026-04-17</span></li><li><a href="https://www.edpb.europa.eu/news/news/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while_en">EDPB/EDPS - opinion conjunta CSA2/NIS2</a> <span>2026-03-19</span></li><li><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/agencia-publica-su-plan-actuacion-2026-y-el-informe-cumplimiento-iniciaitivas-2025">AEPD - plan de actuacion 2026</a> <span>2026-03-25</span></li><li><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/las-autoridades-proteccion-datos-publican-decalogo-contratacion-plataformas-educativas">AEPD - decálogo plataformas educativas</a> <span>2026-03-23</span></li><li><a href="https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-80106">BOE/DOUE - decision de adecuacion Brasil</a> <span>2026-01-28</span></li><li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-en-la-agencia-nacional-de-identidad-digital-de">INCIBE-CERT - France Titres</a> <span>2026-05-14</span></li><li><a href="https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-digital-en-instructure-y-su-impacto-en-la">INCIBE-CERT - Instructure Canvas</a> <span>2026-05-19</span></li><li><a href="https://www.incibe.es/index.php/node/599026">INCIBE - Endesa</a> <span>2026-01-13</span></li><li><a href="https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf">INCIBE - Balance de Ciberseguridad 2025</a> <span>2026-02-09</span></li><li><a href="https://www.aepd.es/memorias/memoria-aepd-2025.pdf">AEPD - Memoria 2025</a> <span>2026-05</span></li><li><a href="https://www.aepd.es/informes-y-resoluciones/criterios-juridicos-aepd/sobres-de-notificacion-no-deben-revelar-informacion-sobre-su-contenido">AEPD - confidencialidad en sobres de notificacion</a> <span>2025-11-27</span></li></ul>
+    </section>
+
+    <footer>
+      <strong>Nota legal:</strong> Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional.<br>
+      <strong>MMarco Seguridad</strong> | https://mmarcoseguridad.com | mmarco.seguridad@gmail.com | +34 656 33 93 55
+    </footer>
+  </div>
+</body>
+</html>
