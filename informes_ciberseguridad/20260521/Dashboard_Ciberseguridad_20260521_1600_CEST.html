@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo de Ciberseguridad | 16:00 CEST | MMarco Seguridad</title>
+  <style>
+:root {
+  --bg: #07111f;
+  --panel: #0d1b2e;
+  --panel-2: #10243c;
+  --line: rgba(143, 179, 219, 0.18);
+  --text: #edf4ff;
+  --muted: #9eb0c9;
+  --accent: #57c7ff;
+  --accent-2: #19d3a2;
+  --warn: #ffc857;
+  --high: #ff7a6b;
+  --critical: #ff4d6d;
+  --shadow: 0 24px 60px rgba(0,0,0,0.28);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(25, 211, 162, 0.12), transparent 28%),
+    radial-gradient(circle at top left, rgba(87, 199, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, #06101d 0%, #091627 45%, #06101c 100%);
+}
+.container { width: min(1220px, calc(100% - 32px)); margin: 0 auto; }
+.hero {
+  padding: 38px 0 22px;
+}
+.hero-shell {
+  background: linear-gradient(135deg, rgba(14,29,47,0.95), rgba(8,19,35,0.9));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.hero-top {
+  padding: 28px 30px 20px;
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 26px;
+}
+.brand { color: var(--accent); text-transform: uppercase; font-size: 12px; letter-spacing: 1.6px; font-weight: 700; }
+.hero h1 { margin: 8px 0 10px; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; }
+.subtitle { color: var(--muted); font-size: 16px; line-height: 1.55; max-width: 820px; }
+.badges { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.badge { padding: 8px 12px; border-radius: 999px; background: rgba(87,199,255,0.12); border:1px solid rgba(87,199,255,0.22); color:#dff3ff; font-size:13px; }
+.badge.critical { background: rgba(255,77,109,0.14); border-color: rgba(255,77,109,0.28); color:#ffd7df; }
+.meta-box {
+  background: linear-gradient(180deg, rgba(16,36,60,0.95), rgba(10,25,42,0.95));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+.meta-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.meta-item { padding: 10px 0; border-bottom:1px solid rgba(143,179,219,0.12); }
+.meta-item:nth-last-child(-n+2) { border-bottom:0; }
+.label { display:block; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:1.1px; margin-bottom:6px; }
+.value { font-size:15px; font-weight:600; }
+.kpis {
+  padding: 0 30px 28px;
+  display:grid;
+  grid-template-columns: repeat(6, minmax(0,1fr));
+  gap: 14px;
+}
+.kpi {
+  background: rgba(255,255,255,0.02);
+  border:1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+.kpi .num { font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+.kpi .desc { color: var(--muted); font-size: 13px; line-height: 1.35; }
+.section { padding: 18px 0; }
+.section-title { font-size: 22px; margin: 0 0 14px; }
+.grid-2 { display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; }
+.grid-3 { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.card {
+  background: linear-gradient(180deg, rgba(13,27,46,0.96), rgba(9,20,34,0.96));
+  border:1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.card h3 { margin: 0 0 12px; font-size: 17px; }
+.card p, .card li { color: #d8e5f7; line-height: 1.55; }
+.muted { color: var(--muted); }
+.list { margin: 0; padding-left: 18px; }
+.list li { margin-bottom: 10px; }
+.finding { padding: 14px 0; border-bottom: 1px solid rgba(143,179,219,0.12); }
+.finding:last-child { border-bottom: 0; padding-bottom: 0; }
+.tag {
+  display:inline-block; font-size:12px; font-weight:700; padding: 5px 9px; border-radius: 999px;
+  border:1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color:#eef5ff; margin-bottom:8px;
+}
+.tag.confirmed { background: rgba(25,211,162,0.14); border-color: rgba(25,211,162,0.28); }
+.tag.estimate { background: rgba(255,200,87,0.14); border-color: rgba(255,200,87,0.28); }
+table {
+  width:100%; border-collapse: collapse; font-size: 14px;
+}
+th, td { padding: 12px 10px; text-align:left; border-bottom:1px solid rgba(143,179,219,0.12); vertical-align: top; }
+th { color:#b6c8de; font-size:12px; text-transform: uppercase; letter-spacing: 1px; }
+.sev-critical, .sev-high { font-weight:700; }
+.sev-critical { color:#ff93a9; }
+.sev-high { color:#ffcf7e; }
+.alert-row { display:grid; grid-template-columns: 180px 1fr 210px; gap: 14px; padding: 12px 0; border-bottom:1px solid rgba(143,179,219,0.12); }
+.alert-row:last-child { border-bottom:0; }
+.alert-name { font-weight:700; }
+.alert-urgency { color:#ffd0d7; }
+.source-list { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.source-item { border:1px solid var(--line); border-radius: 12px; padding: 14px; background: rgba(255,255,255,0.02); }
+.source-item a { color: #9fdefe; text-decoration: none; }
+.footer {
+  padding: 20px 0 36px;
+}
+.footer-note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  border-top: 1px solid rgba(143,179,219,0.12);
+  padding-top: 16px;
+}
+@media (max-width: 1100px) {
+  .kpis { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .grid-2, .hero-top, .grid-3, .source-list { grid-template-columns: 1fr; }
+  .alert-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .container { width: min(100% - 20px, 1220px); }
+  .hero-top, .kpis, .card { padding-left: 18px; padding-right: 18px; }
+  .kpis { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .hero h1 { font-size: 30px; }
+  th, td { padding: 10px 8px; }
+}
+</style>
+</head>
+<body>
+  <div class="container hero">
+    <div class="hero-shell">
+      <div class="hero-top">
+        <div>
+          <div class="brand">MMarco Seguridad</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class="subtitle">Edición programada de las 16:00 CEST. Síntesis ejecutiva orientada a dirección, con foco en superficie expuesta, campañas activas, vulnerabilidades críticas y decisiones de mitigación inmediatas.</p>
+          <div class="badges">
+            <span class="badge critical">Nivel global de amenaza: ALTO</span>
+            <span class="badge">Tendencia 24h: Al alza moderada</span>
+            <span class="badge">Próxima actualización: 20:00 CEST</span>
+          </div>
+        </div>
+        <div class="meta-box">
+          <div class="meta-grid">
+            <div class="meta-item"><span class="label">Fecha exacta</span><span class="value">2026-05-21 16:11:00 CEST</span></div>
+            <div class="meta-item"><span class="label">Zona horaria</span><span class="value">Europe/Madrid</span></div>
+            <div class="meta-item"><span class="label">Estado IA de riesgo</span><span class="value">Presión alta</span></div>
+            <div class="meta-item"><span class="label">Siguiente edición</span><span class="value">2026-05-21 20:00:00 CEST</span></div>
+            <div class="meta-item"><span class="label">Audiencia</span><span class="value">Dirección / Ejecutivo</span></div>
+            <div class="meta-item"><span class="label">Base de decisión</span><span class="value">Fuentes oficiales y vendors</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="num">5</div><div class="desc">Alertas críticas priorizadas</div></div>
+        <div class="kpi"><div class="num">3</div><div class="desc">Campañas o actividades relevantes</div></div>
+        <div class="kpi"><div class="num">6</div><div class="desc">CVEs críticas priorizadas</div></div>
+        <div class="kpi"><div class="num">7</div><div class="desc">Publicaciones oficiales revisadas</div></div>
+        <div class="kpi"><div class="num">6</div><div class="desc">Sectores más expuestos</div></div>
+        <div class="kpi"><div class="num">Al alza moderada</div><div class="desc">Tendencia observada</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="grid-2">
+      <div class="card">
+        <h2 class="section-title">Resumen Ejecutivo</h2>
+        <p>La presión de amenaza sigue en nivel alto por la coincidencia de vulnerabilidades críticas recién publicadas, actividad de malware con capacidad de evasión y señales de explotación oportunista sobre activos expuestos.</p>
+        <ul class="list"><li>Exposición de consolas y aplicaciones web críticas con fallo de autenticación o SQL injection.</li><li>Abuso de binarios firmados y cadenas de distribución maliciosa con apariencia legítima.</li><li>Escalada local en Linux y persistencia avanzada en campañas de ciberespionaje y ransomware.</li></ul>
+        <p><strong>Sectores más afectados:</strong> Gobierno, Tecnología, Logística, Sanidad, Educación, Finanzas</p>
+        <p><strong>Técnicas más usadas:</strong> Bypass de autenticación, SQL injection, Malvertising/SEO poisoning, Uso fraudulento de certificados, Escalada local de privilegios</p>
+        <p><strong>Nivel de exposición estimado:</strong> Elevada para organizaciones con superficie expuesta en Cisco SD-WAN/Secure Workload, Drupal con PostgreSQL, Windows sin parche de mayo y entornos Linux sin control de endurecimiento local.</p>
+        <p><strong>Recomendación principal:</strong> Reducir ventana de exposición en menos de 24 horas sobre activos expuestos a Internet y reforzar la caza de señales de compromiso ligadas a binarios firmados, campañas de robo de credenciales y abuso de privilegios.</p>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Conclusión Rápida</h2>
+        <div class="finding"><span class="tag confirmed">Hecho confirmado</span><p>Cisco y Drupal concentran la prioridad técnica inmediata sobre superficie expuesta.</p></div>
+        <div class="finding"><span class="tag confirmed">Hecho confirmado</span><p>El boletín de Microsoft de mayo amplía el volumen de parcheo urgente con 14 fallos críticos.</p></div>
+        <div class="finding"><span class="tag confirmed">Hecho confirmado</span><p>Fox Tempest confirma que el abuso de software aparentemente confiable sigue siendo un vector operativo real para ransomware.</p></div>
+        <div class="finding"><span class="tag confirmed">Hecho confirmado</span><p>Dirty Frag eleva el riesgo post-compromiso en Linux y exige endurecimiento local además de parcheo.</p></div>
+        <div class="finding"><span class="tag estimate">Estimación IA</span><p>La ventana de 48-72 horas posteriores a estas publicaciones es la más sensible para explotación oportunista y escaneo masivo.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="card">
+      <h2 class="section-title">Hallazgos Clave</h2>
+      <div class="finding"><span class="tag confirmed">Hecho confirmado</span><h3>Cisco SD-WAN mantiene prioridad máxima</h3><p>Cisco publicó el 14/05/2026 CVE-2026-20182 con CVSS 10.0 para Catalyst SD-WAN Controller por bypass de autenticación remoto con privilegios administrativos.</p></div><div class="finding"><span class="tag confirmed">Hecho confirmado</span><h3>Drupal publica fallo altamente crítico explotable por usuarios anónimos</h3><p>Drupal confirmó el 20/05/2026 CVE-2026-9082, SQL injection en instalaciones con PostgreSQL, con impacto potencial en confidencialidad, integridad y posible RCE.</p></div><div class="finding"><span class="tag confirmed">Hecho confirmado</span><h3>Microsoft desmonta Fox Tempest pero persiste el riesgo operacional</h3><p>El 19/05/2026 Microsoft detalló la disrupción de Fox Tempest, servicio de malware-signing-as-a-service vinculado a Rhysida, Oyster, Lumma Stealer y Vidar.</p></div><div class="finding"><span class="tag confirmed">Hecho confirmado</span><h3>Dirty Frag incrementa el riesgo post-compromiso en Linux</h3><p>Microsoft describió el 08/05/2026 una vulnerabilidad de escalada local en Linux con actividad pública de prueba de concepto, útil para elevar privilegios hasta root tras una intrusión inicial.</p></div><div class="finding"><span class="tag confirmed">Hecho confirmado</span><h3>INCIBE concentra varias alertas críticas en el ciclo del 19-21 de mayo</h3><p>INCIBE destaca avisos críticos recientes en Cisco Secure Workload, ChromaDB, Drupal, NGINX, HPE Unified OSS y Exchange Server, reforzando la necesidad de revisión rápida de exposición.</p></div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="grid-2">
+      <div class="card">
+        <h2 class="section-title">Alertas Activas</h2>
+        <div class="alert-row"><div><div class="alert-name">CVE-2026-20182 en Cisco Catalyst SD-WAN Controller</div><div class="alert-urgency">Crítica</div></div><div>Bypass de autenticación remoto con obtención de privilegios administrativos en controladores de red.</div><div>Aplicar actualización del fabricante y verificar exposición de vManage/vSmart y registros de control connections.</div></div><div class="alert-row"><div><div class="alert-name">CVE-2026-9082 en Drupal core</div><div class="alert-urgency">Crítica</div></div><div>SQL injection sobre sitios con PostgreSQL, explotable por usuarios anónimos.</div><div>Actualizar a versiones corregidas, revisar WAF y priorizar revisión de sitios públicos Drupal con PostgreSQL.</div></div><div class="alert-row"><div><div class="alert-name">Boletín Microsoft mayo 2026</div><div class="alert-urgency">Alta</div></div><div>137 vulnerabilidades totales y 14 críticas; destacan Netlogon, DNS Client y Dynamics 365 On-Premises.</div><div>Acelerar despliegue de parches de mayo, empezando por servidores expuestos, identidad y aplicaciones de negocio.</div></div><div class="alert-row"><div><div class="alert-name">Dirty Frag en Linux</div><div class="alert-urgency">Alta</div></div><div>Amplía el riesgo tras una intrusión inicial al facilitar elevación local a root con PoC pública.</div><div>Verificar kernels vulnerables, limitar acceso local y aumentar detección de elevación de privilegios.</div></div><div class="alert-row"><div><div class="alert-name">Fox Tempest y uso fraudulento de certificados</div><div class="alert-urgency">Alta</div></div><div>Facilita la distribución de malware firmado y reduce fricción operativa para actores de ransomware.</div><div>Bloquear binarios sospechosos incluso si están firmados, reforzar reputación, SmartScreen/EDR y hunting de IOCs.</div></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Malware y Ransomware</h2>
+        <p><strong>Familias activas o relevantes:</strong> Rhysida, Oyster, Lumma Stealer, Vidar, Kazuar</p>
+        <p><strong>Sectores objetivo:</strong> Gobierno, Diplomacia, Tecnología, Logística, Sanidad, Educación, Finanzas</p>
+        <p><strong>Técnicas observadas:</strong> Malware firmado fraudulentamente, Malvertising, SEO poisoning, Backdoors modulares, Persistencia encubierta</p>
+        <p><strong>Tendencia:</strong> Persistencia alta del ecosistema de robo de credenciales y ransomware con mejoras de evasión y confianza aparente.</p>
+        <p><strong>IOC:</strong> Existen IOCs en la publicación de Microsoft sobre Fox Tempest. No se incluyen en este informe ejecutivo para evitar sobrecarga; deben incorporarse al hunting técnico.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="card">
+      <h2 class="section-title">Vulnerabilidades Críticas Priorizadas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>CVE</th><th>Producto afectado</th><th>CVSS</th><th>Severidad</th><th>Estado de explotación</th><th>Parche</th><th>Prioridad</th><th>Fuente</th>
+          </tr>
+        </thead>
+        <tbody><tr><td>CVE-2026-20182</td><td>Cisco Catalyst SD-WAN Controller</td><td>10.0</td><td class="sev-critical">Crítica</td><td>Sin confirmación pública de explotación en la fuente consultada</td><td>Sí</td><td>Crítica inmediata</td><td>Cisco Security Advisory</td></tr><tr><td>CVE-2026-9082</td><td>Drupal core con PostgreSQL</td><td>No indicado en la fuente consultada</td><td class="sev-critical">Altamente crítica</td><td>Explotable por usuarios anónimos; la ficha la marca como teórica</td><td>Sí</td><td>Crítica inmediata</td><td>Drupal Security Advisory</td></tr><tr><td>CVE-2026-41089</td><td>Windows Netlogon</td><td>Crítica</td><td class="sev-critical">Crítica</td><td>No en la fuente de INCIBE</td><td>Sí</td><td>Alta</td><td>INCIBE / Microsoft mayo 2026</td></tr><tr><td>CVE-2026-41096</td><td>Windows DNS Client</td><td>Crítica</td><td class="sev-critical">Crítica</td><td>No en la fuente de INCIBE</td><td>Sí</td><td>Alta</td><td>INCIBE / Microsoft mayo 2026</td></tr><tr><td>CVE-2026-42833</td><td>Microsoft Dynamics 365 On-Premises</td><td>Crítica</td><td class="sev-critical">Crítica</td><td>No en la fuente de INCIBE</td><td>Sí</td><td>Alta</td><td>INCIBE / Microsoft mayo 2026</td></tr><tr><td>CVE-2026-42898</td><td>Microsoft Dynamics 365 On-Premises</td><td>Crítica</td><td class="sev-critical">Crítica</td><td>No en la fuente de INCIBE</td><td>Sí</td><td>Alta</td><td>INCIBE / Microsoft mayo 2026</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="grid-3">
+      <div class="card">
+        <h2 class="section-title">Noticias Relevantes</h2>
+        <ul class="list"><li>Microsoft (19/05/2026) expuso y desarticuló parte de la infraestructura de Fox Tempest, proveedor de malware firmado usado por afiliados de ransomware.</li><li>Drupal (20/05/2026) publicó SA-CORE-2026-004 por SQL injection altamente crítica en sitios con PostgreSQL.</li><li>Cisco (14/05/2026) publicó CVE-2026-20182 con CVSS 10.0 en Catalyst SD-WAN Controller.</li><li>Microsoft (14/05/2026) detalló la evolución de Kazuar como botnet P2P modular vinculada a Secret Blizzard.</li><li>INCIBE (21/05/2026) destacó nuevos avisos críticos en Cisco Secure Workload y otras plataformas empresariales expuestas.</li></ul>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Recomendaciones</h2>
+        <h3>Crítica</h3><ul class="list"><li>Aplicar en menos de 24 horas los parches o mitigaciones de Cisco SD-WAN expuesto y Drupal con PostgreSQL.</li><li>Acelerar el despliegue del boletín Microsoft de mayo 2026 sobre servidores, identidad y aplicaciones on-prem críticas.</li><li>Lanzar hunting específico sobre binarios firmados anómalos, Oyster, Lumma Stealer, Vidar y actividad de persistencia relacionada.</li></ul>
+        <h3>Alta</h3><ul class="list"><li>Revisar exposición de Linux susceptibles a Dirty Frag y endurecer el acceso local y privilegiado.</li><li>Auditar controles de confianza en software firmado, allowlisting y reputación en EDR/Proxy/Correo.</li><li>Verificar logs de autenticación, cambios de privilegios y actividad administrativa en activos de red y CMS expuestos.</li></ul>
+        <h3>Media</h3><ul class="list"><li>Revalidar inventario de activos expuestos a Internet y dependencias críticas de terceros.</li><li>Actualizar reglas WAF/IDS para inyección SQL, bypass de autenticación y descarga de instaladores falsos.</li></ul>
+        <h3>Baja</h3><ul class="list"><li>Ejecutar ejercicio de mesa sobre respuesta a malware firmado y robo de credenciales en SaaS y endpoints.</li><li>Reforzar formación sobre descargas fraudulentas y campañas de marca suplantada.</li></ul>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Sección IA</h2>
+        <span class="tag estimate">Análisis predictivo o estimativo</span>
+        <p><strong>Riesgo global estimado:</strong> Alto</p>
+        <p><strong>Predicción próxima:</strong> Es probable un aumento de escaneo y explotación oportunista durante las próximas 48-72 horas contra aplicaciones web y consolas de administración recién parcheadas.</p>
+        <p><strong>Sectores más expuestos:</strong> Tecnología, Logística, Administración pública, Sanidad, Educación</p>
+        <p><strong>Vulnerabilidades prioritarias:</strong> CVE-2026-20182, CVE-2026-9082, CVE-2026-41089, CVE-2026-41096</p>
+        <p><strong>Probabilidad estimada de aumento de ataques:</strong> 65%</p>
+        <p><strong>Recomendación automática:</strong> Priorizar reducción de superficie expuesta, parcheo acelerado y caza de actividad post-explotación ligada a credenciales, binarios firmados y movimientos laterales.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="card">
+      <h2 class="section-title">Fuentes</h2>
+      <div class="source-list"><div class="source-item"><strong>Cisco Security Advisory - CVE-2026-20182</strong><div class="muted">2026-05-14 · Vendor advisory</div><div><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW</a></div></div><div class="source-item"><strong>Drupal SA-CORE-2026-004</strong><div class="muted">2026-05-20 · Vendor advisory</div><div><a href="https://www.drupal.org/sa-core-2026-004">https://www.drupal.org/sa-core-2026-004</a></div></div><div class="source-item"><strong>Microsoft Security Blog - Fox Tempest</strong><div class="muted">2026-05-19 · Threat intelligence</div><div><a href="https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/">https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/</a></div></div><div class="source-item"><strong>Microsoft Security Blog - Dirty Frag</strong><div class="muted">2026-05-08 · Threat research</div><div><a href="https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/">https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/</a></div></div><div class="source-item"><strong>Microsoft Security Blog - Kazuar</strong><div class="muted">2026-05-14 · Threat intelligence</div><div><a href="https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/">https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/</a></div></div><div class="source-item"><strong>INCIBE - Avisos recientes</strong><div class="muted">2026-05-21 · Official advisory portal</div><div><a href="https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos">https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos</a></div></div><div class="source-item"><strong>INCIBE - Actualizaciones de seguridad de Microsoft de mayo de 2026</strong><div class="muted">2026-05-12 · Official advisory summary</div><div><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026">https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026</a></div></div><div class="source-item"><strong>CISA Known Exploited Vulnerabilities Catalog</strong><div class="muted">Consulta de referencia vigente · Authoritative baseline</div><div><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></div></div></div>
+    </div>
+  </div>
+
+  <div class="container footer">
+    <div class="footer-note">
+      <p><strong>Limitaciones de entrega:</strong> No se genera PDF en esta edición porque no hay un canal binario externo verificado dentro de esta ejecución para publicarlo con la misma fiabilidad que HTML y JSON. No se generan imágenes por página en esta edición para no degradar la entrega principal. Google Drive se mantiene como opcional y no se usa en esta ejecución.</p>
+      <p>Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.</p>
+    </div>
+  </div>
+</body>
+</html>
