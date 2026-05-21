@@ -1,0 +1,511 @@
+{
+  "report_meta": {
+    "title": "Informe Ejecutivo RGPD",
+    "mode": "apertura",
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sánchez",
+    "generated_at": "2026-05-21 07:10:12 CEST",
+    "timezone": "Europe/Madrid",
+    "report_date_key": "20260521",
+    "next_update_estimated": "2026-05-21 22:07 CEST",
+    "global_compliance": {
+      "score_estimated": 72,
+      "label": "Medio-Alto",
+      "nature": "estimacion_ia_sobre_radar_regulatorio_externo"
+    },
+    "global_risk": {
+      "score_estimated": 61,
+      "label": "Moderado-Alto",
+      "nature": "estimacion_ia_sobre exposicion externa y tendencia supervisora"
+    },
+    "links": {
+      "html": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260521/Dashboard_RGPD_2026-05-21_07-10.html",
+      "pdf": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260521/Dashboard_RGPD_2026-05-21_07-10.pdf",
+      "json": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260521/Dashboard_RGPD_2026-05-21_07-10.json",
+      "github_folder": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_RGPD/20260521"
+    }
+  },
+  "kpis": [
+    [
+      "Nivel global de cumplimiento",
+      "72%",
+      "Estimacion IA",
+      "Tendencia estable con mayor presion en transparencia"
+    ],
+    [
+      "Riesgo global RGPD",
+      "61/100",
+      "Moderado-Alto",
+      "Sube por brechas y foco supervisor 2026"
+    ],
+    [
+      "Incidentes RGPD detectados",
+      "3",
+      "Confirmados en radar",
+      "Endesa, France Titres, Canvas"
+    ],
+    [
+      "Brechas de datos relevantes",
+      "3",
+      "Alta visibilidad",
+      "Afectacion de credenciales, contacto e identificadores"
+    ],
+    [
+      "Reclamaciones AEPD",
+      "Sin dato diario",
+      "Sin dato verificado",
+      "Se usa radar institucional externo"
+    ],
+    [
+      "Sanciones publicadas",
+      "Sin novedad 7d",
+      "Sin dato verificado",
+      "Se incorporan precedentes oficiales"
+    ],
+    [
+      "Novedades legales",
+      "6",
+      "Confirmadas",
+      "AEPD, EDPB, EDPS, BOE, INCIBE"
+    ],
+    [
+      "Consultas AEPD o EDPB",
+      "1",
+      "Consulta publica",
+      "Guidelines 1/2026 investigacion cientifica"
+    ],
+    [
+      "DPIA pendientes",
+      "Sin dato interno",
+      "Panel estimativo",
+      "Mantener revisiones en IA y biometria"
+    ],
+    [
+      "Derechos de interesados",
+      "Foco alto",
+      "Plazos sensibles",
+      "Transparencia y acceso siguen en foco"
+    ],
+    [
+      "Formacion y concienciacion",
+      "Prioridad alta",
+      "Reforzar",
+      "Brechas recientes elevan riesgo humano"
+    ],
+    [
+      "Transferencias internacionales",
+      "Atencion activa",
+      "Revisar",
+      "Brasil adecuacion y EE. UU. siguen en radar"
+    ],
+    [
+      "Contratos de encargados",
+      "Prioridad alta",
+      "Revisar",
+      "Subencargados y SCC deben auditarse"
+    ]
+  ],
+  "executive_summary": {
+    "status": "El entorno de apertura del 21 de mayo de 2026 arranca con presion supervisora sostenida en transparencia, investigacion cientifica, ciberresiliencia y control de brechas.",
+    "top_risks": [
+      "insuficiente transparencia e informacion al interesado",
+      "debilidades de seguridad y notificacion de brechas",
+      "encargados y subencargados sin control contractual reforzado",
+      "tratamientos sensibles con IA, biometria o menores sin DPIA robusta"
+    ],
+    "quick_points": [
+      "La AEPD y el EDPB mantienen foco claro en articulos 12, 13 y 14 RGPD.",
+      "Las brechas con alto volumen de datos personales siguen dominando el radar operativo.",
+      "La nueva adecuacion de Brasil reduce friccion juridica, pero no elimina el deber de due diligence.",
+      "Las organizaciones espanolas deben revisar hoy sus clausulas informativas, flujos de brechas y cadena de encargados."
+    ],
+    "executive_recommendation": "Priorizar hoy una revision corta de transparencia, brechas, contratos de encargo y tratamientos con datos sensibles o de menores."
+  },
+  "legal_updates": [
+    {
+      "title": "STS 1590/2026 refuerza que el tratamiento empieza antes de recopilar el dato",
+      "date": "2026-04-28",
+      "jurisdiction": "Espana",
+      "source": "AEPD blog",
+      "impact": "Alto",
+      "confirmed_fact": "La AEPD resume que la solicitud de datos personales forma parte del tratamiento y que el cumplimiento debe comenzar en el diseno previo del tratamiento.",
+      "interpretation": "Eleva el riesgo de formularios, procesos de onboarding y peticiones documentales mal justificadas desde su fase de diseno.",
+      "estimated_risk": "Mayor exposicion en RR. HH., compliance, salud laboral y sector publico.",
+      "recommendation": "Revisar minimizacion, proporcionalidad y base juridica antes de pedir nuevos datos.",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales"
+    },
+    {
+      "title": "AEPD activa participacion espanola en la accion europea 2026 sobre transparencia",
+      "date": "2026-03-19",
+      "jurisdiction": "UE/Espana",
+      "source": "AEPD",
+      "impact": "Alto",
+      "confirmed_fact": "La AEPD analizara practicas de responsables publicos y privados sobre articulos 12, 13 y 14 RGPD.",
+      "interpretation": "Es una senal directa de que avisos de privacidad, capas informativas y trazabilidad del deber de informacion pueden ser objeto de contraste supervisor.",
+      "estimated_risk": "Alto para ecosistemas multiweb, apps y proveedores con datos de terceros.",
+      "recommendation": "Auditar hoy clausulas informativas, logica de capas y evidencia de entrega.",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-participa-en-accion-europea-analizar-transparencia"
+    },
+    {
+      "title": "EDPB abre CEF 2026 sobre transparencia e informacion",
+      "date": "2026-03-19",
+      "jurisdiction": "UE",
+      "source": "EDPB",
+      "impact": "Alto",
+      "confirmed_fact": "25 autoridades europeas participaran en acciones de enforcement o fact-finding sobre obligaciones de transparencia.",
+      "interpretation": "El riesgo ya no es teorico: la transparencia pasa a ser tema de supervision coordinada paneuropea.",
+      "estimated_risk": "Especialmente relevante para empleo, marketing, proveedores cloud y datos obtenidos indirectamente.",
+      "recommendation": "Alinear avisos, registros de actividades y fuentes de datos de terceros.",
+      "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en"
+    },
+    {
+      "title": "Guidelines 1/2026 sobre investigacion cientifica en consulta publica",
+      "date": "2026-04-17",
+      "jurisdiction": "UE",
+      "source": "AEPD/EDPB",
+      "impact": "Medio-Alto",
+      "confirmed_fact": "El EDPB sometio a consulta sus directrices sobre investigacion cientifica hasta el 25 de junio de 2026.",
+      "interpretation": "Afecta a reutilizacion secundaria de datos, consentimiento amplio y gobernanza de proyectos con IA.",
+      "estimated_risk": "Medio-Alto para salud, biotech, analytics y entornos universitarios.",
+      "recommendation": "Revisar gobernanza de reutilizacion de datos y compatibilidad de fines.",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/comite-europeo-somete-a-consulta-publica-sus-directrices-sobre-tratamiento-con-fines-investigacion-cientifica"
+    },
+    {
+      "title": "EDPB y EDPS piden equilibrio entre ciberseguridad y privacidad en CSA2/NIS2",
+      "date": "2026-03-19",
+      "jurisdiction": "UE",
+      "source": "EDPB/EDPS",
+      "impact": "Medio-Alto",
+      "confirmed_fact": "Respaldan un punto unico de entrada para notificar brechas y piden que los controles de ciberseguridad no desborden el principio de necesidad.",
+      "interpretation": "Las empresas tendran mas presion para coordinar compliance NIS2 y RGPD sin duplicar ni sobreactuar los tratamientos.",
+      "estimated_risk": "Relevante para operadores esenciales e importantes y su cadena TIC.",
+      "recommendation": "Unificar hoy la matriz de incidentes, brechas y escalado legal.",
+      "url": "https://www.edpb.europa.eu/news/news/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while_en"
+    },
+    {
+      "title": "Brasil obtiene decision de adecuacion UE",
+      "date": "2026-01-28",
+      "jurisdiction": "UE",
+      "source": "DOUE/BOE",
+      "impact": "Medio",
+      "confirmed_fact": "La Comision declaro adecuado el nivel de proteccion de Brasil conforme al articulo 45 RGPD.",
+      "interpretation": "Reduce friccion en determinadas transferencias, pero no sustituye la evaluacion de proveedores y contratos.",
+      "estimated_risk": "Medio para empresas con servicios regionales, BPO o soporte LATAM.",
+      "recommendation": "Actualizar mapa de transferencias y distinguir adecuacion, SCC y DPF.",
+      "url": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-80106"
+    }
+  ],
+  "incidents": [
+    {
+      "date": "2026-05-14",
+      "type": "brecha de datos",
+      "severity": "alta",
+      "description": "INCIBE-CERT publica incidente en la agencia francesa France Titres con millones de ciudadanos potencialmente afectados; investigacion abierta.",
+      "data_affected": "nombre, email, fecha de nacimiento, telefono, direccion postal",
+      "sector": "identidad digital / administracion publica",
+      "status": "hecho confirmado; alcance exacto aun bajo investigacion",
+      "recommended_action": "Refuerzo de segmentacion, trazabilidad y notificacion temprana; revisar procedimientos de exposicion masiva.",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-en-la-agencia-nacional-de-identidad-digital-de"
+    },
+    {
+      "date": "2026-05-19",
+      "type": "encargado de tratamiento comprometido",
+      "severity": "alta",
+      "description": "INCIBE-CERT recoge el incidente de Instructure/Canvas con exposicion de datos academicos y mensajes privados.",
+      "data_affected": "nombres, emails, identificadores academicos, mensajes privados",
+      "sector": "educacion / SaaS",
+      "status": "hecho confirmado",
+      "recommended_action": "Revisar contratos de encargo, subencargados, logs y notificacion en servicios educativos cloud.",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-digital-en-instructure-y-su-impacto-en-la"
+    },
+    {
+      "date": "2026-01-13",
+      "type": "acceso no autorizado",
+      "severity": "alta",
+      "description": "INCIBE informa de filtracion comunicada por Endesa a clientes con posible afectacion de identificativos, contacto, DNI y eventualmente IBAN.",
+      "data_affected": "datos identificativos, contacto, DNI, datos contractuales, posible IBAN",
+      "sector": "energia",
+      "status": "hecho confirmado comunicado por la compania",
+      "recommended_action": "Mantener vigilancia reforzada en utilities, autenticacion, atencion al cliente y fraude derivado.",
+      "url": "https://www.incibe.es/index.php/node/599026"
+    }
+  ],
+  "sanctions": [
+    {
+      "entity": "Xfera Moviles S.A.",
+      "source": "Memoria AEPD 2025",
+      "reason": "brecha de confidencialidad por ciberataque",
+      "amount": "4.000.000 EUR",
+      "lesson": "Seguridad insuficiente y deber de integridad incumplido disparan multas multimillonarias.",
+      "preventive_action": "Revisar controles art. 32, hardening y pruebas de deteccion.",
+      "url": "https://www.aepd.es/memorias/memoria-aepd-2025.pdf"
+    },
+    {
+      "entity": "Centros Comerciales Carrefour, S.A.",
+      "source": "Memoria AEPD 2025",
+      "reason": "brecha de datos con incumplimientos de arts. 5.1.f, 32 y 34 RGPD",
+      "amount": "3.200.000 EUR",
+      "lesson": "No basta con contener la brecha: tambien se sanciona la comunicacion deficiente a afectados.",
+      "preventive_action": "Ensayar playbooks de notificacion a autoridad y afectados.",
+      "url": "https://www.aepd.es/memorias/memoria-aepd-2025.pdf"
+    },
+    {
+      "entity": "Universitat Internacional Valenciana",
+      "source": "Memoria AEPD 2025",
+      "reason": "uso de biometria e IA en examenes online sin excepcion valida y sin minimizacion",
+      "amount": "650.000 EUR",
+      "lesson": "Biometria + IA + ausencia de alternativa menos invasiva = alto riesgo sancionador.",
+      "preventive_action": "No desplegar biometria sin base juridica solida, DPIA y analisis de necesidad.",
+      "url": "https://www.aepd.es/memorias/memoria-aepd-2025.pdf"
+    },
+    {
+      "entity": "Ayuntamiento no identificado en criterio AEPD",
+      "source": "Criterios juridicos AEPD",
+      "reason": "sobres de notificacion revelaban informacion de embargo y apremio",
+      "amount": "Resolucion interpretativa publicada",
+      "lesson": "La confidencialidad tambien falla en soportes fisicos y comunicaciones aparentemente rutinarias.",
+      "preventive_action": "Eliminar datos sensibles visibles en sobres, etiquetas y mensajeria.",
+      "url": "https://www.aepd.es/informes-y-resoluciones/criterios-juridicos-aepd/sobres-de-notificacion-no-deben-revelar-informacion-sobre-su-contenido"
+    }
+  ],
+  "risk_areas": [
+    [
+      "Gestion de datos personales",
+      "Medio-Alto",
+      "Presion sobre minimizacion y base juridica desde el diseno"
+    ],
+    [
+      "Derechos de los interesados",
+      "Alto",
+      "Transparencia, acceso y supresion siguen en foco europeo"
+    ],
+    [
+      "Seguridad de la informacion",
+      "Alto",
+      "Brechas recientes y sanciones de referencia elevadas"
+    ],
+    [
+      "Encargados de tratamiento",
+      "Alto",
+      "Riesgo de subencargados y SaaS criticos"
+    ],
+    [
+      "Transferencias internacionales",
+      "Medio",
+      "Brasil mejora contexto, EE. UU. y terceros paises siguen vigilados"
+    ],
+    [
+      "Documentacion y politicas",
+      "Medio-Alto",
+      "Se necesita prueba de cumplimiento operativo"
+    ],
+    [
+      "Registro de actividades",
+      "Medio",
+      "Debe alinearse con transparencia y fines reales"
+    ],
+    [
+      "Evaluaciones DPIA",
+      "Alto",
+      "Prioridad en IA, biometria, menores y observacion sistematica"
+    ],
+    [
+      "Consentimiento",
+      "Medio-Alto",
+      "Cookies y reutilizacion secundaria siguen sensibles"
+    ],
+    [
+      "Cookies",
+      "Medio-Alto",
+      "Digital Omnibus y fatiga de banners mantienen presion"
+    ],
+    [
+      "Formacion y concienciacion",
+      "Alto",
+      "Fraude, phishing y error humano siguen activos"
+    ],
+    [
+      "Notificacion de brechas",
+      "Alto",
+      "Riesgo juridico fuerte si falla la evaluacion o la comunicacion"
+    ]
+  ],
+  "operational_panels": {
+    "rights": {
+      "access": "riesgo medio-alto",
+      "rectification": "sin dato interno verificado",
+      "erasure": "foco supervisor europeo reciente",
+      "opposition": "sin dato interno verificado",
+      "restriction": "sin dato interno verificado",
+      "portability": "sin dato interno verificado",
+      "automated_decisions": "vigilar IA y scoring",
+      "sla": "mantener respuesta dentro de 30 dias",
+      "pending_requests": "sin dato interno verificado",
+      "overdue_requests": "sin dato interno verificado"
+    },
+    "dpia": {
+      "completed": "sin dato interno verificado",
+      "in_progress": "sin dato interno verificado",
+      "pending": "recomendado revisar cartera de IA, biometria, menores y tracking intensivo",
+      "high_risk": "IA agentica, biometria, videovigilancia avanzada, perfiles sensibles",
+      "last_completed": "sin dato interno verificado",
+      "next_reviews": "recomendacion operativa trimestral"
+    },
+    "transfers": {
+      "outside_eee": "mapa a revisar",
+      "scc": "verificar version, anexos y TIA",
+      "adequacy": "Brasil confirmado; revisar proveedores aplicables",
+      "us_transfers": "seguir monitorizando DPF y contratos",
+      "pending_actions": "inventario, proveedor critico, subencargado, logs de exportacion"
+    },
+    "cookies": {
+      "banner": "revisar configuracion granular",
+      "valid_consents": "sin dato interno verificado",
+      "expired_consents": "sin dato interno verificado",
+      "rejections": "sin dato interno verificado",
+      "aepd_guide": "alineacion recomendada hoy",
+      "third_party_risk": "alto si no hay inventario y bloqueo previo"
+    },
+    "processors": {
+      "pending_contracts": "sin dato interno verificado",
+      "updated_contracts": "sin dato interno verificado",
+      "critical_vendors": "educacion cloud, CRM, marketing, soporte TI",
+      "subprocessors": "revisar transparencia y autorizacion",
+      "associated_transfers": "auditar fuera del EEE"
+    },
+    "training": {
+      "completed": "sin dato interno verificado",
+      "pending": "refuerzo recomendado",
+      "next_session": "sugerida en 15 dias",
+      "lowest_compliance_areas": "phishing, deber de secreto, brechas, minimizacion",
+      "risk": "alto si no hay reciclaje reciente"
+    }
+  },
+  "recommendations": [
+    [
+      "Critica",
+      "Auditar hoy los avisos de privacidad, capas informativas y evidencia de entrega en web, formularios y HR."
+    ],
+    [
+      "Critica",
+      "Verificar el playbook de brechas: deteccion, evaluacion 72h, decision de comunicar y plantilla para afectados."
+    ],
+    [
+      "Alta",
+      "Revisar contratos de encargo y subencargados de SaaS criticos, especialmente educacion, marketing, soporte y analitica."
+    ],
+    [
+      "Alta",
+      "Confirmar si existen tratamientos con biometria, IA o menores sin DPIA vigente y con alternativas menos invasivas."
+    ],
+    [
+      "Alta",
+      "Actualizar el mapa de transferencias internacionales distinguiendo adecuacion, SCC, DPF y excepciones."
+    ],
+    [
+      "Media",
+      "Revisar cookies de terceros y granularidad real del banner conforme a la guia AEPD."
+    ],
+    [
+      "Media",
+      "Lanzar microformacion interna sobre phishing con datos personales y canales de escalado."
+    ],
+    [
+      "Baja",
+      "Preparar posicion interna para futuras simplificaciones regulatorias sin rebajar controles esenciales."
+    ]
+  ],
+  "ai_section": {
+    "estimated_rgpd_risk": "61/100 - moderado alto",
+    "exposure_areas": [
+      "transparencia",
+      "brechas",
+      "encargados",
+      "IA y biometria",
+      "transferencias"
+    ],
+    "predicted_trends": [
+      "mas supervision europea sobre transparencia y fuentes indirectas de datos",
+      "continuidad sancionadora en seguridad, notificacion y contratos de encargo",
+      "mayor escrutinio de reutilizacion de datos con fines de investigacion e IA"
+    ],
+    "automatic_recommendation": "concentrar la jornada en evidencia documental y gobierno operativo, no solo en politicas declarativas",
+    "action_priority": "alta",
+    "business_impact": "posible incremento de exposicion en ventas, HR, atencion al cliente, marketing y proveedores cloud",
+    "urgency": "alta",
+    "disclaimer": "Prediccion analitica generada por IA; no constituye hecho confirmado."
+  },
+  "sources": [
+    [
+      "AEPD blog - momento de inicio del tratamiento",
+      "2026-04-28",
+      "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales"
+    ],
+    [
+      "AEPD - accion europea sobre transparencia",
+      "2026-03-19",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-participa-en-accion-europea-analizar-transparencia"
+    ],
+    [
+      "EDPB - CEF 2026 transparencia",
+      "2026-03-19",
+      "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en"
+    ],
+    [
+      "AEPD - directrices investigacion cientifica",
+      "2026-04-17",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/comite-europeo-somete-a-consulta-publica-sus-directrices-sobre-tratamiento-con-fines-investigacion-cientifica"
+    ],
+    [
+      "EDPB/EDPS - opinion conjunta CSA2/NIS2",
+      "2026-03-19",
+      "https://www.edpb.europa.eu/news/news/2026/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while_en"
+    ],
+    [
+      "AEPD - plan de actuacion 2026",
+      "2026-03-25",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/agencia-publica-su-plan-actuacion-2026-y-el-informe-cumplimiento-iniciaitivas-2025"
+    ],
+    [
+      "AEPD - decálogo plataformas educativas",
+      "2026-03-23",
+      "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/las-autoridades-proteccion-datos-publican-decalogo-contratacion-plataformas-educativas"
+    ],
+    [
+      "BOE/DOUE - decision de adecuacion Brasil",
+      "2026-01-28",
+      "https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-80106"
+    ],
+    [
+      "INCIBE-CERT - France Titres",
+      "2026-05-14",
+      "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-en-la-agencia-nacional-de-identidad-digital-de"
+    ],
+    [
+      "INCIBE-CERT - Instructure Canvas",
+      "2026-05-19",
+      "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/incidente-de-seguridad-digital-en-instructure-y-su-impacto-en-la"
+    ],
+    [
+      "INCIBE - Endesa",
+      "2026-01-13",
+      "https://www.incibe.es/index.php/node/599026"
+    ],
+    [
+      "INCIBE - Balance de Ciberseguridad 2025",
+      "2026-02-09",
+      "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf"
+    ],
+    [
+      "AEPD - Memoria 2025",
+      "2026-05",
+      "https://www.aepd.es/memorias/memoria-aepd-2025.pdf"
+    ],
+    [
+      "AEPD - confidencialidad en sobres de notificacion",
+      "2025-11-27",
+      "https://www.aepd.es/informes-y-resoluciones/criterios-juridicos-aepd/sobres-de-notificacion-no-deben-revelar-informacion-sobre-su-contenido"
+    ]
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional."
+}
