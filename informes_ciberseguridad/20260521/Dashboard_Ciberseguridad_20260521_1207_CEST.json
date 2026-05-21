@@ -1,0 +1,352 @@
+{
+  "brand": {
+    "name": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "website": "https://mmarcoseguridad.com",
+    "timezone": "Europe/Madrid"
+  },
+  "report": {
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "run_id": "20260521_1207_CEST",
+    "generated_at": "21/05/2026 12:07:58 CEST",
+    "next_update": "21/05/2026 16:00:00 CEST",
+    "global_threat_level": "ALTO",
+    "threat_trend_24h": "Empeora ligeramente frente a la ventana anterior",
+    "ai_risk_state": "ALTO",
+    "scope_note": "KPIs basados en la muestra priorizada de fuentes oficiales y fabricantes revisada para esta edicion; no equivalen a telemetria global de Internet."
+  },
+  "kpis": [
+    {
+      "label": "Alertas activas priorizadas",
+      "value": 6,
+      "note": "Cisco, Palo Alto, Drupal, Ivanti, Android y Siemens/ICS"
+    },
+    {
+      "label": "CVEs criticas priorizadas",
+      "value": 5,
+      "note": "CVE-2026-20182, CVE-2026-0300, CVE-2026-9082, CVE-2026-6973, CVE-2026-0073"
+    },
+    {
+      "label": "Campanas activas monitorizadas",
+      "value": 3,
+      "note": "Fox Tempest, Teams+A0Backdoor, Kimsuky QR phishing"
+    },
+    {
+      "label": "Sectores mas expuestos",
+      "value": 5,
+      "note": "Infraestructura critica, sanidad, financiero, educacion y administraciones/OT"
+    },
+    {
+      "label": "DDoS confirmados en la muestra",
+      "value": "N/D",
+      "note": "Sin base homogenea suficiente en las fuentes revisadas de esta edicion"
+    },
+    {
+      "label": "Ransomware reportado en fuentes",
+      "value": 2,
+      "note": "Rhysida y actividad asociada a Vanilla Tempest/Fox Tempest"
+    }
+  ],
+  "executive_summary": {
+    "global_status": "El nivel global de ciberamenaza se mantiene en ALTO por la coincidencia de explotacion activa en appliances expuestos, una nueva vulnerabilidad altamente critica en Drupal y actividad sostenida de campanas con fuerte componente de ingenieria social.",
+    "main_risks": [
+      "Explotacion activa de dispositivos perimetrales y controladores de red con acceso expuesto.",
+      "Riesgo elevado en portales de autenticacion, firewalls y servicios de gestion accesibles desde Internet.",
+      "Incremento del uso combinado de ingenieria social, malware firmado y acceso remoto legitimo para preparar intrusiones y ransomware.",
+      "Impacto potencial alto en organizaciones con presencia OT/ICS, sanidad, finanzas, educacion y pymes con madurez limitada."
+    ],
+    "most_affected_sectors": [
+      "Infraestructura critica y entornos OT/ICS",
+      "Sanidad",
+      "Financiero",
+      "Educacion",
+      "Administracion publica y proveedores TIC"
+    ],
+    "most_used_techniques": [
+      "Bypass de autenticacion y RCE en edge appliances",
+      "SQL injection en aplicaciones web expuestas",
+      "Suplantacion de soporte tecnico en plataformas colaborativas",
+      "Quishing y robo de sesion/identidad",
+      "Uso fraudulento de firma de codigo para aumentar confianza del malware"
+    ],
+    "estimated_exposure": "Alta para organizaciones con portales expuestos, SD-WAN, PAN-OS User-ID, Drupal sobre PostgreSQL, EPMM, Android corporativo y activos industriales Siemens.",
+    "main_recommendation": "Priorizar en las proximas 24 horas una campana de reduccion de superficie expuesta: revisar accesibilidad desde Internet, aplicar parches de Cisco/Palo Alto/Drupal/Ivanti/Android donde aplique y reforzar control operativo sobre accesos remotos y portales de autenticacion.",
+    "quick_conclusion": [
+      "La prioridad numero uno son los sistemas edge y de autenticacion expuestos a Internet.",
+      "Drupal con PostgreSQL entra en prioridad inmediata por criticidad alta y explotabilidad anonima.",
+      "La mezcla de malware firmado, quishing y soporte falso via Teams mantiene alta la probabilidad de intrusiones iniciales exitosas.",
+      "Los entornos OT e industriales siguen con una presion relevante por la acumulacion de vulnerabilidades criticas en Siemens."
+    ]
+  },
+  "incidents_and_activity": [
+    {
+      "name": "Fox Tempest y ecosistema de malware firmado",
+      "status": "Hecho confirmado",
+      "date": "2026-05-19",
+      "summary": "Microsoft anuncio acciones legales y tecnicas contra Fox Tempest, servicio que desde mayo de 2025 facilitaba malware firmado y que fue usado para distribuir Lumma Stealer, Vidar, Oyster y ransomware como Rhysida.",
+      "impact": "Miles de maquinas infectadas y redes comprometidas a escala global segun Microsoft.",
+      "sectors": [
+        "Educacion",
+        "Sanidad",
+        "Organizaciones criticas"
+      ]
+    },
+    {
+      "name": "Campana de suplantacion por Microsoft Teams con A0Backdoor",
+      "status": "Hecho confirmado",
+      "date": "2026-04-09",
+      "summary": "INCIBE resume una campana activa que combina email bombing, suplantacion de soporte por Teams y Quick Assist para desplegar A0Backdoor y preparar persistencia, exfiltracion y posible ransomware.",
+      "impact": "Especial riesgo para entidades financieras y sanitarias y para empresas con procesos de soporte remoto poco controlados.",
+      "sectors": [
+        "Financiero",
+        "Sanidad"
+      ]
+    },
+    {
+      "name": "Kimsuky y quishing dirigido",
+      "status": "Hecho confirmado",
+      "date": "2026-01-08",
+      "summary": "El FBI mantiene alerta sobre el uso de codigos QR maliciosos por Kimsuky para desviar usuarios a paginas de robo de credenciales y secuestro de identidad.",
+      "impact": "Alta relevancia para cargos directivos, think tanks, academia y entidades con alto valor geopolitico.",
+      "sectors": [
+        "Gobierno",
+        "Academia",
+        "ONG",
+        "Direccion corporativa"
+      ]
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation": "Confirmada en KEV / explotacion activa",
+      "patch": "Disponible",
+      "mitigation_priority": "Critica inmediata",
+      "notes": "Bypass de autenticacion que puede permitir privilegios administrativos y manipulacion de la SD-WAN fabric.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182"
+    },
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3",
+      "severity": "Critica",
+      "exploitation": "Ataques observados / explotacion limitada",
+      "patch": "Disponible o ETA 2026-05-28 segun rama",
+      "mitigation_priority": "Critica inmediata",
+      "notes": "RCE preautenticado con privilegios root en PA-Series y VM-Series si el portal esta expuesto.",
+      "source": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "cve": "CVE-2026-9082",
+      "product": "Drupal core con PostgreSQL",
+      "cvss": "N/D por CVSS; Drupal clasifica riesgo Highly critical 20/25",
+      "severity": "Muy critica",
+      "exploitation": "Sin confirmacion publica de explotacion en masa; explotable por usuarios anonimos",
+      "patch": "Disponible",
+      "mitigation_priority": "Critica inmediata",
+      "notes": "SQL injection que puede derivar en divulgacion, escalada o RCE; afecta especialmente a instalaciones sobre PostgreSQL.",
+      "source": "https://www.drupal.org/sa-core-2026-004"
+    },
+    {
+      "cve": "CVE-2026-6973",
+      "product": "Ivanti Endpoint Manager Mobile (EPMM)",
+      "cvss": "7.2",
+      "severity": "Alta",
+      "exploitation": "Incluida en CISA KEV",
+      "patch": "Disponible",
+      "mitigation_priority": "Alta inmediata",
+      "notes": "RCE para usuario autenticado con acceso administrativo; prioridad elevada por contexto KEV.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-6973"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android / adbd",
+      "cvss": "N/D en el aviso INCIBE",
+      "severity": "Critica",
+      "exploitation": "No confirmada en el aviso revisado",
+      "patch": "Dependiente del fabricante",
+      "mitigation_priority": "Alta",
+      "notes": "Puede permitir RCE cercana o adyacente sin interaccion del usuario en dispositivos vulnerables.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026"
+    },
+    {
+      "cve": "Multiples CVEs criticas Siemens mayo 2026",
+      "product": "Siemens / Ruggedcom / Simatic / Opcenter",
+      "cvss": "Multiple",
+      "severity": "Critica",
+      "exploitation": "No confirmada en el aviso revisado",
+      "patch": "Disponible segun producto",
+      "mitigation_priority": "Alta",
+      "notes": "INCIBE resume 22 vulnerabilidades criticas con impacto relevante en entornos industriales y de infraestructura critica.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026"
+    }
+  ],
+  "malware_and_ransomware": {
+    "families": [
+      "A0Backdoor",
+      "Lumma Stealer",
+      "Vidar",
+      "Oyster",
+      "Rhysida"
+    ],
+    "target_sectors": [
+      "Sanidad",
+      "Financiero",
+      "Educacion",
+      "Infraestructura critica"
+    ],
+    "techniques": [
+      "Email bombing",
+      "Soporte falso por Teams",
+      "Quick Assist",
+      "Firmado fraudulento de malware",
+      "Quishing"
+    ],
+    "main_iocs_note": "Esta edicion prioriza sintesis ejecutiva. IOCs tecnicos detallados deben extraerse caso a caso desde los avisos fuente antes de accion operativa.",
+    "trend": "Persistencia de vectores de acceso inicial y preparacion para ransomware; no se observa relajacion de riesgo.",
+    "spread_level": "Alto en organizaciones con servicios expuestos o soporte remoto debilmente gobernado."
+  },
+  "important_news": [
+    {
+      "title": "Microsoft desarticula parcialmente Fox Tempest",
+      "date": "2026-05-19",
+      "type": "Ransomware / malware signing as a service",
+      "summary": "Refuerza la tendencia de profesionalizacion del cibercrimen y del abuso de cadenas de confianza para malware.",
+      "source": "https://blogs.microsoft.com/on-the-issues/2026/05/19/disrupting-fox-tempest-a-cybercrime-service/"
+    },
+    {
+      "title": "Drupal publica SA-CORE-2026-004",
+      "date": "2026-05-20",
+      "type": "Vulnerabilidad critica",
+      "summary": "SQL injection altamente critica para sitios con PostgreSQL, explotable por usuarios anonimos.",
+      "source": "https://www.drupal.org/sa-core-2026-004"
+    },
+    {
+      "title": "INCIBE resume 137 vulnerabilidades del Patch Tuesday de Microsoft",
+      "date": "2026-05-13",
+      "type": "Boletin de seguridad",
+      "summary": "14 criticas, 99 altas y 24 medias; mantiene presion alta sobre parque Windows/Microsoft empresarial.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026"
+    },
+    {
+      "title": "Siemens acumula 22 vulnerabilidades criticas en su comunicado mensual",
+      "date": "2026-05-12",
+      "type": "OT / ICS",
+      "summary": "Aumenta el riesgo para industria, energia y operadores con huella OT o equipamiento Ruggedcom/Simatic.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026"
+    }
+  ],
+  "active_alerts": [
+    "Revisar exposicion publica de Cisco SD-WAN y aplicar remediacion urgente por CVE-2026-20182.",
+    "Restringir o deshabilitar PAN-OS User-ID Authentication Portal en interfaces no confiables hasta confirmar version fija.",
+    "Actualizar Drupal inmediatamente en entornos PostgreSQL y revisar roles/capacidades que interactuen con Twig.",
+    "Actualizar Ivanti EPMM a versiones corregidas y revisar accesos administrativos.",
+    "Acelerar parcheado Android en flota corporativa y validar fecha de parche por fabricante.",
+    "Elevar vigilancia sobre soporte remoto por Teams, Quick Assist y quishing en perfiles ejecutivos."
+  ],
+  "executive_recommendations": {
+    "critica": [
+      "Bloquear o limitar desde Internet portales de autenticacion, consolas SD-WAN y servicios edge hasta validar estado de parcheo.",
+      "Aplicar en menos de 24 horas las actualizaciones o mitigaciones de Cisco SD-WAN, PAN-OS y Drupal afectado.",
+      "Lanzar comunicacion interna de alerta sobre soporte falso por Teams y QR maliciosos para perfiles con acceso privilegiado."
+    ],
+    "alta": [
+      "Revisar inventario de activos expuestos y confirmar si existen despliegues Drupal con PostgreSQL, EPMM y equipos Siemens afectados.",
+      "Forzar MFA robusta resistente a robo de sesion donde sea viable y revisar privilegios de administracion remota.",
+      "Aumentar monitorizacion sobre Quick Assist, firmas de binarios anomales, cambios en SD-WAN y accesos a portales captivos."
+    ],
+    "media": [
+      "Preparar ejercicio rapido de respuesta para intrusiones originadas por soporte remoto y por appliances perimetrales.",
+      "Validar segmentacion OT/IT y planes de contingencia para activos Siemens o entornos industriales similares."
+    ],
+    "baja": [
+      "Actualizar playbooks ejecutivos de crisis con criterios especificos para quishing y abuso de plataformas colaborativas."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo generado por IA",
+    "global_estimated_risk": "ALTO",
+    "near_term_prediction": "Alta probabilidad de continuidad de explotacion oportunista sobre edge appliances y portales de autenticacion durante las proximas 72 horas, especialmente donde el parcheo requiera ventana de cambio.",
+    "most_exposed_sectors": [
+      "Infraestructura critica",
+      "Sanidad",
+      "Financiero",
+      "Educacion",
+      "Pymes con TI externalizada o soporte remoto intensivo"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-0300",
+      "CVE-2026-9082",
+      "CVE-2026-6973"
+    ],
+    "probability_of_attack_increase": "Alta",
+    "automatic_recommendation": "Concentrar hoy mismo capacidad operativa en superficie expuesta, credenciales privilegiadas y telemetria de acceso remoto legitimo abusado."
+  },
+  "sources": [
+    {
+      "name": "Drupal SA-CORE-2026-004",
+      "url": "https://www.drupal.org/sa-core-2026-004",
+      "type": "Vendor advisory",
+      "used_for": "CVE-2026-9082"
+    },
+    {
+      "name": "NVD CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+      "type": "NVD / KEV reference",
+      "used_for": "Cisco SD-WAN"
+    },
+    {
+      "name": "Palo Alto Networks CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300",
+      "type": "Vendor advisory",
+      "used_for": "PAN-OS exploitation and fixes"
+    },
+    {
+      "name": "INCIBE Microsoft mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+      "type": "National CERT advisory",
+      "used_for": "Patch Tuesday summary"
+    },
+    {
+      "name": "Microsoft On the Issues - Fox Tempest",
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/05/19/disrupting-fox-tempest-a-cybercrime-service/",
+      "type": "Official blog",
+      "used_for": "Malware signing and ransomware ecosystem"
+    },
+    {
+      "name": "INCIBE Teams + A0Backdoor",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/refuerzo-de-la-ciberseguridad-empresarial-frente-nuevas-campanas-de",
+      "type": "National CERT analysis",
+      "used_for": "Active campaign"
+    },
+    {
+      "name": "FBI Kimsuky QR phishing",
+      "url": "https://www.fbi.gov/file-repository/cyber-alerts/north-korean-kimsuky-actors-leverage-malicious-qr.pdf/view",
+      "type": "Law enforcement alert",
+      "used_for": "Active phishing technique"
+    },
+    {
+      "name": "INCIBE Android mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026",
+      "type": "National CERT advisory",
+      "used_for": "Android CVE-2026-0073"
+    },
+    {
+      "name": "INCIBE Siemens mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026",
+      "type": "National CERT OT advisory",
+      "used_for": "ICS/OT risk"
+    },
+    {
+      "name": "NVD CVE-2026-6973",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6973",
+      "type": "NVD / KEV reference",
+      "used_for": "Ivanti EPMM"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
