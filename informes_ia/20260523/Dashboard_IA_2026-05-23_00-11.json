@@ -1,0 +1,328 @@
+{
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "title": "Informe Ejecutivo Nocturno de Inteligencia Artificial",
+  "generated_at": "2026-05-23 00:11 CEST",
+  "timezone": "Europe/Madrid",
+  "next_update_expected": "2026-05-23 08:00 CEST",
+  "global_state": "Aceleracion agentica con presion alta en seguridad y cumplimiento",
+  "impact_level": "Alto",
+  "profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+  "period_scope": "Resumen nocturno acumulado hasta el corte de las 00:11 CEST del 23 de mayo de 2026",
+  "summary": "El tramo nocturno confirma que la competencia en IA se esta desplazando con fuerza hacia agentes ejecutores con sandbox, estado persistente, tooling versionable y conectividad real. La oportunidad es alta, pero el riesgo operativo sigue dominado por autenticacion debil, MCP expuestos, marcos agenticos vulnerables y supply chain.",
+  "kpis": [
+    {
+      "label": "Cambios confirmados",
+      "value": "8",
+      "tone": "neutral"
+    },
+    {
+      "label": "Alertas criticas",
+      "value": "3",
+      "tone": "critical"
+    },
+    {
+      "label": "Incidentes operativos",
+      "value": "1 resuelto",
+      "tone": "warning"
+    },
+    {
+      "label": "Ventana regulatoria",
+      "value": "03 Jun 2026",
+      "tone": "accent"
+    }
+  ],
+  "highlights": [
+    {
+      "title": "Google abre Managed Agents en Gemini API",
+      "company": "Google DeepMind",
+      "date": "2026-05-19",
+      "category": "Lanzamiento",
+      "impact": "Muy alto",
+      "risk": "Medio",
+      "utility": "Alta para agentes gestionados, automatizacion y prototipos enterprise",
+      "quick_take": "Google expone infraestructura agentica con sandbox Linux efimero, navegacion web y sesiones reanudables; sube la presion competitiva en agentes productivos.",
+      "evidence_type": "Hecho confirmado",
+      "source": "Google Blog",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/"
+    },
+    {
+      "title": "OpenAI endurece identidad con Advanced Account Security",
+      "company": "OpenAI",
+      "date": "2026-04-30",
+      "category": "Seguridad",
+      "impact": "Alto",
+      "risk": "Mitigacion",
+      "utility": "Alta para cuentas con conectores, Codex y flujos sensibles",
+      "quick_take": "Passkeys o llaves fisicas, recuperacion reforzada y exclusion automatica de entrenamiento; Trusted Access for Cyber exigira esta proteccion desde el 1 de junio.",
+      "evidence_type": "Hecho confirmado",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/advanced-account-security/"
+    },
+    {
+      "title": "OpenAI refuerza procedencia de contenido",
+      "company": "OpenAI",
+      "date": "2026-05-19",
+      "category": "Seguridad / confianza",
+      "impact": "Alto",
+      "risk": "Mitigacion",
+      "utility": "Alta para trazabilidad, deepfakes y uso institucional",
+      "quick_take": "C2PA, SynthID y una herramienta publica de verificacion elevan el liston de trazabilidad para imagenes generadas y ayudan a conversaciones de cumplimiento y reputacion.",
+      "evidence_type": "Hecho confirmado",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/advancing-content-provenance/"
+    },
+    {
+      "title": "Anthropic compra Stainless",
+      "company": "Anthropic",
+      "date": "2026-05-18",
+      "category": "Movimiento estrategico",
+      "impact": "Alto",
+      "risk": "Medio",
+      "utility": "Alta para SDKs, MCP y conectividad empresarial",
+      "quick_take": "La adquisicion consolida que el campo de batalla ya no es solo el modelo, sino la capa de conectores, SDKs y experiencia de integracion.",
+      "evidence_type": "Hecho confirmado",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless"
+    },
+    {
+      "title": "xAI activa Skills y consolida migracion de modelos",
+      "company": "xAI",
+      "date": "2026-05-18 / 2026-05-20",
+      "category": "Herramientas / migracion",
+      "impact": "Medio-Alto",
+      "risk": "Coste y compatibilidad",
+      "utility": "Media-Alta para productividad documental y agentes persistentes",
+      "quick_take": "Skills ya esta en web y movil; ademas, slugs retirados redirigen a grok-4.3, lo que puede alterar costes y rendimiento si no se migra de forma explicita.",
+      "evidence_type": "Hecho confirmado",
+      "source": "xAI",
+      "url": "https://x.ai/news/grok-skills"
+    },
+    {
+      "title": "UE mantiene ventana accionable de AI Act",
+      "company": "Union Europea",
+      "date": "2026-05-08 / 2026-05-07",
+      "category": "Regulacion",
+      "impact": "Muy alto",
+      "risk": "Cumplimiento",
+      "utility": "Alta para servicios de readiness, transparencia y etiquetado",
+      "quick_take": "La consulta sobre transparencia del Articulo 50 sigue abierta hasta el 3 de junio de 2026 y el acuerdo provisional acelera a 2 de diciembre de 2026 el nuevo hito de transparencia.",
+      "evidence_type": "Hecho confirmado",
+      "source": "European Commission / Council",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "title": "Mistral 3 refuerza la oferta abierta multimodal",
+      "company": "Mistral AI",
+      "date": "2026-05-15",
+      "category": "Modelo",
+      "impact": "Alto",
+      "risk": "Bajo",
+      "utility": "Alta para soberania, edge y despliegues con control de licencia",
+      "quick_take": "Mistral 3 y Mistral Large 3 salen con licencia Apache 2.0 y refuerzan la opcion europea para proyectos con necesidad de control, customizacion y despliegue abierto.",
+      "evidence_type": "Hecho confirmado",
+      "source": "Mistral AI",
+      "url": "https://mistral.ai/news/mistral-3"
+    },
+    {
+      "title": "Hugging Face lanza Open Agent Leaderboard",
+      "company": "Hugging Face / IBM Research",
+      "date": "2026-05-18",
+      "category": "Benchmark",
+      "impact": "Medio-Alto",
+      "risk": "Bajo",
+      "utility": "Alta para comparativa de agentes y decisiones de arquitectura",
+      "quick_take": "Se consolida la idea de evaluar el sistema agente completo, no solo el modelo, con calidad y coste como variables de adopcion real.",
+      "evidence_type": "Hecho confirmado",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Errores elevados en GPT-5.4 y GPT-5.5 API",
+      "date": "2026-05-20 00:37 UTC",
+      "severity": "Media",
+      "status": "Resuelto",
+      "impact": "Degradacion temporal de API",
+      "priority": "Media",
+      "recommendation": "Mantener fallback de proveedor y telemetria de errores por modelo.",
+      "source": "OpenAI Status",
+      "url": "https://status.openai.com/incidents/6kkeenry"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "name": "Semantic Kernel CVE-2026-26030 / CVE-2026-25592",
+      "product": "Microsoft Semantic Kernel",
+      "severity": "Alta",
+      "status": "Divulgado con mitigaciones",
+      "impact": "Prompt injection hacia ejecucion y escritura arbitraria",
+      "priority": "Alta",
+      "recommendation": "Parchar, revisar plugins y aplicar minimo privilegio por herramienta.",
+      "source": "Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "name": "MCP remoto sin autenticacion y despliegues AI inseguros",
+      "product": "MCP / Mage AI / kagent / AutoGen Studio",
+      "severity": "Critica",
+      "status": "Exposiciones observadas en produccion",
+      "impact": "RCE, robo de credenciales, acceso a herramientas internas y movimientos laterales",
+      "priority": "Critica",
+      "recommendation": "Bloquear exposicion publica por defecto, exigir autenticacion y segmentar identidades.",
+      "source": "Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "name": "GHSA-wx9m-wx4f-4cmg",
+      "product": "mistralai 2.4.6 en PyPI",
+      "severity": "Critica 9.6",
+      "status": "Version afectada sin solucion; cuarentena",
+      "impact": "Codigo malicioso en import, riesgo de compromiso de credenciales y entornos Linux",
+      "priority": "Critica",
+      "recommendation": "Buscar instalaciones de 2.4.6, aislar hosts y rotar secretos expuestos.",
+      "source": "GitLab Advisory / GitHub refs",
+      "url": "https://advisories.gitlab.com/pypi/mistralai/GHSA-wx9m-wx4f-4cmg/"
+    }
+  ],
+  "trends": [
+    "La competencia se desplaza del chatbot al agente con ejecucion real, memoria de sesion y sandbox.",
+    "La seguridad se mueve del filtro del modelo al gobierno de identidades, herramientas y despliegue.",
+    "La trazabilidad y el etiquetado suben de prioridad por regulacion, reputacion y fraude sintetico.",
+    "El software abierto vuelve a ganar peso por soberania, edge y control de costes."
+  ],
+  "opportunities": [
+    "Auditorias de seguridad para agentes, MCP y conectores corporativos.",
+    "Servicios de readiness AI Act centrados en transparencia, etiquetado y procedencia.",
+    "Pilotos de copilotos privados con modelos abiertos y despliegue controlado.",
+    "Paquetes de hardening para flujos con Codex, Claude, Gemini y herramientas internas."
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Auditar MCP, agentes y paneles expuestos",
+      "detail": "Inventariar servicios AI expuestos a Internet, exigir autenticacion y revisar si las acciones se ejecutan con contexto de usuario o de servidor."
+    },
+    {
+      "priority": "Critica",
+      "title": "Revisar supply chain Python y secretos",
+      "detail": "Buscar `mistralai==2.4.6`, purgar caches de paquetes y rotar credenciales si hubo instalacion o importacion en Linux."
+    },
+    {
+      "priority": "Alta",
+      "title": "Preparar oferta de readiness AI Act",
+      "detail": "Aprovechar la consulta abierta hasta el 3 de junio y el hito del 2 de diciembre de 2026 para empaquetar servicios de transparencia, etiquetado y trazabilidad."
+    },
+    {
+      "priority": "Alta",
+      "title": "Probar agentes gestionados con guardrails",
+      "detail": "Evaluar Managed Agents de Google y stacks equivalentes, pero solo con sandbox, logs, control de permisos y cuentas segregadas."
+    },
+    {
+      "priority": "Media",
+      "title": "Valorar modelos abiertos para edge y soberania",
+      "detail": "Mistral 3 abre una via interesante para copilotos privados, clasificacion documental y despliegues en cliente con mayor control de coste y licencia."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Managed Agents",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/",
+      "notes": "Managed agents, sandbox Linux, web access, AGENTS.md y SKILL.md"
+    },
+    {
+      "label": "Google Gemini App",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+      "notes": "Gemini Spark, Daily Brief y escala de usuarios"
+    },
+    {
+      "label": "OpenAI Advanced Account Security",
+      "url": "https://openai.com/index/advanced-account-security/",
+      "notes": "Passkeys, llaves fisicas, recuperacion reforzada, Trusted Access for Cyber"
+    },
+    {
+      "label": "OpenAI Content Provenance",
+      "url": "https://openai.com/index/advancing-content-provenance/",
+      "notes": "C2PA, SynthID y verificacion publica"
+    },
+    {
+      "label": "OpenAI Status",
+      "url": "https://status.openai.com/incidents/6kkeenry",
+      "notes": "Incidente resuelto GPT-5.4 / GPT-5.5"
+    },
+    {
+      "label": "Anthropic + Stainless",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "notes": "SDKs y MCP tooling"
+    },
+    {
+      "label": "Microsoft Security Updates",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/",
+      "notes": "Windows 365 for Agents y gobierno"
+    },
+    {
+      "label": "Microsoft Semantic Kernel RCE",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+      "notes": "CVE-2026-26030 y CVE-2026-25592"
+    },
+    {
+      "label": "Microsoft Exploitable Misconfigurations",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+      "notes": "MCP, Mage AI, kagent y AutoGen Studio"
+    },
+    {
+      "label": "EU Article 50 Consultation",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act",
+      "notes": "Consulta abierta hasta el 3 de junio de 2026"
+    },
+    {
+      "label": "EU Simplification Agreement",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+      "notes": "Nuevo hito de transparencia el 2 de diciembre de 2026"
+    },
+    {
+      "label": "xAI Skills",
+      "url": "https://x.ai/news/grok-skills",
+      "notes": "Skills persistentes y generacion de documentos"
+    },
+    {
+      "label": "xAI Model Retirement",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "notes": "Redirecciones a grok-4.3 y riesgo de coste"
+    },
+    {
+      "label": "Mistral 3",
+      "url": "https://mistral.ai/news/mistral-3",
+      "notes": "Modelos abiertos Apache 2.0"
+    },
+    {
+      "label": "Open Agent Leaderboard",
+      "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+      "notes": "Benchmark del sistema agente completo"
+    },
+    {
+      "label": "Mistral advisory cross-check",
+      "url": "https://advisories.gitlab.com/pypi/mistralai/GHSA-wx9m-wx4f-4cmg/",
+      "notes": "Impacto critico 9.6 para mistralai 2.4.6"
+    },
+    {
+      "label": "Perplexity Hub",
+      "url": "https://www.perplexity.ai/hub",
+      "notes": "Computer, seguridad y nuevas verticales"
+    }
+  ],
+  "artifacts": {
+    "day_folder": "20260523",
+    "html_file": "Dashboard_IA_2026-05-23_00-11.html",
+    "json_file": "Dashboard_IA_2026-05-23_00-11.json",
+    "pdf_file": "Dashboard_IA_2026-05-23_00-11.pdf",
+    "pdf_status": "No generado: no hay conversion HTML->PDF con fidelidad visual verificada en esta ejecucion."
+  },
+  "classification": {
+    "facts_confirmed": 8,
+    "unconfirmed_signals": 0,
+    "recommendations": 5
+  },
+  "report_date": "2026-05-23"
+}
