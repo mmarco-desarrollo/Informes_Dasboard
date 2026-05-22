@@ -1,0 +1,570 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo Premium de Inteligencia Artificial",
+    "generated_at": "2026-05-22 16:17:26 CEST",
+    "timezone": "Europe/Madrid",
+    "report_window": "Corte operativo de las 16:00",
+    "impact_level": "Alto",
+    "ecosystem_status": "Aceleracion alta con foco en agentes, seguridad operacional y conectividad.",
+    "next_update": "22 May 2026, 20:00 CEST",
+    "corporate_profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones"
+  },
+  "kpis": [
+    {
+      "label": "Senales priorizadas",
+      "value": "12",
+      "note": "hechos y alertas contrastadas"
+    },
+    {
+      "label": "Alertas activas",
+      "value": "4",
+      "note": "2 seguridad, 1 regulacion, 1 continuidad"
+    },
+    {
+      "label": "Repos accionables",
+      "value": "4",
+      "note": "utilidad inmediata para agentes y hardening"
+    },
+    {
+      "label": "Deadline regulatorio",
+      "value": "03 Jun",
+      "note": "consulta UE sobre transparencia IA"
+    }
+  ],
+  "executive_summary": [
+    "Google ha marcado el tono del corte con Gemini 3.5, Gemini Omni y Gemini Spark: la carrera ya no gira solo en torno al modelo, sino en torno a agentes que actuan con velocidad, multimodalidad y orquestacion continua.",
+    "El mayor riesgo operativo inmediato sigue en la cadena de suministro y en el gobierno de agentes. Mistral mantiene una alerta real por paquetes comprometidos y Microsoft insiste en que las misconfiguraciones de MCP, identidad y permisos ya son explotables.",
+    "La oportunidad mas clara para MMarco Seguridad esta en auditoria de agentes, control de conectores, sandboxing, revision de dependencias y servicios de cumplimiento AI Act para pymes y equipos tecnicos."
+  ],
+  "activity_breakdown": [
+    {
+      "category": "Lanzamientos y producto",
+      "count": 5,
+      "tone": "high"
+    },
+    {
+      "category": "Seguridad e incidentes",
+      "count": 4,
+      "tone": "critical"
+    },
+    {
+      "category": "Herramientas y repositorios",
+      "count": 4,
+      "tone": "medium"
+    },
+    {
+      "category": "Regulacion",
+      "count": 1,
+      "tone": "medium"
+    }
+  ],
+  "global_view": [
+    {
+      "region": "Estados Unidos",
+      "headline": "OpenAI, Google, Anthropic, xAI y NVIDIA empujan el paso hacia agentes ejecutores.",
+      "signal": "Dominan seguridad de agentes, tooling y plataformas abiertas de ejecucion."
+    },
+    {
+      "region": "Europa",
+      "headline": "La ventana regulatoria vuelve al primer plano con transparencia AI Act.",
+      "signal": "Consulta abierta hasta el 03 de junio de 2026; impacto directo en etiquetado y disclosure."
+    },
+    {
+      "region": "Open Source",
+      "headline": "Se acelera el stack agente abierto con evaluacion, memoria, sandbox y repos listos para adopcion.",
+      "signal": "smolagents, OpenShell, AI-Q y Open Agent Leaderboard ganan utilidad tactica."
+    }
+  ],
+  "top_news": [
+    {
+      "title": "Google activa una nueva fase agentic con Gemini 3.5, Omni y Spark",
+      "source": "Google Blog",
+      "date": "2026-05-19",
+      "category": "Lanzamiento",
+      "impact": "Alto",
+      "utility_or_risk": "Sube la presion competitiva en agentes multimodales, video y automatizacion proactiva.",
+      "recommendation": "Vigilar Gemini 3.5 Flash y Spark para automatizaciones de consulta, resumen y accion supervisada.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+      "status": "hecho confirmado"
+    },
+    {
+      "title": "Anthropic compra Stainless para reforzar SDKs, CLIs y conectividad MCP",
+      "source": "Anthropic",
+      "date": "2026-05-18",
+      "category": "M&A / tooling",
+      "impact": "Alto",
+      "utility_or_risk": "La conectividad y la calidad de SDK pasan a ser ventaja competitiva directa para agentes.",
+      "recommendation": "Seguir el ecosistema de MCP server tooling como area comercial y de riesgo.",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "status": "hecho confirmado"
+    },
+    {
+      "title": "OpenAI endurece el plano de seguridad con Advanced Account Security y guias de sandboxing Codex",
+      "source": "OpenAI",
+      "date": "2026-04-30 / 2026-05-13",
+      "category": "Seguridad de plataforma",
+      "impact": "Alto",
+      "utility_or_risk": "Marca estandar operativo para cuentas sensibles, approvals y aislamiento en agentes de codigo.",
+      "recommendation": "Replicar principios de minimo privilegio, sandbox y telemetria explicable en despliegues propios.",
+      "url": "https://openai.com/index/advanced-account-security/",
+      "status": "hecho confirmado"
+    },
+    {
+      "title": "NVIDIA posiciona Agent Toolkit, AI-Q y OpenShell como stack abierto para agentes empresariales",
+      "source": "NVIDIA",
+      "date": "2026-03-16",
+      "category": "Infraestructura / agentes",
+      "impact": "Alto",
+      "utility_or_risk": "Combina runtime seguro, blueprint de busqueda agentic y modelos abiertos para bajar coste de despliegue.",
+      "recommendation": "Revisar OpenShell y AI-Q como base para demostradores de agentes seguros.",
+      "url": "https://nvidianews.nvidia.com/news/ai-agents",
+      "status": "hecho confirmado"
+    }
+  ],
+  "recent_updates": [
+    {
+      "title": "OpenAI resolvio una incidencia de latencia y errores en ChatGPT 5.5 Thinking",
+      "source": "OpenAI Status",
+      "date": "2026-05-21",
+      "impact": "Media",
+      "url": "https://status.openai.com/incidents/90c2rpxr",
+      "quick_take": "No cambia estrategia, pero confirma volatilidad operativa reciente en familia GPT-5.5."
+    },
+    {
+      "title": "xAI retiro varios slugs y redirige solicitudes antiguas a Grok 4.3",
+      "source": "xAI Docs",
+      "date": "2026-05-15",
+      "impact": "Alta",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "quick_take": "Riesgo de coste y comportamiento si hay integraciones heredadas sin inventario."
+    },
+    {
+      "title": "Hugging Face y IBM lanzan Open Agent Leaderboard con calidad y coste",
+      "source": "Hugging Face",
+      "date": "2026-05-18",
+      "impact": "Media",
+      "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard",
+      "quick_take": "Aporta comparativa mas util para sistemas agentes completos, no solo para modelos."
+    }
+  ],
+  "models": [
+    {
+      "name": "Gemini 3.5 Flash",
+      "company": "Google DeepMind",
+      "type": "LLM / agentic model",
+      "capabilities": "Flujos agentic, velocidad alta, razonamiento y coding",
+      "multimodal": "Si",
+      "context_window": "No indicado en la fuente abierta revisada",
+      "license": "Propietaria",
+      "use_cases": "Automatizacion, asistentes con accion, dev workflows",
+      "estimated_impact": "Muy alto",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+    },
+    {
+      "name": "Gemini Omni",
+      "company": "Google",
+      "type": "Modelo multimodal generativo",
+      "capabilities": "Transforma texto, imagen y prompts de video en video de alta calidad",
+      "multimodal": "Si",
+      "context_window": "No disponible",
+      "license": "Propietaria",
+      "use_cases": "Creatividad, marketing, contenido audiovisual",
+      "estimated_impact": "Alto",
+      "source_url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
+    },
+    {
+      "name": "Muse Spark",
+      "company": "Meta AI",
+      "type": "LLM multimodal",
+      "capabilities": "Meta AI mas rapida, razonamiento y despliegue en app, web y partners seleccionados",
+      "multimodal": "Si",
+      "context_window": "No disponible",
+      "license": "Propietaria",
+      "use_cases": "Asistente personal, voz, integracion social",
+      "estimated_impact": "Alto",
+      "source_url": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs-first-model-built-to-prioritize-people/amp/"
+    },
+    {
+      "name": "Grok 4.3",
+      "company": "xAI",
+      "type": "Modelo general / tool calling",
+      "capabilities": "Tool calling fuerte, modo razonamiento configurable",
+      "multimodal": "Parcial segun la documentacion revisada",
+      "context_window": "1M tokens",
+      "license": "Propietaria",
+      "use_cases": "Agentes, terminal, integraciones API",
+      "estimated_impact": "Alto",
+      "source_url": "https://docs.x.ai/developers/models"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Grok Build",
+      "source": "xAI",
+      "date": "2026-05-14",
+      "category": "CLI agent",
+      "impact": "Alto",
+      "utility": "Agente de codigo en terminal con plan, revision y modo headless",
+      "quick_recommendation": "Vigilarlo como referencia competitiva, no como estandar de seguridad por defecto.",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "name": "OpenShell",
+      "source": "NVIDIA / GitHub",
+      "date": "release reciente 2026-05-21",
+      "category": "Runtime seguro para agentes",
+      "impact": "Alto",
+      "utility": "Sandbox declarativo con politicas de filesystem, red, proceso e inference",
+      "quick_recommendation": "Candidato fuerte para laboratorios de agentes con foco ciber y compliance.",
+      "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+      "name": "huggingface/smolagents",
+      "source": "GitHub",
+      "date": "activo",
+      "category": "Framework abierto",
+      "impact": "Media-Alta",
+      "utility": "Agentes en codigo, soporte MCP, LLM agnostico y opciones de sandbox",
+      "quick_recommendation": "Muy util para PoCs controladas y formacion tecnica.",
+      "url": "https://github.com/huggingface/smolagents"
+    },
+    {
+      "name": "Open Agent Leaderboard",
+      "source": "Hugging Face / IBM Research",
+      "date": "2026-05-18",
+      "category": "Benchmark / evaluacion",
+      "impact": "Media",
+      "utility": "Compara sistemas agentes completos con calidad y coste",
+      "quick_recommendation": "Usarlo para filtrar hype y priorizar stacks realmente desplegables.",
+      "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "NVIDIA/OpenShell",
+      "source": "GitHub",
+      "stars": "5.6k",
+      "language": "Go / shell / runtime stack",
+      "description": "Runtime privado y seguro para agentes autonomos con politicas declarativas.",
+      "use_cases": "Sandboxing, red controlada, credenciales y ejecucion de agentes",
+      "utility_level": "Alta",
+      "risks": "Alpha software; requiere validacion antes de uso productivo.",
+      "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+      "name": "NVIDIA/NemoClaw",
+      "source": "GitHub",
+      "stars": "No visible en la fuente abierta revisada",
+      "language": "Stack de referencia",
+      "description": "Referencia para ejecutar asistentes siempre activos de forma mas segura sobre OpenShell.",
+      "use_cases": "Asistentes persistentes, hardening de runtime",
+      "utility_level": "Media-Alta",
+      "risks": "Madurez temprana; evaluar dependencias y guardrails.",
+      "url": "https://github.com/NVIDIA/NemoClaw"
+    },
+    {
+      "name": "huggingface/smolagents",
+      "source": "GitHub",
+      "stars": "27.1k",
+      "language": "Python",
+      "description": "Biblioteca ligera para agentes que piensan en codigo.",
+      "use_cases": "PoCs, agentes con web search, MCP, sandboxes y multi-modelo",
+      "utility_level": "Alta",
+      "risks": "No usar ejecucion local como frontera de seguridad.",
+      "url": "https://github.com/huggingface/smolagents"
+    },
+    {
+      "name": "stainless-api/mcp-front",
+      "source": "GitHub",
+      "stars": "51",
+      "language": "Go",
+      "description": "Proxy de autenticacion para servidores MCP orientado a Claude.ai, Claude Code, Cursor y Gemini.",
+      "use_cases": "Control de acceso, exposicion segura de herramientas",
+      "utility_level": "Alta",
+      "risks": "Pieza de infraestructura; revisar bien la capa de identidad.",
+      "url": "https://github.com/stainless-api/mcp-front"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Mistral SDK package compromise",
+      "affected_product": "mistralai PyPI 2.4.6 y varios paquetes npm de SDK",
+      "severity": "Critica",
+      "exploitation_status": "Confirmada la publicacion de paquetes comprometidos; estado de advisory bajo investigacion",
+      "impact": "Robo de credenciales en import de Python sobre Linux y contaminacion de caches, lockfiles o imagenes",
+      "mitigation": "Buscar version 2.4.6 y hashes afectados; revisar lockfiles, caches e IoCs; rotar credenciales si hubo exposicion",
+      "priority": "Critica",
+      "source_url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "name": "GPT-5.5 Thinking elevated latency and error rates",
+      "affected_product": "ChatGPT",
+      "severity": "Media",
+      "exploitation_status": "No aplica; incidente operativo resuelto",
+      "impact": "Riesgo de continuidad para workflows que dependan de 5.5 Thinking",
+      "mitigation": "Mantener fallback de modelo y monitorizar status antes de ventanas criticas",
+      "priority": "Media",
+      "source_url": "https://status.openai.com/incidents/90c2rpxr"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2026-34046",
+      "product": "Langflow < 1.5.1",
+      "severity": "Alta",
+      "exploitation": "Vector remoto con privilegios bajos; expone flujos ajenos, API keys y permite modificacion o borrado",
+      "impact": "Exposicion de secretos y manipulacion de agentes/workflows",
+      "mitigation": "Actualizar a 1.5.1 o superior y revisar accesos a flujos",
+      "priority": "Alta",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34046"
+    },
+    {
+      "id": "CVE-2026-8026",
+      "product": "Flowise hasta 3.0.12",
+      "severity": "Alta",
+      "exploitation": "Fallo reconocido por NVD; revisar advisories de Flowise para detalle operativo",
+      "impact": "Riesgo directo para despliegues de agentes visuales expuestos",
+      "mitigation": "Actualizar y revisar exposicion publica, credenciales y MCP adapters",
+      "priority": "Alta",
+      "source_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8026"
+    },
+    {
+      "id": "Misconfiguraciones MCP y apps IA explotables",
+      "product": "Apps IA con autenticacion debil o contexto de ejecucion incorrecto",
+      "severity": "Alta",
+      "exploitation": "Microsoft observa abuso activo y describe ejecucion en contexto del servidor en lugar del usuario",
+      "impact": "Escalada de privilegios, ejecucion indebida de herramientas y exposicion de datos",
+      "mitigation": "Separar identidades, aplicar minimo privilegio, sandbox, approvals y aislamiento de contexto",
+      "priority": "Alta",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    }
+  ],
+  "trends": [
+    {
+      "title": "El valor se mueve del chat al trabajo ejecutable",
+      "detail": "Google, xAI, Anthropic y NVIDIA estan compitiendo en agentes que conectan con herramientas, archivos y sistemas reales."
+    },
+    {
+      "title": "La seguridad de agentes ya no es secundaria",
+      "detail": "OpenAI y Microsoft convergen en sandboxing, aprobaciones, trazabilidad y control de identidad como pilares de despliegue."
+    },
+    {
+      "title": "Open source utilitario gana peso",
+      "detail": "OpenShell, smolagents y el ecosistema de evaluacion abierta reducen la dependencia de stacks cerrados para PoCs y servicios."
+    },
+    {
+      "title": "La regulacion entra en modo operativo",
+      "detail": "La consulta de transparencia bajo el AI Act apunta a obligaciones mas concretas sobre etiquetado, disclosure y contenido sintetico."
+    }
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "title": "Servicio de auditoria de agentes y conectores",
+      "detail": "Oferta para revisar MCP, permisos, secretos, dependencias y sandboxing en clientes PyME y consultoria."
+    },
+    {
+      "priority": "Alta",
+      "title": "Paquete de hardening para stacks Langflow / Flowise",
+      "detail": "Valido para formacion, remediacion y contratos de soporte asociados a agentes visuales."
+    },
+    {
+      "priority": "Media",
+      "title": "Laboratorio de agentes seguros con OpenShell o entornos equivalentes",
+      "detail": "Permite demostrar seguridad aplicada y gobernanza antes de venta o despliegue productivo."
+    },
+    {
+      "priority": "Media",
+      "title": "Linea de compliance AI Act para transparencia y deepfakes",
+      "detail": "Ventana comercial util antes de la aplicabilidad de agosto de 2026."
+    }
+  ],
+  "alerts": [
+    {
+      "level": "Critica",
+      "title": "Revisar de inmediato si existe `mistralai==2.4.6` o paquetes npm afectados en lockfiles, caches e imagenes."
+    },
+    {
+      "level": "Alta",
+      "title": "Inventariar slugs heredados de xAI y verificar si redirigen a `grok-4.3` con nuevo coste o comportamiento."
+    },
+    {
+      "level": "Alta",
+      "title": "Revisar despliegues Langflow y Flowise expuestos a Internet, especialmente credenciales embebidas y permisos de lectura/escritura."
+    },
+    {
+      "level": "Media",
+      "title": "Preparar posicion sobre transparencia AI Act antes del 03 de junio de 2026."
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "title": "Ejecutar barrido de supply chain en entornos Python y Node",
+      "detail": "Buscar `mistralai==2.4.6`, versiones npm afectadas, caches y contenedores; si hubo exposicion, rotar credenciales y revisar IoCs."
+    },
+    {
+      "priority": "Alta",
+      "title": "Definir politica minima de agentes",
+      "detail": "Separar identidad de usuario y agente, limitar herramientas, exigir approvals para acciones de riesgo y activar trazabilidad operativa."
+    },
+    {
+      "priority": "Alta",
+      "title": "Crear demo comercial de agente seguro",
+      "detail": "Montar una prueba interna con sandbox, approvals, logs y conectores limitados para ventas y evangelizacion."
+    },
+    {
+      "priority": "Media",
+      "title": "Usar benchmark de sistemas agentes antes de elegir stack",
+      "detail": "Cruzar coste, calidad y superficie de riesgo con Open Agent Leaderboard y pruebas propias."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-06-02 / 2026-06-03",
+      "event": "Microsoft Build 2026",
+      "importance": "Alta",
+      "note": "Probable nueva capa de anuncios en seguridad, copilots y agentes.",
+      "source_url": "https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/"
+    },
+    {
+      "date": "2026-06-03",
+      "event": "Cierre de consulta UE sobre directrices de transparencia AI Act",
+      "importance": "Alta",
+      "note": "Fecha limite clara para feedback regulatorio.",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "date": "2026-08-02",
+      "event": "Aplicabilidad de obligaciones de transparencia del AI Act",
+      "importance": "Alta",
+      "note": "Impacto directo sobre disclosure, deepfakes y marcado de contenido.",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google Gemini app",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
+    },
+    {
+      "label": "Google I/O developer highlights",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/"
+    },
+    {
+      "label": "Gemini 3.5",
+      "url": "https://blog.google/intl/en-africa/products/explore-get-answers/gemini-3-5/"
+    },
+    {
+      "label": "Anthropic acquires Stainless",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless"
+    },
+    {
+      "label": "OpenAI Advanced Account Security",
+      "url": "https://openai.com/index/advanced-account-security/"
+    },
+    {
+      "label": "OpenAI running Codex safely",
+      "url": "https://openai.com/index/running-codex-safely/"
+    },
+    {
+      "label": "OpenAI Windows sandbox",
+      "url": "https://openai.com/index/building-codex-windows-sandbox/"
+    },
+    {
+      "label": "OpenAI status incident 2026-05-21",
+      "url": "https://status.openai.com/incidents/90c2rpxr"
+    },
+    {
+      "label": "Microsoft Security updates May 2026",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/"
+    },
+    {
+      "label": "Microsoft defense in depth for autonomous AI agents",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/"
+    },
+    {
+      "label": "Microsoft misconfigurations in AI apps",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "label": "Mistral security advisories",
+      "url": "https://docs.mistral.ai/resources/security-advisories"
+    },
+    {
+      "label": "xAI Grok Build",
+      "url": "https://x.ai/news/grok-build-cli"
+    },
+    {
+      "label": "xAI model retirement",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "label": "xAI models",
+      "url": "https://docs.x.ai/developers/models"
+    },
+    {
+      "label": "Meta Muse Spark",
+      "url": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs-first-model-built-to-prioritize-people/amp/"
+    },
+    {
+      "label": "NVIDIA agent platform",
+      "url": "https://nvidianews.nvidia.com/news/ai-agents"
+    },
+    {
+      "label": "NVIDIA Vera Rubin",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform"
+    },
+    {
+      "label": "NVIDIA OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+      "label": "NVIDIA NemoClaw",
+      "url": "https://github.com/NVIDIA/NemoClaw"
+    },
+    {
+      "label": "Hugging Face Open Agent Leaderboard",
+      "url": "https://huggingface.co/blog/ibm-research/open-agent-leaderboard"
+    },
+    {
+      "label": "Hugging Face agent traces",
+      "url": "https://huggingface.co/blog/huggingface/agent-traces-as-memory"
+    },
+    {
+      "label": "smolagents",
+      "url": "https://github.com/huggingface/smolagents"
+    },
+    {
+      "label": "Stainless GitHub org",
+      "url": "https://github.com/stainless-api"
+    },
+    {
+      "label": "Stainless mcp-front",
+      "url": "https://github.com/stainless-api/mcp-front"
+    },
+    {
+      "label": "EU consultation",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "label": "EU transparency press release",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-opens-consultation-draft-guidelines-ai-transparency-obligations"
+    },
+    {
+      "label": "NVD Langflow CVE-2026-34046",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34046"
+    },
+    {
+      "label": "NVD Flowise CVE-2026-8026",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8026"
+    }
+  ],
+  "limitations": [
+    "No se ha materializado un PDF porque esta sesion no ofrece una conversion HTML -> PDF con fidelidad visual verificada al dashboard. No se simula enlace al PDF.",
+    "No se incluyen cifras de mercado o adopcion que no aparezcan respaldadas de forma clara en las fuentes revisadas."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
