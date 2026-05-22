@@ -1,0 +1,340 @@
+{
+  "report": {
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "brand": "MMarco Seguridad",
+    "generated_at": "2026-05-22T16:15:55+02:00",
+    "timezone": "Europe/Madrid",
+    "scheduled_slot": "2026-05-22 16:00 Europe/Madrid",
+    "next_update": "2026-05-23T16:00:00+02:00",
+    "global_threat_level": "Alto",
+    "ai_risk_state": "Elevado: phishing automatizado y explotación oportunista de appliances perimetrales",
+    "methodology_note": "KPIs y priorización calculados sobre fuentes oficiales y de fabricantes revisadas entre el 5 y el 22 de mayo de 2026."
+  },
+  "kpis": [
+    {
+      "label": "Incidentes activos priorizados",
+      "value": "5"
+    },
+    {
+      "label": "Incidentes críticos",
+      "value": "3"
+    },
+    {
+      "label": "Vulnerabilidades priorizadas",
+      "value": "8"
+    },
+    {
+      "label": "CVEs críticas",
+      "value": "7"
+    },
+    {
+      "label": "Campañas de phishing activas",
+      "value": "1 confirmada"
+    },
+    {
+      "label": "Ransomware destacado",
+      "value": "Interlock"
+    },
+    {
+      "label": "Países impactados",
+      "value": "55+ en campaña FortiGate observada por AWS"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Alza moderada en edge/appliances y abuso de identidad"
+    }
+  ],
+  "executive_summary": {
+    "global_state": "La exposición inmediata sigue concentrándose en infraestructuras perimetrales y plataformas de acceso o correo. La combinación de explotación activa, ventanas de parche muy cortas y campañas de phishing cada vez más automatizadas mantiene el nivel global de amenaza en alto.",
+    "top_risks": [
+      "Explotación activa de CVE-2026-20182 en Cisco Catalyst SD-WAN Controller/Manager con obtención de privilegios administrativos.",
+      "Explotación temprana y en cadena de CVE-2026-20131 en Cisco Secure Firewall Management Center por actores asociados a Interlock.",
+      "Vulnerabilidad crítica explotada en Microsoft Exchange Server (CVE-2026-42897) con impacto de suplantación y ejecución de JavaScript en OWA.",
+      "Campaña de phishing a gran escala basada en device code y automatización con IA observada por Microsoft.",
+      "Alta densidad de avisos críticos recientes en Fortinet, Drupal y Microsoft con especial riesgo para servicios expuestos a Internet."
+    ],
+    "affected_sectors": [
+      "Infraestructura TIC y redes",
+      "Servicios gestionados y SOC",
+      "Administración y corporativo",
+      "Entornos con correo Exchange",
+      "Industria con SD-WAN o appliances de seguridad"
+    ],
+    "techniques": [
+      "Bypass de autenticación",
+      "RCE en appliances",
+      "Suplantación/XSS en correo web",
+      "Phishing con device code",
+      "Living off trusted services / abuso de servicios legítimos"
+    ],
+    "estimated_exposure": "Alta para organizaciones con Cisco SD-WAN, Cisco FMC, Microsoft Exchange on-prem, Drupal público, Fortinet expuesto o flotas Android sin gobierno de parche.",
+    "main_recommendation": "Acelerar hoy mismo el parcheo y la validación de compromiso en edge, correo y gestión remota; no esperar a la ventana ordinaria de mantenimiento en los activos expuestos.",
+    "quick_conclusion": [
+      "La prioridad táctica inmediata está en Cisco SD-WAN, Cisco FMC y Exchange Server.",
+      "El phishing de identidad evoluciona con automatización e IA, elevando la tasa de éxito potencial.",
+      "Los activos perimetrales siguen siendo la superficie más rentable para los atacantes.",
+      "El riesgo para pymes y entornos medianos aumenta cuando dependen de un único firewall, correo on-prem o MSP con acceso amplio."
+    ]
+  },
+  "active_alerts": [
+    {
+      "title": "Cisco Catalyst SD-WAN: explotación activa confirmada",
+      "status": "Hecho confirmado",
+      "detail": "INCIBE y Cisco informan explotación activa de CVE-2026-20182, sin workaround disponible.",
+      "urgency": "Crítica",
+      "business_impact": "Compromiso de controladores SD-WAN y manipulación de configuración de red."
+    },
+    {
+      "title": "Interlock explota Cisco FMC antes de la divulgación pública",
+      "status": "Hecho confirmado",
+      "detail": "AWS observó explotación de CVE-2026-20131 desde el 26 de enero de 2026, 36 días antes de la publicación del aviso de Cisco.",
+      "urgency": "Crítica",
+      "business_impact": "Riesgo de RCE como root en plataforma de gestión de firewall y despliegue posterior de ransomware."
+    },
+    {
+      "title": "Exchange Server: suplantación/XSS con explotación potencial en curso",
+      "status": "Indicio relevante",
+      "detail": "INCIBE indica que CVE-2026-42897 podría estar siendo explotada; Microsoft habilitó mitigación automática para clientes con Exchange EM.",
+      "urgency": "Alta",
+      "business_impact": "Suplantación, robo de sesión y ejecución de JavaScript en navegadores de usuarios OWA."
+    },
+    {
+      "title": "Phishing de device code asistido por IA",
+      "status": "Hecho confirmado",
+      "detail": "Microsoft documenta una campaña amplia que automatiza el flujo device code y evita la expiración estándar de 15 minutos.",
+      "urgency": "Alta",
+      "business_impact": "Robo de cuentas corporativas y evasión de controles tradicionales de concienciación."
+    },
+    {
+      "title": "Acceso masivo a FortiGate apoyado por IA generativa",
+      "status": "Hecho confirmado",
+      "detail": "AWS observó un actor financiero rusoparlante comprometiendo más de 600 dispositivos FortiGate en más de 55 países entre enero y febrero de 2026.",
+      "urgency": "Alta",
+      "business_impact": "Persistencia en edge, abuso de credenciales y expansión geográfica rápida."
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "Crítica (Cisco/INCIBE)",
+      "severity": "Crítica",
+      "exploitation": "Sí, confirmada por Cisco/INCIBE",
+      "patch": "Sí",
+      "mitigation_priority": "P1 inmediata",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autenticacion-incorrecta-en-cisco-catalyst-sd-wan-controller"
+    },
+    {
+      "cve": "CVE-2026-20131",
+      "product": "Cisco Secure Firewall Management Center",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation": "Sí, usada por Interlock",
+      "patch": "Sí",
+      "mitigation_priority": "P1 inmediata",
+      "source": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server 2016/2019/SE",
+      "cvss": "Crítica (INCIBE)",
+      "severity": "Crítica",
+      "exploitation": "Sí, indicada por INCIBE",
+      "patch": "Mitigación automática y actualización",
+      "mitigation_priority": "P1 inmediata",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft"
+    },
+    {
+      "cve": "CVE-2026-9082",
+      "product": "Drupal Core sobre PostgreSQL",
+      "cvss": "Highly critical 20/25",
+      "severity": "Crítica",
+      "exploitation": "Explotable por usuarios anónimos",
+      "patch": "Sí",
+      "mitigation_priority": "P1 en portales públicos",
+      "source": "https://www.drupal.org/sa-core-2026-004"
+    },
+    {
+      "cve": "CVE-2026-44277",
+      "product": "FortiAuthenticator",
+      "cvss": "9.1",
+      "severity": "Crítica",
+      "exploitation": "No conocida",
+      "patch": "Sí",
+      "mitigation_priority": "P1 alta",
+      "source": "https://fortiguard.fortinet.com/psirt/FG-IR-26-128"
+    },
+    {
+      "cve": "CVE-2026-26083",
+      "product": "FortiSandbox / Cloud / PaaS",
+      "cvss": "Crítica (Fortinet)",
+      "severity": "Crítica",
+      "exploitation": "No conocida",
+      "patch": "Sí",
+      "mitigation_priority": "P1 alta",
+      "source": "https://fortiguard.fortinet.com/psirt"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android AOSP / Google Play adbd",
+      "cvss": "Crítica (INCIBE)",
+      "severity": "Crítica",
+      "exploitation": "No",
+      "patch": "Dependiente del fabricante",
+      "mitigation_priority": "P2 alta",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026"
+    },
+    {
+      "cve": "CVE-2026-33109",
+      "product": "Azure Managed Instance for Apache Cassandra",
+      "cvss": "Crítica (INCIBE)",
+      "severity": "Crítica",
+      "exploitation": "No indicada",
+      "patch": "Sí",
+      "mitigation_priority": "P2 alta",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026"
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      "Interlock"
+    ],
+    "target_sectors": [
+      "Infraestructura de red",
+      "Organizaciones con Cisco FMC",
+      "Empresas con appliances perimetrales"
+    ],
+    "techniques": [
+      "Explotación de RCE",
+      "Carga de binarios ELF",
+      "Reconocimiento automatizado",
+      "Evasión mediante variación de artefactos"
+    ],
+    "iocs_note": "Los IoCs detallados del caso Interlock deben tratarse como operativos y rotatorios; el informe HTML enlaza la fuente oficial de AWS para validación continua.",
+    "trend": "Persistencia de ransomware con intrusión temprana en edge y preparación previa a la exfiltración/despliegue."
+  },
+  "relevant_news": [
+    {
+      "title": "AWS identifica campaña Interlock contra Cisco FMC",
+      "type": "Ransomware / explotación previa a disclosure",
+      "date": "2026-03-18",
+      "source": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/"
+    },
+    {
+      "title": "Microsoft documenta campaña de phishing con device code asistida por IA",
+      "type": "Phishing / identidad",
+      "date": "2026-04-06",
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/"
+    },
+    {
+      "title": "AWS observa actor que accede a más de 600 FortiGate en 55+ países usando IA comercial",
+      "type": "Acceso inicial / automatización",
+      "date": "Q1 2026",
+      "source": "https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/"
+    },
+    {
+      "title": "Drupal publica corrección highly critical para SQL injection explotable por anónimos",
+      "type": "Vulnerabilidad crítica web",
+      "date": "2026-05-20",
+      "source": "https://www.drupal.org/sa-core-2026-004"
+    },
+    {
+      "title": "Fortinet publica advisories críticos en autenticación y autorización",
+      "type": "Appliances / PSIRT",
+      "date": "2026-05-12",
+      "source": "https://fortiguard.fortinet.com/psirt"
+    }
+  ],
+  "recommendations": {
+    "critical": [
+      "Parchear o aislar hoy Cisco SD-WAN afectado por CVE-2026-20182 y revisar evidencias de compromiso antes de actualizar si aplica.",
+      "Actualizar Cisco FMC y revisar IoCs del caso Interlock en cualquier consola expuesta o con telemetría anómala desde enero.",
+      "Aplicar mitigación/actualización de Exchange Server para CVE-2026-42897 y revisar accesos OWA anómalos.",
+      "Actualizar inmediatamente portales Drupal expuestos en PostgreSQL a versiones corregidas."
+    ],
+    "high": [
+      "Reforzar Conditional Access y controles de phishing resistente para flujos device code, especialmente en Microsoft 365.",
+      "Inventariar appliances Fortinet y aplicar los upgrades críticos de FortiAuthenticator/FortiSandbox.",
+      "Revisar exposición pública y segmentación de consolas de administración y orquestación."
+    ],
+    "medium": [
+      "Actualizar flotas Android verificando nivel de parche del fabricante.",
+      "Activar detección para abuso de servicios legítimos y patrones LOTS/LOTL en correo, proxy e identidad.",
+      "Validar backups de configuración y credenciales de emergencia para firewalls, SD-WAN y correo."
+    ],
+    "low": [
+      "Ajustar cadencia ejecutiva de reporting para diferenciar hechos confirmados, indicios y análisis predictivo.",
+      "Mantener ejercicios de tabletop centrados en edge compromise y BEC/phishing de identidad."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo o estimativo generado por IA",
+    "global_risk_estimate": "Alto",
+    "predicted_threats": [
+      "Continuidad de explotación oportunista sobre appliances perimetrales",
+      "Incremento de phishing de identidad automatizado",
+      "Mayor uso de IA comercial para reconocimiento, personalización y evasión"
+    ],
+    "exposed_sectors": [
+      "Pymes con firewall único",
+      "MSPs y operadores de múltiples clientes",
+      "Industria con SD-WAN y acceso remoto",
+      "Entornos con correo on-prem"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-20131",
+      "CVE-2026-42897",
+      "CVE-2026-9082"
+    ],
+    "probability_attack_increase": "Alta en próximos 7-14 días para campañas oportunistas sobre edge y correo.",
+    "automatic_recommendation": "Reducir superficie expuesta, exigir MFA robusta resistente a phishing y adelantar validación de compromiso en plataformas de administración."
+  },
+  "sources": [
+    {
+      "name": "INCIBE - Microsoft mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026"
+    },
+    {
+      "name": "INCIBE - Exchange Server XSS",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft"
+    },
+    {
+      "name": "INCIBE - Cisco SD-WAN",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/autenticacion-incorrecta-en-cisco-catalyst-sd-wan-controller"
+    },
+    {
+      "name": "INCIBE - Android mayo 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-android-mayo-de-2026"
+    },
+    {
+      "name": "AWS - Interlock y Cisco FMC",
+      "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/"
+    },
+    {
+      "name": "AWS - Acceso a FortiGate a escala",
+      "url": "https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/"
+    },
+    {
+      "name": "Microsoft Security Blog - device code phishing",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/"
+    },
+    {
+      "name": "Drupal - SA-CORE-2026-004",
+      "url": "https://www.drupal.org/sa-core-2026-004"
+    },
+    {
+      "name": "Fortinet PSIRT - FG-IR-26-128",
+      "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-128"
+    },
+    {
+      "name": "Fortinet PSIRT advisory list",
+      "url": "https://fortiguard.fortinet.com/psirt"
+    },
+    {
+      "name": "ENISA Threat Landscape 2025",
+      "url": "https://www.enisa.europa.eu/publications/enisa-threat-landscape-2025"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
+}
