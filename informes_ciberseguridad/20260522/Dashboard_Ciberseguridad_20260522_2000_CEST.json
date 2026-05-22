@@ -1,0 +1,338 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "report_date": "2026-05-22",
+    "report_time": "20:00",
+    "timezone": "Europe/Madrid",
+    "snapshot_label": "Edicion programada de las 20:00",
+    "global_threat_level": "ALTO",
+    "trend_24h": "Al alza",
+    "next_update": "2026-05-23 08:00 CEST (recomendado)",
+    "ai_risk_state": "ALTO (estimativo)"
+  },
+  "kpis": {
+    "incidentes_activos_relevantes": 2,
+    "incidentes_criticos_monitorizados": 2,
+    "vulnerabilidades_priorizadas": 8,
+    "cves_criticas_priorizadas": 8,
+    "campanas_phishing_activas": 2,
+    "campanas_malware_activas": 2,
+    "ataques_ddos_confirmados": "N/D",
+    "ransomware_reportado_relevante": "Sin novedad critica priorizada en esta ejecucion",
+    "paises_mas_afectados": "Impacto global; riesgo operativo directo para organizaciones en Espana",
+    "nivel_riesgo_global": "ALTO"
+  },
+  "executive_summary": {
+    "estado_global": "La fotografia de las 20:00 muestra una presion alta por acumulacion de vulnerabilidades criticas recien publicadas, varias con evidencia de explotacion o con probabilidad elevada de weaponization rapida.",
+    "riesgos_principales": [
+      "Exposicion de activos perimetrales y de acceso remoto con fallos criticos en PAN-OS y Microsoft Exchange.",
+      "Riesgo inmediato en stacks de IA y desarrollo por ChromaDB y React2Shell.",
+      "Superficie industrial/OT tensionada por el paquete mensual de Siemens con 22 vulnerabilidades criticas.",
+      "Incremento del riesgo de fraude posterior a brechas de datos y campanas de phishing dirigidas."
+    ],
+    "sectores_afectados": [
+      "Tecnologia y servicios digitales",
+      "Infraestructura y entornos industriales",
+      "Retail y fidelizacion de clientes",
+      "Turismo y reservas",
+      "Empresas con uso intensivo de SaaS, correo y frameworks web"
+    ],
+    "tecnicas_mas_usadas": [
+      "RCE pre-auth y abuso de servicios expuestos",
+      "Inyeccion SQL y XSS",
+      "Phishing con urgencia operativa",
+      "DLL sideloading y RAT distribuidos por mensajeria social",
+      "Abuso de software sin parche o con mitigaciones incompletas"
+    ],
+    "exposicion_estimada": "Alta para organizaciones con firewalls expuestos, Exchange on-prem, Drupal, ChromaDB/FastAPI, React/Next.js sin actualizar y activos OT Siemens.",
+    "recomendacion_principal": "Priorizar en menos de 24 horas el cierre de exposicion externa, aplicar parches ya disponibles y aislar o mitigar de inmediato los servicios sin parche estable.",
+    "conclusion_rapida": [
+      "El riesgo dominante es de explotacion rapida sobre infraestructura expuesta.",
+      "ChromaDB y PAN-OS requieren accion prioritaria por explotacion activa o evidencia fuerte de abuso.",
+      "Drupal y Exchange deben tratarse como ventanas de riesgo de corto plazo.",
+      "Las brechas de Booking y Rituals elevan el riesgo de phishing secundario a clientes y empleados.",
+      "Para pymes espanolas, la mayor mejora inmediata sigue siendo parcheo, MFA y restriccion de acceso administrativo."
+    ]
+  },
+  "alerts": [
+    {
+      "title": "ChromaDB ChromaToast (CVE-2026-45829)",
+      "date": "2026-05-20",
+      "severity": "Critica",
+      "status": "Hecho confirmado",
+      "summary": "RCE pre-auth en despliegues Python/FastAPI de ChromaDB; INCIBE indica explotacion y ausencia de parche.",
+      "action": "Restringir acceso de red y migrar a la ruta basada en Rust cuando sea viable."
+    },
+    {
+      "title": "Palo Alto PAN-OS (CVE-2026-0300)",
+      "date": "2026-05-06",
+      "severity": "Critica",
+      "status": "Hecho confirmado",
+      "summary": "Vulnerabilidad de desbordamiento con ejecucion arbitraria como root. INCIBE y NVD reflejan explotacion; NVD la vincula al catalogo KEV de CISA.",
+      "action": "Aplicar parche y restringir o deshabilitar User-ID Authentication Portal si no es imprescindible."
+    },
+    {
+      "title": "Microsoft Exchange Server (CVE-2026-42897)",
+      "date": "2026-05-15",
+      "severity": "Critica",
+      "status": "Hecho confirmado; explotacion indicada por INCIBE",
+      "summary": "XSS con posibilidad de suplantacion y ejecucion de JavaScript en OWA bajo determinadas condiciones.",
+      "action": "Verificar mitigacion automatica de EM y revisar telemetria de correo/OWA."
+    },
+    {
+      "title": "Drupal (CVE-2026-9082)",
+      "date": "2026-05-19/21",
+      "severity": "Critica",
+      "status": "Hecho confirmado",
+      "summary": "Actualizacion critica por SQLi en sitios con PostgreSQL; la fundacion alerto de aparicion rapida de exploits tras el parche.",
+      "action": "Actualizar de inmediato a las ramas corregidas o aplicar parche manual si se sigue en ramas antiguas."
+    },
+    {
+      "title": "Siemens mayo 2026",
+      "date": "2026-05-12",
+      "severity": "Critica",
+      "status": "Hecho confirmado",
+      "summary": "Comunicado mensual con 22 vulnerabilidades criticas en productos industriales y de automatizacion.",
+      "action": "Inventariar activos afectados, revisar ventana de mantenimiento y aplicar medidas compensatorias donde no se pueda parchear."
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "cve": "CVE-2026-45829",
+      "product": "ChromaDB Python/FastAPI",
+      "cvss": "Critica (INCIBE)",
+      "severity": "Critica",
+      "exploitation": "Si",
+      "patch": "No estable al publicarse el aviso",
+      "priority": "Critica - aislar y mitigar hoy",
+      "source": "INCIBE"
+    },
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto PAN-OS User-ID Authentication Portal",
+      "cvss": "CVSS v4 9.3 / NVD",
+      "severity": "Critica",
+      "exploitation": "Si; incluida en KEV",
+      "patch": "Si",
+      "priority": "Critica - parche inmediato",
+      "source": "INCIBE / NVD / CISA KEV"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server",
+      "cvss": "Critica (INCIBE)",
+      "severity": "Critica",
+      "exploitation": "Si segun aviso INCIBE",
+      "patch": "Mitigacion automatica EM disponible",
+      "priority": "Critica - revisar exposicion y OWA",
+      "source": "INCIBE / Microsoft"
+    },
+    {
+      "cve": "CVE-2026-9082",
+      "product": "Drupal con PostgreSQL",
+      "cvss": "Critica (INCIBE)",
+      "severity": "Critica",
+      "exploitation": "No en el momento del aviso",
+      "patch": "Si",
+      "priority": "Alta - actualizar en la misma jornada",
+      "source": "INCIBE / Drupal"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android System / adbd",
+      "cvss": "Critical (Android bulletin)",
+      "severity": "Critica",
+      "exploitation": "Sin evidencia publica en la fuente consultada",
+      "patch": "Si, SPL 2026-05-01",
+      "priority": "Alta - ciclo normal acelerado",
+      "source": "Android Security Bulletin"
+    },
+    {
+      "cve": "CVE-2026-25786",
+      "product": "Siemens web interface / TIA project workflow",
+      "cvss": "CVSS-B 9.3 / CVSS 3.1 9.1",
+      "severity": "Critica",
+      "exploitation": "Sin evidencia publica en la fuente consultada",
+      "patch": "Mitigar/actualizar segun Siemens",
+      "priority": "Alta - OT/ICS priorizado",
+      "source": "NVD / Siemens / INCIBE"
+    },
+    {
+      "cve": "CVE-2026-39808 / CVE-2026-39813",
+      "product": "FortiSandbox",
+      "cvss": "Critica (INCIBE)",
+      "severity": "Critica",
+      "exploitation": "No",
+      "patch": "Si, 4.4.9 / 5.0.6",
+      "priority": "Alta - parche acelerado",
+      "source": "INCIBE / Fortinet"
+    },
+    {
+      "cve": "CVE-2025-55182",
+      "product": "React Server Components / Next.js",
+      "cvss": "CVSS 3.1 10.0",
+      "severity": "Critica",
+      "exploitation": "Si",
+      "patch": "Si",
+      "priority": "Alta - revisar exposicion y secretos comprometidos",
+      "source": "INCIBE / React / CISA KEV"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Booking",
+      "date": "2026-05-05",
+      "type": "Brecha de datos",
+      "status": "Hecho confirmado",
+      "impact": "Acceso no autorizado a datos de reservas y PII; riesgo de phishing posterior."
+    },
+    {
+      "name": "Rituals - My Rituals",
+      "date": "2026-05-07",
+      "type": "Brecha de datos",
+      "status": "Hecho confirmado",
+      "impact": "Exposicion de PII de clientes de fidelizacion; riesgo latente de fraude y suplantacion."
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Phishing que suplanta comunicaciones de LastPass",
+      "status": "En mitigacion y vigilancia",
+      "vector": "Correo electronico",
+      "target": "Credenciales maestras"
+    },
+    {
+      "name": "Campana de malware por mensajes directos en LinkedIn",
+      "status": "Alerta y seguimiento",
+      "vector": "Mensajeria social + WinRAR SFX + DLL sideloading",
+      "target": "Ejecutivos y objetivos de alto valor"
+    }
+  ],
+  "news": [
+    "Booking y Rituals mantienen vivo el riesgo de fraude secundario sobre usuarios afectados.",
+    "La explotacion sostenida de React2Shell confirma que las dependencias web siguen siendo un vector operativo de alta velocidad.",
+    "La combinacion de avisos criticos en ChromaDB, Drupal, Exchange y PAN-OS subraya un escenario de presion elevada sobre equipos de parcheo y exposicion externa."
+  ],
+  "recommendations": {
+    "critica": [
+      "Reducir hoy la superficie expuesta: portales PAN-OS, OWA/Exchange, ChromaDB Python/FastAPI y administraciones web no esenciales.",
+      "Aplicar parches o mitigaciones inmediatas a CVE-2026-0300, CVE-2026-42897, CVE-2026-9082 y CVE-2026-45829.",
+      "Buscar indicios de explotacion en logs de firewall, correo y servidores web desde el 15 al 22 de mayo de 2026."
+    ],
+    "alta": [
+      "Lanzar una comprobacion urgente de dependencias React/Next.js y rotar secretos expuestos si hubo sistemas vulnerables en Internet.",
+      "Revisar inventario OT/ICS Siemens y definir excepciones con controles compensatorios donde no se pueda parchear de inmediato.",
+      "Refrescar campañas de concienciacion frente a phishing tematico de LastPass, reservas y ofertas laborales por LinkedIn."
+    ],
+    "media": [
+      "Asegurar MFA, georrestriccion y allowlists en interfaces administrativas.",
+      "Ajustar reglas SIEM/EDR para deteccion de DLL sideloading, abuso de OWA y accesos anommalos a reservas/clientes."
+    ],
+    "baja": [
+      "Revisar ciclo mensual de parcheo movil y versionado de frameworks para evitar acumulacion de deuda tecnica."
+    ]
+  },
+  "ai_section": {
+    "status": "Analisis predictivo o estimativo generado por IA",
+    "global_risk": "Alto",
+    "next_threats": [
+      "Automatizacion de exploits de oportunidad sobre Drupal, ChromaDB y Exchange durante las proximas 72 horas.",
+      "Aumento del phishing de segunda ola aprovechando marcas afectadas por brechas recientes.",
+      "Mayor escrutinio ofensivo sobre appliances y portales expuestos con autenticacion debil o trust boundaries difusos."
+    ],
+    "sectors_exposed": [
+      "Pymes con infraestructura autogestionada",
+      "SaaS internos y equipos de desarrollo IA",
+      "Industria y automatizacion",
+      "Retail, viajes y programas de fidelizacion"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-45829",
+      "CVE-2026-0300",
+      "CVE-2026-42897",
+      "CVE-2026-9082",
+      "CVE-2025-55182"
+    ],
+    "probability_attack_increase": "Alta",
+    "automatic_recommendation": "Mantener un modo de vigilancia reforzada sobre exposicion externa y dependencias criticas hasta al menos el 26 de mayo de 2026."
+  },
+  "sources": [
+    {
+      "name": "Android Security Bulletin - May 2026",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - PAN-OS CVE-2026-0300",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-user-id-authentication-portal-de-palo-alto",
+      "type": "official"
+    },
+    {
+      "name": "NVD - CVE-2026-0300",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Avisos de seguridad de Siemens de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026",
+      "type": "official"
+    },
+    {
+      "name": "NVD - CVE-2026-25786",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25786",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - React2Shell explotacion",
+      "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/exploitation-react2shell-vulnerability-cve-2025-55182",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - CVE-2025-55182",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2025-55182",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Booking",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-de-un-acceso-no-autorizado-datos-de-usuarios-de-booking",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Rituals",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/rituals-detecta-un-incidente-de-seguridad-que-afecta-la-base-de-datos-de",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - LastPass phishing",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/deteccion-y-respuesta-coordinada-ante-una-campana-de-phishing-que",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - LinkedIn malware",
+      "url": "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/detectan-una-campana-de-malware-distribuida-traves-de-linkedin",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - ChromaDB",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/ejecucion-de-codigo-en-remoto-en-chromadb",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Drupal",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizacion-de-seguridad-critica-en-drupal",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - Exchange",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft",
+      "type": "official"
+    },
+    {
+      "name": "INCIBE - FortiSandbox",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-fortisandbox",
+      "type": "official"
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
