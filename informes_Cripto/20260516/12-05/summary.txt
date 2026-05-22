@@ -1,4 +1,0 @@
-Fecha: 2026-05-16 12:05 CEST
-Estado general: Correccion defensiva con amplitud debil
-Sesgo ejecutivo: dominancia BTC elevada, Fear & Greed en 31/100, amplitud alt debil.
-Puntos clave: salidas ETF BTC, mejora regulatoria en EE.UU. y riesgo operativo en THORChain.
