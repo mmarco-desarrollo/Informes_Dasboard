@@ -1,1 +1,160 @@
-PLACEHOLDER_HTML
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe Ejecutivo Premium de Inteligencia Artificial | Corte 12:00</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: rgba(13, 23, 39, 0.92);
+      --line: rgba(115,155,255,0.18);
+      --text: #eef4ff;
+      --soft: #9eb0cc;
+      --blue: #4ea2ff;
+      --violet: #9678ff;
+      --green: #38d889;
+      --orange: #ff9d42;
+      --red: #ff5c7a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top right, rgba(150,120,255,0.18), transparent 28%), linear-gradient(180deg, #081322 0%, #050b14 100%);
+    }
+    .wrap { width: min(1240px, calc(100% - 32px)); margin: 24px auto 40px; }
+    .hero, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+    }
+    .hero { padding: 28px; }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(78,162,255,0.12);
+      color: #8fd0ff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    h1 { margin: 18px 0 10px; font-size: clamp(32px, 5vw, 54px); line-height: 1.04; }
+    p { color: var(--soft); line-height: 1.6; }
+    .grid4, .grid2, .grid3 { display: grid; gap: 16px; margin-top: 18px; }
+    .grid4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .grid3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .kpi, .mini { padding: 18px; border-radius: 18px; background: rgba(10,18,31,0.9); border: 1px solid var(--line); }
+    .label { color: var(--soft); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .value { margin-top: 8px; font-size: 30px; font-weight: 700; color: var(--text); }
+    .panel { padding: 20px; }
+    h2 { margin: 0 0 14px; font-size: 18px; }
+    .item { padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.08); }
+    .item:first-child { padding-top: 0; border-top: 0; }
+    .tag {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(150,120,255,0.12);
+      color: #d3c6ff;
+    }
+    .row { display: flex; justify-content: space-between; gap: 16px; margin-top: 8px; color: var(--soft); font-size: 13px; }
+    .row strong { color: var(--text); text-align: right; }
+    a { color: #8fd0ff; text-decoration: none; }
+    footer { margin-top: 18px; padding: 20px; color: var(--soft); }
+    @media (max-width: 960px) { .grid4, .grid3, .grid2 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">MMarco Seguridad | Radar Ejecutivo IA</span>
+      <h1>Informe Ejecutivo Premium de Inteligencia Artificial</h1>
+      <p>Corte de las 12:00 centrado en cambios confirmados desde la ultima ejecucion registrada. El tablero de hoy confirma mas disciplina en seguridad y catalogo de modelos, mientras la oportunidad comercial sigue desplazandose hacia gobierno de agentes, conectores y cumplimiento.</p>
+      <div class="grid4">
+        <div class="kpi"><div class="label">Cambios confirmados</div><div class="value">2</div><p>Microsoft Security y retiro de modelos heredados en ChatGPT.</p></div>
+        <div class="kpi"><div class="label">Alertas activas</div><div class="value">3</div><p>Prompt injection, permisos de agentes y ventana AI Act.</p></div>
+        <div class="kpi"><div class="label">Incidentes criticos nuevos</div><div class="value">0</div><p>Sin caidas o fugas criticas nuevas confirmadas.</p></div>
+        <div class="kpi"><div class="label">Utilidad inmediata</div><div class="value">Alta</div><p>Hardening, inventario de modelos y evaluacion de tooling agentic.</p></div>
+      </div>
+      <div class="grid3">
+        <div class="mini"><div class="label">Fecha y hora exacta</div><div class="value" style="font-size:22px">2026-05-22 12:01 CEST</div></div>
+        <div class="mini"><div class="label">Impacto IA</div><div class="value" style="font-size:22px">Alto</div></div>
+        <div class="mini"><div class="label">Proxima actualizacion esperada</div><div class="value" style="font-size:22px">2026-05-22 16:00 CEST</div></div>
+      </div>
+    </section>
+
+    <section class="grid2">
+      <article class="panel">
+        <h2>Resumen Ejecutivo</h2>
+        <div class="item"><span class="tag">hecho confirmado</span><p>Microsoft movio la conversacion desde la teoria a controles desplegables con novedades visibles en seguridad enterprise, reforzando el angulo comercial para hardening de agentes.</p></div>
+        <div class="item"><span class="tag">hecho confirmado</span><p>OpenAI formalizo en ChatGPT la retirada de GPT-4o, GPT-4.1, GPT-4.1 mini, o4-mini y GPT-5 Instant/Thinking del selector visible, lo que obliga a revisar inventario, demos y mensajes internos.</p></div>
+        <div class="item"><span class="tag">continuidad relevante</span><p>Google Managed Agents y Anthropic con Stainless siguen marcando la direccion estructural del mercado: mas integracion entre modelo, herramientas, identidad y observabilidad.</p></div>
+      </article>
+      <article class="panel">
+        <h2>Lectura Ejecutiva</h2>
+        <div class="item"><p>La oportunidad inmediata para MMarco Seguridad sigue en auditoria de agentes, control de conectores, gobierno de permisos y readiness regulatorio para PyME y consultoria avanzada.</p></div>
+        <div class="item"><div class="row"><span>Estado global</span><strong>Aceleracion con refuerzo de controles y consolidacion enterprise</strong></div></div>
+        <div class="item"><div class="row"><span>Comparativa</span><strong>Desde 2026-05-21 08:16 CEST</strong></div></div>
+      </article>
+    </section>
+
+    <section class="grid2">
+      <article class="panel">
+        <h2>Cambios Relevantes</h2>
+        <div class="item"><h3>Microsoft Security | Purview para Claude y Windows 365 Link</h3><p>Aporta angulos comerciales claros para DLP, control de datos sensibles y aislamiento de entornos agentic.</p><div class="row"><span>Impacto</span><strong>Alto</strong></div><div class="row"><span>Recomendacion</span><strong>Priorizar oferta de AI agent hardening.</strong></div><div class="row"><span>Fuente</span><strong><a href="https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/">Microsoft Security Blog</a></strong></div></div>
+        <div class="item"><h3>ChatGPT retira varios modelos heredados del selector</h3><p>Reordena el frente comercial y operativo de los modelos que ven usuarios finales.</p><div class="row"><span>Impacto</span><strong>Medio-alto</strong></div><div class="row"><span>Recomendacion</span><strong>Actualizar materiales y automatizaciones dependientes del selector.</strong></div><div class="row"><span>Fuente</span><strong><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI Help Center</a></strong></div></div>
+      </article>
+      <article class="panel">
+        <h2>Alertas Activas</h2>
+        <div class="item"><p>Critica | Permisos excesivos y ejecucion no supervisada en agentes conectados.</p></div>
+        <div class="item"><p>Alta | Dependencia creciente de tooling propietario para orquestacion y conectividad.</p></div>
+        <div class="item"><p>Alta | Necesidad de actualizar inventario interno de modelos visibles en ChatGPT y materiales asociados.</p></div>
+      </article>
+    </section>
+
+    <section class="grid3">
+      <article class="panel">
+        <h2>Herramientas y Plataformas</h2>
+        <div class="item"><h3>Managed Agents | Google</h3><p>Capa gestionada para construir agentes sobre Gemini API con enfoque enterprise.</p></div>
+        <div class="item"><h3>Stainless + Anthropic ecosystem</h3><p>Refuerzo de la capa SDK/API para integracion y fiabilidad.</p></div>
+      </article>
+      <article class="panel">
+        <h2>Oportunidades</h2>
+        <div class="item"><p>Alta | Oferta de auditoria de agentes y conectores.</p></div>
+        <div class="item"><p>Alta | Servicio de inventario y racionalizacion de modelos.</p></div>
+        <div class="item"><p>Media | Readiness AI Act para PyME y consultoria.</p></div>
+      </article>
+      <article class="panel">
+        <h2>Calendario</h2>
+        <div class="item"><h3>Consulta UE sobre GPAI del AI Act</h3><p>Fecha clave: 2026-06-03.</p><div class="row"><span>Fuente</span><strong><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-ai-act-rules-general-purpose-ai-models">Comision Europea</a></strong></div></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Fuentes</h2>
+      <div class="item"><p><a href="https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/">Microsoft Security Blog</a></p></div>
+      <div class="item"><p><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI Help Center | ChatGPT Release Notes</a></p></div>
+      <div class="item"><p><a href="https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/">Google Blog | Managed agents in the Gemini API</a></p></div>
+      <div class="item"><p><a href="https://www.anthropic.com/news/anthropic-acquires-stainless">Anthropic | Acquires Stainless</a></p></div>
+      <div class="item"><p><a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-ai-act-rules-general-purpose-ai-models">European Commission | GPAI consultation</a></p></div>
+      <div class="item"><p>Limitacion: no se publica PDF porque no existe conversion fiel verificada con enlace externo real en esta ejecucion.</p></div>
+    </section>
+
+    <footer class="panel">
+      <strong>MMarco Seguridad</strong><br>
+      Manuel Marco Sanchez | Ciberseguridad, Blockchain, IA y Telecomunicaciones<br>
+      Web: https://mmarcoseguridad.com | Email: mmarco.seguridad@gmail.com | WhatsApp: +34 656 33 93 55<br><br>
+      Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.
+    </footer>
+  </div>
+</body>
+</html>
