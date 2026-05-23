@@ -360,16 +360,22 @@
   ],
   "delivery_status": {
     "report_generated": "Completado",
-    "github_history": "Pendiente",
-    "gmail_html": "Pendiente",
+    "github_history": "Completado",
+    "gmail_html": "Enviado",
     "pdf": "No disponible",
     "page_images": "No disponibles",
     "google_drive": "Omitido",
-    "slack_dm": "Pendiente",
+    "slack_dm": "Pendiente de aprobación/autenticación",
     "limitations": [
       "No se genera PDF en esta edición para no declarar un artefacto sin persistencia externa verificada.",
+      "Slack requirió aprobación o autenticación del conector y no pudo enviar el DM dentro de la espera disponible.",
       "Los KPIs son de alcance curado y no sustituyen una plataforma SIEM/TIP con telemetría propia."
     ]
   },
-  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico.",
+  "gmail_message_id": "19e54575730a567c",
+  "github_commits": {
+    "json_create": "45056823f97afb1277c876668e5c4218313bd19d",
+    "html_create": "67a2081dc8fb0a3b6c0f67883dbf8a6fa6a7799f"
+  }
 }
