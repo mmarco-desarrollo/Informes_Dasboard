@@ -17,10 +17,12 @@ La franja de las 20:00 CEST cierra con recuperacion tactica de las majors tras e
 ## Enlaces
 
 - Dashboard HTML: https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260523/20-00/dashboard.html
-- Dashboard PDF: https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_Cripto/20260523/20-00/dashboard.pdf
+- Dashboard PDF: https://docs.google.com/presentation/d/15O20xBb_Fp5aE_DI0QN6pVEPmI8tuv_DnGWNn3q1xlg/export/pdf
+- Respaldo Slides: https://docs.google.com/presentation/d/15O20xBb_Fp5aE_DI0QN6pVEPmI8tuv_DnGWNn3q1xlg/edit?usp=drivesdk
 
 ## Nota operativa
 
+* El PDF queda persistido fuera del workspace mediante Google Drive como respaldo de acceso.
 * Fear & Greed se muestra con lectura secundaria accesible durante la ejecucion.
 * Altseason Index se usa como proxy de rotacion; la lectura accesible seguia en territorio de Bitcoin Season.
 * Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. No constituye asesoramiento financiero.
