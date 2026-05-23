@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo de Ciberseguridad · 20260523_0824_CEST</title>
+  <style>
+    :root {
+      --bg: #08111d;
+      --bg-alt: #0f1d30;
+      --panel: rgba(15, 29, 48, 0.86);
+      --panel-2: rgba(14, 39, 58, 0.84);
+      --line: rgba(142, 180, 210, 0.16);
+      --text: #edf6ff;
+      --muted: #9eb4ca;
+      --accent: #50e3c2;
+      --accent-2: #74b7ff;
+      --warn: #ffcd70;
+      --critical: #ff6b6b;
+      --high: #ff9966;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(116, 183, 255, 0.16), transparent 28%),
+        radial-gradient(circle at 15% 20%, rgba(80, 227, 194, 0.12), transparent 24%),
+        linear-gradient(180deg, #071019 0%, #09111d 100%);
+    }
+    a { color: #8fd4ff; text-decoration: none; }
+    .shell {
+      width: min(1320px, calc(100% - 32px));
+      margin: 24px auto 48px;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(18, 42, 67, 0.92), rgba(7, 17, 29, 0.96)),
+        linear-gradient(90deg, rgba(80, 227, 194, 0.14), transparent);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -8% -55% auto;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(80, 227, 194, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .brand strong { color: var(--text); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+      line-height: 1.05;
+    }
+    .lede {
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .meta-card, .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    .meta-card {
+      padding: 18px;
+      min-height: 110px;
+    }
+    .eyebrow {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      margin-bottom: 10px;
+    }
+    .metric {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .threat {
+      color: var(--critical);
+    }
+    .section {
+      margin-top: 24px;
+    }
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: end;
+      gap: 8px 24px;
+      margin-bottom: 14px;
+    }
+    .section h2 {
+      margin: 0;
+      font-size: 1.35rem;
+    }
+    .section-subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+    .stats-grid, .news-grid, .alert-grid, .summary-grid, .recommendation-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .stats-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .summary-grid { grid-template-columns: 1.1fr 0.9fr; }
+    .alert-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .news-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .recommendation-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      padding: 20px;
+    }
+    .card p, .card li {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .row-between {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+    .pill {
+      display: inline-flex;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+    .pill.crítica, .pill.critical {
+      color: var(--critical);
+    }
+    .pill.alta, .pill.high {
+      color: var(--high);
+    }
+    .meta {
+      color: var(--accent-2);
+      font-size: 0.82rem;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 14px 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+    th {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+    }
+    td {
+      color: var(--muted);
+    }
+    .banner {
+      padding: 18px 20px;
+      border: 1px solid rgba(255, 205, 112, 0.25);
+      border-radius: 18px;
+      background: rgba(255, 205, 112, 0.07);
+      color: #ffe2a8;
+    }
+    .footer {
+      margin-top: 24px;
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(6, 13, 22, 0.86);
+      color: var(--muted);
+    }
+    .footer strong {
+      color: var(--text);
+    }
+    @media (max-width: 1100px) {
+      .hero-grid, .summary-grid, .stats-grid, .recommendation-grid, .news-grid, .alert-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 20px, 1320px);
+      }
+      .hero {
+        padding: 24px 18px;
+      }
+      .hero-grid, .hero-meta, .summary-grid, .stats-grid, .recommendation-grid, .news-grid, .alert-grid {
+        grid-template-columns: 1fr;
+      }
+      th, td {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="brand"><strong>MMarco Seguridad</strong><span>SOC | Threat Intelligence | Reporting Ejecutivo</span></div>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Edición programada de las 08:00 · Europe/Madrid</div>
+          <h1>Informe Ejecutivo de Ciberseguridad</h1>
+          <p class="lede">La superficie de riesgo sigue en nivel alto por la coincidencia de varias vulnerabilidades con explotación confirmada o probable y por campañas activas de ingeniería social orientadas a toma de control inicial.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-card">
+            <div class="eyebrow">Fecha y hora exacta</div>
+            <div class="metric">2026-05-23 08:24:29 CEST</div>
+          </div>
+          <div class="meta-card">
+            <div class="eyebrow">Nivel global de amenaza</div>
+            <div class="metric threat">ALTO</div>
+          </div>
+          <div class="meta-card">
+            <div class="eyebrow">Próxima actualización</div>
+            <div class="metric" style="font-size:1.3rem;">2026-05-23 12:00 CEST</div>
+          </div>
+          <div class="meta-card">
+            <div class="eyebrow">Estado IA de riesgo</div>
+            <p>Alza moderada con confianza media; sección predictiva separada de los hechos confirmados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class='section-head'><h2>KPIs</h2><p class='section-subtitle'>Indicadores basados en fuentes verificadas y contexto estratégico.</p></div>
+      <div class="stats-grid">
+    <article class="card stat">
+      <div class="eyebrow">Nivel global de amenaza</div>
+      <div class="metric">ALTO</div>
+      <p>Síntesis analítica de fuentes oficiales y avisos 14-23/05/2026.</p>
+    </article>
+    
+    <article class="card stat">
+      <div class="eyebrow">CVEs prioritarias en seguimiento</div>
+      <div class="metric">4</div>
+      <p>PAN-OS, Cisco SD-WAN, Exchange y Drupal.</p>
+    </article>
+    
+    <article class="card stat">
+      <div class="eyebrow">Vulnerabilidades con CVE en el boletín Microsoft de mayo</div>
+      <div class="metric">137</div>
+      <p>INCIBE, publicado el 13/05/2026.</p>
+    </article>
+    
+    <article class="card stat">
+      <div class="eyebrow">Vulnerabilidades críticas en el boletín Microsoft de mayo</div>
+      <div class="metric">14</div>
+      <p>INCIBE, publicado el 13/05/2026.</p>
+    </article>
+    
+    <article class="card stat">
+      <div class="eyebrow">Incidentes de ciberseguridad en el balance INCIBE 2025</div>
+      <div class="metric">122223</div>
+      <p>Datos consolidados a 09/02/2026.</p>
+    </article>
+    
+    <article class="card stat">
+      <div class="eyebrow">Incidentes ligados a malware en el balance INCIBE 2025</div>
+      <div class="metric">55411</div>
+      <p>Balance INCIBE 2025.</p>
+    </article>
+    
+    <article class="card stat">
+      <div class="eyebrow">Incidentes de phishing en el balance INCIBE 2025</div>
+      <div class="metric">25133</div>
+      <p>Balance INCIBE 2025.</p>
+    </article>
+    
+    <article class="card stat">
+      <div class="eyebrow">Incidentes de ransomware en el balance INCIBE 2025</div>
+      <div class="metric">392</div>
+      <p>Balance INCIBE 2025.</p>
+    </article>
+    </div>
+    </section>
+
+    <section class="section">
+      <div class='section-head'><h2>Resumen Ejecutivo</h2><p class='section-subtitle'>Hechos confirmados separados de síntesis analítica.</p></div>
+      <div class="summary-grid">
+        <article class="card">
+          <h3>Principales riesgos del momento</h3>
+          <ul><li>Dispositivos perimetrales y controladores SD-WAN expuestos a explotación prioritaria.</li><li>Entornos Microsoft Exchange con riesgo de spoofing/XSS y posible explotación en OWA.</li><li>Portales PAN-OS User-ID Authentication Portal expuestos desde zonas no confiables.</li><li>Sitios Drupal sobre PostgreSQL con intentos de explotación ya detectados en la naturaleza.</li><li>Campañas de phishing y soporte falso por Microsoft Teams con despliegue de A0Backdoor.</li></ul>
+          <h3 style="margin-top:18px;">Sectores más afectados</h3>
+          <ul><li>Financiero y sanitario por la campaña vía Microsoft Teams/Quick Assist.</li><li>Organizaciones con correo corporativo on-premises Microsoft Exchange.</li><li>Operadores con redes Cisco SD-WAN y perímetro PAN-OS.</li><li>Empresas y administraciones con portales Drupal expuestos.</li></ul>
+        </article>
+        <article class="card">
+          <h3>Técnicas más usadas</h3>
+          <ul><li>Bypass de autenticación.</li><li>Explotación de servicios expuestos a Internet.</li><li>SQL injection en aplicaciones web.</li><li>Suplantación y phishing con herramientas legítimas de acceso remoto.</li><li>Persistencia y exfiltración tras acceso inicial.</li></ul>
+          <h3 style="margin-top:18px;">Conclusión rápida</h3>
+          <ul><li>El riesgo operativo inmediato se concentra en perímetro, correo y acceso remoto.</li><li>Las cuatro CVEs priorizadas requieren verificación de exposición hoy, no solo planificación.</li><li>La campaña con Teams y Quick Assist confirma que la ingeniería social sigue siendo el vector de entrada dominante.</li><li>Para pymes españolas, phishing, fraude y malware siguen siendo la combinación más probable de impacto según el balance oficial de INCIBE.</li><li>No hay evidencia suficiente en esta ejecución para declarar una nueva campaña masiva distinta de las ya citadas.</li></ul>
+          <p><strong>Exposición estimada:</strong> Elevada para organizaciones con perímetro expuesto y gestión débil de parcheo en infraestructuras de red, correo y CMS.</p>
+          <p><strong>Tendencia 24h:</strong> Estable en alto.</p>
+          <p><strong>Tendencia 7d:</strong> Al alza moderada por nuevas publicaciones y actualizaciones de criticidad entre el 14 y el 22 de mayo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class='section-head'><h2>Alertas Activas</h2><p class='section-subtitle'>Lo urgente y accionable para dirección y operación.</p></div>
+      <div class="alert-grid">
+    <article class="card alert-card">
+      <div class="row-between">
+        <h3>Cisco Catalyst SD-WAN Controller Authentication Bypass</h3>
+        <span class="pill crítica">Crítica</span>
+      </div>
+      <div class="meta">2026-05-14 · Hecho confirmado</div>
+      <p>CVE-2026-20182 figura en NVD y en el catálogo KEV de CISA. Permite bypass de autenticación y acceso administrativo de alto privilegio en controladores SD-WAN afectados.</p>
+      <p><strong>Impacto:</strong> Manipulación de configuración de la malla SD-WAN vía NETCONF.</p>
+    </article>
+    
+    <article class="card alert-card">
+      <div class="row-between">
+        <h3>Microsoft Exchange Server Cross-Site Scripting / Spoofing</h3>
+        <span class="pill crítica">Crítica</span>
+      </div>
+      <div class="meta">2026-05-15 · Hecho confirmado</div>
+      <p>INCIBE marca la vulnerabilidad CVE-2026-42897 como crítica e indica que podría estar siendo explotada; NVD la muestra en KEV de CISA.</p>
+      <p><strong>Impacto:</strong> Suplantación y ejecución de JavaScript en OWA tras correo especialmente diseñado.</p>
+    </article>
+    
+    <article class="card alert-card">
+      <div class="row-between">
+        <h3>Palo Alto PAN-OS Captive Portal</h3>
+        <span class="pill crítica">Crítica</span>
+      </div>
+      <div class="meta">2026-05-05 · Hecho confirmado</div>
+      <p>CVE-2026-0300 mantiene severidad crítica, urgencia HIGHEST y exploit maturity ATTACKED según Palo Alto.</p>
+      <p><strong>Impacto:</strong> RCE como root en firewalls PA-Series y VM-Series bajo configuración expuesta.</p>
+    </article>
+    
