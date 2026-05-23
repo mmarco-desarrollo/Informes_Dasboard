@@ -1,0 +1,321 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Informe Ejecutivo de Ciberseguridad",
+  "generated_at": "2026-05-23 16:10:40 CEST",
+  "timezone": "Europe/Madrid",
+  "global_threat_level": "ALTO",
+  "next_update": "Segun siguiente ejecucion programada; hora no verificada en este entorno",
+  "ai_risk_state": "Elevado, con presion sostenida sobre identidades, APIs administrativas y Linux expuesto",
+  "methodology_scope": "Resumen ejecutivo basado en fuentes oficiales y de fabricante revisadas entre el 19 y el 23 de mayo de 2026, con prioridad para evidencias verificables y explotacion confirmada.",
+  "kpis": [
+    {
+      "label": "Campanas activas priorizadas",
+      "value": "4",
+      "note": "Fox Tempest, phishing AiTM, Dirty Frag, exposiciones API/Admin recientes"
+    },
+    {
+      "label": "CVEs prioritarias",
+      "value": "5",
+      "note": "Top de mitigacion inmediata para esta ventana"
+    },
+    {
+      "label": "Explotacion confirmada",
+      "value": "1",
+      "note": "CVE-2026-31431 figura en CISA KEV segun NVD"
+    },
+    {
+      "label": "Alertas criticas INCIBE 19-22 mayo",
+      "value": "9",
+      "note": "Ventana priorizada, no total global de Internet"
+    },
+    {
+      "label": "Tendencia 24h",
+      "value": "Alza moderada",
+      "note": "Mayor peso de fallos en superficie de gestion y robo de sesion"
+    },
+    {
+      "label": "Riesgo para pymes",
+      "value": "Alto",
+      "note": "Especialmente por phishing, VPN/clientes falsos y mala higiene de parcheo"
+    }
+  ],
+  "executive_summary": {
+    "global_state": "El panorama a cierre de las 16:10 CEST del 23 de mayo de 2026 sigue en nivel ALTO. El riesgo mas inmediato combina vulnerabilidades criticas recientes en productos de administracion, exposicion de APIs internas y campanas de robo de sesion o distribucion de malware firmado.",
+    "main_risks": [
+      "Priorizacion urgente de Linux vulnerable a Copy Fail (CVE-2026-31431), con inclusion en CISA KEV segun NVD.",
+      "Superficies administrativas y APIs internas siguen siendo un vector critico, con Cisco Secure Workload y UniFi OS entre los avisos recientes mas sensibles.",
+      "La cadena de valor del malware firmado gana relevancia: Microsoft atribuye a Fox Tempest una infraestructura que facilito ransomware y stealers con certificados fraudulentos.",
+      "El phishing con intercepcion de sesion sigue escalando: Microsoft observo una campana AiTM que impacto a mas de 35.000 usuarios en 26 paises."
+    ],
+    "sectors_most_affected": [
+      "Salud y ciencias de la vida",
+      "Servicios financieros",
+      "Servicios profesionales",
+      "Tecnologia y software",
+      "Administracion y operadores con infraestructura Linux o plataformas de gestion expuestas"
+    ],
+    "most_used_techniques": [
+      "Phishing AiTM con captura de token",
+      "Abuso de certificados firmados para evasion",
+      "Escalada local a root en Linux tras compromiso inicial",
+      "Abuso de APIs REST internas y fallos de autenticacion",
+      "Inyeccion de comandos en plataformas de seguridad y gestion"
+    ],
+    "estimated_exposure": "Alta para organizaciones con Linux multiusuario, consolas expuestas a red, APIs internas mal segmentadas y MFA no resistente al phishing.",
+    "main_recommendation": "Acelerar en 24 horas el parcheo de plataformas de administracion y Linux priorizado, revisar exposicion de APIs internas y reforzar MFA resistente al phishing y controles de sesion.",
+    "quick_conclusion": [
+      "La prioridad tecnica numero uno es cerrar CVEs explotadas o con barrera de explotacion baja en Linux y superficies de gestion.",
+      "La prioridad operativa numero uno es reducir robo de sesion, abuso de credenciales y acceso administrativo remoto.",
+      "Para Espana, INCIBE y CCN-CERT mantienen senales claras de presion sobre software empresarial, dispositivos de red y productos de Ivanti.",
+      "No hay base robusta para afirmar una bajada de actividad; la tendencia operativa sigue siendo desfavorable."
+    ]
+  },
+  "incidents_activity": [
+    {
+      "title": "Fox Tempest como servicio de firma maliciosa",
+      "type": "Hecho confirmado",
+      "summary": "Microsoft vincula a Fox Tempest con una operacion de malware-signing-as-a-service usada por actores de ransomware y robo de informacion. La infraestructura fue interrumpida en mayo de 2026.",
+      "impact": "Aumenta la probabilidad de ejecucion y evasion al presentar binarios como firmados legitimamente.",
+      "relevance": "Alta para SOC y EDR por posible reduccion de friccion en cadenas de infeccion."
+    },
+    {
+      "title": "Campana de phishing AiTM con pretextos de cumplimiento interno",
+      "type": "Hecho confirmado",
+      "summary": "Microsoft observo entre el 14 y el 16 de abril de 2026 una campana que apunto a mas de 35.000 usuarios de mas de 13.000 organizaciones en 26 paises.",
+      "impact": "Compromiso de token y acceso inmediato a cuentas, incluso con MFA no resistente al phishing.",
+      "relevance": "Alta para correo, identidad y acceso condicional."
+    },
+    {
+      "title": "Dirty Frag y variantes en Linux",
+      "type": "Indicio aun investigado",
+      "summary": "Microsoft mantiene una investigacion activa sobre Dirty Frag y senala que la tecnica mejora la fiabilidad de escaladas locales a root tras el acceso inicial.",
+      "impact": "Eleva el riesgo de post-explotacion en servidores Linux, contenedores y entornos de nube.",
+      "relevance": "Alta para infraestructura y cloud con workloads compartidos."
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-31431",
+      "product": "Linux kernel (Copy Fail)",
+      "cvss": "7.8 (CNA kernel.org)",
+      "severity": "Alta",
+      "exploitation": "Confirmada; aparece en CISA KEV segun NVD",
+      "patch": "Si",
+      "priority": "Critica",
+      "source": "NVD / CISA KEV via NVD",
+      "summary": "Escalada local a root con fuerte impacto en entornos multiusuario y nube."
+    },
+    {
+      "cve": "CVE-2026-20223",
+      "product": "Cisco Secure Workload",
+      "cvss": "Pendiente de enriquecimiento NVD; vector critico del CNA Cisco",
+      "severity": "Critica",
+      "exploitation": "No confirmada en las fuentes revisadas",
+      "patch": "Si",
+      "priority": "Critica",
+      "source": "NVD / INCIBE / Cisco",
+      "summary": "Acceso no autenticado a recursos con privilegios de Site Admin mediante API REST interna."
+    },
+    {
+      "cve": "CVE-2026-39808",
+      "product": "Fortinet FortiSandbox",
+      "cvss": "9.8 (CNA Fortinet)",
+      "severity": "Critica",
+      "exploitation": "No confirmada en las fuentes revisadas",
+      "patch": "Si",
+      "priority": "Critica",
+      "source": "NVD / FortiGuard PSIRT",
+      "summary": "Inyeccion de comandos no autenticada en plataforma de sandboxing."
+    },
+    {
+      "cve": "CVE-2026-33000",
+      "product": "UniFi OS Server y dispositivos UniFi OS",
+      "cvss": "No publicado en la fuente revisada",
+      "severity": "Critica",
+      "exploitation": "No",
+      "patch": "Si",
+      "priority": "Alta",
+      "source": "INCIBE",
+      "summary": "Parte de un bloque de 4 CVEs criticas y 1 alta en UniFi OS con inyeccion de comandos y acceso no autorizado."
+    },
+    {
+      "cve": "CVE-2026-43284",
+      "product": "Linux kernel (Dirty Frag)",
+      "cvss": "Alta; NVD publica detalle y vector actualizado",
+      "severity": "Alta",
+      "exploitation": "Actividad e investigacion en curso; no se confirma explotacion masiva general",
+      "patch": "Si",
+      "priority": "Alta",
+      "source": "NVD / Microsoft",
+      "summary": "Escalada local a root con interes operativo por fiabilidad tras compromiso inicial."
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      "Rhysida",
+      "Lumma Stealer / LummaC2",
+      "Vidar",
+      "Oyster"
+    ],
+    "target_sectors": [
+      "Salud",
+      "Educacion",
+      "Gobierno",
+      "Servicios financieros",
+      "Tecnologia"
+    ],
+    "techniques": [
+      "Malware firmado de forma fraudulenta",
+      "Malvertising y SEO poisoning",
+      "Phishing con token theft",
+      "Post-explotacion en Linux"
+    ],
+    "iocs_note": "Las fuentes de Microsoft y CISA citadas incluyen IOCs y detecciones tecnicas, pero este informe ejecutivo no replica listados extensos para evitar ruido. Recomendable descarga y operativizacion directa desde las fuentes oficiales.",
+    "trend": "Alza sostenida en la industrializacion del malware y en tecnicas de evasion de confianza.",
+    "spread_level": "Elevado a escala internacional, con impacto transversal por sectores."
+  },
+  "news": [
+    {
+      "title": "Microsoft interrumpe infraestructura de Fox Tempest",
+      "why_it_matters": "Reduce una pieza relevante del ecosistema de ransomware y stealers, pero confirma madurez industrial del abuso de firma de codigo."
+    },
+    {
+      "title": "INCIBE publica avisos criticos continuados sobre UniFi OS, Cisco Secure Workload y otras plataformas",
+      "why_it_matters": "Senal clara para organizaciones espanolas y pymes con hardware de red o software empresarial ampliamente desplegado."
+    },
+    {
+      "title": "Microsoft mantiene investigacion activa sobre Dirty Frag",
+      "why_it_matters": "Las escaladas locales a root siguen siendo decisivas tras acceso inicial en nube y contenedores."
+    },
+    {
+      "title": "CCN-CERT mantiene el foco en Ivanti EPMM y exposiciones de alta peligrosidad",
+      "why_it_matters": "El entorno espanol sigue senalando productos de gestion y movilidad como prioridad de mitigacion."
+    }
+  ],
+  "active_alerts": [
+    "Mitigar de inmediato Linux kernel afectado por Copy Fail (CVE-2026-31431) en servidores, clusters y plataformas multiusuario.",
+    "Revisar si Cisco Secure Workload expone APIs internas accesibles desde segmentos no confiables o de terceros.",
+    "Actualizar UniFi OS en organizaciones con dispositivos expuestos o administrados desde redes amplias.",
+    "Revisar FortiSandbox si sigue en ramas 4.4.x vulnerables a CVE-2026-39808.",
+    "Elevar vigilancia sobre robo de sesion, tokens y flujos MFA no resistentes al phishing."
+  ],
+  "recommendations": {
+    "critica": [
+      "Aplicar en 24 horas parches o mitigaciones para CVE-2026-31431, CVE-2026-20223 y CVE-2026-39808 donde exista exposicion.",
+      "Segmentar o aislar APIs internas y consolas de administracion; retirar exposicion directa a Internet o redes amplias.",
+      "Forzar MFA resistente al phishing para administracion y correo de alto privilegio, priorizando FIDO2 o controles equivalentes."
+    ],
+    "alta": [
+      "Lanzar hunting especifico sobre binarios firmados recientemente, cambios de sesion anomalos y actividad Linux post-explotacion.",
+      "Actualizar UniFi OS y revisar logs de cambios administrativos, creacion de cuentas y accesos a archivos del sistema.",
+      "Revisar acceso de terceros, MSPs y credenciales de mantenimiento con politicas de minimo privilegio."
+    ],
+    "media": [
+      "Reforzar telemetria sobre APIs REST internas, proxies inversos y accesos desde segmentos de desarrollo o soporte.",
+      "Actualizar playbooks de phishing AiTM para incluir revocacion de tokens y revision de sesiones activas."
+    ],
+    "baja": [
+      "Planificar simulaciones de crisis sobre compromiso de identidad y explotacion de consola administrativa.",
+      "Actualizar inventario de activos con marcado especifico para software de gestion, sandboxing y networking."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo",
+    "global_estimated_risk": "Alto",
+    "next_threats": [
+      "Continuidad de phishing AiTM y robo de sesion contra correo corporativo y SaaS",
+      "Mayor abuso de fallos en APIs administrativas y paneles internos",
+      "Persistencia de escaladas locales en Linux para consolidar accesos iniciales"
+    ],
+    "most_exposed_sectors": [
+      "Servicios profesionales y MSP",
+      "Salud",
+      "Finanzas",
+      "Tecnologia",
+      "Administracion y operadores con legacy Linux"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-31431",
+      "CVE-2026-20223",
+      "CVE-2026-39808"
+    ],
+    "probability_of_increase": "Alta probabilidad de continuidad de presion en las proximas 72 horas",
+    "automatic_recommendation": "Mantener ciclo corto de parcheo, endurecer identidad y reducir al minimo la exposicion de superficies administrativas.",
+    "disclaimer": "Esta seccion expresa estimaciones y priorizacion asistida por IA; no equivale a confirmacion empirica adicional."
+  },
+  "delivery_status": {
+    "report_generated": "Completado",
+    "github_history": "Pendiente hasta publicacion externa",
+    "gmail_html": "Pendiente hasta envio",
+    "pdf": "No disponible de forma verificable en este momento",
+    "page_images": "No disponibles",
+    "google_drive": "Omitido",
+    "limitations": [
+      "No se incluye PDF externo porque no se ha verificado una ruta de persistencia binaria fiable en esta ejecucion.",
+      "Los KPIs representan una muestra priorizada y no una telemetria global consolidada del ecosistema."
+    ]
+  },
+  "sources": [
+    {
+      "title": "NVD - CVE-2026-31431",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
+      "why_used": "Confirmacion de alcance, CVSS CNA y estado KEV a traves de NVD."
+    },
+    {
+      "title": "NVD - CVE-2026-20223",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20223",
+      "why_used": "Detalle oficial de Cisco Secure Workload y vector tecnico."
+    },
+    {
+      "title": "NVD - CVE-2026-39808",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39808",
+      "why_used": "Confirmacion de criticidad y advisory de Fortinet."
+    },
+    {
+      "title": "NVD - CVE-2026-43284",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43284",
+      "why_used": "Detalle tecnico de Dirty Frag en Linux."
+    },
+    {
+      "title": "INCIBE - Avisos",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos",
+      "why_used": "Ventana de alertas criticas recientes para Espana."
+    },
+    {
+      "title": "INCIBE - UniFi OS",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/validacion-de-entrada-incorrecta-en-el-servidor-de-unifi-os",
+      "why_used": "Detalle reciente de CVEs criticas en networking/geston."
+    },
+    {
+      "title": "INCIBE - Cisco Secure Workload",
+      "url": "https://www.incibe.es/index.php/incibe-cert/alerta-temprana/avisos/ausencia-de-autenticacion-en-secure-workload-de-cisco",
+      "why_used": "Impacto ejecutivo y versiones afectadas en castellano."
+    },
+    {
+      "title": "CCN-CERT AV 01/26 - Ivanti EPMM",
+      "url": "https://www.ccn-cert.cni.es/es/seguridad-al-dia/avisos-ccn-cert/13130-ccn-cert-av-01-26-vulnerabilidades-zero-day-en-el-endpoint-manager-mobile-de-ivanti.html",
+      "why_used": "Contexto nacional sobre priorizacion de movilidad y zero-days."
+    },
+    {
+      "title": "Microsoft - Fox Tempest",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/",
+      "why_used": "Campana de malware firmado y ecosistema de ransomware."
+    },
+    {
+      "title": "Microsoft - Code of Conduct phishing AiTM",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/",
+      "why_used": "Phishing reciente con cifras verificables de alcance."
+    },
+    {
+      "title": "Microsoft - Dirty Frag",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/08/active-attack-dirty-frag-linux-vulnerability-expands-post-compromise-risk/",
+      "why_used": "Senal de investigacion activa en Linux post-compromiso."
+    },
+    {
+      "title": "FortiGuard PSIRT",
+      "url": "https://fortiguard.fortinet.com/psirt",
+      "why_used": "Confirmacion de advisory y severidad del fabricante."
+    }
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
