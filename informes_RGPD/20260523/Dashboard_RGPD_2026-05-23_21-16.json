@@ -1,0 +1,139 @@
+{
+  "brand": "MMarco Seguridad",
+  "title": "Privacy Intelligence RGPD",
+  "report_type": "Informe Ejecutivo RGPD de apertura de jornada",
+  "date": "2026-05-23",
+  "time_europe_madrid": "21:16 CEST",
+  "folder_date": "20260523",
+  "version_stamp": "2026-05-23_21-16",
+  "risk_level": "MEDIO",
+  "risk_score": 63,
+  "facts_confirmed": "Se mantiene presion supervisora real en transparencia, minimizacion y respuesta a brechas; no se confirma hoy una nueva sancion AEPD material de alto impacto publicada en el dia.",
+  "analytical_interpretation": "El riesgo operativo para empresas espanolas no esta en una novedad aislada, sino en la suma de avisos de privacidad mejorables, recogida excesiva de datos, terceros mal gobernados y planes de brecha sin ensayo.",
+  "automatic_recommendation": "Priorizar en las proximas 72 horas una revision corta de avisos, formularios, encargados y capacidad real de notificar incidentes dentro de plazo.",
+  "updates": [
+    {
+      "title": "Accion coordinada del EDPB sobre transparencia e informacion",
+      "date": "2026-03-19",
+      "happened": "El EDPB activo la Coordinated Enforcement Framework 2026 para revisar como las organizaciones ofrecen la informacion de los articulos 12 a 14 RGPD.",
+      "source_name": "EDPB",
+      "source_url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_es",
+      "importance": "La transparencia pasa a ser foco supervisor paneuropeo y afecta avisos de privacidad, capas informativas, formularios, cookies, RRHH y atencion a derechos.",
+      "impact_es": "Empresas espanolas con textos largos, base juridica difusa o informacion incompleta a terceros quedan mas expuestas a requerimientos y correcciones.",
+      "action": "Revisar hoy los avisos de privacidad por canal y comprobar que finalidad, base juridica, plazos, destinatarios y derechos quedan explicados en lenguaje claro.",
+      "tag": "Transparencia"
+    },
+    {
+      "title": "La AEPD recuerda que el tratamiento empieza al decidir que datos pedir",
+      "date": "2026-04-28",
+      "happened": "La AEPD, a partir de la STS 1590/2026, subraya que ya hay tratamiento cuando se decide solicitar determinados datos personales, aunque aun no se hayan recibido.",
+      "source_name": "AEPD",
+      "source_url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales",
+      "importance": "Endurece la exigencia de minimizacion y necesidad desde el diseno de formularios, procesos comerciales, onboarding y due diligence documental.",
+      "impact_es": "Las companias que piden mas datos de los necesarios en ventas, empleo, proveedores o canales web quedan mas cerca de incumplimientos por exceso de recogida.",
+      "action": "Bloquear nuevas solicitudes de datos hasta justificar campo a campo la necesidad, la base juridica y el periodo de conservacion.",
+      "tag": "Minimizacion"
+    },
+    {
+      "title": "La ICO sanciona a South Staffordshire por una brecha con 633.887 afectados",
+      "date": "2026-05-07",
+      "happened": "La ICO impuso una multa de 963.900 libras tras una extraccion no autorizada de datos personales vinculada a debilidades de seguridad y gestion de accesos.",
+      "source_name": "ICO",
+      "source_url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/",
+      "importance": "Reafirma que credenciales, segmentacion, visibilidad y respuesta a incidentes siguen siendo puntos de sancion real, tambien cuando la intrusion se origina fuera de Espana.",
+      "impact_es": "Para empresas espanolas, el mensaje es claro: la brecha no solo es tecnica; si falla la gobernanza de seguridad tambien se materializa riesgo sancionador y reputacional.",
+      "action": "Verificar acceso privilegiado, MFA, logging, segmentacion y protocolo de notificacion en 72 horas con responsables nominados.",
+      "tag": "Brechas"
+    }
+  ],
+  "risks": [
+    {
+      "area": "Brechas",
+      "level": "ALTO",
+      "detail": "Sin inventario de accesos privilegiados, MFA y decision tree de notificacion, una intrusion puede convertirse en brecha RGPD con impacto reputacional inmediato."
+    },
+    {
+      "area": "Transparencia",
+      "level": "ALTO",
+      "detail": "Avisos incompletos o excesivamente juridicos son un objetivo claro del enfoque coordinado del EDPB en 2026."
+    },
+    {
+      "area": "Proveedores y encargados",
+      "level": "MEDIO-ALTO",
+      "detail": "Subencargados, accesos remotos y clausulas antiguas siguen siendo una via frecuente de exposicion contractual y tecnica."
+    },
+    {
+      "area": "Derechos ARSOPL",
+      "level": "MEDIO",
+      "detail": "Cuando no hay trazabilidad interna por sistema o proveedor, responder en plazo se vuelve costoso y arriesga reclamaciones."
+    },
+    {
+      "area": "Transferencias internacionales",
+      "level": "MEDIO",
+      "detail": "Herramientas cloud, soporte externo y analytics siguen requiriendo mapa actualizado de destinos, bases y medidas complementarias."
+    },
+    {
+      "area": "IA con datos personales",
+      "level": "MEDIO-ALTO",
+      "detail": "Modelos de scoring, asistentes internos y automatizacion con datos personales elevan exigencias de minimizacion, transparencia, DPIA y supervision humana."
+    }
+  ],
+  "actions": [
+    "Revisar hoy los avisos de privacidad web, RRHH y clientes con foco en articulos 12 a 14 RGPD.",
+    "Validar formulario a formulario que cada dato pedido tiene necesidad documentada, base juridica y plazo de conservacion.",
+    "Comprobar contratos de encargado, subencargados y accesos de soporte con terceros criticos.",
+    "Ejecutar una prueba corta de notificacion de brecha: deteccion, escalado, decision y borrador de comunicacion en menos de 72 horas.",
+    "Identificar usos de IA con datos personales y decidir si procede EIPD, actualizacion informativa o limitacion del tratamiento."
+  ],
+  "opportunities": [
+    "Auditoria RGPD express de transparencia y minimizacion.",
+    "Revision de clausulas y anexos de encargado de tratamiento.",
+    "Revision de proveedores con acceso a datos personales.",
+    "EIPD / DPIA para IA, biometria o analitica avanzada.",
+    "Formacion ejecutiva y operativa sobre brechas y derechos.",
+    "Consultoria de IA y datos personales orientada a evidencias."
+  ],
+  "preventive_actions_if_no_material_news": [
+    "Actualizar el inventario de tratamientos y responsables por area.",
+    "Reducir campos no necesarios en formularios y procesos de alta.",
+    "Ensayar el circuito interno de gestion de incidentes y brechas."
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias.",
+  "sources": [
+    {
+      "name": "AEPD - Blog sobre el inicio del tratamiento en la solicitud de datos",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales",
+      "date": "2026-04-28"
+    },
+    {
+      "name": "AEPD - Notificacion de brechas de seguridad",
+      "url": "https://www.aepd.es/guias-y-herramientas/herramientas/notifica-brechas/como-notificar-brechas-de-seguridad",
+      "date": "2026-04-30"
+    },
+    {
+      "name": "EDPB - CEF 2026 sobre transparencia e informacion",
+      "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_es",
+      "date": "2026-03-19"
+    },
+    {
+      "name": "Comision Europea - Ten years of the GDPR: your data, your rights",
+      "url": "https://commission.europa.eu/news-and-media/news/ten-years-gdpr-your-data-your-rights-2026-05-22_en",
+      "date": "2026-05-22"
+    },
+    {
+      "name": "ICO - Fine to South Staffordshire Water following cyber attack",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/",
+      "date": "2026-05-07"
+    },
+    {
+      "name": "CNIL - Recommandation sur les scores de solvabilite",
+      "url": "https://www.cnil.fr/fr/scores-de-solvabilite-la-cnil-publie-une-recommandation-pour-encadrer-leurs-developpements",
+      "date": "2026-05-20"
+    },
+    {
+      "name": "INCIBE - Avisos y gestion de incidentes",
+      "url": "https://www.incibe.es/empresas",
+      "date": "2026-05-23"
+    }
+  ]
+}
