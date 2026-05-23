@@ -342,7 +342,20 @@
     "github_json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260523/Dashboard_Ciberseguridad_20260523_0824_CEST.json",
     "pdf_status": "No generado en esta edición para no declarar un artefacto sin persistencia externa verificable.",
     "google_drive_status": "Omitido en esta edición.",
-    "images_status": "No generadas en esta edición."
+    "images_status": "No generadas en esta edición.",
+    "github_html_commit_sha": "926a9cb0b4e5782778972fb28baf09e948197a1f",
+    "github_json_commit_sha": "1f80de3da63564d50182ffc64f854e1e861b2687",
+    "gmail_status": {
+      "status": "sent",
+      "message_id": "19e5385857e0165c",
+      "subject": "[CYBER INTELLIGENCE] Informe Ejecutivo de Ciberseguridad | Edición 08:00 CEST | 23/05/2026"
+    },
+    "slack_status": {
+      "status": "pending_approval",
+      "target_user_id": "U0B2VMTB1J7",
+      "target_user_name": "Mmarco Seguridad",
+      "detail": "El conector solicitó aprobación/autenticación y agotó la espera."
+    }
   },
   "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
 }
