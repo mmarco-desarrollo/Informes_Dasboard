@@ -1,0 +1,348 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sánchez",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "edition_label": "Edición programada de las 08:00",
+    "generated_at": "2026-05-23 08:24:29 CEST",
+    "timezone": "Europe/Madrid",
+    "global_threat_level": "ALTO",
+    "next_update": "2026-05-23 12:00 CEST",
+    "ai_risk_state": "Alza moderada con confianza media; sección predictiva separada de los hechos confirmados.",
+    "github_repository": "mmarco-desarrollo/Informes_Dasboard",
+    "github_base_path": "informes_ciberseguridad/20260523"
+  },
+  "kpis": [
+    {
+      "label": "Nivel global de amenaza",
+      "value": "ALTO",
+      "basis": "Síntesis analítica de fuentes oficiales y avisos 14-23/05/2026."
+    },
+    {
+      "label": "CVEs prioritarias en seguimiento",
+      "value": 4,
+      "basis": "PAN-OS, Cisco SD-WAN, Exchange y Drupal."
+    },
+    {
+      "label": "Vulnerabilidades con CVE en el boletín Microsoft de mayo",
+      "value": 137,
+      "basis": "INCIBE, publicado el 13/05/2026."
+    },
+    {
+      "label": "Vulnerabilidades críticas en el boletín Microsoft de mayo",
+      "value": 14,
+      "basis": "INCIBE, publicado el 13/05/2026."
+    },
+    {
+      "label": "Incidentes de ciberseguridad en el balance INCIBE 2025",
+      "value": 122223,
+      "basis": "Datos consolidados a 09/02/2026."
+    },
+    {
+      "label": "Incidentes ligados a malware en el balance INCIBE 2025",
+      "value": 55411,
+      "basis": "Balance INCIBE 2025."
+    },
+    {
+      "label": "Incidentes de phishing en el balance INCIBE 2025",
+      "value": 25133,
+      "basis": "Balance INCIBE 2025."
+    },
+    {
+      "label": "Incidentes de ransomware en el balance INCIBE 2025",
+      "value": 392,
+      "basis": "Balance INCIBE 2025."
+    }
+  ],
+  "executive_summary": {
+    "status": "La superficie de riesgo sigue en nivel alto por la coincidencia de varias vulnerabilidades con explotación confirmada o probable y por campañas activas de ingeniería social orientadas a toma de control inicial.",
+    "principal_risks": [
+      "Dispositivos perimetrales y controladores SD-WAN expuestos a explotación prioritaria.",
+      "Entornos Microsoft Exchange con riesgo de spoofing/XSS y posible explotación en OWA.",
+      "Portales PAN-OS User-ID Authentication Portal expuestos desde zonas no confiables.",
+      "Sitios Drupal sobre PostgreSQL con intentos de explotación ya detectados en la naturaleza.",
+      "Campañas de phishing y soporte falso por Microsoft Teams con despliegue de A0Backdoor."
+    ],
+    "affected_sectors": [
+      "Financiero y sanitario por la campaña vía Microsoft Teams/Quick Assist.",
+      "Organizaciones con correo corporativo on-premises Microsoft Exchange.",
+      "Operadores con redes Cisco SD-WAN y perímetro PAN-OS.",
+      "Empresas y administraciones con portales Drupal expuestos."
+    ],
+    "common_techniques": [
+      "Bypass de autenticación.",
+      "Explotación de servicios expuestos a Internet.",
+      "SQL injection en aplicaciones web.",
+      "Suplantación y phishing con herramientas legítimas de acceso remoto.",
+      "Persistencia y exfiltración tras acceso inicial."
+    ],
+    "estimated_exposure": "Elevada para organizaciones con perímetro expuesto y gestión débil de parcheo en infraestructuras de red, correo y CMS.",
+    "main_recommendation": "Priorizar en las próximas horas la validación de exposición de Cisco SD-WAN, PAN-OS, Exchange y Drupal, aplicando mitigaciones del fabricante, revisión de logs y restricción de acceso donde todavía no exista parche desplegado.",
+    "quick_conclusion": [
+      "El riesgo operativo inmediato se concentra en perímetro, correo y acceso remoto.",
+      "Las cuatro CVEs priorizadas requieren verificación de exposición hoy, no solo planificación.",
+      "La campaña con Teams y Quick Assist confirma que la ingeniería social sigue siendo el vector de entrada dominante.",
+      "Para pymes españolas, phishing, fraude y malware siguen siendo la combinación más probable de impacto según el balance oficial de INCIBE.",
+      "No hay evidencia suficiente en esta ejecución para declarar una nueva campaña masiva distinta de las ya citadas."
+    ],
+    "trend_24h": "Estable en alto.",
+    "trend_7d": "Al alza moderada por nuevas publicaciones y actualizaciones de criticidad entre el 14 y el 22 de mayo."
+  },
+  "active_alerts": [
+    {
+      "title": "Cisco Catalyst SD-WAN Controller Authentication Bypass",
+      "type": "Hecho confirmado",
+      "date": "2026-05-14",
+      "summary": "CVE-2026-20182 figura en NVD y en el catálogo KEV de CISA. Permite bypass de autenticación y acceso administrativo de alto privilegio en controladores SD-WAN afectados.",
+      "impact": "Manipulación de configuración de la malla SD-WAN vía NETCONF.",
+      "urgency": "Crítica"
+    },
+    {
+      "title": "Microsoft Exchange Server Cross-Site Scripting / Spoofing",
+      "type": "Hecho confirmado",
+      "date": "2026-05-15",
+      "summary": "INCIBE marca la vulnerabilidad CVE-2026-42897 como crítica e indica que podría estar siendo explotada; NVD la muestra en KEV de CISA.",
+      "impact": "Suplantación y ejecución de JavaScript en OWA tras correo especialmente diseñado.",
+      "urgency": "Crítica"
+    },
+    {
+      "title": "Palo Alto PAN-OS Captive Portal",
+      "type": "Hecho confirmado",
+      "date": "2026-05-05",
+      "summary": "CVE-2026-0300 mantiene severidad crítica, urgencia HIGHEST y exploit maturity ATTACKED según Palo Alto.",
+      "impact": "RCE como root en firewalls PA-Series y VM-Series bajo configuración expuesta.",
+      "urgency": "Crítica"
+    },
+    {
+      "title": "Drupal core SQL injection",
+      "type": "Hecho confirmado",
+      "date": "2026-05-20",
+      "summary": "SA-CORE-2026-004 identifica CVE-2026-9082 como highly critical y el 22/05/2026 actualiza el riesgo al detectar intentos de explotación en la naturaleza.",
+      "impact": "Divulgación de información, escalado y posible RCE en sitios con PostgreSQL.",
+      "urgency": "Alta"
+    },
+    {
+      "title": "Campaña de soporte falso por Microsoft Teams y Quick Assist",
+      "type": "Indicio fuerte monitorizado",
+      "date": "2026-04-09",
+      "summary": "INCIBE describe una campaña contra sectores financiero y sanitario basada en email bombing, impersonación de soporte técnico y despliegue de A0Backdoor.",
+      "impact": "Acceso remoto no autorizado, persistencia, exfiltración y preparación para ransomware.",
+      "urgency": "Alta"
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Crítica",
+      "exploitation_status": "KEV de CISA; explotación confirmada por inclusión en KEV",
+      "patch_status": "Mitigación y remediación del fabricante disponibles",
+      "priority": "Crítica - ejecutar hoy",
+      "official_source": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182"
+    },
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS",
+      "cvss": "9.3",
+      "severity": "Crítica",
+      "exploitation_status": "ATTACKED según Palo Alto; KEV de CISA",
+      "patch_status": "Parches parciales ya publicados; otras versiones con ETA 28/05",
+      "priority": "Crítica - restringir exposición y parchear",
+      "official_source": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "cve": "CVE-2026-42897",
+      "product": "Microsoft Exchange Server",
+      "cvss": "8.1 CNA Microsoft / 6.1 NVD",
+      "severity": "Alta a crítica operativa",
+      "exploitation_status": "KEV de CISA; INCIBE indica explotación posible",
+      "patch_status": "Mitigación automática publicada para Exchange EM",
+      "priority": "Crítica - revisar exposición OWA y mitigación",
+      "official_source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft"
+    },
+    {
+      "cve": "CVE-2026-9082",
+      "product": "Drupal core sobre PostgreSQL",
+      "cvss": "Riesgo Highly critical en advisory de Drupal",
+      "severity": "Muy alta",
+      "exploitation_status": "Intentos detectados en la naturaleza desde 22/05/2026",
+      "patch_status": "Actualizar a la última versión soportada",
+      "priority": "Alta - validar hoy si hay sitios expuestos",
+      "official_source": "https://www.drupal.org/sa-core-2026-004"
+    }
+  ],
+  "malware_ransomware": {
+    "families": [
+      "A0Backdoor"
+    ],
+    "target_sectors": [
+      "Financiero",
+      "Sanitario"
+    ],
+    "techniques": [
+      "Email bombing",
+      "Impersonación de soporte técnico por Microsoft Teams",
+      "Uso de Quick Assist para acceso remoto",
+      "Persistencia y exfiltración"
+    ],
+    "iocs": "No se incluyen IOCs concretos en esta edición por no existir suficiente detalle oficial consolidado en las fuentes revisadas.",
+    "trend": "Actividad persistente en campañas de acceso inicial apoyadas en herramientas legítimas.",
+    "spread_level": "Moderado, con foco sectorial y alto impacto potencial."
+  },
+  "relevant_news": [
+    {
+      "headline": "Microsoft publica 137 vulnerabilidades en su ciclo de mayo de 2026",
+      "date": "2026-05-13",
+      "relevance": "Amplía carga de parcheo y eleva presión operativa por 14 críticas.",
+      "source": "INCIBE"
+    },
+    {
+      "headline": "Rituals confirma un incidente que afecta a parte de su base de clientes",
+      "date": "2026-05-07",
+      "relevance": "Confirma continuidad del riesgo de filtración de datos en consumo y fidelización.",
+      "source": "INCIBE Bitácora"
+    },
+    {
+      "headline": "Booking reconoce acceso no autorizado a datos de usuarios",
+      "date": "2026-05-05",
+      "relevance": "Señal de impacto reputacional y normativo en plataformas de alto volumen.",
+      "source": "INCIBE Bitácora"
+    }
+  ],
+  "executive_recommendations": {
+    "critical": [
+      "Revisar hoy mismo exposición de Cisco SD-WAN, PAN-OS User-ID Authentication Portal, OWA/Exchange y portales Drupal con PostgreSQL.",
+      "Aplicar mitigaciones de fabricante y restringir acceso desde Internet donde el parche aún no esté desplegado.",
+      "Lanzar revisión urgente de logs, autenticaciones anómalas y cambios de configuración en SD-WAN y firewalls."
+    ],
+    "high": [
+      "Bloquear o limitar Quick Assist y accesos remotos equivalentes salvo necesidad aprobada.",
+      "Reforzar MFA, políticas de correo y advertencias para phishing con suplantación de soporte.",
+      "Acelerar ventana de parcheo del boletín Microsoft de mayo con priorización basada en exposición."
+    ],
+    "medium": [
+      "Validar inventario de CMS y bases de datos para aislar instalaciones Drupal con PostgreSQL.",
+      "Actualizar reglas de detección SOC para Teams, email bombing, Quick Assist y actividad de exfiltración.",
+      "Revisar segmentación y gestión de interfaces de administración perimetral."
+    ],
+    "low": [
+      "Actualizar procedimientos de crisis para brechas de datos orientadas a clientes y fidelización.",
+      "Refrescar simulaciones internas de phishing y soporte falso con foco en áreas de negocio."
+    ]
+  },
+  "ai_section": {
+    "label": "Análisis predictivo / estimativo generado por IA",
+    "global_risk_estimate": "Riesgo alto con probabilidad de continuidad durante las próximas 72 horas.",
+    "next_threats_prediction": [
+      "Más explotación oportunista sobre activos perimetrales con parcheo incompleto.",
+      "Incremento de campañas de ingeniería social apoyadas en herramientas corporativas legítimas.",
+      "Mayor presión sobre correo, identidad y acceso remoto en pymes."
+    ],
+    "most_exposed_sectors": [
+      "Financiero",
+      "Sanitario",
+      "Servicios digitales",
+      "Pymes con TI externalizada"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-0300",
+      "CVE-2026-42897",
+      "CVE-2026-9082"
+    ],
+    "attack_increase_probability": "65%",
+    "automatic_recommendation": "Mantener control reforzado de perímetro y acceso remoto hasta completar validación de exposición y despliegue de parches prioritarios.",
+    "confidence": "Media"
+  },
+  "context_metrics": {
+    "incibe_2025": {
+      "cybersecurity_incidents": 122223,
+      "increase_vs_2024": "26%",
+      "malware_incidents": 55411,
+      "ransomware_incidents": 392,
+      "information_theft_incidents": 3849,
+      "vulnerable_systems": 237028,
+      "phishing_incidents": 25133,
+      "online_fraud_share": "4 de cada 10 incidentes",
+      "citizen_helpdesk_queries": 142767,
+      "phishing_or_vishing_or_smishing_share": "28% de usuarios consultantes"
+    },
+    "enisa": {
+      "reference_period": "1 July 2024 to 30 June 2025",
+      "incidents_analysed": 4875,
+      "note": "Usado como contexto estratégico europeo, no como métrica de las últimas 24 horas."
+    }
+  },
+  "sources": [
+    {
+      "title": "NVD - CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+      "type": "NVD",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "NVD - CVE-2026-42897",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897",
+      "type": "NVD",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "Palo Alto Networks Security Advisory - CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300",
+      "type": "Vendor advisory",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "Drupal core - SA-CORE-2026-004",
+      "url": "https://www.drupal.org/sa-core-2026-004",
+      "type": "Vendor advisory",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "INCIBE - Cross-site Scripting en Exchange Server de Microsoft",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/cross-site-scripting-en-exchange-server-de-microsoft",
+      "type": "INCIBE advisory",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "INCIBE - Actualizaciones de seguridad de Microsoft de mayo de 2026",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizaciones-de-seguridad-de-microsoft-de-mayo-de-2026",
+      "type": "INCIBE advisory",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "INCIBE - Strengthening corporate cybersecurity against new phishing campaigns on collaborative platforms",
+      "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/strengthening-corporate-cybersecurity-against-new-phishing-campaigns",
+      "type": "INCIBE analysis",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "INCIBE Bitácora de ciberseguridad",
+      "url": "https://www.incibe.es/index.php/incibe-cert/publicaciones/bitacora-ciberseguridad",
+      "type": "INCIBE news",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "ENISA Threat Landscape 2025",
+      "url": "https://www.enisa.europa.eu/publications/enisa-threat-landscape-2025",
+      "type": "ENISA report",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    },
+    {
+      "title": "INCIBE Balance de Ciberseguridad 2025",
+      "url": "https://www.incibe.es/sites/default/files/2026-02/Balance%20de%20ciberseguridad%202025%20INCIBE/BalanceCiberseguridad2025_INCIBE.pdf",
+      "type": "INCIBE report",
+      "accessed_at": "2026-05-23 08:24:29 CEST"
+    }
+  ],
+  "delivery": {
+    "github_tree_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260523",
+    "github_html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260523/Dashboard_Ciberseguridad_20260523_0824_CEST.html",
+    "github_json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260523/Dashboard_Ciberseguridad_20260523_0824_CEST.json",
+    "pdf_status": "No generado en esta edición para no declarar un artefacto sin persistencia externa verificable.",
+    "google_drive_status": "Omitido en esta edición.",
+    "images_status": "No generadas en esta edición."
+  },
+  "legal_notice": "Este informe ha sido generado automáticamente mediante sistemas avanzados de inteligencia artificial y análisis de datos. Tiene finalidad informativa y no sustituye una auditoría, investigación forense ni asesoramiento profesional específico."
+}
