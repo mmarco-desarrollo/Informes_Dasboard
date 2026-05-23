@@ -1,0 +1,510 @@
+{
+  "report_title": "Informe Ejecutivo Premium de Inteligencia Artificial | Corte 08:00",
+  "brand": "MMarco Seguridad",
+  "owner": "Manuel Marco Sanchez",
+  "website": "https://mmarcoseguridad.com",
+  "generated_at": "23/05/2026 08:20:10 CEST",
+  "timezone": "Europe/Madrid",
+  "impact_level": "Alto",
+  "ecosystem_state": "Aceleracion agentic con presion alta en seguridad, identidad y gobierno de conectores",
+  "next_update": "23/05/2026 16:00 CEST",
+  "corporate_profile": "Ciberseguridad, Blockchain, IA y Telecomunicaciones",
+  "file_stamp": "2026-05-23_08-20",
+  "day_folder": "20260523",
+  "executive_summary": "La ventana reciente confirma que la carrera de IA ya no se decide solo en el modelo, sino en la capacidad de ejecutar trabajo real con agentes, conectores y entornos controlados. Google empuja la aceleracion mas visible en plataforma con Managed Agents y Gemini 3.5 Flash; OpenAI fortalece procedencia y seguridad de cuenta; Anthropic convierte la ciberseguridad en argumento central con Glasswing y su dashboard de divulgacion; Microsoft situa identidad, Purview y entornos de ejecucion segura en el centro del discurso. La lectura ejecutiva es clara: oportunidad comercial fuerte en automatizacion gobernada, pero con riesgo elevado si conectores, plugins o MCPs quedan mal autenticados.",
+  "kpis": [
+    {
+      "label": "senales verificadas",
+      "value": "13",
+      "tone": "neutral"
+    },
+    {
+      "label": "alertas criticas/altas",
+      "value": "5",
+      "tone": "critical"
+    },
+    {
+      "label": "lanzamientos con valor inmediato",
+      "value": "9",
+      "tone": "positive"
+    },
+    {
+      "label": "fuentes oficiales revisadas",
+      "value": "23",
+      "tone": "neutral"
+    }
+  ],
+  "activity": [
+    {
+      "label": "Lanzamientos y plataforma",
+      "value": 92
+    },
+    {
+      "label": "Seguridad y vulnerabilidades",
+      "value": 95
+    },
+    {
+      "label": "Herramientas y conectores",
+      "value": 89
+    },
+    {
+      "label": "Modelos y multimodalidad",
+      "value": 84
+    },
+    {
+      "label": "Regulacion y cumplimiento",
+      "value": 70
+    }
+  ],
+  "global_view": [
+    {
+      "region": "EE. UU.",
+      "signal": "Muy alta",
+      "focus": "OpenAI, Anthropic, Google, Microsoft, xAI, Perplexity"
+    },
+    {
+      "region": "Europa",
+      "signal": "Alta",
+      "focus": "Mistral y AI Act articulo 50"
+    },
+    {
+      "region": "Open source global",
+      "signal": "Muy alta",
+      "focus": "Safetensors, OSS critico, dashboards de vulnerabilidades"
+    }
+  ],
+  "featured_news": [
+    {
+      "title": "OpenAI refuerza procedencia de contenido con C2PA, SynthID y verificador publico inicial",
+      "source": "OpenAI",
+      "date": "2026-05-19",
+      "category": "Seguridad / Procedencia",
+      "impact": "Alto",
+      "type": "hecho confirmado",
+      "utility_or_risk": "Sube la madurez de trazabilidad para imagen generada y reduce riesgo reputacional y regulatorio.",
+      "quick_recommendation": "Incorporar discurso comercial sobre procedencia, watermarking y pruebas de origen en servicios de IA responsable.",
+      "url": "https://openai.com/index/advancing-content-provenance/"
+    },
+    {
+      "title": "Google activa Managed Agents en Gemini API y acelera Gemini 3.5 Flash y Gemini Omni tras I/O 2026",
+      "source": "Google",
+      "date": "2026-05-19/20",
+      "category": "Lanzamiento de plataforma",
+      "impact": "Muy alto",
+      "type": "hecho confirmado",
+      "utility_or_risk": "Reduce friccion de despliegue de agentes con sandbox gestionado y empuja la competencia en automatizacion conectada.",
+      "quick_recommendation": "Vigilar costes, aislamiento y gobierno de herramientas antes de recomendar despliegues de agentes gestionados.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/"
+    },
+    {
+      "title": "Anthropic publica la primera actualizacion de Project Glasswing",
+      "source": "Anthropic",
+      "date": "2026-05-22",
+      "category": "Ciberseguridad / Frontier AI",
+      "impact": "Muy alto",
+      "type": "hecho confirmado",
+      "utility_or_risk": "Confirma que el cuello de botella ya no es encontrar fallos, sino validar, divulgar y parchear a escala.",
+      "quick_recommendation": "Elevar prioridad de auditorias de agentes, hardening y gestion de exposicion OSS critica.",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update"
+    },
+    {
+      "title": "Anthropic compra Stainless para reforzar SDKs y tooling MCP",
+      "source": "Anthropic",
+      "date": "2026-05-18",
+      "category": "M&A / Tooling",
+      "impact": "Alto",
+      "type": "hecho confirmado",
+      "utility_or_risk": "La capa competitiva se desplaza hacia conectividad, SDKs y herramientas reutilizables para agentes.",
+      "quick_recommendation": "Valorar oferta consultiva centrada en integraciones MCP y gobierno de conectores.",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless"
+    },
+    {
+      "title": "Microsoft amplifica el frente de seguridad agentic con Purview, recuperación de identidad y Windows 365 for Agents",
+      "source": "Microsoft Security",
+      "date": "2026-05-21",
+      "category": "Seguridad enterprise",
+      "impact": "Alto",
+      "type": "hecho confirmado",
+      "utility_or_risk": "La identidad, la investigacion y el entorno de ejecucion seguro pasan a ser parte del producto de IA, no solo del SOC.",
+      "quick_recommendation": "Plantear auditorias de identidad y segregacion de entornos para agentes empresariales.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/"
+    },
+    {
+      "title": "xAI lanza Skills y consolida Grok como capa de documentos y automatizacion persistente",
+      "source": "xAI",
+      "date": "2026-05-18",
+      "category": "Herramientas / Agentes",
+      "impact": "Media-Alta",
+      "type": "hecho confirmado",
+      "utility_or_risk": "Acelera la personalizacion persistente y el empaquetado de flujos reutilizables para usuarios finales.",
+      "quick_recommendation": "Seguir la adopcion, pero separar bien productividad documental de automatizacion con permisos reales.",
+      "url": "https://x.ai/news/grok-skills"
+    }
+  ],
+  "models": [
+    {
+      "name": "Gemini 3.5 Flash",
+      "company": "Google",
+      "type": "Modelo multimodal agent-first",
+      "capabilities": "Razonamiento con accion, tool use y despliegue en AI Studio y API.",
+      "multimodal": "Si",
+      "context_window": "No detallado en fuente revisada",
+      "license": "Propietaria",
+      "use_cases": "Agentes gestionados, automatizacion y productos con baja friccion de despliegue.",
+      "estimated_impact": "Muy alto",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+    },
+    {
+      "name": "Gemini Omni",
+      "company": "Google",
+      "type": "Modelo multimodal de nueva generacion",
+      "capabilities": "Creacion y edicion desde cualquier entrada, con foco en video y world understanding.",
+      "multimodal": "Si",
+      "context_window": "No verificable en esta revision",
+      "license": "Propietaria",
+      "use_cases": "Video, edicion multimodal, asistentes creativos y agentes con percepcion amplia.",
+      "estimated_impact": "Muy alto",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/"
+    },
+    {
+      "name": "Mistral 3 / Mistral Large 3 / Ministral 3",
+      "company": "Mistral AI",
+      "type": "Familia open multimodal y multilingual",
+      "capabilities": "Modelos densos de 3B, 8B y 14B, mas modelo MoE grande con version base e instruct.",
+      "multimodal": "Si",
+      "context_window": "No detallado en la fuente abierta revisada",
+      "license": "Apache 2.0",
+      "use_cases": "Edge, soberania, despliegue local y personalizacion enterprise.",
+      "estimated_impact": "Alto",
+      "url": "https://mistral.ai/news/mistral-3"
+    },
+    {
+      "name": "Grok 4.3",
+      "company": "xAI",
+      "type": "LLM general con razonamiento configurable",
+      "capabilities": "Tool calling agentic, instruction following y 1M de contexto segun docs de xAI.",
+      "multimodal": "Parcial segun familia",
+      "context_window": "1M tokens",
+      "license": "Propietaria",
+      "use_cases": "Asistentes con web, coding agentic y sustitucion de slugs retirados.",
+      "estimated_impact": "Media-Alta",
+      "url": "https://docs.x.ai/developers/models"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Managed Agents in the Gemini API",
+      "source": "Google",
+      "language": "API / Cloud",
+      "description": "Agentes gestionados con sandbox Linux efimero, instrucciones versionables y skills.",
+      "use_cases": "Prototipos agentic, automatizacion con herramientas, asistentes gestionados.",
+      "utility_level": "Muy alta",
+      "risks": "Coste, aislamiento, tool governance y sobreconfianza en sandboxes por defecto.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/"
+    },
+    {
+      "name": "Perplexity Finance Search",
+      "source": "Perplexity",
+      "language": "Agent API",
+      "description": "Busqueda financiera con datos licenciados, tiempo real y citas en una sola llamada.",
+      "use_cases": "Monitores financieros, earnings briefs, research memos y agentes verticales.",
+      "utility_level": "Alta",
+      "risks": "Vertical muy especifica; requiere gobernanza de decisiones y trazabilidad.",
+      "url": "https://www.perplexity.ai/hub/blog/introducing-finance-search-in-the-agent-api"
+    },
+    {
+      "name": "xAI Skills",
+      "source": "xAI",
+      "language": "Web / iOS / Android",
+      "description": "Persistencia de formatos, documentos, automatizaciones y especializacion reusable.",
+      "use_cases": "Workflows personales, documentos premium, instrucciones persistentes.",
+      "utility_level": "Media-Alta",
+      "risks": "Difumina frontera entre plantilla util y accion automatizada con impacto real.",
+      "url": "https://x.ai/news/grok-skills"
+    },
+    {
+      "name": "Mistral Connectors en Studio",
+      "source": "Mistral AI",
+      "language": "Python / API / MCP",
+      "description": "Conectores built-in y custom MCP con human-in-the-loop y tool calling directo.",
+      "use_cases": "Conectar GitHub, Gmail, web y datos internos a agentes enterprise.",
+      "utility_level": "Alta",
+      "risks": "Exposicion a servidores MCP de terceros y necesidad de aprobacion manual inicial.",
+      "url": "https://mistral.ai/news/connectors"
+    },
+    {
+      "name": "Claude for Small Business",
+      "source": "Anthropic",
+      "language": "Producto",
+      "description": "Conectores y workflows listos para pymes en QuickBooks, PayPal, HubSpot y suites ofimaticas.",
+      "use_cases": "Cobros, payroll, marketing y tareas operativas de pyme.",
+      "utility_level": "Alta",
+      "risks": "Gobierno de acciones y dependencia de aprobacion humana para evitar errores de negocio.",
+      "url": "https://www.anthropic.com/news/claude-for-small-business"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "safetensors",
+      "source": "Hugging Face / PyTorch Foundation",
+      "stars": "No verificado en esta ejecucion",
+      "language": "Rust / Python ecosistema",
+      "description": "Formato de pesos pensado para evitar ejecucion arbitraria y reforzar distribucion segura.",
+      "use_cases": "Comparticion de modelos, cargas seguras, pipelines OSS y serializacion en PyTorch.",
+      "utility_level": "Alta",
+      "warnings": "Conviene imponerlo como formato preferente donde aun persista pickle.",
+      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    }
+  ],
+  "incidents": [
+    {
+      "name": "Elevated error rates in GPT-5.4 and GPT-5.5 API",
+      "affected_product": "OpenAI API",
+      "severity": "Media",
+      "exploitation": "No aplica; incidente operativo",
+      "impact": "Interrupcion temporal del servicio para cargas API afectadas.",
+      "mitigation": "Incidente resuelto por OpenAI el 20/05/2026 a las 00:37 CEST.",
+      "priority": "Media",
+      "status": "resuelto",
+      "url": "https://status.openai.com/incidents/6kkeenry"
+    },
+    {
+      "name": "Capacidad ofensiva de Glasswing / Mythos Preview",
+      "affected_product": "Software OSS critico y sistemas partner",
+      "severity": "Alta",
+      "exploitation": "Riesgo de futuro abuso si capacidades equivalentes salen sin salvaguardas fuertes",
+      "impact": "La superficie vulnerable del software critico puede ser explorada mucho mas rapido por IA frontier.",
+      "mitigation": "Priorizar parcheo, triage, disclosure coordinado y pruebas de exposicion en componentes esenciales.",
+      "priority": "Alta",
+      "status": "activo",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "identifier": "CVE-2026-25592",
+      "product": "Microsoft Semantic Kernel SessionsPythonPlugin",
+      "severity": "Critica",
+      "exploitation_status": "Explotable con prompt injection si la arquitectura queda expuesta",
+      "impact": "Escritura arbitraria de archivos y potencial RCE desde flujo agentic.",
+      "mitigation": "Actualizar Semantic Kernel y revisar herramientas expuestas al modelo como input no confiable.",
+      "priority": "Critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "identifier": "CVE-2026-26030",
+      "product": "Microsoft Semantic Kernel In-Memory Vector Store / Search Plugin path",
+      "severity": "Critica",
+      "exploitation_status": "Explotable con prompt injection y configuracion vulnerable",
+      "impact": "Convierte entrada natural no confiable en primitiva de ejecucion sobre el host.",
+      "mitigation": "Parchear, aislar, endurecer plugins y monitorizar procesos hijos anómalos.",
+      "priority": "Critica",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "identifier": "Misconfiguraciones explotables en AI apps / MCP",
+      "product": "Despliegues cloud-native con agentes y MCP expuestos",
+      "severity": "Alta",
+      "exploitation_status": "Microsoft observa abuso activo de exposiciones con autenticacion debil o ausente",
+      "impact": "RCE, robo de credenciales y acceso a datos o herramientas internas.",
+      "mitigation": "Cerrar servicios publicos, exigir autenticacion fuerte, permisos minimos y aprobacion humana.",
+      "priority": "Alta",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "identifier": "Supply-chain issue in `mistralai==2.4.6`",
+      "product": "Cliente Python de Mistral",
+      "severity": "Alta",
+      "exploitation_status": "Alerta abierta en el repositorio oficial; paquete 2.4.6 fue reportado como comprometido",
+      "impact": "Riesgo de payload malicioso al importar en Linux y rotura de despliegues.",
+      "mitigation": "Bloquear 2.4.6, revisar SBOM, limpiar caches y fijar version segura tras validacion interna.",
+      "priority": "Alta",
+      "url": "https://github.com/mistralai/client-python/issues/523"
+    },
+    {
+      "identifier": "Anthropic CVD dashboard",
+      "product": "281 proyectos OSS revisados por Anthropic",
+      "severity": "Alta",
+      "exploitation_status": "Vulnerabilidades reales ya divulgadas a mantenedores; no todas parcheadas",
+      "impact": "1.596 vulnerabilidades divulgadas, 97 parchadas y 88 con CVE/GHSA al 22/05/2026.",
+      "mitigation": "Cruzar dependencias internas con OSS critico y acelerar actualizaciones de componentes.",
+      "priority": "Alta",
+      "url": "https://red.anthropic.com/2026/cvd/"
+    }
+  ],
+  "trends_and_radar": [
+    "La competencia se mueve desde el chatbot al agente ejecutor con sandbox, skills y conectores persistentes.",
+    "La seguridad deja de ser un complemento y entra en el producto: identidad, auditoria, provenance y runtime control.",
+    "La capa MCP y SDK se convierte en terreno competitivo y tambien en nueva superficie de riesgo.",
+    "Open source europeo vuelve a ganar valor con Mistral 3 por soberania, edge y licencias abiertas."
+  ],
+  "opportunities": [
+    {
+      "priority": "Alta",
+      "title": "Auditoria de agentes y conectores para pymes y mid-market",
+      "detail": "Oferta empaquetada sobre permisos, MCP, autenticacion, logging y aprobacion humana."
+    },
+    {
+      "priority": "Alta",
+      "title": "Servicio de readiness AI Act articulo 50",
+      "detail": "Acompanamiento en transparencia, procedencia y etiquetado antes del cierre de consulta del 03/06/2026."
+    },
+    {
+      "priority": "Media",
+      "title": "Pilotos de automatizacion vertical con Finance Search o Claude for Small Business",
+      "detail": "Casos claros: backoffice, facturacion, research y reporting con retorno visible en semanas."
+    },
+    {
+      "priority": "Media",
+      "title": "Linea de despliegue local con Mistral 3",
+      "detail": "Propuesta soberana para entornos con datos sensibles, edge o necesidad de control contractual."
+    }
+  ],
+  "active_alerts": [
+    "Critica: revisar cualquier uso de Semantic Kernel y plugins/tooling expuestos a prompt injection.",
+    "Alta: bloquear `mistralai==2.4.6` en pipelines y revisar caches de paquetes y hosts Linux.",
+    "Alta: inventariar MCPs y conectores con autenticacion debil, publica o excesivamente permisiva.",
+    "Media: introducir procedencia y verificacion de contenido en flujos de imagen generada o marketing."
+  ],
+  "recommendations": [
+    {
+      "priority": "Critica",
+      "action": "Ejecutar una revision de superficie agentic en 7 dias: frameworks, plugins, conectores, permisos y entornos de ejecucion."
+    },
+    {
+      "priority": "Alta",
+      "action": "Crear una politica minima para MCP y tool calling: autenticacion fuerte, allowlists, aprobacion humana y logging."
+    },
+    {
+      "priority": "Alta",
+      "action": "Preparar un servicio comercial de IA segura para pymes apoyado en hardening, cumplimiento y automatizacion controlada."
+    },
+    {
+      "priority": "Media",
+      "action": "Probar un piloto con Mistral 3 para casos con necesidad de despliegue local o soberano."
+    },
+    {
+      "priority": "Media",
+      "action": "Incorporar comprobacion de procedencia de imagen y trazabilidad en entregables creativos o forenses."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-06-02 a 2026-06-03",
+      "title": "Microsoft Build 2026",
+      "relevance": "Probables ampliaciones de seguridad y operacion de agentes enterprise.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "Cierre de la consulta del articulo 50 del AI Act",
+      "relevance": "Fecha regulatoria inmediata para transparencia y obligaciones de despliegue.",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    },
+    {
+      "date": "Ventana actual post-I/O 2026",
+      "title": "Despliegues progresivos de Gemini 3.5, Gemini Omni y agentes",
+      "relevance": "Seguimiento de disponibilidad, precio y guardrails en produccion.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/"
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI provenance",
+      "url": "https://openai.com/index/advancing-content-provenance/"
+    },
+    {
+      "label": "OpenAI Advanced Account Security",
+      "url": "https://openai.com/index/advanced-account-security/"
+    },
+    {
+      "label": "OpenAI status incident GPT-5.4/5.5",
+      "url": "https://status.openai.com/incidents/6kkeenry"
+    },
+    {
+      "label": "Google Managed Agents",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/"
+    },
+    {
+      "label": "Google I/O 2026 announcements",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/"
+    },
+    {
+      "label": "Anthropic Project Glasswing update",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update"
+    },
+    {
+      "label": "Anthropic CVD dashboard",
+      "url": "https://red.anthropic.com/2026/cvd/"
+    },
+    {
+      "label": "Anthropic acquires Stainless",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless"
+    },
+    {
+      "label": "Anthropic KPMG alliance",
+      "url": "https://www.anthropic.com/news/anthropic-kpmg"
+    },
+    {
+      "label": "Anthropic Claude for Small Business",
+      "url": "https://www.anthropic.com/news/claude-for-small-business"
+    },
+    {
+      "label": "Microsoft Security May 2026",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/21/whats-new-in-microsoft-security-may-2026/"
+    },
+    {
+      "label": "Microsoft Semantic Kernel vulns",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+    },
+    {
+      "label": "Microsoft AI app misconfigurations",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/"
+    },
+    {
+      "label": "xAI Skills",
+      "url": "https://x.ai/news/grok-skills"
+    },
+    {
+      "label": "xAI model docs",
+      "url": "https://docs.x.ai/developers/models"
+    },
+    {
+      "label": "xAI retirement note",
+      "url": "https://docs.x.ai/developers/migration/may-15-retirement"
+    },
+    {
+      "label": "Perplexity Finance Search",
+      "url": "https://www.perplexity.ai/hub/blog/introducing-finance-search-in-the-agent-api"
+    },
+    {
+      "label": "Perplexity Computer security",
+      "url": "https://www.perplexity.ai/hub/blog/how-we-built-security-into-computer"
+    },
+    {
+      "label": "Mistral 3",
+      "url": "https://mistral.ai/news/mistral-3"
+    },
+    {
+      "label": "Mistral Connectors",
+      "url": "https://mistral.ai/news/connectors"
+    },
+    {
+      "label": "Mistral client-python issue 523",
+      "url": "https://github.com/mistralai/client-python/issues/523"
+    },
+    {
+      "label": "Hugging Face Safetensors",
+      "url": "https://huggingface.co/blog/safetensors-joins-pytorch-foundation"
+    },
+    {
+      "label": "EU AI Act Article 50 consultation",
+      "url": "https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act"
+    }
+  ],
+  "limitations": [
+    "No se publica PDF en esta ejecucion porque no hay una via local verificada para convertir HTML a PDF con fidelidad premium comprobada.",
+    "La alerta sobre `mistralai==2.4.6` procede de issue oficial del repositorio, no de un advisory formal independiente en la fuente revisada."
+  ],
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico."
+}
