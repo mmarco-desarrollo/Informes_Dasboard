@@ -411,17 +411,19 @@
     "pdf_url": null,
     "status": {
       "report_generated": "Completado",
-      "github_history": "Pendiente",
-      "gmail_html": "Pendiente",
+      "github_history": "Completado",
+      "gmail_html": "Enviado",
       "pdf": "No disponible",
       "page_images": "No disponibles",
       "google_drive": "Omitido",
-      "slack_dm": "Pendiente",
+      "slack_dm": "Pendiente de aprobacion/autenticacion del conector",
       "limitations": [
         "No se genera PDF en esta edicion para evitar declarar un artefacto sin persistencia externa verificable.",
-        "No se generan imagenes por pagina en esta edicion."
+        "No se generan imagenes por pagina en esta edicion.",
+        "Slack DM no completado: el conector solicito aprobacion o autenticacion y agoto la espera."
       ]
-    }
+    },
+    "gmail_message_id": "19e56186a014ef97"
   },
   "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
 }
