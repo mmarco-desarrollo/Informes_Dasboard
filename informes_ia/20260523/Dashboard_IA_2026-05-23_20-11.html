@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Informe Ejecutivo Premium de Inteligencia Artificial | Cierre diurno 20:00</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0c1830;
+      --panel: rgba(10, 22, 43, 0.82);
+      --panel-2: rgba(16, 31, 60, 0.86);
+      --border: rgba(132, 178, 255, 0.16);
+      --text: #eff5ff;
+      --muted: #a6b6d1;
+      --blue: #45a7ff;
+      --violet: #8f72ff;
+      --green: #31d0a6;
+      --orange: #ff9a3d;
+      --red: #ff5c77;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(69, 167, 255, 0.22), transparent 32%),
+        radial-gradient(circle at top right, rgba(143, 114, 255, 0.18), transparent 30%),
+        linear-gradient(135deg, #050b16 0%, #0a1426 50%, #09101e 100%);
+      color: var(--text);
+    }
+    .shell {
+      width: min(1380px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(12, 24, 48, 0.96), rgba(7, 17, 31, 0.88));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(69, 167, 255, 0.07) 38%, transparent 55%),
+        linear-gradient(300deg, transparent 0%, rgba(49, 208, 166, 0.05) 45%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-top {
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.02;
+      max-width: 900px;
+    }
+    .summary {
+      color: var(--muted);
+      max-width: 920px;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(180px, 1fr));
+      gap: 12px;
+      min-width: min(100%, 420px);
+    }
+    .meta-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 14px 16px;
+      backdrop-filter: blur(14px);
+    }
+    .meta-box .label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .meta-box strong {
+      font-size: 15px;
+      line-height: 1.35;
+    }
+    .chip-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .chip {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .chip.impact {
+      color: white;
+      background: linear-gradient(135deg, rgba(255, 92, 119, 0.36), rgba(255, 154, 61, 0.28));
+      border-color: rgba(255, 92, 119, 0.35);
+    }
+    .kpis {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .kpi {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .kpi .label {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .kpi .value {
+      font-size: 42px;
+      font-weight: 800;
+      margin: 10px 0 6px;
+    }
+    .kpi .sub {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .section {
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .section-title h2 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 16px;
+    }
+    .panel {
+      background: var(--panel-2);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .panel p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .evolution {
+      display: grid;
+      gap: 12px;
+    }
+    .evo {
+      display: grid;
+      grid-template-columns: 140px 18px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .evo:last-child { border-bottom: 0; }
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 6px rgba(69, 167, 255, 0.12);
+    }
+    .dot.flat { background: var(--orange); box-shadow: 0 0 0 6px rgba(255, 154, 61, 0.12); }
+    .global-grid, .cards-grid, .calendar {
+      display: grid;
+      gap: 14px;
+    }
+    .global-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .global-card, .calendar-card {
+      background: var(--panel-2);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .global-card h3, .calendar-card h3 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+    .global-card .signal {
+      color: var(--blue);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+      background: var(--panel-2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .card-top {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.28;
+    }
+    .card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .card a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .meta-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .meta-line strong {
+      color: var(--text);
+      text-align: right;
+    }
+    .badge {
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .badge-critical { background: rgba(255, 92, 119, 0.18); color: #ffd9e0; }
+    .badge-high { background: rgba(255, 154, 61, 0.18); color: #ffe3c2; }
+    .badge-medium { background: rgba(69, 167, 255, 0.18); color: #d7ebff; }
+    .badge-low { background: rgba(49, 208, 166, 0.18); color: #d5fff0; }
+    .recommendations .card {
+      position: relative;
+      overflow: hidden;
+    }
+    .recommendations .card::before {
+      content: "";
+      position: absolute;
+      inset: auto auto 0 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red), var(--orange), var(--green));
+      opacity: 0.85;
+    }
+    .calendar {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .sources-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .source {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    .source a {
+      color: #dcedff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .source p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    @media (max-width: 1100px) {
+      .kpis, .global-grid, .cards-grid, .calendar, .two-col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 820px) {
+      .hero-meta, .kpis, .global-grid, .cards-grid, .calendar, .two-col {
+        grid-template-columns: 1fr;
+      }
+      .evo {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="eyebrow">MMarco Seguridad · Radar Ejecutivo IA</div>
+          <h1>Informe Ejecutivo Premium de Inteligencia Artificial | Cierre diurno 20:00</h1>
+          <p class="summary">El bloque diurno del 23 de mayo de 2026 cierra sin una incidencia critica nueva confirmada, pero con una senal ejecutiva muy clara: la carrera competitiva ya se esta decidiendo en la capa de agentes, conectividad segura y despliegue empresarial, mientras la regulacion europea aprieta plazos concretos hacia junio y agosto. La combinacion de GPT-5.5 en ChatGPT/Codex, Gemini 3.5, el refuerzo de Anthropic sobre tooling y conectividad, y las herramientas de seguridad publicadas por Microsoft deja un mensaje simple para empresa y consultoria: hay oportunidad comercial inmediata, pero solo si la automatizacion sale con controles de inyeccion, observabilidad y cumplimiento desde el dia uno.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-box"><span class="label">Generado</span><strong>23/05/2026 20:11:39 CEST</strong></div>
+          <div class="meta-box"><span class="label">Zona horaria</span><strong>Europe/Madrid</strong></div>
+          <div class="meta-box"><span class="label">Estado global</span><strong>Tenso pero estable</strong></div>
+          <div class="meta-box"><span class="label">Proxima actualizacion</span><strong>24/05/2026 00:15 CEST aprox.</strong></div>
+          <div class="meta-box"><span class="label">Perfil corporativo</span><strong>MMarco Seguridad · Ciberseguridad, Blockchain, IA y Telecomunicaciones</strong></div>
+          <div class="meta-box"><span class="label">Impacto IA</span><strong>ALTO</strong></div>
+        </div>
+      </div>
+      <div class="chip-row">
+        <span class="chip impact">Foco 20:00 · alertas activas</span>
+        <span class="chip">movimientos estrategicos</span>
+        <span class="chip">regulacion</span>
+        <span class="chip">recomendaciones ejecutivas</span>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <article class='kpi'><div class='label'>Alertas activas</div><div class='value'>4</div><div class='sub'>criticas o altas confirmadas</div></article><article class='kpi'><div class='label'>Movimientos estrategicos</div><div class='value'>5</div><div class='sub'>confirmados en la ventana reciente</div></article><article class='kpi'><div class='label'>Hitos regulatorios</div><div class='value'>2</div><div class='sub'>03/06 y 02/08 ya fijados</div></article><article class='kpi'><div class='label'>Nueva crisis confirmada</div><div class='value'>0</div><div class='sub'>al cierre de las 20:00</div></article>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Resumen ejecutivo</h2><span>hechos, senales y lectura operativa</span></div>
+      <div class="two-col">
+        <div class="panel"><p><strong>Hecho confirmado:</strong> no aparece una nueva crisis critica verificada en la ventana de cierre, pero siguen vigentes riesgos tecnicos severos en frameworks y orquestadores de agentes. <br/><br/><strong>Interpretacion:</strong> el poder competitivo se esta desplazando de "modelo nuevo" a "stack ejecutable": tool use, memoria, conectividad, gobernanza y resiliencia. <br/><br/><strong>Recomendacion ejecutiva:</strong> vender y desplegar IA solo sobre arquitectura con controles antes del tool run, trazabilidad y plan de compliance visible para agosto.</p></div>
+        <div class="panel">
+          <div class="evolution">
+            <div class='evo'><strong>20 May 00:15</strong><div class='dot '></div><span>Seguridad de agentes y conectividad segura entran en fase prioritaria.</span></div><div class='evo'><strong>21 May 20:06</strong><div class='dot '></div><span>Seguridad de agentes, procedencia de contenido y AI Act se consolidan como frente ejecutivo.</span></div><div class='evo'><strong>22 May 20:04</strong><div class='dot flat'></div><span>Riesgo operativo de plataforma y vulnerabilidades siguen dominando el cierre.</span></div><div class='evo'><strong>23 May 20:00</strong><div class='dot '></div><span>El dia cierra sin nueva crisis mayor, pero con mas presion en tooling, cumplimiento y resiliencia operativa.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Vista global de actividad IA</h2><span>senal geografica y de negocio</span></div>
+      <div class="global-grid">
+        <article class='global-card'><h3>EE. UU.</h3><div class='signal'>Muy activa</div><p>OpenAI, Anthropic, Google y xAI aceleran producto, tooling y despliegue enterprise.</p></article><article class='global-card'><h3>UE</h3><div class='signal'>Alta presion</div><p>AI Act pasa de marco teorico a calendario operativo para transparencia.</p></article><article class='global-card'><h3>Ciberseguridad</h3><div class='signal'>Critica</div><p>Prompt injection, RCE en frameworks y exposicion de agentes siguen siendo el frente numero uno.</p></article><article class='global-card'><h3>Consultoria / pyme</h3><div class='signal'>Oportunidad inmediata</div><p>Hay hueco claro para auditoria, hardening, automatizacion y readiness regulatoria.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Alertas activas</h2><span>prioridad inmediata</span></div>
+      <div class="cards-grid">
+            <article class="card alerts">
+              <div class="card-top">
+                <h3>Flowise CVE-2026-41264</h3>
+                <span class="badge badge-critical">Critica</span>
+              </div>
+              <p>Prompt injection en CSV Agent con riesgo de RCE. NVD refleja CVSS CNA 9.2 critico.</p>
+              <div class='meta-line'><span>Status</span><strong>Activa si hay instancias no parcheadas</strong></div><div class='meta-line'><span>Action</span><strong>Inventariar exposicion, desactivar nodos vulnerables y parchear de inmediato.</strong></div>
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41264" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card alerts">
+              <div class="card-top">
+                <h3>Semantic Kernel CVE-2026-25592 / CVE-2026-26030</h3>
+                <span class="badge badge-critical">Critica</span>
+              </div>
+              <p>Microsoft documento RCE host-level inducido por prompt injection en agentes construidos sobre Semantic Kernel.</p>
+              <div class='meta-line'><span>Status</span><strong>Persistente en despliegues no actualizados</strong></div><div class='meta-line'><span>Action</span><strong>Revisar versiones, plugins y cualquier uso de eval o tool-calling sin aislamiento.</strong></div>
+              <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card alerts">
+              <div class="card-top">
+                <h3>Riesgo operativo de plataforma</h3>
+                <span class="badge badge-high">Alta</span>
+              </div>
+              <p>OpenAI Status refleja multiples eventos resueltos en Codex, GPT-5.5 y ChatGPT entre el 13 y el 23 de mayo de 2026; hoy hubo un episodio resuelto de rate limits en Codex.</p>
+              <div class='meta-line'><span>Status</span><strong>Sin incidencia critica activa al cierre, pero con recurrencia reciente</strong></div><div class='meta-line'><span>Action</span><strong>Mantener rutas de contingencia y politicas de reintento para workloads dependientes de Codex o ChatGPT.</strong></div>
+              <a href="https://status.openai.com/history" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card alerts">
+              <div class="card-top">
+                <h3>Cuenta atras regulatoria UE</h3>
+                <span class="badge badge-high">Alta</span>
+              </div>
+              <p>La consulta sobre guias de transparencia del AI Act sigue abierta hasta el 3 de junio de 2026 y las obligaciones del articulo 50 aplican desde el 2 de agosto de 2026.</p>
+              <div class='meta-line'><span>Status</span><strong>Abierta</strong></div><div class='meta-line'><span>Action</span><strong>Cerrar inventario de casos con contenido sintetico y etiquetado antes de junio.</strong></div>
+              <a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Movimientos estrategicos</h2><span>mercado y plataforma</span></div>
+      <div class="cards-grid">
+            <article class="card moves">
+              <div class="card-top">
+                <h3>OpenAI - GPT-5.5 en ChatGPT y Codex</h3>
+                <span class="badge badge-high">Alto</span>
+              </div>
+              <p>GPT-5.5 ya figura como disponible en ChatGPT, con model picker en planes de pago, soporte de herramientas y una senal clara de consolidacion operativa en Codex.</p>
+              <div class='meta-line'><span>Date</span><strong>23/05/2026</strong></div><div class='meta-line'><span>Takeaway</span><strong>La ventaja ya no es solo modelo: pesa la experiencia integrada con herramientas, memoria y limites de uso por tier.</strong></div>
+              <a href="https://help.openai.com/en/articles/11909943-gpt-52-in-chatgpt" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card moves">
+              <div class="card-top">
+                <h3>Google - Gemini 3.5 Flash</h3>
+                <span class="badge badge-high">Alto</span>
+              </div>
+              <p>Google lanzo Gemini 3.5 con foco explicito en ejecucion de workflows agentic y disponibilidad general en su stack para desarrolladores y empresa.</p>
+              <div class='meta-line'><span>Date</span><strong>19/05/2026</strong></div><div class='meta-line'><span>Takeaway</span><strong>Presion competitiva fuerte en latencia, coste y tool use para empresa.</strong></div>
+              <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card moves">
+              <div class="card-top">
+                <h3>Anthropic - adquisicion de Stainless</h3>
+                <span class="badge badge-high">Alto</span>
+              </div>
+              <p>Anthropic compra Stainless y refuerza su control sobre SDKs, CLIs y tooling MCP.</p>
+              <div class='meta-line'><span>Date</span><strong>18/05/2026</strong></div><div class='meta-line'><span>Takeaway</span><strong>Movimiento claramente orientado a conectividad segura y experiencia de desarrollador.</strong></div>
+              <a href="https://www.anthropic.com/news/anthropic-acquires-stainless" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card moves">
+              <div class="card-top">
+                <h3>Anthropic + KPMG</h3>
+                <span class="badge badge-high">Alto</span>
+              </div>
+              <p>KPMG extiende Claude a mas de 276.000 personas y lo incorpora a casos de ciberseguridad y deteccion de vulnerabilidades.</p>
+              <div class='meta-line'><span>Date</span><strong>19/05/2026</strong></div><div class='meta-line'><span>Takeaway</span><strong>Senal de validacion enterprise en servicios profesionales y consultoria de riesgo.</strong></div>
+              <a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card moves">
+              <div class="card-top">
+                <h3>xAI - Skills y Grok Build</h3>
+                <span class="badge badge-high">Media-Alta</span>
+              </div>
+              <p>xAI introduce Skills con memoria operativa persistente y Grok Build como agente CLI en beta temprana.</p>
+              <div class='meta-line'><span>Date</span><strong>18-14/05/2026</strong></div><div class='meta-line'><span>Takeaway</span><strong>La competencia se mueve hacia produccion documental, automatizacion y terminal-first tooling.</strong></div>
+              <a href="https://x.ai/news/grok-skills" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Modelos y herramientas destacadas</h2><span>utilidad inmediata</span></div>
+      <div class="cards-grid">
+            <article class="card tools">
+              <div class="card-top">
+                <h3>FIDES</h3>
+                
+              </div>
+              <p>Aplica etiquetas de confianza y enforcement de politicas antes de tool runs, reduciendo impacto de prompt injection.</p>
+              <div class='meta-line'><span>Company</span><strong>Microsoft</strong></div><div class='meta-line'><span>Category</span><strong>Seguridad de agentes</strong></div><div class='meta-line'><span>Utility</span><strong>Alta</strong></div>
+              <a href="https://devblogs.microsoft.com/agent-framework/fides/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card tools">
+              <div class="card-top">
+                <h3>RAMPART + Clarity</h3>
+                
+              </div>
+              <p>Convierte findings de red teaming en pruebas repetibles y aporta una disciplina previa al build del agente.</p>
+              <div class='meta-line'><span>Company</span><strong>Microsoft</strong></div><div class='meta-line'><span>Category</span><strong>Testing y governance</strong></div><div class='meta-line'><span>Utility</span><strong>Alta</strong></div>
+              <a href="https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card tools">
+              <div class="card-top">
+                <h3>Gemini 3.5 Flash</h3>
+                
+              </div>
+              <p>Modelo publicado con fuerte posicionamiento en razonamiento, tool use y velocidad operacional.</p>
+              <div class='meta-line'><span>Company</span><strong>Google DeepMind</strong></div><div class='meta-line'><span>Category</span><strong>Modelo multimodal</strong></div><div class='meta-line'><span>Utility</span><strong>Alta</strong></div>
+              <a href="https://deepmind.google/models/model-cards/gemini-3-5-flash" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card tools">
+              <div class="card-top">
+                <h3>GPT-5.5</h3>
+                
+              </div>
+              <p>Disponible en ChatGPT con soporte completo de herramientas y limites claros por tier.</p>
+              <div class='meta-line'><span>Company</span><strong>OpenAI</strong></div><div class='meta-line'><span>Category</span><strong>Modelo general + tools</strong></div><div class='meta-line'><span>Utility</span><strong>Alta</strong></div>
+              <a href="https://help.openai.com/en/articles/11909943-gpt-52-in-chatgpt" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Regulacion y calendario</h2><span>fechas absolutas verificadas</span></div>
+      <div class="two-col">
+        <div class="cards-grid" style="grid-template-columns: 1fr;">
+          
+            <article class="card regulation">
+              <div class="card-top">
+                <h3>Consulta de transparencia AI Act</h3>
+                
+              </div>
+              <p>La Comision Europea mantiene abierta la consulta sobre las guias de transparencia publicadas el 8 de mayo de 2026.</p>
+              <div class='meta-line'><span>Status</span><strong>Confirmado</strong></div><div class='meta-line'><span>Deadline</span><strong>03/06/2026</strong></div>
+              <a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card regulation">
+              <div class="card-top">
+                <h3>Aplicacion del articulo 50</h3>
+                
+              </div>
+              <p>Las obligaciones de transparencia sobre contenido sintetico, deepfakes e interaccion con IA pasan a ser operativas el 2 de agosto de 2026.</p>
+              <div class='meta-line'><span>Status</span><strong>Confirmado</strong></div><div class='meta-line'><span>Deadline</span><strong>02/08/2026</strong></div>
+              <a href="https://artificialintelligenceact.eu/transparency-rules-article-50/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+        </div>
+        <div class="calendar">
+          <article class='calendar-card'><h3>03/06/2026</h3><p><strong>Cierre de consulta UE sobre guias de transparencia del AI Act</strong><br/>Compliance</p></article><article class='calendar-card'><h3>02/08/2026</h3><p><strong>Aplicacion de obligaciones de transparencia del articulo 50</strong><br/>Regulacion</p></article><article class='calendar-card'><h3>Seguimiento diario</h3><p><strong>Monitorizar estabilidad de Codex/GPT-5.5 y parches de frameworks de agentes</strong><br/>Operativo</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section recommendations">
+      <div class="section-title"><h2>Recomendaciones ejecutivas</h2><span>priorizadas para empresa y consultoria</span></div>
+      <div class="cards-grid">
+            <article class="card reco">
+              <div class="card-top">
+                <h3>Auditoria urgente de agentes con Flowise y Semantic Kernel</h3>
+                <span class="badge badge-critical">Critica</span>
+              </div>
+              <p>Buscar superficies expuestas, conectores sin autenticacion, evaluaciones dinamicas y rutas de ejecucion no aisladas. Tratar cualquier hallazgo como riesgo de continuidad y de ciberseguridad.</p>
+              
+              <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-41264" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card reco">
+              <div class="card-top">
+                <h3>Estandarizar controles anti prompt injection antes del tool run</h3>
+                <span class="badge badge-high">Alta</span>
+              </div>
+              <p>Tomar FIDES, RAMPART y Clarity como referencia de arquitectura minima para cualquier agente interno o de clientes.</p>
+              
+              <a href="https://devblogs.microsoft.com/agent-framework/fides/" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card reco">
+              <div class="card-top">
+                <h3>Preparar cumplimiento de transparencia para agosto</h3>
+                <span class="badge badge-high">Alta</span>
+              </div>
+              <p>Inventariar chatbots, asistentes, generacion de contenido, deepfakes de demo y materiales comerciales que requieran rotulado o avisos.</p>
+              
+              <a href="https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card reco">
+              <div class="card-top">
+                <h3>Pilotar dos stacks en paralelo para servicios</h3>
+                <span class="badge badge-medium">Media</span>
+              </div>
+              <p>Comparar un flujo productivo con GPT-5.5/Codex y otro con Gemini 3.5 Flash o Claude + Stainless, midiendo latencia, trazabilidad y coste por tarea.</p>
+              
+              <a href="https://help.openai.com/en/articles/11909943-gpt-52-in-chatgpt" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            
+
+            <article class="card reco">
+              <div class="card-top">
+                <h3>Convertir esta ventana en oferta comercial</h3>
+                <span class="badge badge-medium">Media</span>
+              </div>
+              <p>Paquetizar auditoria de agentes, AI Act readiness y hardening de automatizaciones como servicio premium para pymes y consultoria.</p>
+              
+              <a href="https://www.anthropic.com/news/anthropic-kpmg" target="_blank" rel="noreferrer">Fuente oficial</a>
+            </article>
+            </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Fuentes utilizadas</h2><span>prioridad oficial y tecnica</span></div>
+      <div class="sources-list">
+        <div class='source'><a href='https://status.openai.com/history' target='_blank' rel='noreferrer'>OpenAI Status History</a><p>Incidencias resueltas recientes en Codex, GPT-5.5 y ChatGPT hasta el 23 de mayo de 2026.</p></div><div class='source'><a href='https://help.openai.com/en/articles/11909943-gpt-52-in-chatgpt' target='_blank' rel='noreferrer'>OpenAI Help Center - GPT-5.5 in ChatGPT</a><p>Disponibilidad y limites actuales de GPT-5.5 en ChatGPT y Codex.</p></div><div class='source'><a href='https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/' target='_blank' rel='noreferrer'>Google Blog - Gemini 3.5</a><p>Lanzamiento oficial de Gemini 3.5 y foco en flujos agentic.</p></div><div class='source'><a href='https://deepmind.google/models/model-cards/gemini-3-5-flash' target='_blank' rel='noreferrer'>Google DeepMind - Gemini 3.5 Flash model card</a><p>Modelo, benchmarks y disponibilidad publicada el 19 de mayo de 2026.</p></div><div class='source'><a href='https://www.anthropic.com/news/anthropic-acquires-stainless' target='_blank' rel='noreferrer'>Anthropic - acquires Stainless</a><p>Movimiento de plataforma hacia SDKs, CLIs y MCP server tooling.</p></div><div class='source'><a href='https://www.anthropic.com/news/anthropic-kpmg' target='_blank' rel='noreferrer'>Anthropic - KPMG strategic alliance</a><p>Despliegue de Claude a 276.000+ personas y uso en ciberseguridad.</p></div><div class='source'><a href='https://devblogs.microsoft.com/agent-framework/fides/' target='_blank' rel='noreferrer'>Microsoft Agent Framework - FIDES</a><p>Controles para frenar prompt injection antes de ejecutar herramientas.</p></div><div class='source'><a href='https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/' target='_blank' rel='noreferrer'>Microsoft Security Blog - RAMPART and Clarity</a><p>Herramientas abiertas de seguridad para CI y diseno de agentes.</p></div><div class='source'><a href='https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/' target='_blank' rel='noreferrer'>Microsoft Security Blog - Semantic Kernel vulnerabilities</a><p>Caso oficial de CVE-2026-25592 y CVE-2026-26030 en Semantic Kernel.</p></div><div class='source'><a href='https://digital-strategy.ec.europa.eu/en/consultations/consultation-draft-guidelines-transparency-obligations-under-ai-act' target='_blank' rel='noreferrer'>European Commission consultation</a><p>Consulta abierta hasta el 3 de junio de 2026 sobre transparencia del AI Act.</p></div><div class='source'><a href='https://artificialintelligenceact.eu/transparency-rules-article-50/' target='_blank' rel='noreferrer'>EU AI Act practical guide - Article 50</a><p>Guia operativa sobre obligaciones de transparencia aplicables desde el 2 de agosto de 2026.</p></div><div class='source'><a href='https://nvd.nist.gov/vuln/detail/CVE-2026-41264' target='_blank' rel='noreferrer'>NVD - CVE-2026-41264</a><p>Registro de la vulnerabilidad critica de Flowise, con CVSS CNA 9.2.</p></div><div class='source'><a href='https://x.ai/news/grok-skills' target='_blank' rel='noreferrer'>xAI - Skills</a><p>Persistencia de preferencias y automatizacion documental anunciada el 18 de mayo de 2026.</p></div><div class='source'><a href='https://x.ai/news/grok-build-cli' target='_blank' rel='noreferrer'>xAI - Grok Build</a><p>Agente de terminal en beta temprana para ingenieria de software.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      <div><strong>MMarco Seguridad</strong> · Manuel Marco Sanchez · https://mmarcoseguridad.com · mmarco.seguridad@gmail.com · WhatsApp +34 656 33 93 55</div>
+      <div>Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no constituye asesoramiento legal, tecnico, financiero ni profesional especifico.</div>
+    </footer>
+  </div>
+</body>
+</html>
