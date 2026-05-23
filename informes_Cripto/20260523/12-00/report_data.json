@@ -1,0 +1,327 @@
+{
+  "market": {
+    "state": "Rebote tactico dentro de un regime defensivo",
+    "ai_state": "Neutral-defensivo",
+    "risk": "Medio-alto",
+    "fear_greed": {
+      "value": "27",
+      "label": "Fear",
+      "note": "Ultima lectura indexada de Alternative.me"
+    },
+    "summary": [
+      "Bitcoin rebota sobre la zona de 74.5k, pero la lectura dominante sigue siendo de defensa: BTC mantiene 58.1% de dominancia y el Altseason Index continua en 22, aun en Bitcoin Season.",
+      "Ethereum mejora en precio a 24h, aunque el flujo institucional sigue mas debil que el de Bitcoin; CoinShares y CoinDesk describen rotacion selectiva hacia XRP y SOL, no un risk-on amplio.",
+      "Los derivados muestran apalancamiento todavia sensible: el open interest agregado ronda US$51.0B y las liquidaciones 24h van por US$510.7M, una senal de que el rebote no esta libre de squeezes.",
+      "El principal catalizador macro de la proxima semana es el bloque estadounidense del jueves 28 de mayo de 2026: segunda estimacion del PIB del 1T y PCE/core PCE, ambos con capacidad de mover dolar, yields y beta cripto."
+    ],
+    "kpis": [
+      {
+        "label": "Capitalizacion total",
+        "value": "$2.58T",
+        "note": "CoinGecko global snapshot"
+      },
+      {
+        "label": "Volumen 24h",
+        "value": "$89.5B",
+        "note": "Spot agregado"
+      },
+      {
+        "label": "BTC Dominance",
+        "value": "58.1%",
+        "note": "Predominio defensivo"
+      },
+      {
+        "label": "ETH Dominance",
+        "value": "9.5%",
+        "note": "Rotacion amplia aun ausente"
+      },
+      {
+        "label": "Altseason Index",
+        "value": "22 / 100",
+        "note": "BlockchainCenter: Bitcoin Season"
+      },
+      {
+        "label": "Open Interest",
+        "value": "$51.0B",
+        "note": "Coinalyze, all contracts"
+      },
+      {
+        "label": "Funding snapshot",
+        "value": "Mixto",
+        "note": "BTC -0.0005% | ETH +0.0068%"
+      },
+      {
+        "label": "Liquidaciones 24h",
+        "value": "$510.7M",
+        "note": "Coinalyze"
+      },
+      {
+        "label": "Volatilidad",
+        "value": "Elevada",
+        "note": "Regime de squeeze y ETF outflows"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "sym": "BTC",
+      "name": "Bitcoin",
+      "price": 74661.2,
+      "chg24": 3.4,
+      "chg7": 4.7,
+      "volume": 50.58,
+      "trend": "Lider defensivo",
+      "momentum": "Positivo moderado",
+      "rsi": "N/D"
+    },
+    {
+      "sym": "ETH",
+      "name": "Ethereum",
+      "price": 2027.54,
+      "chg24": 4.4,
+      "chg7": 7.6,
+      "volume": 16.18,
+      "trend": "Rebote con presion de flujos",
+      "momentum": "Positivo",
+      "rsi": "N/D"
+    },
+    {
+      "sym": "SOL",
+      "name": "Solana",
+      "price": 81.96,
+      "chg24": 6.0,
+      "chg7": 6.2,
+      "volume": 4.42,
+      "trend": "Fuerza relativa",
+      "momentum": "Positivo alto",
+      "rsi": "N/D"
+    },
+    {
+      "sym": "BNB",
+      "name": "BNB",
+      "price": 639.35,
+      "chg24": 2.6,
+      "chg7": 3.3,
+      "volume": 2.25,
+      "trend": "Estable",
+      "momentum": "Positivo suave",
+      "rsi": "N/D"
+    },
+    {
+      "sym": "XRP",
+      "name": "XRP",
+      "price": 1.32,
+      "chg24": 3.2,
+      "chg7": 6.9,
+      "volume": 1.93,
+      "trend": "Rotacion institucional selectiva",
+      "momentum": "Positivo",
+      "rsi": "N/D"
+    },
+    {
+      "sym": "ADA",
+      "name": "Cardano",
+      "price": 0.2382,
+      "chg24": 5.2,
+      "chg7": 6.7,
+      "volume": 0.512,
+      "trend": "Rebote beta",
+      "momentum": "Positivo",
+      "rsi": "N/D"
+    },
+    {
+      "sym": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.09936,
+      "chg24": 6.0,
+      "chg7": 9.7,
+      "volume": 2.58,
+      "trend": "Alta beta",
+      "momentum": "Positivo alto",
+      "rsi": "N/D"
+    }
+  ],
+  "scenarios": [
+    {
+      "title": "Escenario alcista",
+      "prob": "35%",
+      "confidence": "Media",
+      "risk": "Medio",
+      "targets": "BTC 77.5k-79.0k | ETH 2.10k-2.16k | SOL 86-89",
+      "support": "BTC 74.5k",
+      "resistance": "BTC 76.8k y 79.0k",
+      "text": "Necesita continuidad del rebote, compresion de outflows y un macro benigno antes del bloque PIB/PCE del 28 de mayo."
+    },
+    {
+      "title": "Escenario neutral",
+      "prob": "40%",
+      "confidence": "Alta",
+      "risk": "Medio",
+      "targets": "BTC 73.8k-76.8k | ETH 1.98k-2.08k",
+      "support": "BTC 73.8k",
+      "resistance": "BTC 76.8k",
+      "text": "Es el caso base: rebote tactico sin cambio de regime, con dominancia BTC alta y mercado esperando confirmacion macro."
+    },
+    {
+      "title": "Escenario bajista",
+      "prob": "25%",
+      "confidence": "Media",
+      "risk": "Alto",
+      "targets": "BTC 72.0k-73.0k | ETH 1.92k-1.97k | SOL 76-79",
+      "support": "BTC 72.0k",
+      "resistance": "BTC 74.5k recuperado sin seguimiento",
+      "text": "Se activa si reaparecen ventas en ETFs, se extiende el stress de derivados o los datos macro fortalecen el dolar y los rendimientos reales."
+    }
+  ],
+  "signals": {
+    "headline": "No se emite senal direccional premium de alta conviccion para la cesta completa.",
+    "body": [
+      "BTC mantiene la mejor estructura relativa del panel, pero el entorno de liquidaciones y ETF outflows aconseja operar solo bajo confirmacion.",
+      "Watchlist tactica: sesgo buy-the-dip en BTC mientras defienda 74.5k; invalida si pierde 73.8k con volumen.",
+      "En alts, la evidencia favorece seleccion puntual sobre SOL y XRP frente a ETH/ADA, pero sin senal mecanica cerrada con entrada-stop-take profit plenamente verificada."
+    ],
+    "ticket": {
+      "signal": "BTC tactico",
+      "confidence": "58 / 100",
+      "entry": "Sobre recuperacion sostenida de 75.2k-75.5k",
+      "stop": "73.8k",
+      "take_profit": "76.8k / 79.0k",
+      "horizon": "24h-72h",
+      "risk": "Controlado solo con confirmacion"
+    }
+  },
+  "flows": [
+    "CoinTelegraph recoge que los ETF spot de BTC acumularon US$1.26B de outflows en cinco sesiones hasta el 23 de mayo de 2026, lectura que Santiment interpreta como posible senal contrarian de acumulacion paciente.",
+    "CoinDesk publico el 19 de mayo de 2026 que productos listados de XRP y SOL registraron entradas mientras los fondos de BTC perdian cerca de US$1B, reforzando la tesis de rotacion selectiva.",
+    "CoinShares reporto el 5 de mayo de 2026 entradas netas de US$117.8M en productos digitales, con BTC liderando y ETH sufriendo US$81.6M de salidas, un patron consistente con la fragilidad relativa de ETH.",
+    "No se ha verificado en este corte una senal wallet-level suficientemente robusta para atribuir compras discrecionales de ballenas concretas; se mantiene fallback elegante en lugar de sobrerelatar on-chain."
+  ],
+  "news": [
+    {
+      "title": "SEC aprueba la cotizacion de opciones sobre el Nasdaq Bitcoin Index",
+      "source": "Cointelegraph",
+      "when": "2026-05-23",
+      "time_note": "Publicado hoy",
+      "impact": "Positivo estructural para BTC; aun pendiente alivio de la CFTC antes de negociarse."
+    },
+    {
+      "title": "La SEC retrasa la exencion para activos tokenizados por dudas sobre emisores terceros",
+      "source": "The Block",
+      "when": "2026-05-22",
+      "time_note": "15:29 EDT",
+      "impact": "Negativo a corto plazo para la narrativa RWA y para beta regulatoria."
+    },
+    {
+      "title": "US$1.26B de salidas en ETF spot de BTC alimentan una lectura contrarian",
+      "source": "Cointelegraph / Santiment",
+      "when": "2026-05-23",
+      "time_note": "Publicado hoy",
+      "impact": "Mixto: presion tactica de sentimiento, pero posible suelo local si cede el panico minorista."
+    },
+    {
+      "title": "Productos de XRP y SOL captan entradas mientras BTC sufre salidas cercanas a US$1B",
+      "source": "CoinDesk",
+      "when": "2026-05-19",
+      "time_note": "08:25",
+      "impact": "Confirma rotacion selectiva hacia beta especifica, no risk-on general."
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-05-27",
+      "event": "ECB Financial Stability Review",
+      "impact": "Catalizador indirecto para apetito de riesgo europeo y narrativa sobre estabilidad financiera."
+    },
+    {
+      "date": "2026-05-28",
+      "event": "US GDP 1T 2026, segunda estimacion",
+      "impact": "Puede mover yields y dolar; lectura hawkish suele presionar cripto beta."
+    },
+    {
+      "date": "2026-05-28",
+      "event": "US PCE y Core PCE",
+      "impact": "Evento macro de mayor sensibilidad para BTC/ETH en la semana."
+    },
+    {
+      "date": "2026-06-10",
+      "event": "CPI de mayo en EE. UU.",
+      "impact": "Riesgo adelantado de re-pricing si el mercado empieza a descontar inflacion persistente."
+    }
+  ],
+  "alerts": [
+    {
+      "level": "Prioridad alta",
+      "title": "Persisten las liquidaciones",
+      "body": "US$510.7M en 24h indican mercado vulnerable a squeezes y barridos intradia."
+    },
+    {
+      "level": "Prioridad alta",
+      "title": "ETF outflows aun no resueltos",
+      "body": "La narrativa de acumulacion contrarian existe, pero el flujo spot institucional sigue siendo un foco de fragilidad."
+    },
+    {
+      "level": "Prioridad media",
+      "title": "Altseason no confirmada",
+      "body": "Altseason Index en 22 y dominancia BTC en 58.1% mantienen preferencia por liderazgo BTC."
+    },
+    {
+      "level": "Prioridad media",
+      "title": "Bloque macro el 28 de mayo",
+      "body": "PIB y PCE pueden girar el tono del mercado aunque el rebote tecnico aguante en la sesion europea."
+    }
+  ],
+  "sources": [
+    {
+      "label": "CoinGecko global market",
+      "url": "https://www.coingecko.com/"
+    },
+    {
+      "label": "Alternative.me crypto dashboard",
+      "url": "https://alternative.me/crypto/"
+    },
+    {
+      "label": "BlockchainCenter Altcoin Season Index",
+      "url": "https://www.blockchaincenter.net/en/altcoin-season-index/"
+    },
+    {
+      "label": "Coinalyze futures data",
+      "url": "https://coinalyze.net/"
+    },
+    {
+      "label": "Cointelegraph ETF outflows",
+      "url": "https://cointelegraph.com/news/bitcoin-etf-outflows-are-a-contrarian-buy-signal-santiment"
+    },
+    {
+      "label": "Cointelegraph Nasdaq BTC options",
+      "url": "https://cointelegraph.com/news/sec-approves-nasdaq-to-list-bitcoin-index-options-on-the-exchange"
+    },
+    {
+      "label": "The Block tokenized assets delay",
+      "url": "https://www.theblock.co/post/402409/sec-delays-tokenized-asset-exemption-third-party-tokens-bloomberg-law"
+    },
+    {
+      "label": "CoinDesk XRP and SOL inflows",
+      "url": "https://www.coindesk.com/markets/2026/05/19/xrp-and-solana-attract-fresh-inflows-as-bitcoin-fund-outflows-hit-nearly-usd1-billion"
+    },
+    {
+      "label": "CoinShares fund flows",
+      "url": "https://coinshares.com/us/insights/research-data/fund-flows-05-05-26/"
+    },
+    {
+      "label": "BEA GDP schedule",
+      "url": "https://www.bea.gov/news/2026/gdp-advance-estimate-1st-quarter-2026"
+    },
+    {
+      "label": "BEA PCE schedule",
+      "url": "https://www.bea.gov/data/consumer-spending/main"
+    },
+    {
+      "label": "BLS CPI schedule",
+      "url": "https://www.bls.gov/schedule/news_release/cpi.htm?lv=true"
+    },
+    {
+      "label": "ECB weekly schedule",
+      "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.de.html"
+    }
+  ]
+}
