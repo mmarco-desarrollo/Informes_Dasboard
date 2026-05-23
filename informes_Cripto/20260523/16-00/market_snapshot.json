@@ -1,0 +1,10 @@
+{
+  "report_date": "2026-05-23",
+  "report_time": "16:11 CEST",
+  "state": "Risk-off con rebote intradia fragil",
+  "ai_state": "Defensivo / selectivo",
+  "fear_greed": "35 · Fear*",
+  "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_Cripto/20260523/16-00/dashboard.html",
+  "pdf_url": "https://raw.githubusercontent.com/mmarco-desarrollo/Informes_Dasboard/main/informes_Cripto/20260523/16-00/dashboard.pdf",
+  "kpis": [["Market Cap Total", "$2.584T", "CoinGecko global · snapshot crawled today"], ["Volumen 24h", "$111.4B", "Volumen agregado del mercado"], ["BTC Dominance", "58.1%", "Sesgo defensivo activo"], ["ETH Dominance", "9.51%", "Sin liderazgo de smart contracts"], ["Altseason Index", "N/D verificado", "No se obtuvo lectura primaria fiable en esta ejecucion"], ["Open Interest", "$40.6B", "BTC + ETH + SOL + BNB en Coinalyze"], ["Funding Rates", "Mixto / sesgo plano", "XRP negativo, SOL levemente positivo, agregado sin euforia"], ["Liquidaciones", "N/D verificado", "Desapalancamiento activo, sin consolidado fiable 24h"], ["Volatilidad", "4.1%", "Proxy inferido del rango 24h de BTC"]]
+}
