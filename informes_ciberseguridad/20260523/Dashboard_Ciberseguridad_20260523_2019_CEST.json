@@ -1,0 +1,427 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "owner": "Manuel Marco Sanchez",
+    "title": "Informe Ejecutivo de Ciberseguridad",
+    "edition": "Edicion 20:00 CEST",
+    "generated_at": "23/05/2026 20:19 CEST",
+    "timezone": "Europe/Madrid",
+    "global_threat_level": "ALTO",
+    "next_update": "24/05/2026 00:00 CEST",
+    "ai_risk_state": "Elevado",
+    "scope_note": "KPIs y prioridades construidos con evidencia confirmada y senales recientes de fuentes oficiales y reconocidas consultadas para esta edicion."
+  },
+  "kpis": {
+    "incidentes_activos_monitorizados": 4,
+    "incidentes_criticos": 2,
+    "vulnerabilidades_priorizadas": 6,
+    "cves_criticas_priorizadas": 5,
+    "familias_malware_o_tooling": 3,
+    "campanas_phishing_destacadas": 2,
+    "eventos_ddos_confirmados": 0,
+    "ransomware_o_extorsion_reportada": 2,
+    "paises_mas_impactados": [
+      "Estados Unidos",
+      "Francia",
+      "Entornos globales expuestos a Internet"
+    ],
+    "nivel_riesgo_global": "ALTO",
+    "tendencia_ultimas_24h": "Alta y estable, con foco en servicios expuestos y abuso de identidad."
+  },
+  "executive_summary": {
+    "global_status": "La ciberamenaza permanece en nivel ALTO por la coexistencia de multiples vulnerabilidades criticas con explotacion confirmada y campanas de robo de identidad a gran escala.",
+    "main_risks": [
+      "Explotacion activa de equipos perimetrales y de gestion expuestos a Internet.",
+      "Campanas de phishing con robo de token y elusion parcial de MFA no resistente a phishing.",
+      "Riesgo operativo para entornos con Cisco SD-WAN, PAN-OS, BeyondTrust o Drupal no parcheados.",
+      "Persistencia del riesgo en sectores con alta superficie educativa, administracion publica y servicios corporativos."
+    ],
+    "affected_sectors": [
+      "Sanidad y ciencias de la vida",
+      "Servicios financieros",
+      "Servicios profesionales",
+      "Tecnologia y software",
+      "Educacion",
+      "Administracion publica"
+    ],
+    "techniques": [
+      "Bypass de autenticacion",
+      "RCE preautenticacion en portales expuestos",
+      "AiTM token theft",
+      "Device code phishing",
+      "Persistencia mediante SSH keys y cambios NETCONF"
+    ],
+    "estimated_exposure": "Elevada para organizaciones con portales de autenticacion, firewalls, herramientas de acceso remoto o paneles de gestion expuestos a Internet.",
+    "primary_recommendation": "Aplicar mitigaciones y parches de emergencia sobre activos expuestos, con verificacion de compromiso posterior, antes de la siguiente ventana operativa.",
+    "quick_conclusion": [
+      "Cisco SD-WAN y PAN-OS concentran la urgencia tecnica mas alta por explotacion confirmada y privilegios elevados.",
+      "BeyondTrust sigue siendo relevante por el volumen de instancias potencialmente expuestas y actividad post-explotacion observada.",
+      "Drupal requiere accion inmediata en despliegues con PostgreSQL, especialmente si son publicos.",
+      "El robo de identidad sigue pivotando hacia captura de token y abuso de flujos de autenticacion legitimos."
+    ]
+  },
+  "alerts": [
+    {
+      "title": "Cisco Catalyst SD-WAN CVE-2026-20182",
+      "status": "Hecho confirmado",
+      "urgency": "Critica",
+      "detail": "CVE en KEV con explotacion activa. Permite bypass de autenticacion y privilegios administrativos en controladores SD-WAN."
+    },
+    {
+      "title": "Palo Alto PAN-OS CVE-2026-0300",
+      "status": "Hecho confirmado",
+      "urgency": "Critica",
+      "detail": "Explotacion limitada observada en portales User-ID expuestos. Riesgo maximo en interfaces accesibles desde Internet."
+    },
+    {
+      "title": "Drupal CVE-2026-9082",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "detail": "Actualizacion critica de seguridad con riesgo de SQLi para sitios con PostgreSQL y explotacion indicada por INCIBE."
+    },
+    {
+      "title": "Phishing AiTM y device code",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "detail": "Microsoft documenta una campana de mas de 35.000 usuarios y otra de device code phishing con mayor automatizacion."
+    },
+    {
+      "title": "Canvas / France Titres",
+      "status": "Hecho confirmado",
+      "urgency": "Alta",
+      "detail": "Persisten repercusiones operativas y de privacidad en educacion y administracion publica por incidentes recientes."
+    }
+  ],
+  "incidents_activity": [
+    {
+      "name": "Campana AiTM 'code of conduct'",
+      "date": "2026-05-04",
+      "confidence": "Hecho confirmado",
+      "summary": "Microsoft observo mas de 35.000 usuarios objetivo en 13.000 organizaciones de 26 paises entre el 14 y el 16 de abril, con robo de tokens en flujo AiTM.",
+      "sectors": [
+        "Sanidad",
+        "Finanzas",
+        "Servicios profesionales",
+        "Tecnologia"
+      ],
+      "techniques": [
+        "Phishing",
+        "CAPTCHA staging",
+        "AiTM",
+        "Token theft"
+      ],
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+    },
+    {
+      "name": "Device code phishing con automatizacion IA",
+      "date": "2026-04-06",
+      "confidence": "Hecho confirmado",
+      "summary": "Microsoft describe abuso del flujo OAuth device code con automatizacion y codigo dinamico para elevar la tasa de compromiso.",
+      "sectors": [
+        "Corporativo",
+        "Productividad cloud",
+        "Identidad"
+      ],
+      "techniques": [
+        "Device code phishing",
+        "OAuth abuse",
+        "Automation"
+      ],
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/"
+    },
+    {
+      "name": "Instructure / Canvas",
+      "date": "2026-05-19",
+      "confidence": "Hecho confirmado",
+      "summary": "INCIBE resume el impacto global del incidente sobre Canvas, con afectacion operativa y riesgo de datos en miles de centros educativos.",
+      "sectors": [
+        "Educacion"
+      ],
+      "techniques": [
+        "Extorsion",
+        "Compromiso de plataforma",
+        "Suplantacion post-incidente"
+      ],
+      "source": "https://www.incibe.es/index.php/en/incibe-cert/publications/cybersecurity-highlights/cybersecurity-incident-instructure-and-its-impact-canvas-platform"
+    },
+    {
+      "name": "France Titres",
+      "date": "2026-05-14",
+      "confidence": "Hecho confirmado",
+      "summary": "INCIBE recoge la confirmacion de una intrusion con potencial exposicion de datos personales en la agencia francesa de identidad digital.",
+      "sectors": [
+        "Administracion publica"
+      ],
+      "techniques": [
+        "Data breach",
+        "Exfiltracion",
+        "Abuso de datos personales"
+      ],
+      "source": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/security-incident-frances-national-digital-identity-agency"
+    }
+  ],
+  "critical_vulnerabilities": [
+    {
+      "cve": "CVE-2026-20182",
+      "product": "Cisco Catalyst SD-WAN Controller / Manager",
+      "cvss": "10.0",
+      "severity": "Critica",
+      "exploitation": "Activa; en CISA KEV",
+      "patch": "Disponible",
+      "priority": "Inmediata",
+      "notes": "Bypass de autenticacion con privilegios administrativos y actividad observada con SSH keys y cambios NETCONF.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182"
+    },
+    {
+      "cve": "CVE-2026-0300",
+      "product": "Palo Alto Networks PAN-OS User-ID Authentication Portal",
+      "cvss": "9.3 (CNA) / 9.8 (NVD v3.1)",
+      "severity": "Critica",
+      "exploitation": "Activa; en CISA KEV",
+      "patch": "Disponible",
+      "priority": "Inmediata",
+      "notes": "RCE preautenticacion en portales expuestos; mitigacion adicional restringiendo acceso solo a zonas de confianza.",
+      "source": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "cve": "CVE-2026-1731",
+      "product": "BeyondTrust Remote Support / Privileged Remote Access",
+      "cvss": "9.9",
+      "severity": "Critica",
+      "exploitation": "Activa en self-hosted expuestos",
+      "patch": "Disponible",
+      "priority": "Inmediata",
+      "notes": "RCE preautenticacion; Unit 42 observo mas de 16.400 instancias potencialmente expuestas.",
+      "source": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-02"
+    },
+    {
+      "cve": "CVE-2026-9082",
+      "product": "Drupal Core sobre PostgreSQL",
+      "cvss": "N/D en fuente oficial consultada",
+      "severity": "Critica / Highly critical",
+      "exploitation": "Indicada por INCIBE",
+      "patch": "Disponible",
+      "priority": "Muy alta",
+      "notes": "SQL injection con riesgo de divulgacion, escalada y posible RCE en algunos escenarios.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizacion-de-seguridad-critica-en-drupal"
+    },
+    {
+      "cve": "CVE-2026-27446",
+      "product": "Apache Artemis / ActiveMQ Artemis; impacto industrial en Siemens",
+      "cvss": "9.8 (NVD v3.1)",
+      "severity": "Critica",
+      "exploitation": "No confirmada en fuentes consultadas",
+      "patch": "Disponible",
+      "priority": "Alta",
+      "notes": "Autenticacion ausente en funcion critica con riesgo de inyeccion y exfiltracion de mensajes.",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-27446"
+    },
+    {
+      "cve": "CVE-2026-0073",
+      "product": "Android adbd / wireless ADB",
+      "cvss": "8.8",
+      "severity": "Alta",
+      "exploitation": "No confirmada en fuentes consultadas",
+      "patch": "Disponible en nivel 2026-05-01",
+      "priority": "Alta",
+      "notes": "Bypass de autenticacion mutua en wireless ADB con posible ejecucion remota proximal como shell.",
+      "source": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    }
+  ],
+  "malware_ransomware": [
+    {
+      "name": "VShell",
+      "status": "Hecho confirmado",
+      "context": "Herramienta observada por Unit 42 tras la explotacion de BeyondTrust CVE-2026-1731.",
+      "targets": [
+        "Acceso remoto",
+        "Infraestructura empresarial"
+      ],
+      "trend": "Persistencia post-explotacion"
+    },
+    {
+      "name": "SparkRAT",
+      "status": "Hecho confirmado",
+      "context": "Uso documentado en actividad post-explotacion vinculada a BeyondTrust.",
+      "targets": [
+        "Windows",
+        "Linux"
+      ],
+      "trend": "Operaciones de acceso remoto y control"
+    },
+    {
+      "name": "ShinyHunters",
+      "status": "Hecho confirmado",
+      "context": "Actor asociado en fuentes reconocidas a incidentes recientes en educacion y filtraciones.",
+      "targets": [
+        "Educacion",
+        "Plataformas digitales"
+      ],
+      "trend": "Extorsion y exposicion de datos"
+    }
+  ],
+  "news": [
+    {
+      "title": "Cisco SD-WAN eleva prioridad de infraestructura expuesta",
+      "date": "2026-05-15",
+      "type": "Vulnerabilidad explotada",
+      "source": "https://www.cyber.gc.ca/en/alerts-advisories/al26-012-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20182"
+    },
+    {
+      "title": "Palo Alto confirma vulnerabilidad critica con explotacion observada",
+      "date": "2026-05-16",
+      "type": "Zero-day / edge security",
+      "source": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "title": "Microsoft documenta phishing AiTM a escala multiorganizacion",
+      "date": "2026-05-04",
+      "type": "Phishing / identidad",
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+    },
+    {
+      "title": "INCIBE alerta sobre actualizacion critica en Drupal",
+      "date": "2026-05-21",
+      "type": "CMS / exposicion web",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizacion-de-seguridad-critica-en-drupal"
+    },
+    {
+      "title": "INCIBE resume el impacto del incidente de Canvas en educacion",
+      "date": "2026-05-19",
+      "type": "Incidente / extorsion",
+      "source": "https://www.incibe.es/index.php/en/incibe-cert/publications/cybersecurity-highlights/cybersecurity-incident-instructure-and-its-impact-canvas-platform"
+    }
+  ],
+  "recommendations": {
+    "critica": [
+      "Parchear o mitigar hoy mismo Cisco SD-WAN, PAN-OS y BeyondTrust expuestos a Internet.",
+      "Revisar indicadores de compromiso, claves SSH no autorizadas, cambios NETCONF y actividad administrativa anomala antes y despues del parcheo.",
+      "Restringir o deshabilitar portales de autenticacion y superficies de gestion publicamente accesibles cuando no sean estrictamente necesarios."
+    ],
+    "alta": [
+      "Aplicar la actualizacion de Drupal en despliegues con PostgreSQL y priorizar validacion sobre activos publicos.",
+      "Reforzar controles anti-phishing resistentes a token theft: MFA resistente a phishing, proteccion de navegacion y revision de OAuth/device code.",
+      "Actualizar Android corporativo a nivel 2026-05-01 o posterior en flotas que usen depuracion o escenarios de cercania de red."
+    ],
+    "media": [
+      "Validar segmentacion, inventario de activos expuestos y reduccion de superficies en proveedores remotos, firewalls y herramientas de acceso.",
+      "Elevar telemetria sobre servicios educativos y ciudadanos por riesgo reputacional y de fraude posterior."
+    ],
+    "baja": [
+      "Revisar comunicacion ejecutiva y procedimientos de crisis para incidentes con impacto en identidad y datos personales."
+    ]
+  },
+  "ai_section": {
+    "label": "Analisis predictivo o estimativo generado por IA",
+    "global_risk_estimate": "Elevado",
+    "next_threats_prediction": [
+      "Aumento de explotacion oportunista contra portales expuestos y herramientas de acceso remoto.",
+      "Mayor uso de robo de token frente a simple robo de credenciales.",
+      "Incremento de ataques de seguimiento tras publicacion de parches en Drupal y appliances perimetrales."
+    ],
+    "most_exposed_sectors": [
+      "Educacion",
+      "Administracion publica",
+      "Servicios gestionados",
+      "Empresas con trabajo remoto"
+    ],
+    "priority_vulnerabilities": [
+      "CVE-2026-20182",
+      "CVE-2026-0300",
+      "CVE-2026-1731",
+      "CVE-2026-9082"
+    ],
+    "attack_increase_probability": "Alta en el corto plazo",
+    "automatic_recommendation": "Combinar parcheo acelerado, hardening de acceso, verificacion de compromiso y controles resistentes a phishing antes de la siguiente ventana de negocio."
+  },
+  "sources": [
+    {
+      "name": "NVD - CVE-2026-20182",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182"
+    },
+    {
+      "name": "Canadian Centre for Cyber Security - AL26-012",
+      "url": "https://www.cyber.gc.ca/en/alerts-advisories/al26-012-critical-vulnerability-affecting-cisco-catalyst-sd-wan-cve-2026-20182"
+    },
+    {
+      "name": "Palo Alto Networks advisory - CVE-2026-0300",
+      "url": "https://security.paloaltonetworks.com/CVE-2026-0300"
+    },
+    {
+      "name": "NVD - CVE-2026-0300",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300"
+    },
+    {
+      "name": "BeyondTrust advisory BT26-02",
+      "url": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-02"
+    },
+    {
+      "name": "Unit 42 - BeyondTrust CVE-2026-1731",
+      "url": "https://unit42.paloaltonetworks.com/beyondtrust-cve-2026-1731/"
+    },
+    {
+      "name": "INCIBE - Drupal critical update",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/actualizacion-de-seguridad-critica-en-drupal"
+    },
+    {
+      "name": "INCIBE - Siemens May 2026 advisories",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/avisos-de-seguridad-de-siemens-de-mayo-de-2026"
+    },
+    {
+      "name": "NVD - CVE-2026-27446",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27446"
+    },
+    {
+      "name": "Android Security Bulletin 2026-05-01",
+      "url": "https://source.android.com/docs/security/bulletin/2026/2026-05-01"
+    },
+    {
+      "name": "NVD - CVE-2026-0073",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0073"
+    },
+    {
+      "name": "Microsoft - code of conduct AiTM campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/04/breaking-the-code-multi-stage-code-of-conduct-phishing-campaign-leads-to-aitm-token-compromise/"
+    },
+    {
+      "name": "Microsoft - AI-enabled device code phishing campaign",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/06/ai-enabled-device-code-phishing-campaign-april-2026/"
+    },
+    {
+      "name": "Microsoft - defense at AI speed",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/"
+    },
+    {
+      "name": "INCIBE - Instructure / Canvas",
+      "url": "https://www.incibe.es/index.php/en/incibe-cert/publications/cybersecurity-highlights/cybersecurity-incident-instructure-and-its-impact-canvas-platform"
+    },
+    {
+      "name": "INCIBE - France Titres",
+      "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/security-incident-frances-national-digital-identity-agency"
+    },
+    {
+      "name": "CISA Known Exploited Vulnerabilities Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ],
+  "delivery": {
+    "github_folder_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/tree/main/informes_ciberseguridad/20260523",
+    "html_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260523/Dashboard_Ciberseguridad_20260523_2019_CEST.html",
+    "json_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_ciberseguridad/20260523/Dashboard_Ciberseguridad_20260523_2019_CEST.json",
+    "pdf_url": null,
+    "status": {
+      "report_generated": "Completado",
+      "github_history": "Pendiente",
+      "gmail_html": "Pendiente",
+      "pdf": "No disponible",
+      "page_images": "No disponibles",
+      "google_drive": "Omitido",
+      "slack_dm": "Pendiente",
+      "limitations": [
+        "No se genera PDF en esta edicion para evitar declarar un artefacto sin persistencia externa verificable.",
+        "No se generan imagenes por pagina en esta edicion."
+      ]
+    }
+  },
+  "legal_notice": "Este informe ha sido generado automaticamente mediante sistemas avanzados de inteligencia artificial y analisis de datos. Tiene finalidad informativa y no sustituye una auditoria, investigacion forense ni asesoramiento profesional especifico."
+}
