@@ -1,0 +1,150 @@
+{
+  "brand": "MMarco Seguridad",
+  "report_name": "Privacy Intelligence RGPD",
+  "date": "2026-05-25",
+  "datetime_local": "2026-05-25 07:07 CEST",
+  "timezone": "Europe/Madrid",
+  "subject": "[MMarco IA][RGPD] Informe diario | 2026-05-25",
+  "risk_level": "ALTO",
+  "delivery_type": "Informe diario de apertura",
+  "executive_summary": {
+    "hechos_confirmados": "La AEPD mantiene actualizado a 22 de mayo de 2026 su cuadro de mando de brechas y habia comunicado 2.765 notificaciones en 2025. El EDPB ha activado supervision coordinada sobre transparencia y ha publicado una plantilla comun de DPIA. El entorno sancionador europeo sigue alto, con 1.145,8 millones de euros en multas en 2025 y casos relevantes como la sancion de 42 millones de euros de la CNIL a FREE/FREE MOBILE.",
+    "interpretacion_analitica": "Para empresas espanolas, la prioridad regulatoria inmediata esta en demostrar seguridad operativa, avisos de privacidad realmente comprensibles, gobierno de proveedores y evidencia documental de decisiones de riesgo, especialmente en IA y tratamientos de alto impacto.",
+    "recomendacion_automatica": "Revisar esta semana el protocolo de brechas de 72 horas, contratos con encargados, avisos de transparencia por capas y la necesidad de DPIA en procesos con IA, scoring, monitorizacion o categorias especiales de datos."
+  },
+  "metrics": [
+    {
+      "label": "Brechas notificadas a AEPD en 2025",
+      "value": "2.765",
+      "note": "80% sector privado"
+    },
+    {
+      "label": "Multas RGPD en Europa durante 2025",
+      "value": "1.145,8 M€",
+      "note": "dato AEPD sobre informe EDPB"
+    },
+    {
+      "label": "Sanciones en Espana en 2025",
+      "value": "326",
+      "note": "48,1 M€ acumulados"
+    },
+    {
+      "label": "Autoridades en accion coordinada EDPB 2026",
+      "value": "25",
+      "note": "foco en transparencia"
+    }
+  ],
+  "main_updates": [
+    {
+      "title": "AEPD: la presion real sigue en brechas, terceros y respuesta diligente",
+      "what_happened": "La AEPD informo el 23 de enero de 2026 que recibio 2.765 notificaciones de brechas durante 2025 y mantiene actualizado desde el 22 de mayo de 2026 su cuadro de mando mensual.",
+      "source": "AEPD - nota de prensa y cuadro de mando de brechas",
+      "source_url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-en-2025-mas-2.700-notificaciones-brechas",
+      "why_it_matters": "La AEPD identifica como eventos mas graves los ransomware y las intrusiones con exfiltracion masiva, especialmente cuando impactan a encargados del tratamiento y plataformas CRM.",
+      "impact_spain": "Las empresas espanolas deben asumir que una brecha en un proveedor puede trasladarles riesgo regulatorio, reputacional y deberes de notificacion a autoridad y afectados.",
+      "recommended_action": "Confirmar MFA en VPN y aplicaciones web, cobertura real de logging y un playbook de 72 horas con responsables, evidencias y criterios para comunicar a afectados."
+    },
+    {
+      "title": "EDPB: 2026 pone el foco en transparencia y en DPIA mas trazables",
+      "what_happened": "El EDPB lanzo el 19 de marzo de 2026 una accion coordinada europea sobre obligaciones de transparencia e informacion y adopto el 14 de abril de 2026 una plantilla comun de DPIA.",
+      "source": "EDPB - CEF 2026 y plantilla DPIA",
+      "source_url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en",
+      "why_it_matters": "La supervision ya no se limita a un aviso legal formal; espera mensajes comprensibles, base juridica clara, trazabilidad del riesgo y evidencia documental consistente entre areas.",
+      "impact_spain": "Organizaciones con captacion digital, RRHH, marketplaces, videovigilancia, analitica o IA quedan especialmente expuestas si sus capas informativas son incompletas o su DPIA es debil.",
+      "recommended_action": "Revisar de inmediato avisos de privacidad por tratamiento y adoptar una plantilla unica de DPIA para proyectos de alto riesgo, incluido uso de IA con datos personales."
+    },
+    {
+      "title": "Entorno sancionador: seguridad, conservacion y notificacion siguen siendo el nucleo",
+      "what_happened": "La AEPD destaco el 20 de mayo de 2026 que Europa cerro 2025 con 1.145.760.374 euros en multas y 326 sanciones en Espana. Como caso de referencia, la CNIL sanciono el 14 de enero de 2026 a FREE MOBILE y FREE con 42 millones de euros por fallos de seguridad, retencion excesiva y comunicacion deficiente a afectados.",
+      "source": "AEPD y CNIL - tendencia sancionadora y caso FREE",
+      "source_url": "https://cnil.fr/en/sanction-free-2026",
+      "why_it_matters": "El mensaje regulatorio es estable: controles basicos insuficientes, datos retenidos de mas y avisos pobres a afectados siguen generando sanciones altas y muy defendibles por el regulador.",
+      "impact_spain": "Telecom, utilities, salud, retail y servicios con grandes bases de clientes deben revisar seguridad, politicas de retencion y comunicacion de brechas con prioridad de comite de direccion.",
+      "recommended_action": "Ejecutar una revision express de articulos 32 y 34 RGPD: hardening, deteccion, VPN, caducidad de datos historicos y textos de comunicacion a afectados."
+    }
+  ],
+  "risk_blocks": [
+    {
+      "title": "Brechas",
+      "detail": "Riesgo alto en ransomware, accesos por credenciales comprometidas, errores de destinatario y filtraciones desde proveedores."
+    },
+    {
+      "title": "Transparencia",
+      "detail": "Avisos extensos pero poco comprensibles, capas incompletas, bases juridicas ambiguas y falta de trazabilidad de finalidades."
+    },
+    {
+      "title": "Proveedores y encargados",
+      "detail": "Exceso de confianza en SaaS, CRM, cloud y soporte externo sin verificaciones tecnicas ni clausulas operativas suficientes."
+    },
+    {
+      "title": "Derechos ARSOPL",
+      "detail": "Riesgo de respuestas tardias, parciales o no defendibles documentalmente, especialmente en supresion, oposicion y acceso."
+    },
+    {
+      "title": "Transferencias internacionales",
+      "detail": "Uso de servicios globales sin mapa de flujos actualizado, SCC revisadas ni evaluaciones de transferencia asociadas."
+    },
+    {
+      "title": "IA con datos personales",
+      "detail": "Necesidad de DPIA, legitimacion clara, minimizacion, control de datos de entrenamiento, sesgos y alfabetizacion interna en IA."
+    }
+  ],
+  "actions": [
+    "Activar una revision de 10 dias del protocolo de brechas, con simulacro de 72 horas y decision tree para AEPD y afectados.",
+    "Normalizar una plantilla unica de DPIA/EIPD y exigirla en IA, RRHH, scoring, videovigilancia avanzada y tratamientos de categorias especiales.",
+    "Revisar avisos de privacidad y formularios para que expliquen finalidades, base juridica, plazos de conservacion y derechos con lenguaje claro.",
+    "Auditar a los principales encargados del tratamiento: MFA, logging, tiempos de deteccion, subencargados, ubicaciones y compromisos de soporte.",
+    "Purgar datos legacy sin base de retencion vigente y documentar la politica efectiva de borrado, bloqueo y minimizacion."
+  ],
+  "opportunity": [
+    "Auditoria RGPD focalizada en brechas, transparencia y evidencia de cumplimiento.",
+    "Revision de clausulas y anexos con proveedores criticos, subencargados y transferencias internacionales.",
+    "EIPD/DPIA para IA generativa, automatizacion interna, analitica avanzada y monitorizacion laboral o comercial.",
+    "Formacion ejecutiva y operativa sobre brechas, ARSOPL, transparencia y uso responsable de IA con datos personales.",
+    "Revision de retencion y purga para bases historicas, CRM y expedientes heredados."
+  ],
+  "ai_watch": "El EDPB y el EDPS recordaron el 21 de enero de 2026 que la simplificacion en la aplicacion de la Ley de IA no debe rebajar garantias, especialmente en sistemas de alto riesgo, uso de categorias especiales de datos, transparencia y alfabetizacion interna en IA.",
+  "sources": [
+    {
+      "label": "AEPD - La AEPD recibio en 2025 mas de 2.700 notificaciones de brechas de datos personales",
+      "date": "2026-01-23",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-en-2025-mas-2.700-notificaciones-brechas"
+    },
+    {
+      "label": "AEPD - Notificaciones de brechas de datos personales a la AEPD",
+      "date": "2026-05-22",
+      "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion/notificaciones-de-brechas-de-datos-personales"
+    },
+    {
+      "label": "AEPD - Tendencia sancionadora en proteccion de datos en Europa",
+      "date": "2026-05-20",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa"
+    },
+    {
+      "label": "EDPB - CEF 2026 sobre transparencia e informacion",
+      "date": "2026-03-19",
+      "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en"
+    },
+    {
+      "label": "EDPB - Plantilla DPIA",
+      "date": "2026-04-14",
+      "url": "https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_en"
+    },
+    {
+      "label": "EDPB y EDPS - salvaguardias en aplicacion de la Ley de IA",
+      "date": "2026-01-21",
+      "url": "https://www.edpb.europa.eu/news/news/2026/edpb-and-edps-support-streamlining-ai-act-implementation-call-stronger-safeguards_es"
+    },
+    {
+      "label": "CNIL - FREE MOBILE y FREE sancionadas con 42 millones de euros",
+      "date": "2026-01-14",
+      "url": "https://cnil.fr/en/sanction-free-2026"
+    },
+    {
+      "label": "Comision Europea - Ten years of the GDPR: your data, your rights",
+      "date": "2026-05-22",
+      "url": "https://commission.europa.eu/news-and-media/news/ten-years-gdpr-your-data-your-rights-2026-05-22_en"
+    }
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias."
+}
