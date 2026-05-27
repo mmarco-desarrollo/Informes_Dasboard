@@ -1,0 +1,597 @@
+%PDF-1.4
+%ASCI ReportLab Generated PDF document http://www.reportlab.com
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 10 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/Contents 12 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 9 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/PageMode /UseNone /Pages 9 0 R /Type /Catalog
+>>
+endobj
+8 0 obj
+<<
+/Author (OpenAI Codex for MMarco Seguridad) /CreationDate (D:20260527051409+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260527051409+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (MMarco Seguridad - Privacy Intelligence RGPD - 2026-05-27) /Trapped /False
+>>
+endobj
+9 0 obj
+<<
+/Count 3 /Kids [ 4 0 R 5 0 R 6 0 R ] /Type /Pages
+>>
+endobj
+10 0 obj
+<<
+/Length 5294
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 48.51969 778.5354 cm
+q
+.34902 .4 .454902 rg
+BT 1 0 0 1 0 3.5 Tm /F1 8.5 Tf 12 TL (MMarco Seguridad) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 745.5354 cm
+q
+.086275 .129412 .168627 rg
+BT 1 0 0 1 0 4 Tm /F2 24 Tf 28 TL (Privacy Intelligence RGPD) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 722.5354 cm
+q
+.34902 .4 .454902 rg
+BT 1 0 0 1 0 4 Tm /F1 11 Tf 15 TL (Informe Ejecutivo de apertura de jornada - 2026-05-27 - 07:07 CEST) Tj T* ET
+Q
+Q
+q
+1 0 0 1 56.69291 622.5354 cm
+q
+.984314 .972549 .94902 rg
+n 0 90 481.8898 -90 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 12 52 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Nivel de riesgo) Tj /F1 9.5 Tf  T* /F2 20 Tf .623529 .184314 .184314 rg (MEDIO) Tj T* ET
+Q
+Q
+q
+1 0 0 1 182.0787 10 cm
+q
+BT 1 0 0 1 0 60.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Radar) Tj /F1 9.5 Tf  T* (788 brechas notificadas en marzo 2026) Tj  T* (512 accesos no autorizados) Tj  T* (30.931 reclamaciones en Espana) Tj  T* (GBP 963.900 multa ICO) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.839216 .796078 .741176 RG
+1 w
+n 0 90 m 481.8898 90 l S
+n 0 0 m 481.8898 0 l S
+n 0 0 m 0 90 l S
+n 481.8898 0 m 481.8898 90 l S
+Q
+Q
+Q
+q
+1 0 0 1 48.51969 614.5354 cm
+Q
+q
+1 0 0 1 48.51969 612.5354 cm
+q
+1 w
+1 J
+.839216 .796078 .741176 RG
+n 0 0 m 498.2362 0 l S
+Q
+Q
+q
+1 0 0 1 48.51969 603.5354 cm
+Q
+q
+1 0 0 1 48.51969 576.5354 cm
+q
+.094118 .290196 .270588 rg
+BT 1 0 0 1 0 4 Tm /F2 15 Tf 19 TL (Resumen ejecutivo) Tj T* ET
+Q
+Q
+q
+1 0 0 1 56.69291 510.5354 cm
+q
+.94902 .905882 .854902 rg
+n 0 58 481.8898 -58 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 10 8 cm
+q
+BT 1 0 0 1 0 32.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Hechos confirmados) Tj /F1 9.5 Tf  T* (La AEPD actualizo el marco operativo de brechas el 30 de abril de 2026 y su informe de marzo recoge 788) Tj T* (notificaciones, con predominio de accesos no autorizados y fuerte peso del sector privado.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.839216 .796078 .741176 RG
+1 w
+n 0 58 m 481.8898 58 l S
+n 0 0 m 481.8898 0 l S
+n 0 0 m 0 58 l S
+n 481.8898 0 m 481.8898 58 l S
+Q
+Q
+Q
+q
+1 0 0 1 48.51969 505.5354 cm
+Q
+q
+1 0 0 1 56.69291 447.5354 cm
+q
+.94902 .905882 .854902 rg
+n 0 58 481.8898 -58 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 10 8 cm
+q
+BT 1 0 0 1 0 32.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Interpretacion analitica) Tj /F1 9.5 Tf  T* (El riesgo regulatorio sigue concentrandose en seguridad, proveedores y trazabilidad de decisiones; ademas,) Tj T* (la AEPD y el Tribunal Supremo estan ampliando el foco al momento previo a la recogida del dato.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.839216 .796078 .741176 RG
+1 w
+n 0 58 m 481.8898 58 l S
+n 0 0 m 481.8898 0 l S
+n 0 0 m 0 58 l S
+n 481.8898 0 m 481.8898 58 l S
+Q
+Q
+Q
+q
+1 0 0 1 48.51969 442.5354 cm
+Q
+q
+1 0 0 1 56.69291 384.5354 cm
+q
+.94902 .905882 .854902 rg
+n 0 58 481.8898 -58 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 10 8 cm
+q
+BT 1 0 0 1 0 32.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Recomendacion automatica) Tj /F1 9.5 Tf  T* (Priorizar hoy una revision rapida de brechas, formularios/capturas de datos, contratos de encargo y uso de IA) Tj T* (con datos personales antes de nuevas campanas o despliegues.) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+.839216 .796078 .741176 RG
+1 w
+n 0 58 m 481.8898 58 l S
+n 0 0 m 481.8898 0 l S
+n 0 0 m 0 58 l S
+n 481.8898 0 m 481.8898 58 l S
+Q
+Q
+Q
+q
+1 0 0 1 48.51969 376.5354 cm
+Q
+q
+1 0 0 1 48.51969 349.5354 cm
+q
+.094118 .290196 .270588 rg
+BT 1 0 0 1 0 4 Tm /F2 15 Tf 19 TL (Novedades principales) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 327.5354 cm
+q
+.145098 .196078 .25098 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (1. Brechas: la AEPD endurece la lectura operativa del articulo 33 RGPD) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 293.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm -0.089339 Tw 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Que ha ocurrido.) Tj /F1 9.5 Tf ( La AEPD actualizo su pagina de notificacion de brechas y el informe de marzo 2026 mostro un salto) Tj T* 0 Tw (a 788 notificaciones; 708 procedian de entidades privadas y 512 de accesos no autorizados.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 273.5354 cm
+q
+BT 1 0 0 1 0 4.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Fuente oficial o verificable.) Tj /F1 9.5 Tf ( AEPD - Notificacion de brechas \(30/04/2026\) y Informe de brechas marzo 2026) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 239.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm -0.011541 Tw 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Por que importa.) Tj /F1 9.5 Tf ( La autoridad insiste en la notificacion en 72 horas, la documentacion incluso cuando no se notifica y) Tj T* 0 Tw (la coordinacion previa con encargados cuando un incidente afecta a varios responsables.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 205.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Impacto para empresas espanolas.) Tj /F1 9.5 Tf ( Aumenta el riesgo de incumplimiento en empresas con MSP, SaaS, contact) Tj T* (center, BPO o desarrollos externos sin protocolo contractual de escalado y reparto de tareas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 171.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Accion recomendada.) Tj /F1 9.5 Tf ( Activar un playbook de brechas con matriz de riesgo, SLA con proveedores y plantillas de) Tj T* (decision para AEPD, interesados y CERT.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 161.5354 cm
+Q
+ 
+endstream
+endobj
+11 0 obj
+<<
+/Length 6924
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 48.51969 776.5354 cm
+q
+.145098 .196078 .25098 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (2. Enforcement: suben las reclamaciones y siguen las multas por falta de seguridad) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 728.5354 cm
+q
+BT 1 0 0 1 0 32.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Que ha ocurrido.) Tj /F1 9.5 Tf ( La AEPD recordo el 20 de mayo que en 2025 las autoridades europeas impusieron 1.145.760.374) Tj T* (EUR en multas; Espana sumo 326 sanciones y 30.931 reclamaciones. El ICO sanciono el 7 de mayo a South) Tj T* (Staffordshire con 963.900 GBP por vulnerar los articulos 5.1.f y 32 tras un ciberincidente.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 694.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Fuente oficial o verificable.) Tj /F1 9.5 Tf ( AEPD - Tendencia sancionadora en Europa \(20/05/2026\) e ICO enforcement) Tj T* (\(07/05/2026\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 660.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Por que importa.) Tj /F1 9.5 Tf ( La presion inspectora se mantiene sobre ciberseguridad, control de acceso, diligencia del) Tj T* (responsable y capacidad de demostrar medidas tecnicas y organizativas.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 612.5354 cm
+q
+BT 1 0 0 1 0 32.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Impacto para empresas espanolas.) Tj /F1 9.5 Tf ( Para empresas espanolas, la ausencia de evidencias de hardening,) Tj T* (segmentacion, MFA, logging y pruebas de respuesta eleva el coste regulatorio incluso cuando el origen del incidente) Tj T* (sea externo.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 578.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Accion recomendada.) Tj /F1 9.5 Tf ( Cruzar hoy el mapa de tratamientos con controles de seguridad, evidencias de backup, MFA,) Tj T* (revisiones de privilegios y simulacros de incidente.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 568.5354 cm
+Q
+q
+1 0 0 1 48.51969 548.5354 cm
+q
+.145098 .196078 .25098 rg
+BT 1 0 0 1 0 4.5 Tm /F1 9.5 Tf 14 TL (3. Gobernanza previa e IA: el cumplimiento empieza antes de recoger el dato) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 500.5354 cm
+q
+BT 1 0 0 1 0 32.5 Tm -0.062739 Tw 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Que ha ocurrido.) Tj /F1 9.5 Tf ( La AEPD difundio el 28 de abril la doctrina del Tribunal Supremo segun la cual existe tratamiento ya) Tj T* 0 Tw (cuando se solicita un dato personal. Ademas, el EDPB aprobo el 16 de abril directrices sobre investigacion cientifica y) Tj T* (un sello Europrivacy util para transferencias.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 480.5354 cm
+q
+BT 1 0 0 1 0 4.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Fuente oficial o verificable.) Tj /F1 9.5 Tf ( AEPD - STS 1590/2026 \(28/04/2026\) y EDPB plenaria \(16/04/2026\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 446.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Por que importa.) Tj /F1 9.5 Tf ( La minimizacion, la base juridica, la informacion al interesado y el reparto responsable/encargado) Tj T* (deben definirse desde el diseno del formulario, dataset, piloto o agente de IA.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 412.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Impacto para empresas espanolas.) Tj /F1 9.5 Tf ( Afecta a RRHH, canales de denuncia, marketing, due diligence, I+D, modelos) Tj T* (de IA y proyectos con transferencias internacionales o reutilizacion de datos.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 378.5354 cm
+q
+BT 1 0 0 1 0 18.5 Tm 14 TL /F2 9.5 Tf .145098 .196078 .25098 rg (Accion recomendada.) Tj /F1 9.5 Tf ( Revisar capturas de datos, prompts, datasets, avisos de privacidad y contratos de encargo) Tj T* (antes de nuevas integraciones o automatizaciones.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 368.5354 cm
+Q
+q
+1 0 0 1 48.51969 341.5354 cm
+q
+.094118 .290196 .270588 rg
+BT 1 0 0 1 0 4 Tm /F2 15 Tf 19 TL (Riesgos para empresas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 49.6063 133.5354 cm
+q
+.094118 .290196 .270588 rg
+n 0 200 496.063 -25 re f*
+.984314 .972549 .94902 rg
+n 0 175 496.063 -25 re f*
+.952941 .921569 .87451 rg
+n 0 150 496.063 -25 re f*
+.984314 .972549 .94902 rg
+n 0 125 496.063 -25 re f*
+.952941 .921569 .87451 rg
+n 0 100 496.063 -25 re f*
+.984314 .972549 .94902 rg
+n 0 75 496.063 -25 re f*
+.952941 .921569 .87451 rg
+n 0 50 496.063 -25 re f*
+.984314 .972549 .94902 rg
+n 0 25 496.063 -25 re f*
+1 1 1 rg
+BT /F2 8.8 Tf 11 TL ET
+BT 1 0 0 1 8 184.2 Tm (Area) Tj T* ET
+BT 1 0 0 1 135.5591 184.2 Tm (Riesgo practico) Tj T* ET
+0 0 0 rg
+BT /F1 8.8 Tf 11 TL ET
+BT 1 0 0 1 8 159.2 Tm (Brechas) Tj T* ET
+BT 1 0 0 1 135.5591 159.2 Tm (Pico de notificaciones, accesos no autorizados y phishing; exigir decision en 72h y registro interno.) Tj T* ET
+BT 1 0 0 1 8 134.2 Tm (Transparencia) Tj T* ET
+BT 1 0 0 1 135.5591 134.2 Tm (Solicitar datos ya activa obligaciones de minimizacion, finalidad e informacion al interesado.) Tj T* ET
+BT 1 0 0 1 8 109.2 Tm (Proveedores) Tj T* ET
+BT 1 0 0 1 135.5591 109.2 Tm (Un solo encargado puede generar incumplimientos en cadena para varios responsables.) Tj T* ET
+BT 1 0 0 1 8 84.2 Tm (Encargados) Tj T* ET
+BT 1 0 0 1 135.5591 84.2 Tm (Hay que fijar por contrato quien detecta, evalua, notifica y comunica a afectados.) Tj T* ET
+BT 1 0 0 1 8 59.2 Tm (Derechos ARSOPL) Tj T* ET
+BT 1 0 0 1 135.5591 59.2 Tm (Las limitaciones a derechos en investigacion o IA deben justificarse y documentarse.) Tj T* ET
+BT 1 0 0 1 8 34.2 Tm (Transferencias) Tj T* ET
+BT 1 0 0 1 135.5591 34.2 Tm (La validacion de mecanismos como Europrivacy refuerza la exigencia de salvaguardas demostrables.) Tj T* ET
+BT 1 0 0 1 8 9.2 Tm (IA con datos personales) Tj T* ET
+BT 1 0 0 1 135.5591 9.2 Tm (Los pilotos con imagen, voz, biometria o scraping deben pasar filtro de base juridica y DPIA.) Tj T* ET
+q
+1 J
+1 j
+.839216 .796078 .741176 RG
+.8 w
+n 0 200 m 496.063 200 l S
+n 0 0 m 496.063 0 l S
+n 0 0 m 0 200 l S
+n 496.063 0 m 496.063 200 l S
+.4 w
+n 0 175 m 496.063 175 l S
+n 0 150 m 496.063 150 l S
+n 0 125 m 496.063 125 l S
+n 0 100 m 496.063 100 l S
+n 0 75 m 496.063 75 l S
+n 0 50 m 496.063 50 l S
+n 0 25 m 496.063 25 l S
+n 127.5591 0 m 127.5591 200 l S
+Q
+Q
+Q
+q
+1 0 0 1 48.51969 125.5354 cm
+Q
+q
+1 0 0 1 48.51969 98.53543 cm
+q
+.094118 .290196 .270588 rg
+BT 1 0 0 1 0 4 Tm /F2 15 Tf 19 TL (Acciones recomendadas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 77.03543 cm
+q
+BT 1 0 0 1 0 4.2 Tm /F1 10 Tf 12 TL .145098 .196078 .25098 rg (1.) Tj ET
+.145098 .196078 .25098 rg
+BT 1 0 0 1 12 4.2 Tm /F1 9.3 Tf 13.5 TL 2.34 0 Td (Revisar hoy el protocolo de brechas, incluyendo escalado con proveedores y ventana de 72 horas.) Tj T* -2.34 0 Td ET
+Q
+Q
+q
+1 0 0 1 48.51969 57.53543 cm
+q
+BT 1 0 0 1 0 4.2 Tm /F1 10 Tf 12 TL .145098 .196078 .25098 rg (2.) Tj ET
+.145098 .196078 .25098 rg
+BT 1 0 0 1 12 4.2 Tm /F1 9.3 Tf 13.5 TL 2.34 0 Td (Inventariar formularios, solicitudes documentales y procesos internos que pidan datos sensibles o excesivos.) Tj T* -2.34 0 Td ET
+Q
+Q
+ 
+endstream
+endobj
+12 0 obj
+<<
+/Length 4049
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 48.51969 777.0354 cm
+q
+BT 1 0 0 1 0 4.2 Tm /F1 10 Tf 12 TL .145098 .196078 .25098 rg (3.) Tj ET
+.145098 .196078 .25098 rg
+BT 1 0 0 1 12 4.2 Tm /F1 9.3 Tf 13.5 TL 2.34 0 Td (Validar contratos de encargo, anexos de seguridad y evidencias de control de acceso con terceros criticos.) Tj T* -2.34 0 Td ET
+Q
+Q
+q
+1 0 0 1 48.51969 757.5354 cm
+q
+BT 1 0 0 1 0 4.2 Tm /F1 10 Tf 12 TL .145098 .196078 .25098 rg (4.) Tj ET
+.145098 .196078 .25098 rg
+BT 1 0 0 1 12 4.2 Tm /F1 9.3 Tf 13.5 TL 2.34 0 Td -0.059955 Tw (Lanzar una mini-DPIA o screening de IA para copilots, agentes, biometria, analitica avanzada y reutilizacion de datos.) Tj T* 0 Tw -2.34 0 Td ET
+Q
+Q
+q
+1 0 0 1 48.51969 724.5354 cm
+q
+BT 1 0 0 1 0 17.7 Tm /F1 10 Tf 12 TL .145098 .196078 .25098 rg (5.) Tj ET
+.145098 .196078 .25098 rg
+BT 1 0 0 1 12 17.7 Tm /F1 9.3 Tf 13.5 TL 2.34 0 Td (Preparar una pildora formativa de 20 minutos para negocio, RRHH y operaciones sobre minimizacion, brechas y uso) Tj T* -2.34 0 Td (de IA.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 716.5354 cm
+Q
+q
+1 0 0 1 48.51969 689.5354 cm
+q
+.094118 .290196 .270588 rg
+BT 1 0 0 1 0 4 Tm /F2 15 Tf 19 TL (Oportunidad para MMarco Seguridad) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 639.5354 cm
+q
+.145098 .196078 .25098 rg
+BT 1 0 0 1 0 32.5 Tm /F1 9.5 Tf 14 TL (Oportunidad comercial clara para MMarco Seguridad en auditoria RGPD express de brechas, revision de clausulas y) Tj T* (anexos de encargado, screening DPIA/EIPD para IA, formacion ejecutiva y revisiones de transferencias) Tj T* (internacionales.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 612.5354 cm
+q
+.094118 .290196 .270588 rg
+BT 1 0 0 1 0 4 Tm /F2 15 Tf 19 TL (Fuentes) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 580.5354 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12 TL /F1 8.5 Tf .34902 .4 .454902 rg (AEPD - Notificacion de brechas de datos personales a la Autoridad de Control - 30/04/2026) Tj  T* (https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 550.5354 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12 TL /F1 8.5 Tf .34902 .4 .454902 rg (AEPD - Informe de notificaciones de brechas de datos personales durante marzo de 2026 - 04/2026) Tj  T* (https://www.aepd.es/documento/informe-brechas-marzo-2026.pdf) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 520.5354 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12 TL /F1 8.5 Tf .34902 .4 .454902 rg (AEPD - Tendencia sancionadora en proteccion de datos en Europa - 20/05/2026) Tj  T* (https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 490.5354 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12 TL /F1 8.5 Tf .34902 .4 .454902 rg (ICO - South Staffordshire Plc and South Staffordshire Water Plc - 07/05/2026) Tj  T* (https://ico.org.uk/action-weve-taken/enforcement/2026/05/south-staffordshire-plc-and-south-staffordshire-water-plc/) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 460.5354 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12 TL /F1 8.5 Tf .34902 .4 .454902 rg (AEPD - En que momento comienza legalmente un tratamiento de datos personales - 28/04/2026) Tj  T* (https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 430.5354 cm
+q
+BT 1 0 0 1 0 15.5 Tm 12 TL /F1 8.5 Tf .34902 .4 .454902 rg (EDPB - Scientific research, anonymisation and Europrivacy seal - 16/04/2026) Tj  T* (https://www.edpb.europa.eu/news/news/2026/edpb-brings-clarity-data-processing-scientific-research-speeds-finalisation_en) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 419.5354 cm
+Q
+q
+1 0 0 1 48.51969 392.5354 cm
+q
+.094118 .290196 .270588 rg
+BT 1 0 0 1 0 4 Tm /F2 15 Tf 19 TL (Aviso legal) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48.51969 360.5354 cm
+q
+.34902 .4 .454902 rg
+BT 1 0 0 1 0 15.5 Tm /F1 8.5 Tf 12 TL (Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria) Tj T* (RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias.) Tj T* ET
+Q
+Q
+ 
+endstream
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000073 00000 n 
+0000000114 00000 n 
+0000000221 00000 n 
+0000000333 00000 n 
+0000000537 00000 n 
+0000000741 00000 n 
+0000000945 00000 n 
+0000001013 00000 n 
+0000001360 00000 n 
+0000001431 00000 n 
+0000006777 00000 n 
+0000013753 00000 n 
+trailer
+<<
+/ID 
+[<68181ca55a9cb3b1a0423967c1010dd1><68181ca55a9cb3b1a0423967c1010dd1>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 8 0 R
+/Root 7 0 R
+/Size 13
+>>
+startxref
+17854
+%%EOF
