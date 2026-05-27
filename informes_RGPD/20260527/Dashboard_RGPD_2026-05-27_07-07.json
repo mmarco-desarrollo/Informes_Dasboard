@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Privacy Intelligence RGPD",
+    "subtitle": "Informe Ejecutivo de apertura de jornada",
+    "brand": "MMarco Seguridad",
+    "date": "2026-05-27",
+    "time": "07:07 CEST",
+    "risk_level": "MEDIO",
+    "generated_at": "2026-05-27 07:07 CEST",
+    "folder": "informes_RGPD/20260527",
+    "repo": "mmarco-desarrollo/Informes_Dasboard",
+    "artifacts": {
+      "html_preview_url": "https://htmlpreview.github.io/?https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260527/Dashboard_RGPD_2026-05-27_07-07.html",
+      "html_blob_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260527/Dashboard_RGPD_2026-05-27_07-07.html",
+      "json_blob_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260527/Dashboard_RGPD_2026-05-27_07-07.json",
+      "pdf_blob_url": "https://github.com/mmarco-desarrollo/Informes_Dasboard/blob/main/informes_RGPD/20260527/Dashboard_RGPD_2026-05-27_07-07.pdf",
+      "html_name": "Dashboard_RGPD_2026-05-27_07-07.html",
+      "json_name": "Dashboard_RGPD_2026-05-27_07-07.json",
+      "pdf_name": "Dashboard_RGPD_2026-05-27_07-07.pdf"
+    }
+  },
+  "executive_summary": {
+    "hechos_confirmados": "La AEPD actualizo el marco operativo de brechas el 30 de abril de 2026 y su informe de marzo recoge 788 notificaciones, con predominio de accesos no autorizados y fuerte peso del sector privado.",
+    "interpretacion_analitica": "El riesgo regulatorio sigue concentrandose en seguridad, proveedores y trazabilidad de decisiones; ademas, la AEPD y el Tribunal Supremo estan ampliando el foco al momento previo a la recogida del dato.",
+    "recomendacion_automatica": "Priorizar hoy una revision rapida de brechas, formularios/capturas de datos, contratos de encargo y uso de IA con datos personales antes de nuevas campanas o despliegues."
+  },
+  "highlights": [
+    {
+      "title": "Brechas: la AEPD endurece la lectura operativa del articulo 33 RGPD",
+      "what_happened": "La AEPD actualizo su pagina de notificacion de brechas y el informe de marzo 2026 mostro un salto a 788 notificaciones; 708 procedian de entidades privadas y 512 de accesos no autorizados.",
+      "source": "AEPD - Notificacion de brechas (30/04/2026) y Informe de brechas marzo 2026",
+      "why_it_matters": "La autoridad insiste en la notificacion en 72 horas, la documentacion incluso cuando no se notifica y la coordinacion previa con encargados cuando un incidente afecta a varios responsables.",
+      "impact_spain": "Aumenta el riesgo de incumplimiento en empresas con MSP, SaaS, contact center, BPO o desarrollos externos sin protocolo contractual de escalado y reparto de tareas.",
+      "recommended_action": "Activar un playbook de brechas con matriz de riesgo, SLA con proveedores y plantillas de decision para AEPD, interesados y CERT."
+    },
+    {
+      "title": "Enforcement: suben las reclamaciones y siguen las multas por falta de seguridad",
+      "what_happened": "La AEPD recordo el 20 de mayo que en 2025 las autoridades europeas impusieron 1.145.760.374 EUR en multas; Espana sumo 326 sanciones y 30.931 reclamaciones. El ICO sanciono el 7 de mayo a South Staffordshire con 963.900 GBP por vulnerar los articulos 5.1.f y 32 tras un ciberincidente.",
+      "source": "AEPD - Tendencia sancionadora en Europa (20/05/2026) e ICO enforcement (07/05/2026)",
+      "why_it_matters": "La presion inspectora se mantiene sobre ciberseguridad, control de acceso, diligencia del responsable y capacidad de demostrar medidas tecnicas y organizativas.",
+      "impact_spain": "Para empresas espanolas, la ausencia de evidencias de hardening, segmentacion, MFA, logging y pruebas de respuesta eleva el coste regulatorio incluso cuando el origen del incidente sea externo.",
+      "recommended_action": "Cruzar hoy el mapa de tratamientos con controles de seguridad, evidencias de backup, MFA, revisiones de privilegios y simulacros de incidente."
+    },
+    {
+      "title": "Gobernanza previa e IA: el cumplimiento empieza antes de recoger el dato",
+      "what_happened": "La AEPD difundio el 28 de abril la doctrina del Tribunal Supremo segun la cual existe tratamiento ya cuando se solicita un dato personal. Ademas, el EDPB aprobo el 16 de abril directrices sobre investigacion cientifica y un sello Europrivacy util para transferencias.",
+      "source": "AEPD - STS 1590/2026 (28/04/2026) y EDPB plenaria (16/04/2026)",
+      "why_it_matters": "La minimizacion, la base juridica, la informacion al interesado y el reparto responsable/encargado deben definirse desde el diseno del formulario, dataset, piloto o agente de IA.",
+      "impact_spain": "Afecta a RRHH, canales de denuncia, marketing, due diligence, I+D, modelos de IA y proyectos con transferencias internacionales o reutilizacion de datos.",
+      "recommended_action": "Revisar capturas de datos, prompts, datasets, avisos de privacidad y contratos de encargo antes de nuevas integraciones o automatizaciones."
+    }
+  ],
+  "risk_blocks": [
+    [
+      "Brechas",
+      "Pico de notificaciones, accesos no autorizados y phishing; exigir decision en 72h y registro interno."
+    ],
+    [
+      "Transparencia",
+      "Solicitar datos ya activa obligaciones de minimizacion, finalidad e informacion al interesado."
+    ],
+    [
+      "Proveedores",
+      "Un solo encargado puede generar incumplimientos en cadena para varios responsables."
+    ],
+    [
+      "Encargados",
+      "Hay que fijar por contrato quien detecta, evalua, notifica y comunica a afectados."
+    ],
+    [
+      "Derechos ARSOPL",
+      "Las limitaciones a derechos en investigacion o IA deben justificarse y documentarse."
+    ],
+    [
+      "Transferencias",
+      "La validacion de mecanismos como Europrivacy refuerza la exigencia de salvaguardas demostrables."
+    ],
+    [
+      "IA con datos personales",
+      "Los pilotos con imagen, voz, biometria o scraping deben pasar filtro de base juridica y DPIA."
+    ]
+  ],
+  "actions": [
+    "Revisar hoy el protocolo de brechas, incluyendo escalado con proveedores y ventana de 72 horas.",
+    "Inventariar formularios, solicitudes documentales y procesos internos que pidan datos sensibles o excesivos.",
+    "Validar contratos de encargo, anexos de seguridad y evidencias de control de acceso con terceros criticos.",
+    "Lanzar una mini-DPIA o screening de IA para copilots, agentes, biometria, analitica avanzada y reutilizacion de datos.",
+    "Preparar una pildora formativa de 20 minutos para negocio, RRHH y operaciones sobre minimizacion, brechas y uso de IA."
+  ],
+  "opportunity": "Oportunidad comercial clara para MMarco Seguridad en auditoria RGPD express de brechas, revision de clausulas y anexos de encargado, screening DPIA/EIPD para IA, formacion ejecutiva y revisiones de transferencias internacionales.",
+  "sources": [
+    {
+      "label": "AEPD - Notificacion de brechas de datos personales a la Autoridad de Control",
+      "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion",
+      "date": "30/04/2026"
+    },
+    {
+      "label": "AEPD - Informe de notificaciones de brechas de datos personales durante marzo de 2026",
+      "url": "https://www.aepd.es/documento/informe-brechas-marzo-2026.pdf",
+      "date": "04/2026"
+    },
+    {
+      "label": "AEPD - Tendencia sancionadora en proteccion de datos en Europa",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa",
+      "date": "20/05/2026"
+    },
+    {
+      "label": "ICO - South Staffordshire Plc and South Staffordshire Water Plc",
+      "url": "https://ico.org.uk/action-weve-taken/enforcement/2026/05/south-staffordshire-plc-and-south-staffordshire-water-plc/",
+      "date": "07/05/2026"
+    },
+    {
+      "label": "AEPD - En que momento comienza legalmente un tratamiento de datos personales",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales",
+      "date": "28/04/2026"
+    },
+    {
+      "label": "EDPB - Scientific research, anonymisation and Europrivacy seal",
+      "url": "https://www.edpb.europa.eu/news/news/2026/edpb-brings-clarity-data-processing-scientific-research-speeds-finalisation_en",
+      "date": "16/04/2026"
+    }
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias."
+}
