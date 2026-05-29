@@ -1,0 +1,68 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 2812 >>
+stream
+q
+0.07 0.13 0.20 rg 0 690 595 152 re f
+1 1 1 rg /F2 28 Tf 42 780 Td (MMarco Seguridad) Tj 0 -34 Td (Privacy Intelligence RGPD) Tj
+0.98 0.95 0.78 rg 440 770 92 34 re f
+0.57 0.25 0.05 rg /F2 18 Tf 458 780 Td (MEDIO) Tj
+0.86 0.92 0.98 rg /F1 10 Tf 42 720 Td (Informe ejecutivo de apertura - 2026-05-29 - 07:07 CEST - Europe/Madrid) Tj
+Q
+0.07 0.13 0.20 rg 42 610 511 58 re f
+1 1 1 rg /F2 11 Tf 56 650 Td (Resumen ejecutivo) Tj
+/F1 9 Tf 56 634 Td (Hechos confirmados: AEPD publica mas de 1.500 informes juridicos; CNIL sanciona a IQVIA con 5 millones; la UE prepara transparencia de IA.) Tj
+56 620 Td (Interpretacion: foco regulatorio en transparencia, seguridad, pseudonimizacion, proveedores, brechas e IA con datos personales.) Tj
+0 0 0 rg /F2 16 Tf 42 580 Td (Novedades principales) Tj
+/F2 11 Tf 42 556 Td (1. AEPD abre mas de 1.500 informes juridicos reutilizables) Tj
+/F1 9 Tf 42 542 Td (Impacto: usar criterios oficiales en auditorias, EIPD, politicas internas y formacion DPO.) Tj
+/F2 11 Tf 42 518 Td (2. CNIL sanciona a IQVIA con 5 millones por datos de salud) Tj
+/F1 9 Tf 42 504 Td (Impacto: revisar pseudonimizacion, informacion indirecta, oposicion, MFA, logs y privacidad desde el diseno.) Tj
+/F2 11 Tf 42 480 Td (3. Transparencia RGPD e IA en fase operativa) Tj
+/F1 9 Tf 42 466 Td (Impacto: inventariar IA, preparar avisos y evidencias para chatbots, contenidos sinteticos, biometria y scoring.) Tj
+/F2 16 Tf 42 430 Td (Riesgos prioritarios) Tj
+/F1 9 Tf 42 408 Td (- Brechas: matriz de 72 horas, evidencias, afectados y coordinacion con proveedor IT.) Tj
+42 394 Td (- Transparencia: revisar capas informativas, politicas web, formularios, contratos y tratamientos indirectos.) Tj
+42 380 Td (- Proveedores: DPAs, subencargados, transferencias, auditoria, MFA, logging y SLA de seguridad.) Tj
+42 366 Td (- Derechos ARSOPL: medir plazos, canales, evidencias y respuesta efectiva.) Tj
+42 352 Td (- IA: inventario, DPIA/EIPD, base juridica, minimizacion y controles de salida.) Tj
+/F2 16 Tf 42 316 Td (Acciones recomendadas) Tj
+/F1 9 Tf 42 294 Td (1. Actualizar clausulas informativas prioritarias en 10 dias.) Tj
+42 280 Td (2. Revisar tratamientos pseudonimizados y documentar riesgo de reidentificacion.) Tj
+42 266 Td (3. Ejecutar simulacro de brecha y plan de respuesta.) Tj
+42 252 Td (4. Inventariar sistemas de IA y preparar avisos de transparencia.) Tj
+42 238 Td (5. Cruzar proveedores criticos con contratos, subencargados, ubicacion de datos y auditoria.) Tj
+/F2 16 Tf 42 202 Td (Fuentes verificables) Tj
+/F1 8 Tf 42 184 Td (AEPD 2026-05-28; CNIL 2026-05-28; Comision Europea 2026-05-08; EDPB CEF 2026; AEPD brechas; ICO 2026-05-07.) Tj
+/F1 8 Tf 42 92 Td (Informe generado automaticamente con apoyo de IA. Finalidad informativa. No constituye asesoramiento juridico ni dictamen legal profesional.) Tj
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Root 1 0 R /Size 7 >>
+startxref
+3260
+%%EOF
