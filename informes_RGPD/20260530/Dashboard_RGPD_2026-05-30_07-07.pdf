@@ -1,0 +1,98 @@
+%PDF-1.4
+%ASCI
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1886 >>
+stream
+q
+0.06 0.09 0.16 rg
+0 742 595 100 re f
+Q
+q
+0.11 0.22 0.43 rg
+0 702 595 40 re f
+Q
+BT
+/F2 20 Tf
+1 1 1 rg
+50 800 Td
+(MMarco Seguridad - Privacy Intelligence RGPD) Tj
+0 -26 Td
+/F1 13 Tf
+(Informe Ejecutivo RGPD de apertura - 2026-05-30 07:07 CEST) Tj
+0 -30 Td
+/F2 16 Tf
+1 0.78 0.28 rg
+(Nivel de riesgo: MEDIO) Tj
+0 -38 Td
+0.08 0.13 0.22 rg
+/F1 9.5 Tf
+(Hechos confirmados: AEPD publica mas de 1.500 informes juridicos; AEPD actualiza brechas;) Tj
+0 -15 Td
+(ICO sanciona incidente con datos exfiltrados; UE refuerza RGPD, IA y derechos.) Tj
+0 -18 Td
+(Interpretacion: el riesgo empresarial se concentra en gobierno documental, seguridad,) Tj
+0 -15 Td
+(proveedores, transparencia y uso de IA con datos personales.) Tj
+0 -18 Td
+(Recomendacion: priorizar inventario de tratamientos, protocolo de brechas, contratos de) Tj
+0 -15 Td
+(encargo, clausulas de transparencia y registro de usos de IA.) Tj
+0 -18 Td
+(Novedad 1: AEPD abre informes juridicos y datos abiertos. Accion: crear matriz interna de) Tj
+0 -15 Td
+(criterios AEPD.) Tj
+0 -18 Td
+(Novedad 2: Brechas e ICO South Staffordshire Water. Accion: simulacro de brecha y revision) Tj
+0 -15 Td
+(de controles de seguridad/proveedores.) Tj
+0 -18 Td
+(Novedad 3: RGPD, IA y DPO en la agenda UE. Accion: registro de casos de uso de IA con) Tj
+0 -15 Td
+(finalidad, datos, proveedor, base juridica y supervision.) Tj
+0 -18 Td
+(Riesgos: brechas, transparencia, proveedores, encargados, derechos ARSOPL, transferencias) Tj
+0 -15 Td
+(internacionales e IA.) Tj
+0 -18 Td
+(Acciones: inventario RGPD; simulacro de brecha; revision de contratos; actualizacion de) Tj
+0 -15 Td
+(clausulas; repositorio de criterios oficiales.) Tj
+0 -18 Td
+(Fuentes: AEPD, ICO, INCIBE, Comision Europea, EDPS, CNIL.) Tj
+0 -18 Td
+(Aviso legal: finalidad informativa; no constituye asesoramiento juridico, auditoria RGPD ni) Tj
+0 -15 Td
+(dictamen legal profesional.) Tj
+0 -18 Td
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000327 00000 n 
+0000000402 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2339
+%%EOF
