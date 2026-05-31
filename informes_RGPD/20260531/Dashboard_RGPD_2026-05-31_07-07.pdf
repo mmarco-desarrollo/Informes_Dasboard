@@ -1,0 +1,83 @@
+%PDF-1.4
+%MMarco RGPD
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1718 >>
+stream
+BT
+/F1 16 Tf
+50 790 Td
+(MMarco Seguridad - Privacy Intelligence RGPD) Tj
+0 -24 Td
+/F1 20 Tf
+(Informe Ejecutivo RGPD de apertura de jornada) Tj
+/F1 10 Tf
+0 -16 Td
+(Fecha: 2026-05-31 07:07 CEST | Riesgo: MEDIO) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(Resumen ejecutivo:) Tj
+0 -16 Td
+(- Hechos confirmados: AEPD publica 1.500+ informes juridicos; AEPD eleva al EDPB riesgos de IA conversacional; CNIL/) Tj
+0 -16 Td
+(- Interpretacion: aumenta el foco en responsabilidad proactiva verificable, proveedores, IA, minimizacion y respuest) Tj
+0 -16 Td
+(- Recomendacion: revisar IA corporativa, encargados criticos y MFA antes de nuevos tratamientos.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(Novedades principales:) Tj
+0 -16 Td
+(1. AEPD: mas de 1.500 informes juridicos y datos abiertos para reforzar seguridad juridica.) Tj
+0 -16 Td
+(2. AEPD/EDPB: evaluacion de riesgos por posibles accesos de terceros a conversaciones con IA.) Tj
+0 -16 Td
+(3. CNIL/ICO/AEPD: sanciones y brechas muestran riesgo en salud, proveedores, CRM y deteccion tardia.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(Acciones prioritarias:) Tj
+0 -16 Td
+(1. Inventariar herramientas de IA y bloquear datos personales no autorizados.) Tj
+0 -16 Td
+(2. Revisar contratos de encargados criticos y subencargados.) Tj
+0 -16 Td
+(3. Comprobar MFA real en VPN, correo, CRM, cloud y cuentas administradoras.) Tj
+0 -16 Td
+(4. Actualizar protocolo de brechas: deteccion, evaluacion, AEPD 72h y comunicacion a afectados.) Tj
+0 -16 Td
+(5. Contrastar tratamientos de alto riesgo con informes juridicos AEPD.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(Fuentes: AEPD, EDPB, EDPS, CNIL, ICO.) Tj
+0 -16 Td
+(Aviso legal: Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesorami) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000022 00000 n 
+0000000071 00000 n 
+0000000128 00000 n 
+0000000254 00000 n 
+0000000324 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2094
+%%EOF
