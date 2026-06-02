@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "brand": "MMarco Seguridad",
+    "unit": "Privacy Intelligence RGPD",
+    "date": "2026-06-02",
+    "generated_at": "2026-06-02 07:07 CEST",
+    "risk_level": "MEDIO",
+    "subject": "[MMarco IA][RGPD] Informe diario | 2026-06-02",
+    "version": "Dashboard_RGPD_2026-06-02_07-07"
+  },
+  "executive_summary": {
+    "confirmed_facts": "AEPD publicó nuevos recursos jurídicos; CNIL e ICO mantienen actividad sancionadora relevante; AEPD mantiene actualizado el cuadro de brechas conforme al art. 33 RGPD.",
+    "analysis": "La prioridad empresarial vuelve a estar en evidencias de cumplimiento, seguridad demostrable, datos sensibles, seudonimización y proveedores.",
+    "recommendation": "Activar una revisión de 5 puntos: brechas, EIPD, contratos de encargo, transparencia y uso de IA con datos personales."
+  },
+  "main_updates": [
+    {
+      "title": "AEPD: más de 1.500 informes jurídicos reutilizables",
+      "source": "AEPD, 28/05/2026",
+      "impact": "Mayor seguridad jurídica para responsables, encargados, DPO y profesionales.",
+      "action": "Actualizar matriz de criterios RGPD internos y enlazar decisiones recurrentes con informes AEPD aplicables."
+    },
+    {
+      "title": "CNIL sanciona a IQVIA con 5 millones por almacenes de datos de salud",
+      "source": "CNIL, 28/05/2026",
+      "impact": "Los datos seudonimizados pueden seguir siendo personales si hay posibilidad razonable de reidentificación.",
+      "action": "Revisar EIPD, bases jurídicas, controles de seudonimización y pruebas de reidentificación."
+    },
+    {
+      "title": "ICO multa a South Staffordshire por brecha y fallos de seguridad",
+      "source": "ICO, 07/05/2026",
+      "impact": "Foco sancionador en controles preventivos, detección temprana e integridad/confidencialidad.",
+      "action": "Ejecutar simulacro de brecha y revisar MFA, registros, backups, detección y encargados."
+    }
+  ],
+  "business_risks": [
+    "Brechas: riesgo medio-alto por controles preventivos insuficientes.",
+    "Transparencia: riesgo medio en usos secundarios, perfiles, IA o datos seudonimizados.",
+    "Proveedores: riesgo medio por contratos de encargo desactualizados.",
+    "Derechos ARSOPL: riesgo medio por falta de trazabilidad de plazos y respuestas.",
+    "Transferencias internacionales: riesgo medio si no se documentan SCC, TIA y salvaguardas.",
+    "IA y datos personales: riesgo medio-alto sin EIPD ni minimización demostrable."
+  ],
+  "recommended_actions": [
+    "Revisar procedimiento de brechas y capacidad de notificación AEPD en 72 horas.",
+    "Mapear tratamientos con datos sensibles o seudonimizados y comprobar EIPD.",
+    "Actualizar cláusulas con proveedores y encargados.",
+    "Documentar criterios jurídicos AEPD aplicables a decisiones recurrentes.",
+    "Revisar casos de IA con datos personales: base jurídica, minimización, transparencia y control humano."
+  ],
+  "mmarco_opportunity": [
+    "Auditoría RGPD focalizada.",
+    "Revisión de cláusulas y proveedores.",
+    "DPIA/EIPD para datos sensibles, IA, biometría, salud o analítica avanzada.",
+    "Formación ejecutiva.",
+    "Consultoría de IA y datos personales."
+  ],
+  "sources": [
+    "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-mas-de-1500-informes-juridicos",
+    "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion/notificaciones-de-brechas-de-datos-personales",
+    "https://www.cnil.fr/fr/donnees-sante-sanction-5-millions-iqvia",
+    "https://ico.org.uk/action-weve-taken/enforcement/2026/05/south-staffordshire-plc-and-south-staffordshire-water-plc/",
+    "https://www.edpb.europa.eu/news/news/2026/edpb-brings-clarity-data-processing-scientific-research-speeds-finalisation_en",
+    "https://commission.europa.eu/news-and-media/news/ten-years-gdpr-your-data-your-rights-2026-05-22_en",
+    "https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa"
+  ],
+  "legal_notice": "Informe generado automáticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento jurídico, auditoría RGPD ni dictamen legal profesional. Requiere validación profesional antes de tomar decisiones jurídicas o regulatorias.",
+  "quality_control": {
+    "daily_0700_check": "Ejecución programada 07:07 CEST Europe/Madrid; se genera un solo informe diario en esta ejecución.",
+    "official_sources_verified": true,
+    "no_internal_logs_in_client_outputs": true,
+    "pdf_generated": true,
+    "email_pdf_attachment_required": true
+  }
+}
