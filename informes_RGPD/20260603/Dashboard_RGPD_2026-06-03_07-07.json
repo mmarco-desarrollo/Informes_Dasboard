@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "organization": "MMarco Seguridad",
+    "product": "Privacy Intelligence RGPD",
+    "date": "2026-06-03",
+    "time": "07:07 CEST",
+    "timezone": "Europe/Madrid",
+    "risk_level": "MEDIO",
+    "subject": "[MMarco IA][RGPD] Informe diario | 2026-06-03",
+    "repository": "mmarco-desarrollo/Informes_Dasboard",
+    "directory": "informes_RGPD/20260603"
+  },
+  "executive_summary": {
+    "confirmed_facts": "No se identifica hoy una novedad oficial espanola que exija alerta extraordinaria; si hay novedades recientes verificadas sobre IA, transparencia, sanciones y brechas.",
+    "analysis": "El patron regulatorio se desplaza hacia controles demostrables: transparencia real, proveedores de IA, datos sensibles, seguridad y capacidad de respuesta.",
+    "automatic_recommendation": "Priorizar una revision de IA y proveedores esta semana, seguida de clausulas informativas y simulacro de brecha."
+  },
+  "main_news": [
+    {
+      "headline": "IA conversacional: posible exposicion de conversaciones a terceros",
+      "category": "IA y proteccion de datos",
+      "risk": "ALTO",
+      "what": "La AEPD ha elevado al EDPB un estudio preliminar sobre rastreadores y enlaces permanentes en sistemas de IA.",
+      "impact_spain": "Empresas espanolas que usen asistentes de IA con datos de clientes, empleados o incidencias deben revisar si comparten datos personales o enlaces persistentes con terceros no previstos.",
+      "recommended_action": "Inventariar IA, bloquear datos personales en prompts no validados, revisar DPA/condiciones y formar a equipos.",
+      "source": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-promueve-ante-las-autoridades-europeas-proteccion-estudie-ia"
+    },
+    {
+      "headline": "Transparencia RGPD: foco europeo de supervision coordinada en 2026",
+      "category": "Obligaciones informativas",
+      "risk": "MEDIO",
+      "what": "El EDPB mantiene el CEF 2026 centrado en articulos 12, 13 y 14 RGPD.",
+      "impact_spain": "Riesgo practico en webs, apps, RR. HH., CRM, marketing, videovigilancia, cloud e IA si las clausulas no reflejan el tratamiento real.",
+      "recommended_action": "Actualizar registro de actividades, mapa de datos y capas informativas.",
+      "source": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_sl"
+    },
+    {
+      "headline": "Datos sensibles y seguridad: sanciones recientes refuerzan el liston de diligencia",
+      "category": "Sanciones y brechas",
+      "risk": "ALTO",
+      "what": "CNIL sanciona con 5 M EUR a IQVIA por datos de salud; ICO multa con 963.900 GBP tras una brecha de seguridad.",
+      "impact_spain": "Empresas con datos sensibles, perfiles o encargados criticos deben reforzar DPIA/EIPD, seguridad, derechos y respuesta a incidentes.",
+      "recommended_action": "Revisar EIPD, medidas de seguridad, deteccion, escalado de brechas y decisiones sobre anonimato/seudonimato.",
+      "sources": ["https://www.cnil.fr/fr/donnees-sante-sanction-5-millions-iqvia", "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/"]
+    }
+  ],
+  "recommended_actions": [
+    "Lista autorizada de IA y prohibicion de datos personales en prompts no validados.",
+    "Actualizar clausulas informativas y registro de actividades.",
+    "Revision de encargados, subencargados, transferencias y seguridad.",
+    "Simulacro de brecha RGPD con evidencias.",
+    "Revisar EIPD/DPIA para IA, datos sensibles, scoring o biometria."
+  ],
+  "sources": [
+    "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-promueve-ante-las-autoridades-europeas-proteccion-estudie-ia",
+    "https://www.aepd.es/la-agencia/datos-abiertos",
+    "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_sl",
+    "https://www.cnil.fr/fr/donnees-sante-sanction-5-millions-iqvia",
+    "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/",
+    "https://commission.europa.eu/news-and-media/news/ten-years-gdpr-your-data-your-rights-2026-05-22_en",
+    "https://www.edps.europa.eu/press-publications/press-news/press-releases_en"
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias."
+}
