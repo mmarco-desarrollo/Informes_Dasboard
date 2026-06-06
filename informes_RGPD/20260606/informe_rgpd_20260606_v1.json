@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "Informe Ejecutivo RGPD de apertura de jornada",
+    "organization": "MMarco Seguridad",
+    "unit": "Privacy Intelligence RGPD",
+    "date": "2026-06-06",
+    "generatedAt": "2026-06-06 07:07 CEST",
+    "version": "v1",
+    "riskLevel": "MEDIO",
+    "audience": "clientes, suscriptores y uso profesional interno"
+  },
+  "executiveSummary": {
+    "confirmedFacts": "No se ha identificado una sancion critica española de ultima hora en las fuentes verificadas. Si hay novedades oficiales recientes sobre EIPD, transparencia RGPD, IA, brechas y soberania/cloud europea.",
+    "analyticalInterpretation": "El foco regulatorio se desplaza hacia evidencias de cumplimiento: informacion clara al interesado, EIPD documentada, gobierno de IA y control de proveedores tecnologicos.",
+    "automaticRecommendation": "Priorizar una revision express de clausulas informativas, inventario de IA/proveedores y plan de respuesta a brechas antes de nuevas implantaciones de IA o cloud."
+  },
+  "mainNews": [
+    {
+      "title": "El EDPB impulsa una plantilla comun de EIPD/DPIA",
+      "whatHappened": "El EDPB adopto una plantilla de evaluacion de impacto para estructurar y evidenciar tratamientos de alto riesgo, sometida a consulta publica hasta el 9 de junio de 2026.",
+      "source": "EDPB, 14/04/2026",
+      "whyItMatters": "Aunque no es obligatoria, anticipa un estandar europeo de documentacion que puede convertirse en referencia practica para auditorias y supervisiones.",
+      "spanishBusinessImpact": "Empresas españolas con biometria, scoring, IA, vigilancia, salud, menores o tratamientos intensivos deberian alinear sus EIPD con campos trazables y evidencia de mitigacion.",
+      "recommendedAction": "Comparar las EIPD existentes con la plantilla EDPB y cerrar huecos en necesidad, proporcionalidad, riesgos residuales, medidas y aprobaciones."
+    },
+    {
+      "title": "Transparencia e informacion al interesado bajo escrutinio europeo",
+      "whatHappened": "El CEF 2026 del EDPB centra la accion coordinada anual en obligaciones de transparencia e informacion bajo los articulos 12, 13 y 14 RGPD.",
+      "source": "EDPB, 19/03/2026",
+      "whyItMatters": "Las politicas de privacidad genericas, incompletas o incoherentes con tratamientos reales elevan el riesgo de requerimientos, reclamaciones y sanciones.",
+      "spanishBusinessImpact": "Los textos de privacidad deben casar con CRM, analitica, marketing, IA, proveedores, transferencias y plazos reales de conservacion.",
+      "recommendedAction": "Auditar avisos de privacidad, capas informativas, formularios y comunicaciones de captacion para asegurar claridad, granularidad y trazabilidad."
+    },
+    {
+      "title": "IA, cloud y ciberamenazas: mas presion sobre proveedores y seguridad",
+      "whatHappened": "La Comision Europea presento el paquete de soberania tecnologica el 3 de junio de 2026, mientras ICO y CNIL han publicado orientaciones practicas sobre IA, seguridad, minimizacion, responsabilidades y derechos.",
+      "source": "Comision Europea, ICO, CNIL",
+      "whyItMatters": "La adopcion de IA y cloud exige revisar bases juridicas, roles responsable/encargado, transferencias, seguridad, supervision humana y riesgos de reidentificacion.",
+      "spanishBusinessImpact": "La compra de herramientas de IA sin inventario, EIPD ni clausulas de encargado puede crear incumplimientos por transparencia, legitimacion y transferencias.",
+      "recommendedAction": "Crear registro de usos de IA con datos personales, clasificar proveedores criticos y exigir anexos de proteccion de datos, seguridad, subencargados y ubicacion de datos."
+    }
+  ],
+  "riskAreas": [
+    [
+      "Brechas",
+      "Mantener circuito de deteccion, evaluacion de riesgo y notificacion en 72 horas; probar evidencias y comunicaciones a afectados."
+    ],
+    [
+      "Transparencia",
+      "Actualizar informacion de privacidad para que refleje tratamientos reales, especialmente IA, marketing, analitica, CRM y cesiones."
+    ],
+    [
+      "Proveedores",
+      "Revisar contratos, subencargados, ubicacion de datos, medidas tecnicas, auditoria y salida segura del servicio."
+    ],
+    [
+      "Encargados",
+      "Exigir instrucciones documentadas, confidencialidad, asistencia en derechos, brechas, supresion/devolucion y controles periodicos."
+    ],
+    [
+      "Derechos ARSOPL",
+      "Verificar plazos, identidad, trazabilidad, excepciones y respuestas consistentes para acceso, rectificacion, supresion, oposicion, portabilidad y limitacion."
+    ],
+    [
+      "Transferencias internacionales",
+      "Comprobar base de transferencia, SCC, evaluacion de impacto, medidas suplementarias y cadena de subproveedores."
+    ],
+    [
+      "IA con datos personales",
+      "Documentar finalidad, base juridica, minimizacion, explicabilidad suficiente, supervision humana, pruebas de sesgo y EIPD si hay alto riesgo."
+    ]
+  ],
+  "actions": [
+    "Revisar en 7 dias las clausulas informativas de los tratamientos con captacion digital, CRM, marketing e IA.",
+    "Actualizar matriz de proveedores criticos: encargado/subencargado, paises, medidas, brechas y derecho de auditoria.",
+    "Reevaluar EIPD de tratamientos de alto riesgo usando la plantilla EDPB como lista de control.",
+    "Ejecutar simulacro breve de brecha: deteccion, triage, notificacion AEPD, comunicacion a afectados y evidencias.",
+    "Crear inventario de usos de IA con datos personales y bloquear usos no aprobados con datos sensibles, menores o empleados."
+  ],
+  "opportunity": "Oportunidad alta para auditoria RGPD, revision de clausulas y proveedores, EIPD/DPIA, formacion ejecutiva, revision de brechas y consultoria de IA con datos personales.",
+  "legalNotice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias.",
+  "sources": [
+    {
+      "name": "AEPD - Directrices EDPB sobre investigacion cientifica",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/comite-europeo-somete-a-consulta-publica-sus-directrices-sobre-tratamiento-con-fines-investigacion-cientifica",
+      "date": "2026-04-17",
+      "type": "oficial"
+    },
+    {
+      "name": "AEPD - Tendencia sancionadora en proteccion de datos en Europa",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa",
+      "date": "2026-05-20",
+      "type": "oficial / analisis institucional"
+    },
+    {
+      "name": "EDPB - Plantilla europea de EIPD/DPIA",
+      "url": "https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_fr",
+      "date": "2026-04-14",
+      "type": "oficial"
+    },
+    {
+      "name": "EDPB - CEF 2026 sobre transparencia e informacion",
+      "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_da",
+      "date": "2026-03-19",
+      "type": "oficial"
+    },
+    {
+      "name": "Comision Europea - Paquete de soberania tecnologica",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-proposes-tech-sovereignty-package-strengthen-europes-digital-autonomy-and-resilience",
+      "date": "2026-06-03",
+      "type": "oficial"
+    },
+    {
+      "name": "ICO - Innovacion segura con IA",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/ico-response-to-government-on-safe-ai-powered-innovation/",
+      "date": "2026-05-29",
+      "type": "oficial"
+    },
+    {
+      "name": "ICO - Cinco pasos frente a ciberamenazas potenciadas por IA",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/five-steps-to-protect-your-organisation-from-ai-powered-cyber-threats/",
+      "date": "2026-05-14",
+      "type": "oficial"
+    },
+    {
+      "name": "CNIL - Checklist de desarrollo de sistemas de IA",
+      "url": "https://www.cnil.fr/sites/default/files/2026-01/ai_checklist.pdf",
+      "date": "2026-01",
+      "type": "oficial"
+    },
+    {
+      "name": "AEPD - Notificaciones de brechas 2025",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-2025-mas-2.700-notificaciones-brechas",
+      "date": "2026-01-23",
+      "type": "oficial"
+    },
+    {
+      "name": "INCIBE - Avisos para empresas",
+      "url": "https://www.incibe.es/empresas/avisos",
+      "date": "consulta 2026-06-06",
+      "type": "oficial / ciberseguridad"
+    }
+  ]
+}

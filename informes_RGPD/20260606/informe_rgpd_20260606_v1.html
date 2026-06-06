@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MMarco Seguridad | Privacy Intelligence RGPD | 2026-06-06</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5c6678;
+      --line: #d7deea;
+      --soft: #f5f7fb;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-2: #2563eb;
+      --warn: #b45309;
+      --dark: #111827;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #eef2f6;
+      line-height: 1.48;
+    }
+    .page {
+      max-width: 1160px;
+      margin: 0 auto;
+      background: var(--panel);
+      min-height: 100vh;
+      box-shadow: 0 22px 70px rgba(17, 24, 39, 0.15);
+    }
+    header {
+      color: white;
+      background:
+        linear-gradient(135deg, rgba(17, 24, 39, 0.96), rgba(15, 118, 110, 0.9)),
+        radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.35), transparent 34%);
+      padding: 42px 48px 34px;
+    }
+    .kicker {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      color: #c7d2fe;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+    h1 {
+      margin: 22px 0 12px;
+      font-size: 42px;
+      line-height: 1.08;
+      letter-spacing: 0;
+      max-width: 850px;
+    }
+    .subtitle { color: #e5edf8; font-size: 17px; max-width: 780px; margin: 0; }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .metric {
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 8px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.08);
+    }
+    .metric span { display: block; color: #cbd5e1; font-size: 12px; text-transform: uppercase; font-weight: 700; }
+    .metric strong { display: block; margin-top: 4px; color: #ffffff; font-size: 18px; }
+    main { padding: 34px 48px 46px; }
+    section { margin: 0 0 30px; }
+    h2 {
+      font-size: 22px;
+      margin: 0 0 14px;
+      letter-spacing: 0;
+      color: var(--dark);
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .summary article {
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px;
+      background: var(--soft);
+    }
+    .summary h3, .news-card h3 { margin: 0 0 8px; font-size: 17px; }
+    .summary p { margin: 0; color: var(--muted); font-size: 14px; }
+    .news-card {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+    .news-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      background: #e0f2fe;
+      color: #075985;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+    dl { margin: 0; display: grid; grid-template-columns: 190px 1fr; gap: 8px 16px; }
+    dt { color: var(--dark); font-weight: 800; font-size: 13px; }
+    dd { margin: 0; color: var(--muted); font-size: 14px; }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+    th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { width: 210px; text-align: left; background: #f8fafc; color: var(--dark); }
+    tr:last-child th, tr:last-child td { border-bottom: 0; }
+    .actions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+    .actions li {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #ffffff;
+    }
+    .actions span {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .opportunity {
+      border-left: 6px solid var(--accent-2);
+      background: #eff6ff;
+      padding: 16px 18px;
+      border-radius: 8px;
+      color: #1e3a8a;
+      font-weight: 700;
+    }
+    .sources {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 9px;
+      font-size: 12px;
+    }
+    .sources li {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+    .sources span { color: var(--muted); }
+    .sources a { color: #1d4ed8; word-break: break-word; text-decoration: none; }
+    .legal {
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; max-width: none; }
+      header { padding: 34px 40px 28px; }
+      main { padding: 28px 40px 36px; }
+      section { break-inside: avoid; margin-bottom: 22px; }
+      a { color: #1d4ed8; }
+    }
+    @media (max-width: 760px) {
+      header, main { padding-left: 22px; padding-right: 22px; }
+      h1 { font-size: 31px; }
+      .meta-grid, .summary { grid-template-columns: 1fr; }
+      dl { grid-template-columns: 1fr; }
+      .news-card { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="kicker"><span>MMarco Seguridad</span><span>Privacy Intelligence RGPD</span></div>
+      <h1>Informe Ejecutivo RGPD de apertura de jornada</h1>
+      <p class="subtitle">Dashboard profesional para clientes y suscriptores. Recopilacion verificada de novedades regulatorias, sanciones, brechas y obligaciones prioritarias para empresas españolas.</p>
+      <div class="meta-grid">
+        <div class="metric"><span>Fecha</span><strong>2026-06-06</strong></div>
+        <div class="metric"><span>Hora</span><strong>07:07 CEST</strong></div>
+        <div class="metric"><span>Riesgo</span><strong>MEDIO</strong></div>
+        <div class="metric"><span>Version</span><strong>v1</strong></div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Resumen Ejecutivo</h2>
+        <div class="summary">
+          <article><h3>Hechos confirmados</h3><p>No se ha identificado una sancion critica española de ultima hora en las fuentes verificadas. Si hay novedades oficiales recientes sobre EIPD, transparencia RGPD, IA, brechas y soberania/cloud europea.</p></article>
+          <article><h3>Interpretacion analitica</h3><p>El foco regulatorio se desplaza hacia evidencias de cumplimiento: informacion clara al interesado, EIPD documentada, gobierno de IA y control de proveedores tecnologicos.</p></article>
+          <article><h3>Recomendacion automatica</h3><p>Priorizar una revision express de clausulas informativas, inventario de IA/proveedores y plan de respuesta a brechas antes de nuevas implantaciones de IA o cloud.</p></article>
+        </div>
+      </section>
+      <section>
+        <h2>Novedades Principales</h2>
+        
+      <article class="news-card">
+        <div class="news-number">01</div>
+        <div>
+          <h3>El EDPB impulsa una plantilla comun de EIPD/DPIA</h3>
+          <dl>
+            <dt>Que ha ocurrido</dt><dd>El EDPB adopto una plantilla de evaluacion de impacto para estructurar y evidenciar tratamientos de alto riesgo, sometida a consulta publica hasta el 9 de junio de 2026.</dd>
+            <dt>Fuente</dt><dd>EDPB, 14/04/2026</dd>
+            <dt>Por que importa</dt><dd>Aunque no es obligatoria, anticipa un estandar europeo de documentacion que puede convertirse en referencia practica para auditorias y supervisiones.</dd>
+            <dt>Impacto para empresas españolas</dt><dd>Empresas españolas con biometria, scoring, IA, vigilancia, salud, menores o tratamientos intensivos deberian alinear sus EIPD con campos trazables y evidencia de mitigacion.</dd>
+            <dt>Accion recomendada</dt><dd>Comparar las EIPD existentes con la plantilla EDPB y cerrar huecos en necesidad, proporcionalidad, riesgos residuales, medidas y aprobaciones.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-number">02</div>
+        <div>
+          <h3>Transparencia e informacion al interesado bajo escrutinio europeo</h3>
+          <dl>
+            <dt>Que ha ocurrido</dt><dd>El CEF 2026 del EDPB centra la accion coordinada anual en obligaciones de transparencia e informacion bajo los articulos 12, 13 y 14 RGPD.</dd>
+            <dt>Fuente</dt><dd>EDPB, 19/03/2026</dd>
+            <dt>Por que importa</dt><dd>Las politicas de privacidad genericas, incompletas o incoherentes con tratamientos reales elevan el riesgo de requerimientos, reclamaciones y sanciones.</dd>
+            <dt>Impacto para empresas españolas</dt><dd>Los textos de privacidad deben casar con CRM, analitica, marketing, IA, proveedores, transferencias y plazos reales de conservacion.</dd>
+            <dt>Accion recomendada</dt><dd>Auditar avisos de privacidad, capas informativas, formularios y comunicaciones de captacion para asegurar claridad, granularidad y trazabilidad.</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-number">03</div>
+        <div>
+          <h3>IA, cloud y ciberamenazas: mas presion sobre proveedores y seguridad</h3>
+          <dl>
+            <dt>Que ha ocurrido</dt><dd>La Comision Europea presento el paquete de soberania tecnologica el 3 de junio de 2026, mientras ICO y CNIL han publicado orientaciones practicas sobre IA, seguridad, minimizacion, responsabilidades y derechos.</dd>
+            <dt>Fuente</dt><dd>Comision Europea, ICO, CNIL</dd>
+            <dt>Por que importa</dt><dd>La adopcion de IA y cloud exige revisar bases juridicas, roles responsable/encargado, transferencias, seguridad, supervision humana y riesgos de reidentificacion.</dd>
+            <dt>Impacto para empresas españolas</dt><dd>La compra de herramientas de IA sin inventario, EIPD ni clausulas de encargado puede crear incumplimientos por transparencia, legitimacion y transferencias.</dd>
+            <dt>Accion recomendada</dt><dd>Crear registro de usos de IA con datos personales, clasificar proveedores criticos y exigir anexos de proteccion de datos, seguridad, subencargados y ubicacion de datos.</dd>
+          </dl>
+        </div>
+      </article>
+      </section>
+      <section>
+        <h2>Riesgos Para Empresas</h2>
+        <table><tr><th>Brechas</th><td>Mantener circuito de deteccion, evaluacion de riesgo y notificacion en 72 horas; probar evidencias y comunicaciones a afectados.</td></tr><tr><th>Transparencia</th><td>Actualizar informacion de privacidad para que refleje tratamientos reales, especialmente IA, marketing, analitica, CRM y cesiones.</td></tr><tr><th>Proveedores</th><td>Revisar contratos, subencargados, ubicacion de datos, medidas tecnicas, auditoria y salida segura del servicio.</td></tr><tr><th>Encargados</th><td>Exigir instrucciones documentadas, confidencialidad, asistencia en derechos, brechas, supresion/devolucion y controles periodicos.</td></tr><tr><th>Derechos ARSOPL</th><td>Verificar plazos, identidad, trazabilidad, excepciones y respuestas consistentes para acceso, rectificacion, supresion, oposicion, portabilidad y limitacion.</td></tr><tr><th>Transferencias internacionales</th><td>Comprobar base de transferencia, SCC, evaluacion de impacto, medidas suplementarias y cadena de subproveedores.</td></tr><tr><th>IA con datos personales</th><td>Documentar finalidad, base juridica, minimizacion, explicabilidad suficiente, supervision humana, pruebas de sesgo y EIPD si hay alto riesgo.</td></tr></table>
+      </section>
+      <section>
+        <h2>Acciones Recomendadas</h2>
+        <ol class="actions"><li><span>1</span>Revisar en 7 dias las clausulas informativas de los tratamientos con captacion digital, CRM, marketing e IA.</li><li><span>2</span>Actualizar matriz de proveedores criticos: encargado/subencargado, paises, medidas, brechas y derecho de auditoria.</li><li><span>3</span>Reevaluar EIPD de tratamientos de alto riesgo usando la plantilla EDPB como lista de control.</li><li><span>4</span>Ejecutar simulacro breve de brecha: deteccion, triage, notificacion AEPD, comunicacion a afectados y evidencias.</li><li><span>5</span>Crear inventario de usos de IA con datos personales y bloquear usos no aprobados con datos sensibles, menores o empleados.</li></ol>
+      </section>
+      <section>
+        <h2>Oportunidad Para MMarco Seguridad</h2>
+        <div class="opportunity">Oportunidad alta para auditoria RGPD, revision de clausulas y proveedores, EIPD/DPIA, formacion ejecutiva, revision de brechas y consultoria de IA con datos personales.</div>
+      </section>
+      <section>
+        <h2>Fuentes</h2>
+        <ul class="sources"><li><strong>AEPD - Directrices EDPB sobre investigacion cientifica</strong><span>2026-04-17 - oficial</span><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/comite-europeo-somete-a-consulta-publica-sus-directrices-sobre-tratamiento-con-fines-investigacion-cientifica">https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/comite-europeo-somete-a-consulta-publica-sus-directrices-sobre-tratamiento-con-fines-investigacion-cientifica</a></li><li><strong>AEPD - Tendencia sancionadora en proteccion de datos en Europa</strong><span>2026-05-20 - oficial / analisis institucional</span><a href="https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa">https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa</a></li><li><strong>EDPB - Plantilla europea de EIPD/DPIA</strong><span>2026-04-14 - oficial</span><a href="https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_fr">https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_fr</a></li><li><strong>EDPB - CEF 2026 sobre transparencia e informacion</strong><span>2026-03-19 - oficial</span><a href="https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_da">https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_da</a></li><li><strong>Comision Europea - Paquete de soberania tecnologica</strong><span>2026-06-03 - oficial</span><a href="https://digital-strategy.ec.europa.eu/en/news/commission-proposes-tech-sovereignty-package-strengthen-europes-digital-autonomy-and-resilience">https://digital-strategy.ec.europa.eu/en/news/commission-proposes-tech-sovereignty-package-strengthen-europes-digital-autonomy-and-resilience</a></li><li><strong>ICO - Innovacion segura con IA</strong><span>2026-05-29 - oficial</span><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/ico-response-to-government-on-safe-ai-powered-innovation/">https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/ico-response-to-government-on-safe-ai-powered-innovation/</a></li><li><strong>ICO - Cinco pasos frente a ciberamenazas potenciadas por IA</strong><span>2026-05-14 - oficial</span><a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/five-steps-to-protect-your-organisation-from-ai-powered-cyber-threats/">https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/five-steps-to-protect-your-organisation-from-ai-powered-cyber-threats/</a></li><li><strong>CNIL - Checklist de desarrollo de sistemas de IA</strong><span>2026-01 - oficial</span><a href="https://www.cnil.fr/sites/default/files/2026-01/ai_checklist.pdf">https://www.cnil.fr/sites/default/files/2026-01/ai_checklist.pdf</a></li><li><strong>AEPD - Notificaciones de brechas 2025</strong><span>2026-01-23 - oficial</span><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-2025-mas-2.700-notificaciones-brechas">https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recibio-2025-mas-2.700-notificaciones-brechas</a></li><li><strong>INCIBE - Avisos para empresas</strong><span>consulta 2026-06-06 - oficial / ciberseguridad</span><a href="https://www.incibe.es/empresas/avisos">https://www.incibe.es/empresas/avisos</a></li></ul>
+      </section>
+      <section class="legal">
+        <strong>Aviso legal.</strong> Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias.
+      </section>
+    </main>
+  </div>
+</body>
+</html>
