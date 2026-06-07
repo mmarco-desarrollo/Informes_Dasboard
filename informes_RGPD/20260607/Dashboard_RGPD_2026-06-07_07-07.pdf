@@ -1,0 +1,120 @@
+%PDF-1.4
+% ASCII-safe RGPD report
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1922 >>
+stream
+0.063 0.165 0.263 rg
+0 0 595 842 re f
+0.055 0.486 0.482 rg
+0 0 595 92 re f
+1 1 1 rg
+BT /F2 22 Tf 48 720 Td (MMarco Seguridad) Tj ET
+BT /F2 38 Tf 48 662 Td (Privacy Intelligence RGPD) Tj ET
+BT /F1 13 Tf 48 626 Td (Informe ejecutivo diario - 2026-06-07 - 07:07 CEST) Tj ET
+0.91 0.95 0.96 rg
+48 575 210 32 re f
+0.063 0.165 0.263 rg
+BT /F2 13 Tf 60 586 Td (Nivel de riesgo: MEDIO) Tj ET
+0.09 0.13 0.20 rg
+BT /F2 15 Tf 48 525 Td (Resumen ejecutivo) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 498 Td (Hechos confirmados: no se ha verificado una nueva sancion espanola material publicada hoy; s) Tj ET
+BT /F1 10 Tf 48 483 Td (iguen activas obligaciones criticas sobre brechas, IA y gobernanza del dato.) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 466 Td (Interpretacion analitica: el riesgo operativo se mantiene en MEDIO por enforcement europeo a) Tj ET
+BT /F1 10 Tf 48 451 Td (ctivo, foco en seguridad y plazos cercanos de consulta EDPB.) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 434 Td (Recomendacion automatica: priorizar evidencias de responsabilidad proactiva: registro de tra) Tj ET
+BT /F1 10 Tf 48 419 Td (tamientos, gestion de brechas en 72 horas, contratos con encargados y control de IA.) Tj ET
+0.09 0.13 0.20 rg
+BT /F2 15 Tf 48 402 Td (Novedades principales) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 375 Td (1. Brechas: AEPD mantiene actualizada la obligacion de notificar y documentar. Accion: simul) Tj ET
+BT /F1 10 Tf 48 360 Td (acro de brecha y revision de proveedores criticos.) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 343 Td (2. Enforcement europeo: sanciones recientes por seguridad, salud y gobernanza. Accion: verif) Tj ET
+BT /F1 10 Tf 48 328 Td (icar medidas del art. 32 RGPD con evidencias tecnicas.) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 311 Td (3. IA y datos: consultas y orientaciones obligan a revisar usos reales. Accion: inventario d) Tj ET
+BT /F1 10 Tf 48 296 Td (e IA, DPIA/EIPD y control humano.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2279 >>
+stream
+0.063 0.165 0.263 rg
+0 0 595 842 re f
+0.055 0.486 0.482 rg
+0 0 595 92 re f
+1 1 1 rg
+BT /F2 22 Tf 48 720 Td (MMarco Seguridad) Tj ET
+BT /F2 38 Tf 48 662 Td (Privacy Intelligence RGPD) Tj ET
+BT /F1 13 Tf 48 626 Td (Informe ejecutivo diario - 2026-06-07 - 07:07 CEST) Tj ET
+0.91 0.95 0.96 rg
+48 575 210 32 re f
+0.063 0.165 0.263 rg
+BT /F2 13 Tf 60 586 Td (Nivel de riesgo: MEDIO) Tj ET
+0.09 0.13 0.20 rg
+BT /F2 15 Tf 48 525 Td (Riesgos para empresas) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 498 Td (Brechas: ALTO. Transparencia: MEDIO. Proveedores y encargados: MEDIO. Derechos ARSOPL: MEDIO) Tj ET
+BT /F1 10 Tf 48 483 Td (. Transferencias internacionales: MEDIO. IA con datos personales: ALTO.) Tj ET
+0.09 0.13 0.20 rg
+BT /F2 15 Tf 48 466 Td (Acciones recomendadas) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 439 Td (1. Revisar protocolo de brechas y decision de notificacion antes de 72 horas. 2. Actualizar ) Tj ET
+BT /F1 10 Tf 48 424 Td (registro de tratamientos de alto riesgo. 3. Auditar contratos con encargados. 4. Revisar tra) Tj ET
+BT /F1 10 Tf 48 409 Td (nsparencia y formularios. 5. Crear inventario de IA con datos personales.) Tj ET
+0.09 0.13 0.20 rg
+BT /F2 15 Tf 48 392 Td (Oportunidad para MMarco Seguridad) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 365 Td (Auditoria RGPD, revision de clausulas, revision de proveedores, DPIA/EIPD, formacion, revisi) Tj ET
+BT /F1 10 Tf 48 350 Td (on de brechas y consultoria de IA y datos personales.) Tj ET
+0.09 0.13 0.20 rg
+BT /F2 15 Tf 48 333 Td (Fuentes) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 306 Td (AEPD brechas 30/04/2026; AEPD tendencia sancionadora 20/05/2026; EDPB Guidelines 1/2026 cons) Tj ET
+BT /F1 10 Tf 48 291 Td (ulta hasta 25/06/2026; CNIL IQVIA 28/05/2026; ICO South Staffordshire Water 07/05/2026; EDPS) Tj ET
+BT /F1 10 Tf 48 276 Td ( Annual Report 2025; Comision Europea 10 anos RGPD.) Tj ET
+0.09 0.13 0.20 rg
+BT /F2 15 Tf 48 259 Td (Aviso legal) Tj ET
+0.09 0.13 0.20 rg
+BT /F1 10 Tf 48 232 Td (Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituy) Tj ET
+BT /F1 10 Tf 48 217 Td (e asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion ) Tj ET
+BT /F1 10 Tf 48 202 Td (profesional antes de tomar decisiones juridicas o regulatorias.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+8 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000034 00000 n 
+0000000083 00000 n 
+0000000146 00000 n 
+0000000282 00000 n 
+0000002255 00000 n 
+0000002391 00000 n 
+0000004721 00000 n 
+0000004791 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+4866
+%%EOF
