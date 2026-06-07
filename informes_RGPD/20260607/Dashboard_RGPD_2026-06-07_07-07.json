@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "organization": "MMarco Seguridad",
+    "title": "Privacy Intelligence RGPD",
+    "date": "2026-06-07",
+    "time": "07:07 CEST",
+    "timezone": "Europe/Madrid",
+    "risk_level": "MEDIO",
+    "repository_path": "informes_RGPD/20260607",
+    "subject": "[MMarco IA][RGPD] Informe diario | 2026-06-07",
+    "recipient": "mmarco.seguridad@gmail.com"
+  },
+  "executive_summary": {
+    "confirmed_facts": "No se ha verificado una nueva sancion espanola material publicada hoy; siguen activas obligaciones criticas sobre brechas, IA y gobernanza del dato.",
+    "analysis": "El riesgo operativo se mantiene en MEDIO por enforcement europeo activo, foco en seguridad y plazos cercanos de consulta EDPB.",
+    "automatic_recommendation": "Priorizar evidencias de responsabilidad proactiva: registro de tratamientos, gestion de brechas en 72 horas, contratos con encargados y control de IA."
+  },
+  "main_updates": [
+    {
+      "title": "Brechas: AEPD mantiene actualizada la obligacion de notificar y documentar",
+      "what_happened": "La AEPD recuerda que una brecha debe notificarse cuando sea probable que exista riesgo para derechos y libertades, y comunicarse a afectados cuando el riesgo sea alto.",
+      "source": "AEPD - Notificacion de brechas de datos personales",
+      "impact_spain": "Empresas espanolas deben tener canal interno, decision log, matriz de riesgo y plantilla de comunicacion a afectados lista antes del incidente.",
+      "recommended_action": "Ejecutar simulacro de brecha y revisar que proveedores criticos notifican incidentes contractualmente en menos de 24 horas."
+    },
+    {
+      "title": "Enforcement europeo: sanciones elevadas por seguridad, salud y gobernanza",
+      "what_happened": "La AEPD destaca 1.145 millones de euros en multas europeas durante 2025; CNIL e ICO han publicado sanciones recientes vinculadas a datos de salud y ciberincidentes.",
+      "source": "AEPD - Tendencia sancionadora en proteccion de datos en Europa; CNIL; ICO",
+      "impact_spain": "Sectores con datos sensibles, utilities, salud, ecommerce y servicios digitales deben reforzar controles de seguridad y trazabilidad.",
+      "recommended_action": "Actualizar el mapa de tratamientos de alto riesgo y verificar medidas del art. 32 RGPD con evidencias tecnicas recientes."
+    },
+    {
+      "title": "IA y datos: consultas y orientaciones obligan a revisar usos reales",
+      "what_happened": "El EDPB mantiene consulta abierta sobre investigacion cientifica hasta el 25 de junio; EDPS y AEPD refuerzan el foco sobre IA, sistemas agenticos y supervision.",
+      "source": "EDPB Guidelines 1/2026; EDPS Annual Report 2025; AEPD IA agentica",
+      "impact_spain": "Empresas con IA generativa, agentes autonomos, analitica de clientes o datos de salud deben activar inventario de sistemas y criterios DPIA/EIPD.",
+      "recommended_action": "Crear un registro de usos de IA con datos personales y bloquear tratamientos sin base juridica, DPIA o contrato adecuado."
+    }
+  ],
+  "risk_dashboard": [
+    {"area": "Brechas", "level": "ALTO", "signal": "72 horas, comunicacion a afectados, evidencia de diligencia", "action": "Simulacro y matriz de severidad"},
+    {"area": "Transparencia", "level": "MEDIO", "signal": "Derechos RGPD y solicitudes previas de datos", "action": "Revisar clausulas y capas informativas"},
+    {"area": "Proveedores", "level": "MEDIO", "signal": "Encargados, subencargados, transferencias y seguridad", "action": "Revalidar DPA, SCC y anexos tecnicos"},
+    {"area": "Derechos ARSOPL", "level": "MEDIO", "signal": "Acceso, rectificacion, supresion, oposicion, portabilidad y limitacion", "action": "Medir SLA y prueba de respuesta"},
+    {"area": "Transferencias internacionales", "level": "MEDIO", "signal": "Scrutiny EDPS y ecosistema cloud", "action": "Actualizar TIA y mapa de ubicaciones"},
+    {"area": "IA con datos personales", "level": "ALTO", "signal": "IA agentica, sandbox, consultas EDPB", "action": "Inventario, DPIA y controles humanos"}
+  ],
+  "recommended_actions": [
+    "Revisar el protocolo de brechas y ejecutar un simulacro con decision de notificacion antes de 72 horas.",
+    "Actualizar el registro de tratamientos y marcar tratamientos de alto riesgo, salud, biometria, menores, scoring o IA.",
+    "Auditar contratos con encargados: plazos de aviso, subencargados, transferencias, medidas de seguridad y retorno/supresion.",
+    "Revisar textos de transparencia y formularios donde se solicitan datos, incluso antes de la recogida efectiva.",
+    "Crear inventario de IA con datos personales y exigir base juridica, minimizacion, DPIA/EIPD y supervision humana."
+  ],
+  "opportunity": ["Auditoria RGPD", "Revision de clausulas", "Revision de proveedores", "DPIA/EIPD", "Formacion", "Revision de brechas", "Consultoria de IA y datos personales"],
+  "sources": [
+    {"name": "AEPD - Notificacion de brechas", "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion", "date": "30/04/2026"},
+    {"name": "AEPD - Tendencia sancionadora", "url": "https://www.aepd.es/prensa-y-comunicacion/blog/tendencia-sancionadora-en-proteccion-de-datos-en-europa", "date": "20/05/2026"},
+    {"name": "AEPD - Momento de inicio legal del tratamiento", "url": "https://www.aepd.es/prensa-y-comunicacion/blog/en-que-momento-comienza-legalmente-un-tratamiento-de-datos-personales", "date": "28/04/2026"},
+    {"name": "EDPB - Guidelines 1/2026 scientific research", "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/guidelines-12026-processing-personal-data_ga", "date": "consulta hasta 25/06/2026"},
+    {"name": "CNIL - IQVIA", "url": "https://www.cnil.fr/fr/donnees-sante-sanction-5-millions-iqvia", "date": "28/05/2026"},
+    {"name": "ICO - South Staffordshire Water", "url": "https://ico.org.uk/action-weve-taken/enforcement/2026/05/south-staffordshire-plc-and-south-staffordshire-water-plc/", "date": "07/05/2026"},
+    {"name": "EDPS - Annual Report 2025", "url": "https://www.edps.europa.eu/press-publications/press-news/press-releases/2026/edpss-annual-report-2025-highlights-record-legislative-consultations-and-ai-transition-within-european-institutions_en", "date": "07/05/2026"},
+    {"name": "Comision Europea - 10 anos RGPD", "url": "https://commission.europa.eu/news-and-media/news/ten-years-gdpr-your-data-your-rights-2026-05-22_en", "date": "22/05/2026"},
+    {"name": "AEPD - IA agentica", "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-publica-unas-orientaciones-sobre-inteligencia", "date": "18/02/2026"}
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias."
+}
