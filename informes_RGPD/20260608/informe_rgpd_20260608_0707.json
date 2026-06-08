@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "organization": "MMarco Seguridad",
+    "title": "Privacy Intelligence RGPD",
+    "date": "2026-06-08",
+    "time": "07:07 Europe/Madrid",
+    "risk_level": "MEDIO",
+    "subject": "[MMarco IA][RGPD] Informe diario | 2026-06-08",
+    "version": "0707"
+  },
+  "executive_summary": {
+    "confirmed_facts": "No se ha identificado una sancion espanola nueva de alto impacto publicada hoy; siguen activos hitos oficiales recientes: CEF 2026 sobre transparencia, consulta EDPB de plantilla EIPD hasta el 9 de junio y refuerzo AEPD de criterios juridicos abiertos.",
+    "analytical_interpretation": "El riesgo operativo para empresas espanolas se concentra en evidenciar informacion al interesado, justificar EIPD en IA/proveedores y responder brechas con trazabilidad.",
+    "automatic_recommendation": "Priorizar una revision express de clausulas informativas, registro de tratamientos, EIPD de IA y protocolo de brechas antes de nuevas campanas, automatizaciones o cambios de proveedor."
+  },
+  "main_updates": [
+    {
+      "title": "Transparencia RGPD bajo foco coordinado europeo",
+      "what_happened": "El EDPB lanzo la accion CEF 2026 para revisar obligaciones de transparencia e informacion de los articulos 12, 13 y 14 RGPD, con participacion de 25 autoridades, incluida la AEPD.",
+      "source": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_da",
+      "why_it_matters": "Las politicas de privacidad genericas, capas informativas incompletas y avisos poco comprensibles pueden pasar de riesgo documental a riesgo de inspeccion.",
+      "impact_spain": "Empresas espanolas deberian revisar informacion por canal, finalidad, base juridica, cesiones, conservacion y ejercicio ARSOPL.",
+      "recommended_action": "Auditar avisos de privacidad y contratos con encargados que recojan informacion al interesado o comunicaciones en nombre del responsable."
+    },
+    {
+      "title": "EIPD/DPIA: oportunidad inmediata de alineacion",
+      "what_happened": "El EDPB adopto una plantilla de EIPD/DPIA sometida a consulta hasta el 9 de junio de 2026 para armonizar y evidenciar evaluaciones de alto riesgo.",
+      "source": "https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_en",
+      "why_it_matters": "IA, biometria, scoring, videovigilancia avanzada, salud, menores y tratamientos masivos necesitan evidencia de necesidad, proporcionalidad y mitigacion.",
+      "impact_spain": "Aunque la plantilla no es obligatoria, anticipa el estandar documental que podrian esperar autoridades y DPOs.",
+      "recommended_action": "Mapear EIPD existentes frente a la plantilla EDPB y abrir plan de remediacion para tratamientos de mayor riesgo."
+    },
+    {
+      "title": "Brechas: las sanciones recientes penalizan controles basicos ausentes",
+      "what_happened": "ICO y CNIL han sancionado brechas donde destacaban phishing, monitorizacion insuficiente, software obsoleto, VPN/autenticacion debil, retencion excesiva y comunicacion incompleta a afectados.",
+      "source": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/",
+      "why_it_matters": "La tendencia refuerza que la seguridad RGPD se evalua por medidas tecnicas y organizativas concretas, no por declaraciones generales.",
+      "impact_spain": "Las empresas con datos de clientes, empleados, IBAN, credenciales o categorias especiales deben probar controles, tiempos de deteccion y comunicaciones.",
+      "recommended_action": "Actualizar matriz de brechas: 72 horas AEPD, comunicacion a afectados si riesgo alto, evidencias tecnicas, responsables y plantillas preaprobadas."
+    }
+  ],
+  "risk_dashboard": {
+    "breaches": "MEDIO-ALTO: revisar deteccion, MFA, parches, logs y decision de notificacion.",
+    "transparency": "ALTO: prioridad por CEF 2026 y articulos 12-14 RGPD.",
+    "providers": "MEDIO: exigir anexos de encargado, subencargados, ubicacion y evidencias.",
+    "processors": "MEDIO: reforzar instrucciones documentadas y auditoria de proveedores criticos.",
+    "arsopl": "MEDIO: plazos, identidad, trazabilidad y canales de supresion/oposicion.",
+    "international_transfers": "MEDIO: inventario de SaaS, SCC/TIA y accesos remotos.",
+    "ai_personal_data": "ALTO: gobernanza, EIPD, minimizacion, transparencia y control humano."
+  },
+  "recommended_actions": [
+    "Revisar en 72 horas las capas informativas y politicas de privacidad de los tratamientos activos de clientes, empleados y leads.",
+    "Comparar EIPD/DPIA existentes con la plantilla EDPB antes del cierre de consulta del 9 de junio de 2026.",
+    "Ejecutar prueba de protocolo de brechas: deteccion, escalado, evaluacion de riesgo, notificacion AEPD y comunicacion a afectados.",
+    "Actualizar contratos de encargado y matriz de proveedores SaaS/IA con subencargados, transferencias y medidas de seguridad.",
+    "Inventariar usos de IA con datos personales, imagenes, voz, biometria o decisiones automatizadas y bloquear usos sin base juridica clara."
+  ],
+  "mmarco_opportunity": [
+    "Auditoria RGPD focalizada en transparencia y derechos ARSOPL.",
+    "Revision de clausulas informativas, contratos de encargado y proveedores SaaS.",
+    "EIPD/DPIA para IA, biometria, scoring, videovigilancia o tratamientos de alto riesgo.",
+    "Formacion ejecutiva sobre brechas, IA y responsabilidad proactiva.",
+    "Consultoria de IA y datos personales para politicas internas, minimizacion y evidencias."
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias.",
+  "sources": [
+    {
+      "name": "AEPD - Publicacion de mas de 1.500 informes juridicos",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-mas-de-1500-informes-juridicos",
+      "date": "2026-05-28",
+      "type": "oficial"
+    },
+    {
+      "name": "EDPB - CEF 2026 sobre transparencia e informacion",
+      "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_da",
+      "date": "2026-03-19",
+      "type": "oficial"
+    },
+    {
+      "name": "EDPB - Plantilla DPIA/EIPD en consulta publica",
+      "url": "https://www.edpb.europa.eu/news/news/2026/enhancing-compliance-and-consistency-edpb-adopts-dpia-template_en",
+      "date": "2026-04-14",
+      "type": "oficial"
+    },
+    {
+      "name": "AEPD - Notificacion de brechas de datos personales",
+      "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion",
+      "date": "2026-04-30",
+      "type": "oficial"
+    },
+    {
+      "name": "ICO - Sancion South Staffordshire por ciberataque y brecha",
+      "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/",
+      "date": "2026-05-11",
+      "type": "autoridad europea/no UE"
+    },
+    {
+      "name": "CNIL - Sancion FREE MOBILE y FREE por brecha",
+      "url": "https://www.cnil.fr/en/sanction-free-2026",
+      "date": "2026-01-14",
+      "type": "autoridad UE"
+    },
+    {
+      "name": "Comision Europea - 10 anos del RGPD",
+      "url": "https://commission.europa.eu/news-and-media/news/ten-years-gdpr-your-data-your-rights-2026-05-22_en",
+      "date": "2026-05-22",
+      "type": "oficial"
+    },
+    {
+      "name": "Comision Europea - enfoque comun para verificacion de edad",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/commission-sets-out-common-approach-eu-wide-age-verification-technologies",
+      "date": "2026-04-29",
+      "type": "oficial"
+    }
+  ]
+}
