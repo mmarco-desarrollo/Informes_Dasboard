@@ -1,0 +1,81 @@
+%PDF-1.4
+%----
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1607 >>
+stream
+BT
+/F1 18 Tf
+50 790 Td
+(MMarco Seguridad - Privacy Intelligence RGPD) Tj
+/F1 11 Tf
+0 -28 Td
+(Informe Ejecutivo RGPD | 2026-06-09 07:09 CEST | Riesgo MEDIO) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Hechos confirmados: AEPD publica criterio sobre responsable/encargado; EDPB cierra consulta de plantilla EIPD/DPIA.) Tj
+0 -18 Td
+(Interpretacion: foco supervisor en contratos reales, transparencia, seguridad y respuesta a brechas.) Tj
+0 -18 Td
+(Recomendacion: revisar proveedores, DPAs, EIPD y simulacro de brecha RGPD.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Novedades principales:) Tj
+0 -18 Td
+(1. AEPD: los roles responsable/encargado deben reflejar la realidad operativa, no solo el contrato.) Tj
+0 -18 Td
+(2. EDPB: plantilla europea DPIA/EIPD en consulta hasta el 9 de junio de 2026.) Tj
+0 -18 Td
+(3. ICO/CNIL: sanciones por seguridad, retencion y notificacion refuerzan evidencia preventiva.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Acciones prioritarias:) Tj
+0 -18 Td
+(- Actualizar inventario de proveedores criticos.) Tj
+0 -18 Td
+(- Revisar contratos de encargo: instrucciones, subencargados, brechas y auditoria.) Tj
+0 -18 Td
+(- Alinear EIPD con plantilla EDPB.) Tj
+0 -18 Td
+(- Ejecutar simulacro de brecha y decision de notificacion AEPD.) Tj
+0 -18 Td
+(- Auditar capas informativas y procesos ARSOPL.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Fuentes: AEPD, EDPB, ICO, CNIL y Comision Europea. Ver HTML y JSON para enlaces completos.) Tj
+0 -18 Td
+() Tj
+0 -18 Td
+(Aviso legal: Informe generado automaticamente con apoyo de IA. Finalidad informativa; no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional.) Tj
+0 -18 Td
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000317 00000 n 
+trailer
+<< /Root 1 0 R /Size 6 >>
+startxref
+1975
+%%EOF
