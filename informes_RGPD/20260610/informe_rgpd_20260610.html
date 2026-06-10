@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[MMarco IA][RGPD] Informe diario | 2026-06-10</title>
+<style>
+  :root {
+    --ink: #17202a;
+    --muted: #64707d;
+    --line: #d9e0e6;
+    --paper: #f7f9fb;
+    --panel: #ffffff;
+    --accent: #0f766e;
+    --amber: #b45309;
+    --red: #b91c1c;
+    --green: #166534;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    line-height: 1.45;
+  }
+  .page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 30px 28px 38px;
+  }
+  .hero {
+    background: linear-gradient(135deg, #ffffff 0%, #eef7f5 55%, #fff4e6 100%);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 24px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .08em;
+  }
+  h1 {
+    font-size: 36px;
+    margin: 8px 0 8px;
+    line-height: 1.06;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 26px 0 12px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 0 0 8px;
+  }
+  p { margin: 0 0 10px; }
+  .meta {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .risk {
+    align-self: start;
+    justify-self: end;
+    min-width: 230px;
+    background: #fff;
+    border: 1px solid #f0c7a4;
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .risk b {
+    display: block;
+    color: var(--red);
+    font-size: 30px;
+    margin-top: 2px;
+  }
+  .risk small { color: var(--muted); }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .metric {
+    background: rgba(255,255,255,.78);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 13px;
+  }
+  .metric strong {
+    display: block;
+    font-size: 22px;
+  }
+  .metric span {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .section {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 18px;
+  }
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .summary .box {
+    border-left: 4px solid var(--accent);
+    background: #f8fbfa;
+    padding: 12px 14px;
+    border-radius: 8px;
+  }
+  .summary .box:nth-child(2) { border-left-color: var(--amber); background: #fffbeb; }
+  .summary .box:nth-child(3) { border-left-color: var(--green); background: #f0fdf4; }
+  .label {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .news {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .news-card {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+    break-inside: avoid;
+  }
+  .tag {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 3px 9px;
+    background: #e7f6f3;
+    color: #0f766e;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .news-card dl {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    gap: 7px 12px;
+    margin: 10px 0 0;
+    font-size: 13px;
+  }
+  dt { color: var(--muted); font-weight: 800; }
+  dd { margin: 0; }
+  .risk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .risk-item {
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    padding: 12px;
+  }
+  .risk-item strong { display: block; }
+  .risk-item span {
+    float: right;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--red);
+  }
+  ol {
+    margin: 0;
+    padding-left: 22px;
+  }
+  li { margin: 7px 0; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .sources a {
+    color: #0f766e;
+    text-decoration: none;
+  }
+  .notice {
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+    margin-top: 16px;
+  }
+  @media (max-width: 760px) {
+    .page { padding: 16px; }
+    .hero, .summary, .grid-3, .two-col, .risk-grid { grid-template-columns: 1fr; }
+    .risk { justify-self: stretch; }
+    h1 { font-size: 28px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .page { max-width: none; padding: 0; }
+    .section, .hero { break-inside: avoid; }
+    a { color: #0f766e; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">MMarco Seguridad · Privacy Intelligence RGPD</div>
+        <h1>Informe Ejecutivo RGPD</h1>
+        <p class="meta">Fecha y hora: 2026-06-10 · 07:07 CEST · Uso profesional para clientes y suscriptores.</p>
+        <div class="grid-3">
+          <div class="metric"><strong>3</strong><span>Novedades verificadas</span></div>
+          <div class="metric"><strong>5</strong><span>Acciones prioritarias</span></div>
+          <div class="metric"><strong>72h</strong><span>Ventana crítica de brechas</span></div>
+        </div>
+      </div>
+      <aside class="risk">
+        <small>Nivel de riesgo</small>
+        <b>ALTO</b>
+        <small>Motivo: explotación activa de VPN, obligaciones RGPD prácticas y cambios de IA en preparación.</small>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Resumen Ejecutivo</h2>
+      <div class="summary">
+        <div class="box"><span class="label">Hechos confirmados</span><p>AEPD ha publicado orientaciones sobre videocámaras en domicilios con personas mayores; EDPS ha debatido las propuestas Omnibus con impacto RGPD/AI Act; INCIBE alerta de vulnerabilidades críticas, incluida explotación activa en VPN Check Point.</p></div>
+        <div class="box"><span class="label">Interpretación analítica</span><p>El riesgo operativo no viene de una nueva sanción masiva, sino de fallos de proporcionalidad, contratos/roles mal definidos, IA sin clasificación y superficies técnicas expuestas que pueden derivar en brechas notificables.</p></div>
+        <div class="box"><span class="label">Recomendación automática</span><p>Priorizar hoy revisión de videovigilancia y terceros, inventario de sistemas IA, parcheo de VPN/SAP y evidencias de gestión de brechas en 72 horas.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Novedades Principales</h2>
+      <div class="news">
+        <article class="news-card"><span class="tag">Guía oficial</span><h3>AEPD: videocámaras, dependencia y límites de la exclusión doméstica</h3><dl><dt>Qué ha ocurrido</dt><dd>La AEPD publicó orientaciones para compatibilizar cuidado y privacidad en hogares con personas mayores, con criterios de necesidad, proporcionalidad, mínima invasión, información previa, limitación de acceso y conservación.</dd><dt>Fuente</dt><dd><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-unas-orientaciones-sobre-uso-videocamaras-hogar">AEPD</a></dd><dt>Por qué importa</dt><dd>Cuando hay cuidadores, empleados de hogar, visitas o terceros, el tratamiento puede dejar de ser exclusivamente doméstico y activar obligaciones RGPD y laborales.</dd><dt>Impacto España</dt><dd>Empresas de asistencia domiciliaria, seguridad, teleasistencia, residencias, aseguradoras y proveedores tecnológicos deben revisar cartelería/información, finalidades, contratos, accesos y conservación.</dd><dt>Acción recomendada</dt><dd>Auditar instalaciones de videovigilancia y teleasistencia, documentar base jurídica y proporcionalidad, prohibir audio salvo justificación excepcional y revisar cláusulas con cuidadores/proveedores.</dd></dl></article>
+        <article class="news-card"><span class="tag">Cambio normativo / IA</span><h3>UE: ajustes Omnibus, IA de alto riesgo y continuidad de garantías RGPD</h3><dl><dt>Qué ha ocurrido</dt><dd>El EDPS organizó un debate sobre propuestas Omnibus y su efecto sobre RGPD y marco digital. La Comisión mantiene consulta hasta el 23 de junio sobre directrices de clasificación de IA de alto riesgo.</dd><dt>Fuente</dt><dd><a href="https://www.edps.europa.eu/data-protection/our-work/publications/events/2026-06-08-high-level-debate-omnibus-opportunity-driving-data-protection-and-innovation_en">EDPS / Comisión Europea</a> · <a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems">fuente adicional</a></dd><dt>Por qué importa</dt><dd>La simplificación administrativa no elimina responsabilidad proactiva; las empresas deben poder demostrar clasificación, finalidad, minimización, transparencia y control humano cuando usan IA con datos personales.</dd><dt>Impacto España</dt><dd>RRHH, educación, biometría, scoring, salud, atención al cliente y cumplimiento deberán mapear sistemas IA y conectar AI Act con RGPD, EIPD/DPIA y contratos de proveedor.</dd><dt>Acción recomendada</dt><dd>Crear inventario de IA, clasificar casos de uso, marcar tratamientos con datos personales, definir controles de transparencia y decidir qué sistemas requieren EIPD antes de producción.</dd></dl></article>
+        <article class="news-card"><span class="tag">Brechas / ciberseguridad</span><h3>INCIBE: vulnerabilidades críticas con potencial de brecha</h3><dl><dt>Qué ha ocurrido</dt><dd>INCIBE publicó avisos críticos para Check Point VPN, SAP y Nemon. En Check Point se indica explotación activa de una vulnerabilidad de bypass de autenticación en VPN.</dd><dt>Fuente</dt><dd><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-check-point">INCIBE-CERT</a> · <a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-sap-junio-de-2026">fuente adicional</a></dd><dt>Por qué importa</dt><dd>Un acceso VPN no autorizado o fallos críticos en sistemas empresariales pueden comprometer confidencialidad, integridad y disponibilidad de datos personales.</dd><dt>Impacto España</dt><dd>Organizaciones con VPN, SAP, ERP o sistemas energéticos deben tratar el parcheo como control RGPD, no solo TI: si hay acceso no autorizado, puede existir obligación de análisis y notificación de brecha.</dd><dt>Acción recomendada</dt><dd>Parchear o aplicar hotfix, revisar logs de acceso remoto, rotar credenciales cuando proceda y preparar evaluación de brecha según artículos 33 y 34 RGPD.</dd></dl></article>
+      </div>
+    </section>
+
+    <section class="section"><h2>Riesgos Para Empresas</h2><div class="risk-grid"><div class="risk-item"><span>Alto</span><strong>Brechas</strong><p>VPN y sistemas críticos expuestos elevan probabilidad de acceso no autorizado; toda evidencia debe conservarse para decidir notificación en 72 horas.</p></div><div class="risk-item"><span>Medio</span><strong>Transparencia</strong><p>Videovigilancia, IA y herramientas de productividad requieren información clara sobre finalidad, destinatarios, plazos y derechos.</p></div><div class="risk-item"><span>Alto</span><strong>Proveedores</strong><p>La realidad operativa puede convertir a un proveedor en responsable, corresponsable o encargado aunque el contrato diga otra cosa.</p></div><div class="risk-item"><span>Medio</span><strong>Encargados de tratamiento</strong><p>Faltan evidencias cuando no se revisan instrucciones, subencargados, retorno/supresión y medidas técnicas tras incidentes.</p></div><div class="risk-item"><span>Medio</span><strong>Derechos ARSOPL</strong><p>El uso de cámaras e IA aumenta solicitudes de acceso, oposición, limitación y supresión; conviene preparar respuestas trazables.</p></div><div class="risk-item"><span>Medio</span><strong>Transferencias internacionales</strong><p>SaaS, IA generativa y soporte remoto pueden implicar transferencias; revisar SCC, TIA y localización real del tratamiento.</p></div><div class="risk-item"><span>Alto</span><strong>IA con datos personales</strong><p>Riesgo de entrenamiento, inferencia, filtrado de conversaciones y decisiones automatizadas sin base jurídica o evaluación de impacto.</p></div></div></section>
+
+    <section class="section two-col"><div><h2>Acciones Recomendadas</h2><ol><li>Revisar en 24 horas exposición de VPN Check Point, SAP y sistemas críticos; documentar parcheo, logs y decisión de brecha.</li><li>Actualizar matriz de videovigilancia: finalidad, base jurídica, información, audio, conservación, accesos y terceros afectados.</li><li>Crear o actualizar inventario de IA con datos personales, clasificando casos de alto riesgo y necesidad de EIPD/DPIA.</li><li>Revisar contratos de encargado/proveedor en servicios tecnológicos integrados, verificando que el rol contractual coincide con la operativa real.</li><li>Preparar paquete de evidencias RGPD: registro de actividades, análisis de riesgos, respuesta ARSOPL, transferencias y simulacro de notificación en 72 horas.</li></ol></div><div><h2>Oportunidad Para MMarco Seguridad</h2><ol><li>Auditoría RGPD de videovigilancia, teleasistencia y entornos con personas vulnerables.</li><li>Revisión de cláusulas y contratos de encargado/corresponsable en proveedores tecnológicos.</li><li>EIPD/DPIA para IA, biometría, RRHH, scoring, salud, educación o atención automatizada.</li><li>Revisión de brechas y simulacro de notificación AEPD con evidencias técnicas.</li><li>Formación ejecutiva para dirección, DPO, TI y operaciones sobre IA, brechas y responsabilidad proactiva.</li></ol></div></section>
+
+    <section class="section sources"><h2>Fuentes Verificables</h2><ol><li><a href="https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-unas-orientaciones-sobre-uso-videocamaras-hogar">AEPD - Orientaciones sobre videocámaras en el hogar de personas mayores</a></li><li><a href="https://www.aepd.es/informes-y-resoluciones/criterios-juridicos-aepd/delimitacion-funcional-entre-responsable-y-encargado-tratamiento-ecosistemas-logisticos-y-tecnologicos">AEPD - Delimitación funcional entre responsable y encargado</a></li><li><a href="https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion">AEPD - Notificación de brechas de datos personales</a></li><li><a href="https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/guidelines-12026-processing-personal-data_en">EDPB - Guidelines 1/2026 sobre investigación científica</a></li><li><a href="https://www.edps.europa.eu/data-protection/our-work/publications/events/2026-06-08-high-level-debate-omnibus-opportunity-driving-data-protection-and-innovation_en">EDPS - Omnibus, GDPR e innovación</a></li><li><a href="https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems">Comisión Europea - Directrices de sistemas IA de alto riesgo</a></li><li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-check-point">INCIBE-CERT - Check Point VPN</a></li><li><a href="https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-sap-junio-de-2026">INCIBE-CERT - Boletín SAP junio 2026</a></li></ol><p class="notice">Informe generado automáticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento jurídico, auditoría RGPD ni dictamen legal profesional. Requiere validación profesional antes de tomar decisiones jurídicas o regulatorias.</p></section>
+  </main>
+</body>
+</html>
