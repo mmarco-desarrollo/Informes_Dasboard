@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "organization": "MMarco Seguridad",
+    "product": "Privacy Intelligence RGPD",
+    "date": "2026-06-10",
+    "time": "07:07 CEST",
+    "generated_at": "2026-06-10T07:07:01+02:00",
+    "risk_level": "ALTO",
+    "subject": "[MMarco IA][RGPD] Informe diario | 2026-06-10",
+    "audience": "Clientes, suscriptores y uso profesional interno"
+  },
+  "executive_summary": {
+    "hechos_confirmados": "AEPD ha publicado orientaciones sobre videocámaras en domicilios con personas mayores; EDPS ha debatido las propuestas Omnibus con impacto RGPD/AI Act; INCIBE alerta de vulnerabilidades críticas, incluida explotación activa en VPN Check Point.",
+    "interpretacion_analitica": "El riesgo operativo no viene de una nueva sanción masiva, sino de fallos de proporcionalidad, contratos/roles mal definidos, IA sin clasificación y superficies técnicas expuestas que pueden derivar en brechas notificables.",
+    "recomendacion_automatica": "Priorizar hoy revisión de videovigilancia y terceros, inventario de sistemas IA, parcheo de VPN/SAP y evidencias de gestión de brechas en 72 horas."
+  },
+  "highlights": [
+    {
+      "title": "AEPD: videocámaras, dependencia y límites de la exclusión doméstica",
+      "category": "Guía oficial",
+      "source": "AEPD",
+      "source_url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-unas-orientaciones-sobre-uso-videocamaras-hogar",
+      "date": "2026-06-08",
+      "what_happened": "La AEPD publicó orientaciones para compatibilizar cuidado y privacidad en hogares con personas mayores, con criterios de necesidad, proporcionalidad, mínima invasión, información previa, limitación de acceso y conservación.",
+      "why_it_matters": "Cuando hay cuidadores, empleados de hogar, visitas o terceros, el tratamiento puede dejar de ser exclusivamente doméstico y activar obligaciones RGPD y laborales.",
+      "spanish_business_impact": "Empresas de asistencia domiciliaria, seguridad, teleasistencia, residencias, aseguradoras y proveedores tecnológicos deben revisar cartelería/información, finalidades, contratos, accesos y conservación.",
+      "recommended_action": "Auditar instalaciones de videovigilancia y teleasistencia, documentar base jurídica y proporcionalidad, prohibir audio salvo justificación excepcional y revisar cláusulas con cuidadores/proveedores."
+    },
+    {
+      "title": "UE: ajustes Omnibus, IA de alto riesgo y continuidad de garantías RGPD",
+      "category": "Cambio normativo / IA",
+      "source": "EDPS / Comisión Europea",
+      "source_url": "https://www.edps.europa.eu/data-protection/our-work/publications/events/2026-06-08-high-level-debate-omnibus-opportunity-driving-data-protection-and-innovation_en",
+      "secondary_source_url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems",
+      "date": "2026-06-08",
+      "what_happened": "El EDPS organizó un debate sobre propuestas Omnibus y su efecto sobre RGPD y marco digital. La Comisión mantiene consulta hasta el 23 de junio sobre directrices de clasificación de IA de alto riesgo.",
+      "why_it_matters": "La simplificación administrativa no elimina responsabilidad proactiva; las empresas deben poder demostrar clasificación, finalidad, minimización, transparencia y control humano cuando usan IA con datos personales.",
+      "spanish_business_impact": "RRHH, educación, biometría, scoring, salud, atención al cliente y cumplimiento deberán mapear sistemas IA y conectar AI Act con RGPD, EIPD/DPIA y contratos de proveedor.",
+      "recommended_action": "Crear inventario de IA, clasificar casos de uso, marcar tratamientos con datos personales, definir controles de transparencia y decidir qué sistemas requieren EIPD antes de producción."
+    },
+    {
+      "title": "INCIBE: vulnerabilidades críticas con potencial de brecha",
+      "category": "Brechas / ciberseguridad",
+      "source": "INCIBE-CERT",
+      "source_url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-check-point",
+      "secondary_source_url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-sap-junio-de-2026",
+      "date": "2026-06-09",
+      "what_happened": "INCIBE publicó avisos críticos para Check Point VPN, SAP y Nemon. En Check Point se indica explotación activa de una vulnerabilidad de bypass de autenticación en VPN.",
+      "why_it_matters": "Un acceso VPN no autorizado o fallos críticos en sistemas empresariales pueden comprometer confidencialidad, integridad y disponibilidad de datos personales.",
+      "spanish_business_impact": "Organizaciones con VPN, SAP, ERP o sistemas energéticos deben tratar el parcheo como control RGPD, no solo TI: si hay acceso no autorizado, puede existir obligación de análisis y notificación de brecha.",
+      "recommended_action": "Parchear o aplicar hotfix, revisar logs de acceso remoto, rotar credenciales cuando proceda y preparar evaluación de brecha según artículos 33 y 34 RGPD."
+    }
+  ],
+  "risks": [
+    {"area": "Brechas", "level": "Alto", "detail": "VPN y sistemas críticos expuestos elevan probabilidad de acceso no autorizado; toda evidencia debe conservarse para decidir notificación en 72 horas."},
+    {"area": "Transparencia", "level": "Medio", "detail": "Videovigilancia, IA y herramientas de productividad requieren información clara sobre finalidad, destinatarios, plazos y derechos."},
+    {"area": "Proveedores", "level": "Alto", "detail": "La realidad operativa puede convertir a un proveedor en responsable, corresponsable o encargado aunque el contrato diga otra cosa."},
+    {"area": "Encargados de tratamiento", "level": "Medio", "detail": "Faltan evidencias cuando no se revisan instrucciones, subencargados, retorno/supresión y medidas técnicas tras incidentes."},
+    {"area": "Derechos ARSOPL", "level": "Medio", "detail": "El uso de cámaras e IA aumenta solicitudes de acceso, oposición, limitación y supresión; conviene preparar respuestas trazables."},
+    {"area": "Transferencias internacionales", "level": "Medio", "detail": "SaaS, IA generativa y soporte remoto pueden implicar transferencias; revisar SCC, TIA y localización real del tratamiento."},
+    {"area": "IA con datos personales", "level": "Alto", "detail": "Riesgo de entrenamiento, inferencia, filtrado de conversaciones y decisiones automatizadas sin base jurídica o evaluación de impacto."}
+  ],
+  "actions": [
+    "Revisar en 24 horas exposición de VPN Check Point, SAP y sistemas críticos; documentar parcheo, logs y decisión de brecha.",
+    "Actualizar matriz de videovigilancia: finalidad, base jurídica, información, audio, conservación, accesos y terceros afectados.",
+    "Crear o actualizar inventario de IA con datos personales, clasificando casos de alto riesgo y necesidad de EIPD/DPIA.",
+    "Revisar contratos de encargado/proveedor en servicios tecnológicos integrados, verificando que el rol contractual coincide con la operativa real.",
+    "Preparar paquete de evidencias RGPD: registro de actividades, análisis de riesgos, respuesta ARSOPL, transferencias y simulacro de notificación en 72 horas."
+  ],
+  "opportunity": [
+    "Auditoría RGPD de videovigilancia, teleasistencia y entornos con personas vulnerables.",
+    "Revisión de cláusulas y contratos de encargado/corresponsable en proveedores tecnológicos.",
+    "EIPD/DPIA para IA, biometría, RRHH, scoring, salud, educación o atención automatizada.",
+    "Revisión de brechas y simulacro de notificación AEPD con evidencias técnicas.",
+    "Formación ejecutiva para dirección, DPO, TI y operaciones sobre IA, brechas y responsabilidad proactiva."
+  ],
+  "sources": [
+    {"name": "AEPD - Orientaciones sobre videocámaras en el hogar de personas mayores", "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-unas-orientaciones-sobre-uso-videocamaras-hogar"},
+    {"name": "AEPD - Delimitación funcional entre responsable y encargado", "url": "https://www.aepd.es/informes-y-resoluciones/criterios-juridicos-aepd/delimitacion-funcional-entre-responsable-y-encargado-tratamiento-ecosistemas-logisticos-y-tecnologicos"},
+    {"name": "AEPD - Notificación de brechas de datos personales", "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion"},
+    {"name": "EDPB - Guidelines 1/2026 sobre investigación científica", "url": "https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2026/guidelines-12026-processing-personal-data_en"},
+    {"name": "EDPS - Omnibus, GDPR e innovación", "url": "https://www.edps.europa.eu/data-protection/our-work/publications/events/2026-06-08-high-level-debate-omnibus-opportunity-driving-data-protection-and-innovation_en"},
+    {"name": "Comisión Europea - Directrices de sistemas IA de alto riesgo", "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems"},
+    {"name": "INCIBE-CERT - Check Point VPN", "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-check-point"},
+    {"name": "INCIBE-CERT - Boletín SAP junio 2026", "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/boletin-de-seguridad-de-sap-junio-de-2026"}
+  ],
+  "legal_notice": "Informe generado automáticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento jurídico, auditoría RGPD ni dictamen legal profesional. Requiere validación profesional antes de tomar decisiones jurídicas o regulatorias."
+}
