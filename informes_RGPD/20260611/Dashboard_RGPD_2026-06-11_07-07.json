@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "organization": "MMarco Seguridad",
+    "unit": "Privacy Intelligence RGPD",
+    "date": "2026-06-11",
+    "time": "07:07 CEST",
+    "risk_level": "MEDIO",
+    "category": "Informe diario de apertura",
+    "generated_at": "2026-06-11T07:07:00+02:00"
+  },
+  "executive_summary": {
+    "confirmed_facts": "EDPB publico plantilla comun de brechas; AEPD-CNMC firmaron convenio de coordinacion; INCIBE-CERT emitio avisos criticos el 10/06.",
+    "analysis": "La prioridad empresarial se desplaza a brechas, proveedores tecnologicos, servicios digitales, menores e IA con datos personales.",
+    "automatic_recommendation": "Actualizar playbooks de brechas y revisar proveedores/activos criticos antes de que un incidente tecnico derive en obligacion RGPD."
+  },
+  "main_news": [
+    {
+      "title": "El EDPB adopta una plantilla comun europea para notificar brechas",
+      "what": "El EDPB publico el 10 de junio una plantilla comun de notificacion de brechas, sometida a consulta publica antes de su implantacion practica por las autoridades nacionales.",
+      "source": "https://www.edpb.europa.eu/our-work-tools/our-documents/other/template-personal-data-breach-notification_en",
+      "why": "Anticipa una convergencia de criterios sobre contenido minimo, trazabilidad y calidad de la informacion que deben preparar los responsables.",
+      "impact": "Empresas espanolas deberian revisar sus playbooks de incidente para mapear campos internos, tiempos, evidencias y responsables antes de la notificacion de 72 horas.",
+      "action": "Actualizar el procedimiento de brechas y probar una simulacion con el equipo legal, DPD, IT y direccion."
+    },
+    {
+      "title": "AEPD y CNMC refuerzan coordinacion en servicios digitales, DSA y derechos",
+      "what": "La AEPD y la CNMC firmaron un convenio que preve intercambio de informacion, asistencia mutua, traslado de reclamaciones, deteccion temprana de infracciones y grupos de trabajo.",
+      "source": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-y-cnmc-refuerzan-su-colaboracion-para-proteger-derechos-personas",
+      "why": "La supervision digital se vuelve mas transversal: proteccion de datos, servicios digitales, audiovisual, telecomunicaciones y menores se analizaran con mas coordinacion.",
+      "impact": "Organizaciones con plataformas, publicidad, comunicaciones electronicas, servicios online o tratamiento de menores deben esperar mayor coherencia supervisora.",
+      "action": "Revisar transparencia, bases juridicas, cookies/comunicaciones, perfiles de menores y circuitos de reclamaciones."
+    },
+    {
+      "title": "INCIBE publica avisos criticos con riesgo indirecto de brecha RGPD",
+      "what": "INCIBE-CERT publico el 10 de junio avisos de criticidad 5 sobre LabX Standard y pasarelas Universal Gateway MBS, con riesgos de acceso no autorizado, ejecucion de codigo, informacion sensible y disponibilidad.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/multiples-vulnerabilidades-en-labx-standard-de-mettler-toledo",
+      "why": "Una vulnerabilidad tecnica explotada en sistemas con datos personales puede convertirse en brecha RGPD notificable.",
+      "impact": "Empresas industriales, laboratorio, energia, salud, logistica o entornos OT/ICS deben cruzar inventario de activos con proveedores y tratamientos de datos personales.",
+      "action": "Priorizar parcheo, segmentacion, revision de exposicion, evidencias de mitigacion y criterio de notificacion si hay indicios de compromiso."
+    }
+  ],
+  "risks": [
+    {
+      "area": "Brechas",
+      "detail": "El nuevo movimiento del EDPB eleva la expectativa sobre documentacion, datos afectados, impacto, medidas correctivas y trazabilidad de decision."
+    },
+    {
+      "area": "Transparencia",
+      "detail": "La coordinacion AEPD-CNMC puede aumentar el escrutinio sobre informacion al usuario, menores, servicios digitales y comunicaciones electronicas."
+    },
+    {
+      "area": "Proveedores",
+      "detail": "Los avisos INCIBE refuerzan la necesidad de inventario de activos, SLA de parcheo, evidencias tecnicas y seguimiento de fabricantes."
+    },
+    {
+      "area": "Encargados",
+      "detail": "El criterio AEPD sobre roles reales frente a contratos exige comprobar si el proveedor actua de facto como encargado, corresponsable o responsable."
+    },
+    {
+      "area": "Derechos ARSOPL",
+      "detail": "Mayor volumen de reclamaciones digitales puede exigir procesos mas trazables para acceso, rectificacion, supresion, oposicion, portabilidad y limitacion."
+    },
+    {
+      "area": "Transferencias",
+      "detail": "Cambios europeos y servicios cloud obligan a mantener mapa de transferencias, SCC, TIA y subencargados actualizados."
+    },
+    {
+      "area": "IA con datos personales",
+      "detail": "La posicion EDPB sobre Digital Omnibus recuerda que no debe debilitarse la definicion de dato personal; los asistentes IA requieren controles de acceso, minimizacion y registro."
+    }
+  ],
+  "recommended_actions": [
+    "Actualizar el procedimiento de brechas con campos alineados a la plantilla EDPB y probarlo con un caso simulado esta semana.",
+    "Cruzar inventario de activos con los avisos INCIBE del 10/06 y exigir confirmacion de parcheo o mitigacion a proveedores criticos.",
+    "Revisar contratos de encargado y realidad operativa en proveedores tecnologicos/logisticos, especialmente cuando deciden medios o fines.",
+    "Auditar transparencia digital: cookies, publicidad, comunicaciones electronicas, menores, DSA y reclamaciones de usuarios.",
+    "Crear una matriz de uso de IA con datos personales: finalidad, base juridica, proveedor, retencion, transferencias, logs y medidas de seguridad."
+  ],
+  "opportunity_for_mmarco": [
+    "Auditoria RGPD focalizada en brechas y evidencia de diligencia.",
+    "Revision de clausulas y roles responsable/encargado/corresponsable.",
+    "Revision de proveedores criticos y cadena de suministro tecnologica.",
+    "DPIA/EIPD para IA, menores, perfiles, videovigilancia o tratamientos de alto riesgo.",
+    "Formacion ejecutiva de respuesta a incidentes y notificacion en 72 horas."
+  ],
+  "sanctions_and_breaches": {
+    "verified_new_material_sanctions": "No se ha verificado en las fuentes oficiales consultadas una nueva sancion material publicada el 10-11 de junio con impacto empresarial general para Espana.",
+    "verified_breaches": "No se ha verificado una brecha empresarial espanola nueva material en fuentes oficiales; se priorizan vulnerabilidades criticas con potencial de brecha."
+  },
+  "sources": [
+    {
+      "name": "EDPB - plantilla comun de notificacion de brechas",
+      "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/other/template-personal-data-breach-notification_en",
+      "date": "2026-06-10",
+      "type": "oficial"
+    },
+    {
+      "name": "EDPB - reunion con comisario McGrath y Digital Omnibus",
+      "url": "https://www.edpb.europa.eu/news/news/2026/edpb-meets-eu-commissioner-mcgrath-and-adopts-common-data-breach-notification_en",
+      "date": "2026-06-10",
+      "type": "oficial"
+    },
+    {
+      "name": "AEPD - convenio AEPD-CNMC para derechos digitales",
+      "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-y-cnmc-refuerzan-su-colaboracion-para-proteger-derechos-personas",
+      "date": "2026-06-10",
+      "type": "oficial"
+    },
+    {
+      "name": "AEPD - notificacion de brechas a la autoridad de control",
+      "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion",
+      "date": "consultado 2026-06-11",
+      "type": "oficial"
+    },
+    {
+      "name": "AEPD - responsable y encargado en ecosistemas logisticos complejos",
+      "url": "https://www.aepd.es/informes-y-resoluciones/criterios-juridicos-aepd/delimitacion-funcional-entre-responsable-y-encargado-tratamiento-ecosistemas-logisticos-y-tecnologicos",
+      "date": "2026-06-08",
+      "type": "oficial"
+    },
+    {
+      "name": "Comision Europea - simplificacion y periodos de proteccion de datos",
+      "url": "https://commission.europa.eu/law/law-making-process/better-regulation/simplification-implementation-and-enforcement/simplification_en",
+      "date": "entrada en vigor 2026-06-09",
+      "type": "oficial"
+    },
+    {
+      "name": "INCIBE-CERT - vulnerabilidades criticas en LabX Standard",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/multiples-vulnerabilidades-en-labx-standard-de-mettler-toledo",
+      "date": "2026-06-10",
+      "type": "oficial/verificable"
+    },
+    {
+      "name": "INCIBE-CERT - vulnerabilidades criticas en Universal Gateways MBS",
+      "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos-sci/multiples-vulnerabilidades-en-universal-gateways-de-mbs",
+      "date": "2026-06-10",
+      "type": "oficial/verificable"
+    }
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias."
+}
