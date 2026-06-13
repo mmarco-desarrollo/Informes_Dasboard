@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "brand": "MMarco Seguridad",
+    "unit": "Privacy Intelligence RGPD",
+    "date": "2026-06-13",
+    "generated_at": "13 de junio de 2026, 07:07 CEST",
+    "timezone": "Europe/Madrid",
+    "risk_level": "ALTO",
+    "audience": "Clientes, suscriptores y uso profesional de MMarco Seguridad",
+    "subject": "[MMarco IA][RGPD] Informe diario | 2026-06-13"
+  },
+  "executive_summary": {
+    "confirmed_facts": "No se ha localizado una nueva sancion material de la AEPD publicada hoy. Si hay novedades materiales recientes: plantilla comun EDPB de brechas, cooperacion AEPD-CNMC e incidencias criticas Ivanti con explotacion activa segun INCIBE-CERT.",
+    "analysis": "El riesgo empresarial sube por la convergencia entre supervision digital, exigencia de evidencias en brechas y vulnerabilidades explotables que pueden activar obligaciones RGPD.",
+    "recommendation": "Activar revision de brechas, proveedores tecnologicos y transparencia, con prueba documentada de notificacion en 72 horas y evaluacion de IA/datos personales."
+  },
+  "main_updates": [
+    {
+      "title": "EDPB: plantilla comun europea para notificar brechas personales",
+      "category": "Brechas / articulo 33 RGPD",
+      "risk": "ALTO",
+      "what": "El EDPB adopto el 10 de junio una plantilla comun para estructurar, armonizar y unificar las notificaciones de brechas de datos personales; la consulta publica permanece abierta hasta el 5 de agosto de 2026.",
+      "why": "Aumenta la expectativa de que la organizacion documente rapido los hechos, categorias de datos, afectados, medidas, riesgos y decisiones de notificacion.",
+      "impact": "Empresas espanolas deberian revisar formularios internos, matriz de riesgo, roles de DPO, canales de escalado y evidencias disponibles durante las primeras 72 horas.",
+      "action": "Actualizar el playbook de brechas y hacer un simulacro con registro de decision, borrador de notificacion a AEPD y comunicacion a afectados si procede.",
+      "source": "https://www.edpb.europa.eu/news/news/2026/edpb-meets-eu-commissioner-mcgrath-and-adopts-common-data-breach-notification_en"
+    },
+    {
+      "title": "AEPD-CNMC: mayor coordinacion en entorno digital, DSA y derechos",
+      "category": "Supervision digital / plataformas / menores",
+      "risk": "MEDIO",
+      "what": "La AEPD y la CNMC anunciaron el 10 de junio un convenio de colaboracion para intercambio de informacion, asistencia mutua, traslado de reclamaciones, deteccion temprana de posibles infracciones y grupos de trabajo conjuntos.",
+      "why": "Las reclamaciones y conductas digitales pueden ser analizadas de forma mas coordinada entre proteccion de datos, servicios digitales, telecomunicaciones, audiovisual y menores.",
+      "impact": "Empresas con plataformas, publicidad digital, usuarios menores, comunicaciones electronicas o servicios online deben reforzar trazabilidad de consentimientos, transparencia y gestion de reclamaciones.",
+      "action": "Revisar textos informativos, cookies, menores, publicidad, canales de reclamacion y evidencias de cumplimiento desde una perspectiva RGPD-DSA-servicios digitales.",
+      "source": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-y-cnmc-refuerzan-su-colaboracion-para-proteger-derechos-personas"
+    },
+    {
+      "title": "INCIBE-CERT: Ivanti critico con prueba de concepto y explotacion activa",
+      "category": "Ciberseguridad / riesgo de brecha",
+      "risk": "CRITICO",
+      "what": "INCIBE-CERT mantiene el aviso INCIBE-2026-413 sobre Ivanti Sentry y Endpoint Manager Mobile: 4 vulnerabilidades, 2 criticas y 2 altas; una permite RCE remota no autenticada con privilegios root y hay escaneos de explotacion activa.",
+      "why": "Una explotacion puede comprometer credenciales, administracion, comunicaciones y datos personales, generando obligacion de investigar, documentar y posiblemente notificar brecha.",
+      "impact": "Cualquier organizacion espanola con Ivanti expuesto debe tratarlo como prioridad de privacidad y seguridad, no solo como parche tecnico.",
+      "action": "Parchear, revisar logs y accesos, rotar credenciales sensibles, buscar indicadores de compromiso y documentar la decision de notificacion RGPD.",
+      "source": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-ivanti-7"
+    }
+  ],
+  "risks": [
+    ["Brechas", "Riesgo alto si no existe matriz de severidad, decision de notificacion en 72 horas y evidencia de contencion."],
+    ["Transparencia", "Mayor foco europeo en informacion clara, derechos, cookies, menores, salud, IA y servicios digitales."],
+    ["Proveedores", "Los fallos de SaaS, soporte remoto, ciberseguridad o subencargados pueden activar responsabilidad del responsable."],
+    ["Encargados", "Contratos genericos sin instrucciones, auditoria, subencargados ni plazos de aviso debilitan el articulo 28 RGPD."],
+    ["Derechos ARSOPL", "Sin trazabilidad de identidad, plazos y respuesta, las reclamaciones pueden escalar rapidamente ante la AEPD."],
+    ["Transferencias internacionales", "Cloud, analitica, IA y soporte fuera del EEE requieren SCC, TIA y mapa de subprocesadores actualizado."],
+    ["IA con datos personales", "Riesgo de uso no gobernado de prompts, logs, entrenamiento, bases juridicas y evaluacion de impacto."]
+  ],
+  "actions": [
+    "Actualizar en 7 dias el protocolo de brechas con campos compatibles con la plantilla comun del EDPB.",
+    "Verificar exposicion Ivanti y otros activos criticos, documentando la evaluacion de brecha RGPD.",
+    "Revisar contratos con proveedores criticos: subencargados, aviso de incidentes, auditoria y medidas tecnicas.",
+    "Auditar transparencia y derechos ARSOPL en tratamientos digitales, menores, salud, marketing e IA.",
+    "Preparar mini-EIPD para usos de IA con datos personales, perfilado, biometria o datos sensibles."
+  ],
+  "opportunities": [
+    "Auditoria RGPD focalizada en brechas y evidencias de cumplimiento.",
+    "Revision de clausulas y contratos de encargado.",
+    "Revision de proveedores criticos y cadena de subencargados.",
+    "DPIA/EIPD para IA, datos sensibles, menores, biometria o perfilado.",
+    "Formacion ejecutiva sobre brechas, derechos ARSOPL y uso seguro de IA.",
+    "Consultoria de IA y datos personales con gobernanza, minimizacion y supervision humana."
+  ],
+  "sources": [
+    {"name": "EDPB - Common data breach notification template", "date": "2026-06-10", "url": "https://www.edpb.europa.eu/news/news/2026/edpb-meets-eu-commissioner-mcgrath-and-adopts-common-data-breach-notification_en", "type": "oficial"},
+    {"name": "AEPD - Convenio AEPD-CNMC", "date": "2026-06-10", "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-y-cnmc-refuerzan-su-colaboracion-para-proteger-derechos-personas", "type": "oficial"},
+    {"name": "INCIBE-CERT - Multiples vulnerabilidades en productos Ivanti", "date": "2026-06-10 / actualizacion 2026-06-11", "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-ivanti-7", "type": "oficial"},
+    {"name": "AEPD - Orientaciones videocamaras en hogares de personas mayores", "date": "2026-06-08", "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-publica-unas-orientaciones-sobre-uso-videocamaras-hogar", "type": "oficial"},
+    {"name": "CNIL - IQVIA health data fine", "date": "2026-05-28", "url": "https://www.cnil.fr/en/health-data-fine-5-million-euros-against-iqvia", "type": "autoridad europea"},
+    {"name": "ICO - South Staffordshire cyber attack and data breach fine", "date": "2026-05-11", "url": "https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2026/05/fine-of-nearly-1m-issued-against-south-staffordshire-plc-and-south-staffordshire-water-plc/", "type": "autoridad europea"},
+    {"name": "AEPD - Notificacion de brechas a la autoridad de control", "date": "ultima modificacion 2026-04-30", "url": "https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion", "type": "oficial"}
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias."
+}
