@@ -1,0 +1,101 @@
+{
+  "title": "Informe Ejecutivo RGPD",
+  "brand": "MMarco Seguridad",
+  "unit": "Privacy Intelligence RGPD",
+  "date": "2026-06-14",
+  "time": "07:07 CEST",
+  "timezone": "Europe/Madrid",
+  "risk_level": "MEDIO",
+  "delivery_type": "Informe diario 07:00 Europe/Madrid",
+  "executive_summary": {
+    "confirmed_facts": "No se ha identificado hoy una sancion material nueva de la AEPD. Las novedades verificadas se concentran en coordinacion AEPD-CNMC, plantilla europea de brechas, transparencia 2026, IA y avisos criticos de seguridad.",
+    "analysis": "El frente regulatorio se desplaza hacia evidencias: informacion transparente, gestion trazable de brechas, control real de proveedores y gobierno de IA con datos personales.",
+    "automatic_recommendation": "Priorizar una revision ejecutiva de brechas, proveedores, textos informativos y usos de IA durante los proximos 15 dias."
+  },
+  "main_updates": [
+    {
+      "title": "EDPB adopta una plantilla comun de notificacion de brechas",
+      "risk": "ALTO",
+      "what_happened": "El EDPB anuncio el 10 de junio la adopcion de una plantilla comun para estructurar y armonizar las notificaciones de brechas de datos personales. La consulta publica estara abierta hasta el 5 de agosto de 2026.",
+      "source": {
+        "name": "EDPB - Plantilla comun de notificacion de brechas",
+        "date": "2026-06-10",
+        "url": "https://www.edpb.europa.eu/news/news/2026/edpb-meets-eu-commissioner-mcgrath-and-adopts-common-data-breach-notification_en"
+      },
+      "why_it_matters": "Anticipa un estandar europeo de contenido minimo y evidencia para notificar incidentes conforme al articulo 33 RGPD.",
+      "impact_spain": "Empresas espanolas deberian preparar sus formularios internos para capturar desde el primer minuto categorias de datos, afectados, causa, medidas, riesgo y comunicacion a interesados.",
+      "recommended_action": "Actualizar el playbook de respuesta a incidentes y realizar un simulacro con decision documentada de notificacion AEPD en 72 horas."
+    },
+    {
+      "title": "AEPD y CNMC refuerzan coordinacion en servicios digitales",
+      "risk": "MEDIO",
+      "what_happened": "La AEPD y la CNMC firmaron un convenio para coordinar actuaciones en servicios digitales, audiovisual, telecomunicaciones, intercambio de informacion y deteccion temprana de posibles infracciones.",
+      "source": {
+        "name": "AEPD - Convenio AEPD/CNMC para derechos en entorno digital",
+        "date": "2026-06-10",
+        "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-y-cnmc-refuerzan-su-colaboracion-para-proteger-derechos-personas"
+      },
+      "why_it_matters": "Aumenta la probabilidad de supervision coordinada cuando una practica digital afecta simultaneamente a datos personales, consumidores, comunicaciones o plataformas.",
+      "impact_spain": "Ecommerce, apps, plataformas, telecomunicaciones, medios y servicios con menores deben revisar transparencia, bases juridicas, publicidad, perfiles y trazabilidad de consentimientos.",
+      "recommended_action": "Revisar el mapa de obligaciones cruzadas RGPD-DSA-LSSI-telecom y preparar evidencias de cumplimiento por canal digital."
+    },
+    {
+      "title": "IA, privacidad y seguridad pasan a primer plano operativo",
+      "risk": "MEDIO",
+      "what_happened": "La AEPD eleva a Europa preocupaciones sobre posibles accesos de terceros a conversaciones en sistemas de IA; INCIBE mantiene avisos criticos de seguridad de junio; CNIL ha sancionado brechas relevantes por medidas insuficientes.",
+      "source": {
+        "name": "AEPD - IA y posible filtracion de conversaciones",
+        "date": "2026-05-27",
+        "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-promueve-ante-las-autoridades-europeas-proteccion-estudie-ia"
+      },
+      "secondary_sources": [
+        {
+          "name": "INCIBE-CERT - Avisos de seguridad de junio",
+          "date": "2026-06-12",
+          "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos"
+        },
+        {
+          "name": "CNIL - Sancion FREE/FREE MOBILE por brecha de datos",
+          "date": "2026-01-14",
+          "url": "https://www.cnil.fr/fr/sanction-free-2026"
+        }
+      ],
+      "why_it_matters": "El uso de IA y servicios cloud puede exponer datos personales por rastreadores, integraciones, logs, proveedores o configuraciones debiles.",
+      "impact_spain": "Las empresas deben tratar la IA generativa como tratamiento gobernado: inventario, minimizacion, base juridica, informacion, EIPD cuando proceda, contratos y controles de seguridad.",
+      "recommended_action": "Crear un registro de usos de IA y bloquear el uso de datos personales en herramientas no aprobadas hasta completar revision de riesgo."
+    }
+  ],
+  "risks": [
+    ["Brechas", "Notificar tarde, sin decision documentada o sin medidas de contencion aumenta riesgo sancionador y reputacional."],
+    ["Transparencia", "Textos incompletos, capas confusas o informacion no alineada con flujos reales encajan en el foco europeo CEF 2026."],
+    ["Proveedores", "SaaS, IA, soporte remoto y analitica pueden incorporar subencargados o accesos no inventariados."],
+    ["Encargados", "Contratos genericos sin instrucciones, auditoria, subencargados, devolucion/supresion y brechas quedan debiles ante el articulo 28 RGPD."],
+    ["Derechos ARSOPL", "Falta de registro de plazos, identidad, excepciones y respuesta puede convertir una solicitud simple en reclamacion ante AEPD."],
+    ["Transferencias internacionales", "Herramientas cloud pueden activar transferencias o accesos desde terceros paises sin evaluacion ni garantias actualizadas."],
+    ["IA con datos personales", "Prompts, historiales, logs y conectores pueden crear tratamientos no informados, no minimizados o sin EIPD."]
+  ],
+  "recommended_actions": [
+    "Actualizar el procedimiento de brechas con campos alineados con la plantilla comun EDPB.",
+    "Auditar textos de privacidad, cookies, formularios y comunicaciones B2C/B2B para el foco europeo de transparencia.",
+    "Revisar proveedores criticos: contratos de encargo, subencargados, transferencias, seguridad y derecho de auditoria.",
+    "Crear inventario de usos de IA con datos personales y definir usos prohibidos, permitidos y sujetos a EIPD.",
+    "Ejecutar un simulacro de brecha que incluya decision AEPD, comunicacion a afectados y evidencias de contencion."
+  ],
+  "opportunities": [
+    "Auditoria RGPD de brechas y respuesta a incidentes.",
+    "Revision de clausulas, contratos DPA y proveedores cloud/IA.",
+    "DPIA / EIPD para IA, biometria, perfilado, menores o datos sensibles.",
+    "Formacion ejecutiva y operativa sobre transparencia, brechas y uso seguro de IA.",
+    "Consultoria de IA y datos personales con gobernanza, minimizacion y supervision humana."
+  ],
+  "sources": [
+    {"name": "AEPD - Convenio AEPD/CNMC para derechos en entorno digital", "date": "2026-06-10", "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-y-cnmc-refuerzan-su-colaboracion-para-proteger-derechos-personas"},
+    {"name": "AEPD - Red de investigacion sobre privacidad y tecnologias emergentes", "date": "2026-06-12", "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/aepd-celebra-primera-reunion-red-grupos-investigacion-sobre-privacidad-y-tecnologias-emergentes"},
+    {"name": "EDPB - Plantilla comun de notificacion de brechas", "date": "2026-06-10", "url": "https://www.edpb.europa.eu/news/news/2026/edpb-meets-eu-commissioner-mcgrath-and-adopts-common-data-breach-notification_en"},
+    {"name": "EDPB - Accion coordinada 2026 sobre transparencia", "date": "2026-03-19", "url": "https://www.edpb.europa.eu/news/news/2026/cef-2026-edpb-launches-coordinated-enforcement-action-transparency-and-information_en"},
+    {"name": "AEPD - IA y posible filtracion de conversaciones", "date": "2026-05-27", "url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-agencia-promueve-ante-las-autoridades-europeas-proteccion-estudie-ia"},
+    {"name": "INCIBE-CERT - Avisos de seguridad de junio", "date": "2026-06-12", "url": "https://www.incibe.es/incibe-cert/alerta-temprana/avisos"},
+    {"name": "CNIL - Sancion FREE/FREE MOBILE por brecha de datos", "date": "2026-01-14", "url": "https://www.cnil.fr/fr/sanction-free-2026"}
+  ],
+  "legal_notice": "Informe generado automaticamente con apoyo de IA. Tiene finalidad informativa y no constituye asesoramiento juridico, auditoria RGPD ni dictamen legal profesional. Requiere validacion profesional antes de tomar decisiones juridicas o regulatorias."
+}
